@@ -8,15 +8,19 @@ const faqs=[['如何选择服务模式？','时间充足+自主能力强可选DI
 const testimonials=[['2023届学员数据','186位学员获QS前100录取。'],['2024届学员数据','198位学员获QS前100录取。'],['2025届学员数据','170位学员获QS前100录取。']];
 const timeline=['敲定选校','闲鱼付款','撰写材料与递交申请','闲鱼发货','收到付款'];
 const planCards=document.getElementById('planCards');plans.forEach(p=>{const c=document.createElement('article');c.className='card';c.innerHTML=`<h3>${p.name}</h3><p>${p.desc}</p><div class="price">${p.price}</div><ul>${p.services.map(i=>`<li>${i}</li>`).join('')}</ul>`;planCards.append(c)});
-const searchInput=document.getElementById('searchInput'),countryFilter=document.getElementById('countryFilter'),degreeFilter=document.getElementById('degreeFilter'),resultFilter=document.getElementById('resultFilter');const caseGrid=document.getElementById('caseGrid'),vizPanel=document.getElementById('vizPanel'),resultTip=document.getElementById('resultTip'),pager=document.getElementById('pager');const pageSize=9;let currentPage=1;const fillSelect=(el,label,vals)=>el.innerHTML=`<option value="">全部${label}</option>`+vals.map(v=>`<option>${v}</option>`).join('');
+const searchInput=document.getElementById('searchInput'),countryFilter=document.getElementById('countryFilter'),degreeFilter=document.getElementById('degreeFilter'),resultFilter=document.getElementById('resultFilter');const caseGrid=document.getElementById('caseGrid'),vizPanel=document.getElementById('vizPanel'),resultTip=document.getElementById('resultTip'),dataSourceTip=document.getElementById('dataSourceTip'),pager=document.getElementById('pager');const pageSize=9;let currentPage=1;const fillSelect=(el,label,vals)=>el.innerHTML=`<option value="">全部${label}</option>`+vals.map(v=>`<option>${v}</option>`).join('');
 async function initCases(){
   try {
-    const res = await fetch('/api/cases');
+    const res = await fetch('/cases.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('api failed');
     const data = await res.json();
-    baseCases = (data.cases && data.cases.length) ? data.cases : fallbackCases;
+    baseCases = Array.isArray(data) ? data : (data.cases || []);
+    if (!baseCases.length) baseCases = fallbackCases;
+    dataSourceTip.textContent = '数据来源：cases.json（可直接维护）';
   } catch (e) {
     baseCases = fallbackCases;
+    dataSourceTip.textContent = '数据来源：本地回退（请检查 cases.json 格式）';
+    console.warn('cases.json failed, using fallback data');
   }
   fillSelect(countryFilter,'地区',[...new Set(baseCases.map(c=>c.country))]);
   fillSelect(degreeFilter,'学历',[...new Set(baseCases.map(c=>c.degree))]);
