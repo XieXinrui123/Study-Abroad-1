@@ -1,5 +1,46 @@
 [
-  {"id":1,"title":"英国本科申请案例 #1","background":"GPA 3.0 / IELTS 6","major":"商科","country":"英国","degree":"本科","result":"QS前50","school":"UCL","details":"英国本科方向，录取UCL，结果：QS前50"},
-  {"id":2,"title":"香港硕士申请案例 #2","background":"GPA 3.1 / IELTS 6.5","major":"计算机","country":"香港","degree":"硕士","result":"QS前100","school":"HKU","details":"香港硕士方向，录取HKU，结果：QS前100"},
-  {"id":3,"title":"新加坡博士申请案例 #3","background":"GPA 3.2 / IELTS 7","major":"传媒","country":"新加坡","degree":"博士","result":"奖学金","school":"NUS","details":"新加坡博士方向，录取NUS，结果：奖学金"}
+  {
+    "id": 1,
+    "student_school": "北京科技大学",
+    "student_major": "金融学",
+    "gpa": "3.7/4.0",
+    "language_score": "IELTS 7.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {"school": "UCL", "major": "MSc Management", "rank": "QS前10"},
+      {"school": "KCL", "major": "MSc Finance", "rank": "QS前40"},
+      {"school": "Manchester", "major": "MSc Accounting", "rank": "QS前50"}
+    ]
+  },
+  {
+    "id": 2,
+    "student_school": "华东师范大学",
+    "student_major": "计算机科学",
+    "gpa": "87/100",
+    "language_score": "TOEFL 104",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "奖学金",
+    "offers": [
+      {"school": "NUS", "major": "MComp", "rank": "QS前10"},
+      {"school": "NTU", "major": "MSc AI", "rank": "QS前20"}
+    ]
+  },
+  {
+    "id": 3,
+    "student_school": "中山大学",
+    "student_major": "传媒",
+    "gpa": "3.5/4.0",
+    "language_score": "IELTS 7.0",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {"school": "HKU", "major": "MA Communication", "rank": "QS前30"},
+      {"school": "CUHK", "major": "MA New Media", "rank": "QS前40"},
+      {"school": "CityU", "major": "MSc Media", "rank": "QS前70"}
+    ]
+  }
 ]
