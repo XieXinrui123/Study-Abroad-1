@@ -5,3 +5,4 @@
 body.dark{--bg:#0c1420;--surface:#121f31;--text:#e7effa;--muted:#9bb0c8;--border:#24364f}body.dark .section-alt{background:#101b2b}body.dark .header.scrolled{background:rgba(8,17,30,.96)}
 @media (max-width:900px){.mini-grid{grid-template-columns:1fr}}
 body{letter-spacing:.2px}h1,h2,h3{letter-spacing:.4px}.card,.case,.mini-card,.team-card,.viz-panel{backdrop-filter:blur(4px)}.btn-primary{box-shadow:0 8px 24px rgba(255,107,53,.28)}.section-kicker{opacity:.85}
+.case .meta{color:var(--muted);margin:8px 0 0}.offer-list{display:grid;gap:8px;margin-top:10px}.offer-item{display:grid;grid-template-columns:1fr 1.4fr auto;gap:10px;background:#f4f8ff;border:1px solid #dbe8f8;padding:8px 10px;border-radius:10px;align-items:center}.offer-item span{color:var(--muted)}.offer-item em{font-style:normal;color:#1976d2;font-weight:700}
