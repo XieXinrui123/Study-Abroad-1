@@ -1,104 +1,16 @@
-const plans = [
-  {
-    name: '基础套餐',
-    desc: '适合目标明确、时间充足的同学',
-    price: '¥9,800',
-    services: ['选校定位', '申请时间规划', '3所院校申请支持']
-  },
-  {
-    name: '进阶套餐',
-    desc: '适合想冲刺Top院校的同学',
-    price: '¥19,800',
-    services: ['背景提升建议', '定制文书辅导', '8所院校全流程申请']
-  },
-  {
-    name: '全套服务',
-    desc: '从规划到落地的完整陪伴',
-    price: '¥32,800',
-    services: ['无限次咨询', '签证与住宿指导', '行前准备与落地支持']
-  }
-];
-
-const cases = [
-  {
-    title: '双非背景逆袭 QS Top 50',
-    image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80',
-    summary: 'GPA 3.2 / 跨专业申请 / 获2所Top 50录取',
-    details: '通过项目经历重构与文书故事线优化，拿到曼大与KCL录取。'
-  },
-  {
-    title: '艺术生成功申请美国名校',
-    image: 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=800&q=80',
-    summary: '作品集提升 + 面试模拟',
-    details: '三个月完成作品集重构，收获RISD与SVA offer。'
-  },
-  {
-    title: '转专业申请计算机硕士',
-    image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80',
-    summary: '经济学背景 / 计算机转申',
-    details: '通过先修课与科研项目包装，成功录取NEU CS Align。'
-  }
-];
-
-const faqs = [
-  ['我没有科研经历可以申请名校吗？', '可以。我们会根据你的背景设计可执行的背景提升路径，突出可迁移能力与项目价值。'],
-  ['服务周期一般多久？', '通常为3-10个月，依据申请国家、专业和入学季而定。'],
-  ['文书是模板化的吗？', '不是。每份文书采用一对一深度访谈生成，确保真实、个性化与差异化。']
-];
-
-const planCards = document.getElementById('planCards');
-plans.forEach((plan) => {
-  const card = document.createElement('article');
-  card.className = 'card';
-  card.innerHTML = `
-    <h3>${plan.name}</h3>
-    <p>${plan.desc}</p>
-    <div class="price">${plan.price}</div>
-    <ul>${plan.services.map((item) => `<li>${item}</li>`).join('')}</ul>
-    <a class="btn btn-primary" href="#contact">了解更多</a>
-  `;
-  planCards.append(card);
-});
-
-const caseGrid = document.getElementById('caseGrid');
-cases.forEach((item) => {
-  const card = document.createElement('article');
-  card.className = 'case';
-  card.innerHTML = `
-    <img src="${item.image}" alt="${item.title}" />
-    <div class="case-content">
-      <h3>${item.title}</h3>
-      <p>${item.summary}</p>
-      <p class="details">${item.details}</p>
-    </div>
-  `;
-  card.addEventListener('click', () => card.classList.toggle('open'));
-  caseGrid.append(card);
-});
-
-const faqList = document.getElementById('faqList');
-faqs.forEach(([q, a]) => {
-  const item = document.createElement('div');
-  item.className = 'accordion-item';
-  item.innerHTML = `
-    <button class="accordion-btn">${q}</button>
-    <div class="accordion-panel">${a}</div>
-  `;
-  item.querySelector('button').addEventListener('click', () => item.classList.toggle('open'));
-  faqList.append(item);
-});
-
-const header = document.getElementById('topHeader');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 40);
-  const hero = document.getElementById('hero');
-  hero.style.backgroundPositionY = `${window.scrollY * 0.35}px`;
-});
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, { threshold: 0.2 });
-
-document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+const plans=[{name:'基础套餐',desc:'适合目标明确、时间充足的同学',price:'¥9,800',services:['选校定位','申请时间规划','3所院校申请支持']},{name:'进阶套餐',desc:'适合想冲刺Top院校的同学',price:'¥19,800',services:['背景提升建议','定制文书辅导','8所院校全流程申请']},{name:'全套服务',desc:'从规划到落地的完整陪伴',price:'¥32,800',services:['无限次咨询','签证与住宿指导','行前准备与落地支持']}];
+const baseCases=Array.from({length:120},(_,i)=>{const countries=['英国','美国','加拿大','澳洲'];const degrees=['本科','硕士','博士'];const results=['Top50','Top100','奖学金'];const c=countries[i%4],d=degrees[i%3],r=results[i%3];return{id:i+1,title:`${c}${d}申请案例 #${i+1}`,background:`GPA ${(3+((i%10)/10)).toFixed(1)} / IELTS ${6+(i%3)*0.5}`,major:['商科','计算机','传媒','设计'][i%4],country:c,degree:d,result:r,school:['UCL','NYU','UBC','UNSW'][i%4],details:`${c}${d}方向，录取${['UCL','NYU','UBC','UNSW'][i%4]}，结果：${r}`};});
+const faqs=[['我没有科研经历可以申请名校吗？','可以。我们会根据你的背景设计可执行的背景提升路径。'],['服务周期一般多久？','通常为3-10个月。'],['文书是模板化的吗？','不是，每份文书均一对一生成。']];
+const planCards=document.getElementById('planCards');plans.forEach(p=>{const c=document.createElement('article');c.className='card';c.innerHTML=`<h3>${p.name}</h3><p>${p.desc}</p><div class="price">${p.price}</div><ul>${p.services.map(i=>`<li>${i}</li>`).join('')}</ul><a class="btn btn-primary" href="#contact">了解更多</a>`;planCards.append(c)});
+const searchInput=document.getElementById('searchInput');const countryFilter=document.getElementById('countryFilter');const degreeFilter=document.getElementById('degreeFilter');const resultFilter=document.getElementById('resultFilter');
+const caseGrid=document.getElementById('caseGrid');const vizPanel=document.getElementById('vizPanel');const resultTip=document.getElementById('resultTip');const pager=document.getElementById('pager');
+const pageSize=9;let currentPage=1;
+function fillSelect(el,label,vals){el.innerHTML=`<option value="">全部${label}</option>`+vals.map(v=>`<option>${v}</option>`).join('')}
+fillSelect(countryFilter,'国家',[...new Set(baseCases.map(c=>c.country))]);fillSelect(degreeFilter,'学历',[...new Set(baseCases.map(c=>c.degree))]);fillSelect(resultFilter,'结果',[...new Set(baseCases.map(c=>c.result))]);
+function getFiltered(){const kw=searchInput.value.trim();return baseCases.filter(c=>(!countryFilter.value||c.country===countryFilter.value)&&(!degreeFilter.value||c.degree===degreeFilter.value)&&(!resultFilter.value||c.result===resultFilter.value)&&(!kw||`${c.title}${c.background}${c.school}${c.major}`.includes(kw)))}
+function renderViz(items){const byCountry=Object.entries(items.reduce((a,c)=>(a[c.country]=(a[c.country]||0)+1,a),{}));const max=Math.max(1,...byCountry.map(([,n])=>n));vizPanel.innerHTML=`<h3>数据可视化（按国家）</h3><div class="bars">${byCountry.map(([k,v])=>`<div class="bar-item"><small>${k} ${v}例</small><div class="bar-track"><div class="bar-fill" style="width:${(v/max)*100}%"></div></div></div>`).join('')}</div>`}
+function render(){const items=getFiltered();const totalPage=Math.max(1,Math.ceil(items.length/pageSize));currentPage=Math.min(currentPage,totalPage);const pageItems=items.slice((currentPage-1)*pageSize,currentPage*pageSize);caseGrid.innerHTML=pageItems.map(i=>`<article class="case"><h3>${i.title}</h3><p>${i.background}</p><p><span class="pill">${i.country}</span><span class="pill">${i.degree}</span><span class="pill">${i.result}</span></p><p class="details">${i.major}｜${i.school}｜${i.details}</p></article>`).join('');renderViz(items);resultTip.textContent=`共 ${items.length} 条案例，当前第 ${currentPage}/${totalPage} 页`;pager.innerHTML=Array.from({length:totalPage},(_,i)=>`<button class="${i+1===currentPage?'active':''}" data-page="${i+1}">${i+1}</button>`).join('')}
+[searchInput,countryFilter,degreeFilter,resultFilter].forEach(el=>el.addEventListener('input',()=>{currentPage=1;render()}));pager.addEventListener('click',e=>{if(e.target.dataset.page){currentPage=Number(e.target.dataset.page);render()}});render();
+const faqList=document.getElementById('faqList');faqs.forEach(([q,a])=>{const i=document.createElement('div');i.className='accordion-item';i.innerHTML=`<button class="accordion-btn">${q}</button><div class="accordion-panel">${a}</div>`;i.querySelector('button').addEventListener('click',()=>i.classList.toggle('open'));faqList.append(i)});
+const header=document.getElementById('topHeader');window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>40);document.getElementById('hero').style.backgroundPositionY=`${window.scrollY*0.35}px`;});
+const observer=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.2});document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
