@@ -16,9 +16,10 @@ async function initCases(){
     const data = await res.json();
     baseCases = Array.isArray(data) ? data : (data.cases || []);
     if (!baseCases.length) baseCases = fallbackCases;
+    baseCases = baseCases.map(normalizeCase);
     dataSourceTip.textContent = '数据来源：cases.json（可直接维护）';
   } catch (e) {
-    baseCases = fallbackCases;
+    baseCases = fallbackCases.map(normalizeCase);
     dataSourceTip.textContent = '数据来源：本地回退（请检查 cases.json 格式）';
     console.warn('cases.json failed, using fallback data');
   }
@@ -27,6 +28,24 @@ async function initCases(){
   fillSelect(resultFilter,'结果',[...new Set(baseCases.map(c=>c.result))]);
   render();
 }
-const getFiltered=()=>{const kw=searchInput.value.trim();return baseCases.filter(c=>(!countryFilter.value||c.country===countryFilter.value)&&(!degreeFilter.value||c.degree===degreeFilter.value)&&(!resultFilter.value||c.result===resultFilter.value)&&(!kw||`${c.title}${c.background}${c.school}${c.major}`.includes(kw)))};function renderViz(items){const byCountry=Object.entries(items.reduce((a,c)=>(a[c.country]=(a[c.country]||0)+1,a),{}));const max=Math.max(1,...byCountry.map(([,n])=>n));vizPanel.innerHTML=`<h3>数据可视化（按地区）</h3><div class="bars">${byCountry.map(([k,v])=>`<div class="bar-item"><small>${k} ${v}例</small><div class="bar-track"><div class="bar-fill" style="width:${(v/max)*100}%"></div></div></div>`).join('')}</div>`}function render(){const items=getFiltered();const totalPage=Math.max(1,Math.ceil(items.length/pageSize));currentPage=Math.min(currentPage,totalPage);const pageItems=items.slice((currentPage-1)*pageSize,currentPage*pageSize);caseGrid.innerHTML=pageItems.map(i=>`<article class="case"><h3>${i.title}</h3><p>${i.background}</p><p><span class="pill">${i.country}</span><span class="pill">${i.degree}</span><span class="pill">${i.result}</span></p><p class="details">${i.major}｜${i.school}｜${i.details}</p></article>`).join('');renderViz(items);resultTip.textContent=`共 ${items.length} 条案例，当前第 ${currentPage}/${totalPage} 页`;pager.innerHTML=Array.from({length:totalPage},(_,i)=>`<button class="${i+1===currentPage?'active':''}" data-page="${i+1}">${i+1}</button>`).join('')}[searchInput,countryFilter,degreeFilter,resultFilter].forEach(el=>el.addEventListener('input',()=>{currentPage=1;render()}));pager.addEventListener('click',e=>{if(e.target.dataset.page){currentPage=Number(e.target.dataset.page);render()}});initCases();
+
+function normalizeCase(item, idx){
+  const offers = Array.isArray(item.offers) ? item.offers : [{ school: item.school || '待更新', major: item.major || '待更新', rank: item.result || '普通录取' }];
+  return {
+    id: item.id || idx + 1,
+    title: item.title || `${item.country || '地区'}${item.degree || '项目'}申请案例 #${item.id || idx + 1}`,
+    student_school: item.student_school || '院校未填写',
+    student_major: item.student_major || item.major || '专业未填写',
+    background: item.background || `GPA ${item.gpa || '未填写'} / ${item.language_score || '语言未填写'}`,
+    gpa: item.gpa || '未填写',
+    language_score: item.language_score || '未填写',
+    country: item.country || '未分类',
+    degree: item.degree || '未分类',
+    result: item.result || offers[0]?.rank || '普通录取',
+    offers
+  };
+}
+
+const getFiltered=()=>{const kw=searchInput.value.trim();return baseCases.filter(c=>(!countryFilter.value||c.country===countryFilter.value)&&(!degreeFilter.value||c.degree===degreeFilter.value)&&(!resultFilter.value||c.result===resultFilter.value)&&(!kw||`${c.title}${c.background}${c.school}${c.major}`.includes(kw)))};function renderViz(items){const byCountry=Object.entries(items.reduce((a,c)=>(a[c.country]=(a[c.country]||0)+1,a),{}));const max=Math.max(1,...byCountry.map(([,n])=>n));vizPanel.innerHTML=`<h3>数据可视化（按地区）</h3><div class="bars">${byCountry.map(([k,v])=>`<div class="bar-item"><small>${k} ${v}例</small><div class="bar-track"><div class="bar-fill" style="width:${(v/max)*100}%"></div></div></div>`).join('')}</div>`}function render(){const items=getFiltered();const totalPage=Math.max(1,Math.ceil(items.length/pageSize));currentPage=Math.min(currentPage,totalPage);const pageItems=items.slice((currentPage-1)*pageSize,currentPage*pageSize);caseGrid.innerHTML=pageItems.map(i=>`<article class="case"><h3>${i.title}</h3><p class="meta">${i.student_school} ｜ ${i.student_major}</p><p class="meta">均分/GPA：${i.gpa} ｜ 语言：${i.language_score}</p><p><span class="pill">${i.country}</span><span class="pill">${i.degree}</span><span class="pill">${i.result}</span><span class="pill">${i.offers.length}个Offer</span></p><div class="offer-list">${i.offers.map(o=>`<div class="offer-item"><strong>${o.school}</strong><span>${o.major}</span><em>${o.rank}</em></div>`).join('')}</div></article>`).join('');renderViz(items);resultTip.textContent=`共 ${items.length} 条案例，当前第 ${currentPage}/${totalPage} 页`;pager.innerHTML=Array.from({length:totalPage},(_,i)=>`<button class="${i+1===currentPage?'active':''}" data-page="${i+1}">${i+1}</button>`).join('')}[searchInput,countryFilter,degreeFilter,resultFilter].forEach(el=>el.addEventListener('input',()=>{currentPage=1;render()}));pager.addEventListener('click',e=>{if(e.target.dataset.page){currentPage=Number(e.target.dataset.page);render()}});initCases();
 const faqList=document.getElementById('faqList');faqs.forEach(([q,a])=>{const i=document.createElement('div');i.className='accordion-item';i.innerHTML=`<button class="accordion-btn">${q}</button><div class="accordion-panel">${a}</div>`;i.querySelector('button').addEventListener('click',()=>i.classList.toggle('open'));faqList.append(i)});const tBox=document.getElementById('testimonials');testimonials.forEach(([n,t])=>{const i=document.createElement('article');i.className='mini-card';i.innerHTML=`<h3>${n}</h3><p>${t}</p>`;tBox.append(i)});const timelineBox=document.getElementById('timeline');timeline.forEach((t,idx)=>{const li=document.createElement('li');li.innerHTML=`<span>${idx+1}</span>${t}`;timelineBox.append(li)});
 const header=document.getElementById('topHeader');window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>40);document.getElementById('hero').style.backgroundPositionY=`${window.scrollY*0.35}px`;document.getElementById('toTop').classList.toggle('show',window.scrollY>400)});document.getElementById('toTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));document.getElementById('themeToggle').addEventListener('click',()=>document.body.classList.toggle('dark'));const observer=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.2});document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
