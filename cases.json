@@ -1,0 +1,5 @@
+[
+  {"id":1,"title":"英国本科申请案例 #1","background":"GPA 3.0 / IELTS 6","major":"商科","country":"英国","degree":"本科","result":"QS前50","school":"UCL","details":"英国本科方向，录取UCL，结果：QS前50"},
+  {"id":2,"title":"香港硕士申请案例 #2","background":"GPA 3.1 / IELTS 6.5","major":"计算机","country":"香港","degree":"硕士","result":"QS前100","school":"HKU","details":"香港硕士方向，录取HKU，结果：QS前100"},
+  {"id":3,"title":"新加坡博士申请案例 #3","background":"GPA 3.2 / IELTS 7","major":"传媒","country":"新加坡","degree":"博士","result":"奖学金","school":"NUS","details":"新加坡博士方向，录取NUS，结果：奖学金"}
+]
