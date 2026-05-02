@@ -29,94 +29,32 @@
     </header>
 
     <main>
-      <section class="hero parallax" id="hero">
-        <div class="overlay"></div>
-        <div class="container hero-content fade-in">
-          <p class="tag">Your Future, Curated</p>
-          <h1>为你的留学梦想提供一站式服务</h1>
-          <p>
-            从选校定位、文书规划到签证落地，我们用专业与效率，陪你走向理想学府。
-          </p>
-          <a href="#contact" class="btn btn-primary">立即咨询</a>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="container split fade-in">
-          <div>
-            <p class="section-kicker">About Us</p>
-            <h2>专业团队，清晰路径，结果导向</h2>
-            <p>
-              我们聚焦英美加澳及欧洲主流院校申请，团队由前招生官、资深顾问和海外导师组成，擅长多背景学生的个性化规划。
-            </p>
-            <div class="metrics">
-              <article>
-                <h3>98%</h3>
-                <p>录取率</p>
-              </article>
-              <article>
-                <h3>3000+</h3>
-                <p>成功案例</p>
-              </article>
-              <article>
-                <h3>12年</h3>
-                <p>行业经验</p>
-              </article>
-            </div>
-          </div>
-          <div class="team-card">
-            <h3>服务团队</h3>
-            <ul>
-              <li>🎓 选校顾问：院校匹配与策略制定</li>
-              <li>✍️ 文书导师：故事线打磨与面试辅导</li>
-              <li>📌 申请管家：节点管理与材料跟进</li>
-            </ul>
-            <p class="signature">让申请，不再焦虑。</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="plans">
-        <div class="container fade-in">
-          <p class="section-kicker">Plans</p>
-          <h2>套餐服务</h2>
-          <div class="cards" id="planCards"></div>
-        </div>
-      </section>
+      <section class="hero parallax" id="hero"><div class="overlay"></div><div class="container hero-content fade-in"><p class="tag">Your Future, Curated</p><h1>为你的留学梦想提供一站式服务</h1><p>从选校定位、文书规划到签证落地，我们用专业与效率，陪你走向理想学府。</p><a href="#contact" class="btn btn-primary">立即咨询</a></div></section>
+      <section class="section" id="about"><div class="container split fade-in"><div><p class="section-kicker">About Us</p><h2>专业团队，清晰路径，结果导向</h2><p>我们聚焦英美加澳及欧洲主流院校申请，团队由前招生官、资深顾问和海外导师组成，擅长多背景学生的个性化规划。</p><div class="metrics"><article><h3>98%</h3><p>录取率</p></article><article><h3>3000+</h3><p>成功案例</p></article><article><h3>12年</h3><p>行业经验</p></article></div></div><div class="team-card"><h3>服务团队</h3><ul><li>🎓 选校顾问：院校匹配与策略制定</li><li>✍️ 文书导师：故事线打磨与面试辅导</li><li>📌 申请管家：节点管理与材料跟进</li></ul><p class="signature">让申请，不再焦虑。</p></div></div></section>
+      <section class="section section-alt" id="plans"><div class="container fade-in"><p class="section-kicker">Plans</p><h2>套餐服务</h2><div class="cards" id="planCards"></div></div></section>
 
       <section class="section" id="cases">
         <div class="container fade-in">
-          <p class="section-kicker">Cases</p>
-          <h2>案例汇总</h2>
+          <p class="section-kicker">Cases Intelligence</p>
+          <h2>大型可筛选案例汇总</h2>
+          <div class="case-controls">
+            <input id="searchInput" type="search" placeholder="搜索学生背景/学校/专业关键词" />
+            <select id="countryFilter"></select>
+            <select id="degreeFilter"></select>
+            <select id="resultFilter"></select>
+          </div>
+          <div class="viz-panel" id="vizPanel"></div>
+          <p class="result-tip" id="resultTip"></p>
           <div class="grid" id="caseGrid"></div>
+          <div class="pager" id="pager"></div>
         </div>
       </section>
 
-      <section class="section section-alt" id="faq">
-        <div class="container fade-in">
-          <p class="section-kicker">FAQ</p>
-          <h2>常见问题</h2>
-          <div class="accordion" id="faqList"></div>
-        </div>
-      </section>
+      <section class="section section-alt" id="faq"><div class="container fade-in"><p class="section-kicker">FAQ</p><h2>常见问题</h2><div class="accordion" id="faqList"></div></div></section>
     </main>
 
-    <footer class="footer" id="contact">
-      <div class="container contact-wrap">
-        <div>
-          <h2>联系方式</h2>
-          <p>电话：400-888-2026</p>
-          <p>邮箱：hello@dreambridge.edu</p>
-          <p>社媒：WeChat / Xiaohongshu / Instagram</p>
-        </div>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="#">立即咨询</a>
-          <a class="btn btn-secondary" href="mailto:hello@dreambridge.edu">发送邮件</a>
-        </div>
-      </div>
-    </footer>
+    <footer class="footer" id="contact"><div class="container contact-wrap"><div><h2>联系方式</h2><p>电话：400-888-2026</p><p>邮箱：hello@dreambridge.edu</p><p>社媒：WeChat / Xiaohongshu / Instagram</p></div><div class="contact-actions"><a class="btn btn-primary" href="#">立即咨询</a><a class="btn btn-secondary" href="mailto:hello@dreambridge.edu">发送邮件</a></div></div></footer>
 
     <script src="script.js"></script>
   </body>
 </html>
-
