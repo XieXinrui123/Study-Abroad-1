@@ -2115,18 +2115,5 @@
         "rank": "QS前70"
       }
     ]
-  },
-  {
-    "id": 97,
-    "student_school": "洛阳师范",
-    "student_major": "地理",
-    "gpa": "88",
-    "language_score": "无",
-    "country": "英国/香港",
-    "degree": "硕士",
-    "result": "QS前20",
-    "offers": [
-      {
-        "school": "爱丁堡大学",
-        "major": "地理",
-        "rank": "QS前20"
+  }
+]
