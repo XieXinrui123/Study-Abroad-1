@@ -1566,7 +1566,7 @@ const casesData = [{"id": 1, "student_school": "武汉理工", "student_major": 
 const topSchools = ["清华", "北大", "复旦", "上交", "浙大", "中科大", "南大", "人大", "同济", "北航", "武大", "哈工大", "西交", "华科", "中山", "北理", "东南", "南开", "川大", "山大", "厦大", "中南", "湖大", "大工", "吉大", "重大", "北师", "华东师范", "华南理工", "电子科大", "中国农大", "中央民族", "西北农林", "兰大", "海大", "东北大学", "湖南大学", "西北工业大学", "大连理工", "重庆大学", "西安交大", "华中科技大学", "华南理工", "北京理工", "北京师范"];
 
 let currentPage = 1;
-const pageSize = 8;
+const pageSize = 9;
 let filteredItems = [];
 let activeQuickFilter = 'all';
 
@@ -1837,7 +1837,7 @@ function goPage(page) {
   if (page < 1 || page > pages) return;
   currentPage = page;
   renderCasesPage();
-  $('cases').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  $('casesGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function renderCasesPage() {
@@ -1984,7 +1984,7 @@ function goPage(page) {
   if (page < 1 || page > pages) return;
   currentPage = page;
   renderCasesPage();
-  $('cases').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  $('casesGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function renderCasesPage() {
