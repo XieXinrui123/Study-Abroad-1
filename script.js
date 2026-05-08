@@ -134,11 +134,14 @@ function setupCases() {
 
   const caseGrid = document.getElementById('caseGrid');
   const vizPanel = document.getElementById('vizPanel');
+  const offerRankPanel = document.getElementById('offerRankPanel');
+  const topSchoolPanel = document.getElementById('topSchoolPanel');
+  const metricsBoard = document.getElementById('metricsBoard');
   const resultTip = document.getElementById('resultTip');
   const dataSourceTip = document.getElementById('dataSourceTip');
   const pager = document.getElementById('pager');
 
-  if (!searchInput || !countryFilter || !degreeFilter || !resultFilter || !caseGrid || !vizPanel || !resultTip || !dataSourceTip || !pager) {
+  if (!searchInput || !countryFilter || !degreeFilter || !resultFilter || !caseGrid || !vizPanel || !offerRankPanel || !topSchoolPanel || !metricsBoard || !resultTip || !dataSourceTip || !pager) {
     return;
   }
 
@@ -231,6 +234,37 @@ function setupCases() {
     `;
   };
 
+
+  const renderMetrics = (items) => {
+    const totalOffers = items.reduce((acc, c) => acc + c.offers.length, 0);
+    const avgOffer = items.length ? (totalOffers / items.length).toFixed(1) : '0';
+    const top10Count = items.filter((c) => `${c.result}`.includes('前10')).length;
+    const multiOfferCount = items.filter((c) => c.offers.length >= 2).length;
+
+    metricsBoard.innerHTML = `
+      <article class="metric-card"><strong>${items.length}</strong><span>筛选后案例数</span></article>
+      <article class="metric-card"><strong>${totalOffers}</strong><span>累计 Offer 数</span></article>
+      <article class="metric-card"><strong>${avgOffer}</strong><span>人均 Offer</span></article>
+      <article class="metric-card"><strong>${top10Count}</strong><span>QS前10 结果</span></article>
+    `;
+
+    offerRankPanel.innerHTML = `
+      <h3>录取结果分布</h3>
+      <div class="mini-list">${Object.entries(items.reduce((acc, c) => {
+        acc[c.result] = (acc[c.result] || 0) + 1;
+        return acc;
+      }, {})).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([k,v]) => `<div class="mini-row"><span>${k}</span><strong>${v}</strong></div>`).join('')}</div>
+      <p class="result-tip">其中 ${multiOfferCount} 位学生拥有2个及以上Offer</p>
+    `;
+
+    const schoolCounter = {};
+    items.forEach((c) => c.offers.forEach((o) => { schoolCounter[o.school] = (schoolCounter[o.school] || 0) + 1; }));
+    topSchoolPanel.innerHTML = `
+      <h3>高频录取院校 Top 8</h3>
+      <div class="mini-list">${Object.entries(schoolCounter).sort((a,b)=>b[1]-a[1]).slice(0,8).map(([k,v],idx) => `<div class="mini-row"><span>${idx + 1}. ${k}</span><strong>${v}</strong></div>`).join('')}</div>
+    `;
+  };
+
   const render = () => {
     const items = getFiltered();
     const showAll = state.pageSize === Infinity;
@@ -243,6 +277,7 @@ function setupCases() {
 
     caseGrid.innerHTML = pageItems.map(renderCaseCard).join('');
     renderViz(items);
+    renderMetrics(items);
 
     resultTip.textContent = showAll
       ? `共 ${items.length} 条案例（当前显示全部）`
