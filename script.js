@@ -61,7 +61,7 @@ const fallbackCases = Array.from({ length: 24 }, (_, i) => {
 const state = {
   baseCases: [],
   currentPage: 1,
-  pageSize: Infinity
+  pageSize: 9999
 };
 
 function normalizeCase(item, idx) {
@@ -71,7 +71,7 @@ function normalizeCase(item, idx) {
 
   return {
     id: item.id || idx + 1,
-    title: item.title || `${item.country || '地区'}${item.degree || '项目'}案例`,
+    title: item.title || `${item.country || '地区'}${item.degree || '项目'}`,
     student_school: item.student_school || '院校未填写',
     student_major: item.student_major || item.major || '专业未填写',
     gpa: item.gpa || '未填写',
@@ -267,7 +267,7 @@ function setupCases() {
 
   const render = () => {
     const items = getFiltered();
-    const showAll = state.pageSize === Infinity;
+    const showAll = state.pageSize >= 9999;
     const totalPage = showAll ? 1 : Math.max(1, Math.ceil(items.length / state.pageSize));
 
     state.currentPage = Math.min(state.currentPage, totalPage);
@@ -292,10 +292,10 @@ function setupCases() {
 
   const syncPageSize = () => {
     if (!pageSizeSelect) {
-      state.pageSize = 12;
+      state.pageSize = 9999;
       return;
     }
-    state.pageSize = pageSizeSelect.value === 'all' ? Infinity : Number(pageSizeSelect.value || 12);
+    state.pageSize = pageSizeSelect.value === 'all' ? 9999 : Number(pageSizeSelect.value || 12);
   };
 
   [searchInput, countryFilter, degreeFilter, resultFilter, pageSizeSelect]
