@@ -1921,7 +1921,8 @@ function getSchoolTier(name) {
 }
 
 function tierClass(tier) {
-  return { '985': '985', '211': '211', '双非': 'shuangfei', '海外本科': 'overseas' }[tier] || 'shuangfei';
+  const map = { '985': '985', '211': '211', '双非': 'shuangfei', '海外本科': 'overseas', '独立学院': 'shuangfei', '双一流': 'shuangfei' };
+  return map[tier] || 'shuangfei';
 }
 
 function tierValue(tier) {
@@ -2103,7 +2104,7 @@ function normalizeCase(item, idx) {
     degree: item.degree || '未分类',
     result: item.result || (offers[0]?.rank) || '普通录取',
     offers: offers,
-    tier: getSchoolTier(studentSchool)
+    tier: item.tier || getSchoolTier(studentSchool)
   };
 }
 
