@@ -2091,7 +2091,7 @@ function normalizeCase(item, idx) {
   const offers = Array.isArray(item.offers) && item.offers.length
     ? item.offers
     : [{ school: item.school || '待更新', major: item.major || '待更新', rank: item.result || '普通录取' }];
-  const studentSchool = item.student_school || '院校未填写';
+  const studentSchool = item.student_school;
   return {
     id: item.id || idx + 1,
     title: item.title || `${item.country || '地区'}${item.degree || '项目'}`,
@@ -2201,7 +2201,7 @@ function renderCaseCard(item) {
   return `
     <div class="case-card" onclick="openCaseModal(${item.id})">
       <div class="case-header">
-        <div class="case-title">案例 #${item.id} · ${item.student_school}</div>
+        <div class="case-title">${item.student_school ? `案例 #${item.id} · ${item.student_school}` : `案例 #${item.id}`}</div>
         <span class="pill pill-tier-${tierClass(item.tier)}">${item.tier}</span>
       </div>
       <div class="case-pills">
@@ -2236,12 +2236,12 @@ function renderCaseCard(item) {
 function openCaseModal(id) {
   const item = allCases.find(c => c.id === id);
   if (!item) return;
-  $('modalTitle').textContent = `案例 #${item.id} · ${item.student_school}`;
+  $('modalTitle').textContent = item.student_school ? `案例 #${item.id} · ${item.student_school}` : `案例 #${item.id}`;
   $('modalPills').innerHTML = `<span class="pill pill-tier-${tierClass(item.tier)}">${item.tier}</span><span class="pill">${item.country}</span><span class="pill">${item.degree}</span><span class="pill">${item.result}</span>`;
   $('modalMeta').innerHTML = `
+    <div class="detail-meta-block"><label>本科院校</label><value>${item.student_school || item.tier + '院校'}</value></div>
     <div class="detail-meta-block"><label>学生专业</label><value>${item.student_major}</value></div>
     <div class="detail-meta-block"><label>GPA / 均分</label><value>${item.gpa}</value></div>
-    <div class="detail-meta-block"><label>语言成绩</label><value>${item.language_score}</value></div>
     <div class="detail-meta-block"><label>入学年份</label><value>${item.entry_year || '未标注'}年</value></div>
   `;
   $('modalOffers').innerHTML = item.offers.map(o => `
