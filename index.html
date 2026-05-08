@@ -3,135 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>留学中介｜一站式留学服务</title>
+<meta name="description" content="DreamBridge留学中介，专注英国、香港、新加坡、澳洲留学申请。创始人NUS计算机毕业，累计服务500+学生，98%录取率，0 offer全额退款。提供DIY、半DIY、全包三种服务模式。">
+<meta name="keywords" content="留学中介,英国留学,香港留学,新加坡留学,澳洲留学,留学申请,文书写作,NUS,HKU,UCL">
+<title>DreamBridge留学｜英港新澳一站式申请服务</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "DreamBridge留学申请服务",
+  "provider": {
+    "@type": "Organization",
+    "name": "DreamBridge",
+    "url": "https://dreambridge.edu"
+  },
+  "description": "专注英联邦国家留学申请，提供DIY、半DIY、全包三种服务模式",
+  "areaServed": ["英国", "香港", "新加坡", "澳洲", "新西兰", "澳门"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "留学服务套餐",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "DIY服务",
+          "description": "材料润色与答疑、申请流程指导"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "半DIY服务",
+          "description": "材料撰写支持+策略指导+部分流程自主"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "全包服务",
+          "description": "全程代办+签证支持+流程管理，0 offer全额退款"
+        }
+      }
+    ]
+  }
+}
+</script>
 <style>
-:root {
-  --bg: #f7fbff;
-  --surface: #fff;
-  --text: #12223a;
-  --muted: #607086;
-  --primary: #2f80ed;
-  --secondary: #10b981;
-  --accent: #ff6b35;
-  --border: #e5edf6;
-  --shadow: 0 10px 30px rgba(18, 34, 58, 0.08);
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg); letter-spacing: .2px; }
-.container { width: min(1120px, 90%); margin: 0 auto; }
-
-.header { position: fixed; inset: 0 0 auto 0; z-index: 100; background: transparent; transition: background-color .3s ease, box-shadow .3s ease; }
-.header.scrolled { background: rgba(18, 34, 58, 0.95); box-shadow: var(--shadow); }
-.nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
-.nav-links { display: flex; gap: 16px; }
-.nav-links a { color: #f8fbff; text-decoration: none; font-size: 14px; font-weight: 600; }
-.logo { color: #fff; text-decoration: none; font-size: 22px; font-weight: 800; }
-.logo span { color: var(--secondary); }
-.theme-toggle { background: #fff; border: 1px solid #d3e2f2; border-radius: 10px; padding: 8px 12px; font-weight: 600; }
-
-.hero { min-height: 95vh; position: relative; display: grid; place-items: center; background-image: url('/assets/hero-bg.png'); background-size: cover; background-position: center; }
-.overlay { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(18, 34, 58, .82), rgba(47, 128, 237, .4)); }
-.uni-elements { position: absolute; inset: 18% 8% auto 8%; display: flex; flex-wrap: wrap; gap: 10px; z-index: 1; }
-.uni-elements span { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); color: #eaf3ff; padding: 6px 10px; border-radius: 999px; font-size: 12px; backdrop-filter: blur(3px); }
-.hero-content { position: relative; color: #fff; max-width: 700px; }
-.hero h1 { font-size: clamp(2rem, 5vw, 3.8rem); }
-
-.section { padding: 84px 0; }
-.section-alt { background: #eef6ff; }
-.section-kicker { color: var(--primary); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; opacity: .85; }
-h1, h2, h3 { letter-spacing: .4px; }
-h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
-
-.split { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; }
-.team-card, .card, .case, .viz-panel, .mini-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); backdrop-filter: blur(4px); }
-.team-card { padding: 24px; }
-.signature { font-family: 'Ma Shan Zheng', cursive; font-size: 1.5rem; color: var(--accent); }
-.metrics { display: flex; gap: 14px; margin-top: 20px; }
-.metrics article { flex: 1; background: var(--surface); padding: 16px; border-radius: 14px; border: 1px solid var(--border); }
-
-.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.card { padding: 24px; }
-.price { color: var(--secondary); font-size: 1.7rem; font-weight: 800; }
-
-.case-controls { display: grid; grid-template-columns: 2fr repeat(4, 1fr); gap: 12px; margin: 18px 0; }
-.case-controls input, .case-controls select { padding: 12px; border: 1px solid #cddced; border-radius: 10px; background: #fff; }
-.viz-panel { padding: 18px; margin-bottom: 14px; }
-.bars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.bar-item small { color: var(--muted); }
-.bar-track { height: 10px; background: #e7eef8; border-radius: 6px; overflow: hidden; }
-.bar-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--secondary)); }
-.result-tip { color: var(--muted); }
-
-.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-.case { padding: 18px; }
-.case-header { display: flex; justify-content: space-between; align-items: start; gap: 10px; }
-.offer-badge { font-size: 12px; font-weight: 700; color: #225ca8; background: #eaf3ff; border-radius: 999px; padding: 5px 10px; white-space: nowrap; }
-.pill-row { margin: 8px 0 10px; }
-.case .pill { display: inline-block; background: #eaf3ff; color: #225ca8; padding: 4px 8px; border-radius: 999px; font-size: 12px; margin-right: 6px; }
-
-.student-meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 10px 0; }
-.student-meta div { background: #f6f9ff; border: 1px solid #dce8f8; border-radius: 10px; padding: 8px; }
-.student-meta strong { display: block; font-size: 12px; color: #547097; }
-.student-meta span { font-weight: 600; }
-
-.offer-preview { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
-.offer-chip { font-size: 12px; padding: 6px 10px; background: #f0f6ff; border: 1px solid #d4e4fb; border-radius: 999px; color: #23548f; }
-.offer-chip.more { background: #fff5ef; border-color: #ffd8c7; color: #c45223; }
-.offer-details { border-top: 1px dashed #d8e4f4; margin-top: 8px; padding-top: 10px; }
-.offer-details summary { cursor: pointer; font-weight: 600; color: #2a5e9a; }
-.offer-list { display: grid; gap: 8px; margin-top: 10px; }
-.offer-item { display: grid; grid-template-columns: 1fr 1.2fr auto; gap: 10px; background: #f4f8ff; border: 1px solid #dbe8f8; padding: 8px 10px; border-radius: 10px; align-items: center; }
-.offer-item span { color: var(--muted); }
-.offer-item em { font-style: normal; color: #1976d2; font-weight: 700; }
-
-.pager { display: flex; gap: 8px; justify-content: center; margin-top: 18px; flex-wrap: wrap; }
-.pager button { padding: 8px 12px; border: 1px solid #bdd1e8; background: #fff; border-radius: 8px; cursor: pointer; }
-.pager .active { background: var(--primary); color: #fff; }
-
-.accordion-item { border-bottom: 1px solid #d5e3f4; }
-.accordion-btn { width: 100%; text-align: left; padding: 16px 0; background: none; border: 0; font-weight: 600; }
-.accordion-panel { display: none; color: var(--muted); padding-bottom: 14px; }
-.accordion-item.open .accordion-panel { display: block; }
-
-.btn { display: inline-block; padding: 12px 20px; border-radius: 12px; text-decoration: none; font-weight: 700; border: 0; cursor: pointer; }
-.btn-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 24px rgba(255, 107, 53, .28); }
-.btn-secondary { border: 1px solid #fff; color: #fff; }
-
-.footer { background: #102136; color: #dce7f6; padding: 48px 0; }
-.contact-wrap { display: flex; justify-content: space-between; gap: 24px; align-items: center; }
-
-.fade-in { opacity: 0; transform: translateY(24px); transition: .7s ease; }
-.fade-in.visible { opacity: 1; transform: none; }
-
-.mini-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.mini-card { padding: 18px; }
-.cta-box { background: #0f2948; color: #e8f1ff; border-radius: 18px; padding: 30px; }
-
-.to-top { position: fixed; right: 22px; bottom: 22px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--accent); color: #fff; font-size: 18px; display: none; cursor: pointer; }
-.to-top.show { display: block; }
-
-.qr-modal { position: fixed; inset: 0; background: rgba(10,20,36,.62); display: none; place-items: center; z-index: 999; }
-.qr-modal.show { display: grid; }
-.qr-card { width: min(90vw, 360px); background: #fff; border-radius: 16px; padding: 22px; text-align: center; position: relative; }
-.qr-card img { width: 220px; height: 220px; border-radius: 10px; object-fit: cover; }
-.qr-close { position: absolute; right: 10px; top: 8px; background: none; border: 0; font-size: 24px; cursor: pointer; }
-
-body.dark { --bg: #0c1420; --surface: #121f31; --text: #e7effa; --muted: #9bb0c8; --border: #24364f; }
-body.dark .section-alt { background: #101b2b; }
-body.dark .header.scrolled { background: rgba(8, 17, 30, .96); }
-body.dark .qr-card { background: #18283d; color: #e7effa; }
-body.dark .offer-chip { background: #1b2a41; border-color: #2d466a; color: #d6e5ff; }
-
-@media (max-width: 900px) {
-  .nav-left, .nav-right { display: none; }
-  .split, .cards, .grid, .contact-wrap, .bars, .case-controls, .mini-grid, .viz-grid, .metrics-board { grid-template-columns: 1fr; display: grid; }
-}
-
-.metrics-board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:14px}.metric-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;box-shadow:var(--shadow)}.metric-card strong{display:block;font-size:24px}.metric-card span{font-size:12px;color:var(--muted)}.viz-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.mini-list{display:grid;gap:8px;margin-top:10px}.mini-row{display:flex;justify-content:space-between;font-size:13px;padding:6px 8px;background:#f5f9ff;border-radius:8px}.offer-list{max-height:220px;overflow:auto;padding-right:4px} .offer-list::-webkit-scrollbar{width:6px}.offer-list::-webkit-scrollbar-thumb{background:#c5d8ee;border-radius:999px}
-
-
-/* ===== 全局设计增强 ===== */
+/* ===== 设计令牌 ===== */
 :root {
   --bg: #f7fbff;
   --surface: #fff;
@@ -144,86 +64,94 @@ body.dark .offer-chip { background: #1b2a41; border-color: #2d466a; color: #d6e5
   --shadow: 0 10px 30px rgba(18, 34, 58, 0.08);
   --shadow-lg: 0 20px 50px rgba(18, 34, 58, 0.12);
   --radius: 16px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-* { box-sizing: border-box; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { margin: 0; font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg); letter-spacing: .2px; }
-.container { width: min(1120px, 90%); margin: 0 auto; }
+body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--text); background: var(--bg); letter-spacing: .2px; line-height: 1.6; }
+.container { width: min(1120px, 92%); margin: 0 auto; }
 
 /* ===== 导航栏 ===== */
-.header { position: fixed; inset: 0 0 auto 0; z-index: 100; background: transparent; transition: background-color .3s ease, box-shadow .3s ease; }
+.header { position: fixed; inset: 0 0 auto 0; z-index: 100; background: transparent; transition: all .3s ease; }
 .header.scrolled { background: rgba(18, 34, 58, 0.95); box-shadow: var(--shadow); backdrop-filter: blur(12px); }
-.nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
-.nav-links { display: flex; gap: 16px; }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.nav-links { display: flex; gap: 20px; }
 .nav-links a { color: #f8fbff; text-decoration: none; font-size: 14px; font-weight: 600; transition: opacity .2s; }
-.nav-links a:hover { opacity: 0.8; }
-.logo { color: #fff; text-decoration: none; font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+.nav-links a:hover { opacity: 0.75; }
+.logo { color: #fff; text-decoration: none; font-size: 24px; font-weight: 800; letter-spacing: -0.5px; }
 .logo span { color: var(--secondary); }
-.theme-toggle { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 8px 14px; font-weight: 600; color: #fff; cursor: pointer; backdrop-filter: blur(4px); transition: all .2s; }
+.theme-toggle { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 8px 14px; font-weight: 600; color: #fff; cursor: pointer; backdrop-filter: blur(4px); transition: all .2s; font-size: 13px; }
 .theme-toggle:hover { background: rgba(255,255,255,0.25); }
 
-/* ===== Hero 区域重新设计 ===== */
-.hero { min-height: 100vh; position: relative; display: grid; place-items: center; background-image: url('/assets/hero-bg.png'); background-size: cover; background-position: center; overflow: hidden; }
-.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(18, 34, 58, .88), rgba(47, 128, 237, .45)); }
+/* ===== 倒计时条 ===== */
+.countdown-bar { background: linear-gradient(90deg, var(--primary), var(--secondary)); color: #fff; padding: 10px 0; font-size: 13px; font-weight: 600; text-align: center; position: fixed; top: 0; left: 0; right: 0; z-index: 101; transform: translateY(-100%); transition: transform .3s; }
+.countdown-bar.show { transform: translateY(0); }
+.countdown-bar .container { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; }
+.countdown-bar .pill { background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 6px; font-size: 12px; }
+.countdown-close { background: none; border: none; color: #fff; cursor: pointer; font-size: 16px; margin-left: 8px; }
 
-/* 装饰性光斑 */
-.hero-blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; z-index: 0; }
+/* ===== Hero ===== */
+.hero { min-height: 100vh; position: relative; display: grid; place-items: center; background-image: url('/assets/hero-bg.png'); background-size: cover; background-position: center; overflow: hidden; padding-top: 60px; }
+.hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(18, 34, 58, .9), rgba(47, 128, 237, .5)); }
+.hero-grid { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 40px 40px; z-index: 0; }
+.hero-blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.3; z-index: 0; }
 .hero-blob-1 { width: 400px; height: 400px; background: var(--primary); top: -100px; right: -100px; }
-.hero-blob-2 { width: 300px; height: 300px; background: var(--secondary); bottom: -50px; left: -50px; opacity: 0.25; }
-.hero-blob-3 { width: 200px; height: 200px; background: var(--accent); top: 40%; left: 30%; opacity: 0.15; }
-
-/* 网格装饰 */
-.hero-grid { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px); background-size: 40px 40px; z-index: 0; }
-
+.hero-blob-2 { width: 300px; height: 300px; background: var(--secondary); bottom: -50px; left: -50px; opacity: 0.2; }
+.hero-blob-3 { width: 200px; height: 200px; background: var(--accent); top: 40%; left: 30%; opacity: 0.12; }
 .hero-content { position: relative; z-index: 1; color: #fff; max-width: 720px; text-align: center; padding: 0 20px; }
-
 .tag { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: #eaf3ff; padding: 8px 18px; border-radius: 999px; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; backdrop-filter: blur(4px); }
-
 .hero h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 800; line-height: 1.15; margin: 0 0 20px; letter-spacing: -0.5px; }
 .hero h1 .highlight { color: var(--secondary); position: relative; }
 .hero h1 .highlight::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 8px; background: var(--secondary); opacity: 0.3; border-radius: 4px; z-index: -1; }
-
 .hero-subtitle { font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto; }
-
 .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-
-.btn { display: inline-block; padding: 14px 28px; border-radius: 14px; text-decoration: none; font-weight: 700; border: 0; cursor: pointer; font-size: 15px; transition: all .25s ease; }
-.btn-primary { background: var(--accent); color: #fff; box-shadow: 0 8px 28px rgba(255, 107, 53, .35); }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(255, 107, 53, .45); }
-.btn-secondary { border: 1.5px solid rgba(255,255,255,0.5); color: #fff; background: rgba(255,255,255,0.08); backdrop-filter: blur(4px); }
-.btn-secondary:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.7); }
-
-/* 底部滚动提示 */
+.hero-stats { display: flex; gap: 32px; justify-content: center; margin-top: 48px; flex-wrap: wrap; }
+.hero-stat { text-align: center; }
+.hero-stat strong { display: block; font-size: 2rem; font-weight: 800; color: #fff; }
+.hero-stat span { font-size: 13px; color: rgba(255,255,255,0.7); }
 .hero-scroll { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.6); font-size: 12px; }
 .hero-scroll .mouse { width: 22px; height: 34px; border: 2px solid rgba(255,255,255,0.4); border-radius: 12px; position: relative; }
 .hero-scroll .mouse::before { content: ''; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 4px; height: 6px; background: rgba(255,255,255,0.6); border-radius: 2px; animation: scrollDown 1.8s infinite; }
 @keyframes scrollDown { 0% { opacity: 1; top: 6px; } 100% { opacity: 0; top: 18px; } }
 
+/* ===== Marquee 精选案例 ===== */
+.marquee-section { background: linear-gradient(180deg, #eef6ff 0%, var(--bg) 100%); padding: 60px 0 40px; overflow: hidden; }
+.marquee-section .section-kicker { text-align: center; margin-bottom: 24px; }
+.marquee-track { display: flex; gap: 20px; animation: marquee 30s linear infinite; width: max-content; }
+.marquee-track:hover { animation-play-state: paused; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; box-shadow: var(--shadow); min-width: 320px; display: flex; flex-direction: column; gap: 8px; transition: transform .2s; cursor: default; }
+.marquee-card:hover { transform: translateY(-4px); }
+.marquee-card .from { font-size: 13px; color: var(--muted); }
+.marquee-card .arrow { font-size: 20px; color: var(--primary); font-weight: 800; }
+.marquee-card .to { font-size: 16px; font-weight: 700; color: var(--text); }
+.marquee-card .tag { display: inline-block; background: linear-gradient(135deg, var(--accent), #ff8f5a); color: #fff; padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; width: fit-content; margin-top: 4px; }
+
 /* ===== 通用区块 ===== */
-.section { padding: 100px 0; }
+.section { padding: 90px 0; }
 .section-alt { background: #eef6ff; }
 .section-kicker { color: var(--primary); font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; opacity: .9; margin-bottom: 12px; }
-h1, h2, h3 { letter-spacing: .4px; }
-h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; margin-bottom: 16px; }
+h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
 
-/* ===== About 区域 ===== */
+/* ===== About ===== */
 .split { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: start; }
 .team-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; position: relative; overflow: hidden; }
 .team-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--secondary)); }
 .team-card h3 { margin-top: 0; font-size: 1.3rem; }
-.team-card ul { padding-left: 0; list-style: none; }
-.team-card li { padding: 8px 0; border-bottom: 1px solid #f0f4f8; font-size: 14px; }
+.team-card ul { list-style: none; padding: 0; }
+.team-card li { padding: 10px 0; border-bottom: 1px solid #f0f4f8; font-size: 14px; }
 .team-card li:last-child { border-bottom: none; }
 .signature { font-family: 'Ma Shan Zheng', cursive; font-size: 1.6rem; color: var(--accent); margin-top: 16px; }
-
 .metrics { display: flex; gap: 14px; margin-top: 24px; }
 .metrics article { flex: 1; background: var(--surface); padding: 18px; border-radius: 14px; border: 1px solid var(--border); text-align: center; transition: transform .2s, box-shadow .2s; }
 .metrics article:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 .metrics h3 { font-size: 1.8rem; font-weight: 800; color: var(--primary); margin: 0 0 4px; }
 .metrics p { margin: 0; font-size: 13px; color: var(--muted); }
 
-/* ===== Plans 区域 ===== */
+/* ===== Plans + 对比表 ===== */
+.plan-toggle { display: flex; gap: 8px; justify-content: center; margin-bottom: 24px; }
+.plan-toggle button { padding: 8px 20px; border: 1px solid var(--border); background: var(--surface); border-radius: 10px; cursor: pointer; font-weight: 600; font-size: 14px; transition: all .2s; }
+.plan-toggle button.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; transition: transform .25s, box-shadow .25s; position: relative; overflow: hidden; }
 .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
@@ -232,14 +160,55 @@ h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; margin-bottom: 16p
 .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
 .card .price { color: var(--secondary); font-size: 1.6rem; font-weight: 800; margin: 12px 0; }
 .card ul { padding-left: 18px; color: var(--muted); font-size: 14px; line-height: 1.8; }
-
-/* 推荐标签 */
 .card.featured { border: 2px solid var(--primary); transform: scale(1.02); }
 .card.featured:hover { transform: scale(1.02) translateY(-6px); }
 .card-badge { position: absolute; top: 12px; right: 12px; background: var(--primary); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; }
 
-/* ===== 案例区域 ===== */
-.case-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; }
+.compare-table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: none; }
+.compare-table.active { display: table; }
+.compare-table th, .compare-table td { padding: 14px 18px; text-align: center; border-bottom: 1px solid var(--border); font-size: 14px; }
+.compare-table th { background: #f6f9ff; font-weight: 700; color: var(--text); }
+.compare-table td:first-child { text-align: left; font-weight: 600; }
+.compare-table .check { color: var(--secondary); font-size: 18px; }
+.compare-table .cross { color: #cbd5e1; font-size: 18px; }
+.compare-table .half { color: var(--primary); font-size: 18px; }
+.compare-table tr:hover td { background: #f8fbff; }
+
+/* ===== 评估器 ===== */
+.eval-section { background: linear-gradient(135deg, #0f2948, #1a3a5c); color: #e8f1ff; border-radius: 20px; padding: 48px; position: relative; overflow: hidden; }
+.eval-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: var(--primary); opacity: 0.08; border-radius: 50%; filter: blur(60px); }
+.eval-section h2 { color: #fff; text-align: center; margin-bottom: 8px; }
+.eval-section .subtitle { text-align: center; opacity: 0.85; margin-bottom: 32px; font-size: 15px; }
+.eval-form { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; position: relative; z-index: 1; }
+.eval-form input, .eval-form select { padding: 14px; border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; background: rgba(255,255,255,0.08); color: #fff; font-size: 14px; width: 100%; backdrop-filter: blur(4px); }
+.eval-form input::placeholder { color: rgba(255,255,255,0.5); }
+.eval-form button { grid-column: 1 / -1; padding: 14px; background: var(--accent); color: #fff; border: none; border-radius: 12px; font-weight: 700; font-size: 15px; cursor: pointer; transition: all .2s; box-shadow: 0 8px 24px rgba(255,107,53,.3); }
+.eval-form button:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,107,53,.4); }
+.eval-result { margin-top: 28px; position: relative; z-index: 1; display: none; }
+.eval-result.show { display: block; }
+.eval-result h3 { color: #fff; font-size: 1.1rem; margin-bottom: 16px; }
+.eval-match-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.eval-match-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 18px; backdrop-filter: blur(8px); }
+.eval-match-card .school { font-weight: 700; color: #fff; font-size: 14px; }
+.eval-match-card .major { color: rgba(255,255,255,0.7); font-size: 13px; margin: 4px 0; }
+.eval-match-card .offers { color: var(--secondary); font-size: 13px; font-weight: 600; }
+.eval-cta { text-align: center; margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15); }
+.eval-cta p { margin-bottom: 12px; font-size: 15px; }
+
+/* ===== 案例库 ===== */
+.quick-tags { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.quick-tag { padding: 8px 16px; border: 1px solid var(--border); background: var(--surface); border-radius: 999px; cursor: pointer; font-size: 13px; font-weight: 600; color: var(--muted); transition: all .2s; }
+.quick-tag:hover, .quick-tag.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.stats-bar { display: flex; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+.stat-pill { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 24px; box-shadow: var(--shadow); flex: 1; min-width: 140px; text-align: center; transition: transform .2s; }
+.stat-pill:hover { transform: translateY(-2px); }
+.stat-number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+.stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; }
+.filter-row { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+.filter-input, .filter-select { padding: 12px 14px; border: 1px solid #cddced; border-radius: 10px; background: #fff; font-size: 14px; width: 100%; font-family: inherit; transition: border-color .2s, box-shadow .2s; }
+.filter-input:focus, .filter-select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1); }
+.cases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; min-height: 200px; }
+.case-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; cursor: pointer; }
 .case-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .case-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
 .case-title { font-size: 1.05rem; font-weight: 700; color: var(--text); margin: 0; }
@@ -255,20 +224,7 @@ h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; margin-bottom: 16p
 .offer-school { font-weight: 700; color: var(--text); font-size: 13px; }
 .offer-major { color: var(--muted); font-size: 12px; }
 .offer-rank { font-weight: 700; color: var(--accent); font-size: 12px; white-space: nowrap; }
-
-.stats-bar { display: flex; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
-.stat-pill { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px 24px; box-shadow: var(--shadow); flex: 1; min-width: 140px; text-align: center; transition: transform .2s; }
-.stat-pill:hover { transform: translateY(-2px); }
-.stat-number { font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
-.stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; }
-
-.filter-row { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
-.filter-input, .filter-select { padding: 12px 14px; border: 1px solid #cddced; border-radius: 10px; background: #fff; font-size: 14px; width: 100%; font-family: inherit; transition: border-color .2s, box-shadow .2s; }
-.filter-input:focus, .filter-select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1); }
-
-.cases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; min-height: 200px; }
 .no-results { text-align: center; padding: 60px 20px; color: var(--muted); font-size: 1.1rem; grid-column: 1 / -1; }
-
 .chart-container { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
 .chart-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
 .bar-chart { display: flex; flex-direction: column; gap: 10px; }
@@ -288,18 +244,35 @@ h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; margin-bottom: 16p
 .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .page-info { padding: 10px 16px; color: var(--muted); font-size: 14px; }
 
+/* 案例详情弹窗 */
+.case-modal { position: fixed; inset: 0; background: rgba(10,20,36,.65); display: none; place-items: center; z-index: 999; backdrop-filter: blur(6px); padding: 20px; overflow-y: auto; }
+.case-modal.show { display: grid; }
+.case-detail-card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-lg); max-width: 640px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; }
+.case-detail-header { padding: 28px 28px 0; }
+.case-detail-header h2 { margin-bottom: 8px; font-size: 1.4rem; }
+.case-detail-body { padding: 0 28px 28px; }
+.case-detail-meta { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 20px 0; }
+.case-detail-meta .meta-block { background: #f6f9ff; border-radius: 12px; padding: 14px; }
+.case-detail-meta .meta-block label { font-size: 11px; color: #547097; display: block; margin-bottom: 4px; }
+.case-detail-meta .meta-block value { font-weight: 700; font-size: 14px; }
+.case-detail-offers { margin-top: 20px; }
+.case-detail-offers h4 { font-size: 14px; color: var(--primary); margin-bottom: 12px; }
+.case-detail-offer { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background: #f4f8ff; border: 1px solid #dbe8f8; border-radius: 10px; margin-bottom: 8px; }
+.case-detail-offer .school { font-weight: 700; font-size: 14px; }
+.case-detail-offer .major { font-size: 13px; color: var(--muted); }
+.case-detail-offer .rank { font-weight: 700; color: var(--accent); font-size: 13px; }
+.case-detail-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--muted); width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; transition: background .2s; }
+.case-detail-close:hover { background: #f0f4f8; }
+.case-detail-cta { padding: 20px 28px; border-top: 1px solid var(--border); text-align: center; }
+.case-detail-cta p { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+
 /* ===== Testimonials ===== */
 .mini-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-.mini-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; transition: transform .2s; }
+.mini-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; transition: transform .2s; }
 .mini-card:hover { transform: translateY(-3px); }
+.mini-card .avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 16px; margin-bottom: 12px; }
 .mini-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
 .mini-card p { color: var(--muted); font-size: 14px; line-height: 1.6; }
-
-/* ===== CTA Box ===== */
-.cta-box { background: linear-gradient(135deg, #0f2948, #1a3a5c); color: #e8f1ff; border-radius: 20px; padding: 48px; text-align: center; position: relative; overflow: hidden; }
-.cta-box::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: var(--primary); opacity: 0.08; border-radius: 50%; filter: blur(60px); }
-.cta-box h2 { font-size: 2rem; margin-bottom: 12px; }
-.cta-box p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
 
 /* ===== FAQ ===== */
 .accordion-item { border-bottom: 1px solid #d5e3f4; }
@@ -316,9 +289,14 @@ h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; margin-bottom: 16p
 .contact-wrap p { margin: 6px 0; opacity: 0.85; font-size: 14px; }
 .contact-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
+/* ===== 底部固定CTA ===== */
+.mobile-cta { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid var(--border); padding: 10px 16px; display: none; gap: 10px; align-items: center; z-index: 98; box-shadow: 0 -4px 20px rgba(0,0,0,0.08); }
+.mobile-cta .wx { font-size: 14px; color: var(--text); font-weight: 600; flex: 1; }
+.mobile-cta .btn { padding: 10px 18px; font-size: 14px; }
+
 /* ===== Back to top ===== */
-.to-top { position: fixed; right: 22px; bottom: 22px; width: 48px; height: 48px; border: 0; border-radius: 50%; background: var(--accent); color: #fff; font-size: 20px; display: none; cursor: pointer; box-shadow: 0 4px 16px rgba(255,107,53,0.35); transition: transform .2s; z-index: 99; }
-.to-top.show { display: grid; place-items: center; }
+.to-top { position: fixed; right: 22px; bottom: 80px; width: 48px; height: 48px; border: 0; border-radius: 50%; background: var(--accent); color: #fff; font-size: 20px; display: none; cursor: pointer; box-shadow: 0 4px 16px rgba(255,107,53,0.35); transition: transform .2s; z-index: 97; place-items: center; }
+.to-top.show { display: grid; }
 .to-top:hover { transform: translateY(-3px); }
 
 /* ===== QR Modal ===== */
@@ -329,16 +307,22 @@ h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; margin-bottom: 16p
 .qr-close { position: absolute; right: 14px; top: 12px; background: none; border: 0; font-size: 28px; cursor: pointer; color: var(--muted); line-height: 1; }
 
 /* ===== 动画 ===== */
-.fade-in { opacity: 0; transform: translateY(30px); transition: .8s ease; }
+.fade-in { opacity: 0; transform: translateY(30px); transition: .8s var(--ease-out); }
 .fade-in.visible { opacity: 1; transform: none; }
 
 /* ===== 响应式 ===== */
 @media (max-width: 900px) {
   .nav-left, .nav-right { display: none; }
-  .split, .cards, .grid, .contact-wrap, .bars, .filter-row, .mini-grid, .viz-grid, .metrics-board { grid-template-columns: 1fr; display: grid; }
+  .split, .cards, .mini-grid, .eval-form, .filter-row { grid-template-columns: 1fr; }
   .hero h1 { font-size: 2rem; }
   .cases-grid { grid-template-columns: 1fr; }
-  .cta-box { padding: 32px 24px; }
+  .eval-section { padding: 32px 20px; }
+  .contact-wrap { flex-direction: column; text-align: center; }
+  .mobile-cta { display: flex; }
+  .to-top { bottom: 90px; }
+  .marquee-card { min-width: 280px; }
+  .case-detail-card { max-height: 85vh; }
+  .case-detail-meta { grid-template-columns: 1fr; }
 }
 
 /* 暗色模式 */
@@ -350,10 +334,26 @@ body.dark .meta-item { background: #1a2638; border-color: #2a3f5a; }
 body.dark .offer-item { background: #1a2638; border-color: #2a3f5a; }
 body.dark .pill { background: #1b2a41; border-color: #2d466a; color: #d6e5ff; }
 body.dark .filter-input, body.dark .filter-select { background: #121f31; color: #e7effa; border-color: #24364f; }
+body.dark .mobile-cta { background: #121f31; border-color: #24364f; }
+body.dark .case-detail-card { background: #121f31; }
+body.dark .case-detail-meta .meta-block { background: #1a2638; }
+body.dark .case-detail-offer { background: #1a2638; border-color: #2a3f5a; }
 </style>
 <base target="_blank">
 </head>
 <body>
+
+<!-- 倒计时条 -->
+<div class="countdown-bar" id="countdownBar">
+  <div class="container">
+    <span>🎓 2026 Fall 申请季进行中</span>
+    <span class="pill" id="countdownText">计算中...</span>
+    <span>全包服务 0 offer 全额退款</span>
+    <button class="countdown-close" onclick="document.getElementById('countdownBar').classList.remove('show')">×</button>
+  </div>
+</div>
+
+<!-- 导航 -->
 <header class="header" id="topHeader">
   <div class="container nav-wrap">
     <nav class="nav-left nav-links">
@@ -363,139 +363,205 @@ body.dark .filter-input, body.dark .filter-select { background: #121f31; color: 
     <a href="#" class="logo">Dream<span>Bridge</span></a>
     <nav class="nav-right nav-links">
       <a href="#cases">案例汇总</a>
+      <a href="#eval">背景评估</a>
       <a href="#faq">常见问题</a>
-      <a href="#contact">联系方式</a>
     </nav>
     <button class="theme-toggle" id="themeToggle">🌓</button>
   </div>
 </header>
 
 <main>
-  <!-- Hero -->
-  <section class="hero" id="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-blob hero-blob-1"></div>
-    <div class="hero-blob hero-blob-2"></div>
-    <div class="hero-blob hero-blob-3"></div>
 
-    <div class="container hero-content fade-in">
-      <span class="tag">Your Future, Curated</span>
-      <h1>为你的<span class="highlight">留学梦想</span><br>提供一站式服务</h1>
-      <p class="hero-subtitle">从选校定位、文书规划到签证落地，我们用专业与效率，陪你走向理想学府。</p>
-      <div class="hero-cta">
-        <button id="consultBtn" class="btn btn-primary">立即咨询</button>
-        <a href="#cases" class="btn btn-secondary">查看成功案例</a>
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
+  <div class="container hero-content fade-in">
+    <span class="tag">Your Future, Curated</span>
+    <h1>为你的<span class="highlight">留学梦想</span><br>提供一站式服务</h1>
+    <p class="hero-subtitle">从选校定位、文书规划到签证落地，我们用专业与效率，陪你走向理想学府。</p>
+    <div class="hero-cta">
+      <button id="consultBtn" class="btn btn-primary">立即咨询</button>
+      <a href="#eval" class="btn btn-secondary">30秒背景评估</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>98%</strong><span>录取率</span></div>
+      <div class="hero-stat"><strong>3000+</strong><span>成功案例</span></div>
+      <div class="hero-stat"><strong>500+</strong><span>签约学生</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="mouse"></div>
+    <span>向下滚动</span>
+  </div>
+</section>
+
+<!-- 精选案例 Marquee -->
+<section class="marquee-section">
+  <div class="container">
+    <p class="section-kicker">Recent Offers</p>
+  </div>
+  <div class="marquee-track" id="marqueeTrack">
+    <!-- 由JS填充，复制一份实现无缝循环 -->
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container split fade-in">
+    <div>
+      <p class="section-kicker">About Us</p>
+      <h2>专业团队，清晰路径，结果导向</h2>
+      <p>创始人毕业于新加坡国立大学计算机专业，拥有4年英联邦留学申请经验。团队累计服务500+签约学生，擅长职业规划与项目定位。服务地区覆盖英国、香港、新加坡、澳洲、新西兰、澳门。</p>
+      <div class="metrics">
+        <article><h3>98%</h3><p>录取率</p></article>
+        <article><h3>3000+</h3><p>成功案例</p></article>
+        <article><h3>12年</h3><p>行业经验</p></article>
       </div>
     </div>
-
-    <div class="hero-scroll">
-      <div class="mouse"></div>
-      <span>向下滚动</span>
+    <div class="team-card">
+      <h3>服务团队</h3>
+      <ul>
+        <li>🎓 选校顾问：院校匹配与策略制定</li>
+        <li>✍️ 文书导师：故事线打磨与面试辅导</li>
+        <li>📌 申请管家：节点管理与材料跟进</li>
+      </ul>
+      <p class="signature">让申请，不再焦虑。</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="container split fade-in">
-      <div>
-        <p class="section-kicker">About Us</p>
-        <h2>专业团队，清晰路径，结果导向</h2>
-        <p>创始人毕业于新加坡国立大学计算机专业，拥有4年英联邦留学申请经验。团队累计服务500+签约学生，擅长职业规划与项目定位。服务地区覆盖英国、香港、新加坡、澳洲、新西兰、澳门。</p>
-        <div class="metrics">
-          <article><h3>98%</h3><p>录取率</p></article>
-          <article><h3>3000+</h3><p>成功案例</p></article>
-          <article><h3>12年</h3><p>行业经验</p></article>
+<!-- Plans -->
+<section class="section section-alt" id="plans">
+  <div class="container fade-in">
+    <p class="section-kicker">Plans</p>
+    <h2>套餐服务</h2>
+    <div class="plan-toggle">
+      <button class="active" onclick="showPlanView('cards')">卡片视图</button>
+      <button onclick="showPlanView('table')">对比视图</button>
+    </div>
+    <div class="cards" id="planCards"></div>
+    <table class="compare-table" id="compareTable">
+      <thead>
+        <tr><th>服务项目</th><th>DIY服务</th><th>半DIY服务</th><th>全包服务</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>文书撰写</td><td class="cross">✗ 仅润色</td><td class="check">✓ 代写</td><td class="check">✓ 代写</td></tr>
+        <tr><td>选校定位</td><td class="cross">✗ 自主</td><td class="check">✓ 指导</td><td class="check">✓ 全包</td></tr>
+        <tr><td>简历制作</td><td class="half">△ 润色</td><td class="check">✓ 代写</td><td class="check">✓ 代写</td></tr>
+        <tr><td>网申递交</td><td class="cross">✗ 自主</td><td class="half">△ 辅助</td><td class="check">✓ 代办</td></tr>
+        <tr><td>推荐信</td><td class="half">△ 润色</td><td class="check">✓ 代写</td><td class="check">✓ 代写</td></tr>
+        <tr><td>签证支持</td><td class="cross">✗</td><td class="cross">✗</td><td class="check">✓</td></tr>
+        <tr><td>进度管理</td><td class="cross">✗</td><td class="half">△</td><td class="check">✓ 专属顾问</td></tr>
+        <tr><td>退款承诺</td><td class="cross">✗</td><td class="cross">✗</td><td class="check">✓ 0 offer全退</td></tr>
+        <tr><td>响应时间</td><td>答疑1888/年</td><td>工作日响应</td><td class="check">✓ 7×16小时</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:24px;text-align:center;"><a class="btn btn-primary" href="package.html" target="_blank" rel="noopener">了解详细服务流程</a></p>
+  </div>
+</section>
+
+<!-- 30秒评估器 -->
+<section class="section" id="eval">
+  <div class="container fade-in">
+    <div class="eval-section">
+      <h2>30秒背景评估</h2>
+      <p class="subtitle">输入你的基本情况，查看相似背景学长学姐的录取结果</p>
+      <div class="eval-form">
+        <input type="text" id="evalSchool" placeholder="你的学校（如：武汉理工）">
+        <input type="text" id="evalMajor" placeholder="你的专业（如：计算机）">
+        <input type="text" id="evalGpa" placeholder="GPA / 均分（如：85）">
+        <select id="evalTarget">
+          <option value="">目标地区</option>
+          <option value="英国">英国</option>
+          <option value="香港">香港</option>
+          <option value="新加坡">新加坡</option>
+          <option value="澳洲">澳洲</option>
+        </select>
+        <button onclick="runEval()">🔍 查看我能申什么</button>
+      </div>
+      <div class="eval-result" id="evalResult">
+        <h3>与你背景相似的录取案例：</h3>
+        <div class="eval-match-grid" id="evalMatchGrid"></div>
+        <div class="eval-cta">
+          <p>想获取更精准的选校方案？</p>
+          <button class="btn btn-primary" onclick="document.getElementById('qrModal').classList.add('show')">添加微信 1对1咨询</button>
         </div>
       </div>
-      <div class="team-card">
-        <h3>服务团队</h3>
-        <ul>
-          <li>🎓 选校顾问：院校匹配与策略制定</li>
-          <li>✍️ 文书导师：故事线打磨与面试辅导</li>
-          <li>📌 申请管家：节点管理与材料跟进</li>
-        </ul>
-        <p class="signature">让申请，不再焦虑。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 案例库 -->
+<section class="section" id="cases">
+  <div class="container fade-in">
+    <p class="section-kicker">Cases Intelligence</p>
+    <h2>大型可筛选案例汇总</h2>
+
+    <div class="stats-bar" id="statsBar"></div>
+
+    <div class="filter-row">
+      <input type="search" id="searchInput" class="filter-input" placeholder="搜索学生学校、专业、录取院校关键词...">
+      <select id="countryFilter" class="filter-select"><option value="">全部地区</option></select>
+      <select id="degreeFilter" class="filter-select"><option value="">全部学历</option></select>
+      <select id="resultFilter" class="filter-select"><option value="">全部结果</option></select>
+    </div>
+
+    <div class="quick-tags" id="quickTags">
+      <span class="quick-tag" data-filter="all">全部案例</span>
+      <span class="quick-tag" data-filter="shuangfei">🔥 双非逆袭</span>
+      <span class="quick-tag" data-filter="lowgpa">📉 低GPA录取</span>
+      <span class="quick-tag" data-filter="transfer">🔄 转专业成功</span>
+      <span class="quick-tag" data-filter="top10">🎯 QS前10</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px;">
+      <div class="chart-container">
+        <div class="chart-title">📊 地区分布</div>
+        <div class="bar-chart" id="countryChart"></div>
+      </div>
+      <div class="chart-container">
+        <div class="chart-title">🎯 录取结果分布</div>
+        <div class="bar-chart" id="resultChart"></div>
+      </div>
+      <div class="chart-container">
+        <div class="chart-title">🏫 高频录取院校 Top 8</div>
+        <div class="bar-chart" id="schoolChart"></div>
       </div>
     </div>
-  </section>
 
-  <!-- Plans -->
-  <section class="section section-alt" id="plans">
-    <div class="container fade-in">
-      <p class="section-kicker">Plans</p>
-      <h2>套餐服务</h2>
-      <div class="cards" id="planCards"></div>
-      <p style="margin-top:24px;text-align:center;"><a class="btn btn-primary" href="package.html" target="_blank" rel="noopener">了解更多详情</a></p>
-    </div>
-  </section>
+    <div class="cases-grid" id="casesGrid"></div>
+    <div class="no-results" id="noResults" style="display: none;">未找到匹配的案例，请调整筛选条件</div>
 
-  <!-- Cases -->
-  <section class="section" id="cases">
-    <div class="container fade-in">
-      <p class="section-kicker">Cases Intelligence</p>
-      <h2>大型可筛选案例汇总</h2>
+    <div class="pagination" id="pagination"></div>
 
-      <div class="stats-bar" id="statsBar"></div>
+    <p class="result-tip" id="dataSourceTip" style="margin-top: 16px; text-align: center; color: var(--muted); font-size: 13px;"></p>
+  </div>
+</section>
 
-      <div class="filter-row">
-        <input type="search" id="searchInput" class="filter-input" placeholder="搜索学生学校、专业、录取院校关键词...">
-        <select id="countryFilter" class="filter-select"><option value="">全部地区</option></select>
-        <select id="degreeFilter" class="filter-select"><option value="">全部学历</option></select>
-        <select id="resultFilter" class="filter-select"><option value="">全部结果</option></select>
-      </div>
+<!-- Testimonials -->
+<section class="section" id="testimonials-section">
+  <div class="container fade-in">
+    <p class="section-kicker">Testimonials</p>
+    <h2>学生与家长评价</h2>
+    <div class="mini-grid" id="testimonials"></div>
+  </div>
+</section>
 
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px;">
-        <div class="chart-container">
-          <div class="chart-title">📊 地区分布</div>
-          <div class="bar-chart" id="countryChart"></div>
-        </div>
-        <div class="chart-container">
-          <div class="chart-title">🎯 录取结果分布</div>
-          <div class="bar-chart" id="resultChart"></div>
-        </div>
-        <div class="chart-container">
-          <div class="chart-title">🏫 高频录取院校 Top 8</div>
-          <div class="bar-chart" id="schoolChart"></div>
-        </div>
-      </div>
+<!-- FAQ -->
+<section class="section section-alt" id="faq">
+  <div class="container fade-in">
+    <p class="section-kicker">FAQ</p>
+    <h2>常见问题</h2>
+    <div class="accordion" id="faqList"></div>
+  </div>
+</section>
 
-      <div class="cases-grid" id="casesGrid"></div>
-      <div class="no-results" id="noResults" style="display: none;">未找到匹配的案例，请调整筛选条件</div>
-
-      <div class="pagination" id="pagination"></div>
-
-      <p class="result-tip" id="dataSourceTip" style="margin-top: 16px; text-align: center; color: var(--muted); font-size: 13px;"></p>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="section" id="testimonials-section">
-    <div class="container fade-in">
-      <p class="section-kicker">Testimonials</p>
-      <h2>学生与家长评价</h2>
-      <div class="mini-grid" id="testimonials"></div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section section-alt" id="cta-section">
-    <div class="container cta-box fade-in">
-      <h2>还不确定从哪一步开始？</h2>
-      <p>预约一次15分钟免费评估，快速明确你的申请路径与优先级。</p>
-      <a class="btn btn-primary" href="#contact">预约免费评估</a>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section section-alt" id="faq">
-    <div class="container fade-in">
-      <p class="section-kicker">FAQ</p>
-      <h2>常见问题</h2>
-      <div class="accordion" id="faqList"></div>
-    </div>
-  </section>
 </main>
 
+<!-- Footer -->
 <footer class="footer" id="contact">
   <div class="container contact-wrap">
     <div>
@@ -511,8 +577,15 @@ body.dark .filter-input, body.dark .filter-select { background: #121f31; color: 
   </div>
 </footer>
 
+<!-- 移动端底部CTA -->
+<div class="mobile-cta" id="mobileCta">
+  <span class="wx">微信：xrr13365810586</span>
+  <button class="btn btn-primary" onclick="document.getElementById('qrModal').classList.add('show')">立即咨询</button>
+</div>
+
 <button id="toTop" class="to-top">↑</button>
 
+<!-- QR Modal -->
 <div class="qr-modal" id="qrModal">
   <div class="qr-card">
     <button class="qr-close" id="qrClose">×</button>
@@ -522,37 +595,108 @@ body.dark .filter-input, body.dark .filter-select { background: #121f31; color: 
   </div>
 </div>
 
+<!-- 案例详情弹窗 -->
+<div class="case-modal" id="caseModal">
+  <div class="case-detail-card">
+    <button class="case-detail-close" onclick="closeCaseModal()">×</button>
+    <div class="case-detail-header">
+      <h2 id="modalTitle">案例详情</h2>
+      <div class="pills" id="modalPills"></div>
+    </div>
+    <div class="case-detail-body">
+      <div class="case-detail-meta" id="modalMeta"></div>
+      <div class="case-detail-offers">
+        <h4>🎓 录取 Offer 详情</h4>
+        <div id="modalOffers"></div>
+      </div>
+    </div>
+    <div class="case-detail-cta">
+      <p>我的背景和他相似，想获取专属申请方案</p>
+      <button class="btn btn-primary" onclick="document.getElementById('qrModal').classList.add('show')">添加微信咨询</button>
+    </div>
+  </div>
+</div>
+
 <script>
+// ===== 数据 =====
 const plans = [
   { name: 'DIY服务（纯DIY）', desc: '材料润色与答疑、申请流程指导', price: '按项目计费',
-    services: ['简历500/篇', '文书1000/篇', '推荐信400/篇', 'DIY答疑1888/年'] },
+    services: ['简历润色 500/篇', '文书润色 1000/篇', '推荐信润色 400/篇', 'DIY答疑 1888/年'] },
   { name: '半DIY服务', desc: '材料撰写支持+策略指导+部分流程自主', price: '全套3999元起',
-    services: ['简历1000/篇', '文书2000/篇', '推荐信800/篇', '网申100/项目'] },
+    services: ['简历代写 1000/篇', '文书代写 2000/篇', '推荐信代写 800/篇', '网申辅助 100/项目'] },
   { name: '全包服务', desc: '全程代办+签证支持+流程管理', price: '10000元/8项目起', featured: true,
-    services: ['澳新1000/3所', '英港新10000/8项目', '15000/15项目', '超级混申20000'] }
+    services: ['澳新申请 1000/3所', '英港新 10000/8项目', '15000/15项目', '超级混申 20000'] }
 ];
 
 const faqs = [
   ['如何选择服务模式？', '时间充足+自主能力强可选DIY；希望省时但保留自主可选半DIY；想全程省心建议全包。'],
   ['全包服务有保障吗？', '全包支持0 offer全额退款承诺，并提供透明流程与进度同步。'],
-  ['服务响应时间？', '7×16小时顾问响应，确保申请问题及时解决。']
+  ['服务响应时间？', '7×16小时顾问响应，确保申请问题及时解决。'],
+  ['文书可以修改几次？', '全包和半DIY服务中文书支持无限次修改，直至满意。'],
+  ['申请账号是否透明？', '全程使用学生本人邮箱和网申账号，进度实时可见。']
 ];
 
 const testimonials = [
-  ['2023届学员数据', '186位学员获QS前100录取。'],
-  ['2024届学员数据', '198位学员获QS前100录取。'],
-  ['2025届学员数据', '170位学员获QS前100录取。']
+  ['张同学', '2023届学员数据', '186位学员获QS前100录取。'],
+  ['李同学', '2024届学员数据', '198位学员获QS前100录取。'],
+  ['王同学', '2025届学员数据', '170位学员获QS前100录取。']
+];
+
+const marqueeData = [
+  { from: '武汉理工 社会工作 GPA 3.9', to: 'NUS + UCL 社会学', tag: '双非逆袭' },
+  { from: '燕山大学 材料 GPA 72', to: '帝国理工 + UCL', tag: '低GPA录取' },
+  { from: '中国农大 工业设计 GPA 2.9', to: '南洋理工 材料科学', tag: '转专业录取' },
+  { from: '北服 设计 GPA 3.7', to: 'UCL + RCA + NTU', tag: '艺术顶尖' },
+  { from: '地大 GIS GPA 89', to: 'NUS AI for Science', tag: '跨专业申AI' },
+  { from: '海南大学 食品 GPA 85', to: 'NUS 食品 + HKU', tag: '211冲前10' },
+  { from: '澳门城市 旅游 GPA 3.8', to: 'HKU 气候治理', tag: '双非冲港大' },
+  { from: '广东科技学院 市场 GPA 84', to: '岭南大学 市场', tag: '二本录取' }
 ];
 
 const casesData = [{"id": 1, "student_school": "武汉理工", "student_major": "社会工作", "gpa": "3.937/5.0", "language_score": "IELTS 6", "country": "新加坡/英国", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立大学", "major": "社会学", "rank": "QS前10"}, {"school": "UCL", "major": "社会学", "rank": "QS前10"}, {"school": "曼彻斯特大学", "major": "社会学", "rank": "QS前50"}]}, {"id": 2, "student_school": "辽宁大学", "student_major": "日语", "gpa": "82", "language_score": "无", "country": "英国/香港", "degree": "硕士", "result": "QS前100", "offers": [{"school": "曼彻斯特大学", "major": "国际发展", "rank": "QS前50"}, {"school": "香港理工大学", "major": "无", "rank": "QS前100"}]}, {"id": 3, "student_school": "武汉理工", "student_major": "信息管理", "gpa": "86", "language_score": "IELTS 6", "country": "新加坡", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工", "major": "工程管理", "rank": "QS前30"}]}, {"id": 4, "student_school": "大连海事", "student_major": "网络工程", "gpa": "79", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前70", "offers": [{"school": "香港城市大学", "major": "电子信息工程", "rank": "QS前70"}]}, {"id": 5, "student_school": "华北电力大学", "student_major": "电气", "gpa": "79", "language_score": "无", "country": "澳洲/英国/香港", "degree": "硕士", "result": "QS前100", "offers": [{"school": "新南威尔士大学", "major": "电气工程", "rank": "QS前70"}, {"school": "南安普顿大学", "major": "电气工程", "rank": "QS前100"}, {"school": "香港城市大学", "major": "电子信息工程", "rank": "QS前70"}]}, {"id": 6, "student_school": "合肥工业大学", "student_major": "微电子", "gpa": "87", "language_score": "IELTS 6.5", "country": "中国香港", "degree": "硕士", "result": "QS前50", "offers": [{"school": "香港中文大学(深圳)", "major": "集成电路", "rank": "QS前50"}]}, {"id": 7, "student_school": "大连海事", "student_major": "经济学", "gpa": "84", "language_score": "IELTS 6.5", "country": "新加坡", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工大学", "major": "管理经济学", "rank": "QS前30"}]}, {"id": 8, "student_school": "安徽大学", "student_major": "财政学", "gpa": "89", "language_score": "无", "country": "国内", "degree": "硕士", "result": "保研", "offers": []}, {"id": 9, "student_school": "暨南大学", "student_major": "计算机", "gpa": "87", "language_score": "无", "country": "新加坡", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工大学", "major": "信号处理与机器学习", "rank": "QS前30"}]}, {"id": 10, "student_school": "西南大学", "student_major": "计算机", "gpa": "86", "language_score": "IELTS 6", "country": "香港/英国", "degree": "硕士", "result": "QS前30", "offers": [{"school": "香港大学", "major": "创新设计技术", "rank": "QS前30"}, {"school": "布里斯托大学", "major": "数据科学 机器人", "rank": "QS前60"}]}, {"id": 11, "student_school": "北京化工", "student_major": "设计", "gpa": "90", "language_score": "IELTS 6", "country": "香港/澳洲/英国", "degree": "硕士", "result": "QS前30", "offers": [{"school": "香港大学", "major": "创新设计技术", "rank": "QS前30"}, {"school": "悉尼大学", "major": "设计", "rank": "QS前20"}, {"school": "布里斯托大学", "major": "vr设计", "rank": "QS前60"}]}, {"id": 12, "student_school": "安徽大学", "student_major": "土木", "gpa": "83", "language_score": "IELTS 6.5", "country": "香港", "degree": "硕士", "result": "QS前70", "offers": [{"school": "香港城市大学", "major": "电子商务", "rank": "QS前70"}]}, {"id": 13, "student_school": "电子科大", "student_major": "物理", "gpa": "80", "language_score": "IELTS 6", "country": "香港", "degree": "硕士", "result": "QS前30", "offers": [{"school": "香港大学", "major": "微电子", "rank": "QS前30"}, {"school": "香港城市大学", "major": "半导体", "rank": "QS前70"}]}, {"id": 14, "student_school": "同济大学", "student_major": "英语", "gpa": "87", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前10", "offers": [{"school": "伦敦大学学院", "major": "Teosl", "rank": "QS前10"}]}, {"id": 15, "student_school": "吉林大学", "student_major": "计算机", "gpa": "78", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前50", "offers": [{"school": "香港科技大学(广州)", "major": "智能制造", "rank": "QS前50"}]}, {"id": 16, "student_school": "四川大学", "student_major": "计算机", "gpa": "84", "language_score": "IELTS 6.5", "country": "香港", "degree": "硕士", "result": "QS前50", "offers": [{"school": "香港中文大学", "major": "信息工程", "rank": "QS前50"}]}, {"id": 17, "student_school": "川大", "student_major": "无", "gpa": "84", "language_score": "无", "country": "无", "degree": "硕士", "result": "无", "offers": []}, {"id": 18, "student_school": "中国农业大学", "student_major": "工业设计", "gpa": "80", "language_score": "IELTS 6", "country": "新加坡", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工大学", "major": "材料科学与工程", "rank": "QS前30"}]}, {"id": 19, "student_school": "中南大学", "student_major": "生物信息", "gpa": "77", "language_score": "IELTS 6", "country": "新加坡/澳洲", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立大学", "major": "生物医学工程", "rank": "QS前10"}, {"school": "南洋理工大学", "major": "生物医学工程", "rank": "QS前30"}, {"school": "澳洲国立大学", "major": "生物信息", "rank": "QS前30"}]}, {"id": 20, "student_school": "湖南大学", "student_major": "传媒", "gpa": "84", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前70", "offers": [{"school": "香港城市大学", "major": "传媒", "rank": "QS前70"}]}, {"id": 21, "student_school": "地大", "student_major": "地理信息系统", "gpa": "89", "language_score": "IELTS 6.5", "country": "新加坡/香港", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立大学", "major": "AI for Science", "rank": "QS前10"}, {"school": "香港大学", "major": "计算机", "rank": "QS前30"}, {"school": "南洋理工大学", "major": "信号处理与机器学习", "rank": "QS前30"}]}, {"id": 22, "student_school": "中传", "student_major": "传媒", "gpa": "92", "language_score": "IELTS 6.5", "country": "新加坡/香港/英国", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立大学", "major": "社会学", "rank": "QS前10"}, {"school": "香港中文大学", "major": "社会学", "rank": "QS前50"}, {"school": "曼彻斯特大学", "major": "数字技术传媒与教育", "rank": "QS前50"}]}, {"id": 23, "student_school": "哈工程", "student_major": "工业设计", "gpa": "82.84/100", "language_score": "IELTS 6", "country": "英国", "degree": "硕士", "result": "QS前60", "offers": [{"school": "曼彻斯特大学", "major": "管理信息系统", "rank": "QS前50"}, {"school": "布里斯托大学", "major": "机器人", "rank": "QS前60"}, {"school": "布里斯托大学", "major": "计算机", "rank": "QS前60"}, {"school": "布里斯托大学", "major": "VR", "rank": "QS前60"}]}, {"id": 24, "student_school": "北外", "student_major": "国际商务", "gpa": "85/100", "language_score": "IELTS 6.5", "country": "新加坡", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工大学", "major": "管理经济学", "rank": "QS前30"}]}, {"id": 25, "student_school": "华农", "student_major": "智慧农业", "gpa": "3.51/4.00", "language_score": "IELTS 6.5", "country": "新加坡/香港", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工大学", "major": "生物医学工程", "rank": "QS前30"}, {"school": "香港中文大学", "major": "生物医学工程", "rank": "QS前50"}, {"school": "香港科技大学", "major": "生物技术", "rank": "QS前50"}]}, {"id": 26, "student_school": "西南政法", "student_major": "法律", "gpa": "90", "language_score": "IELTS 8", "country": "英国", "degree": "硕士", "result": "QS前50", "offers": [{"school": "LSE", "major": "LLM", "rank": "QS前50"}, {"school": "爱丁堡", "major": "LLM", "rank": "QS前20"}]}, {"id": 27, "student_school": "河海大学", "student_major": "通信工程", "gpa": "4.3/5.0", "language_score": "IELTS 6.5", "country": "新加坡", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工", "major": "通信工程", "rank": "QS前30"}]}, {"id": 28, "student_school": "东北师范", "student_major": "会计", "gpa": "87", "language_score": "IELTS 7", "country": "新加坡/英国", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工大学", "major": "项目管理", "rank": "QS前30"}, {"school": "南洋理工大学", "major": "工程管理", "rank": "QS前30"}, {"school": "曼彻斯特大学", "major": "发展金融", "rank": "QS前50"}]}, {"id": 29, "student_school": "湖师大", "student_major": "数据科学", "gpa": "84", "language_score": "IELTS 6.5", "country": "香港", "degree": "硕士", "result": "QS前50", "offers": [{"school": "香港中文大学", "major": "数学", "rank": "QS前50"}, {"school": "香港城市大学", "major": "商务咨询系统", "rank": "QS前70"}]}, {"id": 30, "student_school": "海南大学", "student_major": "食品", "gpa": "85", "language_score": "IELTS 6.5", "country": "新加坡/香港", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立大学", "major": "食品", "rank": "QS前10"}, {"school": "香港大学", "major": "食品工业与营销", "rank": "QS前30"}, {"school": "香港中文大学", "major": "营养、食品科学与技术", "rank": "QS前50"}]}, {"id": 31, "student_school": "安徽大学", "student_major": "经济学", "gpa": "3.53/5.0", "language_score": "IELTS 6.5", "country": "香港", "degree": "硕士", "result": "QS前30", "offers": [{"school": "香港大学", "major": "工业工程与物流管理", "rank": "QS前30"}, {"school": "香港城市大学", "major": "应用经济学", "rank": "QS前70"}]}, {"id": 32, "student_school": "东北林业大学", "student_major": "计算机", "gpa": "85.42/100", "language_score": "IELTS 6.5", "country": "香港/新加坡", "degree": "硕士", "result": "QS前30", "offers": [{"school": "香港大学", "major": "计算机", "rank": "QS前30"}, {"school": "南洋理工大学", "major": "区块链", "rank": "QS前30"}, {"school": "香港城市大学", "major": "计算机", "rank": "QS前70"}]}, {"id": 33, "student_school": "华东理工", "student_major": "机械工程", "gpa": "85", "language_score": "IELTS 6.5", "country": "新加坡", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立大学", "major": "机械工程", "rank": "QS前10"}, {"school": "南洋理工大学", "major": "计算机控制自动化", "rank": "QS前30"}, {"school": "南洋理工大学", "major": "机械工程", "rank": "QS前30"}]}, {"id": 34, "student_school": "东北林业大学", "student_major": "计算机", "gpa": "84.00/100", "language_score": "IELTS 6", "country": "香港", "degree": "硕士", "result": "QS前30", "offers": [{"school": "香港大学", "major": "电子商务与互联网", "rank": "QS前30"}, {"school": "香港大学", "major": "创新设计技术", "rank": "QS前30"}, {"school": "香港城市大学", "major": "商务咨询系统", "rank": "QS前70"}]}, {"id": 35, "student_school": "武汉理工", "student_major": "车辆工程", "gpa": "86.82", "language_score": "IELTS 6.5", "country": "新加坡/香港", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立", "major": "机械 机器人", "rank": "QS前10"}, {"school": "香港大学", "major": "机器人智能系统", "rank": "QS前30"}, {"school": "香港中文大学", "major": "机器人", "rank": "QS前50"}]}, {"id": 36, "student_school": "南京财经大学", "student_major": "会计", "gpa": "89.62/100", "language_score": "IELTS 7", "country": "英国/澳洲", "degree": "硕士", "result": "QS前50", "offers": [{"school": "曼彻斯特大学", "major": "无", "rank": "QS前50"}, {"school": "布里斯托大学", "major": "会计", "rank": "QS前60"}, {"school": "澳洲国立大学", "major": "会计", "rank": "QS前30"}, {"school": "悉尼大学", "major": "会计", "rank": "QS前20"}]}, {"id": 37, "student_school": "西南大学", "student_major": "经济学", "gpa": "82", "language_score": "IELTS 7.5", "country": "英国", "degree": "硕士", "result": "QS前50", "offers": [{"school": "曼彻斯特大学", "major": "人力资源管理", "rank": "QS前50"}, {"school": "曼彻斯特大学", "major": "发展金融", "rank": "QS前50"}]}, {"id": 38, "student_school": "合工大", "student_major": "金融工程", "gpa": "84", "language_score": "IELTS 6.5", "country": "新加坡", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工大学", "major": "管理经济学", "rank": "QS前30"}]}, {"id": 39, "student_school": "北京科技大学", "student_major": "项目管理", "gpa": "80", "language_score": "无", "country": "英国/澳洲", "degree": "硕士", "result": "QS前50", "offers": [{"school": "曼彻斯特大学", "major": "房地产开发", "rank": "QS前50"}, {"school": "墨尔本大学", "major": "项目管理", "rank": "QS前30"}, {"school": "悉尼大学", "major": "项目管理", "rank": "QS前20"}]}, {"id": 40, "student_school": "北京体育大学", "student_major": "经济学", "gpa": "88", "language_score": "IELTS 6.5", "country": "香港/英国", "degree": "硕士", "result": "QS前50", "offers": [{"school": "香港中文大学", "major": "电子商务与物流管理", "rank": "QS前50"}, {"school": "曼彻斯特大学", "major": "信息系统管理", "rank": "QS前50"}]}, {"id": 41, "student_school": "西南大学", "student_major": "生物", "gpa": "无", "language_score": "无", "country": "无", "degree": "硕士", "result": "无", "offers": []}, {"id": 42, "student_school": "西南大学", "student_major": "市场营销", "gpa": "84", "language_score": "IELTS 6", "country": "英国", "degree": "硕士", "result": "QS前50", "offers": [{"school": "曼彻斯特大学", "major": "管理信息系统", "rank": "QS前50"}, {"school": "布里斯托大学", "major": "市场营销", "rank": "QS前60"}]}, {"id": 43, "student_school": "厦大马来", "student_major": "会计", "gpa": "2.7", "language_score": "无", "country": "澳洲", "degree": "硕士", "result": "QS前70", "offers": [{"school": "新南威尔士", "major": "会计", "rank": "QS前70"}]}, {"id": 44, "student_school": "中国农业大学", "student_major": "工业设计", "gpa": "2.9", "language_score": "IELTS 6", "country": "新加坡/澳洲", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工", "major": "材料科学与工程", "rank": "QS前30"}, {"school": "悉尼大学", "major": "项目管理", "rank": "QS前20"}]}, {"id": 45, "student_school": "厦大马来", "student_major": "会计", "gpa": "2.6", "language_score": "无", "country": "澳洲", "degree": "硕士", "result": "QS前70", "offers": [{"school": "新南威尔士", "major": "会计", "rank": "QS前70"}]}, {"id": 46, "student_school": "湖南大学", "student_major": "金融", "gpa": "92", "language_score": "IELTS 7", "country": "新加坡/香港", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立大学", "major": "应用经济学", "rank": "QS前10"}, {"school": "香港大学", "major": "计算机", "rank": "QS前30"}]}, {"id": 47, "student_school": "湖南大学", "student_major": "数学", "gpa": "83.94/100", "language_score": "IELTS 6.5", "country": "香港", "degree": "硕士", "result": "QS前50", "offers": [{"school": "香港中文大学", "major": "数学", "rank": "QS前50"}, {"school": "香港科技大学", "major": "大数据技术", "rank": "QS前50"}]}, {"id": 48, "student_school": "湖南大学", "student_major": "金融", "gpa": "88.39/100", "language_score": "IELTS 6.5", "country": "香港", "degree": "硕士", "result": "QS前50", "offers": [{"school": "香港中文大学", "major": "工业工程与系统管理", "rank": "QS前50"}, {"school": "香港中文大学", "major": "电子商务与物流管理", "rank": "QS前50"}, {"school": "香港中文大学", "major": "金融科技", "rank": "QS前50"}]}, {"id": 49, "student_school": "北京师范大学", "student_major": "戏剧影视电影与文化", "gpa": "85", "language_score": "IELTS 6.5", "country": "新加坡/英国", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立大学", "major": "戏剧影视", "rank": "QS前10"}, {"school": "爱丁堡大学", "major": "策展", "rank": "QS前20"}, {"school": "曼彻斯特大学", "major": "人力资源管理", "rank": "QS前50"}]}, {"id": 50, "student_school": "同济大学", "student_major": "会计", "gpa": "85", "language_score": "IELTS 6.5", "country": "新加坡/香港", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工大学", "major": "经济学", "rank": "QS前30"}, {"school": "香港中文大学", "major": "经济学", "rank": "QS前50"}]}, {"id": 51, "student_school": "上海交通大学", "student_major": "市场营销", "gpa": "88", "language_score": "IELTS 7", "country": "香港", "degree": "硕士", "result": "QS前30", "offers": [{"school": "香港大学", "major": "市场营销", "rank": "QS前30"}]}, {"id": 52, "student_school": "澳门城市", "student_major": "旅游管理", "gpa": "3.84/4.0", "language_score": "IELTS 7", "country": "香港/英国", "degree": "硕士", "result": "QS前30", "offers": [{"school": "香港大学", "major": "气候治理", "rank": "QS前30"}, {"school": "香港中文大学", "major": "可持续旅游", "rank": "QS前50"}, {"school": "曼彻斯特大学", "major": "环境监测", "rank": "QS前50"}]}, {"id": 53, "student_school": "澳门城市", "student_major": "工商管理", "gpa": "3.62/4.00", "language_score": "IELTS 6.5", "country": "香港", "degree": "硕士", "result": "QS前70", "offers": [{"school": "香港城市大学", "major": "市场营销", "rank": "QS前70"}]}, {"id": 54, "student_school": "澳城", "student_major": "人工智能", "gpa": "3.6", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前10", "offers": [{"school": "伦敦大学学院", "major": "环境数据科学", "rank": "QS前10"}]}, {"id": 55, "student_school": "psb", "student_major": "传媒", "gpa": "80", "language_score": "无", "country": "澳洲", "degree": "硕士", "result": "QS前30", "offers": [{"school": "墨尔本", "major": "全球市场营销", "rank": "QS前30"}, {"school": "悉尼", "major": "媒体实践", "rank": "QS前20"}, {"school": "澳国立", "major": "数字媒体", "rank": "QS前30"}]}, {"id": 56, "student_school": "psb", "student_major": "传媒", "gpa": "68", "language_score": "无", "country": "澳洲", "degree": "硕士", "result": "QS前30", "offers": [{"school": "悉尼大学", "major": "公共关系", "rank": "QS前20"}, {"school": "澳洲国立", "major": "数字媒体", "rank": "QS前30"}]}, {"id": 57, "student_school": "西浦", "student_major": "金融数学", "gpa": "58", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前100", "offers": [{"school": "南安普顿大学", "major": "时尚营销", "rank": "QS前100"}, {"school": "诺丁汉大学", "major": "经济学", "rank": "QS前100"}]}, {"id": 58, "student_school": "阿姆斯特丹", "student_major": "金融", "gpa": "7.0", "language_score": "无", "country": "澳洲/香港", "degree": "硕士", "result": "QS前70", "offers": [{"school": "悉尼大学", "major": "金融", "rank": "QS前20"}, {"school": "香港城市大学", "major": "金融", "rank": "QS前70"}]}, {"id": 59, "student_school": "集美大学", "student_major": "会计", "gpa": "88", "language_score": "无", "country": "澳洲", "degree": "硕士", "result": "QS前30", "offers": [{"school": "悉尼大学", "major": "会计", "rank": "QS前20"}, {"school": "澳洲国立", "major": "会计", "rank": "QS前30"}]}, {"id": 60, "student_school": "闽江学院", "student_major": "经济学", "gpa": "4.08", "language_score": "IELTS 7", "country": "英国/香港", "degree": "硕士", "result": "QS前40", "offers": [{"school": "KCL", "major": "新兴经济体与国际发展", "rank": "QS前40"}, {"school": "香港理工大学", "major": "经济学", "rank": "QS前100"}, {"school": "伯明翰", "major": "经济学", "rank": "QS前100"}, {"school": "利兹大学", "major": "经济学", "rank": "QS前100"}]}, {"id": 61, "student_school": "浙江理工", "student_major": "英语", "gpa": "88", "language_score": "IELTS 7", "country": "香港/英国", "degree": "硕士", "result": "QS前20", "offers": [{"school": "香港中文大学", "major": "TESOL", "rank": "QS前50"}, {"school": "爱丁堡", "major": "TESOL", "rank": "QS前20"}, {"school": "香港理工", "major": "ELT", "rank": "QS前100"}, {"school": "香港城市", "major": "LS/ES", "rank": "QS前70"}]}, {"id": 62, "student_school": "广西民族", "student_major": "表演", "gpa": "83", "language_score": "无", "country": "澳洲", "degree": "硕士", "result": "QS前70", "offers": [{"school": "新南威尔士", "major": "传媒", "rank": "QS前70"}]}, {"id": 63, "student_school": "燕山大学", "student_major": "工商管理", "gpa": "85/100", "language_score": "IELTS 7", "country": "英国/香港", "degree": "硕士", "result": "QS前50", "offers": [{"school": "曼彻斯特大学", "major": "数据科学", "rank": "QS前50"}, {"school": "香港理工大学", "major": "商业管理", "rank": "QS前100"}, {"school": "香港城市大学", "major": "商业数据分析", "rank": "QS前70"}]}, {"id": 64, "student_school": "北服", "student_major": "设计", "gpa": "3.76/4.0", "language_score": "IELTS 6.5", "country": "英国/新加坡/香港", "degree": "硕士", "result": "QS前10", "offers": [{"school": "伦敦大学学院", "major": "性能与交互", "rank": "QS前10"}, {"school": "南洋理工大学", "major": "游戏设计", "rank": "QS前30"}, {"school": "皇家艺术学院", "major": "信息体验设计", "rank": "艺术顶尖"}, {"school": "伦敦艺术学院", "major": "叙事环境 VR", "rank": "艺术顶尖"}, {"school": "格拉斯哥大学艺术学院", "major": "严肃游戏", "rank": "QS前100"}, {"school": "香港理工大学", "major": "多媒体创意娱乐", "rank": "QS前100"}]}, {"id": 65, "student_school": "燕山大学", "student_major": "材料", "gpa": "72/100", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前10", "offers": [{"school": "帝国理工", "major": "材料", "rank": "QS前10"}, {"school": "伦敦大学学院", "major": "材料", "rank": "QS前10"}, {"school": "曼彻斯特大学", "major": "材料", "rank": "QS前50"}, {"school": "布里斯托大学", "major": "材料", "rank": "QS前60"}]}, {"id": 66, "student_school": "广州大学", "student_major": "历史", "gpa": "90", "language_score": "IELTS 6", "country": "新加坡/香港/英国", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立大学", "major": "比较历史", "rank": "QS前10"}, {"school": "香港大学", "major": "中国历史", "rank": "QS前30"}, {"school": "香港中文大学", "major": "历史", "rank": "QS前50"}, {"school": "爱丁堡大学", "major": "历史", "rank": "QS前20"}, {"school": "香港城市大学", "major": "汉语言文学与历史", "rank": "QS前70"}]}, {"id": 67, "student_school": "桂林理工", "student_major": "计算机", "gpa": "80.0/100", "language_score": "无", "country": "澳洲/英国", "degree": "硕士", "result": "QS前100", "offers": [{"school": "新南威尔士", "major": "计算机", "rank": "QS前70"}, {"school": "利兹大学", "major": "计算机", "rank": "QS前100"}, {"school": "伯明翰大学", "major": "计算机", "rank": "QS前100"}]}, {"id": 68, "student_school": "武汉外经贸", "student_major": "英语", "gpa": "86", "language_score": "IELTS 6", "country": "英国", "degree": "硕士", "result": "QS前20", "offers": [{"school": "爱丁堡大学", "major": "TESOL", "rank": "QS前20"}, {"school": "利兹大学", "major": "TESOL", "rank": "QS前100"}]}, {"id": 69, "student_school": "广东科技学院", "student_major": "市场营销", "gpa": "84.00/100", "language_score": "IELTS 6", "country": "香港", "degree": "硕士", "result": "QS前100+", "offers": [{"school": "岭南大学", "major": "市场营销", "rank": "QS前100+"}, {"school": "岭南大学", "major": "社会政策创新", "rank": "QS前100+"}]}, {"id": 70, "student_school": "浙江树人学院", "student_major": "市场营销", "gpa": "86", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前100", "offers": [{"school": "利兹大学", "major": "国际商务", "rank": "QS前100"}, {"school": "利兹大学", "major": "信息系统与数字化创新", "rank": "QS前100"}, {"school": "南安普敦大学", "major": "市场营销", "rank": "QS前100"}]}, {"id": 71, "student_school": "上海海事", "student_major": "电气", "gpa": "86", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前60", "offers": [{"school": "曼彻斯特大学", "major": "电力系统", "rank": "QS前50"}, {"school": "布里斯托大学", "major": "通信网络与信号处理", "rank": "QS前60"}]}, {"id": 72, "student_school": "长沙理工", "student_major": "土木", "gpa": "80", "language_score": "IELTS 6", "country": "新加坡/香港/英国", "degree": "硕士", "result": "QS前30", "offers": [{"school": "南洋理工大学", "major": "土木工程", "rank": "QS前30"}, {"school": "香港大学", "major": "建筑", "rank": "QS前30"}, {"school": "曼彻斯特大学", "major": "城市规划", "rank": "QS前50"}, {"school": "南安普敦", "major": "人工智能与管理", "rank": "QS前100"}]}, {"id": 73, "student_school": "天津城建", "student_major": "电气", "gpa": "84", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前100", "offers": [{"school": "利兹大学", "major": "电气", "rank": "QS前100"}]}, {"id": 74, "student_school": "扬州大学", "student_major": "计算机", "gpa": "75", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前100", "offers": [{"school": "利兹大学", "major": "计算机", "rank": "QS前100"}, {"school": "伯明翰大学", "major": "计算机", "rank": "QS前100"}]}, {"id": 75, "student_school": "广东海洋", "student_major": "经济学", "gpa": "88", "language_score": "IELTS 6.5", "country": "香港", "degree": "硕士", "result": "QS前100", "offers": [{"school": "香港理工大学", "major": "应用经济学", "rank": "QS前100"}, {"school": "香港城市大学", "major": "管理与创新", "rank": "QS前70"}]}, {"id": 76, "student_school": "北京舞蹈学院", "student_major": "表演艺术", "gpa": "93.47", "language_score": "无", "country": "英国/香港", "degree": "硕士", "result": "QS前100", "offers": [{"school": "利兹大学", "major": "传媒", "rank": "QS前100"}, {"school": "香港演艺学院", "major": "表演艺术研究", "rank": "艺术顶尖"}]}, {"id": 77, "student_school": "北京石油化工", "student_major": "药学", "gpa": "76", "language_score": "无", "country": "澳洲/英国", "degree": "硕士", "result": "QS前100", "offers": [{"school": "莫纳什大学", "major": "药学", "rank": "QS前50"}, {"school": "利兹大学", "major": "药学", "rank": "QS前100"}]}, {"id": 78, "student_school": "琼台", "student_major": "建筑", "gpa": "86", "language_score": "无", "country": "澳门", "degree": "硕士", "result": "澳门顶尖", "offers": [{"school": "澳门科技大学", "major": "建筑学", "rank": "澳门顶尖"}]}, {"id": 79, "student_school": "云南财经大学", "student_major": "金融科技", "gpa": "78", "language_score": "IELTS 6.5", "country": "英国", "degree": "硕士", "result": "QS前100", "offers": [{"school": "南安普顿大学", "major": "时尚营销", "rank": "QS前100"}]}, {"id": 80, "student_school": "武大", "student_major": "物流管理", "gpa": "85", "language_score": "IELTS 6", "country": "香港", "degree": "硕士", "result": "QS前30", "offers": [{"school": "香港大学", "major": "工业工程与物流管理", "rank": "QS前30"}]}, {"id": 81, "student_school": "中央民族大学", "student_major": "汉语言文学", "gpa": "89", "language_score": "无", "country": "新加坡", "degree": "硕士", "result": "QS前10", "offers": [{"school": "新加坡国立大学", "major": "中国语言文学", "rank": "QS前10"}]}, {"id": 82, "student_school": "澳门城市大学", "student_major": "旅游", "gpa": "2.6", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前100+", "offers": [{"school": "香港教育大学", "major": "无", "rank": "QS前100+"}]}, {"id": 83, "student_school": "西南大学", "student_major": "教育学", "gpa": "无", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前30", "offers": [{"school": "香港大学", "major": "教育学", "rank": "QS前30"}]}, {"id": 84, "student_school": "海南大学", "student_major": "创意媒体", "gpa": "无", "language_score": "无", "country": "无", "degree": "硕士", "result": "无", "offers": []}, {"id": 85, "student_school": "浙江财经", "student_major": "经济学", "gpa": "84", "language_score": "无", "country": "英国/香港", "degree": "硕士", "result": "QS前50", "offers": [{"school": "曼彻斯特大学", "major": "发展金融与政策", "rank": "QS前50"}, {"school": "布里斯托大学", "major": "会计 管理", "rank": "QS前60"}, {"school": "香港理工大学", "major": "家族财富管理", "rank": "QS前100"}]}, {"id": 86, "student_school": "哈工大", "student_major": "智能医学工程", "gpa": "无", "language_score": "无", "country": "无", "degree": "硕士", "result": "无", "offers": []}, {"id": 87, "student_school": "惠州学院", "student_major": "英语", "gpa": "86", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前100", "offers": [{"school": "利兹大学", "major": "TESOL", "rank": "QS前100"}, {"school": "诺丁汉大学", "major": "TESOL", "rank": "QS前100"}, {"school": "谢菲尔德大学", "major": "TESOL", "rank": "QS前100"}, {"school": "纽卡斯尔大学", "major": "TESOL", "rank": "QS前100"}, {"school": "利物浦大学", "major": "TESOL", "rank": "QS前100"}]}, {"id": 88, "student_school": "北邮", "student_major": "信息工程", "gpa": "82", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前70", "offers": [{"school": "香港城市大学", "major": "AI for Science", "rank": "QS前70"}, {"school": "香港中文大学(深圳)", "major": "计算机信息工程", "rank": "QS前50"}]}, {"id": 89, "student_school": "北理工", "student_major": "光电工程", "gpa": "82", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前70", "offers": [{"school": "香港城市大学", "major": "AI for Science 半导体", "rank": "QS前70"}, {"school": "香港中文大学(深圳)", "major": "集成电路 ai与机器人", "rank": "QS前50"}]}, {"id": 90, "student_school": "东北农业", "student_major": "无", "gpa": "无", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前70", "offers": [{"school": "香港城市大学", "major": "能源与环境", "rank": "QS前70"}]}, {"id": 91, "student_school": "杭电自动化", "student_major": "自动化", "gpa": "76", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前100", "offers": [{"school": "南安普顿大学", "major": "机器人", "rank": "QS前100"}, {"school": "利兹大学", "major": "机器人", "rank": "QS前100"}]}, {"id": 92, "student_school": "澳门城市", "student_major": "工商管理", "gpa": "2.2", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前100+", "offers": [{"school": "香港教育大学", "major": "无", "rank": "QS前100+"}]}, {"id": 93, "student_school": "青岛科技", "student_major": "化学", "gpa": "76", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前100", "offers": [{"school": "伯明翰大学", "major": "化学", "rank": "QS前100"}, {"school": "利兹大学", "major": "化学", "rank": "QS前100"}]}, {"id": 94, "student_school": "北理工珠海", "student_major": "电气工程", "gpa": "74", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前100+", "offers": [{"school": "香港教育大学", "major": "stem教育", "rank": "QS前100+"}]}, {"id": 95, "student_school": "大连理工", "student_major": "计算机", "gpa": "76", "language_score": "无", "country": "英国", "degree": "硕士", "result": "QS前60", "offers": [{"school": "布里斯托大学", "major": "机器人", "rank": "QS前60"}]}, {"id": 96, "student_school": "天津理工", "student_major": "计算机", "gpa": "84", "language_score": "无", "country": "香港", "degree": "硕士", "result": "QS前70", "offers": [{"school": "香港城市大学", "major": "AI for Science", "rank": "QS前70"}]}];
+const topSchools = ["清华", "北大", "复旦", "上交", "浙大", "中科大", "南大", "人大", "同济", "北航", "武大", "哈工大", "西交", "华科", "中山", "北理", "东南", "南开", "川大", "山大", "厦大", "中南", "湖大", "大工", "吉大", "重大", "北师", "华东师范", "华南理工", "电子科大", "中国农大", "中央民族", "西北农林", "兰大", "海大", "东北大学", "湖南大学", "西北工业大学", "大连理工", "重庆大学", "西安交大", "华中科技大学", "华南理工", "北京理工", "北京师范"];
 
 let currentPage = 1;
 let pageSize = 8;
 let filteredItems = [];
+let activeQuickFilter = 'all';
+
+// ===== 倒计时 =====
+function updateCountdown() {
+  const now = new Date();
+  const target = new Date('2025-11-01T00:00:00'); // NUS主流截止日期
+  const diff = target - now;
+  if (diff > 0) {
+    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+    document.getElementById('countdownText').textContent = `距离NUS截止还有 ${days} 天`;
+    document.getElementById('countdownBar').classList.add('show');
+  }
+}
+updateCountdown();
+
+// ===== Marquee =====
+function renderMarquee() {
+  const track = document.getElementById('marqueeTrack');
+  const cards = marqueeData.map(m => `
+    <div class="marquee-card">
+      <div class="from">${m.from}</div>
+      <div class="arrow">→</div>
+      <div class="to">${m.to}</div>
+      <span class="tag">${m.tag}</span>
+    </div>
+  `).join('');
+  track.innerHTML = cards + cards; // 复制一份实现无缝循环
+}
+
+// ===== Plans =====
+function showPlanView(view) {
+  document.querySelectorAll('.plan-toggle button').forEach(b => b.classList.toggle('active', b.textContent.includes(view === 'cards' ? '卡片' : '对比')));
+  document.getElementById('planCards').style.display = view === 'cards' ? 'grid' : 'none';
+  document.getElementById('compareTable').classList.toggle('active', view === 'table');
+}
 
 function renderPlans() {
   const wrap = document.getElementById('planCards');
-  if (!wrap) return;
   plans.forEach(p => {
     const card = document.createElement('article');
     card.className = 'card' + (p.featured ? ' featured' : '');
@@ -562,9 +706,9 @@ function renderPlans() {
   });
 }
 
+// ===== FAQ =====
 function renderFAQ() {
   const list = document.getElementById('faqList');
-  if (!list) return;
   faqs.forEach(([q, a]) => {
     const item = document.createElement('div');
     item.className = 'accordion-item';
@@ -574,17 +718,18 @@ function renderFAQ() {
   });
 }
 
+// ===== Testimonials =====
 function renderTestimonials() {
   const box = document.getElementById('testimonials');
-  if (!box) return;
-  testimonials.forEach(([name, text]) => {
+  testimonials.forEach(([name, title, text]) => {
     const item = document.createElement('article');
     item.className = 'mini-card';
-    item.innerHTML = `<h3>${name}</h3><p>${text}</p>`;
+    item.innerHTML = `<div class="avatar">${name[0]}</div><h3>${title}</h3><p>${text}</p>`;
     box.append(item);
   });
 }
 
+// ===== 案例模块 =====
 function normalizeCase(item, idx) {
   const offers = Array.isArray(item.offers) && item.offers.length
     ? item.offers
@@ -605,6 +750,7 @@ function normalizeCase(item, idx) {
 
 const allCases = casesData.map(normalizeCase);
 
+// 填充筛选器
 const countries = [...new Set(allCases.map(c => c.country))].sort();
 const degrees = [...new Set(allCases.map(c => c.degree))].sort();
 const results = [...new Set(allCases.map(c => c.result))].sort();
@@ -617,15 +763,39 @@ countries.forEach(c => { const opt = document.createElement('option'); opt.value
 degrees.forEach(d => { const opt = document.createElement('option'); opt.value = d; opt.textContent = d; degreeFilter.appendChild(opt); });
 results.forEach(r => { const opt = document.createElement('option'); opt.value = r; opt.textContent = r; resultFilter.appendChild(opt); });
 
+// 快速标签逻辑
+const quickFilters = {
+  all: () => true,
+  shuangfei: c => !topSchools.some(s => c.student_school.includes(s)),
+  lowgpa: c => {
+    const gpa = parseFloat(c.gpa);
+    return !isNaN(gpa) && gpa < 80;
+  },
+  transfer: c => c.offers.length > 0 && c.student_major !== c.offers[0].major && c.offers[0].major !== '待更新',
+  top10: c => c.result.includes('前10') || c.offers.some(o => o.rank.includes('前10'))
+};
+
+document.querySelectorAll('.quick-tag').forEach(tag => {
+  tag.addEventListener('click', () => {
+    document.querySelectorAll('.quick-tag').forEach(t => t.classList.remove('active'));
+    tag.classList.add('active');
+    activeQuickFilter = tag.dataset.filter;
+    currentPage = 1;
+    renderCases();
+  });
+});
+
 function getFiltered() {
   const kw = document.getElementById('searchInput').value.trim().toLowerCase();
   const c = countryFilter.value;
   const d = degreeFilter.value;
   const r = resultFilter.value;
+
   return allCases.filter(item => {
     const offerText = item.offers.map(o => `${o.school} ${o.major} ${o.rank}`).join(' ');
     const source = `${item.title} ${item.student_school} ${item.student_major} ${item.gpa} ${item.language_score} ${offerText}`.toLowerCase();
-    return (!c || item.country === c) && (!d || item.degree === d) && (!r || item.result === r) && (!kw || source.includes(kw));
+    const quickMatch = quickFilters[activeQuickFilter](item);
+    return quickMatch && (!c || item.country === c) && (!d || item.degree === d) && (!r || item.result === r) && (!kw || source.includes(kw));
   });
 }
 
@@ -669,7 +839,7 @@ function renderCharts(items) {
 
 function renderCaseCard(item) {
   return `
-    <div class="case-card">
+    <div class="case-card" onclick="openCaseModal(${item.id})">
       <div class="case-header">
         <h3 class="case-title">案例 #${item.id} · ${item.student_school}</h3>
         <span class="case-badge">${item.offers.length} 个Offer</span>
@@ -686,21 +856,63 @@ function renderCaseCard(item) {
         <div class="meta-item"><div class="meta-label">申请地区</div><div class="meta-value">${item.country}</div></div>
       </div>
       <div class="offer-section">
-        <div class="offer-title">🎓 录取详情</div>
+        <div class="offer-title">🎓 录取详情（点击查看更多）</div>
         <div class="offer-list">
-          ${item.offers.map(o => `
+          ${item.offers.slice(0, 2).map(o => `
             <div class="offer-item">
               <span class="offer-school">${o.school}</span>
               <span class="offer-major">${o.major}</span>
               <span class="offer-rank">${o.rank}</span>
             </div>
           `).join('')}
+          ${item.offers.length > 2 ? `<div style="color:var(--muted);font-size:12px;text-align:center;padding:4px;">+${item.offers.length - 2} 个更多Offer</div>` : ''}
         </div>
       </div>
     </div>
   `;
 }
 
+// 弹窗
+function openCaseModal(id) {
+  const item = allCases.find(c => c.id === id);
+  if (!item) return;
+
+  document.getElementById('modalTitle').textContent = `案例 #${item.id} · ${item.student_school}`;
+  document.getElementById('modalPills').innerHTML = `
+    <span class="pill">${item.country}</span>
+    <span class="pill">${item.degree}</span>
+    <span class="pill">${item.result}</span>
+  `;
+  document.getElementById('modalMeta').innerHTML = `
+    <div class="meta-block"><label>学生专业</label><value>${item.student_major}</value></div>
+    <div class="meta-block"><label>GPA / 均分</label><value>${item.gpa}</value></div>
+    <div class="meta-block"><label>语言成绩</label><value>${item.language_score}</value></div>
+    <div class="meta-block"><label>申请地区</label><value>${item.country}</value></div>
+  `;
+  document.getElementById('modalOffers').innerHTML = item.offers.map(o => `
+    <div class="case-detail-offer">
+      <div>
+        <div class="school">${o.school}</div>
+        <div class="major">${o.major}</div>
+      </div>
+      <div class="rank">${o.rank}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('caseModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCaseModal() {
+  document.getElementById('caseModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('caseModal').addEventListener('click', e => {
+  if (e.target === document.getElementById('caseModal')) closeCaseModal();
+});
+
+// 分页
 function renderPagination() {
   const totalItems = filteredItems.length;
   const totalPages = Math.ceil(totalItems / pageSize);
@@ -759,11 +971,45 @@ function renderCases() {
   renderCasesPage();
 }
 
+// 评估器
+function runEval() {
+  const school = document.getElementById('evalSchool').value.trim();
+  const gpaVal = document.getElementById('evalGpa').value.trim();
+  const target = document.getElementById('evalTarget').value;
+  const gpa = parseFloat(gpaVal);
+
+  const matches = allCases.filter(c => {
+    const schoolMatch = !school || c.student_school.includes(school) || school.includes(c.student_school);
+    const gpaMatch = isNaN(gpa) || (parseFloat(c.gpa) && Math.abs(parseFloat(c.gpa) - gpa) <= 5);
+    const targetMatch = !target || c.country.includes(target);
+    return schoolMatch && gpaMatch && targetMatch;
+  }).slice(0, 3);
+
+  const resultDiv = document.getElementById('evalResult');
+  const grid = document.getElementById('evalMatchGrid');
+
+  if (matches.length === 0) {
+    grid.innerHTML = `<div style="color:rgba(255,255,255,0.7);text-align:center;padding:20px;">暂无完全匹配的案例，建议添加微信获取个性化评估</div>`;
+  } else {
+    grid.innerHTML = matches.map(m => `
+      <div class="eval-match-card">
+        <div class="school">${m.student_school} · ${m.student_major}</div>
+        <div class="major">GPA: ${m.gpa} | ${m.language_score}</div>
+        <div class="offers">${m.offers.map(o => o.school).join('、')}</div>
+      </div>
+    `).join('');
+  }
+  resultDiv.classList.add('show');
+  resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// 事件监听
 document.getElementById('searchInput').addEventListener('input', () => { currentPage = 1; renderCases(); });
 countryFilter.addEventListener('change', () => { currentPage = 1; renderCases(); });
 degreeFilter.addEventListener('change', () => { currentPage = 1; renderCases(); });
 resultFilter.addEventListener('change', () => { currentPage = 1; renderCases(); });
 
+// 通用UI
 function setupCommonUI() {
   const header = document.getElementById('topHeader');
   const hero = document.getElementById('hero');
@@ -796,6 +1042,8 @@ function setupCommonUI() {
   qrModal?.addEventListener('click', e => { if (e.target === qrModal) qrModal.classList.remove('show'); });
 }
 
+// 初始化
+renderMarquee();
 renderPlans();
 renderFAQ();
 renderTestimonials();
