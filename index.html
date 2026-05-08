@@ -1669,9 +1669,11 @@ const countries = [...new Set(allCases.map(c => c.country))].sort();
 const degrees = [...new Set(allCases.map(c => c.degree))].sort();
 const results = [...new Set(allCases.map(c => c.result))].sort();
 
-countries.forEach(c => { const opt = document.createElement('option'); opt.value = c; opt.textContent = c; $('countryFilter').appendChild(opt); });
-degrees.forEach(d => { const opt = document.createElement('option'); opt.value = d; opt.textContent = d; $('degreeFilter').appendChild(opt); });
-results.forEach(r => { const opt = document.createElement('option'); opt.value = r; opt.textContent = r; $('resultFilter').appendChild(opt); });
+// 地区筛选器固定7个标准地区
+  const standardRegions = ['香港', '澳门', '新加坡', '英国', '新西兰', '澳大利亚', '国内中外合办'];
+  standardRegions.forEach(c => { const opt = document.createElement('option'); opt.value = c; opt.textContent = c; $('countryFilter').appendChild(opt); });
+  degrees.forEach(d => { const opt = document.createElement('option'); opt.value = d; opt.textContent = d; $('degreeFilter').appendChild(opt); });
+  results.forEach(r => { const opt = document.createElement('option'); opt.value = r; opt.textContent = r; $('resultFilter').appendChild(opt); });
 
 const quickFilters = {
   all: () => true,
@@ -1703,7 +1705,7 @@ function getFiltered() {
     const offerText = item.offers.map(o => `${o.school} ${o.major} ${o.rank}`).join(' ');
     const source = `${item.title} ${item.student_school} ${item.student_major} ${item.gpa} ${item.language_score} ${offerText}`.toLowerCase();
     return quickFilters[activeQuickFilter](item) &&
-      (!c || item.country === c) &&
+      (!c || item.country.includes(c)) &&
       (!d || item.degree === d) &&
       (!r || item.result === r) &&
       (!kw || source.includes(kw));
