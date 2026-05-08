@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "student_school": "武汉理工",
+    "student_school": "武汉理工大学",
     "student_major": "社会工作",
     "gpa": "3.937/5.0",
     "language_score": "IELTS 6",
-    "country": "新加坡/英国",
+    "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
@@ -13,7 +13,19 @@
         "school": "新加坡国立大学",
         "major": "社会学",
         "rank": "QS前10"
-      },
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "student_school": "武汉理工大学",
+    "student_major": "社会工作",
+    "gpa": "3.937/5.0",
+    "language_score": "IELTS 6",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
       {
         "school": "UCL",
         "major": "社会学",
@@ -27,244 +39,316 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "student_school": "辽宁大学",
     "student_major": "日语",
     "gpa": "82",
-    "language_score": "无",
-    "country": "英国/香港",
+    "language_score": "未填写",
+    "country": "英国",
     "degree": "硕士",
-    "result": "QS前100",
+    "result": "QS前50",
     "offers": [
       {
         "school": "曼彻斯特大学",
         "major": "国际发展",
         "rank": "QS前50"
-      },
-      {
-        "school": "香港理工大学",
-        "major": "无",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "student_school": "武汉理工",
-    "student_major": "信息管理",
-    "gpa": "86",
-    "language_score": "IELTS 6",
-    "country": "新加坡",
-    "degree": "硕士",
-    "result": "QS前30",
-    "offers": [
-      {
-        "school": "南洋理工",
-        "major": "工程管理",
-        "rank": "QS前30"
       }
     ]
   },
   {
     "id": 4,
-    "student_school": "大连海事",
-    "student_major": "网络工程",
-    "gpa": "79",
-    "language_score": "无",
+    "student_school": "辽宁大学",
+    "student_major": "日语",
+    "gpa": "82",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前100",
     "offers": [
       {
-        "school": "香港城市大学",
-        "major": "电子信息工程",
-        "rank": "QS前70"
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
       }
     ]
   },
   {
     "id": 5,
-    "student_school": "华北电力大学",
-    "student_major": "电气",
+    "student_school": "武汉理工大学",
+    "student_major": "信息管理与信息系统",
+    "gpa": "86",
+    "language_score": "IELTS 6",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工",
+        "major": "工程管理",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "student_school": "大连海事大学",
+    "student_major": "网络工程",
     "gpa": "79",
-    "language_score": "无",
-    "country": "澳洲/英国/香港",
+    "language_score": "未填写",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "电子信息工程",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "student_school": "华北电力大学",
+    "student_major": "电气工程",
+    "gpa": "79",
+    "language_score": "未填写",
+    "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前100",
     "offers": [
       {
         "school": "新南威尔士大学",
         "major": "电气工程",
-        "rank": "QS前70"
-      },
-      {
-        "school": "南安普顿大学",
-        "major": "电气工程",
         "rank": "QS前100"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "电子信息工程",
-        "rank": "QS前70"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "student_school": "合肥工业大学",
-    "student_major": "微电子",
-    "gpa": "87",
-    "language_score": "IELTS 6.5",
-    "country": "中国香港",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "香港中文大学(深圳)",
-        "major": "集成电路",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "student_school": "大连海事",
-    "student_major": "经济学",
-    "gpa": "84",
-    "language_score": "IELTS 6.5",
-    "country": "新加坡",
-    "degree": "硕士",
-    "result": "QS前30",
-    "offers": [
-      {
-        "school": "南洋理工大学",
-        "major": "管理经济学",
-        "rank": "QS前30"
       }
     ]
   },
   {
     "id": 8,
-    "student_school": "安徽大学",
-    "student_major": "财政学",
-    "gpa": "89",
-    "language_score": "无",
-    "country": "国内",
+    "student_school": "华北电力大学",
+    "student_major": "电气工程",
+    "gpa": "79",
+    "language_score": "未填写",
+    "country": "英国",
     "degree": "硕士",
-    "result": "保研",
-    "offers": []
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "南安普顿大学",
+        "major": "电气工程",
+        "rank": "QS前100"
+      }
+    ]
   },
   {
     "id": 9,
-    "student_school": "暨南大学",
-    "student_major": "计算机",
-    "gpa": "87",
-    "language_score": "无",
-    "country": "新加坡",
+    "student_school": "华北电力大学",
+    "student_major": "电气工程",
+    "gpa": "79",
+    "language_score": "未填写",
+    "country": "香港",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前100",
     "offers": [
       {
-        "school": "南洋理工大学",
-        "major": "信号处理与机器学习",
-        "rank": "QS前30"
+        "school": "香港城市大学",
+        "major": "电子信息工程",
+        "rank": "QS前100"
       }
     ]
   },
   {
     "id": 10,
-    "student_school": "西南大学",
-    "student_major": "计算机",
-    "gpa": "86",
-    "language_score": "IELTS 6",
-    "country": "香港/英国",
+    "student_school": "合肥工业大学",
+    "student_major": "微电子",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前100",
     "offers": [
       {
-        "school": "香港大学",
-        "major": "创新设计技术",
-        "rank": "QS前30"
-      },
-      {
-        "school": "布里斯托大学",
-        "major": "数据科学 机器人",
-        "rank": "QS前60"
+        "school": "香港中文大学",
+        "major": "集成电路",
+        "rank": "QS前100"
       }
     ]
   },
   {
     "id": 11,
-    "student_school": "北京化工",
-    "student_major": "设计",
-    "gpa": "90",
-    "language_score": "IELTS 6",
-    "country": "香港/澳洲/英国",
+    "student_school": "大连海事大学",
+    "student_major": "经济学",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
-        "school": "香港大学",
-        "major": "创新设计技术",
-        "rank": "QS前30"
-      },
-      {
-        "school": "悉尼大学",
-        "major": "设计",
-        "rank": "QS前20"
-      },
-      {
-        "school": "布里斯托大学",
-        "major": "vr设计",
-        "rank": "QS前60"
+        "school": "南洋理工大学",
+        "major": "管理经济学",
+        "rank": "QS前50"
       }
     ]
   },
   {
     "id": 12,
     "student_school": "安徽大学",
-    "student_major": "土木",
-    "gpa": "83",
-    "language_score": "IELTS 6.5",
-    "country": "香港",
+    "student_major": "财政学",
+    "gpa": "89",
+    "language_score": "未填写",
+    "country": "国内",
     "degree": "硕士",
-    "result": "QS前70",
-    "offers": [
-      {
-        "school": "香港城市大学",
-        "major": "电子商务",
-        "rank": "QS前70"
-      }
-    ]
+    "result": "保研",
+    "offers": []
   },
   {
     "id": 13,
-    "student_school": "电子科大",
-    "student_major": "物理",
-    "gpa": "80",
-    "language_score": "IELTS 6",
-    "country": "香港",
+    "student_school": "暨南大学",
+    "student_major": "计算机科学",
+    "gpa": "87",
+    "language_score": "未填写",
+    "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
-        "school": "香港大学",
-        "major": "微电子",
-        "rank": "QS前30"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "半导体",
-        "rank": "QS前70"
+        "school": "南洋理工大学",
+        "major": "信号处理与机器学习",
+        "rank": "QS前50"
       }
     ]
   },
   {
     "id": 14,
+    "student_school": "西南大学",
+    "student_major": "计算机科学",
+    "gpa": "86",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "创新设计技术",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "student_school": "西南大学",
+    "student_major": "计算机科学",
+    "gpa": "86",
+    "language_score": "IELTS 6",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "布里斯托大学",
+        "major": "数据科学 机器人",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "student_school": "北京化工大学",
+    "student_major": "设计学",
+    "gpa": "90",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "创新设计技术",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "student_school": "北京化工大学",
+    "student_major": "设计学",
+    "gpa": "90",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "设计",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "student_school": "北京化工大学",
+    "student_major": "设计学",
+    "gpa": "90",
+    "language_score": "IELTS 6",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "布里斯托大学",
+        "major": "vr设计",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "student_school": "安徽大学",
+    "student_major": "土木工程",
+    "gpa": "83",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "电子商务",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "student_school": "电子科技大学",
+    "student_major": "物理学",
+    "gpa": "80",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "微电子",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港城市大学",
+        "major": "半导体",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 21,
     "student_school": "同济大学",
-    "student_major": "英语",
+    "student_major": "英语语言文学",
     "gpa": "87",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前10",
@@ -277,74 +361,74 @@
     ]
   },
   {
-    "id": 15,
+    "id": 22,
     "student_school": "吉林大学",
-    "student_major": "计算机",
+    "student_major": "计算机科学",
     "gpa": "78",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前50",
+    "result": "QS前100",
     "offers": [
       {
-        "school": "香港科技大学(广州)",
+        "school": "香港科技大学",
         "major": "智能制造",
-        "rank": "QS前50"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 16,
+    "id": 23,
     "student_school": "四川大学",
-    "student_major": "计算机",
+    "student_major": "计算机科学",
     "gpa": "84",
     "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前50",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港中文大学",
         "major": "信息工程",
-        "rank": "QS前50"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 17,
-    "student_school": "川大",
-    "student_major": "无",
+    "id": 24,
+    "student_school": "四川大学",
+    "student_major": "计算机科学",
     "gpa": "84",
-    "language_score": "无",
-    "country": "无",
+    "language_score": "未填写",
+    "country": "未分类",
     "degree": "硕士",
-    "result": "无",
+    "result": "待更新",
     "offers": []
   },
   {
-    "id": 18,
+    "id": 25,
     "student_school": "中国农业大学",
     "student_major": "工业设计",
     "gpa": "80",
     "language_score": "IELTS 6",
     "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "南洋理工大学",
         "major": "材料科学与工程",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 19,
+    "id": 26,
     "student_school": "中南大学",
-    "student_major": "生物信息",
+    "student_major": "生物信息学",
     "gpa": "77",
     "language_score": "IELTS 6",
-    "country": "新加坡/澳洲",
+    "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
@@ -356,39 +440,51 @@
       {
         "school": "南洋理工大学",
         "major": "生物医学工程",
-        "rank": "QS前30"
-      },
-      {
-        "school": "澳洲国立大学",
-        "major": "生物信息",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 20,
+    "id": 27,
+    "student_school": "中南大学",
+    "student_major": "生物信息学",
+    "gpa": "77",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "生物信息",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 28,
     "student_school": "湖南大学",
-    "student_major": "传媒",
+    "student_major": "传媒/传播学",
     "gpa": "84",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港城市大学",
         "major": "传媒",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 21,
-    "student_school": "地大",
+    "id": 29,
+    "student_school": "中国地质大学(武汉)",
     "student_major": "地理信息系统",
     "gpa": "89",
     "language_score": "IELTS 6.5",
-    "country": "新加坡/香港",
+    "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
@@ -398,24 +494,36 @@
         "rank": "QS前10"
       },
       {
-        "school": "香港大学",
-        "major": "计算机",
-        "rank": "QS前30"
-      },
-      {
         "school": "南洋理工大学",
         "major": "信号处理与机器学习",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 22,
-    "student_school": "中传",
-    "student_major": "传媒",
+    "id": 30,
+    "student_school": "中国地质大学(武汉)",
+    "student_major": "地理信息系统",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "计算机",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "student_school": "中国传媒大学",
+    "student_major": "传媒/传播学",
     "gpa": "92",
     "language_score": "IELTS 6.5",
-    "country": "新加坡/香港/英国",
+    "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
@@ -423,12 +531,36 @@
         "school": "新加坡国立大学",
         "major": "社会学",
         "rank": "QS前10"
-      },
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "student_school": "中国传媒大学",
+    "student_major": "传媒/传播学",
+    "gpa": "92",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
       {
         "school": "香港中文大学",
         "major": "社会学",
-        "rank": "QS前50"
-      },
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "student_school": "中国传媒大学",
+    "student_major": "传媒/传播学",
+    "gpa": "92",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
       {
         "school": "曼彻斯特大学",
         "major": "数字技术传媒与教育",
@@ -437,14 +569,14 @@
     ]
   },
   {
-    "id": 23,
-    "student_school": "哈工程",
+    "id": 34,
+    "student_school": "哈尔滨工程大学",
     "student_major": "工业设计",
     "gpa": "82.84/100",
     "language_score": "IELTS 6",
     "country": "英国",
     "degree": "硕士",
-    "result": "QS前60",
+    "result": "QS前50",
     "offers": [
       {
         "school": "曼彻斯特大学",
@@ -454,68 +586,80 @@
       {
         "school": "布里斯托大学",
         "major": "机器人",
-        "rank": "QS前60"
+        "rank": "QS前100"
       },
       {
         "school": "布里斯托大学",
         "major": "计算机",
-        "rank": "QS前60"
+        "rank": "QS前100"
       },
       {
         "school": "布里斯托大学",
         "major": "VR",
-        "rank": "QS前60"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 24,
-    "student_school": "北外",
+    "id": 35,
+    "student_school": "北京外国语大学",
     "student_major": "国际商务",
     "gpa": "85/100",
     "language_score": "IELTS 6.5",
     "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "南洋理工大学",
         "major": "管理经济学",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 25,
-    "student_school": "华农",
+    "id": 36,
+    "student_school": "华中农业大学",
     "student_major": "智慧农业",
     "gpa": "3.51/4.00",
     "language_score": "IELTS 6.5",
-    "country": "新加坡/香港",
+    "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "南洋理工大学",
         "major": "生物医学工程",
-        "rank": "QS前30"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "生物医学工程",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港科技大学",
-        "major": "生物技术",
         "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 26,
+    "id": 37,
+    "student_school": "华中农业大学",
+    "student_major": "智慧农业",
+    "gpa": "3.51/4.00",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "生物医学工程",
+        "rank": "QS前100"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "生物技术",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 38,
     "student_school": "西南政法",
-    "student_major": "法律",
+    "student_major": "法学",
     "gpa": "90",
     "language_score": "IELTS 8",
     "country": "英国",
@@ -530,47 +674,59 @@
       {
         "school": "爱丁堡",
         "major": "LLM",
-        "rank": "QS前20"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 27,
+    "id": 39,
     "student_school": "河海大学",
     "student_major": "通信工程",
     "gpa": "4.3/5.0",
     "language_score": "IELTS 6.5",
     "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "南洋理工",
         "major": "通信工程",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 28,
-    "student_school": "东北师范",
-    "student_major": "会计",
+    "id": 40,
+    "student_school": "东北师范大学",
+    "student_major": "会计学",
     "gpa": "87",
     "language_score": "IELTS 7",
-    "country": "新加坡/英国",
+    "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "南洋理工大学",
         "major": "项目管理",
-        "rank": "QS前30"
+        "rank": "QS前50"
       },
       {
         "school": "南洋理工大学",
         "major": "工程管理",
-        "rank": "QS前30"
-      },
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "student_school": "东北师范大学",
+    "student_major": "会计学",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
       {
         "school": "曼彻斯特大学",
         "major": "发展金融",
@@ -579,34 +735,34 @@
     ]
   },
   {
-    "id": 29,
-    "student_school": "湖师大",
+    "id": 42,
+    "student_school": "湖南师范大学",
     "student_major": "数据科学",
     "gpa": "84",
     "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前50",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港中文大学",
         "major": "数学",
-        "rank": "QS前50"
+        "rank": "QS前100"
       },
       {
         "school": "香港城市大学",
         "major": "商务咨询系统",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 30,
+    "id": 43,
     "student_school": "海南大学",
-    "student_major": "食品",
+    "student_major": "食品科学与工程",
     "gpa": "85",
     "language_score": "IELTS 6.5",
-    "country": "新加坡/香港",
+    "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
@@ -614,71 +770,95 @@
         "school": "新加坡国立大学",
         "major": "食品",
         "rank": "QS前10"
-      },
-      {
-        "school": "香港大学",
-        "major": "食品工业与营销",
-        "rank": "QS前30"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "营养、食品科学与技术",
-        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 31,
+    "id": 44,
+    "student_school": "海南大学",
+    "student_major": "食品科学与工程",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "食品工业与营销",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "营养、食品科学与技术",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 45,
     "student_school": "安徽大学",
     "student_major": "经济学",
     "gpa": "3.53/5.0",
     "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "香港大学",
         "major": "工业工程与物流管理",
-        "rank": "QS前30"
+        "rank": "QS前50"
       },
       {
         "school": "香港城市大学",
         "major": "应用经济学",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 32,
+    "id": 46,
     "student_school": "东北林业大学",
-    "student_major": "计算机",
+    "student_major": "计算机科学",
     "gpa": "85.42/100",
     "language_score": "IELTS 6.5",
-    "country": "香港/新加坡",
+    "country": "香港",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "香港大学",
         "major": "计算机",
-        "rank": "QS前30"
-      },
-      {
-        "school": "南洋理工大学",
-        "major": "区块链",
-        "rank": "QS前30"
+        "rank": "QS前50"
       },
       {
         "school": "香港城市大学",
         "major": "计算机",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 33,
-    "student_school": "华东理工",
+    "id": 47,
+    "student_school": "东北林业大学",
+    "student_major": "计算机科学",
+    "gpa": "85.42/100",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "区块链",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "student_school": "华东理工大学",
     "student_major": "机械工程",
     "gpa": "85",
     "language_score": "IELTS 6.5",
@@ -694,103 +874,110 @@
       {
         "school": "南洋理工大学",
         "major": "计算机控制自动化",
-        "rank": "QS前30"
+        "rank": "QS前50"
       },
       {
         "school": "南洋理工大学",
         "major": "机械工程",
-        "rank": "QS前30"
-      }
-    ]
-  },
-  {
-    "id": 34,
-    "student_school": "东北林业大学",
-    "student_major": "计算机",
-    "gpa": "84.00/100",
-    "language_score": "IELTS 6",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前30",
-    "offers": [
-      {
-        "school": "香港大学",
-        "major": "电子商务与互联网",
-        "rank": "QS前30"
-      },
-      {
-        "school": "香港大学",
-        "major": "创新设计技术",
-        "rank": "QS前30"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "商务咨询系统",
-        "rank": "QS前70"
-      }
-    ]
-  },
-  {
-    "id": 35,
-    "student_school": "武汉理工",
-    "student_major": "车辆工程",
-    "gpa": "86.82",
-    "language_score": "IELTS 6.5",
-    "country": "新加坡/香港",
-    "degree": "硕士",
-    "result": "QS前10",
-    "offers": [
-      {
-        "school": "新加坡国立",
-        "major": "机械 机器人",
-        "rank": "QS前10"
-      },
-      {
-        "school": "香港大学",
-        "major": "机器人智能系统",
-        "rank": "QS前30"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "机器人",
         "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 36,
+    "id": 49,
+    "student_school": "东北林业大学",
+    "student_major": "计算机科学",
+    "gpa": "84.00/100",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "电子商务与互联网",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "创新设计技术",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港城市大学",
+        "major": "商务咨询系统",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "student_school": "武汉理工大学",
+    "student_major": "车辆工程",
+    "gpa": "86.82",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "机器人智能系统",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "机器人",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 51,
     "student_school": "南京财经大学",
-    "student_major": "会计",
+    "student_major": "会计学",
     "gpa": "89.62/100",
     "language_score": "IELTS 7",
-    "country": "英国/澳洲",
+    "country": "英国",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
         "school": "曼彻斯特大学",
-        "major": "无",
+        "major": "待更新",
         "rank": "QS前50"
       },
       {
         "school": "布里斯托大学",
         "major": "会计",
-        "rank": "QS前60"
-      },
-      {
-        "school": "澳洲国立大学",
-        "major": "会计",
-        "rank": "QS前30"
-      },
-      {
-        "school": "悉尼大学",
-        "major": "会计",
-        "rank": "QS前20"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 37,
+    "id": 52,
+    "student_school": "南京财经大学",
+    "student_major": "会计学",
+    "gpa": "89.62/100",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "会计",
+        "rank": "QS前100"
+      },
+      {
+        "school": "悉尼大学",
+        "major": "会计",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 53,
     "student_school": "西南大学",
     "student_major": "经济学",
     "gpa": "82",
@@ -812,29 +999,29 @@
     ]
   },
   {
-    "id": 38,
-    "student_school": "合工大",
+    "id": 54,
+    "student_school": "合肥工业大学",
     "student_major": "金融工程",
     "gpa": "84",
     "language_score": "IELTS 6.5",
     "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "南洋理工大学",
         "major": "管理经济学",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 39,
+    "id": 55,
     "student_school": "北京科技大学",
     "student_major": "项目管理",
     "gpa": "80",
-    "language_score": "无",
-    "country": "英国/澳洲",
+    "language_score": "未填写",
+    "country": "英国",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
@@ -842,34 +1029,58 @@
         "school": "曼彻斯特大学",
         "major": "房地产开发",
         "rank": "QS前50"
-      },
-      {
-        "school": "墨尔本大学",
-        "major": "项目管理",
-        "rank": "QS前30"
-      },
-      {
-        "school": "悉尼大学",
-        "major": "项目管理",
-        "rank": "QS前20"
       }
     ]
   },
   {
-    "id": 40,
-    "student_school": "北京体育大学",
-    "student_major": "经济学",
-    "gpa": "88",
-    "language_score": "IELTS 6.5",
-    "country": "香港/英国",
+    "id": 56,
+    "student_school": "北京科技大学",
+    "student_major": "项目管理",
+    "gpa": "80",
+    "language_score": "未填写",
+    "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "香港中文大学",
-        "major": "电子商务与物流管理",
+        "school": "墨尔本大学",
+        "major": "项目管理",
         "rank": "QS前50"
       },
+      {
+        "school": "悉尼大学",
+        "major": "项目管理",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "student_school": "北京体育大学",
+    "student_major": "经济学",
+    "gpa": "88",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "电子商务与物流管理",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "student_school": "北京体育大学",
+    "student_major": "经济学",
+    "gpa": "88",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
       {
         "school": "曼彻斯特大学",
         "major": "信息系统管理",
@@ -878,18 +1089,18 @@
     ]
   },
   {
-    "id": 41,
+    "id": 59,
     "student_school": "西南大学",
     "student_major": "生物",
-    "gpa": "无",
-    "language_score": "无",
-    "country": "无",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "未分类",
     "degree": "硕士",
-    "result": "无",
+    "result": "待更新",
     "offers": []
   },
   {
-    "id": 42,
+    "id": 60,
     "student_school": "西南大学",
     "student_major": "市场营销",
     "gpa": "84",
@@ -906,73 +1117,85 @@
       {
         "school": "布里斯托大学",
         "major": "市场营销",
-        "rank": "QS前60"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 43,
-    "student_school": "厦大马来",
-    "student_major": "会计",
+    "id": 61,
+    "student_school": "厦门大学马来西亚分校",
+    "student_major": "会计学",
     "gpa": "2.7",
-    "language_score": "无",
-    "country": "澳洲",
+    "language_score": "未填写",
+    "country": "澳大利亚",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前100",
     "offers": [
       {
         "school": "新南威尔士",
         "major": "会计",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 44,
+    "id": 62,
     "student_school": "中国农业大学",
     "student_major": "工业设计",
     "gpa": "2.9",
     "language_score": "IELTS 6",
-    "country": "新加坡/澳洲",
+    "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "南洋理工",
         "major": "材料科学与工程",
-        "rank": "QS前30"
-      },
-      {
-        "school": "悉尼大学",
-        "major": "项目管理",
-        "rank": "QS前20"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 45,
-    "student_school": "厦大马来",
-    "student_major": "会计",
-    "gpa": "2.6",
-    "language_score": "无",
-    "country": "澳洲",
+    "id": 63,
+    "student_school": "中国农业大学",
+    "student_major": "工业设计",
+    "gpa": "2.9",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "项目管理",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "student_school": "厦门大学马来西亚分校",
+    "student_major": "会计学",
+    "gpa": "2.6",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前100",
     "offers": [
       {
         "school": "新南威尔士",
         "major": "会计",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 46,
+    "id": 65,
     "student_school": "湖南大学",
-    "student_major": "金融",
+    "student_major": "金融学",
     "gpa": "92",
     "language_score": "IELTS 7",
-    "country": "新加坡/香港",
+    "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
@@ -980,70 +1203,72 @@
         "school": "新加坡国立大学",
         "major": "应用经济学",
         "rank": "QS前10"
-      },
-      {
-        "school": "香港大学",
-        "major": "计算机",
-        "rank": "QS前30"
       }
     ]
   },
   {
-    "id": 47,
+    "id": 66,
+    "student_school": "湖南大学",
+    "student_major": "金融学",
+    "gpa": "92",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "计算机",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 67,
     "student_school": "湖南大学",
     "student_major": "数学",
     "gpa": "83.94/100",
     "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前50",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港中文大学",
         "major": "数学",
-        "rank": "QS前50"
+        "rank": "QS前100"
       },
       {
         "school": "香港科技大学",
         "major": "大数据技术",
-        "rank": "QS前50"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 48,
+    "id": 68,
     "student_school": "湖南大学",
-    "student_major": "金融",
+    "student_major": "金融学",
     "gpa": "88.39/100",
     "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前50",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港中文大学",
         "major": "工业工程与系统管理",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "电子商务与物流管理",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "金融科技",
-        "rank": "QS前50"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 49,
+    "id": 69,
     "student_school": "北京师范大学",
-    "student_major": "戏剧影视电影与文化",
+    "student_major": "戏剧影视文学",
     "gpa": "85",
     "language_score": "IELTS 6.5",
-    "country": "新加坡/英国",
+    "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
@@ -1051,11 +1276,23 @@
         "school": "新加坡国立大学",
         "major": "戏剧影视",
         "rank": "QS前10"
-      },
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "student_school": "北京师范大学",
+    "student_major": "戏剧影视文学",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
       {
         "school": "爱丁堡大学",
         "major": "策展",
-        "rank": "QS前20"
+        "rank": "QS前50"
       },
       {
         "school": "曼彻斯特大学",
@@ -1065,64 +1302,88 @@
     ]
   },
   {
-    "id": 50,
+    "id": 71,
     "student_school": "同济大学",
-    "student_major": "会计",
+    "student_major": "会计学",
     "gpa": "85",
     "language_score": "IELTS 6.5",
-    "country": "新加坡/香港",
+    "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "南洋理工大学",
-        "major": "经济学",
-        "rank": "QS前30"
-      },
-      {
-        "school": "香港中文大学",
         "major": "经济学",
         "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 51,
+    "id": 72,
+    "student_school": "同济大学",
+    "student_major": "会计学",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "经济学",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 73,
     "student_school": "上海交通大学",
     "student_major": "市场营销",
     "gpa": "88",
     "language_score": "IELTS 7",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "香港大学",
         "major": "市场营销",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 52,
-    "student_school": "澳门城市",
+    "id": 74,
+    "student_school": "澳门城市大学",
     "student_major": "旅游管理",
     "gpa": "3.84/4.0",
     "language_score": "IELTS 7",
-    "country": "香港/英国",
+    "country": "香港",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "香港大学",
         "major": "气候治理",
-        "rank": "QS前30"
+        "rank": "QS前50"
       },
       {
         "school": "香港中文大学",
         "major": "可持续旅游",
-        "rank": "QS前50"
-      },
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "student_school": "澳门城市大学",
+    "student_major": "旅游管理",
+    "gpa": "3.84/4.0",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
       {
         "school": "曼彻斯特大学",
         "major": "环境监测",
@@ -1131,28 +1392,28 @@
     ]
   },
   {
-    "id": 53,
-    "student_school": "澳门城市",
+    "id": 76,
+    "student_school": "澳门城市大学",
     "student_major": "工商管理",
     "gpa": "3.62/4.00",
     "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港城市大学",
         "major": "市场营销",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 54,
-    "student_school": "澳城",
+    "id": 77,
+    "student_school": "澳门城市大学",
     "student_major": "人工智能",
     "gpa": "3.6",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前10",
@@ -1165,60 +1426,55 @@
     ]
   },
   {
-    "id": 55,
-    "student_school": "psb",
-    "student_major": "传媒",
+    "id": 78,
+    "student_school": "PSB Academy",
+    "student_major": "传媒/传播学",
     "gpa": "80",
-    "language_score": "无",
-    "country": "澳洲",
+    "language_score": "未填写",
+    "country": "澳大利亚",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "墨尔本",
         "major": "全球市场营销",
-        "rank": "QS前30"
+        "rank": "QS前50"
       },
       {
         "school": "悉尼",
         "major": "媒体实践",
-        "rank": "QS前20"
+        "rank": "QS前50"
       },
       {
         "school": "澳国立",
         "major": "数字媒体",
-        "rank": "QS前30"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 56,
-    "student_school": "psb",
-    "student_major": "传媒",
+    "id": 79,
+    "student_school": "PSB Academy",
+    "student_major": "传媒/传播学",
     "gpa": "68",
-    "language_score": "无",
-    "country": "澳洲",
+    "language_score": "未填写",
+    "country": "澳大利亚",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "悉尼大学",
         "major": "公共关系",
-        "rank": "QS前20"
-      },
-      {
-        "school": "澳洲国立",
-        "major": "数字媒体",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 57,
-    "student_school": "西浦",
+    "id": 80,
+    "student_school": "西交利物浦大学",
     "student_major": "金融数学",
     "gpa": "58",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -1236,67 +1492,69 @@
     ]
   },
   {
-    "id": 58,
-    "student_school": "阿姆斯特丹",
-    "student_major": "金融",
+    "id": 81,
+    "student_school": "阿姆斯特丹大学",
+    "student_major": "金融学",
     "gpa": "7.0",
-    "language_score": "无",
-    "country": "澳洲/香港",
+    "language_score": "未填写",
+    "country": "澳大利亚",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前50",
     "offers": [
       {
         "school": "悉尼大学",
         "major": "金融",
-        "rank": "QS前20"
-      },
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "student_school": "阿姆斯特丹大学",
+    "student_major": "金融学",
+    "gpa": "7.0",
+    "language_score": "未填写",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
       {
         "school": "香港城市大学",
         "major": "金融",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 59,
+    "id": 83,
     "student_school": "集美大学",
-    "student_major": "会计",
+    "student_major": "会计学",
     "gpa": "88",
-    "language_score": "无",
-    "country": "澳洲",
+    "language_score": "未填写",
+    "country": "澳大利亚",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "悉尼大学",
         "major": "会计",
-        "rank": "QS前20"
-      },
-      {
-        "school": "澳洲国立",
-        "major": "会计",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 60,
+    "id": 84,
     "student_school": "闽江学院",
     "student_major": "经济学",
     "gpa": "4.08",
     "language_score": "IELTS 7",
-    "country": "英国/香港",
+    "country": "英国",
     "degree": "硕士",
-    "result": "QS前40",
+    "result": "QS前100",
     "offers": [
       {
         "school": "KCL",
         "major": "新兴经济体与国际发展",
-        "rank": "QS前40"
-      },
-      {
-        "school": "香港理工大学",
-        "major": "经济学",
         "rank": "QS前100"
       },
       {
@@ -1312,24 +1570,36 @@
     ]
   },
   {
-    "id": 61,
-    "student_school": "浙江理工",
-    "student_major": "英语",
+    "id": 85,
+    "student_school": "闽江学院",
+    "student_major": "经济学",
+    "gpa": "4.08",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港理工大学",
+        "major": "经济学",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "student_school": "浙江理工大学",
+    "student_major": "英语语言文学",
     "gpa": "88",
     "language_score": "IELTS 7",
-    "country": "香港/英国",
+    "country": "香港",
     "degree": "硕士",
-    "result": "QS前20",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港中文大学",
         "major": "TESOL",
-        "rank": "QS前50"
-      },
-      {
-        "school": "爱丁堡",
-        "major": "TESOL",
-        "rank": "QS前20"
+        "rank": "QS前100"
       },
       {
         "school": "香港理工",
@@ -1339,34 +1609,51 @@
       {
         "school": "香港城市",
         "major": "LS/ES",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 62,
-    "student_school": "广西民族",
-    "student_major": "表演",
-    "gpa": "83",
-    "language_score": "无",
-    "country": "澳洲",
+    "id": 87,
+    "student_school": "浙江理工大学",
+    "student_major": "英语语言文学",
+    "gpa": "88",
+    "language_score": "IELTS 7",
+    "country": "英国",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "爱丁堡",
+        "major": "TESOL",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "student_school": "广西民族大学",
+    "student_major": "表演艺术",
+    "gpa": "83",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前100",
     "offers": [
       {
         "school": "新南威尔士",
         "major": "传媒",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 63,
+    "id": 89,
     "student_school": "燕山大学",
     "student_major": "工商管理",
     "gpa": "85/100",
     "language_score": "IELTS 7",
-    "country": "英国/香港",
+    "country": "英国",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
@@ -1374,7 +1661,19 @@
         "school": "曼彻斯特大学",
         "major": "数据科学",
         "rank": "QS前50"
-      },
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "student_school": "燕山大学",
+    "student_major": "工商管理",
+    "gpa": "85/100",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
       {
         "school": "香港理工大学",
         "major": "商业管理",
@@ -1383,17 +1682,17 @@
       {
         "school": "香港城市大学",
         "major": "商业数据分析",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 64,
-    "student_school": "北服",
-    "student_major": "设计",
+    "id": 91,
+    "student_school": "北京服装学院",
+    "student_major": "设计学",
     "gpa": "3.76/4.0",
     "language_score": "IELTS 6.5",
-    "country": "英国/新加坡/香港",
+    "country": "英国",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
@@ -1403,25 +1702,49 @@
         "rank": "QS前10"
       },
       {
-        "school": "南洋理工大学",
-        "major": "游戏设计",
-        "rank": "QS前30"
-      },
-      {
         "school": "皇家艺术学院",
         "major": "信息体验设计",
-        "rank": "艺术顶尖"
+        "rank": "海外名校"
       },
       {
         "school": "伦敦艺术学院",
         "major": "叙事环境 VR",
-        "rank": "艺术顶尖"
+        "rank": "海外名校"
       },
       {
         "school": "格拉斯哥大学艺术学院",
         "major": "严肃游戏",
         "rank": "QS前100"
-      },
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "student_school": "北京服装学院",
+    "student_major": "设计学",
+    "gpa": "3.76/4.0",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "游戏设计",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "student_school": "北京服装学院",
+    "student_major": "设计学",
+    "gpa": "3.76/4.0",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
       {
         "school": "香港理工大学",
         "major": "多媒体创意娱乐",
@@ -1430,11 +1753,11 @@
     ]
   },
   {
-    "id": 65,
+    "id": 94,
     "student_school": "燕山大学",
     "student_major": "材料",
     "gpa": "72/100",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前10",
@@ -1457,17 +1780,17 @@
       {
         "school": "布里斯托大学",
         "major": "材料",
-        "rank": "QS前60"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 66,
+    "id": 95,
     "student_school": "广州大学",
-    "student_major": "历史",
+    "student_major": "历史学",
     "gpa": "90",
     "language_score": "IELTS 6",
-    "country": "新加坡/香港/英国",
+    "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
@@ -1475,44 +1798,80 @@
         "school": "新加坡国立大学",
         "major": "比较历史",
         "rank": "QS前10"
-      },
-      {
-        "school": "香港大学",
-        "major": "中国历史",
-        "rank": "QS前30"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "历史",
-        "rank": "QS前50"
-      },
-      {
-        "school": "爱丁堡大学",
-        "major": "历史",
-        "rank": "QS前20"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "汉语言文学与历史",
-        "rank": "QS前70"
       }
     ]
   },
   {
-    "id": 67,
-    "student_school": "桂林理工",
-    "student_major": "计算机",
+    "id": 96,
+    "student_school": "广州大学",
+    "student_major": "历史学",
+    "gpa": "90",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "中国历史",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "历史",
+        "rank": "QS前100"
+      },
+      {
+        "school": "香港城市大学",
+        "major": "汉语言文学与历史",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "student_school": "广州大学",
+    "student_major": "历史学",
+    "gpa": "90",
+    "language_score": "IELTS 6",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "爱丁堡大学",
+        "major": "历史",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "student_school": "桂林理工大学",
+    "student_major": "计算机科学",
     "gpa": "80.0/100",
-    "language_score": "无",
-    "country": "澳洲/英国",
+    "language_score": "未填写",
+    "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前100",
     "offers": [
       {
         "school": "新南威尔士",
         "major": "计算机",
-        "rank": "QS前70"
-      },
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "student_school": "桂林理工大学",
+    "student_major": "计算机科学",
+    "gpa": "80.0/100",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
       {
         "school": "利兹大学",
         "major": "计算机",
@@ -1526,19 +1885,19 @@
     ]
   },
   {
-    "id": 68,
-    "student_school": "武汉外经贸",
-    "student_major": "英语",
+    "id": 100,
+    "student_school": "武汉纺织大学外经贸学院",
+    "student_major": "英语语言文学",
     "gpa": "86",
     "language_score": "IELTS 6",
     "country": "英国",
     "degree": "硕士",
-    "result": "QS前20",
+    "result": "QS前50",
     "offers": [
       {
         "school": "爱丁堡大学",
         "major": "TESOL",
-        "rank": "QS前20"
+        "rank": "QS前50"
       },
       {
         "school": "利兹大学",
@@ -1548,33 +1907,28 @@
     ]
   },
   {
-    "id": 69,
+    "id": 101,
     "student_school": "广东科技学院",
     "student_major": "市场营销",
     "gpa": "84.00/100",
     "language_score": "IELTS 6",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前100+",
+    "result": "QS前100",
     "offers": [
       {
         "school": "岭南大学",
         "major": "市场营销",
-        "rank": "QS前100+"
-      },
-      {
-        "school": "岭南大学",
-        "major": "社会政策创新",
-        "rank": "QS前100+"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 70,
+    "id": 102,
     "student_school": "浙江树人学院",
     "student_major": "市场营销",
     "gpa": "86",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -1585,26 +1939,21 @@
         "rank": "QS前100"
       },
       {
-        "school": "利兹大学",
-        "major": "信息系统与数字化创新",
-        "rank": "QS前100"
-      },
-      {
-        "school": "南安普敦大学",
-        "major": "市场营销",
+        "school": "南安普敦",
+        "major": "大学 市场营销",
         "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 71,
-    "student_school": "上海海事",
-    "student_major": "电气",
+    "id": 103,
+    "student_school": "上海海事大学",
+    "student_major": "电气工程",
     "gpa": "86",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
-    "result": "QS前60",
+    "result": "QS前50",
     "offers": [
       {
         "school": "曼彻斯特大学",
@@ -1614,30 +1963,54 @@
       {
         "school": "布里斯托大学",
         "major": "通信网络与信号处理",
-        "rank": "QS前60"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 72,
-    "student_school": "长沙理工",
-    "student_major": "土木",
+    "id": 104,
+    "student_school": "长沙理工大学",
+    "student_major": "土木工程",
     "gpa": "80",
     "language_score": "IELTS 6",
-    "country": "新加坡/香港/英国",
+    "country": "新加坡",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "南洋理工大学",
         "major": "土木工程",
-        "rank": "QS前30"
-      },
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "student_school": "长沙理工大学",
+    "student_major": "土木工程",
+    "gpa": "80",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
       {
         "school": "香港大学",
         "major": "建筑",
-        "rank": "QS前30"
-      },
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "student_school": "长沙理工大学",
+    "student_major": "土木工程",
+    "gpa": "80",
+    "language_score": "IELTS 6",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
       {
         "school": "曼彻斯特大学",
         "major": "城市规划",
@@ -1651,11 +2024,11 @@
     ]
   },
   {
-    "id": 73,
-    "student_school": "天津城建",
-    "student_major": "电气",
+    "id": 107,
+    "student_school": "天津城建大学",
+    "student_major": "电气工程",
     "gpa": "84",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -1668,11 +2041,11 @@
     ]
   },
   {
-    "id": 74,
+    "id": 108,
     "student_school": "扬州大学",
-    "student_major": "计算机",
+    "student_major": "计算机科学",
     "gpa": "75",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -1690,8 +2063,8 @@
     ]
   },
   {
-    "id": 75,
-    "student_school": "广东海洋",
+    "id": 109,
+    "student_school": "广东海洋大学",
     "student_major": "经济学",
     "gpa": "88",
     "language_score": "IELTS 6.5",
@@ -1707,17 +2080,17 @@
       {
         "school": "香港城市大学",
         "major": "管理与创新",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 76,
+    "id": 110,
     "student_school": "北京舞蹈学院",
     "student_major": "表演艺术",
     "gpa": "93.47",
-    "language_score": "无",
-    "country": "英国/香港",
+    "language_score": "未填写",
+    "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
     "offers": [
@@ -1725,29 +2098,53 @@
         "school": "利兹大学",
         "major": "传媒",
         "rank": "QS前100"
-      },
-      {
-        "school": "香港演艺学院",
-        "major": "表演艺术研究",
-        "rank": "艺术顶尖"
       }
     ]
   },
   {
-    "id": 77,
-    "student_school": "北京石油化工",
+    "id": 111,
+    "student_school": "北京舞蹈学院",
+    "student_major": "表演艺术",
+    "gpa": "93.47",
+    "language_score": "未填写",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "海外名校",
+    "offers": [
+      {
+        "school": "香港演艺学院",
+        "major": "表演艺术研究",
+        "rank": "海外名校"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "student_school": "北京石油化工学院",
     "student_major": "药学",
     "gpa": "76",
-    "language_score": "无",
-    "country": "澳洲/英国",
+    "language_score": "未填写",
+    "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前100",
     "offers": [
       {
         "school": "莫纳什大学",
         "major": "药学",
-        "rank": "QS前50"
-      },
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "student_school": "北京石油化工学院",
+    "student_major": "药学",
+    "gpa": "76",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
       {
         "school": "利兹大学",
         "major": "药学",
@@ -1756,24 +2153,24 @@
     ]
   },
   {
-    "id": 78,
-    "student_school": "琼台",
-    "student_major": "建筑",
+    "id": 114,
+    "student_school": "琼台师范学院",
+    "student_major": "建筑学",
     "gpa": "86",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "澳门",
     "degree": "硕士",
-    "result": "澳门顶尖",
+    "result": "海外名校",
     "offers": [
       {
         "school": "澳门科技大学",
         "major": "建筑学",
-        "rank": "澳门顶尖"
+        "rank": "海外名校"
       }
     ]
   },
   {
-    "id": 79,
+    "id": 115,
     "student_school": "云南财经大学",
     "student_major": "金融科技",
     "gpa": "78",
@@ -1790,28 +2187,28 @@
     ]
   },
   {
-    "id": 80,
-    "student_school": "武大",
+    "id": 116,
+    "student_school": "武汉大学",
     "student_major": "物流管理",
     "gpa": "85",
     "language_score": "IELTS 6",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "香港大学",
         "major": "工业工程与物流管理",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 81,
+    "id": 117,
     "student_school": "中央民族大学",
     "student_major": "汉语言文学",
     "gpa": "89",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
@@ -1824,57 +2221,57 @@
     ]
   },
   {
-    "id": 82,
+    "id": 118,
     "student_school": "澳门城市大学",
-    "student_major": "旅游",
+    "student_major": "旅游管理",
     "gpa": "2.6",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前100+",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港教育大学",
-        "major": "无",
-        "rank": "QS前100+"
+        "major": "待更新",
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 83,
+    "id": 119,
     "student_school": "西南大学",
     "student_major": "教育学",
-    "gpa": "无",
-    "language_score": "无",
+    "gpa": "未填写",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前30",
+    "result": "QS前50",
     "offers": [
       {
         "school": "香港大学",
         "major": "教育学",
-        "rank": "QS前30"
+        "rank": "QS前50"
       }
     ]
   },
   {
-    "id": 84,
+    "id": 120,
     "student_school": "海南大学",
     "student_major": "创意媒体",
-    "gpa": "无",
-    "language_score": "无",
-    "country": "无",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "未分类",
     "degree": "硕士",
-    "result": "无",
+    "result": "待更新",
     "offers": []
   },
   {
-    "id": 85,
+    "id": 121,
     "student_school": "浙江财经",
     "student_major": "经济学",
     "gpa": "84",
-    "language_score": "无",
-    "country": "英国/香港",
+    "language_score": "未填写",
+    "country": "英国",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
@@ -1886,8 +2283,20 @@
       {
         "school": "布里斯托大学",
         "major": "会计 管理",
-        "rank": "QS前60"
-      },
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "student_school": "浙江财经",
+    "student_major": "经济学",
+    "gpa": "84",
+    "language_score": "未填写",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
       {
         "school": "香港理工大学",
         "major": "家族财富管理",
@@ -1896,22 +2305,22 @@
     ]
   },
   {
-    "id": 86,
+    "id": 123,
     "student_school": "哈工大",
     "student_major": "智能医学工程",
-    "gpa": "无",
-    "language_score": "无",
-    "country": "无",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "未分类",
     "degree": "硕士",
-    "result": "无",
+    "result": "待更新",
     "offers": []
   },
   {
-    "id": 87,
+    "id": 124,
     "student_school": "惠州学院",
-    "student_major": "英语",
+    "student_major": "英语语言文学",
     "gpa": "86",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -1944,72 +2353,72 @@
     ]
   },
   {
-    "id": 88,
-    "student_school": "北邮",
+    "id": 125,
+    "student_school": "北京邮电大学",
     "student_major": "信息工程",
     "gpa": "82",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港城市大学",
         "major": "AI for Science",
-        "rank": "QS前70"
+        "rank": "QS前100"
       },
       {
-        "school": "香港中文大学(深圳)",
+        "school": "香港中文大学",
         "major": "计算机信息工程",
-        "rank": "QS前50"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 89,
-    "student_school": "北理工",
+    "id": 126,
+    "student_school": "北京理工大学",
     "student_major": "光电工程",
     "gpa": "82",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港城市大学",
         "major": "AI for Science 半导体",
-        "rank": "QS前70"
+        "rank": "QS前100"
       },
       {
-        "school": "香港中文大学(深圳)",
+        "school": "香港中文大学",
         "major": "集成电路 ai与机器人",
-        "rank": "QS前50"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 90,
-    "student_school": "东北农业",
-    "student_major": "无",
-    "gpa": "无",
-    "language_score": "无",
+    "id": 127,
+    "student_school": "东北农业大学",
+    "student_major": "专业未填写",
+    "gpa": "未填写",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港城市大学",
         "major": "能源与环境",
-        "rank": "QS前70"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 91,
-    "student_school": "杭电自动化",
+    "id": 128,
+    "student_school": "杭州电子科技大学",
     "student_major": "自动化",
     "gpa": "76",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -2027,28 +2436,28 @@
     ]
   },
   {
-    "id": 92,
-    "student_school": "澳门城市",
+    "id": 129,
+    "student_school": "澳门城市大学",
     "student_major": "工商管理",
     "gpa": "2.2",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前100+",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港教育大学",
-        "major": "无",
-        "rank": "QS前100+"
+        "major": "待更新",
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 93,
-    "student_school": "青岛科技",
+    "id": 130,
+    "student_school": "青岛科技大学",
     "student_major": "化学",
     "gpa": "76",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -2066,53 +2475,216 @@
     ]
   },
   {
-    "id": 94,
-    "student_school": "北理工珠海",
+    "id": 131,
+    "student_school": "北京理工大学珠海学院",
     "student_major": "电气工程",
     "gpa": "74",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前100+",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港教育大学",
         "major": "stem教育",
-        "rank": "QS前100+"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 95,
-    "student_school": "大连理工",
-    "student_major": "计算机",
+    "id": 132,
+    "student_school": "大连理工大学",
+    "student_major": "计算机科学",
     "gpa": "76",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
-    "result": "QS前60",
+    "result": "QS前100",
     "offers": [
       {
         "school": "布里斯托大学",
         "major": "机器人",
-        "rank": "QS前60"
+        "rank": "QS前100"
       }
     ]
   },
   {
-    "id": 96,
-    "student_school": "天津理工",
-    "student_major": "计算机",
+    "id": 133,
+    "student_school": "天津理工大学",
+    "student_major": "计算机科学",
     "gpa": "84",
-    "language_score": "无",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前70",
+    "result": "QS前100",
     "offers": [
       {
         "school": "香港城市大学",
         "major": "AI for Science",
-        "rank": "QS前70"
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "student_school": "洛阳师范学院",
+    "student_major": "地理科学",
+    "gpa": "88",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "爱丁堡大学",
+        "major": "地理",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "student_school": "洛阳师范学院",
+    "student_major": "地理科学",
+    "gpa": "88",
+    "language_score": "未填写",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "能源与环境",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "student_school": "浙江农林大学",
+    "student_major": "服装设计与工程",
+    "gpa": "84",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "南安普顿大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "student_school": "山东大学",
+    "student_major": "建筑学",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "墨尔本大学",
+        "major": "食品",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "student_school": "上海立信会计金融学院",
+    "student_major": "汉语言文学",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "传媒",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "student_school": "上海立信会计金融学院",
+    "student_major": "法学",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "法律",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "student_school": "中国海洋大学",
+    "student_major": "数学",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "墨尔本大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "student_school": "中国海洋大学",
+    "student_major": "数学",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "南安普顿大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "student_school": "浙江大学",
+    "student_major": "金融学",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "政治经济学",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "政策治理",
+        "rank": "QS前50"
       }
     ]
   }
