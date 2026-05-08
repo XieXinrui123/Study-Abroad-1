@@ -11,7 +11,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-  </head>
+  <base target="_blank">
+</head>
   <body>
     <header class="header" id="topHeader">
       <div class="container nav-wrap">
@@ -45,10 +46,10 @@
             <select id="degreeFilter"></select>
             <select id="resultFilter"></select>
             <select id="pageSizeSelect">
+              <option value="all" selected>显示全部</option>
               <option value="12">每页12条</option>
               <option value="24">每页24条</option>
               <option value="48">每页48条</option>
-              <option value="all">显示全部</option>
             </select>
           </div>
           <div class="metrics-board" id="metricsBoard"></div>
