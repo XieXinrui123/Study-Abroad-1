@@ -292,16 +292,16 @@ function setupCases() {
 
   (async () => {
     try {
-      const res = await fetch('cases.json', { cache: 'no-store' });
+      const res = await fetch('./cases.json', { cache: 'no-store' });
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
       const parsed = Array.isArray(data) ? data : (data.cases || []);
       if (!parsed.length) throw new Error('empty data');
       state.baseCases = parsed.map(normalizeCase);
-      dataSourceTip.textContent = '✓ 已加载 ' + parsed.length + ' 条案例（数据来源：cases.json）';
+      dataSourceTip.textContent = '✓ 已加载 ' + parsed.length + ' 条案例';
     } catch (error) {
       state.baseCases = [];
-      dataSourceTip.innerHTML = '<span style="color:#ff6b35">✗ 案例加载失败：' + error.message + '</span><br>请确保 cases.json 文件存在且格式正确';
+      dataSourceTip.innerHTML = '<span style="color:#ff6b35">✗ 案例加载失败：' + error.message + '</span><br>请确保 cases.json 文件存在';
       console.error('Cases load error:', error);
     }
 
