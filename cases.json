@@ -1,44 +1,522 @@
 [
   {
     "id": 1,
-    "student_school": "武汉理工大学",
-    "student_major": "社会工作",
-    "gpa": "3.937/5.0",
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "78",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 2,
+    "student_school": "211",
+    "student_major": "公共卫生",
+    "gpa": "80",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "帝国理工大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 3,
+    "student_school": "211",
+    "student_major": "数学",
+    "gpa": "80",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 4,
+    "student_school": "211",
+    "student_major": "环境工程",
+    "gpa": "80",
     "language_score": "IELTS 6",
-    "country": "新加坡/英国",
+    "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
       {
         "school": "新加坡国立大学",
-        "major": "社会学",
+        "major": "待更新",
         "rank": "QS前10"
-      },
-      {
-        "school": "UCL",
-        "major": "社会学",
-        "rank": "QS前10"
-      },
-      {
-        "school": "曼彻斯特大学",
-        "major": "社会学",
-        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 2,
-    "student_school": "辽宁大学",
-    "student_major": "日语",
-    "gpa": "82",
-    "language_score": "未填写",
+    "id": 5,
+    "student_school": "211",
+    "student_major": "土木",
+    "gpa": "81",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 6,
+    "student_school": "211",
+    "student_major": "通信",
+    "gpa": "81",
+    "language_score": "IELTS 7",
     "country": "英国/香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
         "school": "曼彻斯特大学",
-        "major": "国际发展",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 7,
+    "student_school": "211",
+    "student_major": "建筑",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 8,
+    "student_school": "211",
+    "student_major": "测控",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 9,
+    "student_school": "211",
+    "student_major": "经济学",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "英国/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 10,
+    "student_school": "211",
+    "student_major": "电气",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 11,
+    "student_school": "211",
+    "student_major": "地理信息系统",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "杜伦大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 12,
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "83",
+    "language_score": "6.5+317",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 13,
+    "student_school": "211",
+    "student_major": "信息管理",
+    "gpa": "83",
+    "language_score": "6.5+317",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学（深圳）",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 14,
+    "student_school": "211",
+    "student_major": "会计",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 15,
+    "student_school": "211",
+    "student_major": "数学",
+    "gpa": "84",
+    "language_score": "6.5+320",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 16,
+    "student_school": "211",
+    "student_major": "供应链",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 17,
+    "student_school": "211",
+    "student_major": "通信",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 18,
+    "student_school": "211",
+    "student_major": "电气",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "英国/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 19,
+    "student_school": "211",
+    "student_major": "生物医学工程",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 20,
+    "student_school": "211",
+    "student_major": "广告学",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "利兹大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 21,
+    "student_school": "211",
+    "student_major": "统计",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 22,
+    "student_school": "211",
+    "student_major": "工业设计",
+    "gpa": "84",
+    "language_score": "IELTS 7",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 23,
+    "student_school": "211",
+    "student_major": "市场营销",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 24,
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 25,
+    "student_school": "211",
+    "student_major": "化学工程",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 26,
+    "student_school": "211",
+    "student_major": "物联网",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
         "rank": "QS前50"
       },
       {
@@ -46,1006 +524,69 @@
         "major": "待更新",
         "rank": "QS前100"
       }
-    ]
-  },
-  {
-    "id": 3,
-    "student_school": "武汉理工大学",
-    "student_major": "信息管理与信息系统",
-    "gpa": "86",
-    "language_score": "IELTS 6",
-    "country": "新加坡",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "南洋理工",
-        "major": "工程管理",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "student_school": "大连海事大学",
-    "student_major": "网络工程",
-    "gpa": "79",
-    "language_score": "未填写",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港城市大学",
-        "major": "电子信息工程",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "student_school": "华北电力大学",
-    "student_major": "电气工程",
-    "gpa": "79",
-    "language_score": "未填写",
-    "country": "澳大利亚/英国/香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "新南威尔士大学",
-        "major": "电气工程",
-        "rank": "QS前100"
-      },
-      {
-        "school": "南安普顿大学",
-        "major": "电气工程",
-        "rank": "QS前100"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "电子信息工程",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "student_school": "合肥工业大学",
-    "student_major": "微电子",
-    "gpa": "87",
-    "language_score": "IELTS 6.5",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港中文大学",
-        "major": "集成电路",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "student_school": "大连海事大学",
-    "student_major": "经济学",
-    "gpa": "84",
-    "language_score": "IELTS 6.5",
-    "country": "新加坡",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "南洋理工大学",
-        "major": "管理经济学",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 8,
-    "student_school": "安徽大学",
-    "student_major": "财政学",
-    "gpa": "89",
-    "language_score": "未填写",
-    "country": "国内",
-    "degree": "硕士",
-    "result": "保研",
-    "offers": []
-  },
-  {
-    "id": 9,
-    "student_school": "暨南大学",
-    "student_major": "计算机",
-    "gpa": "87",
-    "language_score": "未填写",
-    "country": "新加坡",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "南洋理工大学",
-        "major": "信号处理与机器学习",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 10,
-    "student_school": "西南大学",
-    "student_major": "计算机",
-    "gpa": "86",
-    "language_score": "IELTS 6",
-    "country": "香港/英国",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "香港大学",
-        "major": "创新设计技术",
-        "rank": "QS前50"
-      },
-      {
-        "school": "布里斯托大学",
-        "major": "数据科学 机器人",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 11,
-    "student_school": "北京化工大学",
-    "student_major": "设计",
-    "gpa": "90",
-    "language_score": "IELTS 6",
-    "country": "香港/澳大利亚/英国",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "香港大学",
-        "major": "创新设计技术",
-        "rank": "QS前50"
-      },
-      {
-        "school": "悉尼大学",
-        "major": "设计",
-        "rank": "QS前50"
-      },
-      {
-        "school": "布里斯托大学",
-        "major": "vr设计",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 12,
-    "student_school": "安徽大学",
-    "student_major": "土木工程",
-    "gpa": "83",
-    "language_score": "IELTS 6.5",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港城市大学",
-        "major": "电子商务",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "student_school": "电子科技大学",
-    "student_major": "物理学",
-    "gpa": "80",
-    "language_score": "IELTS 6",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "香港大学",
-        "major": "微电子",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "半导体",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 14,
-    "student_school": "同济大学",
-    "student_major": "英语",
-    "gpa": "87",
-    "language_score": "未填写",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前10",
-    "offers": [
-      {
-        "school": "伦敦大学学院",
-        "major": "Teosl",
-        "rank": "QS前10"
-      }
-    ]
-  },
-  {
-    "id": 15,
-    "student_school": "吉林大学",
-    "student_major": "计算机",
-    "gpa": "78",
-    "language_score": "未填写",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港科技大学",
-        "major": "智能制造",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 16,
-    "student_school": "四川大学",
-    "student_major": "计算机",
-    "gpa": "84",
-    "language_score": "IELTS 6.5",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港中文大学",
-        "major": "信息工程",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 17,
-    "student_school": "四川大学",
-    "student_major": "计算机",
-    "gpa": "84",
-    "language_score": "未填写",
-    "country": "未分类",
-    "degree": "硕士",
-    "result": "待更新",
-    "offers": []
-  },
-  {
-    "id": 18,
-    "student_school": "中国农业大学",
-    "student_major": "工业设计",
-    "gpa": "80",
-    "language_score": "IELTS 6",
-    "country": "新加坡",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "南洋理工大学",
-        "major": "材料科学与工程",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 19,
-    "student_school": "中南大学",
-    "student_major": "生物信息",
-    "gpa": "77",
-    "language_score": "IELTS 6",
-    "country": "新加坡/澳大利亚",
-    "degree": "硕士",
-    "result": "QS前10",
-    "offers": [
-      {
-        "school": "新加坡国立大学",
-        "major": "生物医学工程",
-        "rank": "QS前10"
-      },
-      {
-        "school": "南洋理工大学",
-        "major": "生物医学工程",
-        "rank": "QS前50"
-      },
-      {
-        "school": "澳洲国立大学",
-        "major": "生物信息",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 20,
-    "student_school": "湖南大学",
-    "student_major": "传媒",
-    "gpa": "84",
-    "language_score": "未填写",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港城市大学",
-        "major": "传媒",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 21,
-    "student_school": "中国地质大学(武汉)",
-    "student_major": "地理信息系统",
-    "gpa": "89",
-    "language_score": "IELTS 6.5",
-    "country": "新加坡/香港",
-    "degree": "硕士",
-    "result": "QS前10",
-    "offers": [
-      {
-        "school": "新加坡国立大学",
-        "major": "AI for Science",
-        "rank": "QS前10"
-      },
-      {
-        "school": "香港大学",
-        "major": "计算机",
-        "rank": "QS前50"
-      },
-      {
-        "school": "南洋理工大学",
-        "major": "信号处理与机器学习",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 22,
-    "student_school": "中国传媒大学",
-    "student_major": "传媒",
-    "gpa": "92",
-    "language_score": "IELTS 6.5",
-    "country": "新加坡/香港/英国",
-    "degree": "硕士",
-    "result": "QS前10",
-    "offers": [
-      {
-        "school": "新加坡国立大学",
-        "major": "社会学",
-        "rank": "QS前10"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "社会学",
-        "rank": "QS前100"
-      },
-      {
-        "school": "曼彻斯特大学",
-        "major": "数字技术传媒与教育",
-        "rank": "QS前50"
-      },
-      {
-        "school": "社会学",
-        "major": "待更新",
-        "rank": "海外名校"
-      }
-    ]
-  },
-  {
-    "id": 23,
-    "student_school": "哈尔滨工程大学",
-    "student_major": "工业设计",
-    "gpa": "82.84/100",
-    "language_score": "IELTS 6",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "曼彻斯特大学",
-        "major": "管理信息系统",
-        "rank": "QS前50"
-      },
-      {
-        "school": "布里斯托大学",
-        "major": "机器人",
-        "rank": "QS前100"
-      },
-      {
-        "school": "布里斯托大学",
-        "major": "计算机",
-        "rank": "QS前100"
-      },
-      {
-        "school": "布里斯托大学",
-        "major": "VR",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 24,
-    "student_school": "北京外国语大学",
-    "student_major": "国际商务",
-    "gpa": "85/100",
-    "language_score": "IELTS 6.5",
-    "country": "新加坡",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "南洋理工大学",
-        "major": "管理经济学",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 25,
-    "student_school": "华中农业大学",
-    "student_major": "智慧农业",
-    "gpa": "3.51/4.00",
-    "language_score": "IELTS 6.5",
-    "country": "新加坡/香港",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "南洋理工大学",
-        "major": "生物医学工程",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "生物医学工程",
-        "rank": "QS前100"
-      },
-      {
-        "school": "香港科技大学",
-        "major": "生物技术",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 26,
-    "student_school": "西南政法",
-    "student_major": "法律",
-    "gpa": "90",
-    "language_score": "IELTS 8",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "LSE",
-        "major": "LLM",
-        "rank": "QS前50"
-      },
-      {
-        "school": "爱丁堡",
-        "major": "LLM",
-        "rank": "QS前50"
-      }
-    ]
+    ],
+    "year": 2024
   },
   {
     "id": 27,
-    "student_school": "河海大学",
-    "student_major": "通信工程",
-    "gpa": "4.3/5.0",
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "84",
     "language_score": "IELTS 6.5",
-    "country": "新加坡",
+    "country": "香港",
     "degree": "硕士",
-    "result": "QS前50",
+    "result": "QS前100",
     "offers": [
       {
-        "school": "南洋理工",
-        "major": "通信工程",
-        "rank": "QS前50"
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
     "id": 28,
-    "student_school": "东北师范大学",
-    "student_major": "会计",
-    "gpa": "87",
-    "language_score": "IELTS 7",
-    "country": "新加坡/英国",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "南洋理工大学",
-        "major": "项目管理",
-        "rank": "QS前50"
-      },
-      {
-        "school": "南洋理工大学",
-        "major": "工程管理",
-        "rank": "QS前50"
-      },
-      {
-        "school": "曼彻斯特大学",
-        "major": "发展金融",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 29,
-    "student_school": "湖南师范大学",
-    "student_major": "数据科学",
-    "gpa": "84",
-    "language_score": "IELTS 6.5",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港中文大学",
-        "major": "数学",
-        "rank": "QS前100"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "商务咨询系统",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 30,
-    "student_school": "海南大学",
-    "student_major": "食品科学",
+    "student_school": "211",
+    "student_major": "电子",
     "gpa": "85",
-    "language_score": "IELTS 6.5",
-    "country": "新加坡/香港",
-    "degree": "硕士",
-    "result": "QS前10",
-    "offers": [
-      {
-        "school": "新加坡国立大学",
-        "major": "食品",
-        "rank": "QS前10"
-      },
-      {
-        "school": "香港大学",
-        "major": "食品工业与营销",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "营养、食品科学与技术",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 31,
-    "student_school": "安徽大学",
-    "student_major": "经济学",
-    "gpa": "3.53/5.0",
-    "language_score": "IELTS 6.5",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "香港大学",
-        "major": "工业工程与物流管理",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "应用经济学",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 32,
-    "student_school": "东北林业大学",
-    "student_major": "计算机",
-    "gpa": "85.42/100",
-    "language_score": "IELTS 6.5",
-    "country": "香港/新加坡",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "香港大学",
-        "major": "计算机",
-        "rank": "QS前50"
-      },
-      {
-        "school": "南洋理工大学",
-        "major": "区块链",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "计算机",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 33,
-    "student_school": "华东理工大学",
-    "student_major": "机械工程",
-    "gpa": "85",
-    "language_score": "IELTS 6.5",
-    "country": "新加坡",
-    "degree": "硕士",
-    "result": "QS前10",
-    "offers": [
-      {
-        "school": "新加坡国立大学",
-        "major": "机械工程",
-        "rank": "QS前10"
-      },
-      {
-        "school": "南洋理工大学",
-        "major": "计算机控制自动化",
-        "rank": "QS前50"
-      },
-      {
-        "school": "南洋理工大学",
-        "major": "机械工程",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 34,
-    "student_school": "东北林业大学",
-    "student_major": "计算机",
-    "gpa": "84.00/100",
-    "language_score": "IELTS 6",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "香港大学",
-        "major": "电子商务与互联网",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港大学",
-        "major": "创新设计技术",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "商务咨询系统",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 35,
-    "student_school": "武汉理工大学",
-    "student_major": "车辆工程",
-    "gpa": "86.82",
-    "language_score": "IELTS 6.5",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "新加坡国立",
-        "major": "机械 机器人",
-        "rank": "海外名校"
-      },
-      {
-        "school": "香港大学",
-        "major": "机器人智能系统",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "机器人",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 36,
-    "student_school": "南京财经大学",
-    "student_major": "会计",
-    "gpa": "89.62/100",
     "language_score": "IELTS 7",
-    "country": "英国/澳大利亚",
+    "country": "新加坡/瑞典/香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "曼彻斯特大学",
+        "school": "南洋理工大学",
         "major": "待更新",
         "rank": "QS前50"
       },
       {
-        "school": "布里斯托大学",
-        "major": "会计",
-        "rank": "QS前100"
-      },
-      {
-        "school": "澳洲国立大学",
-        "major": "会计",
-        "rank": "QS前100"
-      },
-      {
-        "school": "悉尼大学",
-        "major": "会计",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 37,
-    "student_school": "西南大学",
-    "student_major": "经济学",
-    "gpa": "82",
-    "language_score": "IELTS 7.5",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "曼彻斯特大学",
-        "major": "人力资源管理",
-        "rank": "QS前50"
-      },
-      {
-        "school": "曼彻斯特大学",
-        "major": "发展金融",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 38,
-    "student_school": "合肥工业大学",
-    "student_major": "金融工程",
-    "gpa": "84",
-    "language_score": "IELTS 6.5",
-    "country": "新加坡",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "南洋理工大学",
-        "major": "管理经济学",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 39,
-    "student_school": "北京科技大学",
-    "student_major": "项目管理",
-    "gpa": "80",
-    "language_score": "未填写",
-    "country": "英国/澳大利亚",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "曼彻斯特大学",
-        "major": "房地产开发",
-        "rank": "QS前50"
-      },
-      {
-        "school": "墨尔本大学",
-        "major": "项目管理",
-        "rank": "QS前50"
-      },
-      {
-        "school": "悉尼大学",
-        "major": "项目管理",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 40,
-    "student_school": "北京体育大学",
-    "student_major": "经济学",
-    "gpa": "88",
-    "language_score": "IELTS 6.5",
-    "country": "香港/英国",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "香港中文大学",
-        "major": "电子商务与物流管理",
-        "rank": "QS前100"
-      },
-      {
-        "school": "曼彻斯特大学",
-        "major": "信息系统管理",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 41,
-    "student_school": "西南大学",
-    "student_major": "生物",
-    "gpa": "未填写",
-    "language_score": "未填写",
-    "country": "未分类",
-    "degree": "硕士",
-    "result": "待更新",
-    "offers": []
-  },
-  {
-    "id": 42,
-    "student_school": "西南大学",
-    "student_major": "市场营销",
-    "gpa": "84",
-    "language_score": "IELTS 6",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "曼彻斯特大学",
-        "major": "管理信息系统",
-        "rank": "QS前50"
-      },
-      {
-        "school": "布里斯托大学",
-        "major": "市场营销",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 43,
-    "student_school": "厦门大学马来西亚分校",
-    "student_major": "会计",
-    "gpa": "2.7",
-    "language_score": "未填写",
-    "country": "澳大利亚",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "新南威尔士",
-        "major": "会计",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 44,
-    "student_school": "中国农业大学",
-    "student_major": "工业设计",
-    "gpa": "2.9",
-    "language_score": "IELTS 6",
-    "country": "新加坡/澳大利亚",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "南洋理工",
-        "major": "材料科学与工程",
-        "rank": "QS前50"
-      },
-      {
-        "school": "悉尼大学",
-        "major": "项目管理",
-        "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 45,
-    "student_school": "厦门大学马来西亚分校",
-    "student_major": "会计",
-    "gpa": "2.6",
-    "language_score": "未填写",
-    "country": "澳大利亚",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "新南威尔士",
-        "major": "会计",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 46,
-    "student_school": "湖南大学",
-    "student_major": "金融",
-    "gpa": "92",
-    "language_score": "IELTS 7",
-    "country": "新加坡/香港",
-    "degree": "硕士",
-    "result": "QS前10",
-    "offers": [
-      {
-        "school": "新加坡国立大学",
-        "major": "应用经济学",
-        "rank": "QS前10"
-      },
-      {
         "school": "香港大学",
-        "major": "计算机",
+        "major": "待更新",
         "rank": "QS前50"
-      }
-    ]
-  },
-  {
-    "id": 47,
-    "student_school": "湖南大学",
-    "student_major": "数学",
-    "gpa": "83.94/100",
-    "language_score": "IELTS 6.5",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
+      },
       {
         "school": "香港中文大学",
-        "major": "数学",
-        "rank": "QS前100"
+        "major": "待更新",
+        "rank": "QS前50"
       },
       {
         "school": "香港科技大学",
-        "major": "大数据技术",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 48,
-    "student_school": "湖南大学",
-    "student_major": "金融",
-    "gpa": "88.39/100",
-    "language_score": "IELTS 6.5",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港中文大学",
-        "major": "工业工程与系统管理",
-        "rank": "QS前100"
+        "major": "待更新",
+        "rank": "QS前50"
       },
       {
-        "school": "电子商务与物流管理",
+        "school": "隆德大学（瑞典）",
         "major": "待更新",
-        "rank": "海外名校"
-      },
-      {
-        "school": "金融科技",
-        "major": "待更新",
-        "rank": "海外名校"
+        "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 49,
-    "student_school": "北京师范大学",
-    "student_major": "戏剧影视",
+    "id": 29,
+    "student_school": "211",
+    "student_major": "环境工程",
     "gpa": "85",
     "language_score": "IELTS 6.5",
     "country": "新加坡/英国",
@@ -1053,93 +594,551 @@
     "result": "QS前10",
     "offers": [
       {
+        "school": "帝国理工大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
         "school": "新加坡国立大学",
-        "major": "戏剧影视",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 30,
+    "student_school": "211",
+    "student_major": "信息管理",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 31,
+    "student_school": "211",
+    "student_major": "英语",
+    "gpa": "85",
+    "language_score": "IELTS 6",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 32,
+    "student_school": "211",
+    "student_major": "供应链",
+    "gpa": "85",
+    "language_score": "CET-6 510",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 33,
+    "student_school": "211",
+    "student_major": "土木",
+    "gpa": "85",
+    "language_score": "CET-6 510",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "墨尔本大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 34,
+    "student_school": "211",
+    "student_major": "信息管理",
+    "gpa": "85",
+    "language_score": "IELTS 7",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 35,
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 36,
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 37,
+    "student_school": "211",
+    "student_major": "会计",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 38,
+    "student_school": "211",
+    "student_major": "供应链",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 39,
+    "student_school": "211",
+    "student_major": "电子",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 40,
+    "student_school": "211",
+    "student_major": "自动化",
+    "gpa": "86",
+    "language_score": "IELTS 7",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 41,
+    "student_school": "211",
+    "student_major": "机械",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 42,
+    "student_school": "211",
+    "student_major": "统计",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 43,
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "86",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 44,
+    "student_school": "211",
+    "student_major": "通信",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 45,
+    "student_school": "211",
+    "student_major": "环境工程",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "布里斯托大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 46,
+    "student_school": "211",
+    "student_major": "地理信息系统",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "伦敦大学学院",
+        "major": "待更新",
         "rank": "QS前10"
       },
       {
         "school": "爱丁堡大学",
-        "major": "策展",
+        "major": "待更新",
         "rank": "QS前50"
       },
       {
         "school": "曼彻斯特大学",
-        "major": "人力资源管理",
+        "major": "待更新",
         "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 50,
-    "student_school": "同济大学",
-    "student_major": "会计",
-    "gpa": "85",
+    "id": 47,
+    "student_school": "211",
+    "student_major": "信息系统",
+    "gpa": "87",
     "language_score": "IELTS 6.5",
-    "country": "新加坡/香港",
+    "country": "香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "南洋理工大学",
-        "major": "经济学",
-        "rank": "QS前50"
-      },
-      {
         "school": "香港中文大学",
-        "major": "经济学",
-        "rank": "QS前100"
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 51,
-    "student_school": "上海交通大学",
-    "student_major": "市场营销",
-    "gpa": "88",
-    "language_score": "IELTS 7",
+    "id": 48,
+    "student_school": "211",
+    "student_major": "统计",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
         "school": "香港大学",
-        "major": "市场营销",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 49,
+    "student_school": "211",
+    "student_major": "大数据",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
         "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
+  },
+  {
+    "id": 50,
+    "student_school": "211",
+    "student_major": "工业设计",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 51,
+    "student_school": "211",
+    "student_major": "会计",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
   },
   {
     "id": 52,
-    "student_school": "澳门城市大学",
-    "student_major": "旅游管理",
-    "gpa": "3.84/4.0",
-    "language_score": "IELTS 7",
-    "country": "香港/英国",
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "88",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
         "school": "香港大学",
-        "major": "气候治理",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "可持续旅游",
-        "rank": "QS前100"
-      },
-      {
-        "school": "曼彻斯特大学",
-        "major": "环境监测",
+        "major": "待更新",
         "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
     "id": 53,
-    "student_school": "澳门城市大学",
-    "student_major": "工商管理",
-    "gpa": "3.62/4.00",
+    "student_school": "211",
+    "student_major": "机械",
+    "gpa": "88",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 54,
+    "student_school": "211",
+    "student_major": "供应链",
+    "gpa": "88",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 55,
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 56,
+    "student_school": "211",
+    "student_major": "材料",
+    "gpa": "89",
     "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
@@ -1147,657 +1146,3754 @@
     "offers": [
       {
         "school": "香港城市大学",
-        "major": "市场营销",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
         "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 54,
-    "student_school": "澳门城市大学",
-    "student_major": "人工智能",
-    "gpa": "3.6",
-    "language_score": "未填写",
+    "id": 57,
+    "student_school": "211",
+    "student_major": "公共关系",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
       {
         "school": "伦敦大学学院",
-        "major": "环境数据科学",
+        "major": "待更新",
         "rank": "QS前10"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 55,
-    "student_school": "PSB Academy",
-    "student_major": "传媒",
-    "gpa": "80",
-    "language_score": "未填写",
+    "id": 58,
+    "student_school": "211",
+    "student_major": "国贸",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 59,
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "89",
+    "language_score": "7+323",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 60,
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "89",
+    "language_score": "CET-6 490",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 61,
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "90",
+    "language_score": "7+GMAT710",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 62,
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "91",
+    "language_score": "7+GMAT710",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "伦敦大学学院",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "伦敦国王学院",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 63,
+    "student_school": "211",
+    "student_major": "新媒体",
+    "gpa": "93",
+    "language_score": "IELTS 7.5",
+    "country": "英国/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "爱丁堡大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 64,
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "93",
+    "language_score": "7+325",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "伦敦大学学院",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "爱丁堡大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 65,
+    "student_school": "985",
+    "student_major": "微电子",
+    "gpa": "72",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 66,
+    "student_school": "985",
+    "student_major": "计算机",
+    "gpa": "76",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "昆士兰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 67,
+    "student_school": "985",
+    "student_major": "数学",
+    "gpa": "78",
+    "language_score": "CET-6 490",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 68,
+    "student_school": "985",
+    "student_major": "微电子",
+    "gpa": "78",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 69,
+    "student_school": "985",
+    "student_major": "城乡规划",
+    "gpa": "78",
+    "language_score": "IELTS 8",
     "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "墨尔本",
-        "major": "全球市场营销",
+        "school": "墨尔本大学",
+        "major": "待更新",
         "rank": "QS前50"
-      },
-      {
-        "school": "悉尼",
-        "major": "媒体实践",
-        "rank": "QS前50"
-      },
-      {
-        "school": "澳国立",
-        "major": "数字媒体",
-        "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 56,
-    "student_school": "PSB Academy",
-    "student_major": "传媒",
-    "gpa": "68",
-    "language_score": "未填写",
+    "id": 70,
+    "student_school": "985",
+    "student_major": "海洋学",
+    "gpa": "79",
+    "language_score": "CET-6 520",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 71,
+    "student_school": "985",
+    "student_major": "数学",
+    "gpa": "80",
+    "language_score": "IELTS 6.5",
     "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
         "school": "悉尼大学",
-        "major": "公共关系",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 72,
+    "student_school": "985",
+    "student_major": "自动化",
+    "gpa": "80",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
         "rank": "QS前50"
       },
       {
-        "school": "澳洲国立",
-        "major": "数字媒体",
-        "rank": "海外名校"
+        "school": "香港中文大学（深圳）",
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 57,
-    "student_school": "西交利物浦大学",
-    "student_major": "金融数学",
-    "gpa": "58",
-    "language_score": "未填写",
-    "country": "英国",
+    "id": 73,
+    "student_school": "985",
+    "student_major": "人工智能",
+    "gpa": "81",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 74,
+    "student_school": "985",
+    "student_major": "金融",
+    "gpa": "81",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 75,
+    "student_school": "985",
+    "student_major": "经济学",
+    "gpa": "81",
+    "language_score": "7+690",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 76,
+    "student_school": "985",
+    "student_major": "英语",
+    "gpa": "82",
+    "language_score": "IELTS 98",
+    "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
     "offers": [
       {
-        "school": "南安普顿大学",
-        "major": "时尚营销",
-        "rank": "QS前100"
-      },
-      {
-        "school": "诺丁汉大学",
-        "major": "经济学",
+        "school": "香港城市大学",
+        "major": "待更新",
         "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 58,
-    "student_school": "阿姆斯特丹大学",
+    "id": 77,
+    "student_school": "985",
+    "student_major": "自动化",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 78,
+    "student_school": "985",
+    "student_major": "电气",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 79,
+    "student_school": "985",
+    "student_major": "环境工程",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 80,
+    "student_school": "985",
+    "student_major": "建筑",
+    "gpa": "82",
+    "language_score": "6.5+320",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 81,
+    "student_school": "985",
+    "student_major": "软件工程",
+    "gpa": "82",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 82,
+    "student_school": "985",
+    "student_major": "电气",
+    "gpa": "83",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 83,
+    "student_school": "985",
     "student_major": "金融",
-    "gpa": "7.0",
-    "language_score": "未填写",
+    "gpa": "83",
+    "language_score": "7.5+GMAT730",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 84,
+    "student_school": "985",
+    "student_major": "经济学",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 85,
+    "student_school": "985",
+    "student_major": "自动化",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学（广州）",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 86,
+    "student_school": "985",
+    "student_major": "土木+计算机",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 87,
+    "student_school": "985",
+    "student_major": "建筑",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 88,
+    "student_school": "985",
+    "student_major": "数学",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 89,
+    "student_school": "985",
+    "student_major": "电气自动化",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 90,
+    "student_school": "985",
+    "student_major": "计算机",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 91,
+    "student_school": "985",
+    "student_major": "生物医学工程",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 92,
+    "student_school": "985",
+    "student_major": "生物技术",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 93,
+    "student_school": "985",
+    "student_major": "数据科学",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 94,
+    "student_school": "985",
+    "student_major": "计算机",
+    "gpa": "86",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 95,
+    "student_school": "985",
+    "student_major": "会计",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 96,
+    "student_school": "985",
+    "student_major": "市场营销",
+    "gpa": "86",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 97,
+    "student_school": "985",
+    "student_major": "数学",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 98,
+    "student_school": "985",
+    "student_major": "经济学",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 99,
+    "student_school": "985",
+    "student_major": "经济学",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 100,
+    "student_school": "985",
+    "student_major": "市场营销",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学（深圳）",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 101,
+    "student_school": "985",
+    "student_major": "自动化",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 102,
+    "student_school": "985",
+    "student_major": "环境设计",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 103,
+    "student_school": "985",
+    "student_major": "播音主持",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "墨尔本大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 104,
+    "student_school": "985",
+    "student_major": "会计",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 105,
+    "student_school": "985",
+    "student_major": "工业设计",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 106,
+    "student_school": "985",
+    "student_major": "广告学",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 107,
+    "student_school": "985",
+    "student_major": "通信",
+    "gpa": "88",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "帝国理工大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 108,
+    "student_school": "985",
+    "student_major": "数学",
+    "gpa": "88",
+    "language_score": "7+323",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 109,
+    "student_school": "985",
+    "student_major": "环境设计",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 110,
+    "student_school": "985",
+    "student_major": "工业设计",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 111,
+    "student_school": "985",
+    "student_major": "金融",
+    "gpa": "90",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 112,
+    "student_school": "985",
+    "student_major": "兽医",
+    "gpa": "92",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 113,
+    "student_school": "985",
+    "student_major": "计算机",
+    "gpa": "92",
+    "language_score": "IELTS 6.5",
+    "country": "英国/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "爱丁堡大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 114,
+    "student_school": "澳门本科",
+    "student_major": "会计",
+    "gpa": "3.6",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 115,
+    "student_school": "澳门本科",
+    "student_major": "市场营销",
+    "gpa": "3.7",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 116,
+    "student_school": "澳洲本科",
+    "student_major": "计算机",
+    "gpa": "74",
+    "language_score": "IELTS 7",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 117,
+    "student_school": "加拿大本科",
+    "student_major": "经济学",
+    "gpa": "3.8",
+    "language_score": "IELTS 7",
     "country": "澳大利亚/香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "悉尼大学",
-        "major": "金融",
+        "school": "香港大学",
+        "major": "待更新",
         "rank": "QS前50"
       },
       {
-        "school": "香港城市大学",
-        "major": "金融",
-        "rank": "QS前100"
+        "school": "墨尔本大学",
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 59,
-    "student_school": "集美大学",
-    "student_major": "会计",
-    "gpa": "88",
-    "language_score": "未填写",
-    "country": "澳大利亚",
+    "id": 118,
+    "student_school": "双非",
+    "student_major": "英语",
+    "gpa": "76",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚/澳门",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "悉尼大学",
-        "major": "会计",
-        "rank": "QS前50"
+        "school": "澳门科技大学",
+        "major": "待更新",
+        "rank": "海外名校"
       },
       {
-        "school": "澳洲国立",
-        "major": "会计",
-        "rank": "海外名校"
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 60,
-    "student_school": "闽江学院",
-    "student_major": "经济学",
-    "gpa": "4.08",
-    "language_score": "IELTS 7",
-    "country": "英国/香港",
+    "id": 119,
+    "student_school": "双非",
+    "student_major": "材料",
+    "gpa": "76",
+    "language_score": "IELTS 6",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 120,
+    "student_school": "双非",
+    "student_major": "法律",
+    "gpa": "79",
+    "language_score": "CET-6 490",
+    "country": "澳门",
     "degree": "硕士",
     "result": "QS前100",
     "offers": [
       {
-        "school": "KCL",
-        "major": "新兴经济体与国际发展",
+        "school": "澳门大学",
+        "major": "待更新",
         "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 121,
+    "student_school": "双非",
+    "student_major": "材料",
+    "gpa": "80",
+    "language_score": "CET-6 490",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 122,
+    "student_school": "双非",
+    "student_major": "数学",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 123,
+    "student_school": "双非",
+    "student_major": "材料",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 124,
+    "student_school": "双非",
+    "student_major": "汉语语言文学",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南安普顿大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 125,
+    "student_school": "双非",
+    "student_major": "会计",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "国内/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "宁波诺丁汉",
+        "major": "待更新",
+        "rank": "海外名校"
       },
       {
-        "school": "香港理工大学",
-        "major": "经济学",
-        "rank": "QS前100"
-      },
-      {
-        "school": "伯明翰",
-        "major": "经济学",
-        "rank": "QS前100"
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
       },
       {
         "school": "利兹大学",
-        "major": "经济学",
-        "rank": "QS前100"
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 61,
-    "student_school": "浙江理工大学",
-    "student_major": "英语",
-    "gpa": "88",
-    "language_score": "IELTS 7",
-    "country": "香港/英国",
+    "id": 126,
+    "student_school": "双非",
+    "student_major": "电影",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "香港中文大学",
-        "major": "TESOL",
-        "rank": "QS前100"
-      },
-      {
-        "school": "爱丁堡",
-        "major": "TESOL",
+        "school": "布里斯托大学",
+        "major": "待更新",
         "rank": "QS前50"
-      },
-      {
-        "school": "香港理工",
-        "major": "ELT",
-        "rank": "QS前100"
-      },
-      {
-        "school": "香港城市",
-        "major": "LS/ES",
-        "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 62,
-    "student_school": "广西民族大学",
-    "student_major": "表演",
-    "gpa": "83",
-    "language_score": "未填写",
-    "country": "澳大利亚",
+    "id": 127,
+    "student_school": "双非",
+    "student_major": "电气",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
     "degree": "硕士",
-    "result": "QS前100",
+    "result": "QS前50",
     "offers": [
       {
-        "school": "新南威尔士",
-        "major": "传媒",
-        "rank": "QS前100"
+        "school": "杜伦大学",
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 63,
-    "student_school": "燕山大学",
-    "student_major": "工商管理",
-    "gpa": "85/100",
+    "id": 128,
+    "student_school": "双非",
+    "student_major": "计算机",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 129,
+    "student_school": "双非",
+    "student_major": "机械",
+    "gpa": "85",
     "language_score": "IELTS 7",
     "country": "英国/香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "曼彻斯特大学",
-        "major": "数据科学",
+        "school": "香港大学",
+        "major": "待更新",
         "rank": "QS前50"
       },
       {
-        "school": "香港理工大学",
-        "major": "商业管理",
-        "rank": "QS前100"
-      },
-      {
-        "school": "香港城市大学",
-        "major": "商业数据分析",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 64,
-    "student_school": "北京服装学院",
-    "student_major": "设计",
-    "gpa": "3.76/4.0",
-    "language_score": "IELTS 6.5",
-    "country": "英国/新加坡/香港",
-    "degree": "硕士",
-    "result": "QS前10",
-    "offers": [
-      {
-        "school": "伦敦大学学院",
-        "major": "性能与交互",
-        "rank": "QS前10"
-      },
-      {
-        "school": "南洋理工大学",
-        "major": "游戏设计",
+        "school": "爱丁堡大学",
+        "major": "待更新",
         "rank": "QS前50"
-      },
-      {
-        "school": "皇家艺术学院",
-        "major": "信息体验设计",
-        "rank": "海外名校"
-      },
-      {
-        "school": "伦敦艺术学院",
-        "major": "叙事环境 VR",
-        "rank": "海外名校"
-      },
-      {
-        "school": "格拉斯哥大学艺术学院",
-        "major": "严肃游戏",
-        "rank": "QS前100"
-      },
-      {
-        "school": "香港理工大学",
-        "major": "多媒体创意娱乐",
-        "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 65,
-    "student_school": "燕山大学",
-    "student_major": "材料",
-    "gpa": "72/100",
-    "language_score": "未填写",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前10",
-    "offers": [
-      {
-        "school": "帝国理工",
-        "major": "材料",
-        "rank": "QS前10"
-      },
-      {
-        "school": "伦敦大学学院",
-        "major": "材料",
-        "rank": "QS前10"
-      },
-      {
-        "school": "曼彻斯特大学",
-        "major": "材料",
-        "rank": "QS前50"
-      },
-      {
-        "school": "布里斯托大学",
-        "major": "材料",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 66,
-    "student_school": "广州大学",
-    "student_major": "历史",
-    "gpa": "90",
+    "id": 130,
+    "student_school": "双非",
+    "student_major": "土木",
+    "gpa": "85",
     "language_score": "IELTS 6",
-    "country": "新加坡/香港/英国",
+    "country": "新加坡/香港",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
       {
         "school": "新加坡国立大学",
-        "major": "比较历史",
+        "major": "待更新",
         "rank": "QS前10"
       },
       {
-        "school": "香港大学",
-        "major": "中国历史",
-        "rank": "QS前50"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "历史",
+        "school": "香港理工大学",
+        "major": "待更新",
         "rank": "QS前100"
-      },
-      {
-        "school": "爱丁堡大学",
-        "major": "历史",
-        "rank": "QS前50"
       },
       {
         "school": "香港城市大学",
-        "major": "汉语言文学与历史",
+        "major": "待更新",
         "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 67,
-    "student_school": "桂林理工大学",
-    "student_major": "计算机",
-    "gpa": "80.0/100",
-    "language_score": "未填写",
-    "country": "澳大利亚/英国",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "新南威尔士",
-        "major": "计算机",
-        "rank": "QS前100"
-      },
-      {
-        "school": "利兹大学",
-        "major": "计算机",
-        "rank": "QS前100"
-      },
-      {
-        "school": "伯明翰大学",
-        "major": "计算机",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 68,
-    "student_school": "武汉纺织大学外经贸学院",
-    "student_major": "英语",
+    "id": 131,
+    "student_school": "双非",
+    "student_major": "机械",
     "gpa": "86",
-    "language_score": "IELTS 6",
-    "country": "英国",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚/香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "爱丁堡大学",
-        "major": "TESOL",
+        "school": "香港大学",
+        "major": "待更新",
         "rank": "QS前50"
       },
       {
-        "school": "利兹大学",
-        "major": "TESOL",
-        "rank": "QS前100"
+        "school": "墨尔本大学",
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 69,
-    "student_school": "广东科技学院",
-    "student_major": "市场营销",
-    "gpa": "84.00/100",
+    "id": 132,
+    "student_school": "双非",
+    "student_major": "数字媒体技术",
+    "gpa": "86",
     "language_score": "IELTS 6",
+    "country": "国内",
+    "degree": "硕士",
+    "result": "海外名校",
+    "offers": [
+      {
+        "school": "西交利物浦",
+        "major": "待更新",
+        "rank": "海外名校"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 133,
+    "student_school": "双非",
+    "student_major": "化学工程",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 134,
+    "student_school": "双非",
+    "student_major": "英语",
+    "gpa": "86",
+    "language_score": "IELTS 7",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
     "offers": [
       {
-        "school": "岭南大学",
-        "major": "市场营销",
-        "rank": "QS前100"
-      },
-      {
-        "school": "社会政策创新",
+        "school": "香港城市大学",
         "major": "待更新",
-        "rank": "海外名校"
-      }
-    ]
-  },
-  {
-    "id": 70,
-    "student_school": "浙江树人学院",
-    "student_major": "市场营销",
-    "gpa": "86",
-    "language_score": "未填写",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "利兹大学",
-        "major": "国际商务",
-        "rank": "QS前100"
-      },
-      {
-        "school": "信息系统与数字化创新",
-        "major": "待更新",
-        "rank": "海外名校"
-      },
-      {
-        "school": "南安普敦",
-        "major": "大学 市场营销",
         "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 71,
-    "student_school": "上海海事大学",
-    "student_major": "电气工程",
-    "gpa": "86",
-    "language_score": "未填写",
+    "id": 135,
+    "student_school": "双非",
+    "student_major": "英语",
+    "gpa": "87",
+    "language_score": "IELTS 7",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "曼彻斯特大学",
-        "major": "电力系统",
-        "rank": "QS前50"
-      },
-      {
         "school": "布里斯托大学",
-        "major": "通信网络与信号处理",
-        "rank": "QS前100"
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 72,
-    "student_school": "长沙理工大学",
-    "student_major": "土木工程",
-    "gpa": "80",
-    "language_score": "IELTS 6",
-    "country": "新加坡/香港/英国",
+    "id": 136,
+    "student_school": "双非",
+    "student_major": "经济学",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "布里斯托大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 137,
+    "student_school": "双非",
+    "student_major": "数字媒体技术",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "国内",
+    "degree": "硕士",
+    "result": "海外名校",
+    "offers": [
+      {
+        "school": "西交利物浦",
+        "major": "待更新",
+        "rank": "海外名校"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 138,
+    "student_school": "双非",
+    "student_major": "会计",
+    "gpa": "88",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 139,
+    "student_school": "双非",
+    "student_major": "电气",
+    "gpa": "88",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 140,
+    "student_school": "双非",
+    "student_major": "电气",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
         "school": "南洋理工大学",
-        "major": "土木工程",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 141,
+    "student_school": "双非",
+    "student_major": "公共管理",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "爱丁堡大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 142,
+    "student_school": "双非",
+    "student_major": "金融",
+    "gpa": "92",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "伦敦大学学院",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 143,
+    "student_school": "双非",
+    "student_major": "金融",
+    "gpa": "92",
+    "language_score": "7+325",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 144,
+    "student_school": "双非",
+    "student_major": "新闻学",
+    "gpa": "93",
+    "language_score": "IELTS 7.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 145,
+    "student_school": "香港本科",
+    "student_major": "电子信息",
+    "gpa": "3.3",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 146,
+    "student_school": "英国本科",
+    "student_major": "电气",
+    "gpa": "70",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 147,
+    "student_school": "中外合办",
+    "student_major": "经济学",
+    "gpa": "78",
+    "language_score": "7+330",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "帝国理工大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 148,
+    "student_school": "985",
+    "student_major": "会计",
+    "gpa": "87",
+    "language_score": "IELTS 6.5(6)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 149,
+    "student_school": "985",
+    "student_major": "软件工程",
+    "gpa": "87.55",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 150,
+    "student_school": "985",
+    "student_major": "汉语言文学",
+    "gpa": "87.9",
+    "language_score": "IELTS 7.5(6.5)",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 151,
+    "student_school": "985",
+    "student_major": "政治经济学",
+    "gpa": "89",
+    "language_score": "IELTS 7.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
         "rank": "QS前50"
       },
       {
         "school": "香港大学",
-        "major": "建筑",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 152,
+    "student_school": "985",
+    "student_major": "会计",
+    "gpa": "89",
+    "language_score": "IELTS 7",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 153,
+    "student_school": "985",
+    "student_major": "电子商务",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 154,
+    "student_school": "985",
+    "student_major": "公共政策",
+    "gpa": "90",
+    "language_score": "IELTS 7",
+    "country": "国内",
+    "degree": "硕士",
+    "result": "保研",
+    "offers": [
+      {
+        "school": "保研",
+        "major": "待更新",
+        "rank": "保研"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 155,
+    "student_school": "985",
+    "student_major": "金融工程",
+    "gpa": "90",
+    "language_score": "7+325",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 156,
+    "student_school": "985",
+    "student_major": "会计",
+    "gpa": "90",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
         "rank": "QS前50"
       },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 157,
+    "student_school": "985",
+    "student_major": "金融工程",
+    "gpa": "91",
+    "language_score": "IELTS 7",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 158,
+    "student_school": "澳门本科",
+    "student_major": "市场营销",
+    "gpa": "3",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "莫纳什大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 159,
+    "student_school": "澳门本科",
+    "student_major": "人工智能",
+    "gpa": "3.92",
+    "language_score": "IELTS 7.5",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "伦敦大学学院",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 160,
+    "student_school": "澳门本科",
+    "student_major": "市场营销",
+    "gpa": "85.75",
+    "language_score": "IELTS 7.5",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 161,
+    "student_school": "澳洲本科",
+    "student_major": "经济学",
+    "gpa": "70.5",
+    "language_score": "IELTS 7.5",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 162,
+    "student_school": "独立学院",
+    "student_major": "财务管理",
+    "gpa": "77",
+    "language_score": "IELTS 6(5.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港教育大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 163,
+    "student_school": "独立学院",
+    "student_major": "英语",
+    "gpa": "85",
+    "language_score": "IELTS 6(5.5)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "诺丁汉大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 164,
+    "student_school": "独立学院",
+    "student_major": "教育学",
+    "gpa": "86",
+    "language_score": "IELTS 6(5.5)",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "昆士兰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 165,
+    "student_school": "独立学院",
+    "student_major": "物流",
+    "gpa": "87.45",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南安普顿大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 166,
+    "student_school": "海本",
+    "student_major": "计算机系统工程",
+    "gpa": "7.61",
+    "language_score": "IELTS 6",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "帝国理工大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 167,
+    "student_school": "韩国本科",
+    "student_major": "传媒",
+    "gpa": "85",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 168,
+    "student_school": "美本",
+    "student_major": "市场营销",
+    "gpa": "3",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 169,
+    "student_school": "双非",
+    "student_major": "数字媒体艺术",
+    "gpa": "3.34",
+    "language_score": "IELTS 6",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "诺丁汉大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 170,
+    "student_school": "双非",
+    "student_major": "电子科学与技术",
+    "gpa": "76",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 171,
+    "student_school": "双非",
+    "student_major": "网络工程",
+    "gpa": "80",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 172,
+    "student_school": "双非",
+    "student_major": "心理学",
+    "gpa": "81",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 173,
+    "student_school": "双非",
+    "student_major": "审计",
+    "gpa": "82.6",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "纽卡斯尔大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 174,
+    "student_school": "双非",
+    "student_major": "汉语言文学",
+    "gpa": "83",
+    "language_score": "IELTS 7",
+    "country": "未分类",
+    "degree": "硕士",
+    "result": "普通录取",
+    "offers": [
+      {
+        "school": "诺丁汉",
+        "major": "待更新",
+        "rank": "普通录取"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 175,
+    "student_school": "双非",
+    "student_major": "法律",
+    "gpa": "83",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "利兹大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 176,
+    "student_school": "双非",
+    "student_major": "传媒",
+    "gpa": "84",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "莫纳什大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 177,
+    "student_school": "双非",
+    "student_major": "公共关系",
+    "gpa": "84.6",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 178,
+    "student_school": "双非",
+    "student_major": "网络与新媒体",
+    "gpa": "84.94",
+    "language_score": "IELTS 5.5(4.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "海外名校",
+    "offers": [
+      {
+        "school": "北师珠港浸会",
+        "major": "待更新",
+        "rank": "海外名校"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 179,
+    "student_school": "双非",
+    "student_major": "公共事业管理",
+    "gpa": "85",
+    "language_score": "IELTS 5.5(4.5)",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 180,
+    "student_school": "双非",
+    "student_major": "生物",
+    "gpa": "85.1",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 181,
+    "student_school": "双非",
+    "student_major": "汉语言文学",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南安普敦大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 182,
+    "student_school": "双非",
+    "student_major": "电子电气工程",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南安普敦大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 183,
+    "student_school": "双非",
+    "student_major": "传媒",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
       {
         "school": "曼彻斯特大学",
-        "major": "城市规划",
+        "major": "待更新",
         "rank": "QS前50"
-      },
-      {
-        "school": "南安普敦",
-        "major": "人工智能与管理",
-        "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 73,
-    "student_school": "天津城建大学",
-    "student_major": "电气工程",
-    "gpa": "84",
-    "language_score": "未填写",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "利兹大学",
-        "major": "电气",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 74,
-    "student_school": "扬州大学",
-    "student_major": "计算机",
-    "gpa": "75",
-    "language_score": "未填写",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "利兹大学",
-        "major": "计算机",
-        "rank": "QS前100"
-      },
-      {
-        "school": "伯明翰大学",
-        "major": "计算机",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 75,
-    "student_school": "广东海洋大学",
-    "student_major": "经济学",
-    "gpa": "88",
+    "id": 184,
+    "student_school": "双非",
+    "student_major": "汉语国际教育",
+    "gpa": "86",
     "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
     "offers": [
       {
-        "school": "香港理工大学",
-        "major": "应用经济学",
-        "rank": "QS前100"
-      },
-      {
         "school": "香港城市大学",
-        "major": "管理与创新",
+        "major": "待更新",
         "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 76,
-    "student_school": "北京舞蹈学院",
-    "student_major": "表演艺术",
-    "gpa": "93.47",
-    "language_score": "未填写",
-    "country": "英国/香港",
+    "id": 185,
+    "student_school": "双非",
+    "student_major": "数学",
+    "gpa": "86.12",
+    "language_score": "IELTS 79",
+    "country": "澳大利亚",
     "degree": "硕士",
-    "result": "QS前100",
+    "result": "QS前50",
     "offers": [
       {
-        "school": "利兹大学",
-        "major": "传媒",
-        "rank": "QS前100"
-      },
-      {
-        "school": "香港演艺学院",
-        "major": "表演艺术研究",
-        "rank": "海外名校"
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 77,
-    "student_school": "北京石油化工学院",
-    "student_major": "药学",
-    "gpa": "76",
-    "language_score": "未填写",
+    "id": 186,
+    "student_school": "双非",
+    "student_major": "商务英语",
+    "gpa": "86.2",
+    "language_score": "IELTS 7(6)",
     "country": "澳大利亚/英国",
     "degree": "硕士",
-    "result": "QS前100",
+    "result": "QS前50",
     "offers": [
       {
-        "school": "莫纳什大学",
-        "major": "药学",
+        "school": "诺丁汉大学",
+        "major": "待更新",
         "rank": "QS前100"
       },
       {
-        "school": "利兹大学",
-        "major": "药学",
-        "rank": "QS前100"
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 78,
-    "student_school": "琼台师范学院",
-    "student_major": "建筑学",
-    "gpa": "86",
-    "language_score": "未填写",
-    "country": "澳门",
+    "id": 187,
+    "student_school": "双非",
+    "student_major": "房地产",
+    "gpa": "86.5",
+    "language_score": "IELTS 7(6)",
+    "country": "英国",
     "degree": "硕士",
-    "result": "海外名校",
+    "result": "QS前50",
     "offers": [
       {
-        "school": "澳门科技大学",
-        "major": "建筑学",
-        "rank": "海外名校"
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 79,
-    "student_school": "云南财经大学",
-    "student_major": "金融科技",
-    "gpa": "78",
+    "id": 188,
+    "student_school": "双非",
+    "student_major": "土木工程",
+    "gpa": "87",
     "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 189,
+    "student_school": "双非",
+    "student_major": "会计",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 190,
+    "student_school": "双非",
+    "student_major": "翻译",
+    "gpa": "87",
+    "language_score": "IELTS 7",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
     "offers": [
       {
-        "school": "南安普顿大学",
-        "major": "时尚营销",
+        "school": "宁波诺丁汉大学",
+        "major": "待更新",
         "rank": "QS前100"
       }
-    ]
+    ],
+    "year": 2024
   },
   {
-    "id": 80,
-    "student_school": "武汉大学",
-    "student_major": "物流管理",
+    "id": 191,
+    "student_school": "双非",
+    "student_major": "教育",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "杜伦大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "诺丁汉大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 192,
+    "student_school": "双非",
+    "student_major": "体育",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "澳门",
+    "degree": "硕士",
+    "result": "海外名校",
+    "offers": [
+      {
+        "school": "澳门理工大学",
+        "major": "待更新",
+        "rank": "海外名校"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 193,
+    "student_school": "双非",
+    "student_major": "数据科学",
+    "gpa": "87.5",
+    "language_score": "IELTS 7",
+    "country": "澳门/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳门大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 194,
+    "student_school": "双非",
+    "student_major": "新闻学",
+    "gpa": "87.74",
+    "language_score": "PTE 67(65)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "南安普敦大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "利兹大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 195,
+    "student_school": "双非",
+    "student_major": "软件工程",
+    "gpa": "88",
+    "language_score": "IELTS 90(21)",
+    "country": "英国/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "布里斯托大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "诺丁汉大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 196,
+    "student_school": "双非",
+    "student_major": "人力资源管理",
+    "gpa": "88",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "西交利物浦大学(MRES)",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 197,
+    "student_school": "双非",
+    "student_major": "国标舞",
+    "gpa": "88",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 198,
+    "student_school": "双非",
+    "student_major": "数字媒体技术",
+    "gpa": "88",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "西交利物浦大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 199,
+    "student_school": "双非",
+    "student_major": "统计",
+    "gpa": "88.04",
+    "language_score": "IELTS 7(6)",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 200,
+    "student_school": "双非",
+    "student_major": "应用心理学",
+    "gpa": "89",
+    "language_score": "IELTS 6.5(6)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 201,
+    "student_school": "双非",
+    "student_major": "传媒",
+    "gpa": "89",
+    "language_score": "IELTS 7.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 202,
+    "student_school": "双非",
+    "student_major": "土木工程",
+    "gpa": "89.35",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "新西兰/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "奥克兰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 203,
+    "student_school": "双非",
+    "student_major": "网络与新媒体",
+    "gpa": "83.5/100",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港岭南大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 204,
+    "student_school": "双一流",
+    "student_major": "法律",
+    "gpa": "78",
+    "language_score": "CET-6 ",
+    "country": "澳门",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "澳门大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 205,
+    "student_school": "双一流",
+    "student_major": "机械",
+    "gpa": "82",
+    "language_score": "CET-6 ",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 206,
+    "student_school": "双一流",
+    "student_major": "计算机",
+    "gpa": "85",
+    "language_score": "CET-6 ",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 207,
+    "student_school": "双一流",
+    "student_major": "艺术管理",
+    "gpa": "85.24",
+    "language_score": "IELTS 7.5",
+    "country": "新加坡/英国/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 208,
+    "student_school": "新加坡本科",
+    "student_major": "市场营销",
+    "gpa": "2.88",
+    "language_score": "IELTS 7.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "纽卡斯尔大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "约克大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 209,
+    "student_school": "英国本科",
+    "student_major": "工业设计",
+    "gpa": "61",
+    "language_score": "IELTS 6",
+    "country": "新加坡/澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "南洋理工大学大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2024
+  },
+  {
+    "id": 210,
+    "student_school": "211",
+    "student_major": "通信工程",
+    "gpa": "74",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 211,
+    "student_school": "211",
+    "student_major": "机械工程",
+    "gpa": "76",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 212,
+    "student_school": "211",
+    "student_major": "食品",
+    "gpa": "76",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "昆士兰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "莫纳什大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 213,
+    "student_school": "211",
+    "student_major": "物流",
+    "gpa": "78",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 214,
+    "student_school": "211",
+    "student_major": "食品",
+    "gpa": "78",
+    "language_score": "IELTS 6.5",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "昆士兰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "莫纳什大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 215,
+    "student_school": "211",
+    "student_major": "会计",
+    "gpa": "78",
+    "language_score": "IELTS 6.5",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 216,
+    "student_school": "211",
+    "student_major": "电气工程及其自动化",
+    "gpa": "79",
+    "language_score": "IELTS 6.5(6)",
+    "country": "澳大利亚/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "昆士兰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 217,
+    "student_school": "211",
+    "student_major": "行政管理",
+    "gpa": "80",
+    "language_score": "IELTS 6.5(6)",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 218,
+    "student_school": "211",
+    "student_major": "环境工程",
+    "gpa": "80",
+    "language_score": "IELTS 6(5.5)",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 219,
+    "student_school": "211",
+    "student_major": "信息管理与信息系统",
+    "gpa": "81",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 220,
+    "student_school": "211",
+    "student_major": "人工智能",
+    "gpa": "81",
+    "language_score": "IELTS 6.5",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "伦敦国王学院",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 221,
+    "student_school": "211",
+    "student_major": "市场营销",
+    "gpa": "81",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "杜伦大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 222,
+    "student_school": "211",
+    "student_major": "数学",
+    "gpa": "81.5",
+    "language_score": "IELTS 6.5(6)",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 223,
+    "student_school": "211",
+    "student_major": "经济学",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 224,
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 225,
+    "student_school": "211",
+    "student_major": "安全工程",
+    "gpa": "82.6",
+    "language_score": "IELTS 6.5(6)",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 226,
+    "student_school": "211",
+    "student_major": "数学",
+    "gpa": "82.6",
+    "language_score": "IELTS 6(5.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 227,
+    "student_school": "211",
+    "student_major": "人工智能",
+    "gpa": "83",
+    "language_score": "CET-6 ",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 228,
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "83",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 229,
+    "student_school": "211",
+    "student_major": "通信工程",
+    "gpa": "83",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 230,
+    "student_school": "211",
+    "student_major": "测控技术与仪器",
+    "gpa": "83.5",
+    "language_score": "IELTS 6.5",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "莫纳什大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "伯明翰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 231,
+    "student_school": "211",
+    "student_major": "经济学",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 232,
+    "student_school": "211",
+    "student_major": "公共管理",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "英国/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 233,
+    "student_school": "211",
+    "student_major": "数据科学",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "爱丁堡大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 234,
+    "student_school": "211",
+    "student_major": "金融工程",
+    "gpa": "84.12",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 235,
+    "student_school": "211",
+    "student_major": "安全工程",
+    "gpa": "84.21",
+    "language_score": "IELTS 6(5.5)",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 236,
+    "student_school": "211",
+    "student_major": "应用化学",
+    "gpa": "84.3",
+    "language_score": "IELTS 6.5(6)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "伦敦大学学院",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "爱丁堡大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 237,
+    "student_school": "211",
+    "student_major": "电子科学与技术",
+    "gpa": "84.67",
+    "language_score": "IELTS 6.5(6)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 238,
+    "student_school": "211",
+    "student_major": "经济学",
     "gpa": "85",
     "language_score": "IELTS 6",
     "country": "香港",
@@ -1806,458 +4902,2961 @@
     "offers": [
       {
         "school": "香港大学",
-        "major": "工业工程与物流管理",
+        "major": "待更新",
         "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2025
   },
   {
-    "id": 81,
-    "student_school": "中央民族大学",
-    "student_major": "汉语言文学",
-    "gpa": "89",
-    "language_score": "未填写",
+    "id": 239,
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "85",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 240,
+    "student_school": "211",
+    "student_major": "生物医学工程",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 241,
+    "student_school": "211",
+    "student_major": "会计",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "伦敦国王学院",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 242,
+    "student_school": "211",
+    "student_major": "公共政策",
+    "gpa": "85",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 243,
+    "student_school": "211",
+    "student_major": "材料",
+    "gpa": "85",
+    "language_score": "IELTS 6",
     "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
       {
         "school": "新加坡国立大学",
-        "major": "中国语言文学",
+        "major": "待更新",
         "rank": "QS前10"
       }
-    ]
+    ],
+    "year": 2025
   },
   {
-    "id": 82,
-    "student_school": "澳门城市大学",
-    "student_major": "旅游管理",
-    "gpa": "2.6",
-    "language_score": "未填写",
+    "id": 244,
+    "student_school": "211",
+    "student_major": "会计",
+    "gpa": "85.26",
+    "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前100",
+    "result": "QS前50",
     "offers": [
       {
-        "school": "香港教育大学",
+        "school": "香港中文大学(深圳)",
         "major": "待更新",
-        "rank": "QS前100"
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2025
   },
   {
-    "id": 83,
-    "student_school": "西南大学",
-    "student_major": "教育学",
-    "gpa": "未填写",
-    "language_score": "未填写",
+    "id": 245,
+    "student_school": "211",
+    "student_major": "环境",
+    "gpa": "85.5",
+    "language_score": "IELTS 6",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 246,
+    "student_school": "211",
+    "student_major": "机械工程",
+    "gpa": "85.6",
+    "language_score": "IELTS 6(5.5)",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 247,
+    "student_school": "211",
+    "student_major": "保险",
+    "gpa": "85.98",
+    "language_score": "IELTS 6.5",
+    "country": "国内",
+    "degree": "硕士",
+    "result": "保研",
+    "offers": [
+      {
+        "school": "保研",
+        "major": "待更新",
+        "rank": "保研"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 248,
+    "student_school": "211",
+    "student_major": "工商管理",
+    "gpa": "86.06",
+    "language_score": "IELTS 7(6)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 249,
+    "student_school": "211",
+    "student_major": "经济学",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
         "school": "香港大学",
-        "major": "教育学",
+        "major": "待更新",
         "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2025
   },
   {
-    "id": 84,
-    "student_school": "海南大学",
-    "student_major": "创意媒体",
-    "gpa": "未填写",
-    "language_score": "未填写",
-    "country": "未分类",
+    "id": 250,
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
     "degree": "硕士",
-    "result": "待更新",
-    "offers": []
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
   },
   {
-    "id": 85,
-    "student_school": "浙江财经",
-    "student_major": "经济学",
-    "gpa": "84",
-    "language_score": "未填写",
+    "id": 251,
+    "student_school": "211",
+    "student_major": "物联网",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 252,
+    "student_school": "211",
+    "student_major": "数据科学",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 253,
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "88",
+    "language_score": "IELTS 6.5(6)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 254,
+    "student_school": "211",
+    "student_major": "地理信息系统",
+    "gpa": "88",
+    "language_score": "IELTS 6.5(6)",
     "country": "英国/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "伦敦大学学院",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 255,
+    "student_school": "211",
+    "student_major": "人工智能",
+    "gpa": "88",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 256,
+    "student_school": "211",
+    "student_major": "数据科学",
+    "gpa": "88",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 257,
+    "student_school": "211",
+    "student_major": "国际经济法",
+    "gpa": "88.36",
+    "language_score": "TOEFL 83",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "墨尔本大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 258,
+    "student_school": "211",
+    "student_major": "通信工程",
+    "gpa": "88.7",
+    "language_score": "IELTS 6",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 259,
+    "student_school": "211",
+    "student_major": "信息管理与信息系统",
+    "gpa": "88.9",
+    "language_score": "IELTS 6.5(6)",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 260,
+    "student_school": "211",
+    "student_major": "人力资源管理",
+    "gpa": "89",
+    "language_score": "IELTS 7(6)",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 261,
+    "student_school": "211",
+    "student_major": "会计",
+    "gpa": "89",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 262,
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 263,
+    "student_school": "211",
+    "student_major": "经济学",
+    "gpa": "89",
+    "language_score": "IELTS 7",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 264,
+    "student_school": "211",
+    "student_major": "金融工程",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 265,
+    "student_school": "211",
+    "student_major": "数据科学",
+    "gpa": "89.3",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 266,
+    "student_school": "211",
+    "student_major": "人工智能",
+    "gpa": "89.8",
+    "language_score": "IELTS 7.0(6.0)",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 267,
+    "student_school": "211",
+    "student_major": "物联网",
+    "gpa": "90",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 268,
+    "student_school": "211",
+    "student_major": "会计",
+    "gpa": "90",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 269,
+    "student_school": "211",
+    "student_major": "电子电气",
+    "gpa": "90",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 270,
+    "student_school": "211",
+    "student_major": "金融",
+    "gpa": "90.9",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 271,
+    "student_school": "211",
+    "student_major": "计算机",
+    "gpa": "92",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 272,
+    "student_school": "211",
+    "student_major": "传媒",
+    "gpa": "92",
+    "language_score": "IELTS 7",
+    "country": "英国",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
         "school": "曼彻斯特大学",
-        "major": "发展金融与政策",
-        "rank": "QS前50"
-      },
-      {
-        "school": "布里斯托大学",
-        "major": "会计 管理",
-        "rank": "QS前100"
-      },
-      {
-        "school": "香港理工大学",
-        "major": "家族财富管理",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 86,
-    "student_school": "哈工大",
-    "student_major": "智能医学工程",
-    "gpa": "未填写",
-    "language_score": "未填写",
-    "country": "未分类",
-    "degree": "硕士",
-    "result": "待更新",
-    "offers": []
-  },
-  {
-    "id": 87,
-    "student_school": "惠州学院",
-    "student_major": "英语",
-    "gpa": "86",
-    "language_score": "未填写",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "利兹大学",
-        "major": "TESOL",
-        "rank": "QS前100"
-      },
-      {
-        "school": "诺丁汉大学",
-        "major": "TESOL",
-        "rank": "QS前100"
-      },
-      {
-        "school": "谢菲尔德大学",
-        "major": "TESOL",
-        "rank": "QS前100"
-      },
-      {
-        "school": "纽卡斯尔大学",
-        "major": "TESOL",
-        "rank": "QS前100"
-      },
-      {
-        "school": "利物浦大学",
-        "major": "TESOL",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 88,
-    "student_school": "北京邮电大学",
-    "student_major": "信息工程",
-    "gpa": "82",
-    "language_score": "未填写",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港城市大学",
-        "major": "AI for Science",
-        "rank": "QS前100"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "计算机信息工程",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 89,
-    "student_school": "北京理工大学",
-    "student_major": "光电工程",
-    "gpa": "82",
-    "language_score": "未填写",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港城市大学",
-        "major": "AI for Science 半导体",
-        "rank": "QS前100"
-      },
-      {
-        "school": "香港中文大学",
-        "major": "集成电路 ai与机器人",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 90,
-    "student_school": "东北农业大学",
-    "student_major": "专业未填写",
-    "gpa": "未填写",
-    "language_score": "未填写",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港城市大学",
-        "major": "能源与环境",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 91,
-    "student_school": "杭电自动化",
-    "student_major": "自动化",
-    "gpa": "76",
-    "language_score": "未填写",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "南安普顿大学",
-        "major": "机器人",
-        "rank": "QS前100"
-      },
-      {
-        "school": "利兹大学",
-        "major": "机器人",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 92,
-    "student_school": "澳门城市大学",
-    "student_major": "工商管理",
-    "gpa": "2.2",
-    "language_score": "未填写",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港教育大学",
         "major": "待更新",
-        "rank": "QS前100"
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2025
   },
   {
-    "id": 93,
-    "student_school": "青岛科技大学",
-    "student_major": "化学",
-    "gpa": "76",
-    "language_score": "未填写",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "伯明翰大学",
-        "major": "化学",
-        "rank": "QS前100"
-      },
-      {
-        "school": "利兹大学",
-        "major": "化学",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 94,
-    "student_school": "北京理工大学珠海学院",
-    "student_major": "电气工程",
-    "gpa": "74",
-    "language_score": "未填写",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港教育大学",
-        "major": "stem教育",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 95,
-    "student_school": "大连理工大学",
-    "student_major": "计算机",
-    "gpa": "76",
-    "language_score": "未填写",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "布里斯托大学",
-        "major": "机器人",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 96,
-    "student_school": "天津理工大学",
-    "student_major": "计算机",
-    "gpa": "84",
-    "language_score": "未填写",
-    "country": "香港",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "香港城市大学",
-        "major": "AI for Science",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 97,
-    "student_school": "洛阳师范学院",
-    "student_major": "地理",
-    "gpa": "88",
-    "language_score": "未填写",
-    "country": "英国/香港",
+    "id": 273,
+    "student_school": "211",
+    "student_major": "数字媒体艺术",
+    "gpa": "3.61 /4.0",
+    "language_score": "IELTS 7",
+    "country": "未分类/澳大利亚",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "爱丁堡大学",
-        "major": "地理",
+        "school": "布里斯托",
+        "major": "待更新",
+        "rank": "普通录取"
+      },
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 274,
+    "student_school": "985",
+    "student_major": "电子科学与技术",
+    "gpa": "2.87",
+    "language_score": "IELTS 7",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 275,
+    "student_school": "985",
+    "student_major": "金融科技",
+    "gpa": "3.61",
+    "language_score": "IELTS 6.5(5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 276,
+    "student_school": "985",
+    "student_major": "市场营销",
+    "gpa": "3.7",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
         "rank": "QS前50"
       },
       {
-        "school": "香港城市大学",
-        "major": "能源与环境",
-        "rank": "QS前100"
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2025
   },
   {
-    "id": 98,
-    "student_school": "浙江农林大学",
-    "student_major": "服装设计",
-    "gpa": "84",
-    "language_score": "未填写",
+    "id": 277,
+    "student_school": "985",
+    "student_major": "数学",
+    "gpa": "75",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 278,
+    "student_school": "985",
+    "student_major": "计算机",
+    "gpa": "75",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "昆士兰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 279,
+    "student_school": "985",
+    "student_major": "机械",
+    "gpa": "75",
+    "language_score": "IELTS 7",
     "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "伯明翰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 280,
+    "student_school": "985",
+    "student_major": "土木工程",
+    "gpa": "76",
+    "language_score": "IELTS 7",
+    "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
     "offers": [
       {
-        "school": "南安普顿大学",
+        "school": "香港城市大学(东莞)",
         "major": "待更新",
         "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 281,
+    "student_school": "985",
+    "student_major": "会计",
+    "gpa": "76",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 282,
+    "student_school": "985",
+    "student_major": "海洋学",
+    "gpa": "78",
+    "language_score": "IELTS 6",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南安普敦大学",
+        "major": "待更新",
+        "rank": "QS前50"
       },
       {
         "school": "格拉斯哥大学",
         "major": "待更新",
-        "rank": "QS前100"
+        "rank": "QS前50"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2025
   },
   {
-    "id": 99,
-    "student_school": "山东大学",
-    "student_major": "建筑学",
-    "gpa": "未填写",
-    "language_score": "未填写",
-    "country": "澳大利亚",
+    "id": 283,
+    "student_school": "985",
+    "student_major": "土木工程",
+    "gpa": "78",
+    "language_score": "IELTS 6",
+    "country": "香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "墨尔本大学",
-        "major": "食品",
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 284,
+    "student_school": "985",
+    "student_major": "海洋学",
+    "gpa": "78",
+    "language_score": "IELTS 6(5.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 285,
+    "student_school": "985",
+    "student_major": "机械",
+    "gpa": "78",
+    "language_score": "IELTS 6(5.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 286,
+    "student_school": "985",
+    "student_major": "电子科学与技术",
+    "gpa": "78.93",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
         "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2025
   },
   {
-    "id": 100,
-    "student_school": "上海立信会计金融学院",
-    "student_major": "汉语言文学",
-    "gpa": "未填写",
-    "language_score": "未填写",
-    "country": "澳大利亚",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "澳洲国立大学",
-        "major": "传媒",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 101,
-    "student_school": "上海立信会计金融学院",
-    "student_major": "法律",
-    "gpa": "未填写",
-    "language_score": "未填写",
-    "country": "澳大利亚",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "澳洲国立大学",
-        "major": "法律",
-        "rank": "QS前100"
-      }
-    ]
-  },
-  {
-    "id": 102,
-    "student_school": "中国海洋大学",
-    "student_major": "数学",
-    "gpa": "未填写",
-    "language_score": "未填写",
+    "id": 287,
+    "student_school": "985",
+    "student_major": "日语",
+    "gpa": "80",
+    "language_score": "IELTS 6.5(5.5)",
     "country": "澳大利亚/英国",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "墨尔本大学",
+        "school": "悉尼大学",
         "major": "待更新",
         "rank": "QS前50"
       },
       {
-        "school": "南安普顿大学",
+        "school": "曼彻斯特大学",
         "major": "待更新",
-        "rank": "QS前100"
+        "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2025
   },
   {
-    "id": 103,
-    "student_school": "浙江大学",
+    "id": 288,
+    "student_school": "985",
+    "student_major": "电子科学与技术",
+    "gpa": "80",
+    "language_score": "IELTS 6",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 289,
+    "student_school": "985",
+    "student_major": "传媒",
+    "gpa": "80",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "墨尔本大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 290,
+    "student_school": "985",
+    "student_major": "数学",
+    "gpa": "81",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 291,
+    "student_school": "985",
     "student_major": "金融",
-    "gpa": "未填写",
-    "language_score": "未填写",
+    "gpa": "82",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 292,
+    "student_school": "985",
+    "student_major": "国际关系",
+    "gpa": "82",
+    "language_score": "IELTS 7.5(6)",
+    "country": "新西兰/爱尔兰",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "都柏林大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "奥克兰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 293,
+    "student_school": "985",
+    "student_major": "化学",
+    "gpa": "82",
+    "language_score": "IELTS 6",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "伦敦大学学院",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 294,
+    "student_school": "985",
+    "student_major": "金融",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 295,
+    "student_school": "985",
+    "student_major": "电子电气工程",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 296,
+    "student_school": "985",
+    "student_major": "计算机",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
         "school": "香港大学",
-        "major": "政治经济学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 297,
+    "student_school": "985",
+    "student_major": "教育学",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 298,
+    "student_school": "985",
+    "student_major": "机械",
+    "gpa": "82",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 299,
+    "student_school": "985",
+    "student_major": "金融",
+    "gpa": "82",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "墨尔本大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 300,
+    "student_school": "985",
+    "student_major": "化学",
+    "gpa": "82.1",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 301,
+    "student_school": "985",
+    "student_major": "电子科学与技术",
+    "gpa": "82.3",
+    "language_score": "IELTS 6",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 302,
+    "student_school": "985",
+    "student_major": "电气工程及其自动化",
+    "gpa": "82.37",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 303,
+    "student_school": "985",
+    "student_major": "经济学",
+    "gpa": "82.72",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 304,
+    "student_school": "985",
+    "student_major": "日语",
+    "gpa": "83",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 305,
+    "student_school": "985",
+    "student_major": "金融",
+    "gpa": "83",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 306,
+    "student_school": "985",
+    "student_major": "软件工程",
+    "gpa": "83.23",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 307,
+    "student_school": "985",
+    "student_major": "农业资源与环境",
+    "gpa": "84",
+    "language_score": "IELTS 7(6)",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 308,
+    "student_school": "985",
+    "student_major": "市场营销",
+    "gpa": "84",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 309,
+    "student_school": "985",
+    "student_major": "自动化",
+    "gpa": "84.27",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 310,
+    "student_school": "985",
+    "student_major": "软件工程",
+    "gpa": "84.6",
+    "language_score": "IELTS 7(5.5)",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 311,
+    "student_school": "985",
+    "student_major": "计算机",
+    "gpa": "85",
+    "language_score": "IELTS 7(6.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 312,
+    "student_school": "985",
+    "student_major": "机械",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 313,
+    "student_school": "985",
+    "student_major": "数学",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/英国/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "爱丁堡大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 314,
+    "student_school": "985",
+    "student_major": "数据科学",
+    "gpa": "85",
+    "language_score": "IELTS 7.5(6.0)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 315,
+    "student_school": "985",
+    "student_major": "信息管理与信息系统",
+    "gpa": "85.46",
+    "language_score": "IELTS 7(5.5)",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 316,
+    "student_school": "985",
+    "student_major": "国际商贸",
+    "gpa": "85.84",
+    "language_score": "IELTS 6.5(6)",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 317,
+    "student_school": "985",
+    "student_major": "会计",
+    "gpa": "87",
+    "language_score": "IELTS 6.5(6)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 318,
+    "student_school": "985",
+    "student_major": "软件工程",
+    "gpa": "87.55",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 319,
+    "student_school": "985",
+    "student_major": "汉语言文学",
+    "gpa": "87.9",
+    "language_score": "IELTS 7.5(6.5)",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 320,
+    "student_school": "985",
+    "student_major": "政治经济学",
+    "gpa": "89",
+    "language_score": "IELTS 7.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
         "rank": "QS前50"
       },
       {
         "school": "香港大学",
-        "major": "政策治理",
+        "major": "待更新",
         "rank": "QS前50"
       }
-    ]
+    ],
+    "year": 2025
+  },
+  {
+    "id": 321,
+    "student_school": "985",
+    "student_major": "会计",
+    "gpa": "89",
+    "language_score": "IELTS 7",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 322,
+    "student_school": "985",
+    "student_major": "电子商务",
+    "gpa": "89",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 323,
+    "student_school": "985",
+    "student_major": "公共政策",
+    "gpa": "90",
+    "language_score": "IELTS 7",
+    "country": "国内",
+    "degree": "硕士",
+    "result": "保研",
+    "offers": [
+      {
+        "school": "保研",
+        "major": "待更新",
+        "rank": "保研"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 324,
+    "student_school": "985",
+    "student_major": "金融工程",
+    "gpa": "90",
+    "language_score": "7+325",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 325,
+    "student_school": "985",
+    "student_major": "会计",
+    "gpa": "90",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 326,
+    "student_school": "985",
+    "student_major": "金融工程",
+    "gpa": "91",
+    "language_score": "IELTS 7",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 327,
+    "student_school": "澳门本科",
+    "student_major": "市场营销",
+    "gpa": "3",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "莫纳什大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 328,
+    "student_school": "澳门本科",
+    "student_major": "人工智能",
+    "gpa": "3.92",
+    "language_score": "IELTS 7.5",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "伦敦大学学院",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 329,
+    "student_school": "澳门本科",
+    "student_major": "市场营销",
+    "gpa": "85.75",
+    "language_score": "IELTS 7.5",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 330,
+    "student_school": "澳洲本科",
+    "student_major": "经济学",
+    "gpa": "70.5",
+    "language_score": "IELTS 7.5",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 331,
+    "student_school": "独立学院",
+    "student_major": "财务管理",
+    "gpa": "77",
+    "language_score": "IELTS 6(5.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港教育大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 332,
+    "student_school": "独立学院",
+    "student_major": "英语",
+    "gpa": "85",
+    "language_score": "IELTS 6(5.5)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "诺丁汉大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 333,
+    "student_school": "独立学院",
+    "student_major": "教育学",
+    "gpa": "86",
+    "language_score": "IELTS 6(5.5)",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "昆士兰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 334,
+    "student_school": "独立学院",
+    "student_major": "物流",
+    "gpa": "87.45",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南安普顿大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 335,
+    "student_school": "海本",
+    "student_major": "计算机系统工程",
+    "gpa": "7.61",
+    "language_score": "IELTS 6",
+    "country": "新加坡/英国",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "帝国理工大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 336,
+    "student_school": "韩国本科",
+    "student_major": "传媒",
+    "gpa": "85",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 337,
+    "student_school": "美本",
+    "student_major": "市场营销",
+    "gpa": "3",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 338,
+    "student_school": "双非",
+    "student_major": "数字媒体艺术",
+    "gpa": "3.34",
+    "language_score": "IELTS 6",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "诺丁汉大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 339,
+    "student_school": "双非",
+    "student_major": "电子科学与技术",
+    "gpa": "76",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 340,
+    "student_school": "双非",
+    "student_major": "英语",
+    "gpa": "76",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 341,
+    "student_school": "双非",
+    "student_major": "网络工程",
+    "gpa": "80",
+    "language_score": "IELTS 6",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 342,
+    "student_school": "双非",
+    "student_major": "心理学",
+    "gpa": "81",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学(深圳)",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 343,
+    "student_school": "双非",
+    "student_major": "审计",
+    "gpa": "82.6",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "纽卡斯尔大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 344,
+    "student_school": "双非",
+    "student_major": "汉语言文学",
+    "gpa": "83",
+    "language_score": "IELTS 7",
+    "country": "未分类",
+    "degree": "硕士",
+    "result": "普通录取",
+    "offers": [
+      {
+        "school": "诺丁汉",
+        "major": "待更新",
+        "rank": "普通录取"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 345,
+    "student_school": "双非",
+    "student_major": "法律",
+    "gpa": "83",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "利兹大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 346,
+    "student_school": "双非",
+    "student_major": "传媒",
+    "gpa": "84",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "莫纳什大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 347,
+    "student_school": "双非",
+    "student_major": "公共关系",
+    "gpa": "84.6",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 348,
+    "student_school": "双非",
+    "student_major": "网络与新媒体",
+    "gpa": "84.94",
+    "language_score": "IELTS 5.5(4.5)",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "海外名校",
+    "offers": [
+      {
+        "school": "北师珠港浸会",
+        "major": "待更新",
+        "rank": "海外名校"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 349,
+    "student_school": "双非",
+    "student_major": "公共事业管理",
+    "gpa": "85",
+    "language_score": "IELTS 5.5(4.5)",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 350,
+    "student_school": "双非",
+    "student_major": "土木",
+    "gpa": "85",
+    "language_score": "IELTS 6",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 351,
+    "student_school": "双非",
+    "student_major": "生物",
+    "gpa": "85.1",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 352,
+    "student_school": "双非",
+    "student_major": "汉语言文学",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南安普敦大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 353,
+    "student_school": "双非",
+    "student_major": "电子电气工程",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南安普敦大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 354,
+    "student_school": "双非",
+    "student_major": "传媒",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 355,
+    "student_school": "双非",
+    "student_major": "汉语国际教育",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 356,
+    "student_school": "双非",
+    "student_major": "数学",
+    "gpa": "86.12",
+    "language_score": "IELTS 79",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 357,
+    "student_school": "双非",
+    "student_major": "商务英语",
+    "gpa": "86.2",
+    "language_score": "IELTS 7(6)",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "诺丁汉大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 358,
+    "student_school": "双非",
+    "student_major": "房地产",
+    "gpa": "86.5",
+    "language_score": "IELTS 7(6)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 359,
+    "student_school": "双非",
+    "student_major": "土木工程",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "新加坡/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 360,
+    "student_school": "双非",
+    "student_major": "会计",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 361,
+    "student_school": "双非",
+    "student_major": "翻译",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "宁波诺丁汉大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 362,
+    "student_school": "双非",
+    "student_major": "教育",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "杜伦大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "诺丁汉大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 363,
+    "student_school": "双非",
+    "student_major": "体育",
+    "gpa": "87",
+    "language_score": "IELTS 7",
+    "country": "澳门",
+    "degree": "硕士",
+    "result": "海外名校",
+    "offers": [
+      {
+        "school": "澳门理工大学",
+        "major": "待更新",
+        "rank": "海外名校"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 364,
+    "student_school": "双非",
+    "student_major": "数据科学",
+    "gpa": "87.5",
+    "language_score": "IELTS 7",
+    "country": "澳门/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳门大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 365,
+    "student_school": "双非",
+    "student_major": "新闻学",
+    "gpa": "87.74",
+    "language_score": "PTE 67(65)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "南安普敦大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "利兹大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 366,
+    "student_school": "双非",
+    "student_major": "软件工程",
+    "gpa": "88",
+    "language_score": "IELTS 90(21)",
+    "country": "英国/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "布里斯托大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "诺丁汉大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 367,
+    "student_school": "双非",
+    "student_major": "人力资源管理",
+    "gpa": "88",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "西交利物浦大学(MRES)",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 368,
+    "student_school": "双非",
+    "student_major": "国标舞",
+    "gpa": "88",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 369,
+    "student_school": "双非",
+    "student_major": "数字媒体技术",
+    "gpa": "88",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "西交利物浦大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 370,
+    "student_school": "双非",
+    "student_major": "统计",
+    "gpa": "88.04",
+    "language_score": "IELTS 7(6)",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 371,
+    "student_school": "双非",
+    "student_major": "应用心理学",
+    "gpa": "89",
+    "language_score": "IELTS 6.5(6)",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 372,
+    "student_school": "双非",
+    "student_major": "传媒",
+    "gpa": "89",
+    "language_score": "IELTS 7.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 373,
+    "student_school": "双非",
+    "student_major": "土木工程",
+    "gpa": "89.35",
+    "language_score": "IELTS 6.5(5.5)",
+    "country": "新西兰/香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港理工大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "奥克兰大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 374,
+    "student_school": "双非",
+    "student_major": "网络与新媒体",
+    "gpa": "83.5/100",
+    "language_score": "IELTS 7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港岭南大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 375,
+    "student_school": "双一流",
+    "student_major": "法律",
+    "gpa": "78",
+    "language_score": "CET-6 ",
+    "country": "澳门",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "澳门大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 376,
+    "student_school": "双一流",
+    "student_major": "机械",
+    "gpa": "82",
+    "language_score": "CET-6 ",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "格拉斯哥大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 377,
+    "student_school": "双一流",
+    "student_major": "计算机",
+    "gpa": "85",
+    "language_score": "CET-6 ",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "新南威尔士大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 378,
+    "student_school": "双一流",
+    "student_major": "艺术管理",
+    "gpa": "85.24",
+    "language_score": "IELTS 7.5",
+    "country": "新加坡/英国/香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "待更新",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "曼彻斯特大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 379,
+    "student_school": "新加坡本科",
+    "student_major": "市场营销",
+    "gpa": "2.88",
+    "language_score": "IELTS 7.5",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "纽卡斯尔大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "约克大学",
+        "major": "待更新",
+        "rank": "QS前100"
+      }
+    ],
+    "year": 2025
+  },
+  {
+    "id": 380,
+    "student_school": "英国本科",
+    "student_major": "工业设计",
+    "gpa": "61",
+    "language_score": "IELTS 6",
+    "country": "新加坡/澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      },
+      {
+        "school": "南洋理工大学大学",
+        "major": "待更新",
+        "rank": "QS前50"
+      }
+    ],
+    "year": 2025
   }
 ]
