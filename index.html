@@ -1488,6 +1488,7 @@ ul, ol { list-style: none; }
 }
 </style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
@@ -1678,6 +1679,9 @@ ul, ol { list-style: none; }
   <div class="container fade-in">
     <p class="section-kicker">Cases Intelligence</p>
     <h2 class="section-title">大型可筛选案例汇总</h2>
+    <p style="text-align:center;color:var(--color-text-secondary);font-size:var(--text-sm);margin-bottom:var(--space-4);">
+      📌 过往数据未完全统计，但所有展示案例均为真实录取案例
+    </p>
     <div class="stats-bar" id="statsBar"></div>
     <div class="filter-row">
       <input type="search" class="filter-input" id="searchInput" placeholder="搜索学生学校、专业、录取院校关键词...">
@@ -2154,10 +2158,11 @@ function getFiltered() {
 /* ========== 修改：移除人均Offer统计 ========== */
 function renderStats(items) {
   const top10 = items.filter(c => c.result.includes('前10')).length;
+  const top50 = items.filter(c => c.result.includes('前50')).length;
   $('statsBar').innerHTML = `
     <div class="stat-pill"><div class="stat-number">${items.length}</div><div class="stat-label">筛选后案例</div></div>
     <div class="stat-pill"><div class="stat-number">${top10}</div><div class="stat-label">QS前10录取</div></div>
-    <div class="stat-pill"><div class="stat-number">98%</div><div class="stat-label">整体录取率</div></div>
+    <div class="stat-pill"><div class="stat-number">${top50}</div><div class="stat-label">QS前50录取</div></div>
   `;
 }
 
@@ -2192,6 +2197,7 @@ function renderCharts(items) {
 
 /* ========== 修改：移除案例卡片上的 "N 个Offer" 标识 ========== */
 function renderCaseCard(item) {
+  const yearTag = item.entry_year ? `<span class="pill" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;">${item.entry_year}年入学</span>` : '';
   return `
     <div class="case-card" onclick="openCaseModal(${item.id})">
       <div class="case-header">
@@ -2199,6 +2205,7 @@ function renderCaseCard(item) {
         <span class="pill pill-tier-${tierClass(item.tier)}">${item.tier}</span>
       </div>
       <div class="case-pills">
+        ${yearTag}
         <span class="pill">${item.country}</span>
         <span class="pill">${item.degree}</span>
         <span class="pill">${item.result}</span>
@@ -2235,7 +2242,7 @@ function openCaseModal(id) {
     <div class="detail-meta-block"><label>学生专业</label><value>${item.student_major}</value></div>
     <div class="detail-meta-block"><label>GPA / 均分</label><value>${item.gpa}</value></div>
     <div class="detail-meta-block"><label>语言成绩</label><value>${item.language_score}</value></div>
-    <div class="detail-meta-block"><label>申请地区</label><value>${item.country}</value></div>
+    <div class="detail-meta-block"><label>入学年份</label><value>${item.entry_year || '未标注'}年</value></div>
   `;
   $('modalOffers').innerHTML = item.offers.map(o => `
     <div class="detail-offer-item">
