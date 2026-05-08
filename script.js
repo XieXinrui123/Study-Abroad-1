@@ -61,7 +61,7 @@ const fallbackCases = Array.from({ length: 24 }, (_, i) => {
 const state = {
   baseCases: [],
   currentPage: 1,
-  pageSize: 12
+  pageSize: Infinity
 };
 
 function normalizeCase(item, idx) {
@@ -71,7 +71,7 @@ function normalizeCase(item, idx) {
 
   return {
     id: item.id || idx + 1,
-    title: item.title || `${item.country || '地区'}${item.degree || '项目'}申请案例 #${item.id || idx + 1}`,
+    title: item.title || `${item.country || '地区'}${item.degree || '项目'}案例`,
     student_school: item.student_school || '院校未填写',
     student_major: item.student_major || item.major || '专业未填写',
     gpa: item.gpa || '未填写',
