@@ -1,6 +1,19 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
-    { "src": "/cases.json", "dest": "/cases.json" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/cases.json",
+      "dest": "/cases.json"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
