@@ -747,37 +747,83 @@ const TUITION = {
 
 // 住宿费：按 [地区][城市级别][住宿类型] = { low, high }（当地货币/月）
 // 英国：英镑/月；香港：港币/月；新加坡：新币/月；澳洲/新西兰：澳元/周、纽币/周（后续×4.3）
+// 住宿费：按 [地区][城市级别][住宿类型] = { low, high }（当地货币/月）
+// 英国：英镑/月；香港：港币/月；新加坡：新币/月
+// 澳洲/新西兰：澳元/周、纽币/周（后续×4.3折算为月）
+// 数据来源：Weave Living(港)[^31^], University Living/Collabil(新)[^25^][^26^][^35^], Casita/UTS(澳)[^27^][^32^], Trade Me/uhomes(新)[^24^][^29^][^36^]
 const ACCOMMODATION = {
   uk: {
-    tier1: { campus: { low: 800, high: 1200 }, shared: { low: 600, high: 900 }, studio: { low: 1200, high: 2000 } },
-    tier2: { campus: { low: 500, high: 800 }, shared: { low: 400, high: 600 }, studio: { low: 700, high: 1200 } }
+    tier1: { 
+      campus:   { low: 900,  high: 1400 },  // 伦敦校内 en-suite
+      shared:   { low: 750,  high: 1100 },  // 伦敦单间合租
+      studio:   { low: 1400, high: 2200 }   // 伦敦 Studio
+    },
+    tier2: { 
+      campus:   { low: 550,  high: 850 },   // 曼彻斯特/伯明翰等校内
+      shared:   { low: 450,  high: 700 },   // 非伦敦单间合租
+      studio:   { low: 800,  high: 1300 }   // 非伦敦 Studio
+    }
   },
   hk: {
-    tier1: { campus: { low: 3500, high: 6000 }, shared: { low: 4000, high: 7000 }, studio: { low: 8000, high: 15000 } },
-    tier2: { campus: { low: 3000, high: 5000 }, shared: { low: 3500, high: 6000 }, studio: { low: 6000, high: 10000 } }
+    tier1: { 
+      campus:   { low: 5000,  high: 8000 },   // 港岛/九龙校内或学生公寓床位
+      shared:   { low: 8000,  high: 12000 },  // 市区私人租赁合租单间
+      studio:   { low: 12000, high: 20000 }   // 市区 Studio/服务式公寓
+    },
+    tier2: { 
+      campus:   { low: 4500,  high: 7000 },   // 沙田/将军澳校内
+      shared:   { low: 6500,  high: 10000 },  // 新界合租单间
+      studio:   { low: 10000, high: 16000 }   // 新界 Studio
+    }
   },
   sg: {
-    tier1: { campus: { low: 400, high: 800 }, shared: { low: 600, high: 1200 }, studio: { low: 1200, high: 2500 } },
-    tier2: { campus: { low: 350, high: 700 }, shared: { low: 500, high: 1000 }, studio: { low: 1000, high: 2000 } }
+    tier1: { 
+      campus:   { low: 500,  high: 1000 },   // NUS/NTU/SMU 校内 Halls
+      shared:   { low: 800,  high: 1500 },   // 市区 HDB/Condo 合租房间
+      studio:   { low: 1500, high: 2800 }    // 市区 Condo Studio/一房
+    },
+    tier2: { 
+      campus:   { low: 450,  high: 900 },    // 郊区校内
+      shared:   { low: 700,  high: 1200 },   // 裕廊东/金文泰等 HDB 房间
+      studio:   { low: 1200, high: 2200 }    // 郊区 Studio
+    }
   },
   au: {
-    tier1: { campus: { low: 350, high: 500 }, shared: { low: 250, high: 400 }, studio: { low: 450, high: 700 } },
-    tier2: { campus: { low: 250, high: 350 }, shared: { low: 180, high: 280 }, studio: { low: 300, high: 450 } }
+    tier1: { 
+      campus:   { low: 250, high: 400 },   // 悉尼/墨尔本校内宿舍 周租
+      shared:   { low: 300, high: 450 },   // 悉尼/墨尔本合租 周租
+      studio:   { low: 450, high: 650 }    // 悉尼/墨尔本 Studio 周租
+    },
+    tier2: { 
+      campus:   { low: 200, high: 320 },   // 布里斯班/珀斯/阿德莱德校内
+      shared:   { low: 220, high: 350 },   // 二线城市合租
+      studio:   { low: 350, high: 500 }    // 二线城市 Studio
+    }
   },
   nz: {
-    tier1: { campus: { low: 280, high: 380 }, shared: { low: 220, high: 320 }, studio: { low: 350, high: 500 } },
-    tier2: { campus: { low: 220, high: 300 }, shared: { low: 180, high: 250 }, studio: { low: 280, high: 400 } }
+    tier1: { 
+      campus:   { low: 350, high: 450 },   // 奥克兰校内/学生公寓 周租
+      shared:   { low: 280, high: 380 },   // 奥克兰合租 周租
+      studio:   { low: 400, high: 550 }    // 奥克兰 Studio 周租
+    },
+    tier2: { 
+      campus:   { low: 280, high: 380 },   // 惠灵顿/基督城/汉密尔顿校内
+      shared:   { low: 200, high: 300 },   // 其他城市合租
+      studio:   { low: 350, high: 480 }    // 其他城市 Studio
+    }
   }
 };
 
-// 生活费（餐饮+交通+杂费）：按 [地区][城市级别] = { low, high }（当地货币/月）
+// 生活费（餐饮+交通+书本+保险+杂费）：按 [地区][城市级别] = { low, high }（当地货币/月）
+// 英国：英镑/月；香港：港币/月；新加坡：新币/月；澳洲：澳元/月；新西兰：纽币/月
 const LIVING = {
-  uk:  { tier1: { low: 600, high: 950 }, tier2: { low: 480, high: 770 } },
-  hk:  { tier1: { low: 4500, high: 8000 }, tier2: { low: 4000, high: 6500 } },
-  sg:  { tier1: { low: 900, high: 1700 }, tier2: { low: 800, high: 1400 } },
-  au:  { tier1: { low: 1050, high: 1750 }, tier2: { low: 800, high: 1380 } },
-  nz:  { tier1: { low: 1000, high: 1550 }, tier2: { low: 800, high: 1280 } }
+  uk:  { tier1: { low: 700,  high: 1100 }, tier2: { low: 550,  high: 850 } },   // 伦敦餐饮交通更贵
+  hk:  { tier1: { low: 5000, high: 8500 }, tier2: { low: 4500, high: 7000 } },   // 香港餐饮外出贵，交通便宜
+  sg:  { tier1: { low: 1000, high: 1800 }, tier2: { low: 900,  high: 1500 } },   // 新加坡食阁便宜但房租外生活成本不低
+  au:  { tier1: { low: 1200, high: 2000 }, tier2: { low: 950,  high: 1500 } },   // 悉尼/墨尔本生活成本高
+  nz:  { tier1: { low: 1100, high: 1700 }, tier2: { low: 900,  high: 1400 } }    // 奥克兰略低于澳洲一线
 };
+
 
 /* ========== 交互函数 ========== */
 
