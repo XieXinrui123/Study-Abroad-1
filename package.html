@@ -1,0 +1,2742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DreamBridge留学服务详细介绍，DIY、半DIY、全包三种服务模式，覆盖英国、香港、新加坡、澳洲、新西兰、澳门。">
+<title>服务详情｜DreamBridge留学套餐介绍</title>
+<style>
+:root {
+  --color-bg: #f7fbff;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-text: #12223a;
+  --color-text-secondary: #607086;
+  --color-text-tertiary: #8a9bb0;
+  --color-primary: #2563EB;
+  --color-primary-light: #EFF6FF;
+  --color-primary-dark: #1D4ED8;
+  --color-secondary: #10b981;
+  --color-accent: #F59E0B;
+  --color-accent-light: #FEF3C7;
+  --color-border: #e5edf6;
+  --color-border-light: #f0f4f8;
+  --shadow-sm: 0 2px 8px rgba(18, 34, 58, 0.06);
+  --shadow-md: 0 8px 24px rgba(18, 34, 58, 0.08);
+  --shadow-lg: 0 16px 48px rgba(18, 34, 58, 0.12);
+  --shadow-xl: 0 24px 64px rgba(18, 34, 58, 0.16);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --font-sans: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Ma Shan Zheng', cursive;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+  --text-3xl: 24px;
+  --text-4xl: 32px;
+  --text-5xl: 40px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --z-base: 1;
+  --z-sticky: 50;
+  --z-header: 100;
+  --z-countdown: 101;
+  --z-modal: 200;
+  --z-toast: 300;
+}
+body.dark {
+  --color-bg: #0b1220;
+  --color-surface: #121f31;
+  --color-surface-elevated: #18283d;
+  --color-text: #e7effa;
+  --color-text-secondary: #9bb0c8;
+  --color-text-tertiary: #6b7f99;
+  --color-primary-light: #1b2a41;
+  --color-border: #24364f;
+  --color-border-light: #1a2638;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.6);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  font-size: var(--text-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input, select, textarea { font-family: inherit; font-size: inherit; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+.container { width: min(1140px, 92%); margin: 0 auto; }
+.section { padding: var(--space-20) 0; }
+.section-alt { background: var(--color-primary-light); }
+.section-kicker {
+  color: var(--color-primary);
+  font-size: var(--text-xs);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+.section-title {
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-header);
+  background: transparent;
+  transition: background var(--duration-base) ease, box-shadow var(--duration-base) ease;
+}
+.header.scrolled {
+  background: rgba(11, 17, 32, 0.92);
+  backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: var(--shadow-md);
+}
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+}
+.logo {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+.logo span { color: var(--color-secondary); }
+.nav-links { display: flex; gap: var(--space-6); }
+.nav-links a {
+  color: rgba(255,255,255,0.9);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: all var(--duration-fast) ease;
+  position: relative;
+  padding: 4px 0;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  border-radius: 1px;
+  transition: width var(--duration-base) var(--ease-out);
+}
+.nav-links a:hover { color: #fff; }
+.nav-links a:hover::after { width: 100%; }
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: var(--text-md);
+  transition: all var(--duration-fast) ease;
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.2); }
+
+/* Countdown */
+.countdown-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-countdown);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+  padding: var(--space-3) 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-align: center;
+  transform: translateY(-100%);
+  transition: transform var(--duration-base) var(--ease-out);
+}
+.countdown-bar.show { transform: translateY(0); }
+.countdown-bar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.countdown-pill {
+  background: rgba(255,255,255,0.2);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+}
+.countdown-close {
+  color: #fff;
+  font-size: var(--text-lg);
+  opacity: 0.7;
+  transition: opacity var(--duration-fast);
+  margin-left: var(--space-2);
+}
+.countdown-close:hover { opacity: 1; }
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #0f1c2e 0%, #1a3a5c 40%, #1e4d8b 100%);
+  overflow: hidden;
+  padding-top: 60px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.35) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255, 107, 53, 0.15) 0%, transparent 60%);
+}
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+}
+.hero-blob-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--color-primary);
+  top: -150px;
+  right: -150px;
+  animation: blobFloat 8s ease-in-out infinite;
+}
+.hero-blob-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--color-secondary);
+  bottom: -100px;
+  left: -100px;
+  opacity: 0.15;
+  animation: blobFloat 10s ease-in-out infinite reverse;
+}
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(1.1); }
+}
+.hero-content {
+  position: relative;
+  z-index: var(--z-base);
+  color: #fff;
+  text-align: center;
+  max-width: 680px;
+  padding: 0 var(--space-5);
+}
+.hero-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #eaf3ff;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+  backdrop-filter: blur(4px);
+}
+.hero-title {
+  font-size: clamp(var(--text-4xl), 5vw, var(--text-5xl));
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.5px;
+}
+.hero-title .highlight {
+  color: var(--color-secondary);
+  position: relative;
+}
+.hero-title .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--color-secondary);
+  opacity: 0.25;
+  border-radius: 4px;
+  z-index: -1;
+}
+.hero-subtitle {
+  font-size: clamp(var(--text-md), 2vw, var(--text-lg));
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-cta {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero-stats {
+  display: flex;
+  gap: var(--space-10);
+  justify-content: center;
+  margin-top: var(--space-10);
+  flex-wrap: wrap;
+}
+.hero-stat { text-align: center; }
+.hero-stat-value {
+  display: block;
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.7);
+  margin-top: var(--space-2);
+}
+.hero-scroll {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: rgba(255,255,255,0.5);
+  font-size: var(--text-xs);
+  z-index: var(--z-base);
+}
+.mouse-icon {
+  width: 22px;
+  height: 34px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-radius: 12px;
+  position: relative;
+}
+.mouse-icon::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 6px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 2px;
+  animation: scrollDown 1.8s infinite;
+}
+@keyframes scrollDown {
+  0% { opacity: 1; top: 6px; }
+  100% { opacity: 0; top: 18px; }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: var(--text-md);
+  transition: all var(--duration-base) var(--ease-out);
+  cursor: pointer;
+  border: none;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.35);
+}
+.btn-primary:active { transform: scale(0.98); }
+.btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(4px);
+}
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.5);
+}
+.btn-sm { padding: var(--space-2) var(--space-4); font-size: var(--text-sm); }
+
+/* Marquee */
+.marquee-section {
+  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg) 100%);
+  padding: var(--space-16) 0 var(--space-10);
+  overflow: hidden;
+}
+.marquee-track {
+  display: flex;
+  gap: var(--space-5);
+  animation: marquee 35s linear infinite;
+  width: max-content;
+}
+.marquee-track:hover { animation-play-state: paused; }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  box-shadow: var(--shadow-md);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: transform var(--duration-base) var(--ease-out);
+  cursor: default;
+}
+.marquee-card:hover { transform: translateY(-4px); }
+.marquee-from { font-size: var(--text-sm); color: var(--color-text-secondary); }
+.marquee-arrow { font-size: var(--text-xl); color: var(--color-primary); font-weight: 800; line-height: 1; }
+.marquee-to { font-size: var(--text-md); font-weight: 700; color: var(--color-text); }
+.marquee-tag {
+  display: inline-flex;
+  width: fit-content;
+  background: linear-gradient(135deg, var(--color-accent), #ff8f5a);
+  color: #fff;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  margin-top: var(--space-1);
+}
+
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+.about-text p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-md);
+  line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+.team-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+.team-card h3 { font-size: var(--text-xl); margin-bottom: var(--space-4); }
+.team-card li {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: var(--text-md);
+}
+.team-card li:last-child { border-bottom: none; }
+.signature {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-accent);
+  margin-top: var(--space-4);
+}
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.metric-item {
+  background: var(--color-surface);
+  padding: var(--space-5) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  text-align: center;
+  transition: all var(--duration-base) var(--ease-out);
+}
+.metric-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+.metric-value {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+.metric-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+}
+
+/* Plans */
+.plan-toggle {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  margin-bottom: var(--space-6);
+}
+.plan-toggle-btn {
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  transition: all var(--duration-fast) ease;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+.plan-toggle-btn.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.plan-toggle-btn:not(.active):hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+.plan-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-6);
+  transition: all var(--duration-base) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+.plan-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  opacity: 0;
+  transition: opacity var(--duration-base) ease;
+}
+.plan-card:hover::after { opacity: 1; }
+.plan-card.featured {
+  border: 2px solid var(--color-primary);
+  transform: scale(1.02);
+}
+.plan-card.featured:hover { transform: scale(1.02) translateY(-6px); }
+.plan-badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+}
+.plan-name { font-size: var(--text-lg); font-weight: 700; margin-bottom: var(--space-2); }
+.plan-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+.plan-price {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-secondary);
+  margin-bottom: var(--space-4);
+}
+.plan-list {
+  padding-left: var(--space-5);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 2;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: none;
+}
+.compare-table.active { display: table; }
+.compare-table th, .compare-table td {
+  padding: var(--space-4) var(--space-5);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+.compare-table th {
+  background: var(--color-primary-light);
+  font-weight: 700;
+  color: var(--color-text);
+}
+.compare-table td:first-child { text-align: left; font-weight: 600; }
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table tr:hover td { background: var(--color-primary-light); }
+.icon-check { color: var(--color-secondary); font-size: 18px; }
+.icon-cross { color: var(--color-text-tertiary); font-size: 18px; }
+.icon-half { color: var(--color-primary); font-size: 18px; }
+
+/* 院校档次标签颜色 */
+.pill-tier-985 { background: linear-gradient(135deg, #f59e0b, #d97706) !important; color: #fff !important; }
+.pill-tier-211 { background: linear-gradient(135deg, #3b82f6, #2563eb) !important; color: #fff !important; }
+.pill-tier-shuangfei { background: linear-gradient(135deg, #ff6b6b, #ee5a6f) !important; color: #fff !important; }
+.pill-tier-overseas { background: linear-gradient(135deg, #8b5cf6, #7c3aed) !important; color: #fff !important; }
+
+/* 智能评估器样式 */
+.eval-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+.eval-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+.eval-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.eval-field label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+.eval-field input, .eval-field select {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  width: 100%;
+}
+.eval-field input:focus, .eval-field select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+.eval-tier-tag {
+  display: none;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  margin-top: var(--space-2);
+  width: fit-content;
+}
+.eval-result {
+  margin-top: var(--space-10);
+  display: none;
+  animation: fadeIn var(--duration-slow) ease;
+}
+.eval-result.show { display: block; }
+.eval-category { margin-bottom: var(--space-8); }
+.eval-category-title {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.eval-reach .eval-category-title { color: #dc2626; }
+.eval-match .eval-category-title { color: #059669; }
+.eval-safe .eval-category-title { color: #2563eb; }
+.eval-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+.eval-case-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-out);
+}
+.eval-case-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+.eval-case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+.eval-case-school { font-weight: 700; font-size: var(--text-sm); }
+.eval-case-meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+}
+.eval-case-offers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.eval-offer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-primary-light);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+}
+.eval-match-score {
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+}
+.eval-empty {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--color-text-secondary);
+}
+
+/* Cases */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+.stat-pill {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-4);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all var(--duration-base) var(--ease-out);
+}
+.stat-pill:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.stat-number {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+.stat-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+}
+.filter-row {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.filter-input, .filter-select {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  width: 100%;
+  transition: all var(--duration-fast) ease;
+}
+.filter-input:focus, .filter-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+.quick-tags {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+.quick-tag {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast) ease;
+  user-select: none;
+}
+.quick-tag:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+.quick-tag.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.tier-filter-row {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tier-filter-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-right: var(--space-2);
+}
+.tier-tag {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast) ease;
+  user-select: none;
+}
+.tier-tag:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+.tier-tag.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.chart-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+.chart-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.bar-chart { display: flex; flex-direction: column; gap: var(--space-3); }
+.bar-row { display: flex; align-items: center; gap: var(--space-3); }
+.bar-label {
+  width: 100px;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  text-align: right;
+  flex-shrink: 0;
+}
+.bar-track {
+  flex: 1;
+  height: 28px;
+  background: var(--color-border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: var(--space-2);
+  min-width: 36px;
+  transition: width 1s var(--ease-out);
+}
+.bar-value { font-size: var(--text-xs); font-weight: 700; color: #fff; }
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: var(--space-5);
+  min-height: 200px;
+}
+.case-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-base) var(--ease-out);
+  cursor: pointer;
+}
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+.case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: var(--space-3);
+  gap: var(--space-2);
+}
+.case-title {
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+/* 移除了 case-badge 样式，不再使用 */
+.case-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+.pill {
+  display: inline-block;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+.case-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+}
+.meta-item {
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+.meta-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-1);
+}
+.meta-value { font-weight: 700; font-size: var(--text-sm); color: var(--color-text); }
+.offer-section {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--color-border);
+}
+.offer-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+.offer-list { display: flex; flex-direction: column; gap: var(--space-2); }
+.offer-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: var(--space-3);
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-border);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  align-items: center;
+}
+.offer-school { font-weight: 700; color: var(--color-text); font-size: var(--text-sm); }
+.offer-major { color: var(--color-text-secondary); font-size: var(--text-xs); }
+.offer-rank {
+  font-weight: 700;
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+}
+.offer-more {
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+  text-align: center;
+  padding: var(--space-1) 0;
+}
+.no-results {
+  text-align: center;
+  padding: var(--space-16) var(--space-5);
+  color: var(--color-text-secondary);
+  font-size: var(--text-lg);
+  grid-column: 1 / -1;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  flex-wrap: wrap;
+}
+.page-btn {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  transition: all var(--duration-fast) ease;
+  min-width: 40px;
+}
+.page-btn:hover:not(:disabled) {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.page-btn.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+.page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.page-info {
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+.data-tip {
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+  margin-top: var(--space-4);
+}
+
+/* Case Modal */
+.case-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 36, 0.7);
+  display: none;
+  place-items: center;
+  z-index: var(--z-modal);
+  backdrop-filter: blur(8px);
+  padding: var(--space-5);
+  overflow-y: auto;
+}
+.case-modal.show { display: grid; }
+.case-detail {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalIn var(--duration-slow) var(--ease-out);
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.case-detail-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: var(--text-xl);
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast) ease;
+  z-index: 10;
+}
+.case-detail-close:hover {
+  background: var(--color-border-light);
+  color: var(--color-text);
+}
+.case-detail-header { padding: var(--space-8) var(--space-8) 0; }
+.case-detail-header h2 { font-size: var(--text-xl); margin-bottom: var(--space-3); }
+.case-detail-body { padding: 0 var(--space-8) var(--space-8); }
+.case-detail-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+.detail-meta-block {
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+.detail-meta-block label {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+.detail-meta-block value {
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+.case-detail-offers { margin-top: var(--space-6); }
+.case-detail-offers h4 {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  font-weight: 700;
+}
+.detail-offer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+}
+.detail-offer-school { font-weight: 700; font-size: var(--text-sm); }
+.detail-offer-major { font-size: var(--text-xs); color: var(--color-text-secondary); }
+.detail-offer-rank {
+  font-weight: 700;
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+}
+.case-detail-cta {
+  padding: var(--space-6) var(--space-8);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+.case-detail-cta p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+.testimonial-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  transition: all var(--duration-base) var(--ease-out);
+}
+.testimonial-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+}
+.testimonial-card h3 { font-size: var(--text-md); margin-bottom: var(--space-2); }
+.testimonial-card p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+/* FAQ */
+.accordion-item { border-bottom: 1px solid var(--color-border); }
+.accordion-btn {
+  width: 100%;
+  text-align: left;
+  padding: var(--space-5) 0;
+  background: none;
+  border: none;
+  font-weight: 600;
+  font-size: var(--text-md);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-text);
+  transition: color var(--duration-fast) ease;
+}
+.accordion-btn:hover { color: var(--color-primary); }
+.accordion-btn::after {
+  content: '+';
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+  transition: transform var(--duration-base) var(--ease-spring);
+  flex-shrink: 0;
+  margin-left: var(--space-4);
+}
+.accordion-item.open .accordion-btn::after { content: '−'; transform: rotate(0); }
+.accordion-panel {
+  display: none;
+  color: var(--color-text-secondary);
+  padding-bottom: var(--space-5);
+  line-height: 1.8;
+  font-size: var(--text-sm);
+}
+.accordion-item.open .accordion-panel {
+  display: block;
+  animation: fadeIn var(--duration-base) ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+.footer {
+  background: #0B1120;
+  color: #b0c4de;
+  padding: var(--space-12) 0 var(--space-8);
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-8);
+  align-items: center;
+}
+.footer h2 { color: #fff; font-size: var(--text-xl); margin-bottom: var(--space-4); }
+.footer p { margin: var(--space-2) 0; font-size: var(--text-sm); opacity: 0.85; }
+.footer-actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+/* Mobile CTA */
+.mobile-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+  display: none;
+  gap: var(--space-3);
+  align-items: center;
+  z-index: var(--z-sticky);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+}
+.mobile-cta-wx {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  font-weight: 600;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Back to top */
+.to-top {
+  position: fixed;
+  right: var(--space-5);
+  bottom: 80px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--text-lg);
+  display: none;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.3);
+  transition: all var(--duration-base) var(--ease-out);
+  z-index: 97;
+  border: none;
+}
+.to-top.show { display: grid; }
+.to-top:hover {
+  transform: translateY(-3px);
+  background: var(--color-primary-dark);
+  box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+}
+
+/* QR Modal */
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 36, 0.65);
+  display: none;
+  place-items: center;
+  z-index: var(--z-modal);
+  backdrop-filter: blur(6px);
+  padding: var(--space-5);
+}
+.qr-modal.show { display: grid; }
+.qr-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+  max-width: 360px;
+  width: 100%;
+  animation: modalIn var(--duration-slow) var(--ease-out);
+}
+.qr-fallback {
+  width: 200px;
+  height: 200px;
+  margin: var(--space-4) auto;
+  background: linear-gradient(135deg, #07c160, #059142);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: var(--space-3);
+}
+.qr-fallback svg {
+  width: 64px;
+  height: 64px;
+  opacity: 0.9;
+}
+.qr-fallback span {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.qr-wxid {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-top: var(--space-2);
+  letter-spacing: 1px;
+}
+.qr-close {
+  position: absolute;
+  right: var(--space-4);
+  top: var(--space-3);
+  background: none;
+  border: none;
+  font-size: var(--text-2xl);
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: all var(--duration-fast) ease;
+}
+.qr-close:hover {
+  background: var(--color-border-light);
+  color: var(--color-text);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-out), transform var(--duration-slow) var(--ease-out);
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+
+/* Package Detail Styles */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin: var(--space-8) 0;
+}
+.detail-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-base) var(--ease-out);
+}
+.detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.detail-card h3 {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+  color: var(--color-primary);
+}
+.detail-card p, .detail-card li {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-3);
+}
+.detail-card ul {
+  padding-left: var(--space-5);
+  list-style: disc;
+  margin-bottom: var(--space-4);
+}
+.detail-card li { margin-bottom: var(--space-2); }
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin: var(--space-8) 0;
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+.timeline li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  min-width: 120px;
+  flex: 1;
+  list-style: none;
+}
+.timeline li span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: var(--text-md);
+  flex-shrink: 0;
+}
+.timeline li {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+@media (max-width: 768px) {
+  .detail-grid { grid-template-columns: 1fr; }
+  .timeline { flex-direction: column; gap: var(--space-4); }
+  .timeline li { flex-direction: row; text-align: left; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .about-grid { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: repeat(3, 1fr); }
+  .charts-grid { grid-template-columns: 1fr; }
+  .filter-row { grid-template-columns: 1fr; }
+  .cases-grid { grid-template-columns: 1fr; }
+  .footer-grid { flex-direction: column; text-align: center; }
+  .footer-actions { justify-content: center; }
+  .mobile-cta { display: flex; }
+  .to-top { bottom: 72px; right: var(--space-4); }
+  .case-detail { max-height: 85vh; }
+  .case-detail-meta { grid-template-columns: 1fr; }
+  .hero-stats { gap: var(--space-6); }
+  .marquee-card { min-width: 260px; padding: var(--space-4); }
+  .section { padding: var(--space-12) 0; }
+  .eval-form { grid-template-columns: 1fr; }
+  .eval-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .charts-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-bar { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+/* ===== Count-up number styling ===== */
+.count-up { font-variant-numeric: tabular-nums; }
+
+/* ===== Stagger children animation ===== */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 80ms; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 320ms; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+
+/* ===== Footer responsive overrides ===== */
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr !important; gap: 32px !important; text-align: center; }
+  .footer-brand p { margin: 0 auto 16px !important; }
+  .footer-brand div { justify-content: center; }
+  .footer-nav a { padding-left: 0 !important; }
+}
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<header class="header" id="topHeader">
+  <div class="container nav-wrap">
+    <nav class="nav-links">
+      <a href="index.html#about">中介介绍</a>
+      <a href="package.html">套餐服务</a>
+    </nav>
+    <a href="index.html" class="logo">Dream<span>Bridge</span></a>
+    <nav class="nav-links">
+      <a href="cases.html">案例汇总</a>
+      <a href="index.html#faq">常见问题</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle">🌓</button>
+  </div>
+</header>
+
+<main>
+
+<section class="section">
+  <div class="container fade-in visible">
+    <p class="section-kicker">Service Details</p>
+    <h1>服务内容详细介绍</h1>
+    <p><strong>服务地区：</strong>英国、香港、新加坡、澳洲、新西兰、澳门</p>
+    <p><strong>联系方式：</strong>微信 xrr13365810586</p>
+
+    <h2>一、三种服务模式</h2>
+    <div class="detail-grid">
+      <article class="detail-card">
+        <h3>1）DIY服务（纯DIY）</h3>
+        <p><strong>内容：</strong>材料润色与答疑、申请流程指导</p>
+        <ul>
+          <li>简历润色：500元/篇</li><li>文书润色：1000元/篇</li><li>推荐信润色：400元/篇</li><li>网申服务：100元/所（1000元/所有）</li><li>DIY答疑：1888元/年</li>
+        </ul>
+        <p><strong>适合人群：</strong>时间充足、英语能力强、信息收集能力强。</p>
+        <p><strong>核心优势：</strong>完全自主掌控申请流程；按需选择服务；灵活控制预算；深度参与全过程；提升申请能力。</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>2）半DIY服务</h3>
+        <p><strong>内容：</strong>材料撰写支持、申请策略指导、部分流程自主完成</p>
+        <ul>
+          <li>简历：1000元/篇</li><li>文书：2000元/篇</li><li>推荐信：800元/篇</li><li>网申服务：100元/项目（1000元/所有）</li><li>全套材料（简历+文书+推荐信×2+网申一所）：3999元</li>
+        </ul>
+        <p><strong>优势：</strong>专业导师全程支持材料撰写与关键环节把关，节省50%+材料准备时间，同时保持申请自主控制权。</p>
+        <p><strong>服务流程：</strong>敲定选校 → 闲鱼付款 → 撰写材料、递交申请 → 闲鱼发货 → 收到付款。</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>3）全包服务</h3>
+        <p><strong>内容：</strong>全程无忧申请、全套材料撰写、网申代办、签证办理支持、流程管理</p>
+        <ul>
+          <li>澳大利亚/新西兰：1000元/3所（若选择其余服务可免费赠送）</li>
+          <li>英国/香港/新加坡/中外合办：10000元/8个项目，15000元/15个项目</li>
+          <li>超级大混申（不限国家/不限项目）：20000元</li>
+        </ul>
+        <p><strong>适合人群：</strong>希望把时间放在考分/实习/科研或更高价值事务上的申请者。</p>
+        <p><strong>服务优势：</strong>签证办理专业指导、申请进度实时更新、专属顾问全程跟进。</p>
+      </article>
+    </div>
+
+    <h2>申请流程时间线</h2>
+    <ul class="timeline">
+      <li><span>1</span>敲定选校单</li>
+      <li><span>2</span>签订合同</li>
+      <li><span>3</span>撰写材料与递交申请</li>
+      <li><span>4</span>等待offer 参加面试</li>
+      <li><span>5</span>接受offer</li>
+      <li><span>6</span>递交签证</li>
+    </ul>
+
+    <h2>二、专业团队优势</h2>
+    <div class="detail-card">
+      <p>创始人背景：新加坡国立大学计算机毕业，英联邦留学4年经验，深谙名校申请策略，擅长结合学生背景与诉求做职业与专业定位。</p>
+      <p>卓越业绩：2023年入学186位、2024年入学198位、2025年入学170位学员获QS前100录取；选择全包服务的申请者申请成功概率为100%。</p>
+      <p>团队规模：60+专业成员，覆盖理工文商各学科领域，成员来自海外硕博背景，提供多对一全方位辅导。</p>
+      <p>师资力量：海外名校硕博导师同专业对口辅导，案例真实可查；并支持考公考编、大厂就业、申博等方向规划。</p>
+    </div>
+
+    <h2>三、服务保障承诺</h2>
+    <div class="detail-card">
+      <ul>
+        <li>文书无限修改：直至完全满意</li>
+        <li>0offer全额退款：全包服务未获任何录取，100%全额退款</li>
+        <li>透明申请流程：全程使用学生本人邮箱和网申账号，进度实时可见</li>
+        <li>7×16小时响应：专业顾问全天候响应</li>
+      </ul>
+    </div>
+
+    <p style="margin-top:24px"><a class="btn btn-primary" href="index.html">返回主界面</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid" style="display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;align-items:start;">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="font-size:20px;margin-bottom:16px;display:inline-block;">Dream<span>Bridge</span></a>
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:16px;max-width:280px;">专注英港新澳留学申请，创始人NUS计算机毕业，累计服务500+学生。</p>
+        <div style="display:flex;gap:12px;">
+          <button class="btn btn-primary btn-sm" onclick="openQr()">立即咨询</button>
+          <a class="btn btn-secondary btn-sm" href="mailto:496680190@qq.com" style="color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.15);">发送邮件</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h4 style="color:#fff;font-size:13px;font-weight:700;margin-bottom:16px;letter-spacing:0.5px;text-transform:uppercase;">快速导航</h4>
+        <a href="index.html#about" style="display:block;padding:6px 0;font-size:13px;color:rgba(255,255,255,0.55);transition:all 150ms;">中介介绍</a>
+        <a href="package.html" style="display:block;padding:6px 0;font-size:13px;color:rgba(255,255,255,0.55);transition:all 150ms;">套餐服务</a>
+        <a href="cases.html" style="display:block;padding:6px 0;font-size:13px;color:rgba(255,255,255,0.55);transition:all 150ms;">案例汇总</a>
+        <a href="index.html#faq" style="display:block;padding:6px 0;font-size:13px;color:rgba(255,255,255,0.55);transition:all 150ms;">常见问题</a>
+        <a href="evaluator.html" style="display:block;padding:6px 0;font-size:13px;color:rgba(255,255,255,0.55);transition:all 150ms;">智能评估</a>
+      </div>
+      <div class="footer-contact">
+        <h4 style="color:#fff;font-size:13px;font-weight:700;margin-bottom:16px;letter-spacing:0.5px;text-transform:uppercase;">联系我们</h4>
+        <div style="display:flex;align-items:center;gap:10px;margin:10px 0;font-size:13px;color:rgba(255,255,255,0.6);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:0.5;flex-shrink:0;color:var(--color-accent);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>496680190@qq.com</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin:10px 0;font-size:13px;color:rgba(255,255,255,0.6);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:0.5;flex-shrink:0;color:var(--color-accent);"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <span>微信：xxr13365810586</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.35);">
+      <span>&copy; 2025 DreamBridge 留学服务. All rights reserved.</span>
+      <span>用心服务每一个留学梦想</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" id="mobileCta">
+  <span class="mobile-cta-wx">微信：xrr13365810586</span>
+  <button class="btn btn-primary btn-sm" onclick="openQr()">立即咨询</button>
+</div>
+
+<button class="to-top" id="toTop">↑</button>
+
+<div class="qr-modal" id="qrModal">
+  <div class="qr-card">
+    <button class="qr-close" onclick="closeQr()">×</button>
+    <h3>添加微信立即咨询</h3>
+    <div class="qr-fallback">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.85"/></svg>
+      <span>微信扫码咨询</span>
+    </div>
+    <p class="qr-wxid">xrr13365810586</p>
+    <p style="font-size:var(--text-xs);color:var(--color-text-tertiary);">复制微信号，打开微信添加好友</p>
+  </div>
+</div>
+
+<script>
+
+/* ===== Count-up animation ===== */
+function animateCountUp(el) {
+  const target = parseInt(el.dataset.count);
+  const suffix = el.dataset.suffix || '';
+  const duration = 2000;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(target * eased);
+    el.textContent = current + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+function setupCountUpObserver() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counters = entry.target.querySelectorAll('[data-count]');
+        counters.forEach(el => {
+          if (!el.dataset.animated) { el.dataset.animated = 'true'; animateCountUp(el); }
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.stagger-children, .hero-stats, .stats-bar, .metrics').forEach(el => {
+    if (el) observer.observe(el);
+  });
+}
+
+/* ===== Stagger children observer ===== */
+function setupStaggerObserver() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.stagger-children').forEach(el => observer.observe(el));
+}
+
+const marqueeData = [{"from": "武汉理工 社会工作 GPA 3.9", "to": "NUS + UCL 社会学", "tag": "双非逆袭"}, {"from": "燕山大学 材料 GPA 72", "to": "帝国理工 + UCL", "tag": "低GPA录取"}, {"from": "中国农大 工业设计 GPA 2.9", "to": "南洋理工 材料科学", "tag": "转专业录取"}, {"from": "北服 设计 GPA 3.7", "to": "UCL + RCA + NTU", "tag": "艺术顶尖"}, {"from": "地大 GIS GPA 89", "to": "NUS AI for Science", "tag": "跨专业申AI"}, {"from": "海南大学 食品 GPA 85", "to": "NUS 食品 + HKU", "tag": "211冲前10"}, {"from": "澳门城市 旅游 GPA 3.8", "to": "HKU 气候治理", "tag": "双非冲港大"}, {"from": "广东科技学院 市场 GPA 84", "to": "岭南大学 市场", "tag": "二本录取"}];
+const plansData = [{"name": "DIY服务（纯DIY）", "desc": "材料润色与答疑、申请流程指导", "price": "按项目计费", "services": ["简历润色 500/篇", "文书润色 1000/篇", "推荐信润色 400/篇", "DIY答疑 1888/年"]}, {"name": "半DIY服务", "desc": "材料撰写支持+策略指导+部分流程自主", "price": "全套3999元起", "services": ["简历代写 1000/篇", "文书代写 2000/篇", "推荐信代写 800/篇", "网申辅助 100/项目"]}, {"name": "全包服务", "desc": "全程代办+签证支持+流程管理", "price": "10000元/8项目起", "featured": true, "services": ["澳新申请 1000/3所", "英港新 10000/8项目", "15000/15项目", "超级混申 20000"]}];
+const faqsData = [["如何选择服务模式？", "时间充足+自主能力强可选DIY；希望省时但保留自主可选半DIY；想全程省心建议全包。"], ["全包服务有保障吗？", "全包支持0 offer全额退款承诺，并提供透明流程与进度同步。"], ["服务响应时间？", "7×16小时顾问响应，确保申请问题及时解决。"], ["文书可以修改几次？", "全包和半DIY服务中文书支持无限次修改，直至满意。"], ["申请账号是否透明？", "全程使用学生本人邮箱和网申账号，进度实时可见。"]];
+const testimonialsData = [{"name": "张同学", "title": "2023届学员", "text": "186位学员获QS前100录取。"}, {"name": "李同学", "title": "2024届学员", "text": "198位学员获QS前100录取。"}, {"name": "王同学", "title": "2025届学员", "text": "170位学员获QS前100录取。"}];
+const topSchools = ["清华", "北大", "复旦", "上交", "浙大", "中科大", "南大", "人大", "同济", "北航", "武大", "哈工大", "西交", "华科", "中山", "北理", "东南", "南开", "川大", "山大", "厦大", "中南", "湖大", "大工", "吉大", "重大", "北师", "华东师范", "华南理工", "电子科大", "中国农大", "中央民族", "西北农林", "兰大", "海大", "东北大学", "湖南大学", "西北工业大学", "大连理工", "重庆大学", "西安交大", "华中科技大学", "华南理工", "北京理工", "北京师范"];
+
+const schoolTierMap = {
+  '北京大学': '985',
+  '北大': '985',
+  '清华大学': '985',
+  '清华': '985',
+  '复旦大学': '985',
+  '复旦': '985',
+  '上海交通大学': '985',
+  '上海交大': '985',
+  '上交': '985',
+  '浙江大学': '985',
+  '浙大': '985',
+  '中国科学技术大学': '985',
+  '中科大': '985',
+  '中国科大': '985',
+  '南京大学': '985',
+  '南大': '985',
+  '中国人民大学': '985',
+  '人大': '985',
+  '北京航空航天大学': '985',
+  '北航': '985',
+  '北京理工大学': '985',
+  '北理工': '985',
+  '北理': '985',
+  '北京师范大学': '985',
+  '北师大': '985',
+  '中国农业大学': '985',
+  '中农': '985',
+  '中国农大': '985',
+  '中央民族大学': '985',
+  '中央民族': '985',
+  '同济大学': '985',
+  '华东师范大学': '985',
+  '华东师范': '985',
+  '华师大': '985',
+  '南开大学': '985',
+  '天津大学': '985',
+  '天大': '985',
+  '哈尔滨工业大学': '985',
+  '哈工大': '985',
+  '吉林大学': '985',
+  '吉大': '985',
+  '大连理工大学': '985',
+  '大工': '985',
+  '大连理工': '985',
+  '东北大学': '985',
+  '山东大学': '985',
+  '山大': '985',
+  '中国海洋大学': '985',
+  '中国海大': '985',
+  '西安交通大学': '985',
+  '西安交大': '985',
+  '西交': '985',
+  '西北工业大学': '985',
+  '西工大': '985',
+  '西北工业': '985',
+  '西北农林科技大学': '985',
+  '西北农林': '985',
+  '西农': '985',
+  '武汉大学': '985',
+  '武大': '985',
+  '华中科技大学': '985',
+  '华科': '985',
+  '华中科大': '985',
+  '中南大学': '985',
+  '湖南大学': '985',
+  '湖大': '985',
+  '国防科技大学': '985',
+  '国防科大': '985',
+  '中山大学': '985',
+  '中大': '985',
+  '华南理工大学': '985',
+  '华工': '985',
+  '华南理工': '985',
+  '四川大学': '985',
+  '川大': '985',
+  '电子科技大学': '985',
+  '电子科大': '985',
+  '成电': '985',
+  '重庆大学': '985',
+  '重大': '985',
+  '厦门大学': '985',
+  '厦大': '985',
+  '兰州大学': '985',
+  '兰大': '985',
+  '东南大学': '985',
+  '东大': '985',
+  '北京交通大学': '211',
+  '北交大': '211',
+  '北京工业大学': '211',
+  '北工大': '211',
+  '北京科技大学': '211',
+  '北科大': '211',
+  '北京化工大学': '211',
+  '北化工': '211',
+  '北京邮电大学': '211',
+  '北邮': '211',
+  '北京林业大学': '211',
+  '北林': '211',
+  '北京中医药大学': '211',
+  '北中医': '211',
+  '北京外国语大学': '211',
+  '北外': '211',
+  '中国传媒大学': '211',
+  '中传': '211',
+  '中央财经大学': '211',
+  '中财': '211',
+  '央财': '211',
+  '对外经济贸易大学': '211',
+  '对外经贸': '211',
+  '贸大': '211',
+  '中国政法大学': '211',
+  '法大': '211',
+  '华北电力大学': '211',
+  '华电': '211',
+  '中国矿业大学（北京）': '211',
+  '中国矿业大学北京': '211',
+  '矿大北京': '211',
+  '中国石油大学（北京）': '211',
+  '中国石油大学北京': '211',
+  '中石大北京': '211',
+  '中国地质大学（北京）': '211',
+  '中国地质大学北京': '211',
+  '地大北京': '211',
+  '北京体育大学': '211',
+  '北体': '211',
+  '中央音乐学院': '211',
+  '央音': '211',
+  '上海财经大学': '211',
+  '上财': '211',
+  '上海外国语大学': '211',
+  '上外': '211',
+  '华东理工大学': '211',
+  '华理': '211',
+  '东华大学': '211',
+  '上海大学': '211',
+  '上大': '211',
+  '海军军医大学': '211',
+  '第二军医大学': '211',
+  '南京航空航天大学': '211',
+  '南航': '211',
+  '南京理工大学': '211',
+  '南理工': '211',
+  '河海大学': '211',
+  '江南大学': '211',
+  '中国矿业大学': '211',
+  '矿大': '211',
+  '南京农业大学': '211',
+  '南农': '211',
+  '中国药科大学': '211',
+  '药大': '211',
+  '南京师范大学': '211',
+  '南师大': '211',
+  '苏州大学': '211',
+  '苏大': '211',
+  '福州大学': '211',
+  '福大': '211',
+  '安徽大学': '211',
+  '安大': '211',
+  '合肥工业大学': '211',
+  '合工大': '211',
+  '南昌大学': '211',
+  '昌大': '211',
+  '郑州大学': '211',
+  '郑大': '211',
+  '武汉理工大学': '211',
+  '武理工': '211',
+  '武汉理工': '211',
+  '中国地质大学（武汉）': '211',
+  '中国地质大学武汉': '211',
+  '地大武汉': '211',
+  '中国地质大学': '211',
+  '地大': '211',
+  '华中农业大学': '211',
+  '华农': '211',
+  '华中师范大学': '211',
+  '华师': '211',
+  '中南财经政法大学': '211',
+  '中南财大': '211',
+  '湖南师范大学': '211',
+  '湖南师大': '211',
+  '暨南大学': '211',
+  '暨大': '211',
+  '华南师范大学': '211',
+  '华南师大': '211',
+  '广西大学': '211',
+  '西大': '211',
+  '海南大学': '211',
+  '西南交通大学': '211',
+  '西南交大': '211',
+  '西南财经大学': '211',
+  '西南财大': '211',
+  '西财': '211',
+  '四川农业大学': '211',
+  '川农': '211',
+  '贵州大学': '211',
+  '贵大': '211',
+  '云南大学': '211',
+  '云大': '211',
+  '西藏大学': '211',
+  '藏大': '211',
+  '西北大学': '211',
+  '西安电子科技大学': '211',
+  '西电': '211',
+  '长安大学': '211',
+  '陕西师范大学': '211',
+  '陕师大': '211',
+  '空军军医大学': '211',
+  '第四军医大学': '211',
+  '青海大学': '211',
+  '宁夏大学': '211',
+  '宁大': '211',
+  '新疆大学': '211',
+  '新大': '211',
+  '石河子大学': '211',
+  '中国石油大学（华东）': '211',
+  '中国石油大学华东': '211',
+  '中石大华东': '211',
+  '哈尔滨工程大学': '211',
+  '哈工程': '211',
+  '东北林业大学': '211',
+  '东北林大': '211',
+  '东北农业大学': '211',
+  '东北农大': '211',
+  '辽宁大学': '211',
+  '辽大': '211',
+  '大连海事大学': '211',
+  '延边大学': '211',
+  '东北师范大学': '211',
+  '东北师大': '211',
+  '内蒙古大学': '211',
+  '内大': '211',
+  '河北工业大学': '211',
+  '河工大': '211',
+  '太原理工大学': '211',
+  '太原理工': '211',
+  '天津医科大学': '211',
+  '北京协和医学院': '211',
+  '协和': '211',
+  '厦门大学马来西亚分校': '海外本科',
+  '澳门城市大学': '海外本科',
+  '澳门城市': '海外本科',
+  'PSB Academy': '海外本科',
+  '西交利物浦大学': '海外本科',
+  '西交利物浦': '海外本科',
+  '阿姆斯特丹大学': '海外本科',
+  '宁波诺丁汉大学': '海外本科',
+  '宁波诺丁汉': '海外本科',
+  '上海纽约大学': '海外本科',
+  '昆山杜克大学': '海外本科',
+  '广东以色列理工学院': '海外本科',
+  '温州肯恩大学': '海外本科',
+  '深圳北理莫斯科大学': '海外本科',
+  '香港中文大学': '海外本科',
+  '港中文': '海外本科',
+  '香港大学': '海外本科',
+  '港大': '海外本科',
+  '香港科技大学': '海外本科',
+  '港科大': '海外本科',
+  '香港城市大学': '海外本科',
+  '港城大': '海外本科',
+  '香港理工大学': '海外本科',
+  '港理工': '海外本科',
+  '香港浸会大学': '海外本科',
+  '浸会': '海外本科',
+  '香港岭南大学': '海外本科',
+  '岭南': '海外本科',
+  '香港教育大学': '海外本科',
+  '教大': '海外本科',
+  '香港演艺学院': '海外本科',
+  '澳门科技大学': '海外本科',
+  '澳科大': '海外本科',
+  '澳门大学': '海外本科',
+  '澳大': '海外本科',
+};
+
+const majorGroups = {
+  '计算机软件': ['计算机', '软件', '信息', '人工智能', 'AI', '数据科学', '大数据', '网络安全', '物联网', '自动化', '智能科学', '计算', '区块链', '机器人'],
+  '电子信息': ['电子', '通信', '微电子', '集成电路', '半导体', '光电', '电气', '信号', '电路', '控制', '电信'],
+  '金融经济': ['金融', '经济', '会计', '财务', '投资', '保险', '税务', '审计', '财政', '国贸', '商务', '银行', '证券', '贸易'],
+  '管理商科': ['管理', '工商', '行政', '人力', '市场', '营销', '物流', '供应链', '项目', '运营', '战略', '创业', 'MBA', '公共管理'],
+  '文科语言': ['语言', '文学', '历史', '哲学', '社会', '政治', '法律', '法学', '教育', '心理', '翻译', '英语', '日语', '汉语言', '传媒', '新闻', '广告', '播音', '主持', '公关', '媒体', '传播'],
+  '艺术设计': ['设计', '艺术', '美术', '动画', '建筑', '规划', '园林', '服装', '视觉', '产品', '环境设计', '数媒', '交互', '游戏', 'VR', '策展', '表演'],
+  '机械材料': ['机械', '车辆', '汽车', '航空', '航天', '船舶', '材料', '工业', '制造', '能源', '动力', '土木', '水利', '交通', '地质', '测绘', '采矿', '石油', '海洋', '地理', 'GIS', '遥感'],
+  '生物医药': ['生物', '生化', '医药', '药学', '医学', '农学', '食品', '环境', '化学', '化工', '材料科学', '生命科学', '生物医学', '生物技术', '智慧农业'],
+  '数学统计': ['数学', '统计', '应用数学', '计算科学', '运筹', '概率'],
+  '物理光电': ['物理', '光电', '天体', '核科学', '力学']
+};
+
+let allCases = [];
+let currentPage = 1;
+const pageSize = 9;
+let filteredItems = [];
+let activeQuickFilter = 'all';
+let activeTierFilter = 'all';
+
+function $(id) { return document.getElementById(id); }
+function on(el, evt, fn) { el && el.addEventListener(evt, fn); }
+
+function getSchoolTier(name) {
+  if (!name) return '双非';
+  // 1. 精确匹配
+  if (schoolTierMap[name]) return schoolTierMap[name];
+  // 2. 安全模糊匹配：映射键长度>=4，且映射键被包含在学校名中
+  // 这样 "西南大学" 不会匹配 "南大"，因为 "南大" 不在 "西南大学" 中
+  for (const [key, tier] of Object.entries(schoolTierMap)) {
+    if (key.length >= 4 && name.includes(key)) return tier;
+  }
+  // 3. 海外本科关键词
+  const s = name.toLowerCase();
+  if (s.includes('澳门') || s.includes('香港') || s.includes('academy') || 
+      s.includes('利物浦') || s.includes('诺丁汉') || s.includes('纽约') || 
+      s.includes('杜克') || s.includes('以色列') || s.includes('莫斯科') ||
+      s.includes('阿姆斯特丹') || s.includes('university') || s.includes('college') ||
+      s.includes('本科') || s.includes('海本') || s.includes('美本')) {
+    return '海外本科';
+  }
+  return '双非';
+}
+function tierClass(tier) {
+  const map = { '985': '985', '211': '211', '双非': 'shuangfei', '海外本科': 'overseas', '独立学院': 'shuangfei', '双一流': 'shuangfei' };
+  return map[tier] || 'shuangfei';
+}
+
+function tierValue(tier) {
+  return { '985': 4, '211': 3, '海外本科': 2, '双非': 1 }[tier] || 1;
+}
+
+function parseGpa(gpaStr) {
+  if (!gpaStr || gpaStr === '未填写') return NaN;
+  const match = String(gpaStr).match(/[\d.]+/);
+  if (!match) return NaN;
+  let val = parseFloat(match[0]);
+  if (isNaN(val)) return NaN;
+  if (String(gpaStr).includes('/')) {
+    const parts = String(gpaStr).split('/');
+    if (parts.length >= 2) {
+      const denom = parseFloat(parts[1]);
+      if (denom === 4) return Math.round(val / 4 * 100);
+      if (denom === 5) return Math.round(val / 5 * 100);
+      if (denom > 10) return Math.round(val);
+    }
+  }
+  if (val > 10) return Math.round(val);
+  if (val <= 4.3 && val >= 0) return Math.round(val / 4 * 100);
+  if (val <= 5.5 && val > 4.3) return Math.round(val / 5 * 100);
+  if (val <= 10 && val > 5.5) return Math.round(val / 10 * 100);
+  return Math.round(val);
+}
+
+function isRelatedMajor(a, b) {
+  if (!a || !b) return false;
+  const aLower = a.toLowerCase();
+  const bLower = b.toLowerCase();
+  for (const keywords of Object.values(majorGroups)) {
+    const aMatch = keywords.some(k => aLower.includes(k));
+    const bMatch = keywords.some(k => bLower.includes(k));
+    if (aMatch && bMatch) return true;
+  }
+  return false;
+}
+
+function parseRegions(countryStr) {
+  if (!countryStr || countryStr === '未分类') return [];
+  const str = countryStr.toLowerCase();
+  const regions = [];
+  if (str.includes('香港')) regions.push('香港');
+  if (str.includes('澳门')) regions.push('澳门');
+  if (str.includes('新加坡')) regions.push('新加坡');
+  if (str.includes('英国')) regions.push('英国');
+  if (str.includes('新西兰')) regions.push('新西兰');
+  if (str.includes('澳大利亚') || str.includes('澳洲')) regions.push('澳大利亚');
+  if (str.includes('国内')) regions.push('国内中外合办');
+  return regions;
+}
+
+async function loadCases() {
+  try {
+    const res = await fetch('cases.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const casesData = await res.json();
+    allCases = casesData.map((item, idx) => normalizeCase(item, idx));
+    initFilters();
+    renderCases();
+  } catch (err) {
+    console.error(err);
+    $('casesGrid').innerHTML = `<div class="no-results" style="display:block;">✗ 案例加载失败：${err.message}<br>请确保 cases.json 文件存在且格式正确</div>`;
+  }
+}
+
+function initFilters() {
+  const degrees = [...new Set(allCases.map(c => c.degree))].sort();
+  const results = [...new Set(allCases.map(c => c.result))].sort();
+  const standardRegions = ['香港', '澳门', '新加坡', '英国', '新西兰', '澳大利亚', '国内中外合办'];
+  
+  standardRegions.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    $('countryFilter').appendChild(opt);
+  });
+  degrees.forEach(d => {
+    const opt = document.createElement('option');
+    opt.value = d;
+    opt.textContent = d;
+    $('degreeFilter').appendChild(opt);
+  });
+  results.forEach(r => {
+    const opt = document.createElement('option');
+    opt.value = r;
+    opt.textContent = r;
+    $('resultFilter').appendChild(opt);
+  });
+}
+
+function updateCountdown() {
+  const now = new Date();
+  const target = new Date('2025-11-01T00:00:00');
+  const diff = target - now;
+  if (diff > 0) {
+    const days = Math.ceil(diff / 86400000);
+    $('countdownText').textContent = `距离NUS截止还有 ${days} 天`;
+    $('countdownBar').classList.add('show');
+  }
+}
+updateCountdown();
+
+function renderMarquee() {
+  const track = $('marqueeTrack');
+  const cards = marqueeData.map(m => `
+    <div class="marquee-card">
+      <div class="marquee-from">${m.from}</div>
+      <div class="marquee-arrow">→</div>
+      <div class="marquee-to">${m.to}</div>
+      <span class="marquee-tag">${m.tag}</span>
+    </div>
+  `).join('');
+  track.innerHTML = cards + cards;
+}
+
+function showPlanView(view) {
+  document.querySelectorAll('.plan-toggle-btn').forEach(b => b.classList.toggle('active',
+    (view === 'cards' && b.textContent.includes('卡片')) || (view === 'table' && b.textContent.includes('对比'))
+  ));
+  $('planCards').style.display = view === 'cards' ? 'grid' : 'none';
+  $('compareTable').classList.toggle('active', view === 'table');
+}
+
+function renderPlans() {
+  const wrap = $('planCards');
+  plansData.forEach(p => {
+    const card = document.createElement('article');
+    card.className = 'plan-card' + (p.featured ? ' featured' : '');
+    card.innerHTML = (p.featured ? '<span class="plan-badge">推荐</span>' : '') +
+      `<div class="plan-name">${p.name}</div>` +
+      `<div class="plan-desc">${p.desc}</div>` +
+      `<div class="plan-price">${p.price}</div>` +
+      `<ul class="plan-list">${p.services.map(s => `<li>${s}</li>`).join('')}</ul>`;
+    wrap.appendChild(card);
+  });
+}
+
+function renderFAQ() {
+  const list = $('faqList');
+  faqsData.forEach(([q, a]) => {
+    const item = document.createElement('div');
+    item.className = 'accordion-item';
+    item.innerHTML = `<button class="accordion-btn">${q}</button><div class="accordion-panel">${a}</div>`;
+    on(item.querySelector('button'), 'click', () => item.classList.toggle('open'));
+    list.appendChild(item);
+  });
+}
+
+function renderTestimonials() {
+  const box = $('testimonials');
+  testimonialsData.forEach(t => {
+    const card = document.createElement('article');
+    card.className = 'testimonial-card';
+    card.innerHTML = `
+      <div class="testimonial-avatar">${t.name[0]}</div>
+      <h3>${t.title}</h3>
+      <p>${t.text}</p>
+    `;
+    box.appendChild(card);
+  });
+}
+
+function normalizeCase(item, idx) {
+  const offers = Array.isArray(item.offers) && item.offers.length
+    ? item.offers
+    : [{ school: item.school || '待更新', major: item.major || '待更新', rank: item.result || '普通录取' }];
+  const studentSchool = item.student_school;
+  // cases.json中已包含正确的tier字段，直接使用
+  const tier = item.tier || getSchoolTier(studentSchool);
+  return {
+    id: item.id || idx + 1,
+    title: item.title || `${item.country || '地区'}${item.degree || '项目'}`,
+    student_school: studentSchool,
+    student_major: item.student_major || item.major || '专业未填写',
+    gpa: item.gpa || '未填写',
+    language_score: item.language_score || '未填写',
+    country: item.country || '未分类',
+    degree: item.degree || '未分类',
+    result: item.result || (offers[0]?.rank) || '普通录取',
+    offers: offers,
+    tier: tier,
+    entry_year: item.entry_year
+  };
+}
+
+const quickFilters = {
+  all: () => true,
+  shuangfei: c => c.tier === '双非',
+  lowgpa: c => {
+    const gpa = parseGpa(c.gpa);
+    return !isNaN(gpa) && gpa < 80;
+  },
+  transfer: c => c.offers.length > 0 && c.student_major !== c.offers[0].major && c.offers[0].major !== '待更新',
+  top10: c => c.result.includes('前10') || c.offers.some(o => o.rank.includes('前10'))
+};
+
+document.querySelectorAll('.quick-tag').forEach(tag => {
+  on(tag, 'click', () => {
+    document.querySelectorAll('.quick-tag').forEach(t => t.classList.remove('active'));
+    tag.classList.add('active');
+    activeQuickFilter = tag.dataset.filter;
+    currentPage = 1;
+    renderCases();
+  });
+});
+
+document.querySelectorAll('.tier-tag').forEach(tag => {
+  on(tag, 'click', () => {
+    document.querySelectorAll('.tier-tag').forEach(t => t.classList.remove('active'));
+    tag.classList.add('active');
+    activeTierFilter = tag.dataset.tier;
+    currentPage = 1;
+    renderCases();
+  });
+});
+
+function getFiltered() {
+  const kw = $('searchInput').value.trim().toLowerCase();
+  const c = $('countryFilter').value;
+  const d = $('degreeFilter').value;
+  const r = $('resultFilter').value;
+  return allCases.filter(item => {
+    const offerText = item.offers.map(o => `${o.school} ${o.major} ${o.rank}`).join(' ');
+    const source = `${item.title} ${item.student_school} ${item.student_major} ${item.gpa} ${item.language_score} ${offerText}`.toLowerCase();
+    return quickFilters[activeQuickFilter](item) &&
+      (activeTierFilter === 'all' || item.tier === activeTierFilter) &&
+      (!c || item.country.includes(c)) &&
+      (!d || item.degree === d) &&
+      (!r || item.result === r) &&
+      (!kw || source.includes(kw));
+  });
+}
+
+/* ========== 修改：移除人均Offer统计 ========== */
+function renderStats(items) {
+  const top10 = items.filter(c => c.result.includes('前10')).length;
+  const top50 = items.filter(c => c.result.includes('前50')).length;
+  $('statsBar').innerHTML = `
+    <div class="stat-pill"><div class="stat-number">${items.length}</div><div class="stat-label">筛选后案例</div></div>
+    <div class="stat-pill"><div class="stat-number">${top10}</div><div class="stat-label">QS前10录取</div></div>
+    <div class="stat-pill"><div class="stat-number">${top50}</div><div class="stat-label">QS前50录取</div></div>
+  `;
+}
+
+function renderCharts(items) {
+  const cc = {};
+  items.forEach(c => {
+    const regions = parseRegions(c.country);
+    regions.forEach(r => { cc[r] = (cc[r] || 0) + 1; });
+  });
+  const cs = Object.entries(cc).sort((a, b) => b[1] - a[1]);
+  const cm = Math.max(...cs.map(([, n]) => n), 1);
+  $('countryChart').innerHTML = cs.map(([k, v]) => `
+    <div class="bar-row"><div class="bar-label">${k}</div><div class="bar-track"><div class="bar-fill" style="width:${(v / cm) * 100}%"><span class="bar-value">${v}</span></div></div></div>
+  `).join('') || '<div style="color:var(--color-text-secondary);text-align:center;padding:20px;">暂无数据</div>';
+
+  const rc = {};
+  items.forEach(c => { rc[c.result] = (rc[c.result] || 0) + 1; });
+  const rs = Object.entries(rc).sort((a, b) => b[1] - a[1]);
+  const rm = Math.max(...rs.map(([, n]) => n), 1);
+  $('resultChart').innerHTML = rs.map(([k, v]) => `
+    <div class="bar-row"><div class="bar-label">${k}</div><div class="bar-track"><div class="bar-fill" style="width:${(v / rm) * 100}%"><span class="bar-value">${v}</span></div></div></div>
+  `).join('') || '<div style="color:var(--color-text-secondary);text-align:center;padding:20px;">暂无数据</div>';
+
+  const sc = {};
+  items.forEach(c => c.offers.forEach(o => { sc[o.school] = (sc[o.school] || 0) + 1; }));
+  const ss = Object.entries(sc).sort((a, b) => b[1] - a[1]).slice(0, 8);
+  const sm = Math.max(...ss.map(([, n]) => n), 1);
+  $('schoolChart').innerHTML = ss.map(([k, v], i) => `
+    <div class="bar-row"><div class="bar-label">${i + 1}. ${k.length > 8 ? k.slice(0, 8) + '..' : k}</div><div class="bar-track"><div class="bar-fill" style="width:${(v / sm) * 100}%"><span class="bar-value">${v}</span></div></div></div>
+  `).join('') || '<div style="color:var(--color-text-secondary);text-align:center;padding:20px;">暂无数据</div>';
+}
+
+/* ========== 修改：移除案例卡片上的 "N 个Offer" 标识 ========== */
+function renderCaseCard(item) {
+  const yearTag = item.entry_year ? `<span class="pill" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;">${String(item.entry_year).slice(-2)}年入学</span>` : '';
+  return `
+    <div class="case-card" onclick="openCaseModal(${item.id})">
+      <div class="case-header">
+        <div class="case-title">${item.student_school ? `案例 #${item.id} · ${item.student_school}` : `案例 #${item.id}`}</div>
+        <span class="pill pill-tier-${tierClass(item.tier)}">${item.tier}</span>
+      </div>
+      <div class="case-pills">
+        ${yearTag}
+        <span class="pill">${item.country}</span>
+        <span class="pill">${item.degree}</span>
+        <span class="pill">${item.result}</span>
+      </div>
+      <div class="case-meta">
+        <div class="meta-item"><div class="meta-label">学生专业</div><div class="meta-value">${item.student_major}</div></div>
+        <div class="meta-item"><div class="meta-label">GPA/均分</div><div class="meta-value">${item.gpa}</div></div>
+        <div class="meta-item"><div class="meta-label">语言成绩</div><div class="meta-value">${item.language_score}</div></div>
+        <div class="meta-item"><div class="meta-label">申请地区</div><div class="meta-value">${item.country}</div></div>
+      </div>
+      <div class="offer-section">
+        <div class="offer-title">🎓 录取详情（点击查看更多）</div>
+        <div class="offer-list">
+          ${item.offers.slice(0, 2).map(o => `
+            <div class="offer-item">
+              <span class="offer-school">${o.school}</span>
+              ${o.major && o.major !== '待更新' ? `<span class="offer-major">${o.major}</span>` : '<span class="offer-major"></span>'}
+              <span class="offer-rank">${o.rank}</span>
+            </div>
+          `).join('')}
+          ${item.offers.length > 2 ? `<div class="offer-more">+${item.offers.length - 2} 个更多Offer</div>` : ''}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function openCaseModal(id) {
+  const item = allCases.find(c => c.id === id);
+  if (!item) return;
+  $('modalTitle').textContent = item.student_school ? `案例 #${item.id} · ${item.student_school}` : `案例 #${item.id}`;
+  $('modalPills').innerHTML = `<span class="pill pill-tier-${tierClass(item.tier)}">${item.tier}</span><span class="pill">${item.country}</span><span class="pill">${item.degree}</span><span class="pill">${item.result}</span>`;
+  $('modalMeta').innerHTML = `
+    <div class="detail-meta-block"><label>本科院校</label><value>${item.student_school || item.tier + '院校'}</value></div>
+    <div class="detail-meta-block"><label>学生专业</label><value>${item.student_major}</value></div>
+    <div class="detail-meta-block"><label>GPA / 均分</label><value>${item.gpa}</value></div>
+    <div class="detail-meta-block"><label>语言成绩</label><value>${item.language_score}</value></div>
+  `;
+  $('modalOffers').innerHTML = item.offers.map(o => `
+    <div class="detail-offer-item">
+      <div>
+        <div class="detail-offer-school">${o.school}</div>
+        ${o.major && o.major !== '待更新' ? `<div class="detail-offer-major">${o.major}</div>` : ''}
+      </div>
+      <div class="detail-offer-rank">${o.rank}</div>
+    </div>
+  `).join('');
+  $('caseModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCaseModal() {
+  $('caseModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+on($('caseModal'), 'click', e => { if (e.target === $('caseModal')) closeCaseModal(); });
+
+function renderPagination() {
+  const total = filteredItems.length;
+  const pages = Math.ceil(total / pageSize);
+  const pag = $('pagination');
+  if (pages <= 1) { pag.innerHTML = ''; return; }
+
+  let html = `<button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} onclick="goPage(${currentPage - 1})">上一页</button>`;
+
+  const maxV = 5;
+  let sp = Math.max(1, currentPage - Math.floor(maxV / 2));
+  let ep = Math.min(pages, sp + maxV - 1);
+  if (ep - sp < maxV - 1) sp = Math.max(1, ep - maxV + 1);
+
+  if (sp > 1) { html += `<button class="page-btn" onclick="goPage(1)">1</button>`; if (sp > 2) html += `<span class="page-info">...</span>`; }
+  for (let i = sp; i <= ep; i++) html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goPage(${i})">${i}</button>`;
+  if (ep < pages) { if (ep < pages - 1) html += `<span class="page-info">...</span>`; html += `<button class="page-btn" onclick="goPage(${pages})">${pages}</button>`; }
+
+  html += `<button class="page-btn" ${currentPage === pages ? 'disabled' : ''} onclick="goPage(${currentPage + 1})">下一页</button>`;
+  html += `<span class="page-info">共 ${total} 条</span>`;
+  pag.innerHTML = html;
+}
+
+function goPage(page) {
+  const pages = Math.ceil(filteredItems.length / pageSize);
+  if (page < 1 || page > pages) return;
+  currentPage = page;
+  renderCasesPage();
+  $('casesGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderCasesPage() {
+  const start = (currentPage - 1) * pageSize;
+  const end = start + pageSize;
+  const items = filteredItems.slice(start, end);
+  const grid = $('casesGrid');
+  const noRes = $('noResults');
+
+  if (items.length === 0) {
+    grid.innerHTML = '';
+    noRes.style.display = 'block';
+    $('dataSourceTip').textContent = '';
+  } else {
+    grid.innerHTML = items.map(renderCaseCard).join('');
+    noRes.style.display = 'none';
+    $('dataSourceTip').textContent = `共 ${filteredItems.length} 条案例，当前第 ${currentPage}/${Math.ceil(filteredItems.length / pageSize)} 页，显示 ${start + 1}-${Math.min(end, filteredItems.length)} 条`;
+  }
+  renderPagination();
+}
+
+function renderCases() {
+  filteredItems = getFiltered();
+  currentPage = 1;
+  renderStats(filteredItems);
+  renderCharts(filteredItems);
+  renderCasesPage();
+}
+
+function calculateMatchScore(user, caseItem) {
+  let score = 0;
+  const reasons = [];
+  const caseTierVal = tierValue(caseItem.tier);
+  const userTierVal = tierValue(user.tier);
+  const tierDiff = caseTierVal - userTierVal;
+  
+  if (tierDiff === 0) {
+    score += 40;
+    reasons.push('同档次院校');
+  } else if (Math.abs(tierDiff) === 1) {
+    score += 20;
+    reasons.push(tierDiff > 0 ? '高一档院校' : '低一档院校');
+  }
+  
+  const userGpa = parseGpa(user.gpa);
+  const caseGpa = parseGpa(caseItem.gpa);
+  if (!isNaN(userGpa) && !isNaN(caseGpa)) {
+    const diff = Math.abs(caseGpa - userGpa);
+    if (diff <= 2) { score += 30; reasons.push('GPA高度匹配'); }
+    else if (diff <= 5) { score += 20; reasons.push('GPA接近'); }
+    else if (diff <= 10) { score += 10; reasons.push('GPA区间相似'); }
+  }
+  
+  if (user.major && caseItem.student_major) {
+    const u = user.major.toLowerCase();
+    const c = caseItem.student_major.toLowerCase();
+    if (u === c || c.includes(u) || u.includes(c)) {
+      score += 20;
+      reasons.push('同专业');
+    } else if (isRelatedMajor(u, c)) {
+      score += 10;
+      reasons.push('相关专业');
+    }
+  }
+  
+  if (user.target && caseItem.country.includes(user.target)) {
+    score += 10;
+    reasons.push('目标地区匹配');
+  }
+  
+  return { score, reasons, tierDiff, gpaDiff: caseGpa - userGpa };
+}
+
+function runEval() {
+  const school = $('evalSchool').value.trim();
+  const gpaInput = $('evalGpa').value.trim();
+  const major = $('evalMajor').value.trim();
+  const target = $('evalTarget').value;
+  
+  if (!school || !gpaInput) {
+    alert('请至少填写本科院校和GPA');
+    return;
+  }
+  
+  const user = {
+    tier: getSchoolTier(school),
+    gpa: gpaInput,
+    major: major,
+    target: target
+  };
+  
+  const scored = allCases.map(c => {
+    const { score, reasons, tierDiff, gpaDiff } = calculateMatchScore(user, c);
+    return { case: c, score, reasons, tierDiff, gpaDiff };
+  }).filter(m => m.score >= 30)
+    .sort((a, b) => b.score - a.score);
+  
+  const 冲刺 = [];
+  const 匹配 = [];
+  const 保底 = [];
+  const userGpa = parseGpa(user.gpa);
+  
+  scored.forEach(m => {
+    const caseGpa = parseGpa(m.case.gpa);
+    const caseTierVal = tierValue(m.case.tier);
+    const userTierVal = tierValue(user.tier);
+    
+    if (caseTierVal > userTierVal) {
+      冲刺.push(m);
+    } else if (caseTierVal < userTierVal) {
+      保底.push(m);
+    } else {
+      if (!isNaN(caseGpa) && !isNaN(userGpa)) {
+        if (caseGpa > userGpa + 3) 冲刺.push(m);
+        else if (caseGpa < userGpa - 5) 保底.push(m);
+        else 匹配.push(m);
+      } else {
+        匹配.push(m);
+      }
+    }
+  });
+  
+  renderEvalResult({ 冲刺, 匹配, 保底, user });
+}
+
+function renderEvalResult(result) {
+  const { 冲刺, 匹配, 保底, user } = result;
+  
+  let html = `<div style="text-align:center;margin-bottom:var(--space-6);">
+    <h3 style="font-size:var(--text-xl);margin-bottom:var(--space-2);">评估结果：${user.tier} · GPA ${user.gpa}</h3>
+    <p style="color:var(--color-text-secondary);font-size:var(--text-sm);">
+      基于 ${allCases.length} 个真实案例匹配，以下是为你生成的三档选校建议
+    </p>
+  </div>`;
+  
+  if (冲刺.length > 0) {
+    html += `
+      <div class="eval-category eval-reach">
+        <div class="eval-category-title">🚀 冲刺档（Reach）</div>
+        <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-4);">
+          背景优于你的相似案例录取了这些院校，你可以尝试冲刺
+        </p>
+        <div class="eval-grid">${冲刺.slice(0, 3).map(m => renderEvalCaseCard(m)).join('')}</div>
+      </div>
+    `;
+  }
+  
+  if (匹配.length > 0) {
+    html += `
+      <div class="eval-category eval-match">
+        <div class="eval-category-title">✅ 匹配档（Match）</div>
+        <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-4);">
+          与你背景高度相似的案例，这些院校录取概率较高
+        </p>
+        <div class="eval-grid">${匹配.slice(0, 3).map(m => renderEvalCaseCard(m)).join('')}</div>
+      </div>
+    `;
+  }
+  
+  if (保底.length > 0) {
+    html += `
+      <div class="eval-category eval-safe">
+        <div class="eval-category-title">🛡️ 保底档（Safe）</div>
+        <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-4);">
+          背景稍弱也能录取的院校，确保你有学可上
+        </p>
+        <div class="eval-grid">${保底.slice(0, 3).map(m => renderEvalCaseCard(m)).join('')}</div>
+      </div>
+    `;
+  }
+  
+  if (冲刺.length === 0 && 匹配.length === 0 && 保底.length === 0) {
+    html += `
+      <div class="eval-empty">
+        <div style="font-size:var(--text-3xl);margin-bottom:var(--space-3);">🔍</div>
+        <p>未找到完全匹配的案例，你的背景比较特殊</p>
+        <p style="font-size:var(--text-sm);margin-top:var(--space-2);">建议添加微信获取一对一评估</p>
+        <button class="btn btn-primary" onclick="openQr()" style="margin-top:var(--space-4);">添加微信咨询</button>
+      </div>
+    `;
+  } else {
+    html += `
+      <div style="text-align:center;margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--color-border);">
+        <p style="color:var(--color-text-secondary);font-size:var(--text-sm);margin-bottom:var(--space-4);">
+          想获取更精准的选校定位和文书策略？
+        </p>
+        <button class="btn btn-primary" onclick="openQr()">添加微信，获取专属方案</button>
+      </div>
+    `;
+  }
+  
+  $('evalResult').innerHTML = html;
+  $('evalResult').classList.add('show');
+  $('evalResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function renderEvalCaseCard(m) {
+  const c = m.case;
+  return `
+    <div class="eval-case-card" onclick="openCaseModal(${c.id})">
+      <div class="eval-case-header">
+        <span class="eval-case-school">${c.student_school}</span>
+        <span class="pill pill-tier-${tierClass(c.tier)}">${c.tier}</span>
+      </div>
+      <div class="eval-case-meta">${c.student_major} · GPA ${c.gpa}</div>
+      <div class="eval-case-offers">
+        ${c.offers.slice(0, 2).map(o => `
+          <div class="eval-offer-item">
+            <div>
+              <span style="font-weight:600;">${o.school}</span>
+              ${o.major && o.major !== '待更新' ? `<span style="font-size:11px;color:var(--color-text-secondary);display:block;margin-top:2px;">${o.major}</span>` : ''}
+            </div>
+            <span style="color:var(--color-accent);font-weight:700;">${o.rank}</span>
+          </div>
+        `).join('')}
+      </div>
+      <div class="eval-match-score">匹配度 ${m.score} 分：${m.reasons.join(' · ')}</div>
+    </div>
+  `;
+}
+
+on($('evalSchool'), 'input', () => {
+  const val = $('evalSchool').value.trim();
+  const tag = $('evalTierTag');
+  if (val.length >= 2) {
+    const tier = getSchoolTier(val);
+    tag.textContent = '识别为：' + tier;
+    tag.style.display = 'inline-block';
+    tag.className = 'eval-tier-tag pill-tier-' + tierClass(tier);
+  } else {
+    tag.style.display = 'none';
+  }
+});
+
+function openQr() { $('qrModal').classList.add('show'); }
+function closeQr() { $('qrModal').classList.remove('show'); }
+
+on($('qrClose'), 'click', closeQr);
+on($('qrModal'), 'click', e => { if (e.target === $('qrModal')) closeQr(); });
+on($('consultBtnHero'), 'click', openQr);
+on($('consultBtnFooter'), 'click', openQr);
+
+on($('searchInput'), 'input', () => { currentPage = 1; renderCases(); });
+on($('countryFilter'), 'change', () => { currentPage = 1; renderCases(); });
+on($('degreeFilter'), 'change', () => { currentPage = 1; renderCases(); });
+on($('resultFilter'), 'change', () => { currentPage = 1; renderCases(); });
+
+function setupUI() {
+  const header = $('topHeader');
+  const toTop = $('toTop');
+
+  on(window, 'scroll', () => {
+    if (header) header.classList.toggle('scrolled', window.scrollY > 40);
+    if (toTop) toTop.classList.toggle('show', window.scrollY > 400);
+  });
+
+  on(toTop, 'click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  on($('themeToggle'), 'click', () => document.body.classList.toggle('dark'));
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+}
+
+// Init
+if ($('marqueeTrack')) renderMarquee();
+if ($('planCards')) renderPlans();
+if ($('faqList')) renderFAQ();
+if ($('testimonials')) renderTestimonials();
+setupUI();
+</script>
+</body>
+</html>
