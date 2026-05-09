@@ -2126,17 +2126,16 @@ function on(el, evt, fn) { el && el.addEventListener(evt, fn); }
 
 function getSchoolTier(name) {
   if (!name) return '双非';
-  // 精确匹配
+  // 1. 精确匹配
   if (schoolTierMap[name]) return schoolTierMap[name];
-  // 遍历所有键，检查是否包含（优先长匹配）
-  const entries = Object.entries(schoolTierMap);
-  // 先尝试完全包含（如"中国地质大学"匹配"中国地质大学（武汉）"）
-  for (const [key, tier] of entries) {
-    if (name === key || key.includes(name) || name.includes(key)) {
-      return tier;
+  // 2. 学校名包含用户输入（用户输入简称，如"北大"匹配"北京大学"）
+  // 要求用户输入至少2个字，避免过短匹配
+  if (name.length >= 2) {
+    for (const [key, tier] of Object.entries(schoolTierMap)) {
+      if (key.includes(name)) return tier;
     }
   }
-  // 海外本科关键词
+  // 3. 海外本科关键词
   const s = name.toLowerCase();
   if (s.includes('澳门') || s.includes('香港') || s.includes('academy') || 
       s.includes('利物浦') || s.includes('诺丁汉') || s.includes('纽约') || 
@@ -2321,6 +2320,8 @@ function normalizeCase(item, idx) {
     ? item.offers
     : [{ school: item.school || '待更新', major: item.major || '待更新', rank: item.result || '普通录取' }];
   const studentSchool = item.student_school;
+  // 优先使用JSON中已有的tier字段，没有时才通过学校名识别
+  const tier = (item.tier && item.tier !== '双非') ? item.tier : getSchoolTier(studentSchool);
   return {
     id: item.id || idx + 1,
     title: item.title || `${item.country || '地区'}${item.degree || '项目'}`,
@@ -2332,7 +2333,7 @@ function normalizeCase(item, idx) {
     degree: item.degree || '未分类',
     result: item.result || (offers[0]?.rank) || '普通录取',
     offers: offers,
-    tier: item.tier || getSchoolTier(studentSchool)
+    tier: tier
   };
 }
 
