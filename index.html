@@ -2424,7 +2424,7 @@ function renderCharts(items) {
 
 /* ========== 修改：移除案例卡片上的 "N 个Offer" 标识 ========== */
 function renderCaseCard(item) {
-  const yearTag = item.entry_year ? `<span class="pill" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;">${item.entry_year}年入学</span>` : '';
+  const yearTag = item.entry_year ? `<span class="pill" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;">${String(item.entry_year).slice(-2)}年入学</span>` : '';
   return `
     <div class="case-card" onclick="openCaseModal(${item.id})">
       <div class="case-header">
@@ -2449,7 +2449,7 @@ function renderCaseCard(item) {
           ${item.offers.slice(0, 2).map(o => `
             <div class="offer-item">
               <span class="offer-school">${o.school}</span>
-              <span class="offer-major">${o.major}</span>
+              ${o.major && o.major !== '待更新' ? `<span class="offer-major">${o.major}</span>` : '<span class="offer-major"></span>'}
               <span class="offer-rank">${o.rank}</span>
             </div>
           `).join('')}
@@ -2469,13 +2469,13 @@ function openCaseModal(id) {
     <div class="detail-meta-block"><label>本科院校</label><value>${item.student_school || item.tier + '院校'}</value></div>
     <div class="detail-meta-block"><label>学生专业</label><value>${item.student_major}</value></div>
     <div class="detail-meta-block"><label>GPA / 均分</label><value>${item.gpa}</value></div>
-    <div class="detail-meta-block"><label>入学年份</label><value>${item.entry_year || '未标注'}年</value></div>
+    <div class="detail-meta-block"><label>语言成绩</label><value>${item.language_score}</value></div>
   `;
   $('modalOffers').innerHTML = item.offers.map(o => `
     <div class="detail-offer-item">
       <div>
         <div class="detail-offer-school">${o.school}</div>
-        <div class="detail-offer-major">${o.major}</div>
+        ${o.major && o.major !== '待更新' ? `<div class="detail-offer-major">${o.major}</div>` : ''}
       </div>
       <div class="detail-offer-rank">${o.rank}</div>
     </div>
@@ -2727,7 +2727,10 @@ function renderEvalCaseCard(m) {
       <div class="eval-case-offers">
         ${c.offers.slice(0, 2).map(o => `
           <div class="eval-offer-item">
-            <span style="font-weight:600;">${o.school}</span>
+            <div>
+              <span style="font-weight:600;">${o.school}</span>
+              ${o.major && o.major !== '待更新' ? `<span style="font-size:11px;color:var(--color-text-secondary);display:block;margin-top:2px;">${o.major}</span>` : ''}
+            </div>
             <span style="color:var(--color-accent);font-weight:700;">${o.rank}</span>
           </div>
         `).join('')}
