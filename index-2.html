@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DreamBridge留学中介，专注英国、香港、新加坡、澳洲留学申请。创始人NUS计算机毕业，累计服务500+学生，98%录取率，0 offer全额退款。">
+<title>DreamBridge留学｜英港新澳一站式申请服务</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "DreamBridge留学申请服务",
+  "provider": {
+    "@type": "Organization",
+    "name": "DreamBridge",
+    "url": "https://dreambridge.edu"
+  },
+  "description": "专注英联邦国家留学申请，提供DIY、半DIY、全包三种服务模式",
+  "areaServed": ["英国", "香港", "新加坡", "澳洲", "新西兰", "澳门"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "留学服务套餐",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "DIY服务",
+          "description": "材料润色与答疑、申请流程指导"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "半DIY服务",
+          "description": "材料撰写支持+策略指导+部分流程自主"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "全包服务",
+          "description": "全程代办+签证支持+流程管理，0 offer全额退款"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<base target="_blank">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Countdown Bar -->
+<div class="countdown-bar" id="countdownBar">
+  <div class="container">
+    <span>🎓 2026 Fall 申请季进行中</span>
+    <span class="countdown-pill" id="countdownText">计算中...</span>
+    <span>全包服务 0 offer 全额退款</span>
+    <button class="countdown-close" onclick="document.getElementById('countdownBar').classList.remove('show')">×</button>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="topHeader">
+  <div class="container nav-wrap">
+    <nav class="nav-links">
+      <a href="#about">中介介绍</a>
+      <a href="#plans">套餐服务</a>
+    </nav>
+    <a href="#" class="logo">Dream<span>Bridge</span></a>
+    <nav class="nav-links">
+      <a href="#cases">案例汇总</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle">🌓</button>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="container hero-content fade-in">
+    <span class="hero-tag">Your Future, Curated</span>
+    <h1 class="hero-title">为你的<span class="highlight">留学梦想</span><br>提供一站式服务</h1>
+    <p class="hero-subtitle">从选校定位、文书规划到签证落地，我们用专业与效率，陪你走向理想学府。</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary" id="consultBtnHero">立即咨询</button>
+      <a href="#evaluator" class="btn btn-secondary">智能背景评估</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value">98%</span>
+        <span class="hero-stat-label">录取率</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">3000+</span>
+        <span class="hero-stat-label">成功案例</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">500+</span>
+        <span class="hero-stat-label">签约学生</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="mouse-icon"></div>
+    <span>向下滚动</span>
+  </div>
+</section>
+
+<!-- Marquee -->
+<section class="marquee-section">
+  <div class="container">
+    <p class="section-kicker">Recent Offers</p>
+  </div>
+  <div class="marquee-track" id="marqueeTrack"></div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container about-grid fade-in">
+    <div class="about-text">
+      <p class="section-kicker">About Us</p>
+      <h2 class="section-title">专业团队，清晰路径，结果导向</h2>
+      <p>创始人毕业于新加坡国立大学计算机专业，拥有4年英联邦留学申请经验。团队累计服务500+签约学生，擅长职业规划与项目定位。服务地区覆盖英国、香港、新加坡、澳洲、新西兰、澳门。</p>
+      <div class="metrics">
+        <div class="metric-item">
+          <div class="metric-value">98%</div>
+          <div class="metric-label">录取率</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">3000+</div>
+          <div class="metric-label">成功案例</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">12年</div>
+          <div class="metric-label">行业经验</div>
+        </div>
+      </div>
+    </div>
+    <div class="team-card">
+      <h3>服务团队</h3>
+      <ul>
+        <li>🎓 选校顾问：院校匹配与策略制定</li>
+        <li>✍️ 文书导师：故事线打磨与面试辅导</li>
+        <li>📌 申请管家：节点管理与材料跟进</li>
+      </ul>
+      <p class="signature">让申请，不再焦虑。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Plans -->
+<section class="section section-alt" id="plans">
+  <div class="container fade-in">
+    <p class="section-kicker">Plans</p>
+    <h2 class="section-title">套餐服务</h2>
+    <div class="plan-toggle">
+      <button class="plan-toggle-btn active" onclick="showPlanView('cards')">卡片视图</button>
+      <button class="plan-toggle-btn" onclick="showPlanView('table')">对比视图</button>
+    </div>
+    <div class="cards-grid" id="planCards"></div>
+    <table class="compare-table" id="compareTable">
+      <thead>
+        <tr><th>服务项目</th><th>DIY服务</th><th>半DIY服务</th><th>全包服务</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>文书撰写</td><td class="icon-cross">✗ 仅润色</td><td class="icon-check">✓ 代写</td><td class="icon-check">✓ 代写</td></tr>
+        <tr><td>选校定位</td><td class="icon-cross">✗ 自主</td><td class="icon-check">✓ 指导</td><td class="icon-check">✓ 全包</td></tr>
+        <tr><td>简历制作</td><td class="icon-half">△ 润色</td><td class="icon-check">✓ 代写</td><td class="icon-check">✓ 代写</td></tr>
+        <tr><td>网申递交</td><td class="icon-cross">✗ 自主</td><td class="icon-half">△ 辅助</td><td class="icon-check">✓ 代办</td></tr>
+        <tr><td>推荐信</td><td class="icon-half">△ 润色</td><td class="icon-check">✓ 代写</td><td class="icon-check">✓ 代写</td></tr>
+        <tr><td>签证支持</td><td class="icon-cross">✗</td><td class="icon-cross">✗</td><td class="icon-check">✓</td></tr>
+        <tr><td>进度管理</td><td class="icon-cross">✗</td><td class="icon-half">△</td><td class="icon-check">✓ 专属顾问</td></tr>
+        <tr><td>退款承诺</td><td class="icon-cross">✗</td><td class="icon-cross">✗</td><td class="icon-check">✓ 0 offer全退</td></tr>
+        <tr><td>响应时间</td><td>答疑1888/年</td><td>工作日响应</td><td class="icon-check">✓ 7×16小时</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:var(--space-6);text-align:center;">
+      <a class="btn btn-primary" href="package.html" target="_blank" rel="noopener">了解详细服务流程</a>
+    </p>
+  </div>
+</section>
+
+<!-- 智能背景评估器 -->
+<section class="section" id="evaluator">
+  <div class="container fade-in">
+    <p class="section-kicker">Background Evaluator</p>
+    <h2 class="section-title">智能背景评估</h2>
+    <p style="text-align:center;color:var(--color-text-secondary);margin-bottom:var(--space-6);max-width:560px;margin-left:auto;margin-right:auto;">
+      输入你的背景信息，30秒匹配相似成功案例，获取三档选校定位建议
+    </p>
+    <div style="max-width:640px;margin:0 auto var(--space-6);background:var(--color-accent-light);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-4);text-align:center;">
+      <p style="font-size:var(--text-sm);color:var(--color-accent);font-weight:600;margin:0;">
+        ⚠️ 本评估器仅适用于大陆本科院校做简单参考定位。海本学生及需要精准选校定位的，请添加微信联系获取一对一方案。
+      </p>
+    </div>
+    
+    <div class="eval-card">
+      <div class="eval-form">
+        <div class="eval-field">
+          <label>本科院校</label>
+          <input type="text" id="evalSchool" placeholder="例如：武汉理工大学">
+          <span class="eval-tier-tag" id="evalTierTag"></span>
+        </div>
+        <div class="eval-field">
+          <label>GPA / 均分 <span style="color:var(--color-text-tertiary);font-weight:400;">(百分制或 3.5/4.0)</span></label>
+          <input type="text" id="evalGpa" placeholder="例如：85 或 3.5/4.0">
+        </div>
+        <div class="eval-field">
+          <label>本科专业</label>
+          <input type="text" id="evalMajor" placeholder="例如：计算机科学与技术">
+        </div>
+        <div class="eval-field">
+          <label>目标地区</label>
+          <select id="evalTarget">
+            <option value="">不限地区</option>
+            <option value="香港">香港</option>
+            <option value="英国">英国</option>
+            <option value="新加坡">新加坡</option>
+            <option value="澳大利亚">澳大利亚</option>
+            <option value="澳门">澳门</option>
+            <option value="新西兰">新西兰</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="runEval()" style="width:100%;margin-top:var(--space-5);">
+        🎯 立即匹配案例
+      </button>
+    </div>
+    
+    <div class="eval-result" id="evalResult"></div>
+  </div>
+</section>
+
+<!-- Cases -->
+<section class="section section-alt" id="cases">
+  <div class="container fade-in">
+    <p class="section-kicker">Cases Intelligence</p>
+    <h2 class="section-title">大型可筛选案例汇总</h2>
+    <p style="text-align:center;color:var(--color-text-secondary);font-size:var(--text-sm);margin-bottom:var(--space-4);">
+      📌 过往数据未完全统计，但所有展示案例均为真实录取案例
+    </p>
+    <div class="stats-bar" id="statsBar"></div>
+    <div class="filter-row">
+      <input type="search" class="filter-input" id="searchInput" placeholder="搜索学生学校、专业、录取院校关键词...">
+      <select class="filter-select" id="countryFilter"><option value="">全部地区</option></select>
+      <select class="filter-select" id="degreeFilter"><option value="">全部学历</option></select>
+      <select class="filter-select" id="resultFilter"><option value="">全部结果</option></select>
+    </div>
+    <div class="quick-tags" id="quickTags">
+      <span class="quick-tag active" data-filter="all">全部案例</span>
+      <span class="quick-tag" data-filter="shuangfei">🔥 双非逆袭</span>
+      <span class="quick-tag" data-filter="lowgpa">📉 低GPA录取</span>
+      <span class="quick-tag" data-filter="transfer">🔄 转专业成功</span>
+      <span class="quick-tag" data-filter="top10">🎯 QS前10</span>
+    </div>
+    <div class="tier-filter-row" id="tierFilterRow">
+      <span class="tier-filter-label">院校档次：</span>
+      <span class="tier-tag active" data-tier="all">全部</span>
+      <span class="tier-tag" data-tier="985">985</span>
+      <span class="tier-tag" data-tier="211">211</span>
+      <span class="tier-tag" data-tier="双非">双非</span>
+      <span class="tier-tag" data-tier="海外本科">海外本科</span>
+    </div>
+    <div class="charts-grid">
+      <div class="chart-card">
+        <div class="chart-title">📊 地区分布</div>
+        <div class="bar-chart" id="countryChart"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">🎯 录取结果分布</div>
+        <div class="bar-chart" id="resultChart"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">🏫 高频录取院校 Top 8</div>
+        <div class="bar-chart" id="schoolChart"></div>
+      </div>
+    </div>
+    <div class="cases-grid" id="casesGrid"></div>
+    <div class="no-results" id="noResults" style="display:none;">未找到匹配的案例，请调整筛选条件</div>
+    <div class="pagination" id="pagination"></div>
+    <p class="data-tip" id="dataSourceTip"></p>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" id="testimonials-section">
+  <div class="container fade-in">
+    <p class="section-kicker">Testimonials</p>
+    <h2 class="section-title">学生与家长评价</h2>
+    <div class="testimonials-grid" id="testimonials"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt" id="faq">
+  <div class="container fade-in">
+    <p class="section-kicker">FAQ</p>
+    <h2 class="section-title">常见问题</h2>
+    <div class="accordion" id="faqList"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+    <div>
+      <h2>联系方式</h2>
+      <p>微信：xrr13365810586</p>
+      <p>邮箱：hello@dreambridge.edu</p>
+      <p>服务地区：英国 / 香港 / 新加坡 / 澳洲 / 新西兰 / 澳门</p>
+    </div>
+    <div class="footer-actions">
+      <button class="btn btn-primary" id="consultBtnFooter">立即咨询</button>
+      <a class="btn btn-secondary" href="mailto:hello@dreambridge.edu">发送邮件</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile CTA -->
+<div class="mobile-cta" id="mobileCta">
+  <span class="mobile-cta-wx">微信：xrr13365810586</span>
+  <button class="btn btn-primary btn-sm" onclick="openQr()">立即咨询</button>
+</div>
+
+<!-- Back to Top -->
+<button class="to-top" id="toTop">↑</button>
+
+<!-- QR Modal -->
+<div class="qr-modal" id="qrModal">
+  <div class="qr-card">
+    <button class="qr-close" id="qrClose">×</button>
+    <h3>添加微信立即咨询</h3>
+    <img src="/assets/wechat-qr.jpg" alt="微信二维码" 
+         onerror="this.style.display='none';document.getElementById('qrFallback').style.display='flex';" />
+    <div id="qrFallback" class="qr-fallback" style="display:none;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+        <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        <path d="M21 21v-2a4 4 0 0 0-3-3.85"/>
+      </svg>
+      <span>微信扫码咨询</span>
+    </div>
+    <p class="qr-wxid">xrr13365810586</p>
+    <p style="font-size:var(--text-xs);color:var(--color-text-tertiary);">复制微信号，打开微信添加好友</p>
+  </div>
+</div>
+
+<!-- Case Detail Modal -->
+<div class="case-modal" id="caseModal">
+  <div class="case-detail">
+    <button class="case-detail-close" onclick="closeCaseModal()">×</button>
+    <div class="case-detail-header">
+      <h2 id="modalTitle">案例详情</h2>
+      <div class="case-pills" id="modalPills"></div>
+    </div>
+    <div class="case-detail-body">
+      <div class="case-detail-meta" id="modalMeta"></div>
+      <div class="case-detail-offers">
+        <h4>🎓 录取 Offer 详情</h4>
+        <div id="modalOffers"></div>
+      </div>
+    </div>
+    <div class="case-detail-cta">
+      <p>我的背景和他相似，想获取专属申请方案</p>
+      <button class="btn btn-primary" onclick="openQr()">添加微信咨询</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
