@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "src": "/cases.json", "dest": "/cases.json" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
