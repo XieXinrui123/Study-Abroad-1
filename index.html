@@ -2203,7 +2203,7 @@ function parseRegions(countryStr) {
 
 async function loadCases() {
   try {
-    const res = await fetch('cases.json');
+    const res = await fetch('public/cases.json');
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const casesData = await res.json();
     allCases = casesData.map((item, idx) => normalizeCase(item, idx));
