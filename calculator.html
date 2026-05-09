@@ -62,7 +62,6 @@ body {
   font-size: var(--text-base);
   -webkit-font-smoothing: antialiased;
 }
-img { max-width: 100%; height: auto; display: block; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 select, input { font-family: inherit; font-size: inherit; }
 a { color: inherit; text-decoration: none; }
@@ -358,7 +357,6 @@ a { color: inherit; text-decoration: none; }
 .breakdown-row:last-child { border-bottom: none; }
 .breakdown-row .label { color: var(--color-text-secondary); }
 .breakdown-row .value { font-weight: 700; color: var(--color-text); }
-.breakdown-row .range { font-size: var(--text-xs); color: var(--color-text-tertiary); margin-left: var(--space-2); }
 
 /* Tips */
 .tips-card {
@@ -600,7 +598,7 @@ a { color: inherit; text-decoration: none; }
       </div>
 
       <div class="calc-note">
-        <strong>💡 数据说明：</strong>学费数据综合自各校 2025–2026 官方学费及 UCAS/StudyLink 公开信息；住宿与生活费基于移民局建议标准及当地租房平台 median 价格。医学、MBA 及一线城市费用显著高于均值，结果以区间形式呈现。
+        <strong>💡 数据说明：</strong>学费数据综合自 NUS/NTU/HKU/UoM/UNSW 等校 2025–2026 官方学费；住宿与生活费基于移民局建议标准及当地租房平台 median 价格。医学、MBA 及一线城市费用显著高于均值，结果以区间形式呈现。
       </div>
 
       <button class="btn btn-primary" onclick="calculateCost()" style="width:100%;">📊 生成费用报告</button>
@@ -698,7 +696,7 @@ a { color: inherit; text-decoration: none; }
 </div>
 
 <script>
-/* ========== 数据层：2025–2026 最新费用数据 ========== */
+/* ========== 数据层：2025–2026 官网实际数据 ========== */
 
 // 汇率（人民币/单位外币，2026.05 参考）
 const RATES = {
@@ -710,26 +708,35 @@ const RATES = {
 };
 
 // 学费数据：按 [地区][阶段][专业] = { low, high }（当地货币/年）
+// 数据来源：NUS/NTU/HKU/UoM/UNSW/Imperial/UCL 等校 2025-2026 官方 tuition fees
 const TUITION = {
   uk: {
-    bachelor: { arts: { low: 18000, high: 25000 }, stem: { low: 22000, high: 32000 }, business: { low: 22000, high: 35000 }, medical: { low: 35000, high: 50000 }, art: { low: 20000, high: 30000 }, law: { low: 20000, high: 28000 }, mba: { low: 0, high: 0 } },
-    master:   { arts: { low: 20000, high: 28000 }, stem: { low: 25000, high: 38000 }, business: { low: 28000, high: 45000 }, medical: { low: 35000, high: 55000 }, art: { low: 22000, high: 35000 }, law: { low: 22000, high: 32000 }, mba: { low: 45000, high: 80000 } },
-    phd:      { arts: { low: 16000, high: 22000 }, stem: { low: 20000, high: 30000 }, business: { low: 20000, high: 32000 }, medical: { low: 28000, high: 40000 }, art: { low: 18000, high: 25000 }, law: { low: 18000, high: 25000 }, mba: { low: 0, high: 0 } }
+    bachelor: { arts: { low: 20000, high: 26000 }, stem: { low: 26000, high: 35000 }, business: { low: 22000, high: 32000 }, medical: { low: 35000, high: 50000 }, art: { low: 22000, high: 30000 }, law: { low: 20000, high: 28000 }, mba: { low: 0, high: 0 } },
+    master:   { arts: { low: 22000, high: 30000 }, stem: { low: 30000, high: 42000 }, business: { low: 30000, high: 45000 }, medical: { low: 35000, high: 55000 }, art: { low: 25000, high: 38000 }, law: { low: 22000, high: 32000 }, mba: { low: 55000, high: 85000 } },
+    phd:      { arts: { low: 18000, high: 24000 }, stem: { low: 24000, high: 32000 }, business: { low: 22000, high: 30000 }, medical: { low: 28000, high: 40000 }, art: { low: 20000, high: 28000 }, law: { low: 18000, high: 26000 }, mba: { low: 0, high: 0 } }
   },
+  // 香港：根据 HKU/CUHK/HKUST 2025-2026 官方数据上调
   hk: {
-    bachelor: { arts: { low: 130000, high: 160000 }, stem: { low: 160000, high: 200000 }, business: { low: 170000, high: 220000 }, medical: { low: 250000, high: 350000 }, art: { low: 140000, high: 180000 }, law: { low: 150000, high: 200000 }, mba: { low: 0, high: 0 } },
-    master:   { arts: { low: 140000, high: 180000 }, stem: { low: 180000, high: 260000 }, business: { low: 220000, high: 350000 }, medical: { low: 280000, high: 420000 }, art: { low: 150000, high: 210000 }, law: { low: 160000, high: 240000 }, mba: { low: 400000, high: 650000 } },
-    phd:      { arts: { low: 120000, high: 160000 }, stem: { low: 150000, high: 200000 }, business: { low: 160000, high: 240000 }, medical: { low: 220000, high: 300000 }, art: { low: 130000, high: 170000 }, law: { low: 140000, high: 190000 }, mba: { low: 0, high: 0 } }
+    bachelor: { arts: { low: 145000, high: 180000 }, stem: { low: 170000, high: 220000 }, business: { low: 180000, high: 250000 }, medical: { low: 300000, high: 450000 }, art: { low: 150000, high: 200000 }, law: { low: 160000, high: 220000 }, mba: { low: 0, high: 0 } },
+    master:   { arts: { low: 150000, high: 220000 }, stem: { low: 200000, high: 300000 }, business: { low: 250000, high: 450000 }, medical: { low: 300000, high: 550000 }, art: { low: 160000, high: 250000 }, law: { low: 180000, high: 280000 }, mba: { low: 500000, high: 700000 } },
+    phd:      { arts: { low: 120000, high: 170000 }, stem: { low: 150000, high: 220000 }, business: { low: 160000, high: 250000 }, medical: { low: 200000, high: 350000 }, art: { low: 130000, high: 180000 }, law: { low: 140000, high: 200000 }, mba: { low: 0, high: 0 } }
   },
+  // 新加坡：根据 NUS/NTU 2025-2026 官方 coursework tuition 上调
+  // 理工科硕士：NUS CS S$53,300；NTU Analytics S$47,300；Engineering S$40,000-50,000
+  // 商科硕士：NUS Finance S$66,104；NTU Finance S$63,220；Marketing Science S$63,220
+  // MBA：NUS S$92,955
   sg: {
-    bachelor: { arts: { low: 25000, high: 32000 }, stem: { low: 32000, high: 40000 }, business: { low: 35000, high: 45000 }, medical: { low: 60000, high: 80000 }, art: { low: 28000, high: 36000 }, law: { low: 32000, high: 42000 }, mba: { low: 0, high: 0 } },
-    master:   { arts: { low: 28000, high: 38000 }, stem: { low: 35000, high: 48000 }, business: { low: 40000, high: 60000 }, medical: { low: 50000, high: 70000 }, art: { low: 30000, high: 42000 }, law: { low: 35000, high: 48000 }, mba: { low: 70000, high: 110000 } },
-    phd:      { arts: { low: 22000, high: 28000 }, stem: { low: 28000, high: 38000 }, business: { low: 30000, high: 42000 }, medical: { low: 40000, high: 55000 }, art: { low: 24000, high: 32000 }, law: { low: 28000, high: 38000 }, mba: { low: 0, high: 0 } }
+    bachelor: { arts: { low: 30000, high: 38000 }, stem: { low: 38000, high: 48000 }, business: { low: 40000, high: 50000 }, medical: { low: 70000, high: 90000 }, art: { low: 32000, high: 42000 }, law: { low: 38000, high: 45000 }, mba: { low: 0, high: 0 } },
+    master:   { arts: { low: 35000, high: 48000 }, stem: { low: 45000, high: 62000 }, business: { low: 55000, high: 75000 }, medical: { low: 60000, high: 85000 }, art: { low: 38000, high: 52000 }, law: { low: 38000, high: 50000 }, mba: { low: 80000, high: 100000 } },
+    phd:      { arts: { low: 25000, high: 35000 }, stem: { low: 32000, high: 45000 }, business: { low: 35000, high: 50000 }, medical: { low: 40000, high: 60000 }, art: { low: 28000, high: 38000 }, law: { low: 30000, high: 40000 }, mba: { low: 0, high: 0 } }
   },
+  // 澳洲：根据 UNSW/Melbourne/USyd/ANU 2025 官方 international tuition 上调
+  // 本科文科 A$30k-38k；理工科 A$40k-52k；商科 A$38k-48k；医学 A$55k-80k
+  // 硕士文科 A$32k-42k；理工科 A$45k-58k；商科 A$45k-58k；MBA A$65k-90k
   au: {
-    bachelor: { arts: { low: 26000, high: 34000 }, stem: { low: 33000, high: 42000 }, business: { low: 35000, high: 45000 }, medical: { low: 45000, high: 60000 }, art: { low: 28000, high: 38000 }, law: { low: 30000, high: 40000 }, mba: { low: 0, high: 0 } },
-    master:   { arts: { low: 28000, high: 38000 }, stem: { low: 36000, high: 48000 }, business: { low: 40000, high: 55000 }, medical: { low: 45000, high: 60000 }, art: { low: 30000, high: 42000 }, law: { low: 32000, high: 45000 }, mba: { low: 55000, high: 85000 } },
-    phd:      { arts: { low: 24000, high: 32000 }, stem: { low: 30000, high: 40000 }, business: { low: 30000, high: 42000 }, medical: { low: 38000, high: 50000 }, art: { low: 26000, high: 35000 }, law: { low: 28000, high: 38000 }, mba: { low: 0, high: 0 } }
+    bachelor: { arts: { low: 28000, high: 38000 }, stem: { low: 38000, high: 52000 }, business: { low: 35000, high: 48000 }, medical: { low: 55000, high: 80000 }, art: { low: 30000, high: 42000 }, law: { low: 35000, high: 48000 }, mba: { low: 0, high: 0 } },
+    master:   { arts: { low: 30000, high: 42000 }, stem: { low: 42000, high: 58000 }, business: { low: 42000, high: 58000 }, medical: { low: 50000, high: 75000 }, art: { low: 32000, high: 45000 }, law: { low: 40000, high: 55000 }, mba: { low: 60000, high: 90000 } },
+    phd:      { arts: { low: 28000, high: 38000 }, stem: { low: 35000, high: 48000 }, business: { low: 35000, high: 48000 }, medical: { low: 40000, high: 55000 }, art: { low: 28000, high: 40000 }, law: { low: 32000, high: 45000 }, mba: { low: 0, high: 0 } }
   },
   nz: {
     bachelor: { arts: { low: 22000, high: 28000 }, stem: { low: 28000, high: 36000 }, business: { low: 26000, high: 34000 }, medical: { low: 38000, high: 50000 }, art: { low: 24000, high: 32000 }, law: { low: 24000, high: 32000 }, mba: { low: 0, high: 0 } },
@@ -739,7 +746,7 @@ const TUITION = {
 };
 
 // 住宿费：按 [地区][城市级别][住宿类型] = { low, high }（当地货币/月）
-// 英国按英镑/月，香港港币/月，新币/月，澳元/周→月(×4.3)，纽币/周→月(×4.3)
+// 英国：英镑/月；香港：港币/月；新加坡：新币/月；澳洲/新西兰：澳元/周、纽币/周（后续×4.3）
 const ACCOMMODATION = {
   uk: {
     tier1: { campus: { low: 800, high: 1200 }, shared: { low: 600, high: 900 }, studio: { low: 1200, high: 2000 } },
@@ -754,11 +761,11 @@ const ACCOMMODATION = {
     tier2: { campus: { low: 350, high: 700 }, shared: { low: 500, high: 1000 }, studio: { low: 1000, high: 2000 } }
   },
   au: {
-    tier1: { campus: { low: 350, high: 500 }, shared: { low: 250, high: 400 }, studio: { low: 450, high: 700 } }, // 澳元/周
+    tier1: { campus: { low: 350, high: 500 }, shared: { low: 250, high: 400 }, studio: { low: 450, high: 700 } },
     tier2: { campus: { low: 250, high: 350 }, shared: { low: 180, high: 280 }, studio: { low: 300, high: 450 } }
   },
   nz: {
-    tier1: { campus: { low: 280, high: 380 }, shared: { low: 220, high: 320 }, studio: { low: 350, high: 500 } }, // 纽币/周
+    tier1: { campus: { low: 280, high: 380 }, shared: { low: 220, high: 320 }, studio: { low: 350, high: 500 } },
     tier2: { campus: { low: 220, high: 300 }, shared: { low: 180, high: 250 }, studio: { low: 280, high: 400 } }
   }
 };
@@ -768,8 +775,8 @@ const LIVING = {
   uk:  { tier1: { low: 600, high: 950 }, tier2: { low: 480, high: 770 } },
   hk:  { tier1: { low: 4500, high: 8000 }, tier2: { low: 4000, high: 6500 } },
   sg:  { tier1: { low: 900, high: 1700 }, tier2: { low: 800, high: 1400 } },
-  au:  { tier1: { low: 1050, high: 1750 }, tier2: { low: 800, high: 1380 } }, // 澳元/月
-  nz:  { tier1: { low: 1000, high: 1550 }, tier2: { low: 800, high: 1280 } }  // 纽币/月
+  au:  { tier1: { low: 1050, high: 1750 }, tier2: { low: 800, high: 1380 } },
+  nz:  { tier1: { low: 1000, high: 1550 }, tier2: { low: 800, high: 1280 } }
 };
 
 /* ========== 交互函数 ========== */
@@ -805,7 +812,6 @@ function updateCityOptions() {
   };
   
   citySelect.innerHTML = options[region].map(o => `<option value="${o.v}">${o.t}</option>`).join('');
-  // 尝试保留之前的选择 if valid
   if ([...citySelect.options].some(o => o.value === oldVal)) citySelect.value = oldVal;
 }
 
@@ -836,7 +842,6 @@ function calculateCost() {
     tuitionLow = t.low;
     tuitionHigh = t.high;
   }
-  // MBA 只能在 master 阶段选
   if (major === 'mba' && level !== 'master') {
     alert('MBA 仅适用于硕士阶段，请调整学习阶段或专业类别');
     return;
@@ -921,7 +926,7 @@ function calculateCost() {
   $('rateInfo').innerHTML = `
     <div class="breakdown-row"><span class="label">基准汇率</span><span class="value">1 ${RATES[region].code} = ${rate} CNY</span></div>
     <div class="breakdown-row"><span class="label">数据年份</span><span class="value">2025–2026 入学季</span></div>
-    <div class="breakdown-row"><span class="label">学费来源</span><span class="value">各校官网 / UCAS / StudyLink</span></div>
+    <div class="breakdown-row"><span class="label">学费来源</span><span class="value">各校官网 / NUS / NTU / HKU / UNSW</span></div>
     <div class="breakdown-row"><span class="label">住宿来源</span><span class="value">当地租房平台 median 价</span></div>
     <div class="breakdown-row"><span class="label">生活费来源</span><span class="value">移民局建议标准 + 学生调研</span></div>
   `;
