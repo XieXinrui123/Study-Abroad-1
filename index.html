@@ -2330,7 +2330,8 @@ function normalizeCase(item, idx) {
     degree: item.degree || '未分类',
     result: item.result || (offers[0]?.rank) || '普通录取',
     offers: offers,
-    tier: tier
+    tier: tier,
+    entry_year: item.entry_year
   };
 }
 
