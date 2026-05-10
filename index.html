@@ -1043,6 +1043,167 @@ ul, ol { list-style: none; }
   font-weight: 500;
 }
 
+/* ===== 服务流程可视化 ===== */
+.process-section {
+  position: relative;
+  overflow: hidden;
+}
+.process-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 0%, var(--color-primary-glow) 0%, transparent 60%);
+  pointer-events: none;
+}
+.process-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+  position: relative;
+  margin-top: var(--space-12);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.process-track::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 60px;
+  right: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-success));
+  border-radius: 2px;
+  z-index: 0;
+}
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  max-width: 150px;
+}
+.process-step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 3px solid var(--color-primary);
+  display: grid;
+  place-items: center;
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  position: relative;
+  box-shadow: var(--shadow-md);
+  transition: all var(--duration-base) var(--ease-out);
+}
+.process-step:nth-child(2) .process-step-icon { border-color: var(--color-primary); }
+.process-step:nth-child(3) .process-step-icon { border-color: var(--color-primary-dark); }
+.process-step:nth-child(4) .process-step-icon { border-color: var(--color-secondary); }
+.process-step:nth-child(5) .process-step-icon { border-color: #0EA5E9; }
+.process-step:nth-child(6) .process-step-icon { border-color: var(--color-success); }
+.process-step:hover .process-step-icon {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px var(--color-primary-glow);
+}
+.process-step-num {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+}
+.process-step h4 {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+  line-height: 1.3;
+}
+.process-step p {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+.process-step time {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+}
+.process-cta {
+  text-align: center;
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+.process-cta p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-5);
+}
+@keyframes processGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+  50% { box-shadow: 0 0 0 8px rgba(37, 99, 235, 0.08); }
+}
+.process-step-icon.pulse {
+  animation: processGlow 3s ease-in-out infinite;
+}
+@media (max-width: 768px) {
+  .process-track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-6);
+    max-width: 400px;
+  }
+  .process-track::before {
+    top: 0;
+    bottom: 0;
+    left: 27px;
+    right: auto;
+    width: 3px;
+    height: auto;
+    background: linear-gradient(180deg, var(--color-primary), var(--color-secondary), var(--color-success));
+  }
+  .process-step {
+    flex-direction: row;
+    text-align: left;
+    gap: var(--space-4);
+    max-width: 100%;
+    align-items: center;
+  }
+  .process-step-icon {
+    flex-shrink: 0;
+    margin-bottom: 0;
+    width: 48px;
+    height: 48px;
+    font-size: var(--text-lg);
+  }
+  .process-step-num {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    top: -6px;
+    right: -6px;
+  }
+}
+
 /* ===== 套餐服务 ===== */
 .plan-toggle {
   display: flex;
@@ -1631,6 +1792,7 @@ ul, ol { list-style: none; }
 }
 </style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
@@ -1788,6 +1950,87 @@ ul, ol { list-style: none; }
         <li>申请管家：节点管理与材料跟进</li>
       </ul>
       <p class="signature">让申请，不再焦虑。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 服务流程可视化 ===== -->
+<section class="section process-section" id="process">
+  <div class="container fade-in">
+    <p class="section-kicker">Process</p>
+    <h2 class="section-title" style="text-align:center;">六步搞定留学申请</h2>
+    <p style="text-align:center;color:var(--color-text-secondary);font-size:var(--text-md);max-width:520px;margin:0 auto var(--space-8);">从免费咨询到录取签证，每一步都有专业顾问全程陪伴，让你心中有数</p>
+    <div class="process-track stagger-children">
+      <div class="process-step">
+        <div class="process-step-icon pulse">
+          &#128172;
+          <span class="process-step-num">1</span>
+        </div>
+        <div>
+          <h4>免费咨询</h4>
+          <p>了解你的背景和目标，初步判断可行性</p>
+          <time>30分钟</time>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-icon">
+          &#127919;
+          <span class="process-step-num">2</span>
+        </div>
+        <div>
+          <h4>背景评估</h4>
+          <p>智能匹配+人工分析，输出三档选校方案</p>
+          <time>1-2天</time>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-icon">
+          &#128221;
+          <span class="process-step-num">3</span>
+        </div>
+        <div>
+          <h4>签约定校</h4>
+          <p>确认服务模式和目标院校清单</p>
+          <time>1周内</time>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-icon">
+          &#128221;
+          <span class="process-step-num">4</span>
+        </div>
+        <div>
+          <h4>文书打磨</h4>
+          <p>不限次数修改，直到满意为止</p>
+          <time>2-4周</time>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-icon">
+          &#128640;
+          <span class="process-step-num">5</span>
+        </div>
+        <div>
+          <h4>网申递交</h4>
+          <p>专属顾问全程代办，实时同步进度</p>
+          <time>按节点</time>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-icon">
+          &#127891;
+          <span class="process-step-num">6</span>
+        </div>
+        <div>
+          <h4>录取签证</h4>
+          <p>Offer比较、签证办理、行前指导</p>
+          <time>持续跟进</time>
+        </div>
+      </div>
+    </div>
+    <div class="process-cta">
+      <p style="margin-bottom:var(--space-4);">不确定自己适合哪种服务模式？先做个免费评估</p>
+      <a href="evaluator.html" class="btn btn-primary">&#127919; 免费背景评估</a>
     </div>
   </div>
 </section>
