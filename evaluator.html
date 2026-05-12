@@ -883,28 +883,29 @@ const schoolTierMap = {
 };
 
 const majorGroups = {
-  '计算机科学': ['计算机', '软件', '信息', '信息系统', '信息工程', '信息管理与信息系统', '信息管理', '网络安全', '物联网', '区块链', '数字媒体技术', '网络工程', '新媒体', '网络与新媒体', '计算机系统工程', '土木+计算机', '人工智能', '数据科学', '大数据'],
-  '人工智能与数据科学': ['人工智能', 'AI', '数据科学', '大数据', '智能科学', '机器人', '智能医学工程', '生物信息', '计算机', '软件', '物联网', '区块链'],
-  '软件工程': ['软件', '软件工程', '网络安全', '物联网', '区块链', '计算机', '人工智能', '大数据', '数据科学'],
-  '电子工程': ['电子', '微电子', '电子科学与技术', '电子电气', '电子电气工程', '集成电路', '半导体', '光电', '光电工程'],
-  '通信工程': ['通信', '通信工程', '信号', '电信', '网络工程', '数字媒体技术'],
-  '电气与自动化': ['电气', '电气工程', '电气自动化', '电气工程及其自动化', '自动化', '测控', '测控技术与仪器', '控制', '电路'],
-  '金融': ['金融', '投资', '银行', '证券', '金融工程', '金融数学', '金融科技', '保险'],
-  '经济与会计': ['经济', '经济学', '会计', '财务', '财务管理', '财政学', '税务', '审计', '国贸', '国际商务', '国际经济法', '贸易', '商务英语', '政治经济学', '保险', '投资', '房地产', '市场营销'],
-  '工商管理': ['工商管理', '行政管理', '公共管理', '公共事业管理', '管理', '人力', '人力资源管理', '公共政策', '物流', '物流管理', '供应链', '项目', '项目管理', '国际商贸', '国际旅游管理', '艺术管理', '电子商务', '旅游管理'],
-  '市场营销': ['市场营销', '房地产', '广告学', '公关', '公共关系', '传媒', '品牌'],
-  '法学': ['法律', '法学', '国际经济法', '社会', '社会工作', '社会学', '政治', '国际关系', '公共政策'],
-  '教育学': ['教育', '教育学', '汉语国际教育', '播音主持', '体育'],
-  '语言与翻译': ['语言', '文学', '汉语言文学', '汉语语言文学', '翻译', '英语', '日语', '商务英语', '汉语国际教育'],
-  '传媒与新闻': ['传媒', '新闻学', '广告学', '公共关系', '传播', '新媒体', '网络与新媒体', '创意媒体', '数字媒体艺术', '播音主持'],
-  '艺术设计': ['设计', '艺术', '美术', '动画', '视觉', '产品', '环境设计', '交互', '游戏', 'VR', '策展', '服装设计', '表演', '表演艺术', '戏剧影视', '电影', '国标舞', '创意媒体', '工业设计', '数字媒体艺术'],
-  '建筑与规划': ['建筑', '建筑学', '规划', '城乡规划', '园林', '风景园林'],
-  '机械工程': ['机械', '机械工程', '车辆工程', '汽车', '航空', '航天', '船舶', '工业', '制造', '能源', '动力', '生物医学工程'],
-  '土木工程': ['土木', '土木工程', '交通', '水利', '地质', '地理', '地理信息系统', '测绘', '采矿', '石油', '海洋', '海洋学', '安全工程'],
-  '材料与化工': ['材料', '化学', '化学工程', '应用化学', '制药'],
-  '生物与医药': ['生物', '生物技术', '生物信息', '医药', '药学', '医学', '兽医', '农学', '智慧农业', '农业资源与环境', '食品', '食品科学', '生命科学', '生物医学', '公共卫生', '生物医学工程', '智能医学工程', '环境', '环境工程'],
-  '数学与统计': ['数学', '统计', '应用数学', '计算科学', '运筹', '概率', '金融数学', '数据科学', '大数据'],
-  '物理与光电': ['物理', '物理学', '光电', '天体', '核科学', '力学']
+  // 各大类严格独立，关键词精确不跨界。一个案例的 student_major 必须命中某个大类的 keywords 才算匹配。
+  '计算机科学':         ['计算机', '软件工程', '网络工程', '网络安全', '物联网', '区块链', '信息系统', '信息工程', '数字媒体技术', '计算机系统工程', '信息管理与信息系统'],
+  '人工智能与数据科学': ['人工智能', '数据科学', '大数据', '智能科学', '机器人'],
+  '软件工程':           ['软件工程'],
+  '电子工程':           ['电子', '微电子', '电子科学与技术', '集成电路', '半导体', '电子电气', '电子电气工程'],
+  '通信工程':           ['通信', '通信工程', '信号', '电信'],
+  '电气与自动化':       ['电气', '电气工程', '电气自动化', '电气工程及其自动化', '自动化', '测控', '测控技术与仪器'],
+  '金融':               ['金融', '投资', '银行', '证券', '金融工程', '金融数学', '金融科技'],
+  '经济与会计':         ['经济学', '经济', '会计', '财务', '财务管理', '审计', '财政学', '税务', '国贸', '国际商务'],
+  '工商管理':           ['工商管理', '行政管理', '公共管理', '公共事业管理', '人力资源', '人力', '物流管理', '物流', '供应链', '项目管理', '电子商务', '旅游管理'],
+  '市场营销':           ['市场营销'],
+  '法学':               ['法律', '法学'],
+  '教育学':             ['教育学', '教育', '体育', '汉语国际教育'],
+  '语言与翻译':         ['英语', '翻译', '日语', '汉语言文学', '汉语国际教育', '语言学', '文学'],
+  '传媒与新闻':         ['传媒', '新闻学', '传播', '新媒体', '播音主持', '网络与新媒体', '广告学'],
+  '艺术设计':           ['设计', '艺术', '美术', '动画', '视觉传达', '服装设计', '交互设计', '游戏设计', '表演', '表演艺术', '戏剧影视', '电影', '创意媒体', '工业设计', '数字媒体艺术', '摄影'],
+  '建筑与规划':         ['建筑学', '建筑', '城乡规划', '规划', '风景园林', '园林'],
+  '机械工程':           ['机械', '机械工程', '车辆工程', '汽车工程', '工业工程', '制造', '能源', '动力工程', '航空航天', '船舶'],
+  '土木工程':           ['土木工程', '土木', '水利工程', '交通工程', '地质', '地理信息', '测绘', '采矿', '石油工程', '海洋'],
+  '材料与化工':         ['材料', '材料科学', '化学', '化学工程', '应用化学'],
+  '生物与医药':         ['生物', '生物技术', '生物信息', '药学', '医学', '农学', '食品科学', '食品', '生命科学', '公共卫生', '环境科学'],
+  '数学与统计':         ['数学', '统计学', '应用数学'],
+  '物理与光电':         ['物理学', '物理', '光电', '核科学', '力学']
 };
 
 let allCases = [];
@@ -956,22 +957,44 @@ function parseGpa(gpaStr) {
   if (val <= 10 && val > 5.5) return Math.round(val / 10 * 100);
   return Math.round(val);
 }
+// 判断学校所在地区是否与目标地区匹配（用于 offers 级别过滤）
+const regionKeywords = {
+  '香港': ['香港', '港大', '港中文', '港科技', '港科大', '港城市', '港城大', '港理工', '港浸会', '岭南', '港教育', '教大', '港演艺', '港恒生', '都会', '树仁'],
+  '英国': ['伦敦', '帝国', 'ICL', 'UCL', 'LSE', '爱丁堡', '曼彻斯特', '曼大', '布里斯托', '华威', '格拉斯哥', '伯明翰', '南安普顿', '利兹', '杜伦', '谢菲尔德', '诺丁汉', '纽卡斯尔', '兰卡斯特', '约克', '埃克塞特', '卡迪夫', '利物浦', '雷丁', '贝尔法斯特', '阿伯丁', '圣安德鲁斯', '拉夫堡', '苏塞克斯', '莱斯特', '萨里', '斯旺西', '伦敦大学', 'KCL', 'QM'],
+  '新加坡': ['新加坡', '新国立', '国立', '南洋', 'NUS', 'NTU', '新加坡国立', '南洋理工', '新跃', '科廷新加坡', 'SIM', 'PSB'],
+  '澳大利亚': ['澳大利亚', '澳洲', '悉尼', '墨尔本', '澳国立', 'ANU', '昆士兰', '昆士', '新南威尔士', 'UNSW', '莫纳什', 'Monash', '西澳', '阿德莱德', '阿德', '悉尼大学', '墨尔本大学', '澳洲国立', '格里菲斯', '麦考瑞', '皇家墨尔本', 'UTS', '昆士兰大学', '西悉尼', '纽卡斯尔澳洲'],
+  '澳门': ['澳门', '澳大', '澳科大', '澳城大', '澳理工', '澳旅游', '圣若瑟', '镜湖'],
+  '新西兰': ['新西兰', '奥克兰', '奥塔哥', '坎特伯雷', '惠灵顿', '梅西', '怀卡托', '林肯', '坎大', '维大']
+};
+
+function isOfferInRegion(schoolName, targetRegion) {
+  if (!targetRegion || !schoolName) return true;
+  const keywords = regionKeywords[targetRegion];
+  if (!keywords) return true;
+  const s = schoolName.toLowerCase();
+  return keywords.some(k => s.includes(k.toLowerCase()));
+}
+
 function isRelatedMajor(a, b) {
   if (!a || !b) return false;
   const aLower = a.toLowerCase();
   const bLower = b.toLowerCase();
 
-  // 如果a是majorGroups的key（用户选的大类名），直接用其keywords匹配b
+  // 策略1：a 是下拉框中的大类名 → 用该类 keywords 严格匹配 b
   for (const [groupName, keywords] of Object.entries(majorGroups)) {
     if (aLower === groupName.toLowerCase()) {
       return keywords.some(k => bLower.includes(k));
     }
+  }
+
+  // 策略2：b 是下拉框中的大类名 → 同理反向匹配
+  for (const [groupName, keywords] of Object.entries(majorGroups)) {
     if (bLower === groupName.toLowerCase()) {
       return keywords.some(k => aLower.includes(k));
     }
   }
 
-  // fallback：逐组匹配
+  // 策略3（fallback）：a、b 都是自由文本 → 必须落在同一大类才相关
   for (const keywords of Object.values(majorGroups)) {
     const aMatch = keywords.some(k => aLower.includes(k));
     const bMatch = keywords.some(k => bLower.includes(k));
@@ -1080,8 +1103,15 @@ function runEval() {
     const { score, reasons, tierDiff, gpaDiff } = calculateMatchScore(user, c);
     return { case: c, score, reasons, tierDiff, gpaDiff };
   }).filter(m => {
-    // 强制专业相关性：用户选了目标专业时，只保留专业相关的案例
+    // 硬过滤1：用户选了目标专业时，必须专业相关
     if (user.major && !isRelatedMajor(user.major, m.case.student_major)) return false;
+    // 硬过滤2：用户选了目标地区时，案例 country 必须包含该地区
+    if (user.target && !m.case.country.includes(user.target)) return false;
+    // 硬过滤3：用户选了目标地区时，案例必须有至少一个该地区 offer
+    if (user.target) {
+      const hasTargetOffer = m.case.offers.some(o => isOfferInRegion(o.school, user.target));
+      if (!hasTargetOffer) return false;
+    }
     return m.score >= 30;
   }).sort((a, b) => b.score - a.score);
   
@@ -1130,7 +1160,7 @@ function renderEvalResult(result) {
         <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-4);">
           背景优于你的相似案例录取了这些院校，你可以尝试冲刺
         </p>
-        <div class="eval-grid">${冲刺.slice(0, 3).map(m => renderEvalCaseCard(m)).join('')}</div>
+        <div class="eval-grid">${冲刺.slice(0, 3).map(m => renderEvalCaseCard(m, user.target)).join('')}</div>
       </div>
     `;
   }
@@ -1142,7 +1172,7 @@ function renderEvalResult(result) {
         <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-4);">
           与你背景高度相似的案例，这些院校录取概率较高
         </p>
-        <div class="eval-grid">${匹配.slice(0, 3).map(m => renderEvalCaseCard(m)).join('')}</div>
+        <div class="eval-grid">${匹配.slice(0, 3).map(m => renderEvalCaseCard(m, user.target)).join('')}</div>
       </div>
     `;
   }
@@ -1154,7 +1184,7 @@ function renderEvalResult(result) {
         <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-4);">
           背景稍弱也能录取的院校，确保你有学可上
         </p>
-        <div class="eval-grid">${保底.slice(0, 3).map(m => renderEvalCaseCard(m)).join('')}</div>
+        <div class="eval-grid">${保底.slice(0, 3).map(m => renderEvalCaseCard(m, user.target)).join('')}</div>
       </div>
     `;
   }
@@ -1184,17 +1214,21 @@ function renderEvalResult(result) {
   $('evalResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-function renderEvalCaseCard(m) {
+function renderEvalCaseCard(m, userTarget) {
   const c = m.case;
+  // 只展示目标地区的 offer；未选地区时展示全部
+  const displayOffers = userTarget
+    ? c.offers.filter(o => isOfferInRegion(o.school, userTarget))
+    : c.offers;
   return `
-    <div class="eval-case-card" onclick="openCaseModal(${c.id})">
+    <div class="eval-case-card" onclick="openCaseModal(${c.id}, '${userTarget || ''}')">
       <div class="eval-case-header">
         <span class="eval-case-school">${c.student_school}</span>
         <span class="pill pill-tier-${tierClass(c.tier)}">${c.tier}</span>
       </div>
       <div class="eval-case-meta">本科：${c.student_major} · GPA ${c.gpa}</div>
       <div class="eval-case-offers">
-        ${c.offers.slice(0, 2).map(o => `
+        ${displayOffers.slice(0, 2).map(o => `
           <div class="eval-offer-item">
             <div>
               <span style="font-weight:600;">${o.school}</span>
@@ -1209,9 +1243,18 @@ function renderEvalCaseCard(m) {
   `;
 }
 
-function openCaseModal(id) {
+let currentModalTarget = '';
+
+function openCaseModal(id, userTarget) {
+  currentModalTarget = userTarget || '';
   const item = allCases.find(c => c.id === id);
   if (!item) return;
+
+  // modal 中也只展示目标地区的 offer
+  const displayOffers = userTarget
+    ? item.offers.filter(o => isOfferInRegion(o.school, userTarget))
+    : item.offers;
+
   $('modalTitle').textContent = item.student_school ? `案例 #${item.id} · ${item.student_school}` : `案例 #${item.id}`;
   $('modalPills').innerHTML = `<span class="pill pill-tier-${tierClass(item.tier)}">${item.tier}</span><span class="pill">${item.country}</span><span class="pill">${item.degree}</span><span class="pill">${item.result}</span>`;
   $('modalMeta').innerHTML = `
@@ -1220,7 +1263,7 @@ function openCaseModal(id) {
     <div class="detail-meta-block"><label>GPA / 均分</label><value>${item.gpa}</value></div>
     <div class="detail-meta-block"><label>语言成绩</label><value>${item.language_score}</value></div>
   `;
-  $('modalOffers').innerHTML = item.offers.map(o => `
+  $('modalOffers').innerHTML = displayOffers.map(o => `
     <div class="detail-offer-item">
       <div>
         <div class="detail-offer-school">${o.school}</div>
