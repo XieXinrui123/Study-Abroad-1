@@ -10526,7 +10526,7 @@
   },
   {
     "id": 462,
-    "student_school": "",
+    "student_school": "杭州电子科技大学",
     "student_major": "网络工程",
     "gpa": "80",
     "language_score": "未填写",
@@ -10566,7 +10566,7 @@
   },
   {
     "id": 464,
-    "student_school": "",
+    "student_school": "深圳大学",
     "student_major": "心理学",
     "gpa": "81",
     "language_score": "7",
@@ -10611,7 +10611,7 @@
   },
   {
     "id": 466,
-    "student_school": "",
+    "student_school": "成都大学",
     "student_major": "汉语言文学",
     "gpa": "83",
     "language_score": "未填写",
@@ -10651,7 +10651,7 @@
   },
   {
     "id": 468,
-    "student_school": "",
+    "student_school": "河南大学",
     "student_major": "传媒",
     "gpa": "84",
     "language_score": "未填写",
@@ -10701,18 +10701,18 @@
   },
   {
     "id": 470,
-    "student_school": "",
+    "student_school": "浙江传媒学院",
     "student_major": "网络与新媒体",
     "gpa": "84.94",
     "language_score": "5.5(4.5)",
     "country": "香港",
     "degree": "硕士",
-    "result": "海外名校",
+    "result": "中外合办",
     "offers": [
       {
         "school": "北师珠港浸会",
         "major": "待更新",
-        "rank": "海外名校"
+        "rank": "中外合办"
       }
     ],
     "entry_year": 2024,
@@ -10741,7 +10741,7 @@
   },
   {
     "id": 472,
-    "student_school": "",
+    "student_school": "长沙理工大学",
     "student_major": "土木",
     "gpa": "85",
     "language_score": "6",
@@ -10766,7 +10766,7 @@
   },
   {
     "id": 473,
-    "student_school": "",
+    "student_school": "深圳大学",
     "student_major": "生物",
     "gpa": "85.1",
     "language_score": "6.5",
@@ -10861,7 +10861,7 @@
   },
   {
     "id": 477,
-    "student_school": "",
+    "student_school": "黑龙江大学",
     "student_major": "汉语国际教育",
     "gpa": "86",
     "language_score": "6.5",
@@ -10875,7 +10875,7 @@
         "rank": "QS前100"
       }
     ],
-    "entry_year": 2024,
+    "entry_year": 2025,
     "tier": "双非",
     "note": "非应届"
   },
@@ -10926,7 +10926,7 @@
   },
   {
     "id": 480,
-    "student_school": "",
+    "student_school": "安徽建筑大学",
     "student_major": "房地产",
     "gpa": "86.5",
     "language_score": "未填写",
@@ -10940,13 +10940,13 @@
         "rank": "QS前100"
       }
     ],
-    "entry_year": 2024,
+    "entry_year": 2025,
     "tier": "双非",
     "note": ""
   },
   {
     "id": 481,
-    "student_school": "",
+    "student_school": "长沙理工大学",
     "student_major": "土木工程",
     "gpa": "87",
     "language_score": "6.5",
@@ -10956,16 +10956,16 @@
     "offers": [
       {
         "school": "南洋理工大学",
-        "major": "待更新",
+        "major": "土木工程",
         "rank": "QS前50"
       },
       {
         "school": "香港理工大学",
-        "major": "待更新",
+        "major": "土木工程",
         "rank": "QS前100"
       }
     ],
-    "entry_year": 2024,
+    "entry_year": 2025,
     "tier": "双非",
     "note": ""
   },
@@ -10996,7 +10996,7 @@
   },
   {
     "id": 483,
-    "student_school": "",
+    "student_school": "温州大学",
     "student_major": "翻译",
     "gpa": "87",
     "language_score": "7",
@@ -11046,7 +11046,7 @@
   },
   {
     "id": 485,
-    "student_school": "",
+    "student_school": "桂林师范大学",
     "student_major": "体育",
     "gpa": "87",
     "language_score": "未填写",
@@ -11121,7 +11121,7 @@
   },
   {
     "id": 488,
-    "student_school": "",
+    "student_school": "广东外语外贸大学",
     "student_major": "软件工程",
     "gpa": "88",
     "language_score": "90(21)",
@@ -11145,7 +11145,7 @@
         "rank": "QS前100"
       }
     ],
-    "entry_year": 2024,
+    "entry_year": 2025,
     "tier": "双非",
     "note": ""
   },
@@ -11176,7 +11176,7 @@
   },
   {
     "id": 490,
-    "student_school": "",
+    "student_school": "天津体育学院",
     "student_major": "国标舞",
     "gpa": "88",
     "language_score": "未填写",
@@ -11190,24 +11190,24 @@
         "rank": "QS前50"
       }
     ],
-    "entry_year": 2024,
+    "entry_year": 2025,
     "tier": "双非",
     "note": ""
   },
   {
     "id": 491,
-    "student_school": "",
+    "student_school": "湖南工业大学",
     "student_major": "数字媒体技术",
     "gpa": "88",
     "language_score": "未填写",
     "country": "未分类",
     "degree": "硕士",
-    "result": "海外名校",
+    "result": "中外合办",
     "offers": [
       {
         "school": "西交利物浦大学",
-        "major": "待更新",
-        "rank": "海外名校"
+        "major": "数据科学",
+        "rank": "中外合办"
       }
     ],
     "entry_year": 2024,
@@ -11341,7 +11341,7 @@
   },
   {
     "id": 498,
-    "student_school": "",
+    "student_school": "中国人民公安大学",
     "student_major": "法律",
     "gpa": "78",
     "language_score": "六级",
