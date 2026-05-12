@@ -295,107 +295,95 @@ ul, ol { list-style: none; }
 .eval-match .match-score-badge { background: #f0fdf4; color: #059669; border: 1px solid #bbf7d0; }
 .eval-safe .match-score-badge { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
 
-/* 咨询按钮（卡片级别） */
-.case-card-cta {
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px dashed var(--color-border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.case-card-cta-text {
-  font-size: 11px;
-  color: var(--color-text-tertiary);
-}
-.case-card-cta-btn {
-  padding: 5px 12px;
+/* 匹配度分数 badge */
+.match-score-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 3px 10px;
   border-radius: 20px;
   font-size: 11px;
   font-weight: 700;
-  background: var(--color-accent);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: all 200ms ease;
-  box-shadow: 0 2px 8px rgba(255,107,53,0.3);
+  letter-spacing: 0.3px;
 }
-.case-card-cta-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255,107,53,0.4);
-}
+.eval-reach .match-score-badge { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.eval-match .match-score-badge { background: #f0fdf4; color: #059669; border: 1px solid #bbf7d0; }
+.eval-safe .match-score-badge { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
 
-/* 每档底部咨询引导条 */
+/* 每档底部轻量引导 */
 .tier-consult-bar {
-  margin-top: 16px;
-  padding: 14px 18px;
-  border-radius: 12px;
+  margin-top: 14px;
+  padding: 12px 16px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  font-size: 12px;
 }
-.eval-reach .tier-consult-bar { background: linear-gradient(135deg, #fef2f2, #fff5f5); border: 1px solid #fecaca; }
-.eval-match .tier-consult-bar { background: linear-gradient(135deg, #f0fdf4, #f5fff7); border: 1px solid #bbf7d0; }
-.eval-safe .tier-consult-bar { background: linear-gradient(135deg, #eff6ff, #f5f8ff); border: 1px solid #bfdbfe; }
-.tier-consult-bar p { font-size: 13px; font-weight: 600; margin: 0; }
+.tier-consult-bar p { font-weight: 600; margin: 0; }
+.eval-reach .tier-consult-bar { background: #fef2f2; border: 1px solid #fecaca; }
 .eval-reach .tier-consult-bar p { color: #b91c1c; }
+.eval-match .tier-consult-bar { background: #f0fdf4; border: 1px solid #bbf7d0; }
 .eval-match .tier-consult-bar p { color: #047857; }
+.eval-safe .tier-consult-bar { background: #eff6ff; border: 1px solid #bfdbfe; }
 .eval-safe .tier-consult-bar p { color: #1d4ed8; }
 
-/* 结果底部多渠道咨询 */
-.result-cta-section {
+/* 底部CTA */
+.result-cta {
   margin-top: 48px;
-  padding: 32px;
-  background: linear-gradient(135deg, #0f1c2e 0%, #1a3a5c 40%, #1e4d8b 100%);
-  border-radius: 20px;
+  padding: 36px 32px;
+  background: linear-gradient(135deg, #0f1c2e, #152d4a);
+  border-radius: var(--radius-xl);
   text-align: center;
   color: #fff;
-  position: relative;
-  overflow: hidden;
 }
-.result-cta-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 20% 80%, rgba(47, 128, 237, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
-}
-.result-cta-section > * { position: relative; z-index: 1; }
 .result-cta-title {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 8px;
 }
-.result-cta-subtitle {
+.result-cta-desc {
   font-size: 14px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.7);
   margin-bottom: 24px;
 }
-.result-cta-channels {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+.result-cta-btns {
+  display: flex;
+  justify-content: center;
   gap: 12px;
-  max-width: 600px;
-  margin: 0 auto;
+  flex-wrap: wrap;
 }
-.result-cta-channel {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 12px;
-  padding: 16px;
+.result-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 200ms ease;
-  backdrop-filter: blur(4px);
+  border: none;
+  text-decoration: none;
 }
-.result-cta-channel:hover {
-  background: rgba(255,255,255,0.18);
+.result-cta-btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255,107,53,0.35);
+}
+.result-cta-btn-primary:hover {
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,107,53,0.45);
 }
-.result-cta-channel-icon { font-size: 24px; margin-bottom: 8px; }
-.result-cta-channel-label { font-size: 13px; font-weight: 700; color: #fff; }
-.result-cta-channel-desc { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 4px; }
+.result-cta-btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.result-cta-btn-secondary:hover {
+  background: rgba(255,255,255,0.18);
+}
 
 /* 智能评估器样式 */
 .eval-card {
@@ -1291,24 +1279,19 @@ function runEval() {
 
 function renderEvalResult(result) {
   const { 冲刺, 匹配, 保底, user } = result;
-  const targetLabel = user.target || '不限地区';
-  const majorLabel = user.major || '不限专业';
+  const totalCount = 冲刺.length + 匹配.length + 保底.length;
 
-  // 头部：个人信息摘要卡片
+  // 概览
   let html = `
-    <div style="max-width:680px;margin:0 auto var(--space-8);background:linear-gradient(135deg, #0f1c2e, #1a3a5c);border-radius:var(--radius-xl);padding:var(--space-6) var(--space-8);color:#fff;text-align:center;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;">
-      <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%, rgba(47,128,237,0.25) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%);"></div>
-      <div style="position:relative;z-index:1;">
-        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:0.6;margin-bottom:8px;">评估概览</div>
-        <div style="display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px;">
-          <span style="font-size:22px;font-weight:800;">${user.tier}</span>
-          <span style="opacity:0.4;">|</span>
-          <span style="font-size:22px;font-weight:800;">GPA ${user.gpa}</span>
-        </div>
-        <div style="font-size:13px;opacity:0.75;margin-top:4px;">
-          ${majorLabel !== '不限专业' ? `目标专业：${majorLabel}` : ''}${majorLabel !== '不限专业' && targetLabel !== '不限地区' ? ' · ' : ''}${targetLabel !== '不限地区' ? `目标地区：${targetLabel}` : ''}
-        </div>
+    <div style="max-width:720px;margin:0 auto var(--space-8);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-6) var(--space-8);box-shadow:var(--shadow-sm);text-align:center;">
+      <div style="display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:4px;">
+        <span style="font-size:20px;font-weight:800;color:var(--color-text);">${user.tier}</span>
+        <span style="color:var(--color-border);font-weight:300;">|</span>
+        <span style="font-size:20px;font-weight:800;color:var(--color-text);">GPA ${user.gpa}</span>
+        ${user.major ? `<span style="color:var(--color-border);font-weight:300;">|</span><span style="font-size:15px;color:var(--color-text-secondary);">${user.major}</span>` : ''}
+        ${user.target ? `<span style="color:var(--color-border);font-weight:300;">|</span><span style="font-size:15px;color:var(--color-text-secondary);">${user.target}</span>` : ''}
       </div>
+      <div style="font-size:13px;color:var(--color-text-tertiary);margin-top:8px;">从 ${allCases.length} 个案例中筛选出 ${totalCount} 个匹配结果</div>
     </div>
   `;
 
@@ -1316,14 +1299,12 @@ function renderEvalResult(result) {
   if (冲刺.length > 0) {
     html += `
       <div class="eval-category eval-reach">
-        <div class="eval-category-title">🚀 冲刺档（Reach）</div>
-        <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-4);">
-          背景优于你的相似案例录取了这些院校，你可以尝试冲刺
-        </p>
+        <div class="eval-category-title">冲刺档</div>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:var(--space-4);margin-top:-8px;">背景更优的相似案例也拿到了这些录取，你可以尝试申请</p>
         <div class="eval-grid">${冲刺.slice(0, 3).map(m => renderEvalCaseCard(m, user.target)).join('')}</div>
         <div class="tier-consult-bar">
-          <p>想知道自己冲刺这些院校的概率？</p>
-          <button class="case-card-cta-btn" onclick="openQr()">免费咨询冲刺策略</button>
+          <p>冲刺这些院校需要什么准备？</p>
+          <button onclick="openQr()" style="padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;background:var(--color-accent);color:#fff;border:none;cursor:pointer;transition:opacity 200ms;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">咨询冲刺策略</button>
         </div>
       </div>
     `;
@@ -1333,14 +1314,12 @@ function renderEvalResult(result) {
   if (匹配.length > 0) {
     html += `
       <div class="eval-category eval-match">
-        <div class="eval-category-title">✅ 匹配档（Match）</div>
-        <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-4);">
-          与你背景高度相似的案例，这些院校录取概率较高
-        </p>
+        <div class="eval-category-title">匹配档</div>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:var(--space-4);margin-top:-8px;">与你背景高度相似的案例，录取概率较高</p>
         <div class="eval-grid">${匹配.slice(0, 3).map(m => renderEvalCaseCard(m, user.target)).join('')}</div>
         <div class="tier-consult-bar">
-          <p>获取这些院校的详细申请方案</p>
-          <button class="case-card-cta-btn" onclick="openQr()">获取匹配院校方案</button>
+          <p>了解这些院校的申请细节和时间规划</p>
+          <button onclick="openQr()" style="padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;background:var(--color-accent);color:#fff;border:none;cursor:pointer;transition:opacity 200ms;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">获取申请方案</button>
         </div>
       </div>
     `;
@@ -1350,60 +1329,41 @@ function renderEvalResult(result) {
   if (保底.length > 0) {
     html += `
       <div class="eval-category eval-safe">
-        <div class="eval-category-title">🛡️ 保底档（Safe）</div>
-        <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-bottom:var(--space-4);">
-          背景稍弱也能录取的院校，确保你有学可上
-        </p>
+        <div class="eval-category-title">保底档</div>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:var(--space-4);margin-top:-8px;">背景稍弱也有录取记录的院校，确保有学可上</p>
         <div class="eval-grid">${保底.slice(0, 3).map(m => renderEvalCaseCard(m, user.target)).join('')}</div>
         <div class="tier-consult-bar">
-          <p>了解保底院校的申请时间节点</p>
-          <button class="case-card-cta-btn" onclick="openQr()">咨询保底规划</button>
+          <p>保底院校的申请时间节点和注意事项</p>
+          <button onclick="openQr()" style="padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;background:var(--color-accent);color:#fff;border:none;cursor:pointer;transition:opacity 200ms;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">咨询保底规划</button>
         </div>
       </div>
     `;
   }
 
   // 无结果
-  if (冲刺.length === 0 && 匹配.length === 0 && 保底.length === 0) {
+  if (totalCount === 0) {
     html += `
       <div class="eval-empty">
         <div style="font-size:var(--text-3xl);margin-bottom:var(--space-3);">🔍</div>
-        <p>未找到完全匹配的案例，你的背景比较特殊</p>
-        <p style="font-size:var(--text-sm);margin-top:var(--space-2);">建议添加微信获取一对一评估</p>
-        <button class="btn btn-primary" onclick="openQr()" style="margin-top:var(--space-4);">添加微信咨询</button>
-      </div>
-    `;
-  } else {
-    // 底部多渠道CTA
-    html += `
-      <div class="result-cta-section">
-        <div class="result-cta-title">选校有方向了？下一步该怎么做</div>
-        <div class="result-cta-subtitle">DreamBridge 提供一站式留学申请服务，让你的申请事半功倍</div>
-        <div class="result-cta-channels">
-          <div class="result-cta-channel" onclick="openQr()">
-            <div class="result-cta-channel-icon">💬</div>
-            <div class="result-cta-channel-label">微信咨询</div>
-            <div class="result-cta-channel-desc">1v1专属留学规划</div>
-          </div>
-          <div class="result-cta-channel" onclick="copyWechat()">
-            <div class="result-cta-channel-icon">📋</div>
-            <div class="result-cta-channel-label">复制微信号</div>
-            <div class="result-cta-channel-desc">xxr13365810586</div>
-          </div>
-          <a class="result-cta-channel" href="mailto:496680190@qq.com" style="text-decoration:none;color:inherit;">
-            <div class="result-cta-channel-icon">📧</div>
-            <div class="result-cta-channel-label">邮件咨询</div>
-            <div class="result-cta-channel-desc">496680190@qq.com</div>
-          </a>
-          <a class="result-cta-channel" href="index.html#about" style="text-decoration:none;color:inherit;">
-            <div class="result-cta-channel-icon">🎓</div>
-            <div class="result-cta-channel-label">了解服务</div>
-            <div class="result-cta-channel-desc">查看申请套餐</div>
-          </a>
-        </div>
+        <p>未找到匹配案例，你的背景比较特殊</p>
+        <p style="font-size:var(--text-sm);margin-top:var(--space-2);">建议联系专业顾问做一对一评估</p>
+        <button class="btn btn-primary" onclick="openQr()" style="margin-top:var(--space-4);">联系咨询</button>
       </div>
     `;
   }
+
+  // 底部CTA
+  html += `
+    <div class="result-cta">
+      <div class="result-cta-title">选校有方向了，下一步做什么</div>
+      <div class="result-cta-desc">DreamBridge 提供全程留学申请服务，从选校定位到签证办理一站式解决</div>
+      <div class="result-cta-btns">
+        <button class="result-cta-btn result-cta-btn-primary" onclick="openQr()">💬 微信咨询</button>
+        <a class="result-cta-btn result-cta-btn-secondary" href="mailto:496680190@qq.com">📧 邮件咨询</a>
+        <button class="result-cta-btn result-cta-btn-secondary" onclick="copyWechat()">📋 复制微信号</button>
+      </div>
+    </div>
+  `;
 
   $('evalResult').innerHTML = html;
   $('evalResult').classList.add('show');
@@ -1413,7 +1373,7 @@ function renderEvalResult(result) {
 function copyWechat() {
   const wxid = 'xxr13365810586';
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(wxid).then(() => alert('微信号 ' + wxid + ' 已复制到剪贴板'));
+    navigator.clipboard.writeText(wxid).then(() => alert('微信号已复制'));
   } else {
     const ta = document.createElement('textarea');
     ta.value = wxid;
@@ -1421,7 +1381,7 @@ function copyWechat() {
     ta.select();
     document.execCommand('copy');
     document.body.removeChild(ta);
-    alert('微信号 ' + wxid + ' 已复制到剪贴板');
+    alert('微信号已复制');
   }
 }
 
@@ -1432,11 +1392,12 @@ function renderEvalCaseCard(m, userTarget) {
     : c.offers;
   return `
     <div class="eval-case-card" onclick="openCaseModal(${c.id}, '${userTarget || ''}')">
+      <span class="match-score-badge">${m.score} 分</span>
       <div class="eval-case-header">
         <span class="eval-case-school">${c.student_school}</span>
         <span class="pill pill-tier-${tierClass(c.tier)}">${c.tier}</span>
       </div>
-      <div class="eval-case-meta">本科：${c.student_major} · GPA ${c.gpa}</div>
+      <div class="eval-case-meta">${c.student_major} · GPA ${c.gpa}</div>
       <div class="eval-case-offers">
         ${displayOffers.slice(0, 2).map(o => `
           <div class="eval-offer-item">
@@ -1447,13 +1408,6 @@ function renderEvalCaseCard(m, userTarget) {
             <span style="color:var(--color-accent);font-weight:700;">${o.rank}</span>
           </div>
         `).join('')}
-      </div>
-      <div class="match-score-badge">
-        <span>匹配度 ${m.score} 分</span>
-      </div>
-      <div class="case-card-cta">
-        <span class="case-card-cta-text">背景和他相似？</span>
-        <button class="case-card-cta-btn" onclick="event.stopPropagation(); openQr()">获取专属方案</button>
       </div>
     </div>
   `;
