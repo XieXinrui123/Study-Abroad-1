@@ -654,6 +654,7 @@ ul, ol { list-style: none; }
 }
 </style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
@@ -702,8 +703,32 @@ ul, ol { list-style: none; }
           <input type="text" id="evalGpa" placeholder="例如：85 或 3.5/4.0">
         </div>
         <div class="eval-field">
-          <label>本科专业</label>
-          <input type="text" id="evalMajor" placeholder="例如：计算机科学与技术">
+          <label>目标专业</label>
+          <select id="evalMajor">
+            <option value="">不限专业</option>
+            <option value="计算机科学">计算机科学</option>
+            <option value="人工智能与数据科学">人工智能与数据科学</option>
+            <option value="软件工程">软件工程</option>
+            <option value="电子工程">电子工程</option>
+            <option value="通信工程">通信工程</option>
+            <option value="电气与自动化">电气与自动化</option>
+            <option value="金融">金融</option>
+            <option value="经济与会计">经济与会计</option>
+            <option value="工商管理">工商管理</option>
+            <option value="市场营销">市场营销</option>
+            <option value="法学">法学</option>
+            <option value="教育学">教育学</option>
+            <option value="语言与翻译">语言与翻译</option>
+            <option value="传媒与新闻">传媒与新闻</option>
+            <option value="艺术设计">艺术设计</option>
+            <option value="建筑与规划">建筑与规划</option>
+            <option value="机械工程">机械工程</option>
+            <option value="土木工程">土木工程</option>
+            <option value="材料与化工">材料与化工</option>
+            <option value="生物与医药">生物与医药</option>
+            <option value="数学与统计">数学与统计</option>
+            <option value="物理与光电">物理与光电</option>
+          </select>
         </div>
         <div class="eval-field">
           <label>目标地区</label>
@@ -858,16 +883,28 @@ const schoolTierMap = {
 };
 
 const majorGroups = {
-  '计算机软件': ['计算机', '软件', '信息', '人工智能', 'AI', '数据科学', '大数据', '网络安全', '物联网', '自动化', '智能科学', '计算', '区块链', '机器人'],
-  '电子信息': ['电子', '通信', '微电子', '集成电路', '半导体', '光电', '电气', '信号', '电路', '控制', '电信'],
-  '金融经济': ['金融', '经济', '会计', '财务', '投资', '保险', '税务', '审计', '财政', '国贸', '商务', '银行', '证券', '贸易'],
-  '管理商科': ['管理', '工商', '行政', '人力', '市场', '营销', '物流', '供应链', '项目', '运营', '战略', '创业', 'MBA', '公共管理'],
-  '文科语言': ['语言', '文学', '历史', '哲学', '社会', '政治', '法律', '法学', '教育', '心理', '翻译', '英语', '日语', '汉语言', '传媒', '新闻', '广告', '播音', '主持', '公关', '媒体', '传播'],
-  '艺术设计': ['设计', '艺术', '美术', '动画', '建筑', '规划', '园林', '服装', '视觉', '产品', '环境设计', '数媒', '交互', '游戏', 'VR', '策展', '表演'],
-  '机械材料': ['机械', '车辆', '汽车', '航空', '航天', '船舶', '材料', '工业', '制造', '能源', '动力', '土木', '水利', '交通', '地质', '测绘', '采矿', '石油', '海洋', '地理', 'GIS', '遥感'],
-  '生物医药': ['生物', '生化', '医药', '药学', '医学', '农学', '食品', '环境', '化学', '化工', '材料科学', '生命科学', '生物医学', '生物技术', '智慧农业'],
-  '数学统计': ['数学', '统计', '应用数学', '计算科学', '运筹', '概率'],
-  '物理光电': ['物理', '光电', '天体', '核科学', '力学']
+  '计算机科学': ['计算机', '软件', '信息', '信息系统', '信息工程', '信息管理与信息系统', '信息管理', '网络安全', '物联网', '区块链', '数字媒体技术', '网络工程', '新媒体', '网络与新媒体', '计算机系统工程', '土木+计算机'],
+  '人工智能与数据科学': ['人工智能', 'AI', '数据科学', '大数据', '智能科学', '机器人', '智能医学工程', '生物信息'],
+  '软件工程': ['软件', '软件工程', '网络安全', '物联网', '区块链'],
+  '电子工程': ['电子', '微电子', '电子科学与技术', '电子电气', '电子电气工程', '集成电路', '半导体', '光电', '光电工程'],
+  '通信工程': ['通信', '通信工程', '信号', '电信', '网络工程', '数字媒体技术'],
+  '电气与自动化': ['电气', '电气工程', '电气自动化', '电气工程及其自动化', '自动化', '测控', '测控技术与仪器', '控制', '电路'],
+  '金融': ['金融', '投资', '银行', '证券', '金融工程', '金融数学', '金融科技', '保险'],
+  '经济与会计': ['经济', '经济学', '会计', '财务', '财务管理', '财政学', '税务', '审计', '国贸', '国际商务', '国际经济法', '贸易', '商务英语', '政治经济学', '保险', '投资', '房地产', '市场营销'],
+  '工商管理': ['工商管理', '行政管理', '公共管理', '公共事业管理', '管理', '人力', '人力资源管理', '公共政策', '物流', '物流管理', '供应链', '项目', '项目管理', '国际商贸', '国际旅游管理', '艺术管理', '电子商务', '旅游管理'],
+  '市场营销': ['市场营销', '房地产', '广告学', '公关', '公共关系', '传媒', '品牌'],
+  '法学': ['法律', '法学', '国际经济法', '社会', '社会工作', '社会学', '政治', '国际关系', '公共政策'],
+  '教育学': ['教育', '教育学', '汉语国际教育', '播音主持', '体育'],
+  '语言与翻译': ['语言', '文学', '汉语言文学', '汉语语言文学', '翻译', '英语', '日语', '商务英语', '汉语国际教育'],
+  '传媒与新闻': ['传媒', '新闻学', '广告学', '公共关系', '传播', '新媒体', '网络与新媒体', '创意媒体', '数字媒体艺术', '播音主持'],
+  '艺术设计': ['设计', '艺术', '美术', '动画', '视觉', '产品', '环境设计', '交互', '游戏', 'VR', '策展', '服装设计', '表演', '表演艺术', '戏剧影视', '电影', '国标舞', '创意媒体', '工业设计', '数字媒体艺术'],
+  '建筑与规划': ['建筑', '建筑学', '规划', '城乡规划', '园林', '风景园林'],
+  '机械工程': ['机械', '机械工程', '车辆工程', '汽车', '航空', '航天', '船舶', '工业', '制造', '能源', '动力', '生物医学工程'],
+  '土木工程': ['土木', '土木工程', '交通', '水利', '地质', '地理', '地理信息系统', '测绘', '采矿', '石油', '海洋', '海洋学', '安全工程'],
+  '材料与化工': ['材料', '化学', '化学工程', '应用化学', '制药'],
+  '生物与医药': ['生物', '生物技术', '生物信息', '医药', '药学', '医学', '兽医', '农学', '智慧农业', '农业资源与环境', '食品', '食品科学', '生命科学', '生物医学', '公共卫生', '生物医学工程', '智能医学工程', '环境', '环境工程'],
+  '数学与统计': ['数学', '统计', '应用数学', '计算科学', '运筹', '概率', '金融数学', '数据科学', '大数据'],
+  '物理与光电': ['物理', '物理学', '光电', '天体', '核科学', '力学']
 };
 
 let allCases = [];
@@ -923,6 +960,18 @@ function isRelatedMajor(a, b) {
   if (!a || !b) return false;
   const aLower = a.toLowerCase();
   const bLower = b.toLowerCase();
+
+  // 如果a是majorGroups的key（用户选的大类名），直接用其keywords匹配b
+  for (const [groupName, keywords] of Object.entries(majorGroups)) {
+    if (aLower === groupName.toLowerCase()) {
+      return keywords.some(k => bLower.includes(k));
+    }
+    if (bLower === groupName.toLowerCase()) {
+      return keywords.some(k => aLower.includes(k));
+    }
+  }
+
+  // fallback：逐组匹配
   for (const keywords of Object.values(majorGroups)) {
     const aMatch = keywords.some(k => aLower.includes(k));
     const bMatch = keywords.some(k => bLower.includes(k));
@@ -994,10 +1043,10 @@ function calculateMatchScore(user, caseItem) {
     const c = caseItem.student_major.toLowerCase();
     if (u === c || c.includes(u) || u.includes(c)) {
       score += 20;
-      reasons.push('同专业');
+      reasons.push('目标专业匹配');
     } else if (isRelatedMajor(u, c)) {
       score += 10;
-      reasons.push('相关专业');
+      reasons.push('本科背景相关');
     }
   }
   
@@ -1140,7 +1189,7 @@ function renderEvalCaseCard(m) {
         <span class="eval-case-school">${c.student_school}</span>
         <span class="pill pill-tier-${tierClass(c.tier)}">${c.tier}</span>
       </div>
-      <div class="eval-case-meta">${c.student_major} · GPA ${c.gpa}</div>
+      <div class="eval-case-meta">本科：${c.student_major} · GPA ${c.gpa}</div>
       <div class="eval-case-offers">
         ${c.offers.slice(0, 2).map(o => `
           <div class="eval-offer-item">
@@ -1164,7 +1213,7 @@ function openCaseModal(id) {
   $('modalPills').innerHTML = `<span class="pill pill-tier-${tierClass(item.tier)}">${item.tier}</span><span class="pill">${item.country}</span><span class="pill">${item.degree}</span><span class="pill">${item.result}</span>`;
   $('modalMeta').innerHTML = `
     <div class="detail-meta-block"><label>本科院校</label><value>${item.student_school || item.tier + '院校'}</value></div>
-    <div class="detail-meta-block"><label>学生专业</label><value>${item.student_major}</value></div>
+    <div class="detail-meta-block"><label>学生本科专业</label><value>${item.student_major}</value></div>
     <div class="detail-meta-block"><label>GPA / 均分</label><value>${item.gpa}</value></div>
     <div class="detail-meta-block"><label>语言成绩</label><value>${item.language_score}</value></div>
   `;
