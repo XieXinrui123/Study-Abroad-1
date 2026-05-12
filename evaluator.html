@@ -258,11 +258,144 @@ ul, ol { list-style: none; }
 }
 .btn-sm { padding: var(--space-2) var(--space-4); font-size: var(--text-sm); }
 
-/* 院校档次标签颜色 */
-.pill-tier-985 { background: linear-gradient(135deg, #f59e0b, #d97706) !important; color: #fff !important; }
-.pill-tier-211 { background: linear-gradient(135deg, #3b82f6, #2563eb) !important; color: #fff !important; }
-.pill-tier-shuangfei { background: linear-gradient(135deg, #ff6b6b, #ee5a6f) !important; color: #fff !important; }
-.pill-tier-overseas { background: linear-gradient(135deg, #8b5cf6, #7c3aed) !important; color: #fff !important; }
+/* 院校档次标签 */
+.pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  border: 2px solid rgba(255,255,255,0.2);
+}
+.pill-tier-985 { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; }
+.pill-tier-211 { background: linear-gradient(135deg, #3b82f6, #2563eb); color: #fff; }
+.pill-tier-shuangfei { background: linear-gradient(135deg, #ff6b6b, #ee5a6f); color: #fff; }
+.pill-tier-overseas { background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: #fff; }
+
+/* 三档分类左边框色 */
+.eval-reach .eval-case-card { border-left: 4px solid #dc2626; }
+.eval-match .eval-case-card { border-left: 4px solid #059669; }
+.eval-safe .eval-case-card { border-left: 4px solid #2563eb; }
+
+/* 匹配度分数badge */
+.match-score-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 12px;
+  width: fit-content;
+}
+.eval-reach .match-score-badge { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.eval-match .match-score-badge { background: #f0fdf4; color: #059669; border: 1px solid #bbf7d0; }
+.eval-safe .match-score-badge { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+
+/* 咨询按钮（卡片级别） */
+.case-card-cta {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.case-card-cta-text {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+}
+.case-card-cta-btn {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 200ms ease;
+  box-shadow: 0 2px 8px rgba(255,107,53,0.3);
+}
+.case-card-cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255,107,53,0.4);
+}
+
+/* 每档底部咨询引导条 */
+.tier-consult-bar {
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.eval-reach .tier-consult-bar { background: linear-gradient(135deg, #fef2f2, #fff5f5); border: 1px solid #fecaca; }
+.eval-match .tier-consult-bar { background: linear-gradient(135deg, #f0fdf4, #f5fff7); border: 1px solid #bbf7d0; }
+.eval-safe .tier-consult-bar { background: linear-gradient(135deg, #eff6ff, #f5f8ff); border: 1px solid #bfdbfe; }
+.tier-consult-bar p { font-size: 13px; font-weight: 600; margin: 0; }
+.eval-reach .tier-consult-bar p { color: #b91c1c; }
+.eval-match .tier-consult-bar p { color: #047857; }
+.eval-safe .tier-consult-bar p { color: #1d4ed8; }
+
+/* 结果底部多渠道咨询 */
+.result-cta-section {
+  margin-top: 48px;
+  padding: 32px;
+  background: linear-gradient(135deg, #0f1c2e 0%, #1a3a5c 40%, #1e4d8b 100%);
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.result-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(47, 128, 237, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+}
+.result-cta-section > * { position: relative; z-index: 1; }
+.result-cta-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.result-cta-subtitle {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 24px;
+}
+.result-cta-channels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.result-cta-channel {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  backdrop-filter: blur(4px);
+}
+.result-cta-channel:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-2px);
+}
+.result-cta-channel-icon { font-size: 24px; margin-bottom: 8px; }
+.result-cta-channel-label { font-size: 13px; font-weight: 700; color: #fff; }
+.result-cta-channel-desc { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 4px; }
 
 /* 智能评估器样式 */
 .eval-card {
@@ -342,11 +475,16 @@ ul, ol { list-style: none; }
   padding: var(--space-5);
   cursor: pointer;
   transition: all var(--duration-base) var(--ease-out);
+  position: relative;
+  box-shadow: var(--shadow-sm);
 }
 .eval-case-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--color-primary);
+}
+.eval-case-card:active {
+  transform: scale(0.995);
 }
 .eval-case-header {
   display: flex;
@@ -369,10 +507,16 @@ ul, ol { list-style: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-2) var(--space-3);
-  background: var(--color-primary-light);
-  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  background: linear-gradient(135deg, var(--color-primary-light), rgba(47,128,237,0.04));
+  border-radius: var(--radius-md);
   font-size: var(--text-xs);
+  border: 1px solid rgba(47,128,237,0.08);
+  transition: all 200ms ease;
+}
+.eval-offer-item:hover {
+  background: linear-gradient(135deg, #dcebfa, rgba(47,128,237,0.08));
+  border-color: rgba(47,128,237,0.15);
 }
 .eval-match-score {
   margin-top: var(--space-2);
@@ -709,6 +853,7 @@ ul, ol { list-style: none; }
             <option value="计算机科学">计算机科学</option>
             <option value="人工智能与数据科学">人工智能与数据科学</option>
             <option value="软件工程">软件工程</option>
+            <option value="信息系统">信息系统</option>
             <option value="电子工程">电子工程</option>
             <option value="通信工程">通信工程</option>
             <option value="电气与自动化">电气与自动化</option>
@@ -887,6 +1032,7 @@ const majorGroups = {
   '计算机科学':         ['计算机', '软件工程', '网络工程', '网络安全', '物联网', '区块链', '信息系统', '信息工程', '数字媒体技术', '计算机系统工程', '信息管理与信息系统'],
   '人工智能与数据科学': ['人工智能', '数据科学', '大数据', '智能科学', '机器人'],
   '软件工程':           ['软件工程'],
+  '信息系统':           ['信息系统', '信息管理与信息系统', '信息管理', '信息工程'],
   '电子工程':           ['电子', '微电子', '电子科学与技术', '集成电路', '半导体', '电子电气', '电子电气工程'],
   '通信工程':           ['通信', '通信工程', '信号', '电信'],
   '电气与自动化':       ['电气', '电气工程', '电气自动化', '电气工程及其自动化', '自动化', '测控', '测控技术与仪器'],
@@ -1145,14 +1291,28 @@ function runEval() {
 
 function renderEvalResult(result) {
   const { 冲刺, 匹配, 保底, user } = result;
-  
-  let html = `<div style="text-align:center;margin-bottom:var(--space-6);">
-    <h3 style="font-size:var(--text-xl);margin-bottom:var(--space-2);">评估结果：${user.tier} · GPA ${user.gpa}</h3>
-    <p style="color:var(--color-text-secondary);font-size:var(--text-sm);">
-      基于 ${allCases.length} 个真实案例匹配，以下是为你生成的三档选校建议
-    </p>
-  </div>`;
-  
+  const targetLabel = user.target || '不限地区';
+  const majorLabel = user.major || '不限专业';
+
+  // 头部：个人信息摘要卡片
+  let html = `
+    <div style="max-width:680px;margin:0 auto var(--space-8);background:linear-gradient(135deg, #0f1c2e, #1a3a5c);border-radius:var(--radius-xl);padding:var(--space-6) var(--space-8);color:#fff;text-align:center;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%, rgba(47,128,237,0.25) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%);"></div>
+      <div style="position:relative;z-index:1;">
+        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:0.6;margin-bottom:8px;">评估概览</div>
+        <div style="display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px;">
+          <span style="font-size:22px;font-weight:800;">${user.tier}</span>
+          <span style="opacity:0.4;">|</span>
+          <span style="font-size:22px;font-weight:800;">GPA ${user.gpa}</span>
+        </div>
+        <div style="font-size:13px;opacity:0.75;margin-top:4px;">
+          ${majorLabel !== '不限专业' ? `目标专业：${majorLabel}` : ''}${majorLabel !== '不限专业' && targetLabel !== '不限地区' ? ' · ' : ''}${targetLabel !== '不限地区' ? `目标地区：${targetLabel}` : ''}
+        </div>
+      </div>
+    </div>
+  `;
+
+  // 冲刺档
   if (冲刺.length > 0) {
     html += `
       <div class="eval-category eval-reach">
@@ -1161,10 +1321,15 @@ function renderEvalResult(result) {
           背景优于你的相似案例录取了这些院校，你可以尝试冲刺
         </p>
         <div class="eval-grid">${冲刺.slice(0, 3).map(m => renderEvalCaseCard(m, user.target)).join('')}</div>
+        <div class="tier-consult-bar">
+          <p>想知道自己冲刺这些院校的概率？</p>
+          <button class="case-card-cta-btn" onclick="openQr()">免费咨询冲刺策略</button>
+        </div>
       </div>
     `;
   }
-  
+
+  // 匹配档
   if (匹配.length > 0) {
     html += `
       <div class="eval-category eval-match">
@@ -1173,10 +1338,15 @@ function renderEvalResult(result) {
           与你背景高度相似的案例，这些院校录取概率较高
         </p>
         <div class="eval-grid">${匹配.slice(0, 3).map(m => renderEvalCaseCard(m, user.target)).join('')}</div>
+        <div class="tier-consult-bar">
+          <p>获取这些院校的详细申请方案</p>
+          <button class="case-card-cta-btn" onclick="openQr()">获取匹配院校方案</button>
+        </div>
       </div>
     `;
   }
-  
+
+  // 保底档
   if (保底.length > 0) {
     html += `
       <div class="eval-category eval-safe">
@@ -1185,10 +1355,15 @@ function renderEvalResult(result) {
           背景稍弱也能录取的院校，确保你有学可上
         </p>
         <div class="eval-grid">${保底.slice(0, 3).map(m => renderEvalCaseCard(m, user.target)).join('')}</div>
+        <div class="tier-consult-bar">
+          <p>了解保底院校的申请时间节点</p>
+          <button class="case-card-cta-btn" onclick="openQr()">咨询保底规划</button>
+        </div>
       </div>
     `;
   }
-  
+
+  // 无结果
   if (冲刺.length === 0 && 匹配.length === 0 && 保底.length === 0) {
     html += `
       <div class="eval-empty">
@@ -1199,24 +1374,59 @@ function renderEvalResult(result) {
       </div>
     `;
   } else {
+    // 底部多渠道CTA
     html += `
-      <div style="text-align:center;margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid var(--color-border);">
-        <p style="color:var(--color-text-secondary);font-size:var(--text-sm);margin-bottom:var(--space-4);">
-          想获取更精准的选校定位和文书策略？
-        </p>
-        <button class="btn btn-primary" onclick="openQr()">添加微信，获取专属方案</button>
+      <div class="result-cta-section">
+        <div class="result-cta-title">选校有方向了？下一步该怎么做</div>
+        <div class="result-cta-subtitle">DreamBridge 提供一站式留学申请服务，让你的申请事半功倍</div>
+        <div class="result-cta-channels">
+          <div class="result-cta-channel" onclick="openQr()">
+            <div class="result-cta-channel-icon">💬</div>
+            <div class="result-cta-channel-label">微信咨询</div>
+            <div class="result-cta-channel-desc">1v1专属留学规划</div>
+          </div>
+          <div class="result-cta-channel" onclick="copyWechat()">
+            <div class="result-cta-channel-icon">📋</div>
+            <div class="result-cta-channel-label">复制微信号</div>
+            <div class="result-cta-channel-desc">xxr13365810586</div>
+          </div>
+          <a class="result-cta-channel" href="mailto:hello@dreambridge.edu" style="text-decoration:none;color:inherit;">
+            <div class="result-cta-channel-icon">📧</div>
+            <div class="result-cta-channel-label">邮件咨询</div>
+            <div class="result-cta-channel-desc">hello@dreambridge.edu</div>
+          </a>
+          <a class="result-cta-channel" href="index.html#about" style="text-decoration:none;color:inherit;">
+            <div class="result-cta-channel-icon">🎓</div>
+            <div class="result-cta-channel-label">了解服务</div>
+            <div class="result-cta-channel-desc">查看申请套餐</div>
+          </a>
+        </div>
       </div>
     `;
   }
-  
+
   $('evalResult').innerHTML = html;
   $('evalResult').classList.add('show');
   $('evalResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
+function copyWechat() {
+  const wxid = 'xxr13365810586';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(wxid).then(() => alert('微信号 ' + wxid + ' 已复制到剪贴板'));
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = wxid;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    alert('微信号 ' + wxid + ' 已复制到剪贴板');
+  }
+}
+
 function renderEvalCaseCard(m, userTarget) {
   const c = m.case;
-  // 只展示目标地区的 offer；未选地区时展示全部
   const displayOffers = userTarget
     ? c.offers.filter(o => isOfferInRegion(o.school, userTarget))
     : c.offers;
@@ -1238,7 +1448,13 @@ function renderEvalCaseCard(m, userTarget) {
           </div>
         `).join('')}
       </div>
-      <div class="eval-match-score">匹配度 ${m.score} 分：${m.reasons.join(' · ')}</div>
+      <div class="match-score-badge">
+        <span>匹配度 ${m.score} 分</span>
+      </div>
+      <div class="case-card-cta">
+        <span class="case-card-cta-text">背景和他相似？</span>
+        <button class="case-card-cta-btn" onclick="event.stopPropagation(); openQr()">获取专属方案</button>
+      </div>
     </div>
   `;
 }
