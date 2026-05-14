@@ -928,6 +928,49 @@
     }
   }
 
+  // ===== 正常FAQ匹配 =====
+  function findReply(text) {
+    const lower = text.toLowerCase();
+
+    for (const faq of FAQS) {
+      for (const keyword of faq.q) {
+        if (lower.includes(keyword.toLowerCase())) {
+          return {
+            text: faq.a,
+            actions: buildActions(faq.followUp)
+          };
+        }
+      }
+    }
+
+    // 模糊匹配
+    if (lower.includes('你好') || lower.includes('hi') || lower.includes('hello')) {
+      return {
+        text: '你好呀！我是DreamBridge的AI留学顾问～请问有什么留学方面的问题想咨询吗？',
+        actions: [{ label: '选校定位', action: 'askBackground' }, { label: '联系顾问', action: 'askContact' }]
+      };
+    }
+    if (lower.includes('谢谢') || lower.includes('感谢')) {
+      return {
+        text: '不客气！有问题随时来问我～也可以加我们顾问微信（xxr13365810586）一对一详细聊',
+        actions: [{ label: '联系顾问', action: 'askContact' }]
+      };
+    }
+
+    // 默认回复
+    const p = conversationContext.userProfile;
+    let contextHint = '';
+    if (p.schoolTier && p.gpa) {
+      contextHint = `（我注意到你是${p.schoolTier} ${p.gpa}分，`;
+      if (p.targetCountry) contextHint += `目标${p.targetCountry}）`;
+      else contextHint += '）';
+    }
+    return {
+      text: contextHint + '这个问题比较个性化，建议添加我们顾问微信（xxr13365810586）详细聊聊，会根据你的具体情况给出最优方案～',
+      actions: [{ label: '联系顾问', action: 'askContact' }]
+    };
+  }
+
   // ===== 从用户消息中提取背景信息 =====
   function extractUserProfile(text) {
     const lower = text.toLowerCase();
