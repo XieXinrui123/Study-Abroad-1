@@ -27,10 +27,10 @@
   // ===== 知识库FAQ =====
   const FAQS = [
     {
-      q: ['免费申请', '零中介费', '怎么收费', '收费'],
-      a: '我们英国、澳洲、新西兰合作院校（QS前150）都是<strong>零中介费申请</strong>的！你要看看这些国家有哪些适合你的学校吗？',
+      q: ['怎么收费', '收费', '服务费'],
+      a: '我们的服务包含选校定位、文书指导、申请递交、签证协助等全流程支持。具体费用根据申请的国家数量和院校档次有所不同，你可以添加顾问微信详细咨询。需要我帮你先做一个初步的选校评估吗？',
       tags: ['费用'],
-      followUp: ['showCountries']
+      followUp: ['askContact']
     },
     {
       q: ['我的背景能申什么学校', '选校', '定位', '能申到什么'],
@@ -46,13 +46,13 @@
     },
     {
       q: ['费用', '留学要花多少钱', '预算', '多少钱', '花费'],
-      a: '费用因国家和专业差异很大：<br>🇬🇧 <strong>英国</strong>：硕士1年，总费用35-70万<br>🇦🇺 <strong>澳洲</strong>：硕士1-2年，一年费用40-55万<br>🇭🇰 <strong>香港</strong>：硕士1年，总费用35-60万<br>🇸🇬 <strong>新加坡</strong>：硕士1-2年，总费用30-50万<br>🇳🇿 <strong>新西兰</strong>：硕士1-2年，一年费用35-40万<br><br>你可以用我们的「费用计算器」精准估算！',
+      a: '费用因国家和专业差异很大：<br>🇬🇧 <strong>英国</strong>：硕士1年，总费用25-35万<br>🇦🇺 <strong>澳洲</strong>：硕士1.5-2年，总费用40-55万<br>🇭🇰 <strong>香港</strong>：硕士1年，总费用25-40万<br>🇸🇬 <strong>新加坡</strong>：硕士1-2年，总费用30-50万<br>🇳🇿 <strong>新西兰</strong>：硕士1-2年，总费用25-35万<br><br>你可以用我们的「费用计算器」精准估算！',
       tags: ['费用'],
       followUp: ['showCalculator']
     },
     {
       q: ['雅思', '语言成绩', '托福', 'PTE', '语言'],
-      a: '各地区语言要求：<br>• <strong>英国</strong>：雅思6.5（单项6.0），可后补<br>• <strong>澳洲</strong>：雅思6.5（单项6.0），接受PTE<br>• <strong>香港</strong>：雅思6-7.0，带语言申请优势大<br>• <strong>新加坡</strong>：雅思6-7.0<br>• <strong>新西兰</strong>：雅思6.5（单项6.0）<br><br>如果还没考，建议尽快准备，香港的申请9-10月就开了！',
+      a: '各地区语言要求：<br>• <strong>英国</strong>：雅思6.5（单项6.0），可后补<br>• <strong>澳洲</strong>：雅思6.5（单项6.0），接受PTE<br>• <strong>香港</strong>：雅思6.5-7.0，带语言申请优势大<br>• <strong>新加坡</strong>：雅思6.5-7.0<br>• <strong>新西兰</strong>：雅思6.5（单项6.0）<br><br>如果还没考，建议尽快准备，香港的申请9-10月就开了！',
       tags: ['语言'],
       followUp: []
     },
@@ -82,19 +82,19 @@
     },
     {
       q: ['英国', 'UK', '曼大', 'UCL', '爱丁堡', '格拉斯哥'],
-      a: '英国优势：<br>• 硕士仅1年，时间成本低<br>• PSW签证恢复，毕业后可留英2年工作<br>• 学校选择多，QS前100密集<br>• 我们的合作院校<strong>零中介费申请</strong><br><br>G5和王曼爱华竞争激烈，但格拉斯哥、利兹、南安普顿等对双非更友好。想了解你能申哪些英国学校？',
+      a: '英国优势：<br>• 硕士仅1年，时间成本低<br>• PSW签证恢复，毕业后可留英2年工作<br>• 学校选择多，QS前100密集<br>• 学术传统深厚，学历含金量高<br><br>G5和王曼爱华竞争激烈，但格拉斯哥、利兹、南安普顿等对双非更友好。想了解你能申哪些英国学校？',
       tags: ['英国'],
       followUp: ['showUKInfo']
     },
     {
       q: ['澳洲', '澳大利亚', '悉尼', '墨尔本'],
-      a: '澳洲优势：<br>• 毕业工签长（本科2年/硕士3年/博士4年）<br>• 技术移民政策友好<br>• 气候宜人，生活环境好<br>• 我们的八大合作院校<strong>零中介费申请</strong><br><br>八大门槛逐年提高，但相比英国香港，澳洲对双非更友好，均分75+就有机会。',
+      a: '澳洲优势：<br>• 毕业工签长（本科2年/硕士3年/博士4年）<br>• 技术移民政策友好<br>• 气候宜人，生活环境好<br>• 八大院校全球排名稳定，学历认可度高<br><br>八大门槛逐年提高，但相比英国香港，澳洲对双非更友好，均分75+就有机会。',
       tags: ['澳洲'],
       followUp: ['showAUInfo']
     },
     {
       q: ['新西兰'],
-      a: '新西兰优势：<br>• 移民政策最友好（绿色清单职业）<br>• 毕业后3年工签<br>• 费用相对较低（硕士总费用25-35万）<br>• 自然环境优美，生活质量高<br>• 8所公立大学全部<strong>零中介费申请</strong><br><br>适合预算有限又想移民的同学！',
+      a: '新西兰优势：<br>• 移民政策最友好（绿色清单职业）<br>• 毕业后3年工签<br>• 费用相对较低（硕士总费用25-35万）<br>• 自然环境优美，生活质量高<br>• 8所公立大学教育质量有保障<br><br>适合预算有限又想移民的同学！',
       tags: ['新西兰'],
       followUp: []
     },
@@ -114,7 +114,7 @@
 
   // ===== 快捷入口按钮 =====
   const QUICK_ACTIONS = [
-    { label: '免费申请?', icon: '💰', action: 'askFree' },
+    { label: '服务咨询', icon: '💰', action: 'askContact' },
     { label: '我的背景能申哪', icon: '🎯', action: 'askBackground' },
     { label: '费用多少', icon: '💳', action: 'askCost' },
     { label: '查看案例', icon: '📊', action: 'showCases' }
@@ -604,8 +604,8 @@
       // 首次打开显示引导
       if (messageHistory.length === 0) {
         setTimeout(() => {
-          addBotMessage('你可以问我：<br>• 「免费申请」了解零中介费政策<br>• 「我的背景能申什么学校」做选校定位<br>• 「费用多少」查看留学预算<br>• 「查看案例」浏览真实录取案例', [
-            { label: '免费咨询', action: 'askContact' }
+          addBotMessage('你可以问我：<br>• 「我的背景能申什么学校」做选校定位<br>• 「费用多少」查看留学预算<br>• 「查看案例」浏览真实录取案例<br>• 「服务咨询」了解我们的服务内容', [
+            { label: '联系顾问', action: 'askContact' }
           ]);
         }, 1500);
       }
@@ -646,9 +646,9 @@
         ]);
         break;
       case 'showCountries':
-        addBotMessage('我们零中介费覆盖的国家和学校档次：<br><br>🇬🇧 <strong>英国</strong>：QS前150主流院校<br>🇦🇺 <strong>澳洲</strong>：八大及其他QS前150院校<br>🇳🇿 <strong>新西兰</strong>：8所公立大学<br><br>这些学校质量都有保障，我们免费帮你申请！', [
+        addBotMessage('我们覆盖的国家和学校档次：<br><br>🇬🇧 <strong>英国</strong>：QS前150主流院校<br>🇦🇺 <strong>澳洲</strong>：八大及其他QS前150院校<br>🇳🇿 <strong>新西兰</strong>：8所公立大学<br>🇭🇰 <strong>香港</strong>：港五院校<br>🇸🇬 <strong>新加坡</strong>：NUS/NTU<br><br>这些都是全球认可的高质量院校，需要了解具体申请要求吗？', [
           { label: '查看服务套餐', url: 'package.html' },
-          { label: '免费咨询', action: 'askContact' }
+          { label: '联系顾问', action: 'askContact' }
         ]);
         break;
       case 'showCalculator':
@@ -665,10 +665,10 @@
         addBotMessage('香港硕士申请要求：<br>• <strong>港三</strong>（HKU/CUHK/HKUST）：偏好985/211，GPA 85+<br>• <strong>港城大/港理工</strong>：211/双非80+有机会<br>• <strong>雅思</strong>：6.5-7.0<br>• <strong>申请时间</strong>：9-10月开放，先到先得<br><br>需要具体学校的申请要求吗？');
         break;
       case 'showUKInfo':
-        addBotMessage('英国硕士申请要求：<br>• <strong>G5</strong>：985/211，GPA 88+<br>• <strong>王曼爱华</strong>：985/211 GPA 82+，双非85+<br>• <strong>QS前100</strong>：均分75-80有机会<br>• <strong>雅思</strong>：6.5（单项6.0），可后补<br>• <strong>优势</strong>：1年学制，零中介费申请<br><br>你的均分和本科院校是？');
+        addBotMessage('英国硕士申请要求：<br>• <strong>G5</strong>：985/211，GPA 88+<br>• <strong>王曼爱华</strong>：985/211 GPA 82+，双非85+<br>• <strong>QS前100</strong>：均分75-80有机会<br>• <strong>雅思</strong>：6.5（单项6.0），可后补<br>• <strong>优势</strong>：1年学制，节省时间成本<br><br>你的均分和本科院校是？');
         break;
       case 'showAUInfo':
-        addBotMessage('澳洲硕士申请要求：<br>• <strong>墨尔本大学</strong>：偏好985/211，均分80+<br>• <strong>悉尼/新南</strong>：211均分75+，双非80+<br>• <strong>八大</strong>：双非均分70-75也有机会<br>• <strong>雅思</strong>：6.5（单项6.0），接受PTE<br>• <strong>优势</strong>：工签2-3年，零中介费申请<br><br>想去哪所学校？');
+        addBotMessage('澳洲硕士申请要求：<br>• <strong>墨尔本大学</strong>：偏好985/211，均分80+<br>• <strong>悉尼/新南</strong>：211均分75+，双非80+<br>• <strong>八大</strong>：双非均分70-75也有机会<br>• <strong>雅思</strong>：6.5（单项6.0），接受PTE<br>• <strong>优势</strong>：工签2-3年，移民政策友好<br><br>想去哪所学校？');
         break;
       default:
         addBotMessage('这个问题比较个性化，建议你添加我们顾问的微信（xxr13365810586）详细聊聊，会根据你的具体情况给出最优方案～', [
@@ -742,7 +742,7 @@
       showCases: { label: '查看案例库', url: 'cases.html' },
       showCalculator: { label: '费用计算器', url: 'calculator.html' },
       showTimeline: { label: '申请时间线', url: 'timeline.html' },
-      askContact: { label: '免费咨询', action: 'askContact' },
+      askContact: { label: '联系顾问', action: 'askContact' },
       showHKInfo: { label: '了解香港申请', action: 'showHKInfo' },
       showUKInfo: { label: '了解英国申请', action: 'showUKInfo' },
       showAUInfo: { label: '了解澳洲申请', action: 'showAUInfo' }
