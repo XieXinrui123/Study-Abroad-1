@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DreamBridge留学智能背景评估器，输入你的院校、GPA、专业，30秒匹配相似成功案例，获取三档选校定位建议。"(开发阶段,具体定位欢迎随时咨询)>
+<title>智能背景评估｜DreamBridge留学选校定位工具</title>
+<style>
+:root {
+  --color-bg: #f7fbff;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #ffffff;
+  --color-text: #12223a;
+  --color-text-secondary: #607086;
+  --color-text-tertiary: #8a9bb0;
+  --color-primary: #2f80ed;
+  --color-primary-light: #eaf3ff;
+  --color-primary-dark: #1a6fd6;
+  --color-secondary: #10b981;
+  --color-accent: #ff6b35;
+  --color-accent-light: #fff5ef;
+  --color-border: #e5edf6;
+  --color-border-light: #f0f4f8;
+  --shadow-sm: 0 2px 8px rgba(18, 34, 58, 0.06);
+  --shadow-md: 0 8px 24px rgba(18, 34, 58, 0.08);
+  --shadow-lg: 0 16px 48px rgba(18, 34, 58, 0.12);
+  --shadow-xl: 0 24px 64px rgba(18, 34, 58, 0.16);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --font-sans: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Ma Shan Zheng', cursive;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+  --text-3xl: 24px;
+  --text-4xl: 32px;
+  --text-5xl: 40px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --z-base: 1;
+  --z-sticky: 50;
+  --z-header: 100;
+  --z-countdown: 101;
+  --z-modal: 200;
+  --z-toast: 300;
+}
+body.dark {
+  --color-bg: #0b1220;
+  --color-surface: #121f31;
+  --color-surface-elevated: #18283d;
+  --color-text: #e7effa;
+  --color-text-secondary: #9bb0c8;
+  --color-text-tertiary: #6b7f99;
+  --color-primary-light: #1b2a41;
+  --color-border: #24364f;
+  --color-border-light: #1a2638;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.6);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  font-size: var(--text-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+input, select, textarea { font-family: inherit; font-size: inherit; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+.container { width: min(1140px, 92%); margin: 0 auto; }
+.section { padding: var(--space-20) 0; }
+.section-alt { background: var(--color-primary-light); }
+.section-kicker {
+  color: var(--color-primary);
+  font-size: var(--text-xs);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+.section-title {
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-header);
+  background: transparent;
+  transition: background var(--duration-base) ease, box-shadow var(--duration-base) ease;
+}
+.header.scrolled {
+  background: rgba(18, 34, 58, 0.92);
+  backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: var(--shadow-md);
+}
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+}
+.logo {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+.logo span { color: var(--color-secondary); }
+.nav-links { display: flex; gap: var(--space-6); }
+.nav-links a {
+  color: rgba(255,255,255,0.9);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: opacity var(--duration-fast) ease;
+}
+.nav-links a:hover { opacity: 0.75; }
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: var(--text-md);
+  transition: all var(--duration-fast) ease;
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.2); }
+
+/* Hero */
+.hero {
+  min-height: 40vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #0f1c2e 0%, #1a3a5c 40%, #1e4d8b 100%);
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: var(--space-10);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(47, 128, 237, 0.35) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255, 107, 53, 0.15) 0%, transparent 60%);
+}
+.hero-content {
+  position: relative;
+  z-index: var(--z-base);
+  color: #fff;
+  text-align: center;
+  max-width: 680px;
+  padding: 0 var(--space-5);
+}
+.hero-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #eaf3ff;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+  backdrop-filter: blur(4px);
+}
+.hero-title {
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.5px;
+}
+.hero-subtitle {
+  font-size: var(--text-md);
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: var(--text-md);
+  transition: all var(--duration-base) var(--ease-out);
+  cursor: pointer;
+  border: none;
+}
+.btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 107, 53, 0.4);
+}
+.btn-primary:active { transform: scale(0.98); }
+.btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(4px);
+}
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.5);
+}
+.btn-sm { padding: var(--space-2) var(--space-4); font-size: var(--text-sm); }
+
+/* 院校档次标签 */
+.pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+.pill-tier-985 { background: #fef3c7; color: #92400e; }
+.pill-tier-211 { background: #dbeafe; color: #1e40af; }
+.pill-tier-shuangfei { background: #fce7f3; color: #9d174d; }
+.pill-tier-overseas { background: #e9d5ff; color: #6b21a8; }
+
+/* 匹配度分数 */
+.score-badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* 每档底部引导 */
+.tier-tip {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.tier-tip-text { font-size: 13px; color: var(--color-text-secondary); margin: 0; }
+.tier-tip-btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--color-text);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 200ms;
+  flex-shrink: 0;
+}
+.tier-tip-btn:hover { opacity: 0.85; }
+
+/* 底部CTA */
+.result-cta {
+  margin-top: 48px;
+  padding: 40px;
+  background: var(--color-text);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+.result-cta-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.result-cta-desc {
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  margin-bottom: 24px;
+}
+.result-cta-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.result-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms ease;
+  border: none;
+  text-decoration: none;
+}
+.result-cta-btn-primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+.result-cta-btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+.result-cta-btn-secondary {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.result-cta-btn-secondary:hover { background: rgba(255,255,255,0.14); color: #fff; }
+
+/* 智能评估器样式 */
+.eval-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+.eval-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+.eval-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.eval-field label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+.eval-field input, .eval-field select {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  width: 100%;
+}
+.eval-field input:focus, .eval-field select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1);
+}
+.eval-tier-tag {
+  display: none;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  margin-top: var(--space-2);
+  width: fit-content;
+}
+.eval-result {
+  margin-top: var(--space-10);
+  display: none;
+  animation: fadeIn var(--duration-slow) ease;
+}
+.eval-result.show { display: block; }
+.eval-category { margin-bottom: var(--space-8); }
+.eval-category-title {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.eval-reach .eval-category-title { color: #dc2626; }
+.eval-match .eval-category-title { color: #059669; }
+.eval-safe .eval-category-title { color: #2563eb; }
+.eval-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+.eval-case-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-out);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+.eval-case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+.eval-case-card:active {
+  transform: scale(0.995);
+}
+.eval-case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+.eval-case-school { font-weight: 700; font-size: var(--text-sm); }
+.eval-case-meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+}
+.eval-case-offers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.eval-offer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, var(--color-primary-light), rgba(47,128,237,0.04));
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  border: 1px solid rgba(47,128,237,0.08);
+  transition: all 200ms ease;
+}
+.eval-offer-item:hover {
+  background: linear-gradient(135deg, #dcebfa, rgba(47,128,237,0.08));
+  border-color: rgba(47,128,237,0.15);
+}
+.eval-match-score {
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+}
+.eval-empty {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--color-text-secondary);
+}
+
+/* Case Modal */
+.case-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 36, 0.7);
+  display: none;
+  place-items: center;
+  z-index: var(--z-modal);
+  backdrop-filter: blur(8px);
+  padding: var(--space-5);
+  overflow-y: auto;
+}
+.case-modal.show { display: grid; }
+.case-detail {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalIn var(--duration-slow) var(--ease-out);
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.case-detail-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: var(--text-xl);
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast) ease;
+  z-index: 10;
+}
+.case-detail-close:hover {
+  background: var(--color-border-light);
+  color: var(--color-text);
+}
+.case-detail-header { padding: var(--space-8) var(--space-8) 0; }
+.case-detail-header h2 { font-size: var(--text-xl); margin-bottom: var(--space-3); }
+.case-detail-body { padding: 0 var(--space-8) var(--space-8); }
+.case-detail-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+.detail-meta-block {
+  background: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+.detail-meta-block label {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+.detail-meta-block value {
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+.case-detail-offers { margin-top: var(--space-6); }
+.case-detail-offers h4 {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  font-weight: 700;
+}
+.detail-offer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+}
+.detail-offer-school { font-weight: 700; font-size: var(--text-sm); }
+.detail-offer-major { font-size: var(--text-xs); color: var(--color-text-secondary); }
+.detail-offer-rank {
+  font-weight: 700;
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+}
+.case-detail-cta {
+  padding: var(--space-6) var(--space-8);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+.case-detail-cta p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+}
+
+/* Footer */
+.footer {
+  background: #0d1b2d;
+  color: #b0c4de;
+  padding: var(--space-12) 0 var(--space-8);
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-8);
+  align-items: center;
+}
+.footer h2 { color: #fff; font-size: var(--text-xl); margin-bottom: var(--space-4); }
+.footer p { margin: var(--space-2) 0; font-size: var(--text-sm); opacity: 0.85; }
+.footer-actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+/* Mobile CTA */
+.mobile-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+  display: none;
+  gap: var(--space-3);
+  align-items: center;
+  z-index: var(--z-sticky);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+}
+.mobile-cta-wx {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  font-weight: 600;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Back to top */
+.to-top {
+  position: fixed;
+  right: var(--space-5);
+  bottom: 80px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: var(--text-lg);
+  display: none;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(255,107,53,0.3);
+  transition: all var(--duration-base) var(--ease-out);
+  z-index: 97;
+  border: none;
+}
+.to-top.show { display: grid; }
+.to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255,107,53,0.4);
+}
+
+/* QR Modal */
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 36, 0.65);
+  display: none;
+  place-items: center;
+  z-index: var(--z-modal);
+  backdrop-filter: blur(6px);
+  padding: var(--space-5);
+}
+.qr-modal.show { display: grid; }
+.qr-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+  max-width: 360px;
+  width: 100%;
+  animation: modalIn var(--duration-slow) var(--ease-out);
+}
+.qr-fallback {
+  width: 200px;
+  height: 200px;
+  margin: var(--space-4) auto;
+  background: linear-gradient(135deg, #07c160, #059142);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: var(--space-3);
+}
+.qr-fallback svg {
+  width: 64px;
+  height: 64px;
+  opacity: 0.9;
+}
+.qr-fallback span {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.qr-wxid {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-top: var(--space-2);
+  letter-spacing: 1px;
+}
+.qr-close {
+  position: absolute;
+  right: var(--space-4);
+  top: var(--space-3);
+  background: none;
+  border: none;
+  font-size: var(--text-2xl);
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: all var(--duration-fast) ease;
+}
+.qr-close:hover {
+  background: var(--color-border-light);
+  color: var(--color-text);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-out), transform var(--duration-slow) var(--ease-out);
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .footer-grid { flex-direction: column; text-align: center; }
+  .footer-actions { justify-content: center; }
+  .mobile-cta { display: flex; }
+  .to-top { bottom: 72px; right: var(--space-4); }
+  .case-detail { max-height: 85vh; }
+  .case-detail-meta { grid-template-columns: 1fr; }
+  .section { padding: var(--space-12) 0; }
+  .eval-form { grid-template-columns: 1fr; }
+  .eval-grid { grid-template-columns: 1fr; }
+}
+</style>
+<base target="_blank">
+<base target="_blank">
+</head>
+<body>
+
+<header class="header" id="topHeader">
+  <div class="container nav-wrap">
+    <nav class="nav-links">
+      <a href="index.html#about">中介介绍</a>
+      <a href="package.html">套餐服务</a>
+    </nav>
+    <a href="index.html" class="logo">Dream<span>Bridge</span></a>
+    <nav class="nav-links">
+      <a href="cases.html">案例汇总</a>
+      <a href="index.html#faq">常见问题</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle">🌓</button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-content fade-in">
+    <span class="hero-tag">Background Evaluator</span>
+    <h1 class="hero-title">智能背景评估</h1>
+    <p class="hero-subtitle">输入你的背景信息，30秒匹配相似成功案例，获取三档选校定位建议</p>
+  </div>
+</section>
+
+<section class="section" id="evaluator">
+  <div class="container fade-in">
+    <div style="max-width:640px;margin:0 auto var(--space-6);background:var(--color-accent-light);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-4);text-align:center;">
+      <p style="font-size:var(--text-sm);color:var(--color-accent);font-weight:600;margin:0;">
+        ⚠️ 本评估器仅适用于大陆本科院校做简单参考定位。海本学生及需要精准选校定位的，请添加微信联系获取一对一方案。
+      </p>
+    </div>
+
+    <div class="eval-card">
+      <div class="eval-form">
+        <div class="eval-field">
+          <label>本科院校</label>
+          <input type="text" id="evalSchool" placeholder="例如：武汉理工大学">
+          <span class="eval-tier-tag" id="evalTierTag"></span>
+        </div>
+        <div class="eval-field">
+          <label>GPA / 均分 <span style="color:var(--color-text-tertiary);font-weight:400;">(百分制或 3.5/4.0)</span></label>
+          <input type="text" id="evalGpa" placeholder="例如：85 或 3.5/4.0">
+        </div>
+        <div class="eval-field">
+          <label>目标专业</label>
+          <select id="evalMajor">
+            <option value="">不限专业</option>
+            <option value="计算机科学">计算机科学</option>
+            <option value="人工智能与数据科学">人工智能与数据科学</option>
+            <option value="软件工程">软件工程</option>
+            <option value="信息系统">信息系统</option>
+            <option value="电子工程">电子工程</option>
+            <option value="通信工程">通信工程</option>
+            <option value="电气与自动化">电气与自动化</option>
+            <option value="金融">金融</option>
+            <option value="经济与会计">经济与会计</option>
+            <option value="工商管理">工商管理</option>
+            <option value="市场营销">市场营销</option>
+            <option value="法学">法学</option>
+            <option value="教育学">教育学</option>
+            <option value="语言与翻译">语言与翻译</option>
+            <option value="传媒与新闻">传媒与新闻</option>
+            <option value="艺术设计">艺术设计</option>
+            <option value="建筑与规划">建筑与规划</option>
+            <option value="机械工程">机械工程</option>
+            <option value="土木工程">土木工程</option>
+            <option value="材料与化工">材料与化工</option>
+            <option value="生物与医药">生物与医药</option>
+            <option value="数学与统计">数学与统计</option>
+            <option value="物理与光电">物理与光电</option>
+          </select>
+        </div>
+        <div class="eval-field">
+          <label>目标地区</label>
+          <select id="evalTarget">
+            <option value="">不限地区</option>
+            <option value="香港">香港</option>
+            <option value="英国">英国</option>
+            <option value="新加坡">新加坡</option>
+            <option value="澳大利亚">澳大利亚</option>
+            <option value="澳门">澳门</option>
+            <option value="新西兰">新西兰</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="runEval()" style="width:100%;margin-top:var(--space-5);">
+        🎯 立即匹配案例
+      </button>
+    </div>
+
+    <div class="eval-result" id="evalResult"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+    <div>
+      <h2>联系方式</h2>
+      <p>微信：xxr13365810586</p>
+      <p>邮箱：496680190@qq.com</p>
+      <p>服务地区：英国 / 香港 / 新加坡 / 澳洲 / 新西兰 / 澳门</p>
+    </div>
+    <div class="footer-actions">
+      <button class="btn btn-primary" onclick="openQr()">立即咨询</button>
+      <a class="btn btn-secondary" href="mailto:496680190@qq.com">发送邮件</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" id="mobileCta">
+  <span class="mobile-cta-wx">微信：xxr13365810586</span>
+  <button class="btn btn-primary btn-sm" onclick="openQr()">立即咨询</button>
+</div>
+
+<button class="to-top" id="toTop">↑</button>
+
+<div class="qr-modal" id="qrModal">
+  <div class="qr-card">
+    <button class="qr-close" onclick="closeQr()">×</button>
+    <h3>添加微信立即咨询</h3>
+    <div class="qr-fallback">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.85"/></svg>
+      <span>微信扫码咨询</span>
+    </div>
+    <p class="qr-wxid">xxr13365810586</p>
+    <p style="font-size:var(--text-xs);color:var(--color-text-tertiary);">复制微信号，打开微信添加好友</p>
+  </div>
+</div>
+
+<div class="case-modal" id="caseModal">
+  <div class="case-detail">
+    <button class="case-detail-close" onclick="closeCaseModal()">×</button>
+    <div class="case-detail-header">
+      <h2 id="modalTitle">案例详情</h2>
+      <div class="case-pills" id="modalPills"></div>
+    </div>
+    <div class="case-detail-body">
+      <div class="case-detail-meta" id="modalMeta"></div>
+      <div class="case-detail-offers">
+        <h4>录取 Offer 详情</h4>
+        <div id="modalOffers"></div>
+      </div>
+    </div>
+    <div class="case-detail-cta">
+      <p>我的背景和他相似，想获取专属申请方案</p>
+      <button class="btn btn-primary" onclick="openQr()">添加微信咨询</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const schoolTierMap = {
+  '北京大学': '985', '北大': '985', '清华大学': '985', '清华': '985',
+  '复旦大学': '985', '复旦': '985', '上海交通大学': '985', '上海交大': '985', '上交': '985',
+  '浙江大学': '985', '浙大': '985', '中国科学技术大学': '985', '中科大': '985', '中国科大': '985',
+  '南京大学': '985', '南大': '985', '中国人民大学': '985', '人大': '985',
+  '北京航空航天大学': '985', '北航': '985', '北京理工大学': '985', '北理工': '985', '北理': '985',
+  '北京师范大学': '985', '北师大': '985', '中国农业大学': '985', '中农': '985', '中国农大': '985',
+  '中央民族大学': '985', '中央民族': '985', '同济大学': '985',
+  '华东师范大学': '985', '华东师范': '985', '华师大': '985', '南开大学': '985',
+  '天津大学': '985', '天大': '985', '哈尔滨工业大学': '985', '哈工大': '985',
+  '吉林大学': '985', '吉大': '985', '大连理工大学': '985', '大工': '985', '大连理工': '985',
+  '东北大学': '985', '山东大学': '985', '山大': '985', '中国海洋大学': '985', '中国海大': '985',
+  '西安交通大学': '985', '西安交大': '985', '西交': '985', '西北工业大学': '985', '西工大': '985', '西北工业': '985',
+  '西北农林科技大学': '985', '西北农林': '985', '西农': '985',
+  '武汉大学': '985', '武大': '985', '华中科技大学': '985', '华科': '985', '华中科大': '985',
+  '中南大学': '985', '湖南大学': '985', '湖大': '985', '国防科技大学': '985', '国防科大': '985',
+  '中山大学': '985', '中大': '985', '华南理工大学': '985', '华工': '985', '华南理工': '985',
+  '四川大学': '985', '川大': '985', '电子科技大学': '985', '电子科大': '985', '成电': '985',
+  '重庆大学': '985', '重大': '985', '厦门大学': '985', '厦大': '985',
+  '兰州大学': '985', '兰大': '985', '东南大学': '985', '东大': '985',
+  '北京交通大学': '211', '北交大': '211', '北京工业大学': '211', '北工大': '211',
+  '北京科技大学': '211', '北科大': '211', '北京化工大学': '211', '北化工': '211',
+  '北京邮电大学': '211', '北邮': '211', '北京林业大学': '211', '北林': '211',
+  '北京中医药大学': '211', '北中医': '211', '北京外国语大学': '211', '北外': '211',
+  '中国传媒大学': '211', '中传': '211', '中央财经大学': '211', '中财': '211', '央财': '211',
+  '对外经济贸易大学': '211', '对外经贸': '211', '贸大': '211', '中国政法大学': '211', '法大': '211',
+  '华北电力大学': '211', '华电': '211',
+  '中国矿业大学（北京）': '211', '中国矿业大学北京': '211', '矿大北京': '211',
+  '中国石油大学（北京）': '211', '中国石油大学北京': '211', '中石大北京': '211',
+  '中国地质大学（北京）': '211', '中国地质大学北京': '211', '地大北京': '211',
+  '北京体育大学': '211', '北体': '211', '中央音乐学院': '211', '央音': '211',
+  '上海财经大学': '211', '上财': '211', '上海外国语大学': '211', '上外': '211',
+  '华东理工大学': '211', '华理': '211', '东华大学': '211', '上海大学': '211', '上大': '211',
+  '海军军医大学': '211', '第二军医大学': '211',
+  '南京航空航天大学': '211', '南航': '211', '南京理工大学': '211', '南理工': '211',
+  '河海大学': '211', '江南大学': '211', '中国矿业大学': '211', '矿大': '211',
+  '南京农业大学': '211', '南农': '211', '中国药科大学': '211', '药大': '211',
+  '南京师范大学': '211', '南师大': '211', '苏州大学': '211', '苏大': '211',
+  '福州大学': '211', '福大': '211', '安徽大学': '211', '安大': '211',
+  '合肥工业大学': '211', '合工大': '211', '南昌大学': '211', '昌大': '211',
+  '郑州大学': '211', '郑大': '211', '武汉理工大学': '211', '武理工': '211', '武汉理工': '211',
+  '中国地质大学（武汉）': '211', '中国地质大学武汉': '211', '地大武汉': '211', '中国地质大学': '211', '地大': '211',
+  '华中农业大学': '211', '华农': '211', '华中师范大学': '211', '华师': '211',
+  '中南财经政法大学': '211', '中南财大': '211', '湖南师范大学': '211', '湖南师大': '211',
+  '暨南大学': '211', '暨大': '211', '华南师范大学': '211', '华南师大': '211',
+  '广西大学': '211', '西大': '211', '海南大学': '211',
+  '西南交通大学': '211', '西南交大': '211', '西南财经大学': '211', '西南财大': '211', '西财': '211',
+  '四川农业大学': '211', '川农': '211', '贵州大学': '211', '贵大': '211',
+  '云南大学': '211', '云大': '211', '西藏大学': '211', '藏大': '211',
+  '西北大学': '211', '西安电子科技大学': '211', '西电': '211', '长安大学': '211',
+  '陕西师范大学': '211', '陕师大': '211', '空军军医大学': '211', '第四军医大学': '211',
+  '青海大学': '211', '宁夏大学': '211', '宁大': '211', '新疆大学': '211', '新大': '211', '石河子大学': '211',
+  '中国石油大学（华东）': '211', '中国石油大学华东': '211', '中石大华东': '211',
+  '哈尔滨工程大学': '211', '哈工程': '211', '东北林业大学': '211', '东北林大': '211',
+  '东北农业大学': '211', '东北农大': '211', '辽宁大学': '211', '辽大': '211',
+  '大连海事大学': '211', '延边大学': '211', '东北师范大学': '211', '东北师大': '211',
+  '内蒙古大学': '211', '内大': '211', '河北工业大学': '211', '河工大': '211',
+  '太原理工大学': '211', '太原理工': '211', '天津医科大学': '211', '北京协和医学院': '211', '协和': '211',
+  '厦门大学马来西亚分校': '海外本科', '澳门城市大学': '海外本科', '澳门城市': '海外本科',
+  'PSB Academy': '海外本科', '西交利物浦大学': '海外本科', '西交利物浦': '海外本科',
+  '阿姆斯特丹大学': '海外本科', '宁波诺丁汉大学': '海外本科', '宁波诺丁汉': '海外本科',
+  '上海纽约大学': '海外本科', '昆山杜克大学': '海外本科', '广东以色列理工学院': '海外本科',
+  '温州肯恩大学': '海外本科', '深圳北理莫斯科大学': '海外本科',
+  '香港中文大学': '海外本科', '港中文': '海外本科', '香港大学': '海外本科', '港大': '海外本科',
+  '香港科技大学': '海外本科', '港科大': '海外本科', '香港城市大学': '海外本科', '港城大': '海外本科',
+  '香港理工大学': '海外本科', '港理工': '海外本科', '香港浸会大学': '海外本科', '浸会': '海外本科',
+  '香港岭南大学': '海外本科', '岭南': '海外本科', '香港教育大学': '海外本科', '教大': '海外本科',
+  '香港演艺学院': '海外本科', '澳门科技大学': '海外本科', '澳科大': '海外本科',
+  '澳门大学': '海外本科', '澳大': '海外本科',
+};
+
+const majorGroups = {
+  // 各大类严格独立，关键词精确不跨界。一个案例的 student_major 必须命中某个大类的 keywords 才算匹配。
+  '计算机科学':         ['计算机', '软件工程', '网络工程', '网络安全', '物联网', '区块链', '信息系统', '信息工程', '数字媒体技术', '计算机系统工程', '信息管理与信息系统'],
+  '人工智能与数据科学': ['人工智能', '数据科学', '大数据', '智能科学', '机器人'],
+  '软件工程':           ['软件工程'],
+  '信息系统':           ['信息系统', '信息管理与信息系统', '信息管理', '信息工程'],
+  '电子工程':           ['电子', '微电子', '电子科学与技术', '集成电路', '半导体', '电子电气', '电子电气工程'],
+  '通信工程':           ['通信', '通信工程', '信号', '电信'],
+  '电气与自动化':       ['电气', '电气工程', '电气自动化', '电气工程及其自动化', '自动化', '测控', '测控技术与仪器'],
+  '金融':               ['金融', '投资', '银行', '证券', '金融工程', '金融数学', '金融科技'],
+  '经济与会计':         ['经济学', '经济', '会计', '财务', '财务管理', '审计', '财政学', '税务', '国贸', '国际商务'],
+  '工商管理':           ['工商管理', '行政管理', '公共管理', '公共事业管理', '人力资源', '人力', '物流管理', '物流', '供应链', '项目管理', '电子商务', '旅游管理'],
+  '市场营销':           ['市场营销'],
+  '法学':               ['法律', '法学'],
+  '教育学':             ['教育学', '教育', '体育', '汉语国际教育'],
+  '语言与翻译':         ['英语', '翻译', '日语', '汉语言文学', '汉语国际教育', '语言学', '文学'],
+  '传媒与新闻':         ['传媒', '新闻学', '传播', '新媒体', '播音主持', '网络与新媒体', '广告学'],
+  '艺术设计':           ['设计', '艺术', '美术', '动画', '视觉传达', '服装设计', '交互设计', '游戏设计', '表演', '表演艺术', '戏剧影视', '电影', '创意媒体', '工业设计', '数字媒体艺术', '摄影'],
+  '建筑与规划':         ['建筑学', '建筑', '城乡规划', '规划', '风景园林', '园林'],
+  '机械工程':           ['机械', '机械工程', '车辆工程', '汽车工程', '工业工程', '制造', '能源', '动力工程', '航空航天', '船舶'],
+  '土木工程':           ['土木工程', '土木', '水利工程', '交通工程', '地质', '地理信息', '测绘', '采矿', '石油工程', '海洋'],
+  '材料与化工':         ['材料', '材料科学', '化学', '化学工程', '应用化学'],
+  '生物与医药':         ['生物', '生物技术', '生物信息', '药学', '医学', '农学', '食品科学', '食品', '生命科学', '公共卫生', '环境科学'],
+  '数学与统计':         ['数学', '统计学', '应用数学'],
+  '物理与光电':         ['物理学', '物理', '光电', '核科学', '力学']
+};
+
+let allCases = [];
+
+function $(id) { return document.getElementById(id); }
+function on(el, evt, fn) { el && el.addEventListener(evt, fn); }
+
+function getSchoolTier(name) {
+  if (!name) return '双非';
+  if (schoolTierMap[name]) return schoolTierMap[name];
+  for (const [key, tier] of Object.entries(schoolTierMap)) {
+    if (key.length >= 4 && name.includes(key)) return tier;
+  }
+  const s = name.toLowerCase();
+  if (s.includes('澳门') || s.includes('香港') || s.includes('academy') || 
+      s.includes('利物浦') || s.includes('诺丁汉') || s.includes('纽约') || 
+      s.includes('杜克') || s.includes('以色列') || s.includes('莫斯科') ||
+      s.includes('阿姆斯特丹') || s.includes('university') || s.includes('college') ||
+      s.includes('本科') || s.includes('海本') || s.includes('美本')) {
+    return '海外本科';
+  }
+  return '双非';
+}
+function tierClass(tier) {
+  const map = { '985': '985', '211': '211', '双非': 'shuangfei', '海外本科': 'overseas', '独立学院': 'shuangfei', '双一流': 'shuangfei' };
+  return map[tier] || 'shuangfei';
+}
+function tierValue(tier) {
+  return { '985': 4, '211': 3, '海外本科': 2, '双非': 1 }[tier] || 1;
+}
+function parseGpa(gpaStr) {
+  if (!gpaStr || gpaStr === '未填写') return NaN;
+  const match = String(gpaStr).match(/[\d.]+/);
+  if (!match) return NaN;
+  let val = parseFloat(match[0]);
+  if (isNaN(val)) return NaN;
+  if (String(gpaStr).includes('/')) {
+    const parts = String(gpaStr).split('/');
+    if (parts.length >= 2) {
+      const denom = parseFloat(parts[1]);
+      if (denom === 4) return Math.round(val / 4 * 100);
+      if (denom === 5) return Math.round(val / 5 * 100);
+      if (denom > 10) return Math.round(val);
+    }
+  }
+  if (val > 10) return Math.round(val);
+  if (val <= 4.3 && val >= 0) return Math.round(val / 4 * 100);
+  if (val <= 5.5 && val > 4.3) return Math.round(val / 5 * 100);
+  if (val <= 10 && val > 5.5) return Math.round(val / 10 * 100);
+  return Math.round(val);
+}
+// 判断学校所在地区是否与目标地区匹配（用于 offers 级别过滤）
+const regionKeywords = {
+  '香港': ['香港', '港大', '港中文', '港科技', '港科大', '港城市', '港城大', '港理工', '港浸会', '岭南', '港教育', '教大', '港演艺', '港恒生', '都会', '树仁'],
+  '英国': ['伦敦', '帝国', 'ICL', 'UCL', 'LSE', '爱丁堡', '曼彻斯特', '曼大', '布里斯托', '华威', '格拉斯哥', '伯明翰', '南安普顿', '利兹', '杜伦', '谢菲尔德', '诺丁汉', '纽卡斯尔', '兰卡斯特', '约克', '埃克塞特', '卡迪夫', '利物浦', '雷丁', '贝尔法斯特', '阿伯丁', '圣安德鲁斯', '拉夫堡', '苏塞克斯', '莱斯特', '萨里', '斯旺西', '伦敦大学', 'KCL', 'QM'],
+  '新加坡': ['新加坡', '新国立', '国立', '南洋', 'NUS', 'NTU', '新加坡国立', '南洋理工', '新跃', '科廷新加坡', 'SIM', 'PSB'],
+  '澳大利亚': ['澳大利亚', '澳洲', '悉尼', '墨尔本', '澳国立', 'ANU', '昆士兰', '昆士', '新南威尔士', 'UNSW', '莫纳什', 'Monash', '西澳', '阿德莱德', '阿德', '悉尼大学', '墨尔本大学', '澳洲国立', '格里菲斯', '麦考瑞', '皇家墨尔本', 'UTS', '昆士兰大学', '西悉尼', '纽卡斯尔澳洲'],
+  '澳门': ['澳门', '澳大', '澳科大', '澳城大', '澳理工', '澳旅游', '圣若瑟', '镜湖'],
+  '新西兰': ['新西兰', '奥克兰', '奥塔哥', '坎特伯雷', '惠灵顿', '梅西', '怀卡托', '林肯', '坎大', '维大']
+};
+
+function isOfferInRegion(schoolName, targetRegion) {
+  if (!targetRegion || !schoolName) return true;
+  const keywords = regionKeywords[targetRegion];
+  if (!keywords) return true;
+  const s = schoolName.toLowerCase();
+  return keywords.some(k => s.includes(k.toLowerCase()));
+}
+
+function isRelatedMajor(a, b) {
+  if (!a || !b) return false;
+  const aLower = a.toLowerCase();
+  const bLower = b.toLowerCase();
+
+  // 策略1：a 是下拉框中的大类名 → 用该类 keywords 严格匹配 b
+  for (const [groupName, keywords] of Object.entries(majorGroups)) {
+    if (aLower === groupName.toLowerCase()) {
+      return keywords.some(k => bLower.includes(k));
+    }
+  }
+
+  // 策略2：b 是下拉框中的大类名 → 同理反向匹配
+  for (const [groupName, keywords] of Object.entries(majorGroups)) {
+    if (bLower === groupName.toLowerCase()) {
+      return keywords.some(k => aLower.includes(k));
+    }
+  }
+
+  // 策略3（fallback）：a、b 都是自由文本 → 必须落在同一大类才相关
+  for (const keywords of Object.values(majorGroups)) {
+    const aMatch = keywords.some(k => aLower.includes(k));
+    const bMatch = keywords.some(k => bLower.includes(k));
+    if (aMatch && bMatch) return true;
+  }
+  return false;
+}
+
+async function loadCases() {
+  try {
+    const res = await fetch('cases.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const casesData = await res.json();
+    allCases = casesData.map((item, idx) => normalizeCase(item, idx));
+  } catch (err) {
+    console.error('案例加载失败:', err);
+    alert('案例数据加载失败，请确保 cases.json 文件存在且格式正确');
+  }
+}
+
+function normalizeCase(item, idx) {
+  const offers = Array.isArray(item.offers) && item.offers.length
+    ? item.offers
+    : [{ school: item.school || '待更新', major: item.major || '待更新', rank: item.result || '普通录取' }];
+  const studentSchool = item.student_school;
+  const tier = item.tier || getSchoolTier(studentSchool);
+  return {
+    id: item.id || idx + 1,
+    title: item.title || `${item.country || '地区'}${item.degree || '项目'}`,
+    student_school: studentSchool,
+    student_major: item.student_major || item.major || '专业未填写',
+    gpa: item.gpa || '未填写',
+    language_score: item.language_score || '未填写',
+    country: item.country || '未分类',
+    degree: item.degree || '未分类',
+    result: item.result || (offers[0]?.rank) || '普通录取',
+    offers: offers,
+    tier: tier,
+    entry_year: item.entry_year
+  };
+}
+
+function calculateMatchScore(user, caseItem) {
+  let score = 0;
+  const reasons = [];
+  const caseTierVal = tierValue(caseItem.tier);
+  const userTierVal = tierValue(user.tier);
+  const tierDiff = caseTierVal - userTierVal;
+  
+  if (tierDiff === 0) {
+    score += 40;
+    reasons.push('同档次院校');
+  } else if (Math.abs(tierDiff) === 1) {
+    score += 20;
+    reasons.push(tierDiff > 0 ? '高一档院校' : '低一档院校');
+  }
+  
+  const userGpa = parseGpa(user.gpa);
+  const caseGpa = parseGpa(caseItem.gpa);
+  if (!isNaN(userGpa) && !isNaN(caseGpa)) {
+    const diff = Math.abs(caseGpa - userGpa);
+    if (diff <= 2) { score += 30; reasons.push('GPA高度匹配'); }
+    else if (diff <= 5) { score += 20; reasons.push('GPA接近'); }
+    else if (diff <= 10) { score += 10; reasons.push('GPA区间相似'); }
+  }
+  
+  if (user.major && caseItem.student_major) {
+    const u = user.major.toLowerCase();
+    const c = caseItem.student_major.toLowerCase();
+    if (u === c || c.includes(u) || u.includes(c)) {
+      score += 20;
+      reasons.push('目标专业匹配');
+    } else if (isRelatedMajor(u, c)) {
+      score += 10;
+      reasons.push('本科背景相关');
+    }
+  }
+  
+  if (user.target && caseItem.country.includes(user.target)) {
+    score += 10;
+    reasons.push('目标地区匹配');
+  }
+  
+  return { score, reasons, tierDiff, gpaDiff: caseGpa - userGpa };
+}
+
+function runEval() {
+  const school = $('evalSchool').value.trim();
+  const gpaInput = $('evalGpa').value.trim();
+  const major = $('evalMajor').value.trim();
+  const target = $('evalTarget').value;
+  
+  if (!school || !gpaInput) {
+    alert('请至少填写本科院校和GPA');
+    return;
+  }
+  
+  const user = {
+    tier: getSchoolTier(school),
+    gpa: gpaInput,
+    major: major,
+    target: target
+  };
+  
+  const scored = allCases.map(c => {
+    const { score, reasons, tierDiff, gpaDiff } = calculateMatchScore(user, c);
+    return { case: c, score, reasons, tierDiff, gpaDiff };
+  }).filter(m => {
+    // 硬过滤1：用户选了目标专业时，必须专业相关
+    if (user.major && !isRelatedMajor(user.major, m.case.student_major)) return false;
+    // 硬过滤2：用户选了目标地区时，案例 country 必须包含该地区
+    if (user.target && !m.case.country.includes(user.target)) return false;
+    // 硬过滤3：用户选了目标地区时，案例必须有至少一个该地区 offer
+    if (user.target) {
+      const hasTargetOffer = m.case.offers.some(o => isOfferInRegion(o.school, user.target));
+      if (!hasTargetOffer) return false;
+    }
+    return m.score >= 30;
+  }).sort((a, b) => b.score - a.score);
+  
+  const 冲刺 = [];
+  const 匹配 = [];
+  const 保底 = [];
+  const userGpa = parseGpa(user.gpa);
+  
+  scored.forEach(m => {
+    const caseGpa = parseGpa(m.case.gpa);
+    const caseTierVal = tierValue(m.case.tier);
+    const userTierVal = tierValue(user.tier);
+    
+    if (caseTierVal > userTierVal) {
+      冲刺.push(m);
+    } else if (caseTierVal < userTierVal) {
+      保底.push(m);
+    } else {
+      if (!isNaN(caseGpa) && !isNaN(userGpa)) {
+        if (caseGpa > userGpa + 3) 冲刺.push(m);
+        else if (caseGpa < userGpa - 5) 保底.push(m);
+        else 匹配.push(m);
+      } else {
+        匹配.push(m);
+      }
+    }
+  });
+  
+  renderEvalResult({ 冲刺, 匹配, 保底, user });
+}
+
+function renderEvalResult(result) {
+  const { 冲刺, 匹配, 保底, user } = result;
+  const totalCount = 冲刺.length + 匹配.length + 保底.length;
+
+  let html = `
+    <div style="max-width:720px;margin:0 auto var(--space-8);text-align:center;padding:var(--space-6) 0;border-bottom:1px solid var(--color-border-light);">
+      <div style="font-size:18px;font-weight:700;color:var(--color-text);margin-bottom:4px;">
+        ${user.tier} &middot; GPA ${user.gpa}
+        ${user.major ? ` &middot; ${user.major}` : ''}
+        ${user.target ? ` &middot; ${user.target}` : ''}
+      </div>
+      <div style="font-size:13px;color:var(--color-text-tertiary);">从 ${allCases.length} 个案例筛选出 ${totalCount} 条匹配</div>
+    </div>
+  `;
+
+  const tierBlocks = [
+    { key: '冲刺', data: 冲刺, user, label: '冲刺档', desc: '背景更优的相似案例也拿到了这些录取', tip: '冲刺这些院校需要什么准备？', btn: '咨询冲刺策略' },
+    { key: '匹配', data: 匹配, user, label: '匹配档', desc: '与你背景高度相似的案例，录取概率较高', tip: '了解这些院校的申请细节和时间规划', btn: '获取申请方案' },
+    { key: '保底', data: 保底, user, label: '保底档', desc: '背景稍弱也有录取记录的院校', tip: '保底院校的申请时间节点和注意事项', btn: '咨询保底规划' }
+  ];
+
+  for (const t of tierBlocks) {
+    if (t.data.length === 0) continue;
+    const cls = t.key === '冲刺' ? 'eval-reach' : t.key === '匹配' ? 'eval-match' : 'eval-safe';
+    html += `
+      <div class="eval-category ${cls}">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+          <div class="eval-category-title" style="margin:0;">${t.label}</div>
+          <span style="font-size:12px;color:var(--color-text-tertiary);font-weight:400;">${t.data.length} 条</span>
+        </div>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 var(--space-4);">${t.desc}</p>
+        <div class="eval-grid">${t.data.slice(0, 3).map(m => renderEvalCaseCard(m, t.user.target)).join('')}</div>
+        <div class="tier-tip">
+          <p class="tier-tip-text">${t.tip}</p>
+          <button class="tier-tip-btn" onclick="openQr()">${t.btn}</button>
+        </div>
+      </div>
+    `;
+  }
+
+  if (totalCount === 0) {
+    html += `
+      <div class="eval-empty">
+        <div style="font-size:var(--text-3xl);margin-bottom:var(--space-3);">🔍</div>
+        <p>未找到匹配案例，你的背景比较特殊</p>
+        <p style="font-size:var(--text-sm);margin-top:var(--space-2);">建议联系专业顾问做一对一评估</p>
+        <button class="btn btn-primary" onclick="openQr()" style="margin-top:var(--space-4);">联系咨询</button>
+      </div>
+    `;
+  }
+
+  html += `
+    <div class="result-cta">
+      <div class="result-cta-title">需要更详细的选校方案和申请规划？</div>
+      <div class="result-cta-desc">联系 DreamBridge 顾问，获取一对一评估和全程申请服务</div>
+      <div class="result-cta-btns">
+        <button class="result-cta-btn result-cta-btn-primary" onclick="openQr()">微信咨询</button>
+        <a class="result-cta-btn result-cta-btn-secondary" href="mailto:496680190@qq.com">邮件咨询</a>
+        <button class="result-cta-btn result-cta-btn-secondary" onclick="copyWechat()">复制微信号</button>
+      </div>
+    </div>
+  `;
+
+  $('evalResult').innerHTML = html;
+  $('evalResult').classList.add('show');
+  $('evalResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function copyWechat() {
+  const wxid = 'xxr13365810586';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(wxid).then(() => alert('微信号已复制'));
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = wxid;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    alert('微信号已复制');
+  }
+}
+
+function renderEvalCaseCard(m, userTarget) {
+  const c = m.case;
+  const displayOffers = userTarget
+    ? c.offers.filter(o => isOfferInRegion(o.school, userTarget))
+    : c.offers;
+  return `
+    <div class="eval-case-card" onclick="openCaseModal(${c.id}, '${userTarget || ''}')">
+      <div class="eval-case-header">
+        <div style="display:flex;align-items:center;gap:10px;min-width:0;">
+          <span class="eval-case-school" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${c.student_school}</span>
+          <span class="pill pill-tier-${tierClass(c.tier)}">${c.tier}</span>
+        </div>
+        <span class="score-badge">${m.score}分</span>
+      </div>
+      <div class="eval-case-meta">${c.student_major} &middot; GPA ${c.gpa}</div>
+      <div class="eval-case-offers">
+        ${displayOffers.slice(0, 2).map(o => `
+          <div class="eval-offer-item">
+            <div style="min-width:0;">
+              <span style="font-weight:600;font-size:13px;">${o.school}</span>
+              ${o.major && o.major !== '待更新' ? `<span style="font-size:12px;color:var(--color-text-secondary);display:block;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${o.major}</span>` : ''}
+            </div>
+            <span style="color:var(--color-accent);font-weight:700;font-size:13px;flex-shrink:0;margin-left:12px;">${o.rank}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+let currentModalTarget = '';
+
+function openCaseModal(id, userTarget) {
+  currentModalTarget = userTarget || '';
+  const item = allCases.find(c => c.id === id);
+  if (!item) return;
+
+  // modal 中也只展示目标地区的 offer
+  const displayOffers = userTarget
+    ? item.offers.filter(o => isOfferInRegion(o.school, userTarget))
+    : item.offers;
+
+  $('modalTitle').textContent = item.student_school ? `案例 #${item.id} · ${item.student_school}` : `案例 #${item.id}`;
+  $('modalPills').innerHTML = `<span class="pill pill-tier-${tierClass(item.tier)}">${item.tier}</span><span class="pill">${item.country}</span><span class="pill">${item.degree}</span><span class="pill">${item.result}</span>`;
+  $('modalMeta').innerHTML = `
+    <div class="detail-meta-block"><label>本科院校</label><value>${item.student_school || item.tier + '院校'}</value></div>
+    <div class="detail-meta-block"><label>学生本科专业</label><value>${item.student_major}</value></div>
+    <div class="detail-meta-block"><label>GPA / 均分</label><value>${item.gpa}</value></div>
+    <div class="detail-meta-block"><label>语言成绩</label><value>${item.language_score}</value></div>
+  `;
+  $('modalOffers').innerHTML = displayOffers.map(o => `
+    <div class="detail-offer-item">
+      <div>
+        <div class="detail-offer-school">${o.school}</div>
+        ${o.major && o.major !== '待更新' ? `<div class="detail-offer-major">${o.major}</div>` : ''}
+      </div>
+      <div class="detail-offer-rank">${o.rank}</div>
+    </div>
+  `).join('');
+  $('caseModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCaseModal() {
+  $('caseModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+on($('caseModal'), 'click', e => { if (e.target === $('caseModal')) closeCaseModal(); });
+
+on($('evalSchool'), 'input', () => {
+  const val = $('evalSchool').value.trim();
+  const tag = $('evalTierTag');
+  if (val.length >= 2) {
+    const tier = getSchoolTier(val);
+    tag.textContent = '识别为：' + tier;
+    tag.style.display = 'inline-block';
+    tag.className = 'eval-tier-tag pill-tier-' + tierClass(tier);
+  } else {
+    tag.style.display = 'none';
+  }
+});
+
+function openQr() { $('qrModal').classList.add('show'); }
+function closeQr() { $('qrModal').classList.remove('show'); }
+
+function setupUI() {
+  const header = $('topHeader');
+  const toTop = $('toTop');
+
+  on(window, 'scroll', () => {
+    if (header) header.classList.toggle('scrolled', window.scrollY > 40);
+    if (toTop) toTop.classList.toggle('show', window.scrollY > 400);
+  });
+
+  on(toTop, 'click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  on($('themeToggle'), 'click', () => document.body.classList.toggle('dark'));
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+}
+
+// Init
+setupUI();
+loadCases();
+</script>
+<script src="dreambridge-ai-chat.js"></script>
+</body>
+</html>
