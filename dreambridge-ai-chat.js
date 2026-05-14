@@ -109,36 +109,6 @@
       a: '各地区毕业后工签对比：<br>• <strong>英国</strong>：PSW 2年（博士3年），留英难度较高<br>• <strong>澳洲</strong>：工签2-4年，技术移民清单丰富<br>• <strong>新西兰</strong>：3年工签，移民政策最宽松<br>• <strong>香港</strong>：IANG签证，可留港工作<br><br>如果目标是移民，澳洲和新西兰是最优选择。',
       tags: ['移民'],
       followUp: []
-    },
-    {
-      q: ['考公', '考编', '公务员', '事业单位', '体制内', '国考', '省考'],
-      a: '留学生可以考公考编！但<strong>专业名称匹配是生死线</strong>。<br><br>六大考公热门专业：<br>• <strong>财会类</strong>（~30%岗位）：会计、金融、财政、税收 → 税务局/财政局<br>• <strong>法学类</strong>（~15%）：法学/国际法 → 纪检审计/法务<br>• <strong>管理类</strong>（~20%）：公共管理/行政管理 → 政府办<br>• <strong>计算机类</strong>（~10%）：CS/网络工程 → 数据分析/信息化<br>• <strong>经济类</strong>（~15%）：经济学/国际贸易 → 发改委<br>• <strong>中文类</strong>（~5%）：汉语言文学/教育学 → 宣传/文秘<br><br>⚠️ <strong>关键提醒</strong>：国外专业名可能和国内目录不一致，需通过留服认证复核。建议选校时<strong>优先保专业名称匹配，再考虑排名</strong>。',
-      tags: ['考公'],
-      followUp: ['showCareer']
-    },
-    {
-      q: ['大厂', '互联网', '腾讯', '阿里', '字节', '华为', '百度', '美团'],
-      a: '进大厂，<strong>实习 > 学校 > 专业</strong>。<br><br>大厂校招目标院校（含港校）：<br>• <strong>港大、港科大、港中文</strong>明确在字节跳动等校招list中<br>• 英国G5 + 王曼爱华也在target范围内<br>• QS前100是多数大厂隐性门槛<br><br>关键建议：<br>• <strong>实习最重要</strong>：2-3段大厂/中厂实习比学校排名更管用<br>• <strong>港校最优</strong>：地理位置方便，可兼顾香港实习+回国远程实习<br>• <strong>非科班也行</strong>：CS对口但非CS的只要有项目和实习也能进<br><br>一句话：港大CS + 0实习 < 双非 + 3段大厂实习',
-      tags: ['大厂'],
-      followUp: ['showCareer']
-    },
-    {
-      q: ['金融', '券商', '投行', '基金', '银行', '证券'],
-      a: '金融行业<strong>学历+实习+证书</strong>缺一不可。<br><br>选校梯队：<br>• <strong>Tier 1</strong>：LSE、牛剑、LBS、港大、NUS → 中金/中信/华泰target<br>• <strong>Tier 2</strong>：IC、UCL、华威、曼大、港中文、港科大 → 大部分券商认可<br>• <strong>Tier 3</strong>：布里斯托、格拉斯哥、悉尼、墨尔本 → 四大/城商行<br><br>细分方向要求：<br>• 投行IBD：学校极严格 + CPA/CFA + 3段实习<br>• 行研：CFA + 2-3段券商实习<br>• 量化：CFA/FRM + Python + 代码能力<br><br>建议：先定学校，我再帮你规划实习时间线+考证节奏。',
-      tags: ['金融'],
-      followUp: ['showCareer']
-    },
-    {
-      q: ['落户', '户口', '上海落户', '北京落户', '深圳落户'],
-      a: '留学生回国落户有大优势！<br><br><strong>上海</strong>（最新政策）：<br>• QS前50：过试用期<strong>直接落户</strong><br>• QS 51-100：6个月社保（无基数要求）<br>• QS 101-500：6个月1倍社保基数<br><br><strong>北京</strong>：<br>• 硕士及以上 + 留学≥360天 + 回国≤2年 + 年龄≤45<br>• 需在京央企/事业单位/高新企业<br><br><strong>深圳</strong>：<br>• 博士45岁以下/硕士40岁以下/本科35岁以下<strong>直接落户</strong><br>• 还有额外补贴（博士10万/硕士5万/本科3万）<br><br>如果目标是落户，<strong>优先冲QS前50</strong>（上海直接落），其次是前100（半年落）。',
-      tags: ['落户'],
-      followUp: ['showCareer']
-    },
-    {
-      q: ['选调生', '选调'],
-      a: '⚠️ <strong>重要提醒：2025-2026年多地选调生政策收紧</strong><br><br>已取消留学生选调的地区：<br>• 上海（2026年起取消）<br>• 北京（定向选调不再招留学生）<br>• 广东（取消境外高校选调名单）<br>• 山东、山西等<br><br>但<strong>不必恐慌</strong>！替代路径完全开放：<br>• <strong>国考</strong>：完全开放，留学生可报<br>• <strong>省考/市考</strong>：各省单独组织<br>• <strong>事业单位</strong>：教育/医疗/科研/文化<br>• <strong>人才引进</strong>：各省市海外高层次人才引进<br>• <strong>央国企</strong>：部分有留学生专项通道<br><br>建议：选调生只是体制内路径之一，国考省考才是主流，且对留学生完全开放。',
-      tags: ['选调生'],
-      followUp: ['showCareer']
     }
   ];
 
@@ -699,11 +669,6 @@
         break;
       case 'showAUInfo':
         addBotMessage('澳洲硕士申请要求：<br>• <strong>墨尔本大学</strong>：偏好985/211，均分80+<br>• <strong>悉尼/新南</strong>：211均分75+，双非80+<br>• <strong>八大</strong>：双非均分70-75也有机会<br>• <strong>雅思</strong>：6.5（单项6.0），接受PTE<br>• <strong>优势</strong>：工签2-3年，零中介费申请<br><br>想去哪所学校？');
-        break;
-      case 'showCareer':
-        addBotMessage('回国就业方向很重要！我能帮你：<br><br>1. <strong>考公考编</strong> → 专业名称匹配是第一位的<br>2. <strong>进互联网大厂</strong> → 实习经历 > 学校排名<br>3. <strong>进金融行业</strong> → 学校target list + 证书 + 实习<br>4. <strong>落户导向</strong> → QS前50直接落户<br>5. <strong>选调生</strong> → 2025-2026多地已收紧，但有替代路径<br><br>告诉我你回国想做什么，我帮你倒推选校策略！', [
-          { label: '免费咨询详细规划', action: 'askContact' }
-        ]);
         break;
       default:
         addBotMessage('这个问题比较个性化，建议你添加我们顾问的微信（xxr13365810586）详细聊聊，会根据你的具体情况给出最优方案～', [
