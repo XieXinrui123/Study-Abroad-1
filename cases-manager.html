@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>DreamBridge 案例管理器（本地工具）</title>
+  <link rel="stylesheet" href="cases-manager.css">
+</head>
+<body>
+  <main class="manager-shell">
+    <header class="manager-header">
+      <div>
+        <div class="eyebrow">DREAMBRIDGE · LOCAL TOOL</div>
+        <h1>案例管理器</h1>
+        <p>导入、校验、编辑并导出网站使用的 <code>cases.json</code>。草稿只保存在当前浏览器。</p>
+      </div>
+      <div class="header-actions">
+        <a class="btn" href="案例批量导入模板.xlsx" download>下载 Excel 模板</a>
+        <button class="btn" id="importButton" type="button">导入 JSON / CSV / Excel</button>
+        <button class="btn" id="restoreButton" type="button">恢复浏览器草稿</button>
+        <button class="btn accent" id="exportButton" type="button">校验并导出 JSON</button>
+        <input id="fileInput" type="file" accept=".json,.csv,.xlsx,.xls" hidden>
+      </div>
+    </header>
+
+    <section class="status-strip" aria-label="案例状态">
+      <div class="stat"><span>案例总数</span><strong id="caseCount">0</strong></div>
+      <div class="stat"><span>Offer 总数</span><strong id="offerCount">0</strong></div>
+      <div class="stat"><span>校验错误</span><strong id="errorCount">0</strong></div>
+      <div class="stat"><span>校验提醒</span><strong id="warningCount">0</strong></div>
+    </section>
+
+    <div id="message" class="message" role="status"></div>
+
+    <section class="workspace">
+      <aside class="panel sidebar">
+        <div class="sidebar-top">
+          <input class="search" id="searchInput" type="search" placeholder="搜索院校、专业、地区或编号">
+          <button class="btn primary" id="newButton" type="button" style="width:100%;margin-top:10px;">＋ 新建案例</button>
+        </div>
+        <div class="case-list" id="caseList"></div>
+      </aside>
+
+      <section class="panel editor">
+        <div class="editor-title">
+          <h2 id="editorHeading">新建案例</h2>
+          <span class="help">带 * 的字段为导出必填项</span>
+        </div>
+        <form id="caseForm">
+          <div class="form-grid">
+            <div class="field">
+              <label class="required" for="caseId">案例编号</label>
+              <input id="caseId" name="id" type="number" min="1" required>
+            </div>
+            <div class="field">
+              <label class="required" for="studentSchool">本科院校</label>
+              <input id="studentSchool" name="student_school" required>
+            </div>
+            <div class="field">
+              <label class="required" for="tier">本科层次</label>
+              <select id="tier" name="tier" required>
+                <option>985</option><option>211</option><option>双非</option><option>海外本科</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="required" for="studentMajor">本科专业</label>
+              <input id="studentMajor" name="student_major" required>
+            </div>
+            <div class="field">
+              <label for="gpa">GPA / 均分</label>
+              <input id="gpa" name="gpa" placeholder="例如：86 或 3.6/4.0">
+            </div>
+            <div class="field">
+              <label for="languageScore">语言成绩</label>
+              <input id="languageScore" name="language_score" placeholder="例如：IELTS 7.0">
+            </div>
+            <div class="field">
+              <label class="required" for="country">申请地区</label>
+              <input id="country" name="country" placeholder="多个地区用 / 分隔，如 香港/英国" required>
+            </div>
+            <div class="field">
+              <label for="degree">学历</label>
+              <select id="degree" name="degree">
+                <option>硕士</option><option>本科</option><option>博士</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="entryYear">入学年份</label>
+              <input id="entryYear" name="entry_year" type="number" min="2020" max="2040">
+            </div>
+            <div class="field full">
+              <label for="note">备注</label>
+              <textarea id="note" name="note" placeholder="可留空；请勿填写不应公开的个人信息"></textarea>
+            </div>
+          </div>
+
+          <div class="offers-block">
+            <div class="section-heading">
+              <h3>录取 Offer</h3>
+              <button class="btn small" id="addOfferButton" type="button">＋ 添加 Offer</button>
+            </div>
+            <div id="offersContainer"></div>
+          </div>
+
+          <div class="editor-actions">
+            <button class="btn danger" id="deleteButton" type="button">删除案例</button>
+            <button class="btn" id="duplicateButton" type="button">复制为新案例</button>
+            <button class="btn primary" type="submit">保存案例</button>
+          </div>
+        </form>
+      </section>
+    </section>
+    <p class="footer-note">本页面不会自动上传数据；导出后请用新文件替换网站根目录中的 cases.json。</p>
+  </main>
+  <div class="drop-zone" id="dropZone">松开即可导入文件</div>
+
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+  <script src="cases-manager-core.js"></script>
+  <script src="cases-manager.js"></script>
+</body>
+</html>

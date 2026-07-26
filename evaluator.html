@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DreamBridge留学智能背景评估器，输入你的院校、GPA、专业，30秒匹配相似成功案例，获取三档选校定位建议。"(开发阶段,具体定位欢迎随时咨询)>
+<meta name="description" content="DreamBridge留学智能背景评估器，输入院校、GPA、专业和目标地区，匹配相似成功案例并获取三档选校方向参考。">
 <title>智能背景评估｜DreamBridge留学选校定位工具</title>
 <style>
 :root {
@@ -758,8 +758,7 @@ ul, ol { list-style: none; }
   .eval-grid { grid-template-columns: 1fr; }
 }
 </style>
-<base target="_blank">
-<base target="_blank">
+<link rel="stylesheet" href="site-shell.css">
 </head>
 <body>
 
@@ -777,6 +776,7 @@ ul, ol { list-style: none; }
     <button class="theme-toggle" id="themeToggle">🌓</button>
   </div>
 </header>
+<script src="site-shell.js"></script>
 
 <main>
 
@@ -1019,6 +1019,11 @@ let allCases = [];
 
 function $(id) { return document.getElementById(id); }
 function on(el, evt, fn) { el && el.addEventListener(evt, fn); }
+function safe(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+  })[char]);
+}
 
 function getSchoolTier(name) {
   if (!name) return '双非';
@@ -1045,24 +1050,23 @@ function tierValue(tier) {
 }
 function parseGpa(gpaStr) {
   if (!gpaStr || gpaStr === '未填写') return NaN;
-  const match = String(gpaStr).match(/[\d.]+/);
+  const clean = String(gpaStr).replace(/\s/g, '');
+  const match = clean.match(/[\d.]+/);
   if (!match) return NaN;
   let val = parseFloat(match[0]);
   if (isNaN(val)) return NaN;
-  if (String(gpaStr).includes('/')) {
-    const parts = String(gpaStr).split('/');
+  if (clean.includes('/')) {
+    const parts = clean.split('/');
     if (parts.length >= 2) {
       const denom = parseFloat(parts[1]);
-      if (denom === 4) return Math.round(val / 4 * 100);
-      if (denom === 5) return Math.round(val / 5 * 100);
-      if (denom > 10) return Math.round(val);
+      if (denom > 0 && denom <= 10) return Math.min(100, Math.round(val / denom * 100));
+      if (denom > 10) return Math.min(100, Math.round(val));
     }
   }
-  if (val > 10) return Math.round(val);
-  if (val <= 4.3 && val >= 0) return Math.round(val / 4 * 100);
-  if (val <= 5.5 && val > 4.3) return Math.round(val / 5 * 100);
-  if (val <= 10 && val > 5.5) return Math.round(val / 10 * 100);
-  return Math.round(val);
+  if (val > 10) return Math.min(100, Math.round(val));
+  if (val <= 4.3 && val >= 0) return Math.min(100, Math.round(val / 4 * 100));
+  if (val <= 5.5) return Math.min(100, Math.round(val / 5 * 100));
+  return Math.min(100, Math.round(val / 10 * 100));
 }
 // 判断学校所在地区是否与目标地区匹配（用于 offers 级别过滤）
 const regionKeywords = {
@@ -1152,40 +1156,61 @@ function calculateMatchScore(user, caseItem) {
   const tierDiff = caseTierVal - userTierVal;
   
   if (tierDiff === 0) {
-    score += 40;
+    score += 30;
     reasons.push('同档次院校');
   } else if (Math.abs(tierDiff) === 1) {
-    score += 20;
+    score += 18;
     reasons.push(tierDiff > 0 ? '高一档院校' : '低一档院校');
+  } else {
+    score += 5;
   }
   
   const userGpa = parseGpa(user.gpa);
   const caseGpa = parseGpa(caseItem.gpa);
   if (!isNaN(userGpa) && !isNaN(caseGpa)) {
     const diff = Math.abs(caseGpa - userGpa);
-    if (diff <= 2) { score += 30; reasons.push('GPA高度匹配'); }
-    else if (diff <= 5) { score += 20; reasons.push('GPA接近'); }
-    else if (diff <= 10) { score += 10; reasons.push('GPA区间相似'); }
+    if (diff <= 2) { score += 35; reasons.push('GPA高度匹配'); }
+    else if (diff <= 5) { score += 25; reasons.push('GPA接近'); }
+    else if (diff <= 8) { score += 12; reasons.push('GPA区间相似'); }
   }
   
   if (user.major && caseItem.student_major) {
-    const u = user.major.toLowerCase();
-    const c = caseItem.student_major.toLowerCase();
-    if (u === c || c.includes(u) || u.includes(c)) {
-      score += 20;
-      reasons.push('目标专业匹配');
-    } else if (isRelatedMajor(u, c)) {
-      score += 10;
-      reasons.push('本科背景相关');
+    if (isRelatedMajor(user.major, caseItem.student_major)) {
+      score += 25;
+      reasons.push('专业方向相关');
     }
   }
   
-  if (user.target && caseItem.country.includes(user.target)) {
+  if (user.target && caseItem.offers.some(offer => isOfferInRegion(offer.school, user.target))) {
     score += 10;
     reasons.push('目标地区匹配');
   }
   
   return { score, reasons, tierDiff, gpaDiff: caseGpa - userGpa };
+}
+
+function getOfferRankLevel(rank) {
+  const value = String(rank || '');
+  if (/前10(?!\d)/.test(value)) return 4;
+  if (/前50(?!\d)/.test(value)) return 3;
+  if (/前100(?!\d)/.test(value)) return 2;
+  return 1;
+}
+
+function getReferenceBucket(user, matchedCase, offer) {
+  const userGpa = parseGpa(user.gpa);
+  const caseGpa = parseGpa(matchedCase.gpa);
+  const tierGap = tierValue(matchedCase.tier) - tierValue(user.tier);
+  const gpaGap = isNaN(userGpa) || isNaN(caseGpa) ? 0 : caseGpa - userGpa;
+  const rankLevel = getOfferRankLevel(offer.rank);
+  let comparison = tierGap * 7 + gpaGap;
+
+  if (rankLevel === 4) comparison += 2;
+  else if (rankLevel === 3) comparison += 1;
+
+  if (comparison >= 6) return '冲刺';
+  if (comparison <= -8 && rankLevel < 4) return '保底';
+  return '匹配';
 }
 
 function runEval() {
@@ -1198,6 +1223,10 @@ function runEval() {
     alert('请至少填写本科院校和GPA');
     return;
   }
+  if (isNaN(parseGpa(gpaInput))) {
+    alert('请填写有效的GPA或均分，例如 85、3.5/4.0');
+    return;
+  }
   
   const user = {
     tier: getSchoolTier(school),
@@ -1206,48 +1235,55 @@ function runEval() {
     target: target
   };
   
-  const scored = allCases.map(c => {
+  const scoredCases = allCases.map(c => {
     const { score, reasons, tierDiff, gpaDiff } = calculateMatchScore(user, c);
     return { case: c, score, reasons, tierDiff, gpaDiff };
   }).filter(m => {
-    // 硬过滤1：用户选了目标专业时，必须专业相关
     if (user.major && !isRelatedMajor(user.major, m.case.student_major)) return false;
-    // 硬过滤2：用户选了目标地区时，案例 country 必须包含该地区
-    if (user.target && !m.case.country.includes(user.target)) return false;
-    // 硬过滤3：用户选了目标地区时，案例必须有至少一个该地区 offer
     if (user.target) {
       const hasTargetOffer = m.case.offers.some(o => isOfferInRegion(o.school, user.target));
       if (!hasTargetOffer) return false;
     }
-    return m.score >= 30;
-  }).sort((a, b) => b.score - a.score);
+    return m.score >= 40;
+  });
   
   const 冲刺 = [];
   const 匹配 = [];
   const 保底 = [];
-  const userGpa = parseGpa(user.gpa);
-  
-  scored.forEach(m => {
-    const caseGpa = parseGpa(m.case.gpa);
-    const caseTierVal = tierValue(m.case.tier);
-    const userTierVal = tierValue(user.tier);
-    
-    if (caseTierVal > userTierVal) {
-      冲刺.push(m);
-    } else if (caseTierVal < userTierVal) {
-      保底.push(m);
-    } else {
-      if (!isNaN(caseGpa) && !isNaN(userGpa)) {
-        if (caseGpa > userGpa + 3) 冲刺.push(m);
-        else if (caseGpa < userGpa - 5) 保底.push(m);
-        else 匹配.push(m);
-      } else {
-        匹配.push(m);
-      }
-    }
+
+  scoredCases.forEach(m => {
+    const relevantOffers = user.target
+      ? m.case.offers.filter(offer => isOfferInRegion(offer.school, user.target))
+      : m.case.offers;
+
+    relevantOffers.forEach(offer => {
+      const candidate = {
+        ...m,
+        offer,
+        rankLevel: getOfferRankLevel(offer.rank),
+        case: { ...m.case, offers: [offer], result: offer.rank }
+      };
+      const bucket = getReferenceBucket(user, m.case, offer);
+      if (bucket === '冲刺') 冲刺.push(candidate);
+      else if (bucket === '保底') 保底.push(candidate);
+      else 匹配.push(candidate);
+    });
   });
+
+  const sortCandidates = list => list
+    .sort((a, b) => b.score - a.score || b.rankLevel - a.rankLevel || (b.case.entry_year || 0) - (a.case.entry_year || 0))
+    .filter((item, index, list) => index === list.findIndex(other =>
+      other.offer.school === item.offer.school &&
+      other.offer.major === item.offer.major &&
+      other.case.id === item.case.id
+    ));
   
-  renderEvalResult({ 冲刺, 匹配, 保底, user });
+  renderEvalResult({
+    冲刺: sortCandidates(冲刺),
+    匹配: sortCandidates(匹配),
+    保底: sortCandidates(保底),
+    user
+  });
 }
 
 function renderEvalResult(result) {
@@ -1257,18 +1293,19 @@ function renderEvalResult(result) {
   let html = `
     <div style="max-width:720px;margin:0 auto var(--space-8);text-align:center;padding:var(--space-6) 0;border-bottom:1px solid var(--color-border-light);">
       <div style="font-size:18px;font-weight:700;color:var(--color-text);margin-bottom:4px;">
-        ${user.tier} &middot; GPA ${user.gpa}
-        ${user.major ? ` &middot; ${user.major}` : ''}
-        ${user.target ? ` &middot; ${user.target}` : ''}
+        ${safe(user.tier)} &middot; GPA ${safe(user.gpa)}
+        ${user.major ? ` &middot; ${safe(user.major)}` : ''}
+        ${user.target ? ` &middot; ${safe(user.target)}` : ''}
       </div>
-      <div style="font-size:13px;color:var(--color-text-tertiary);">从 ${allCases.length} 个案例筛选出 ${totalCount} 条匹配</div>
+      <div style="font-size:13px;color:var(--color-text-tertiary);">从 ${allCases.length} 个真实案例中筛选出 ${totalCount} 个相关录取结果</div>
+      <div style="font-size:12px;color:var(--color-text-tertiary);margin-top:8px;">结果基于历史案例相似度，仅作选校方向参考，不代表录取概率或录取承诺。</div>
     </div>
   `;
 
   const tierBlocks = [
-    { key: '冲刺', data: 冲刺, user, label: '冲刺档', desc: '背景更优的相似案例也拿到了这些录取', tip: '冲刺这些院校需要什么准备？', btn: '咨询冲刺策略' },
-    { key: '匹配', data: 匹配, user, label: '匹配档', desc: '与你背景高度相似的案例，录取概率较高', tip: '了解这些院校的申请细节和时间规划', btn: '获取申请方案' },
-    { key: '保底', data: 保底, user, label: '保底档', desc: '背景稍弱也有录取记录的院校', tip: '保底院校的申请时间节点和注意事项', btn: '咨询保底规划' }
+    { key: '冲刺', data: 冲刺, user, label: '参考冲刺', desc: '相似录取中，成功案例的背景略强或录取层次更高。', tip: '冲刺这些方向需要补强什么？', btn: '咨询冲刺策略' },
+    { key: '匹配', data: 匹配, user, label: '参考匹配', desc: '成功案例与你的本科层次、均分和专业方向最接近。', tip: '了解这些项目的申请细节和时间规划', btn: '获取申请方案' },
+    { key: '保底', data: 保底, user, label: '参考稳妥', desc: '背景略弱的案例也获得过同类录取，适合作为稳妥方向参考。', tip: '稳妥方向如何组合更合理？', btn: '咨询选校规划' }
   ];
 
   for (const t of tierBlocks) {
@@ -1429,7 +1466,6 @@ function setupUI() {
   });
 
   on(toTop, 'click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  on($('themeToggle'), 'click', () => document.body.classList.toggle('dark'));
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });

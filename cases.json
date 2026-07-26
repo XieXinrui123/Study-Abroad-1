@@ -15,7 +15,7 @@
         "rank": "QS前10"
       },
       {
-        "school": "UCL",
+        "school": "伦敦大学学院（UCL）",
         "major": "社会学",
         "rank": "QS前10"
       },
@@ -26,7 +26,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 2,
@@ -55,7 +56,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 3,
@@ -74,7 +76,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 4,
@@ -82,7 +85,7 @@
     "student_major": "财政学",
     "gpa": "89",
     "language_score": "IELTS 6.5",
-    "country": "国内",
+    "country": "香港",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
@@ -93,7 +96,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 5,
@@ -112,7 +116,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 6,
@@ -136,7 +141,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 7,
@@ -165,7 +171,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 8,
@@ -189,7 +196,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 9,
@@ -213,33 +221,35 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 10,
     "student_school": "同济大学",
     "student_major": "英语",
     "gpa": "87",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "Teosl",
         "rank": "QS前10"
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 11,
     "student_school": "吉林大学",
     "student_major": "计算机",
     "gpa": "78",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
@@ -251,7 +261,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 12,
@@ -270,7 +281,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 13,
@@ -283,7 +295,8 @@
     "result": "待更新",
     "offers": [],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 14,
@@ -302,7 +315,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 15,
@@ -325,13 +339,14 @@
         "rank": "QS前50"
       },
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "生物信息",
         "rank": "QS前50"
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 16,
@@ -350,7 +365,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 17,
@@ -379,7 +395,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 18,
@@ -408,7 +425,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 19,
@@ -442,7 +460,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 20,
@@ -461,7 +480,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 21,
@@ -495,7 +515,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 22,
@@ -529,7 +550,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 23,
@@ -548,7 +570,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 24,
@@ -577,7 +600,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 25,
@@ -601,7 +625,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 26,
@@ -630,7 +655,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 27,
@@ -654,7 +680,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 28,
@@ -678,7 +705,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 29,
@@ -707,7 +735,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 30,
@@ -736,7 +765,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 31,
@@ -765,7 +795,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 32,
@@ -788,7 +819,7 @@
         "rank": "QS前100"
       },
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "会计",
         "rank": "QS前100"
       },
@@ -799,7 +830,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 33,
@@ -823,7 +855,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 34,
@@ -842,7 +875,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 35,
@@ -871,7 +905,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 36,
@@ -895,14 +930,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 37,
     "student_school": "西南大学",
     "student_major": "生物",
     "gpa": "80",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -914,7 +950,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 38,
@@ -938,7 +975,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 39,
@@ -957,7 +995,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 40,
@@ -981,14 +1020,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 41,
     "student_school": "厦门大学马来西亚分校",
     "student_major": "会计",
     "gpa": "2.6",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前100",
@@ -1000,7 +1040,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 42,
@@ -1024,7 +1065,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 43,
@@ -1048,7 +1090,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 44,
@@ -1077,7 +1120,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 45,
@@ -1106,7 +1150,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 46,
@@ -1130,7 +1175,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 47,
@@ -1149,7 +1195,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 48,
@@ -1178,7 +1225,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 49,
@@ -1197,14 +1245,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 50,
     "student_school": "PSB Academy",
     "student_major": "传媒",
     "gpa": "80",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前50",
@@ -1226,14 +1275,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 51,
     "student_school": "PSB Academy",
     "student_major": "传媒",
     "gpa": "68",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前50",
@@ -1250,14 +1300,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 52,
     "student_school": "西交利物浦大学",
     "student_major": "金融数学",
     "gpa": "58",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -1274,7 +1325,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 53,
@@ -1298,7 +1350,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 54,
@@ -1316,13 +1369,14 @@
         "rank": "QS前50"
       },
       {
-        "school": "澳洲国立",
+        "school": "澳大利亚国立大学",
         "major": "会计",
         "rank": "QS前50"
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 55,
@@ -1356,7 +1410,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 56,
@@ -1390,7 +1445,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 57,
@@ -1409,7 +1465,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 58,
@@ -1438,7 +1495,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 59,
@@ -1451,7 +1509,7 @@
     "result": "QS前10",
     "offers": [
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "性能与交互",
         "rank": "QS前10"
       },
@@ -1482,7 +1540,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 60,
@@ -1500,7 +1559,7 @@
         "rank": "QS前10"
       },
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "高级材料科学",
         "rank": "QS前10"
       },
@@ -1521,7 +1580,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 61,
@@ -1560,7 +1620,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 62,
@@ -1589,7 +1650,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 63,
@@ -1613,7 +1675,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 64,
@@ -1637,7 +1700,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 65,
@@ -1660,13 +1724,14 @@
         "rank": "QS前100"
       },
       {
-        "school": "南安普敦大学",
+        "school": "南安普顿大学",
         "major": "市场营销",
         "rank": "QS前100"
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 66,
@@ -1690,7 +1755,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 67,
@@ -1718,20 +1784,21 @@
         "rank": "QS前50"
       },
       {
-        "school": "南安普敦",
+        "school": "南安普顿大学",
         "major": "人工智能与管理",
         "rank": "QS前100"
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 68,
     "student_school": "天津城建大学",
     "student_major": "电气工程",
     "gpa": "84",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -1743,7 +1810,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 69,
@@ -1767,7 +1835,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 70,
@@ -1791,7 +1860,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 71,
@@ -1815,7 +1885,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 72,
@@ -1839,14 +1910,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 73,
     "student_school": "琼台师范学院",
     "student_major": "建筑学",
     "gpa": "86",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "澳门",
     "degree": "硕士",
     "result": "海外名校",
@@ -1858,7 +1930,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 74,
@@ -1877,7 +1950,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 75,
@@ -1896,7 +1970,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 76,
@@ -1915,14 +1990,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 77,
     "student_school": "澳门城市大学",
     "student_major": "旅游管理",
     "gpa": "2.6",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
@@ -1934,7 +2010,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 78,
@@ -1953,7 +2030,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 79,
@@ -1972,7 +2050,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 80,
@@ -2001,7 +2080,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 81,
@@ -2014,7 +2094,8 @@
     "result": "待更新",
     "offers": [],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 82,
@@ -2053,14 +2134,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 83,
     "student_school": "北京邮电大学",
     "student_major": "信息工程",
     "gpa": "82",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
@@ -2077,14 +2159,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 84,
     "student_school": "北京理工大学",
     "student_major": "光电工程",
     "gpa": "82",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
@@ -2101,7 +2184,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 85,
@@ -2120,7 +2204,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 86,
@@ -2144,14 +2229,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 87,
     "student_school": "澳门城市大学",
     "student_major": "国际旅游管理",
     "gpa": "2.2",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
@@ -2163,14 +2249,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 88,
     "student_school": "青岛科技大学",
     "student_major": "化学",
     "gpa": "76",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -2187,14 +2274,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 89,
     "student_school": "北京理工大学珠海学院",
     "student_major": "电气工程",
     "gpa": "74",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
@@ -2206,14 +2294,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 90,
     "student_school": "大连理工大学",
     "student_major": "计算机",
     "gpa": "76",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -2225,14 +2314,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 91,
     "student_school": "天津理工大学",
     "student_major": "计算机",
     "gpa": "84",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "香港",
     "degree": "硕士",
     "result": "QS前100",
@@ -2244,7 +2334,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 92,
@@ -2268,14 +2359,15 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 93,
     "student_school": "浙江农林大学",
     "student_major": "服装设计",
     "gpa": "84",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -2292,7 +2384,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 94,
@@ -2311,26 +2404,28 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 95,
     "student_school": "上海立信会计金融学院",
     "student_major": "汉语言文学",
     "gpa": "85",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "数字人文(20%奖学金减免)",
         "rank": "QS前50"
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 96,
@@ -2343,20 +2438,21 @@
     "result": "QS前100",
     "offers": [
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "法律(20%奖学金减免)",
         "rank": "QS前50"
       }
     ],
     "entry_year": 2026,
-    "tier": "双非"
+    "tier": "双非",
+    "note": ""
   },
   {
     "id": 97,
     "student_school": "中国海洋大学",
     "student_major": "数学",
     "gpa": "75",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "澳大利亚/英国",
     "degree": "硕士",
     "result": "QS前50",
@@ -2373,7 +2469,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 98,
@@ -2397,7 +2494,8 @@
       }
     ],
     "entry_year": 2026,
-    "tier": "985"
+    "tier": "985",
+    "note": ""
   },
   {
     "id": 99,
@@ -2421,7 +2519,8 @@
       }
     ],
     "entry_year": 2025,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 100,
@@ -2440,7 +2539,8 @@
       }
     ],
     "entry_year": 2025,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 101,
@@ -2459,7 +2559,8 @@
       }
     ],
     "entry_year": 2025,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 102,
@@ -2478,7 +2579,8 @@
       }
     ],
     "entry_year": 2025,
-    "tier": "211"
+    "tier": "211",
+    "note": ""
   },
   {
     "id": 103,
@@ -2491,13 +2593,14 @@
     "result": "QS前10",
     "offers": [
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "环境数据科学",
         "rank": "QS前10"
       }
     ],
     "entry_year": 2025,
-    "tier": "海外本科"
+    "tier": "海外本科",
+    "note": ""
   },
   {
     "id": 104,
@@ -2670,7 +2773,7 @@
     "result": "QS前50",
     "offers": [
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "统计与数据分析",
         "rank": "QS前50"
       }
@@ -3095,7 +3198,7 @@
         "rank": "QS前50"
       },
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "会计",
         "rank": "QS前50"
       }
@@ -3140,13 +3243,13 @@
     "result": "QS前10",
     "offers": [
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "待更新",
         "rank": "QS前10"
       },
       {
         "school": "爱丁堡大学",
-        "major": "",
+        "major": "待更新",
         "rank": "QS前50"
       }
     ],
@@ -3390,14 +3493,14 @@
     "student_major": "保险",
     "gpa": "85.98",
     "language_score": "6.5",
-    "country": "未分类",
+    "country": "国内",
     "degree": "硕士",
     "result": "海外名校",
     "offers": [
       {
         "school": "保研",
         "major": "待更新",
-        "rank": ""
+        "rank": "海外名校"
       }
     ],
     "entry_year": 2025,
@@ -3540,7 +3643,7 @@
     "result": "QS前10",
     "offers": [
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "空间科学",
         "rank": "QS前10"
       },
@@ -4085,7 +4188,7 @@
         "rank": "QS前50"
       },
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       }
@@ -4165,7 +4268,7 @@
     "result": "QS前50",
     "offers": [
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       }
@@ -4185,7 +4288,7 @@
     "result": "QS前50",
     "offers": [
       {
-        "school": "南安普敦大学",
+        "school": "南安普顿大学",
         "major": "海洋学",
         "rank": "QS前100"
       },
@@ -4430,7 +4533,7 @@
     "result": "QS前10",
     "offers": [
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "化学工程",
         "rank": "QS前10"
       },
@@ -5140,7 +5243,7 @@
     "student_major": "公共政策",
     "gpa": "90",
     "language_score": "7",
-    "country": "未分类",
+    "country": "国内",
     "degree": "硕士",
     "result": "海外名校",
     "offers": [
@@ -5250,7 +5353,7 @@
         "rank": "QS前100"
       },
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       }
@@ -5275,7 +5378,7 @@
         "rank": "QS前10"
       },
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "待更新",
         "rank": "QS前10"
       }
@@ -5325,7 +5428,7 @@
         "rank": "QS前50"
       },
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       }
@@ -5415,7 +5518,7 @@
         "rank": "QS前100"
       },
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       },
@@ -5556,26 +5659,6 @@
   },
   {
     "id": 239,
-    "student_school": "",
-    "student_major": "网络工程",
-    "gpa": "80",
-    "language_score": "未填写",
-    "country": "澳大利亚",
-    "degree": "硕士",
-    "result": "QS前50",
-    "offers": [
-      {
-        "school": "新南威尔士大学",
-        "major": "待更新",
-        "rank": "QS前50"
-      }
-    ],
-    "entry_year": 2025,
-    "tier": "双非",
-    "note": ""
-  },
-  {
-    "id": 240,
     "student_school": "",
     "student_major": "网络工程",
     "gpa": "80",
@@ -5835,12 +5918,12 @@
     "student_major": "汉语言文学",
     "gpa": "86",
     "language_score": "未填写",
-    "country": "未分类",
+    "country": "英国",
     "degree": "硕士",
     "result": "海外名校",
     "offers": [
       {
-        "school": "南安普敦大学",
+        "school": "南安普顿大学",
         "major": "待更新",
         "rank": "海外名校"
       }
@@ -5855,12 +5938,12 @@
     "student_major": "电子电气工程",
     "gpa": "86",
     "language_score": "未填写",
-    "country": "未分类",
+    "country": "英国",
     "degree": "硕士",
     "result": "海外名校",
     "offers": [
       {
-        "school": "南安普敦大学",
+        "school": "南安普顿大学",
         "major": "待更新",
         "rank": "海外名校"
       }
@@ -6010,7 +6093,7 @@
     "result": "QS前50",
     "offers": [
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       },
@@ -6135,7 +6218,7 @@
         "rank": "QS前100"
       },
       {
-        "school": "南安普敦大学",
+        "school": "南安普顿大学",
         "major": "待更新",
         "rank": "海外名校"
       },
@@ -6230,7 +6313,7 @@
     "student_major": "数字媒体技术",
     "gpa": "88",
     "language_score": "未填写",
-    "country": "未分类",
+    "country": "中外合办",
     "degree": "硕士",
     "result": "海外名校",
     "offers": [
@@ -6255,7 +6338,7 @@
     "result": "QS前50",
     "offers": [
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       }
@@ -6343,26 +6426,6 @@
         "school": "香港岭南大学",
         "major": "待更新",
         "rank": "海外名校"
-      }
-    ],
-    "entry_year": 2025,
-    "tier": "双非",
-    "note": ""
-  },
-  {
-    "id": 274,
-    "student_school": "",
-    "student_major": "翻译",
-    "gpa": "87",
-    "language_score": "7",
-    "country": "英国",
-    "degree": "硕士",
-    "result": "QS前100",
-    "offers": [
-      {
-        "school": "宁波诺丁汉大学",
-        "major": "待更新",
-        "rank": "QS前100"
       }
     ],
     "entry_year": 2025,
@@ -6500,7 +6563,7 @@
         "rank": "QS前50"
       },
       {
-        "school": "南洋理工大学大学",
+        "school": "南洋理工大学",
         "major": "待更新",
         "rank": "QS前50"
       }
@@ -6514,7 +6577,7 @@
     "student_school": "郑州大学",
     "student_major": "计算机",
     "gpa": "78",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前50",
@@ -6986,7 +7049,7 @@
     "gpa": "84",
     "language_score": "未填写",
     "country": "新加坡/英国",
-    "degree": "项目管理",
+    "degree": "硕士",
     "result": "QS前10",
     "offers": [
       {
@@ -7574,7 +7637,7 @@
     "student_school": "四川农业大啊学",
     "student_major": "环境工程",
     "gpa": "87",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -7605,7 +7668,7 @@
         "rank": "QS前10"
       },
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "城市空间科学",
         "rank": "QS前10"
       },
@@ -7879,13 +7942,13 @@
     "student_school": "中国传媒大学",
     "student_major": "公共关系",
     "gpa": "89",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "公共关系",
         "rank": "QS前10"
       }
@@ -7984,13 +8047,13 @@
     "student_school": "江南大学",
     "student_major": "金融",
     "gpa": "91",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前10",
     "offers": [
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "数字化资产管理",
         "rank": "QS前10"
       },
@@ -8045,7 +8108,7 @@
     "result": "QS前10",
     "offers": [
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "金融",
         "rank": "QS前10"
       },
@@ -8084,7 +8147,7 @@
     "student_school": "北京理工大学",
     "student_major": "计算机",
     "gpa": "76",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "澳大利亚/英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -8981,7 +9044,7 @@
     "offers": [
       {
         "school": "新加坡国立大学",
-        "major": "",
+        "major": "待更新",
         "rank": "QS前10"
       }
     ],
@@ -9014,7 +9077,7 @@
     "student_school": "湖南大学",
     "student_major": "播音主持",
     "gpa": "87",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "澳大利亚",
     "degree": "硕士",
     "result": "QS前50",
@@ -9294,7 +9357,7 @@
     "student_school": "悉尼大学",
     "student_major": "计算机",
     "gpa": "74",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "新加坡",
     "degree": "硕士",
     "result": "QS前10",
@@ -9314,7 +9377,7 @@
     "student_school": "温斯顿大学",
     "student_major": "经济学",
     "gpa": "3.8",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "澳大利亚/香港",
     "degree": "硕士",
     "result": "QS前50",
@@ -9359,7 +9422,7 @@
     "student_school": "江西科技师范大学",
     "student_major": "材料",
     "gpa": "76",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前50",
@@ -9459,7 +9522,7 @@
     "student_school": "中原工学院",
     "student_major": "汉语语言文学",
     "gpa": "82",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -9544,7 +9607,7 @@
     "student_school": "江苏师范大学",
     "student_major": "电气",
     "gpa": "84",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -9724,7 +9787,7 @@
     "student_school": "北京师范大学珠海学院",
     "student_major": "英语",
     "gpa": "87",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "QS前100",
@@ -9764,13 +9827,13 @@
     "student_school": "湖南工业大学",
     "student_major": "数字媒体技术",
     "gpa": "87",
-    "language_score": "",
-    "country": "未分类",
+    "language_score": "未填写",
+    "country": "中外合办",
     "degree": "硕士",
     "result": "海外名校",
     "offers": [
       {
-        "school": "西交利物浦",
+        "school": "西交利物浦大学",
         "major": "数据科学",
         "rank": "海外名校"
       }
@@ -9870,7 +9933,7 @@
     "result": "QS前10",
     "offers": [
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "待更新",
         "rank": "QS前10"
       }
@@ -10110,14 +10173,14 @@
     "student_major": "公共政策",
     "gpa": "90",
     "language_score": "7",
-    "country": "未分类",
+    "country": "国内",
     "degree": "硕士",
     "result": "海外名校",
     "offers": [
       {
         "school": "保研",
         "major": "待更新",
-        "rank": ""
+        "rank": "海外名校"
       }
     ],
     "entry_year": 2024,
@@ -10220,7 +10283,7 @@
         "rank": "QS前100"
       },
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       }
@@ -10245,7 +10308,7 @@
         "rank": "QS前10"
       },
       {
-        "school": "伦敦大学学院",
+        "school": "伦敦大学学院（UCL）",
         "major": "环境数据科学",
         "rank": "QS前10"
       }
@@ -10295,7 +10358,7 @@
         "rank": "QS前50"
       },
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       }
@@ -10385,7 +10448,7 @@
         "rank": "QS前100"
       },
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       },
@@ -10805,12 +10868,12 @@
     "student_major": "汉语言文学",
     "gpa": "86",
     "language_score": "未填写",
-    "country": "未分类",
+    "country": "英国",
     "degree": "硕士",
     "result": "海外名校",
     "offers": [
       {
-        "school": "南安普敦大学",
+        "school": "南安普顿大学",
         "major": "待更新",
         "rank": "海外名校"
       }
@@ -10825,12 +10888,12 @@
     "student_major": "电子电气工程",
     "gpa": "86",
     "language_score": "未填写",
-    "country": "未分类",
+    "country": "英国",
     "degree": "硕士",
     "result": "海外名校",
     "offers": [
       {
-        "school": "南安普敦大学",
+        "school": "南安普顿大学",
         "major": "待更新",
         "rank": "海外名校"
       }
@@ -10980,7 +11043,7 @@
     "result": "QS前50",
     "offers": [
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       },
@@ -11105,7 +11168,7 @@
         "rank": "QS前100"
       },
       {
-        "school": "南安普敦大学",
+        "school": "南安普顿大学",
         "major": "待更新",
         "rank": "海外名校"
       },
@@ -11200,7 +11263,7 @@
     "student_major": "数字媒体技术",
     "gpa": "88",
     "language_score": "未填写",
-    "country": "未分类",
+    "country": "中外合办",
     "degree": "硕士",
     "result": "中外合办",
     "offers": [
@@ -11225,7 +11288,7 @@
     "result": "QS前50",
     "offers": [
       {
-        "school": "澳洲国立大学",
+        "school": "澳大利亚国立大学",
         "major": "待更新",
         "rank": "QS前50"
       }
@@ -11404,7 +11467,7 @@
     "student_school": "PSB",
     "student_major": "市场营销",
     "gpa": "2.88",
-    "language_score": "",
+    "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
     "result": "海外名校",
@@ -11440,7 +11503,7 @@
         "rank": "QS前50"
       },
       {
-        "school": "南洋理工大学大学",
+        "school": "南洋理工大学",
         "major": "项目管理",
         "rank": "QS前50"
       }

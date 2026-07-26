@@ -390,6 +390,202 @@ ul, ol { list-style: none; }
   color: #fff;
   border-color: var(--color-primary);
 }
+.case-finder {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+.finder-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+.finder-heading h2 {
+  font-size: var(--text-xl);
+  line-height: 1.35;
+  margin-bottom: var(--space-1);
+}
+.finder-heading p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+.reset-button {
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  background: var(--color-primary-light);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.reset-button:hover { border-color: var(--color-primary); }
+.finder-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+.filter-field { min-width: 0; }
+.filter-field-wide { grid-column: span 2; }
+.filter-field label {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+.filter-field .filter-input,
+.filter-field .filter-select { min-height: 46px; }
+.preset-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-light);
+}
+.preset-label {
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  margin-right: var(--space-1);
+}
+.preset-button {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+.preset-button:hover,
+.preset-button.active {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+.active-filter-row {
+  display: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.active-filter-row.show { display: flex; }
+.active-filter-label {
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+}
+.active-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 5px 10px;
+  border-radius: var(--radius-full);
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+.active-filter-chip button {
+  color: inherit;
+  font-size: var(--text-md);
+  line-height: 1;
+}
+.result-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin: var(--space-6) 0 var(--space-4);
+}
+.result-summary {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+.result-summary strong {
+  color: var(--color-text);
+  font-size: var(--text-lg);
+}
+.match-note {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  color: #047857;
+  background: #ecfdf5;
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+.insights-panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  margin-bottom: var(--space-6);
+}
+.insights-panel summary {
+  cursor: pointer;
+  padding: var(--space-4) var(--space-5);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  list-style: none;
+}
+.insights-panel summary::-webkit-details-marker { display: none; }
+.insights-panel summary::after {
+  content: '展开';
+  float: right;
+  color: var(--color-primary);
+  font-size: var(--text-xs);
+}
+.insights-panel[open] summary::after { content: '收起'; }
+.insights-panel .charts-grid {
+  padding: 0 var(--space-4) var(--space-4);
+  margin-bottom: 0;
+}
+.match-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #047857;
+  background: #ecfdf5;
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 800;
+}
+.case-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+.no-results-card {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+.no-results-card h3 {
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+.no-results-card p {
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+}
 .charts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -860,10 +1056,17 @@ ul, ol { list-style: none; }
   .case-detail { max-height: 85vh; }
   .case-detail-meta { grid-template-columns: 1fr; }
   .section { padding: var(--space-12) 0; }
+  .case-finder { padding: var(--space-5) var(--space-4); }
+  .finder-heading { flex-direction: column; }
+  .finder-grid { grid-template-columns: 1fr; }
+  .filter-field-wide { grid-column: auto; }
+  .result-toolbar { align-items: flex-start; flex-direction: column; }
+  .match-note { border-radius: var(--radius-md); }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .charts-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-bar { grid-template-columns: repeat(3, 1fr); }
+  .finder-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 
@@ -891,7 +1094,7 @@ ul, ol { list-style: none; }
   .footer-nav a { padding-left: 0 !important; }
 }
 </style>
-<base target="_blank">
+<link rel="stylesheet" href="site-shell.css">
 </head>
 <body>
 
@@ -909,6 +1112,7 @@ ul, ol { list-style: none; }
     <button class="theme-toggle" id="themeToggle">🌓</button>
   </div>
 </header>
+<script src="site-shell.js"></script>
 
 <main>
 
@@ -923,43 +1127,105 @@ ul, ol { list-style: none; }
 <section class="section section-alt" id="cases">
   <div class="container fade-in">
     <div class="stats-bar" id="statsBar"></div>
-    <div class="filter-row">
-      <input type="search" class="filter-input" id="searchInput" placeholder="搜索学生学校、专业、录取院校关键词...">
-      <select class="filter-select" id="countryFilter"><option value="">全部地区</option></select>
-      <select class="filter-select" id="degreeFilter"><option value="">全部学历</option></select>
-      <select class="filter-select" id="resultFilter"><option value="">全部结果</option></select>
-    </div>
-    <div class="quick-tags" id="quickTags">
-      <span class="quick-tag active" data-filter="all">全部案例</span>
-      <span class="quick-tag" data-filter="shuangfei">双非逆袭</span>
-      <span class="quick-tag" data-filter="lowgpa">低GPA录取</span>
-      <span class="quick-tag" data-filter="transfer">转专业成功</span>
-      <span class="quick-tag" data-filter="top10">QS前10</span>
-    </div>
-    <div class="tier-filter-row" id="tierFilterRow">
-      <span class="tier-filter-label">院校档次：</span>
-      <span class="tier-tag active" data-tier="all">全部</span>
-      <span class="tier-tag" data-tier="985">985</span>
-      <span class="tier-tag" data-tier="211">211</span>
-      <span class="tier-tag" data-tier="双非">双非</span>
-      <span class="tier-tag" data-tier="海外本科">海外本科</span>
-    </div>
-    <div class="charts-grid">
-      <div class="chart-card">
-        <div class="chart-title">📍 地区分布</div>
-        <div class="bar-chart" id="countryChart"></div>
+    <div class="case-finder" aria-label="案例筛选">
+      <div class="finder-heading">
+        <div>
+          <h2>用你的背景，找真正相似的录取案例</h2>
+          <p>建议先选择本科层次、专业方向和均分，再补充目标地区。</p>
+        </div>
+        <button class="reset-button" id="resetFilters" type="button">清空条件</button>
       </div>
-      <div class="chart-card">
-        <div class="chart-title">🎯 录取结果分布</div>
-        <div class="bar-chart" id="resultChart"></div>
+      <div class="finder-grid">
+        <div class="filter-field filter-field-wide">
+          <label for="searchInput">关键词</label>
+          <input type="search" class="filter-input" id="searchInput" placeholder="学校、专业、录取院校或项目名称">
+        </div>
+        <div class="filter-field">
+          <label for="tierFilter">我的本科层次</label>
+          <select class="filter-select" id="tierFilter">
+            <option value="">不限本科层次</option>
+            <option value="985">985</option>
+            <option value="211">211</option>
+            <option value="双非">双非</option>
+            <option value="海外本科">海外本科 / 中外合办</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="majorFilter">我的专业方向</label>
+          <select class="filter-select" id="majorFilter"><option value="">不限专业方向</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="gpaFilter">我的均分 / GPA</label>
+          <select class="filter-select" id="gpaFilter">
+            <option value="">不限成绩</option>
+            <option value="under70">70分以下</option>
+            <option value="70-79">70–79分</option>
+            <option value="80-84">80–84分</option>
+            <option value="85-89">85–89分</option>
+            <option value="90plus">90分及以上</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="countryFilter">目标地区</label>
+          <select class="filter-select" id="countryFilter"><option value="">不限地区</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="resultFilter">录取层次</label>
+          <select class="filter-select" id="resultFilter">
+            <option value="">不限录取层次</option>
+            <option value="QS前10">QS前10</option>
+            <option value="QS前50">QS前50</option>
+            <option value="QS前100">QS前100</option>
+            <option value="海外名校">其他海外名校</option>
+            <option value="中外合办">中外合办</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="yearFilter">入学年份</label>
+          <select class="filter-select" id="yearFilter"><option value="">不限年份</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="sortFilter">排序方式</label>
+          <select class="filter-select" id="sortFilter">
+            <option value="match">相似度优先</option>
+            <option value="latest">最新案例优先</option>
+            <option value="gpaAsc">均分从低到高</option>
+            <option value="offerCount">Offer 数量最多</option>
+          </select>
+        </div>
       </div>
-      <div class="chart-card">
-        <div class="chart-title">🏫 高频录取院校 Top 8</div>
-        <div class="bar-chart" id="schoolChart"></div>
+      <div class="preset-row" id="presetRow">
+        <span class="preset-label">快速场景</span>
+        <button class="preset-button" type="button" data-preset="shuangfeiTop50">双非冲 QS 前50</button>
+        <button class="preset-button" type="button" data-preset="lowGpa">低分逆袭</button>
+        <button class="preset-button" type="button" data-preset="crossMajor">跨专业录取</button>
+        <button class="preset-button" type="button" data-preset="recent">近两年案例</button>
       </div>
+      <div class="active-filter-row" id="activeFilters" aria-live="polite"></div>
     </div>
+    <div class="result-toolbar">
+      <div class="result-summary" id="resultSummary">正在加载案例…</div>
+      <div class="match-note">结果会优先展示与你背景更相似的案例</div>
+    </div>
+    <details class="insights-panel">
+      <summary>查看当前结果的数据分布</summary>
+      <div class="charts-grid">
+        <div class="chart-card">
+          <div class="chart-title">📍 地区分布</div>
+          <div class="bar-chart" id="countryChart"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">🎯 录取结果分布</div>
+          <div class="bar-chart" id="resultChart"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">🏫 高频录取院校 Top 8</div>
+          <div class="bar-chart" id="schoolChart"></div>
+        </div>
+      </div>
+    </details>
     <div class="cases-grid" id="casesGrid"></div>
-    <div class="no-results" id="noResults" style="display:none;">未找到匹配的案例，请调整筛选条件</div>
+    <div class="no-results" id="noResults" style="display:none;"></div>
     <div class="pagination" id="pagination"></div>
     <p class="data-tip" id="dataSourceTip"></p>
   </div>
@@ -999,14 +1265,14 @@ ul, ol { list-style: none; }
       </div>
     </div>
     <div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.35);">
-      <span>&copy; 2025 DreamBridge 留学服务. All rights reserved.</span>
+      <span>&copy; 2026 DreamBridge 留学服务. All rights reserved.</span>
       <span>用心服务每一个留学梦想</span>
     </div>
   </div>
 </footer>
 
 <div class="mobile-cta" id="mobileCta">
-  <span class="mobile-cta-wx">微信：xrr13365810586</span>
+  <span class="mobile-cta-wx">微信：xxr13365810586</span>
   <button class="btn btn-primary btn-sm" onclick="openQr()">立即咨询</button>
 </div>
 
@@ -1020,7 +1286,7 @@ ul, ol { list-style: none; }
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.85"/></svg>
       <span>微信扫码咨询</span>
     </div>
-    <p class="qr-wxid">xrr13365810586</p>
+    <p class="qr-wxid">xxr13365810586</p>
     <p style="font-size:var(--text-xs);color:var(--color-text-tertiary);">复制微信号，打开微信添加好友</p>
   </div>
 </div>
@@ -1178,11 +1444,33 @@ let allCases = [];
 let currentPage = 1;
 const pageSize = 9;
 let filteredItems = [];
-let activeQuickFilter = 'all';
-let activeTierFilter = 'all';
+let activePreset = '';
+
+const GPA_RANGES = {
+  under70: { min: 0, max: 69, filterMin: 0, filterMax: 74, center: 65, label: '70分以下' },
+  '70-79': { min: 70, max: 79, filterMin: 65, filterMax: 84, center: 75, label: '70–79分' },
+  '80-84': { min: 80, max: 84, filterMin: 75, filterMax: 89, center: 82, label: '80–84分' },
+  '85-89': { min: 85, max: 89, filterMin: 80, filterMax: 94, center: 87, label: '85–89分' },
+  '90plus': { min: 90, max: 100, filterMin: 85, filterMax: 100, center: 92, label: '90分及以上' }
+};
+
+const FILTER_LABELS = {
+  searchInput: '关键词',
+  tierFilter: '本科层次',
+  majorFilter: '专业方向',
+  gpaFilter: '相近成绩',
+  countryFilter: '目标地区',
+  resultFilter: '录取层次',
+  yearFilter: '入学年份'
+};
 
 function $(id) { return document.getElementById(id); }
 function on(el, evt, fn) { el && el.addEventListener(evt, fn); }
+function safe(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+  })[char]);
+}
 
 function getSchoolTier(name) {
   if (!name) return '双非';
@@ -1209,36 +1497,36 @@ function tierValue(tier) {
 }
 function parseGpa(gpaStr) {
   if (!gpaStr || gpaStr === '未填写') return NaN;
-  const match = String(gpaStr).match(/[\d.]+/);
+  const clean = String(gpaStr).replace(/\s/g, '');
+  const match = clean.match(/[\d.]+/);
   if (!match) return NaN;
   let val = parseFloat(match[0]);
   if (isNaN(val)) return NaN;
-  if (String(gpaStr).includes('/')) {
-    const parts = String(gpaStr).split('/');
+  if (clean.includes('/')) {
+    const parts = clean.split('/');
     if (parts.length >= 2) {
       const denom = parseFloat(parts[1]);
-      if (denom === 4) return Math.round(val / 4 * 100);
-      if (denom === 5) return Math.round(val / 5 * 100);
-      if (denom > 10) return Math.round(val);
+      if (denom > 0 && denom <= 10) return Math.min(100, Math.round(val / denom * 100));
+      if (denom > 10) return Math.min(100, Math.round(val));
     }
   }
-  if (val > 10) return Math.round(val);
-  if (val <= 4.3 && val >= 0) return Math.round(val / 4 * 100);
-  if (val <= 5.5 && val > 4.3) return Math.round(val / 5 * 100);
-  if (val <= 10 && val > 5.5) return Math.round(val / 10 * 100);
-  return Math.round(val);
+  if (val > 10) return Math.min(100, Math.round(val));
+  if (val <= 4.3 && val >= 0) return Math.min(100, Math.round(val / 4 * 100));
+  if (val <= 5.5) return Math.min(100, Math.round(val / 5 * 100));
+  return Math.min(100, Math.round(val / 10 * 100));
 }
-function isRelatedMajor(a, b) {
-  if (!a || !b) return false;
-  const aLower = a.toLowerCase();
-  const bLower = b.toLowerCase();
-  for (const keywords of Object.values(majorGroups)) {
-    const aMatch = keywords.some(k => aLower.includes(k));
-    const bMatch = keywords.some(k => bLower.includes(k));
-    if (aMatch && bMatch) return true;
+
+function getMajorCategory(major) {
+  if (!major || major === '待更新' || major === '专业未填写') return '';
+  const source = String(major).toLowerCase();
+  for (const [category, keywords] of Object.entries(majorGroups)) {
+    if (keywords.some(keyword => source.includes(String(keyword).toLowerCase()))) {
+      return category;
+    }
   }
-  return false;
+  return '其他专业';
 }
+
 function parseRegions(countryStr) {
   if (!countryStr || countryStr === '未分类') return [];
   const str = countryStr.toLowerCase();
@@ -1249,15 +1537,50 @@ function parseRegions(countryStr) {
   if (str.includes('英国')) regions.push('英国');
   if (str.includes('新西兰')) regions.push('新西兰');
   if (str.includes('澳大利亚') || str.includes('澳洲')) regions.push('澳大利亚');
-  if (str.includes('国内')) regions.push('国内中外合办');
+  if (str.includes('中外合办')) regions.push('国内中外合办');
+  if (str === '国内') regions.push('国内');
   return regions;
+}
+
+function inferOfferRegion(school) {
+  const name = String(school || '').toLowerCase();
+  if (!name) return '';
+  if (name.includes('香港')) return '香港';
+  if (name.includes('澳门')) return '澳门';
+  if (name.includes('新加坡') || name.includes('南洋理工')) return '新加坡';
+  if (name.includes('西交利物浦') || name.includes('宁波诺丁汉') || name.includes('北师') || name.includes('保研')) return '国内中外合办';
+  if (['悉尼', '墨尔本', '新南威尔士', '莫纳什', '昆士兰', '阿德莱德', '澳大利亚国立', '澳洲国立'].some(k => name.includes(k))) return '澳大利亚';
+  if (name.includes('奥克兰')) return '新西兰';
+  if (['曼彻斯特', '伦敦', 'ucl', '格拉斯哥', '南安普顿', '南安普敦', '布里斯托', '利兹', '杜伦', '伯明翰', '谢菲尔德', '诺丁汉', '华威', '约克', '纽卡斯尔', '爱丁堡', '帝国理工', '兰卡斯特', '巴斯', '利物浦'].some(k => name.includes(k))) return '英国';
+  return '';
+}
+
+function getCaseRegions(country, offers) {
+  const stated = parseRegions(country);
+  const inferred = (offers || []).map(o => inferOfferRegion(o.school)).filter(Boolean);
+  const combined = [...new Set([...stated, ...inferred])];
+  if (combined.includes('国内') && inferred.some(r => r !== '国内')) {
+    return combined.filter(r => r !== '国内');
+  }
+  return combined;
+}
+
+function isCrossMajor(studentMajor, offers) {
+  const sourceCategory = getMajorCategory(studentMajor);
+  if (!sourceCategory || sourceCategory === '其他专业') return false;
+  const targetCategories = (offers || [])
+    .map(o => getMajorCategory(o.major))
+    .filter(category => category && category !== '其他专业');
+  return targetCategories.some(category => category !== sourceCategory);
 }
 
 async function loadCases() {
   try {
     const res = await fetch('cases.json');
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    const casesData = await res.json();
+    const payload = await res.json();
+    const casesData = Array.isArray(payload) ? payload : payload.cases;
+    if (!Array.isArray(casesData)) throw new Error('案例数据结构不正确');
     allCases = casesData.map((item, idx) => normalizeCase(item, idx));
     initFilters();
     renderCases();
@@ -1268,27 +1591,27 @@ async function loadCases() {
 }
 
 function initFilters() {
-  const degrees = [...new Set(allCases.map(c => c.degree))].sort();
-  const results = [...new Set(allCases.map(c => c.result))].sort();
-  const standardRegions = ['香港', '澳门', '新加坡', '英国', '新西兰', '澳大利亚', '国内中外合办'];
-  
-  standardRegions.forEach(c => {
+  const regionOrder = ['香港', '新加坡', '英国', '澳大利亚', '澳门', '新西兰', '国内中外合办'];
+  const availableRegions = new Set(allCases.flatMap(c => c.regions));
+  regionOrder.filter(region => availableRegions.has(region)).forEach(c => {
     const opt = document.createElement('option');
     opt.value = c;
     opt.textContent = c;
     $('countryFilter').appendChild(opt);
   });
-  degrees.forEach(d => {
+  Object.keys(majorGroups).concat('其他专业').forEach(category => {
     const opt = document.createElement('option');
-    opt.value = d;
-    opt.textContent = d;
-    $('degreeFilter').appendChild(opt);
+    opt.value = category;
+    opt.textContent = category;
+    $('majorFilter').appendChild(opt);
   });
-  results.forEach(r => {
+  [...new Set(allCases.map(c => c.entry_year).filter(Boolean))]
+    .sort((a, b) => b - a)
+    .forEach(year => {
     const opt = document.createElement('option');
-    opt.value = r;
-    opt.textContent = r;
-    $('resultFilter').appendChild(opt);
+    opt.value = String(year);
+    opt.textContent = `${year} 年`;
+    $('yearFilter').appendChild(opt);
   });
 }
 
@@ -1298,73 +1621,174 @@ function normalizeCase(item, idx) {
     : [{ school: item.school || '待更新', major: item.major || '待更新', rank: item.result || '普通录取' }];
   const studentSchool = item.student_school;
   const tier = item.tier || getSchoolTier(studentSchool);
+  const studentMajor = item.student_major || item.major || '专业未填写';
+  const regions = getCaseRegions(item.country, offers);
+  const majorCategory = getMajorCategory(studentMajor);
+  const gpaScore = parseGpa(item.gpa);
+  const offerLevels = [...new Set(offers.map(o => o.rank).filter(Boolean))];
+  const searchText = [
+    item.title, studentSchool, studentMajor, item.gpa, item.language_score,
+    item.country, item.degree, item.result, tier, item.entry_year, item.note,
+    majorCategory, ...regions,
+    ...offers.flatMap(o => [o.school, o.major, o.rank])
+  ].filter(Boolean).join(' ').toLowerCase();
   return {
     id: item.id || idx + 1,
     title: item.title || `${item.country || '地区'}${item.degree || '项目'}`,
     student_school: studentSchool,
-    student_major: item.student_major || item.major || '专业未填写',
+    student_major: studentMajor,
     gpa: item.gpa || '未填写',
+    gpa_score: gpaScore,
     language_score: item.language_score || '未填写',
     country: item.country || '未分类',
+    regions,
     degree: item.degree || '未分类',
     result: item.result || (offers[0]?.rank) || '普通录取',
     offers: offers,
+    offer_levels: offerLevels,
     tier: tier,
-    entry_year: item.entry_year
+    major_category: majorCategory,
+    is_cross_major: isCrossMajor(studentMajor, offers),
+    entry_year: item.entry_year,
+    search_text: searchText
   };
 }
 
-const quickFilters = {
-  all: () => true,
-  shuangfei: c => c.tier === '双非',
-  lowgpa: c => {
-    const gpa = parseGpa(c.gpa);
-    return !isNaN(gpa) && gpa < 80;
-  },
-  transfer: c => c.offers.length > 0 && c.student_major !== c.offers[0].major && c.offers[0].major !== '待更新',
-  top10: c => c.result.includes('前10') || c.offers.some(o => o.rank.includes('前10'))
+const presetPredicates = {
+  shuangfeiTop50: item => item.tier === '双非' && [10, 50].some(rank => hasRank(item, rank)),
+  lowGpa: item => !isNaN(item.gpa_score) && item.gpa_score < 80,
+  crossMajor: item => item.is_cross_major,
+  recent: item => item.entry_year >= Math.max(...allCases.map(c => c.entry_year || 0)) - 1
 };
 
-document.querySelectorAll('.quick-tag').forEach(tag => {
-  on(tag, 'click', () => {
-    document.querySelectorAll('.quick-tag').forEach(t => t.classList.remove('active'));
-    tag.classList.add('active');
-    activeQuickFilter = tag.dataset.filter;
-    currentPage = 1;
-    renderCases();
-  });
-});
-
-document.querySelectorAll('.tier-tag').forEach(tag => {
-  on(tag, 'click', () => {
-    document.querySelectorAll('.tier-tag').forEach(t => t.classList.remove('active'));
-    tag.classList.add('active');
-    activeTierFilter = tag.dataset.tier;
-    currentPage = 1;
-    renderCases();
-  });
-});
+function hasRank(item, rank) {
+  const pattern = new RegExp(`前${rank}(?!\\d)`);
+  return pattern.test(item.result) || item.offer_levels.some(level => pattern.test(level));
+}
 
 function getFiltered() {
-  const kw = $('searchInput').value.trim().toLowerCase();
-  const c = $('countryFilter').value;
-  const d = $('degreeFilter').value;
-  const r = $('resultFilter').value;
-  return allCases.filter(item => {
-    const offerText = item.offers.map(o => `${o.school} ${o.major} ${o.rank}`).join(' ');
-    const source = `${item.title} ${item.student_school} ${item.student_major} ${item.gpa} ${item.language_score} ${offerText}`.toLowerCase();
-    return quickFilters[activeQuickFilter](item) &&
-      (activeTierFilter === 'all' || item.tier === activeTierFilter) &&
-      (!c || item.country.includes(c)) &&
-      (!d || item.degree === d) &&
-      (!r || item.result === r) &&
-      (!kw || source.includes(kw));
+  const kw = $('searchInput').value
+    .trim()
+    .toLowerCase()
+    .replaceAll('南安普敦', '南安普顿')
+    .replaceAll('澳洲国立', '澳大利亚国立');
+  const tier = $('tierFilter').value;
+  const major = $('majorFilter').value;
+  const gpaRange = GPA_RANGES[$('gpaFilter').value];
+  const country = $('countryFilter').value;
+  const result = $('resultFilter').value;
+  const year = $('yearFilter').value;
+
+  const items = allCases.filter(item => {
+    const presetMatch = !activePreset || presetPredicates[activePreset](item);
+    const resultMatch = !result || item.result === result || item.offer_levels.includes(result);
+    const gpaMatch = !gpaRange || (
+      !isNaN(item.gpa_score) &&
+      item.gpa_score >= gpaRange.filterMin &&
+      item.gpa_score <= gpaRange.filterMax
+    );
+    return presetMatch &&
+      (!tier || item.tier === tier) &&
+      (!major || item.major_category === major) &&
+      gpaMatch &&
+      (!country || item.regions.includes(country)) &&
+      resultMatch &&
+      (!year || String(item.entry_year) === year) &&
+      (!kw || item.search_text.includes(kw));
+  });
+
+  const sort = $('sortFilter').value;
+  return items.sort((a, b) => {
+    if (sort === 'gpaAsc') return (a.gpa_score || 999) - (b.gpa_score || 999);
+    if (sort === 'offerCount') return b.offers.length - a.offers.length || (b.entry_year || 0) - (a.entry_year || 0);
+    if (sort === 'latest') return (b.entry_year || 0) - (a.entry_year || 0) || b.id - a.id;
+    return getMatchDetails(b).score - getMatchDetails(a).score ||
+      (b.entry_year || 0) - (a.entry_year || 0) ||
+      b.offers.length - a.offers.length;
   });
 }
 
+function getMatchDetails(item) {
+  const criteria = [];
+  const tier = $('tierFilter').value;
+  const major = $('majorFilter').value;
+  const gpaRange = GPA_RANGES[$('gpaFilter').value];
+  const country = $('countryFilter').value;
+  const result = $('resultFilter').value;
+  const year = $('yearFilter').value;
+  if (tier) criteria.push({ matched: item.tier === tier, weight: 24 });
+  if (major) criteria.push({ matched: item.major_category === major, weight: 24 });
+  if (gpaRange) {
+    const distance = isNaN(item.gpa_score) ? 99 : Math.abs(item.gpa_score - gpaRange.center);
+    criteria.push({ matched: distance <= 7, weight: Math.max(0, 24 - distance * 2) });
+  }
+  if (country) criteria.push({ matched: item.regions.includes(country), weight: 20 });
+  if (result) criteria.push({ matched: item.result === result || item.offer_levels.includes(result), weight: 16 });
+  if (year) criteria.push({ matched: String(item.entry_year) === year, weight: 8 });
+  const matched = criteria.filter(c => c.matched).length;
+  const score = criteria.reduce((sum, c) => sum + (c.matched ? c.weight : 0), 0);
+  return { matched, total: criteria.length, score };
+}
+
+function hasProfileFilters() {
+  return ['tierFilter', 'majorFilter', 'gpaFilter', 'countryFilter'].some(id => $(id).value);
+}
+
+function clearFilter(id) {
+  $(id).value = '';
+  activePreset = '';
+  document.querySelectorAll('.preset-button').forEach(button => button.classList.remove('active'));
+  renderCases();
+}
+
+function resetFilters() {
+  ['searchInput', 'tierFilter', 'majorFilter', 'gpaFilter', 'countryFilter', 'resultFilter', 'yearFilter']
+    .forEach(id => { $(id).value = ''; });
+  $('sortFilter').value = 'match';
+  activePreset = '';
+  document.querySelectorAll('.preset-button').forEach(button => button.classList.remove('active'));
+  renderCases();
+}
+
+function renderActiveFilters() {
+  const row = $('activeFilters');
+  const chips = [];
+  for (const [id, label] of Object.entries(FILTER_LABELS)) {
+    const el = $(id);
+    if (!el.value) continue;
+    const valueLabel = id === 'searchInput'
+      ? el.value
+      : el.options[el.selectedIndex].text;
+    chips.push(`<span class="active-filter-chip">${safe(label)}：${safe(valueLabel)}<button type="button" aria-label="移除${safe(label)}" onclick="clearFilter('${id}')">×</button></span>`);
+  }
+  if (activePreset) {
+    const button = document.querySelector(`[data-preset="${activePreset}"]`);
+    chips.push(`<span class="active-filter-chip">场景：${safe(button?.textContent || '')}<button type="button" aria-label="移除快速场景" onclick="clearPreset()">×</button></span>`);
+  }
+  row.innerHTML = chips.length ? `<span class="active-filter-label">已选条件</span>${chips.join('')}` : '';
+  row.classList.toggle('show', chips.length > 0);
+}
+
+function clearPreset() {
+  activePreset = '';
+  document.querySelectorAll('.preset-button').forEach(button => button.classList.remove('active'));
+  renderCases();
+}
+
+document.querySelectorAll('.preset-button').forEach(button => {
+  on(button, 'click', () => {
+    const nextPreset = button.dataset.preset;
+    activePreset = activePreset === nextPreset ? '' : nextPreset;
+    document.querySelectorAll('.preset-button').forEach(item => {
+      item.classList.toggle('active', item.dataset.preset === activePreset);
+    });
+    renderCases();
+  });
+});
+
 function renderStats(items) {
-  const top10 = items.filter(c => c.result.includes('前10')).length;
-  const top50 = items.filter(c => c.result.includes('前50')).length;
+  const top10 = items.filter(c => hasRank(c, 10)).length;
+  const top50 = items.filter(c => hasRank(c, 50)).length;
   $('statsBar').innerHTML = `
     <div class="stat-pill"><div class="stat-number">${items.length}</div><div class="stat-label">筛选后案例</div></div>
     <div class="stat-pill"><div class="stat-number">${top10}</div><div class="stat-label">QS前10录取</div></div>
@@ -1375,13 +1799,12 @@ function renderStats(items) {
 function renderCharts(items) {
   const cc = {};
   items.forEach(c => {
-    const regions = parseRegions(c.country);
-    regions.forEach(r => { cc[r] = (cc[r] || 0) + 1; });
+    c.regions.forEach(r => { cc[r] = (cc[r] || 0) + 1; });
   });
   const cs = Object.entries(cc).sort((a, b) => b[1] - a[1]);
   const cm = Math.max(...cs.map(([, n]) => n), 1);
   $('countryChart').innerHTML = cs.map(([k, v]) => `
-    <div class="bar-row"><div class="bar-label">${k}</div><div class="bar-track"><div class="bar-fill" style="width:${(v / cm) * 100}%"><span class="bar-value">${v}</span></div></div></div>
+    <div class="bar-row"><div class="bar-label">${safe(k)}</div><div class="bar-track"><div class="bar-fill" style="width:${(v / cm) * 100}%"><span class="bar-value">${v}</span></div></div></div>
   `).join('') || '<div style="color:var(--color-text-secondary);text-align:center;padding:20px;">暂无数据</div>';
 
   const rc = {};
@@ -1389,7 +1812,7 @@ function renderCharts(items) {
   const rs = Object.entries(rc).sort((a, b) => b[1] - a[1]);
   const rm = Math.max(...rs.map(([, n]) => n), 1);
   $('resultChart').innerHTML = rs.map(([k, v]) => `
-    <div class="bar-row"><div class="bar-label">${k}</div><div class="bar-track"><div class="bar-fill" style="width:${(v / rm) * 100}%"><span class="bar-value">${v}</span></div></div></div>
+    <div class="bar-row"><div class="bar-label">${safe(k)}</div><div class="bar-track"><div class="bar-fill" style="width:${(v / rm) * 100}%"><span class="bar-value">${v}</span></div></div></div>
   `).join('') || '<div style="color:var(--color-text-secondary);text-align:center;padding:20px;">暂无数据</div>';
 
   const sc = {};
@@ -1397,38 +1820,45 @@ function renderCharts(items) {
   const ss = Object.entries(sc).sort((a, b) => b[1] - a[1]).slice(0, 8);
   const sm = Math.max(...ss.map(([, n]) => n), 1);
   $('schoolChart').innerHTML = ss.map(([k, v], i) => `
-    <div class="bar-row"><div class="bar-label">${i + 1}. ${k.length > 8 ? k.slice(0, 8) + '..' : k}</div><div class="bar-track"><div class="bar-fill" style="width:${(v / sm) * 100}%"><span class="bar-value">${v}</span></div></div></div>
+    <div class="bar-row"><div class="bar-label">${i + 1}. ${safe(k.length > 8 ? k.slice(0, 8) + '..' : k)}</div><div class="bar-track"><div class="bar-fill" style="width:${(v / sm) * 100}%"><span class="bar-value">${v}</span></div></div></div>
   `).join('') || '<div style="color:var(--color-text-secondary);text-align:center;padding:20px;">暂无数据</div>';
 }
 
 function renderCaseCard(item) {
+  const match = getMatchDetails(item);
   const yearTag = item.entry_year ? `<span class="pill" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;">${String(item.entry_year).slice(-2)}年入学</span>` : '';
+  const matchTag = hasProfileFilters() && match.total
+    ? `<span class="match-score">✓ ${match.matched}/${match.total} 项背景相似</span>`
+    : '';
   return `
     <div class="case-card" onclick="openCaseModal(${item.id})">
+      <div class="case-card-topline">
+        ${matchTag || '<span></span>'}
+        <span class="pill pill-tier-${tierClass(item.tier)}">${safe(item.tier)}</span>
+      </div>
       <div class="case-header">
-        <div class="case-title">${item.student_school ? `案例 #${item.id} · ${item.student_school}` : `案例 #${item.id}`}</div>
-        <span class="pill pill-tier-${tierClass(item.tier)}">${item.tier}</span>
+        <div class="case-title">${item.student_school ? `案例 #${item.id} · ${safe(item.student_school)}` : `案例 #${item.id} · ${safe(item.tier)}背景`}</div>
       </div>
       <div class="case-pills">
         ${yearTag}
-        <span class="pill">${item.country}</span>
-        <span class="pill">${item.degree}</span>
-        <span class="pill">${item.result}</span>
+        <span class="pill">${safe(item.regions.join(' / ') || item.country)}</span>
+        <span class="pill">${safe(item.major_category)}</span>
+        <span class="pill">${safe(item.result)}</span>
       </div>
       <div class="case-meta">
-        <div class="meta-item"><div class="meta-label">学生专业</div><div class="meta-value">${item.student_major}</div></div>
-        <div class="meta-item"><div class="meta-label">GPA/均分</div><div class="meta-value">${item.gpa}</div></div>
-        <div class="meta-item"><div class="meta-label">语言成绩</div><div class="meta-value">${item.language_score}</div></div>
-        <div class="meta-item"><div class="meta-label">申请地区</div><div class="meta-value">${item.country}</div></div>
+        <div class="meta-item"><div class="meta-label">学生专业</div><div class="meta-value">${safe(item.student_major)}</div></div>
+        <div class="meta-item"><div class="meta-label">GPA/均分</div><div class="meta-value">${safe(item.gpa)}</div></div>
+        <div class="meta-item"><div class="meta-label">语言成绩</div><div class="meta-value">${safe(item.language_score)}</div></div>
+        <div class="meta-item"><div class="meta-label">Offer 数量</div><div class="meta-value">${item.offers.length} 个</div></div>
       </div>
       <div class="offer-section">
         <div class="offer-title">🎓 录取详情（点击查看更多）</div>
         <div class="offer-list">
           ${item.offers.slice(0, 2).map(o => `
             <div class="offer-item">
-              <span class="offer-school">${o.school}</span>
-              ${o.major && o.major !== '待更新' ? `<span class="offer-major">${o.major}</span>` : '<span class="offer-major"></span>'}
-              <span class="offer-rank">${o.rank}</span>
+              <span class="offer-school">${safe(o.school)}</span>
+              ${o.major && o.major !== '待更新' ? `<span class="offer-major">${safe(o.major)}</span>` : '<span class="offer-major" aria-hidden="true"></span>'}
+              <span class="offer-rank">${safe(o.rank)}</span>
             </div>
           `).join('')}
           ${item.offers.length > 2 ? `<div class="offer-more">+${item.offers.length - 2} 个更多Offer</div>` : ''}
@@ -1441,21 +1871,21 @@ function renderCaseCard(item) {
 function openCaseModal(id) {
   const item = allCases.find(c => c.id === id);
   if (!item) return;
-  $('modalTitle').textContent = item.student_school ? `案例 #${item.id} · ${item.student_school}` : `案例 #${item.id}`;
-  $('modalPills').innerHTML = `<span class="pill pill-tier-${tierClass(item.tier)}">${item.tier}</span><span class="pill">${item.country}</span><span class="pill">${item.degree}</span><span class="pill">${item.result}</span>`;
+  $('modalTitle').textContent = item.student_school ? `案例 #${item.id} · ${item.student_school}` : `案例 #${item.id} · ${item.tier}背景`;
+  $('modalPills').innerHTML = `<span class="pill pill-tier-${tierClass(item.tier)}">${safe(item.tier)}</span><span class="pill">${safe(item.regions.join(' / ') || item.country)}</span><span class="pill">${safe(item.degree)}</span><span class="pill">${safe(item.result)}</span>`;
   $('modalMeta').innerHTML = `
-    <div class="detail-meta-block"><label>本科院校</label><value>${item.student_school || item.tier + '院校'}</value></div>
-    <div class="detail-meta-block"><label>学生专业</label><value>${item.student_major}</value></div>
-    <div class="detail-meta-block"><label>GPA / 均分</label><value>${item.gpa}</value></div>
-    <div class="detail-meta-block"><label>语言成绩</label><value>${item.language_score}</value></div>
+    <div class="detail-meta-block"><label>本科院校</label><value>${safe(item.student_school || item.tier + '院校（匿名）')}</value></div>
+    <div class="detail-meta-block"><label>学生专业</label><value>${safe(item.student_major)}</value></div>
+    <div class="detail-meta-block"><label>GPA / 均分</label><value>${safe(item.gpa)}</value></div>
+    <div class="detail-meta-block"><label>语言成绩</label><value>${safe(item.language_score)}</value></div>
   `;
   $('modalOffers').innerHTML = item.offers.map(o => `
     <div class="detail-offer-item">
       <div>
-        <div class="detail-offer-school">${o.school}</div>
-        ${o.major && o.major !== '待更新' ? `<div class="detail-offer-major">${o.major}</div>` : ''}
+        <div class="detail-offer-school">${safe(o.school)}</div>
+        ${o.major && o.major !== '待更新' ? `<div class="detail-offer-major">${safe(o.major)}</div>` : ''}
       </div>
-      <div class="detail-offer-rank">${o.rank}</div>
+      <div class="detail-offer-rank">${safe(o.rank)}</div>
     </div>
   `).join('');
   $('caseModal').classList.add('show');
@@ -1509,6 +1939,13 @@ function renderCasesPage() {
   if (items.length === 0) {
     grid.innerHTML = '';
     noRes.style.display = 'block';
+    noRes.innerHTML = `
+      <div class="no-results-card">
+        <h3>暂时没有完全匹配的案例</h3>
+        <p>试试减少一个条件，或清空后只保留本科层次、专业方向和目标地区。</p>
+        <button class="btn btn-primary btn-sm" type="button" onclick="resetFilters()">重新筛选</button>
+      </div>
+    `;
     $('dataSourceTip').textContent = '';
   } else {
     grid.innerHTML = items.map(renderCaseCard).join('');
@@ -1521,15 +1958,17 @@ function renderCasesPage() {
 function renderCases() {
   filteredItems = getFiltered();
   currentPage = 1;
+  renderActiveFilters();
+  const summaryLead = filteredItems.length === allCases.length ? '案例库共' : '从案例库中找到';
+  $('resultSummary').innerHTML = `${summaryLead} <strong>${filteredItems.length}</strong> 条${filteredItems.length === allCases.length ? '真实录取案例' : '匹配案例'}`;
   renderStats(filteredItems);
   renderCharts(filteredItems);
   renderCasesPage();
 }
 
-on($('searchInput'), 'input', () => { currentPage = 1; renderCases(); });
-on($('countryFilter'), 'change', () => { currentPage = 1; renderCases(); });
-on($('degreeFilter'), 'change', () => { currentPage = 1; renderCases(); });
-on($('resultFilter'), 'change', () => { currentPage = 1; renderCases(); });
+['searchInput', 'tierFilter', 'majorFilter', 'gpaFilter', 'countryFilter', 'resultFilter', 'yearFilter', 'sortFilter']
+  .forEach(id => on($(id), id === 'searchInput' ? 'input' : 'change', renderCases));
+on($('resetFilters'), 'click', resetFilters);
 
 function setupUI() {
   const header = $('topHeader');
@@ -1541,7 +1980,6 @@ function setupUI() {
   });
 
   on(toTop, 'click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  on($('themeToggle'), 'click', () => document.body.classList.toggle('dark'));
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });

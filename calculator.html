@@ -528,6 +528,7 @@ a { color: inherit; text-decoration: none; }
   .footer-nav a { padding-left: 0 !important; }
 }
 </style>
+<link rel="stylesheet" href="site-shell.css">
 </head>
 <body>
 
@@ -545,6 +546,7 @@ a { color: inherit; text-decoration: none; }
     <button class="theme-toggle" id="themeToggle">🌓</button>
   </div>
 </header>
+<script src="site-shell.js"></script>
 
 <main>
 <section class="hero">
@@ -725,14 +727,14 @@ a { color: inherit; text-decoration: none; }
       </div>
     </div>
     <div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.35);">
-      <span>&copy; 2025 DreamBridge 留学服务. All rights reserved.</span>
+      <span>&copy; 2026 DreamBridge 留学服务. All rights reserved.</span>
       <span>用心服务每一个留学梦想</span>
     </div>
   </div>
 </footer>
 
 <div class="mobile-cta" id="mobileCta">
-  <span class="mobile-cta-wx">微信：xrr13365810586</span>
+  <span class="mobile-cta-wx">微信：xxr13365810586</span>
   <button class="btn btn-primary btn-sm" onclick="openQr()">立即咨询</button>
 </div>
 
@@ -744,7 +746,7 @@ a { color: inherit; text-decoration: none; }
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.85"/></svg>
       <span>微信扫码咨询</span>
     </div>
-    <p class="qr-wxid">xrr13365810586</p>
+    <p class="qr-wxid">xxr13365810586</p>
     <p style="font-size:var(--text-xs);color:var(--color-text-tertiary);">复制微信号，打开微信添加好友</p>
   </div>
 </div>
@@ -1132,7 +1134,6 @@ window.addEventListener('scroll', () => {
   if (header) header.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-$('themeToggle').addEventListener('click', () => document.body.classList.toggle('dark'));
 
 // 初始化城市选项
 updateCityOptions();

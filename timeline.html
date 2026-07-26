@@ -1568,7 +1568,7 @@ ul, ol { list-style: none; }
   .footer-nav a { padding-left: 0 !important; }
 }
 </style>
-<base target="_blank">
+<link rel="stylesheet" href="site-shell.css">
 </head>
 <body>
 
@@ -1586,13 +1586,14 @@ ul, ol { list-style: none; }
     <button class="theme-toggle" id="themeToggle">🌓</button>
   </div>
 </header>
+<script src="site-shell.js"></script>
 
 <main>
 
 <section class="section" id="timeline">
   <div class="container fade-in">
     <p class="section-kicker">Application Timeline</p>
-    <h2 class="section-title">申请时间线规划</h2>
+    <h1 class="section-title">申请时间线规划</h1>
     <p style="text-align:center;color:var(--color-text-secondary);margin-bottom:var(--space-6);max-width:560px;margin-left:auto;margin-right:auto;">
       输入你的目标入学时间，一键生成专属申请时间线，清楚知道每个阶段该做什么
     </p>
@@ -1602,9 +1603,9 @@ ul, ol { list-style: none; }
         <div class="timeline-input-group">
           <label>目标入学年份</label>
           <select id="timelineYear">
-            <option value="2026">2026 Fall</option>
             <option value="2027">2027 Fall</option>
             <option value="2028">2028 Fall</option>
+            <option value="2029">2029 Fall</option>
           </select>
         </div>
         <div class="timeline-input-group">
@@ -1657,7 +1658,7 @@ ul, ol { list-style: none; }
       </div>
     </div>
     <div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.35);">
-      <span>&copy; 2025 DreamBridge 留学服务. All rights reserved.</span>
+      <span>&copy; 2026 DreamBridge 留学服务. All rights reserved.</span>
       <span>用心服务每一个留学梦想</span>
     </div>
   </div>
@@ -1678,7 +1679,7 @@ ul, ol { list-style: none; }
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.85"/></svg>
       <span>微信扫码咨询</span>
     </div>
-    <p class="qr-wxid">xrr13365810586</p>
+    <p class="qr-wxid">xxr13365810586</p>
     <p style="font-size:var(--text-xs);color:var(--color-text-tertiary);">复制微信号，打开微信添加好友</p>
   </div>
 </div>
@@ -2150,13 +2151,15 @@ function initFilters() {
 
 function updateCountdown() {
   const now = new Date();
-  const target = new Date('2025-11-01T00:00:00');
+  const target = new Date('2026-09-01T00:00:00');
   const diff = target - now;
   if (diff > 0) {
     const days = Math.ceil(diff / 86400000);
-    $('countdownText').textContent = `距离NUS截止还有 ${days} 天`;
-    $('countdownBar').classList.add('show');
+    $('countdownText').textContent = `距离2027 Fall申请季集中开放约 ${days} 天`;
+  } else {
+    $('countdownText').textContent = '2027 Fall申请已陆续开放，建议尽早准备并递交';
   }
+  $('countdownBar').classList.add('show');
 }
 updateCountdown();
 
@@ -2685,7 +2688,6 @@ function setupUI() {
   });
 
   on(toTop, 'click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  on($('themeToggle'), 'click', () => document.body.classList.toggle('dark'));
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
