@@ -59,7 +59,7 @@
     // ========== 6. 时间规划 ==========
     {
       q: ['时间', '申请时间', '什么时候申请', 'timeline', '规划', '申请季', '几月申请'],
-      a: '📅 <strong>2026 Fall 入学申请时间线</strong><br><br><strong>Phase 1：准备期（现在-8月）</strong><br>• 考雅思/托福（最迟8月出分）<br>• 准备文书（PS+RL+CV）<br>• 确定选校名单<br><br><strong>Phase 2：申请期（9-11月）</strong><br>• 9月：港新开放申请，<strong>第一时间递交</strong><br>• 10月：英国开放，分轮次滚动录取<br>• 11月：澳洲开放，部分春季入学截止<br><br><strong>Phase 3：等offer（12月-次年2月）</strong><br>• 面试准备（港校商科/CS常见）<br>• 补交材料<br><br><strong>Phase 4：收尾期（3-8月）</strong><br>• 3-4月：比较offer，交留位费<br>• 5-6月：办签证，存保证金<br>• 7-8月：订机票，找住宿<br><br>需要我根据你的具体情况调整时间线吗？',
+      a: '📅 <strong>2027 Fall 入学申请时间线</strong><br><br><strong>Phase 1：准备期（现在-8月）</strong><br>• 考雅思/托福（最迟8月出分）<br>• 准备文书（PS+RL+CV）<br>• 确定选校名单<br><br><strong>Phase 2：申请期（9-11月）</strong><br>• 9月：港新陆续开放申请，尽早递交<br>• 10月：英国项目陆续开放，关注分轮次截止日期<br>• 11月：检查材料与补申方案<br><br><strong>Phase 3：等 Offer（12月-次年2月）</strong><br>• 面试准备（港校商科/CS常见）<br>• 补交材料<br><br><strong>Phase 4：收尾期（3-8月）</strong><br>• 3-4月：比较 Offer，确认留位费期限<br>• 5-6月：准备签证与资金材料<br>• 7-8月：订机票、找住宿、完成行前准备<br><br>具体开放时间以院校官网为准，需要我根据你的情况调整时间线吗？',
       followUp: ['showTimeline']
     },
     // ========== 7. 文书材料清单 ==========

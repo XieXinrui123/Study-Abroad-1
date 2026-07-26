@@ -1791,9 +1791,7 @@ ul, ol { list-style: none; }
   .hero-stat-value { font-size: var(--text-xl); }
 }
 </style>
-<base target="_blank">
-<base target="_blank">
-<base target="_blank">
+<link rel="stylesheet" href="site-shell.css">
 </head>
 <body>
 
@@ -1803,7 +1801,7 @@ ul, ol { list-style: none; }
 <!-- Countdown Bar -->
 <div class="countdown-bar" id="countdownBar">
   <div class="container">
-    <span>2026 Fall 申请季进行中</span>
+    <span>2027 Fall 申请季准备中</span>
     <span class="countdown-pill" id="countdownText">计算中...</span>
     <span>全包服务 0 offer 全额退款</span>
     <button class="countdown-close" onclick="document.getElementById('countdownBar').classList.remove('show')">&times;</button>
@@ -1825,6 +1823,7 @@ ul, ol { list-style: none; }
     <button class="theme-toggle" id="themeToggle">&#127765;</button>
   </div>
 </header>
+<script src="site-shell.js"></script>
 
 <main>
 
@@ -1881,7 +1880,7 @@ ul, ol { list-style: none; }
     <p class="hero-subtitle">从选校定位到签证落地，覆盖英港新澳全学科，让申请不再焦虑</p>
     <div class="hero-cta">
       <button class="btn btn-primary" onclick="openQr()">&#128172; 立即咨询</button>
-      <a href="evaluator.html" class="btn btn-secondary">&#127919; 智能背景评估(开发阶段)</a>
+      <a href="evaluator.html" class="btn btn-secondary">&#127919; 智能背景评估</a>
     </div>
     <div class="hero-stats" id="heroStats">
       <div class="hero-stat">
@@ -2073,7 +2072,7 @@ ul, ol { list-style: none; }
     <h2 class="section-title">自助工具</h2>
     <div class="mini-grid stagger-children">
       <a href="evaluator.html" class="mini-card" style="text-decoration:none;color:inherit;">
-        <h3>&#127919; 智能背景评估(开发阶段)</h3>
+        <h3>&#127919; 智能背景评估</h3>
         <p>输入你的院校、GPA、专业，30秒匹配相似成功案例，获取三档选校建议</p>
       </a>
       <a href="timeline.html" class="mini-card" style="text-decoration:none;color:inherit;">
@@ -2177,7 +2176,7 @@ ul, ol { list-style: none; }
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2025 DreamBridge 留学服务. All rights reserved.</span>
+      <span>&copy; 2026 DreamBridge 留学服务. All rights reserved.</span>
       <span>用心服务每一个留学梦想</span>
     </div>
   </div>
@@ -2288,13 +2287,15 @@ function setupCountUpObserver() {
 // ===== 倒计时 =====
 function updateCountdown() {
   const now = new Date();
-  const target = new Date('2025-11-01T00:00:00');
+  const target = new Date('2026-09-01T00:00:00');
   const diff = target - now;
   if (diff > 0) {
     const days = Math.ceil(diff / 86400000);
-    $('countdownText').textContent = '距离NUS截止还有 ' + days + ' 天';
-    $('countdownBar').classList.add('show');
+    $('countdownText').textContent = '距离2027 Fall申请季集中开放约 ' + days + ' 天';
+  } else {
+    $('countdownText').textContent = '2027 Fall申请已陆续开放，建议尽早准备并递交';
   }
+  $('countdownBar').classList.add('show');
 }
 
 // ===== GPA仪表盘 =====
@@ -2477,7 +2478,6 @@ function setupUI() {
   });
 
   on(toTop, 'click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  on($('themeToggle'), 'click', () => document.body.classList.toggle('dark'));
 
   // Fade-in观察器
   const fadeObserver = new IntersectionObserver(entries => {
