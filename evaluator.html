@@ -489,6 +489,15 @@ ul, ol { list-style: none; }
   padding: var(--space-8);
   color: var(--color-text-secondary);
 }
+.eval-status {
+  min-height: 20px;
+  margin-top: var(--space-3);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  text-align: center;
+}
+.eval-status.error { color: var(--color-danger); }
+.eval-near .eval-category-title { color: var(--color-primary); }
 
 /* Case Modal */
 .case-modal {
@@ -852,6 +861,7 @@ ul, ol { list-style: none; }
       <button class="btn btn-primary" onclick="runEval()" style="width:100%;margin-top:var(--space-5);">
         🎯 立即匹配案例
       </button>
+      <div class="eval-status" id="evalStatus" aria-live="polite">正在准备案例数据…</div>
     </div>
 
     <div class="eval-result" id="evalResult"></div>
@@ -1115,14 +1125,21 @@ function isRelatedMajor(a, b) {
 }
 
 async function loadCases() {
+  const status = $('evalStatus');
+  status.textContent = '正在准备案例数据…';
+  status.classList.remove('error');
   try {
     const res = await fetch('cases.json');
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    const casesData = await res.json();
+    const payload = await res.json();
+    const casesData = Array.isArray(payload) ? payload : payload.cases;
+    if (!Array.isArray(casesData)) throw new Error('案例数据结构不正确');
     allCases = casesData.map((item, idx) => normalizeCase(item, idx));
+    status.textContent = `已加载 ${allCases.length} 条匿名案例，可开始评估。`;
   } catch (err) {
     console.error('案例加载失败:', err);
-    alert('案例数据加载失败，请确保 cases.json 文件存在且格式正确');
+    status.classList.add('error');
+    status.innerHTML = '案例数据暂时无法加载。<button type="button" onclick="loadCases()" style="color:inherit;text-decoration:underline;font-weight:700;">重新加载</button>';
   }
 }
 
@@ -1227,6 +1244,11 @@ function runEval() {
     alert('请填写有效的GPA或均分，例如 85、3.5/4.0');
     return;
   }
+  if (!allCases.length) {
+    $('evalStatus').classList.add('error');
+    $('evalStatus').innerHTML = '案例数据尚未准备好。<button type="button" onclick="loadCases()" style="color:inherit;text-decoration:underline;font-weight:700;">重新加载</button>';
+    return;
+  }
   
   const user = {
     tier: getSchoolTier(school),
@@ -1277,17 +1299,38 @@ function runEval() {
       other.offer.major === item.offer.major &&
       other.case.id === item.case.id
     ));
+
+  const fallback = allCases
+    .map(c => {
+      const { score, reasons, tierDiff, gpaDiff } = calculateMatchScore({ ...user, target: '' }, c);
+      const offer = user.target
+        ? c.offers.find(item => isOfferInRegion(item.school, user.target)) || c.offers[0]
+        : c.offers[0];
+      return {
+        case: { ...c, offers: offer ? [offer] : [], result: offer?.rank || c.result },
+        offer,
+        score,
+        reasons,
+        tierDiff,
+        gpaDiff,
+        rankLevel: getOfferRankLevel(offer?.rank)
+      };
+    })
+    .filter(item => item.offer)
+    .sort((a, b) => b.score - a.score || (b.case.entry_year || 0) - (a.case.entry_year || 0))
+    .slice(0, 3);
   
   renderEvalResult({
     冲刺: sortCandidates(冲刺),
     匹配: sortCandidates(匹配),
     保底: sortCandidates(保底),
+    fallback,
     user
   });
 }
 
 function renderEvalResult(result) {
-  const { 冲刺, 匹配, 保底, user } = result;
+  const { 冲刺, 匹配, 保底, fallback, user } = result;
   const totalCount = 冲刺.length + 匹配.length + 保底.length;
 
   let html = `
@@ -1297,7 +1340,7 @@ function renderEvalResult(result) {
         ${user.major ? ` &middot; ${safe(user.major)}` : ''}
         ${user.target ? ` &middot; ${safe(user.target)}` : ''}
       </div>
-      <div style="font-size:13px;color:var(--color-text-tertiary);">从 ${allCases.length} 个真实案例中筛选出 ${totalCount} 个相关录取结果</div>
+      <div style="font-size:13px;color:var(--color-text-tertiary);">${totalCount ? `从 ${allCases.length} 个真实案例中筛选出 ${totalCount} 个相关录取结果` : `暂未找到完全匹配结果，以下展示相邻背景案例`}</div>
       <div style="font-size:12px;color:var(--color-text-tertiary);margin-top:8px;">结果基于历史案例相似度，仅作选校方向参考，不代表录取概率或录取承诺。</div>
     </div>
   `;
@@ -1329,11 +1372,14 @@ function renderEvalResult(result) {
 
   if (totalCount === 0) {
     html += `
-      <div class="eval-empty">
-        <div style="font-size:var(--text-3xl);margin-bottom:var(--space-3);">🔍</div>
-        <p>未找到匹配案例，你的背景比较特殊</p>
-        <p style="font-size:var(--text-sm);margin-top:var(--space-2);">建议联系专业顾问做一对一评估</p>
-        <button class="btn btn-primary" onclick="openQr()" style="margin-top:var(--space-4);">联系咨询</button>
+      <div class="eval-category eval-near">
+        <div class="eval-category-title">相邻背景参考</div>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 var(--space-4);">这些案例不是完全匹配结果，但本科层次或成绩更接近，可用来判断大致申请范围。</p>
+        <div class="eval-grid">${fallback.map(item => renderEvalCaseCard(item, '')).join('')}</div>
+        <div class="tier-tip">
+          <p class="tier-tip-text">你的条件比较少见，建议补充经历后做人工判断。</p>
+          <button class="tier-tip-btn" onclick="openQr()">获取人工建议</button>
+        </div>
       </div>
     `;
   }
@@ -1376,7 +1422,7 @@ function renderEvalCaseCard(m, userTarget) {
     ? c.offers.filter(o => isOfferInRegion(o.school, userTarget))
     : c.offers;
   return `
-    <div class="eval-case-card" onclick="openCaseModal(${c.id}, '${userTarget || ''}')">
+    <div class="eval-case-card" role="button" tabindex="0" aria-label="查看案例 ${c.id} 详情" onclick="openCaseModal(${c.id}, '${userTarget || ''}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal(${c.id}, '${userTarget || ''}')}">
       <div class="eval-case-header">
         <div style="display:flex;align-items:center;gap:10px;min-width:0;">
           <span class="eval-case-school" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${c.student_school || '本科院校未公开'}</span>

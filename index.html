@@ -1124,7 +1124,7 @@ ul, ol { list-style: none; }
   gap: var(--space-4);
   position: relative;
   margin-top: var(--space-12);
-  max-width: 1000px;
+  max-width: 760px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2064,33 +2064,33 @@ ul, ol { list-style: none; }
   </div>
 </section>
 
-<!-- ===== 服务流程可视化 ===== -->
+<!-- ===== 精简服务流程 ===== -->
 <section class="section process-section" id="process">
   <div class="container fade-in">
-    <p class="section-kicker">Process</p>
-    <h2 class="section-title" style="text-align:center;">六步搞定留学申请</h2>
-    <p style="text-align:center;color:var(--color-text-secondary);font-size:var(--text-md);max-width:520px;margin:0 auto var(--space-8);">从免费咨询到录取签证，每一步都有专业顾问全程陪伴，让你心中有数</p>
+    <p class="section-kicker">申请流程</p>
+    <h2 class="section-title" style="text-align:center;">四个阶段，清楚知道下一步</h2>
+    <p style="text-align:center;color:var(--color-text-secondary);font-size:var(--text-md);max-width:560px;margin:0 auto var(--space-8);">首页只展示关键节点，具体材料、时间和服务边界可在套餐页查看。</p>
     <div class="process-track stagger-children">
       <div class="process-step">
         <div class="process-step-icon pulse">
-          &#128172;
+          &#127919;
           <span class="process-step-num">1</span>
         </div>
         <div>
-          <h4>免费咨询</h4>
-          <p>了解你的背景和目标，初步判断可行性</p>
-          <time>30分钟</time>
+          <h4>背景评估</h4>
+          <p>结合真实案例确定申请范围</p>
+          <time>先免费评估</time>
         </div>
       </div>
       <div class="process-step">
         <div class="process-step-icon">
-          &#127919;
+          &#128203;
           <span class="process-step-num">2</span>
         </div>
         <div>
-          <h4>背景评估</h4>
-          <p>智能匹配+人工分析，输出三档选校方案</p>
-          <time>1-2天</time>
+          <h4>定校规划</h4>
+          <p>确认地区、专业与冲稳保组合</p>
+          <time>形成申请清单</time>
         </div>
       </div>
       <div class="process-step">
@@ -2099,48 +2099,26 @@ ul, ol { list-style: none; }
           <span class="process-step-num">3</span>
         </div>
         <div>
-          <h4>签约定校</h4>
-          <p>确认服务模式和目标院校清单</p>
-          <time>1周内</time>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-step-icon">
-          &#128221;
-          <span class="process-step-num">4</span>
-        </div>
-        <div>
-          <h4>文书打磨</h4>
-          <p>不限次数修改，直到满意为止</p>
-          <time>2-4周</time>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-step-icon">
-          &#128640;
-          <span class="process-step-num">5</span>
-        </div>
-        <div>
-          <h4>网申递交</h4>
-          <p>专属顾问全程代办，实时同步进度</p>
-          <time>按节点</time>
+          <h4>材料与递交</h4>
+          <p>文书、推荐信、网申按节点推进</p>
+          <time>进度透明</time>
         </div>
       </div>
       <div class="process-step">
         <div class="process-step-icon">
           &#127891;
-          <span class="process-step-num">6</span>
+          <span class="process-step-num">4</span>
         </div>
         <div>
-          <h4>录取签证</h4>
-          <p>Offer比较、签证办理、行前指导</p>
-          <time>持续跟进</time>
+          <h4>录取与行前</h4>
+          <p>比较 Offer，完成签证与行前准备</p>
+          <time>直到顺利入学</time>
         </div>
       </div>
     </div>
     <div class="process-cta">
-      <p style="margin-bottom:var(--space-4);">不确定自己适合哪种服务模式？先做个免费评估</p>
-      <a href="evaluator.html" class="btn btn-primary">&#127919; 免费背景评估</a>
+      <p style="margin-bottom:var(--space-4);">想了解每个阶段具体包含什么？</p>
+      <a href="package.html" class="btn btn-primary">查看完整服务流程</a>
     </div>
   </div>
 </section>
@@ -2148,29 +2126,12 @@ ul, ol { list-style: none; }
 <!-- ===== Plans ===== -->
 <section class="section section-alt" id="plans">
   <div class="container fade-in">
-    <p class="section-kicker">Plans</p>
-    <h2 class="section-title">套餐服务</h2>
-    <div class="plan-toggle">
-      <button class="plan-toggle-btn active" onclick="showPlanView('cards')">&#9638; 卡片视图</button>
-      <button class="plan-toggle-btn" onclick="showPlanView('table')">&#9638; 对比视图</button>
-    </div>
+    <p class="section-kicker">服务方式</p>
+    <h2 class="section-title">按参与程度选择服务</h2>
+    <p style="color:var(--color-text-secondary);font-size:var(--text-md);margin:calc(-1 * var(--space-5)) 0 var(--space-8);">首页展示核心区别，价格、服务边界和退款条款请在套餐页查看。</p>
     <div class="cards-grid stagger-children" id="planCards"></div>
-    <table class="compare-table" id="compareTable">
-      <thead><tr><th>服务项目</th><th>DIY服务</th><th>半DIY服务</th><th>全包服务</th></tr></thead>
-      <tbody>
-        <tr><td>文书撰写</td><td class="icon-cross">&#10007; 仅润色</td><td class="icon-check">&#10003; 代写</td><td class="icon-check">&#10003; 代写</td></tr>
-        <tr><td>选校定位</td><td class="icon-cross">&#10007; 自主</td><td class="icon-check">&#10003; 指导</td><td class="icon-check">&#10003; 全包</td></tr>
-        <tr><td>简历制作</td><td class="icon-half">&#9651; 润色</td><td class="icon-check">&#10003; 代写</td><td class="icon-check">&#10003; 代写</td></tr>
-        <tr><td>网申递交</td><td class="icon-cross">&#10007; 自主</td><td class="icon-half">&#9651; 辅助</td><td class="icon-check">&#10003; 代办</td></tr>
-        <tr><td>推荐信</td><td class="icon-half">&#9651; 润色</td><td class="icon-check">&#10003; 代写</td><td class="icon-check">&#10003; 代写</td></tr>
-        <tr><td>签证支持</td><td class="icon-cross">&#10007;</td><td class="icon-cross">&#10007;</td><td class="icon-check">&#10003;</td></tr>
-        <tr><td>进度管理</td><td class="icon-cross">&#10007;</td><td class="icon-half">&#9651;</td><td class="icon-check">&#10003; 专属顾问</td></tr>
-        <tr><td>退款承诺</td><td class="icon-cross">&#10007;</td><td class="icon-cross">&#10007;</td><td class="icon-check">&#10003; 0 offer全退</td></tr>
-        <tr><td>答疑服务</td><td>&#10003; 指导</td><td>&#10003; 指导</td><td>&#10003; 指导</td></tr>
-      </tbody>
-    </table>
     <p style="margin-top:var(--space-8);text-align:center;">
-      <a class="btn btn-primary" href="package.html" style="padding: var(--space-3) var(--space-8);">了解详细服务流程</a>
+      <a class="btn btn-primary" href="package.html" style="padding: var(--space-3) var(--space-8);">比较价格与服务内容</a>
     </p>
   </div>
 </section>
@@ -2178,58 +2139,25 @@ ul, ol { list-style: none; }
 <!-- ===== Quick Links ===== -->
 <section class="section">
   <div class="container fade-in">
-    <p class="section-kicker">Tools</p>
+    <p class="section-kicker">实用工具</p>
     <h2 class="section-title">自助工具</h2>
     <div class="mini-grid stagger-children">
       <a href="evaluator.html" class="mini-card" style="text-decoration:none;color:inherit;">
-        <h3>&#127919; 智能背景评估</h3>
+        <h3>智能背景评估</h3>
         <p>输入你的院校、GPA、专业，30秒匹配相似成功案例，获取三档选校建议</p>
       </a>
       <a href="timeline.html" class="mini-card" style="text-decoration:none;color:inherit;">
-        <h3>&#128197; 申请时间线</h3>
+        <h3>申请时间线</h3>
         <p>选择目标入学年份和地区，一键生成专属申请规划，清楚每个阶段该做什么</p>
       </a>
       <a href="calculator.html" class="mini-card" style="text-decoration:none;color:inherit;">
-        <h3>&#128176; 费用计算器</h3>
+        <h3>费用计算器</h3>
         <p>选择地区、项目数量和服务模式，快速估算留学总费用（含学费+生活费）</p>
       </a>
       <a href="cases.html" class="mini-card" style="text-decoration:none;color:inherit;">
-        <h3>&#128202; 案例数据库</h3>
+        <h3>案例数据库</h3>
         <p>500+真实录取案例，支持按地区、院校档次、GPA等多维度筛选对比</p>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Career Entry ===== -->
-<section class="section section-alt" id="career-entry">
-  <div class="container fade-in">
-    <p class="section-kicker">Career</p>
-    <h2 class="section-title">毕业去向与职业发展</h2>
-    <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-10) var(--space-8);box-shadow:var(--shadow-md);text-align:center;max-width:800px;margin:0 auto;">
-      <div style="font-size:var(--text-4xl);margin-bottom:var(--space-4);">&#128188;</div>
-      <h3 style="font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-3);color:var(--color-text);">留学生就业指南</h3>
-      <p style="color:var(--color-text-secondary);font-size:var(--text-md);line-height:1.75;margin-bottom:var(--space-6);max-width:560px;margin-left:auto;margin-right:auto;">
-        覆盖回国落户、免税购车、求职时间线、热门行业薪资与海外就业真实参考。以回国就业为核心，帮你把留学背景转化为求职优势。
-      </p>
-      <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
-        <a href="career.html" class="btn btn-primary">查看完整就业指南</a>
-        <button class="btn btn-secondary" onclick="openQr()" style="color:var(--color-text);border-color:var(--color-border);">一对一职业规划</button>
-      </div>
-      <div class="stagger-children" style="display:flex;gap:var(--space-10);justify-content:center;margin-top:var(--space-8);flex-wrap:wrap;" id="careerStats">
-        <div style="text-align:center;">
-          <div style="font-size:var(--text-2xl);font-weight:800;color:var(--color-primary);" data-count="80" data-suffix="%+">0</div>
-          <div style="font-size:var(--text-xs);color:var(--color-text-secondary);margin-top:var(--space-1);">留学生选择回国发展</div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:var(--text-2xl);font-weight:800;color:var(--color-primary);">QS前50</div>
-          <div style="font-size:var(--text-xs);color:var(--color-text-secondary);margin-top:var(--space-1);">上海直接落户门槛</div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-size:var(--text-2xl);font-weight:800;color:var(--color-primary);">2年</div>
-          <div style="font-size:var(--text-xs);color:var(--color-text-secondary);margin-top:var(--space-1);">应届生身份保留期</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -2237,7 +2165,7 @@ ul, ol { list-style: none; }
 <!-- ===== FAQ卡片式手风琴 ===== -->
 <section class="section section-compact" id="faq">
   <div class="container fade-in">
-    <p class="section-kicker">FAQ</p>
+    <p class="section-kicker">常见问题</p>
     <h2 class="section-title">常见问题</h2>
     <div class="faq-grid stagger-children" id="faqList"></div>
   </div>
