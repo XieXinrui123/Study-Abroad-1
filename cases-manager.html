@@ -113,7 +113,7 @@
         </form>
       </section>
     </section>
-    <p class="footer-note">点击“发布到线上网站”后，GitHub Pages 通常会在 1–2 分钟内更新。发布令牌只用于本次操作，不会保存在网页或草稿中。</p>
+    <p class="footer-note">点击“发布到线上网站”后，GitHub Pages 通常会在 1–2 分钟内更新。若选择保存令牌，它只会保存在当前浏览器中。</p>
   </main>
   <div class="drop-zone" id="dropZone">松开即可导入文件</div>
 
@@ -131,9 +131,14 @@
         <label for="githubToken">GitHub 发布令牌</label>
         <input id="githubToken" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
       </div>
-      <p class="token-note">令牌只保留在当前输入框中，不会写入网站代码、浏览器草稿或导出的案例文件。</p>
+      <label class="remember-token">
+        <input id="rememberGithubToken" type="checkbox">
+        <span>在这台私人设备上保存令牌，之后自动使用</span>
+      </label>
+      <p class="token-note">保存后令牌只存放在当前浏览器中，不会写入网站代码、案例草稿或导出的文件。请勿在公用电脑上勾选。</p>
       <div class="publish-status" id="publishStatus" role="status" aria-live="polite"></div>
       <div class="dialog-actions">
+        <button class="btn danger" id="clearTokenButton" type="button">清除已保存令牌</button>
         <button class="btn" id="publishCancelButton" type="button">取消</button>
         <button class="btn publish" id="publishConfirmButton" type="button">保存并发布</button>
       </div>
