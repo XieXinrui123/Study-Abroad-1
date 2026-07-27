@@ -427,8 +427,9 @@ ul, ol { list-style: none; }
 .reset-button:hover { border-color: var(--color-primary); }
 .finder-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
   gap: var(--space-4);
+  align-items: end;
 }
 .filter-field { min-width: 0; }
 .filter-field-wide { grid-column: span 2; }
@@ -441,6 +442,54 @@ ul, ol { list-style: none; }
 }
 .filter-field .filter-input,
 .filter-field .filter-select { min-height: 46px; }
+.find-similar-button {
+  min-height: 46px;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  font-size: var(--text-sm);
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: var(--shadow-primary);
+}
+.find-similar-button:hover { transform: translateY(-1px); }
+.finder-feedback {
+  min-height: 20px;
+  margin-top: var(--space-3);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+}
+.finder-feedback.success { color: var(--color-success); }
+.advanced-filters {
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--color-border-light);
+}
+.advanced-filters summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: fit-content;
+  padding-top: var(--space-4);
+  color: var(--color-primary);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: 800;
+  list-style: none;
+}
+.advanced-filters summary::-webkit-details-marker { display: none; }
+.advanced-filters summary::after {
+  content: "＋";
+  font-size: var(--text-md);
+  transition: transform var(--duration-fast) ease;
+}
+.advanced-filters[open] summary::after { transform: rotate(45deg); }
+.advanced-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
 .preset-row {
   display: flex;
   align-items: center;
@@ -1059,7 +1108,9 @@ ul, ol { list-style: none; }
   .case-finder { padding: var(--space-5) var(--space-4); }
   .finder-heading { flex-direction: column; }
   .finder-grid { grid-template-columns: 1fr; }
+  .advanced-grid { grid-template-columns: 1fr; }
   .filter-field-wide { grid-column: auto; }
+  .find-similar-button { width: 100%; }
   .result-toolbar { align-items: flex-start; flex-direction: column; }
   .match-note { border-radius: var(--radius-md); }
 }
@@ -1120,7 +1171,7 @@ ul, ol { list-style: none; }
   <div class="container hero-content fade-in">
     <span class="hero-tag">Cases Intelligence</span>
     <h1 class="hero-title">大型可筛选案例汇总</h1>
-    <p class="hero-subtitle">过往数据未完全统计，但所有展示案例均为真实录取案例</p>
+    <p class="hero-subtitle">案例来自过往服务记录并已匿名处理，案例库持续补录；筛选结果仅供选校定位参考</p>
   </div>
 </section>
 
@@ -1131,15 +1182,11 @@ ul, ol { list-style: none; }
       <div class="finder-heading">
         <div>
           <h2>用你的背景，找真正相似的录取案例</h2>
-          <p>建议先选择本科层次、专业方向和均分，再补充目标地区。</p>
+          <p>先填写三个核心条件即可；目标地区、年份等条件可以稍后补充。</p>
         </div>
         <button class="reset-button" id="resetFilters" type="button">清空条件</button>
       </div>
       <div class="finder-grid">
-        <div class="filter-field filter-field-wide">
-          <label for="searchInput">关键词</label>
-          <input type="search" class="filter-input" id="searchInput" placeholder="学校、专业、录取院校或项目名称">
-        </div>
         <div class="filter-field">
           <label for="tierFilter">我的本科层次</label>
           <select class="filter-select" id="tierFilter">
@@ -1165,6 +1212,16 @@ ul, ol { list-style: none; }
             <option value="90plus">90分及以上</option>
           </select>
         </div>
+        <button class="find-similar-button" id="findSimilar" type="button">查找相似案例</button>
+      </div>
+      <div class="finder-feedback" id="finderFeedback" aria-live="polite">选择条件后，案例会自动更新。</div>
+      <details class="advanced-filters" id="advancedFilters">
+        <summary>更多筛选条件</summary>
+        <div class="advanced-grid">
+          <div class="filter-field">
+            <label for="searchInput">关键词</label>
+            <input type="search" class="filter-input" id="searchInput" placeholder="学校、专业或项目名称">
+          </div>
         <div class="filter-field">
           <label for="countryFilter">目标地区</label>
           <select class="filter-select" id="countryFilter"><option value="">不限地区</option></select>
@@ -1195,7 +1252,8 @@ ul, ol { list-style: none; }
             <option value="offerCount">Offer 数量最多</option>
           </select>
         </div>
-      </div>
+        </div>
+      </details>
       <div class="preset-row" id="presetRow">
         <span class="preset-label">快速场景</span>
         <button class="preset-button" type="button" data-preset="shuangfeiTop50">双非冲 QS 前50</button>
@@ -1207,7 +1265,7 @@ ul, ol { list-style: none; }
     </div>
     <div class="result-toolbar">
       <div class="result-summary" id="resultSummary">正在加载案例…</div>
-      <div class="match-note" id="sortNote">默认按案例编号稳定展示</div>
+      <div class="match-note" id="sortNote">按案例编号稳定展示，新增案例不会打乱原有顺序</div>
     </div>
     <details class="insights-panel">
       <summary>查看当前结果的数据分布</summary>
@@ -1756,6 +1814,8 @@ function resetFilters() {
   ['searchInput', 'tierFilter', 'majorFilter', 'gpaFilter', 'countryFilter', 'resultFilter', 'yearFilter']
     .forEach(id => { $(id).value = ''; });
   $('sortFilter').value = 'idAsc';
+  $('finderFeedback').textContent = '选择条件后，案例会自动更新。';
+  $('finderFeedback').classList.remove('success');
   activePreset = '';
   document.querySelectorAll('.preset-button').forEach(button => button.classList.remove('active'));
   renderCases();
@@ -1989,6 +2049,21 @@ function renderCases() {
 ['searchInput', 'tierFilter', 'majorFilter', 'gpaFilter', 'countryFilter', 'resultFilter', 'yearFilter', 'sortFilter']
   .forEach(id => on($(id), id === 'searchInput' ? 'input' : 'change', renderCases));
 on($('resetFilters'), 'click', resetFilters);
+on($('findSimilar'), 'click', () => {
+  const selectedCount = ['tierFilter', 'majorFilter', 'gpaFilter'].filter(id => $(id).value).length;
+  const feedback = $('finderFeedback');
+  if (!selectedCount) {
+    feedback.textContent = '请至少选择一项背景条件，再查找相似案例。';
+    feedback.classList.remove('success');
+    $('tierFilter').focus();
+    return;
+  }
+  $('sortFilter').value = 'match';
+  renderCases();
+  feedback.textContent = `已按你的 ${selectedCount} 项背景条件优先排序。条件越完整，匹配越准确。`;
+  feedback.classList.add('success');
+  $('resultSummary').scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
 
 function setupUI() {
   const header = $('topHeader');

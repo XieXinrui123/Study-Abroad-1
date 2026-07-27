@@ -24,7 +24,7 @@
       <nav class="nav-links site-desktop-nav" aria-label="主导航">${links}</nav>
       <div class="site-nav-actions">
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色模式">🌓</button>
-        <button class="site-consult-btn" type="button" onclick="openQr()">微信咨询</button>
+        <a class="site-primary-action" href="evaluator.html#evaluator">免费背景评估</a>
         <button class="site-menu-toggle" id="siteMenuToggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="siteMobileMenu"><span></span></button>
       </div>
     </div>
@@ -32,10 +32,20 @@
       <div class="site-mobile-panel">
         <button class="site-mobile-close" id="siteMobileClose" type="button" aria-label="关闭导航菜单">×</button>
         <nav class="site-mobile-links" aria-label="移动端导航">${links}</nav>
-        <button class="site-mobile-consult" type="button" onclick="openQr()">添加微信咨询</button>
+        <a class="site-mobile-primary-action" href="evaluator.html#evaluator">免费背景评估</a>
+        <button class="site-mobile-consult" type="button" onclick="openQr()">微信咨询：xxr13365810586</button>
       </div>
     </div>
   `;
+
+  if (!document.querySelector('.site-mobile-primary')) {
+    const mobilePrimary = document.createElement('a');
+    mobilePrimary.className = 'site-mobile-primary';
+    mobilePrimary.href = 'evaluator.html#evaluator';
+    mobilePrimary.setAttribute('aria-label', '免费背景评估，30秒匹配相似案例');
+    mobilePrimary.innerHTML = '<span><strong>不确定能申请什么学校？</strong><small>30秒匹配相似录取案例</small></span><b>免费评估</b>';
+    document.body.appendChild(mobilePrimary);
+  }
 
   const toggle = document.getElementById('siteMenuToggle');
   const menu = document.getElementById('siteMobileMenu');
@@ -71,6 +81,19 @@
   });
 
   document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.to-top').forEach(button => {
+      button.setAttribute('aria-label', '返回页面顶部');
+      button.setAttribute('title', '返回顶部');
+    });
+    document.querySelectorAll('.qr-modal').forEach(modal => {
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      modal.setAttribute('aria-label', '微信咨询');
+    });
+    document.querySelectorAll('.qr-close').forEach(button => {
+      button.setAttribute('aria-label', '关闭微信二维码');
+    });
+
     const footer = document.querySelector('footer.footer');
     if (!footer) return;
     const year = new Date().getFullYear();
@@ -79,7 +102,7 @@
         <div class="site-footer-grid">
           <div>
             <a href="index.html" class="logo" aria-label="DreamBridge 首页">Dream<span>Bridge</span></a>
-            <p class="site-footer-brand-copy">专注英港新澳留学申请，以真实案例、清晰流程和透明服务帮助学生完成选校与申请。</p>
+            <p class="site-footer-brand-copy">专注英港新澳留学申请，累计服务 500+ 学生，以真实案例、清晰流程和透明服务帮助学生完成选校与申请。</p>
             <button class="site-consult-btn" type="button" onclick="openQr()">添加微信咨询</button>
           </div>
           <div>

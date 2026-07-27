@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DreamBridge留学中介，专注英国、香港、新加坡、澳洲留学申请。创始人NUS计算机毕业，累计服务500+学生，100%全包录取率，0 offer全额退款。">
+<meta name="description" content="DreamBridge留学申请服务，专注英国、香港、新加坡、澳洲等地区。累计服务500+学生，提供真实案例匹配、背景评估与透明申请服务。">
 <title>DreamBridge留学｜英港新澳一站式申请服务</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -529,6 +529,65 @@ ul, ol { list-style: none; }
   font-weight: 500;
   letter-spacing: 0.5px;
 }
+.hero-proof-note {
+  margin-top: var(--space-4);
+  color: rgba(255,255,255,0.48);
+  font-size: 11px;
+}
+.decision-path {
+  position: relative;
+  z-index: 20;
+  margin-top: -46px;
+  padding-bottom: var(--space-8);
+}
+.decision-path-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+}
+.decision-step {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-6);
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--duration-fast) ease;
+}
+.decision-step + .decision-step { border-left: 1px solid var(--color-border-light); }
+.decision-step:hover { background: var(--color-primary-light); }
+.decision-step-number {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: 800;
+}
+.decision-step strong {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+}
+.decision-step small {
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+}
+.decision-step-arrow { color: var(--color-primary); font-weight: 800; }
 .hero-scroll {
   position: absolute;
   bottom: var(--space-8);
@@ -1806,6 +1865,12 @@ ul, ol { list-style: none; }
   .metrics { grid-template-columns: 1fr; }
   .hero-cta { flex-direction: column; align-items: center; }
   .hero-cta .btn { width: 100%; max-width: 280px; }
+  .decision-path { margin-top: -28px; }
+  .decision-path-grid { grid-template-columns: 1fr; }
+  .decision-step + .decision-step {
+    border-top: 1px solid var(--color-border-light);
+    border-left: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1897,31 +1962,54 @@ ul, ol { list-style: none; }
   </div>
 
   <div class="container hero-content fade-in" id="heroContent">
-    <span class="hero-tag">Your Future, Curated</span>
-    <h1 class="hero-title">为你的<span class="highlight">留学梦想</span><br>提供一站式服务</h1>
-    <p class="hero-subtitle">从选校定位到签证落地，覆盖英港新澳全学科，让申请不再焦虑</p>
+    <span class="hero-tag">用真实案例，减少申请信息差</span>
+    <h1 class="hero-title">先看相似案例，再定<span class="highlight">留学方案</span></h1>
+    <p class="hero-subtitle">输入本科院校、专业和均分，30秒匹配相似录取案例；从选校定位到签证落地，覆盖英港新澳主流申请地区。</p>
     <div class="hero-cta">
-      <button class="btn btn-primary" onclick="openQr()">&#128172; 立即咨询</button>
-      <a href="evaluator.html" class="btn btn-secondary">&#127919; 智能背景评估</a>
+      <a href="evaluator.html" class="btn btn-primary">免费背景评估</a>
+      <a href="cases.html" class="btn btn-secondary">查看真实案例</a>
     </div>
     <div class="hero-stats" id="heroStats">
       <div class="hero-stat">
-        <span class="hero-stat-value" data-count="100" data-suffix="%">0</span>
-        <span class="hero-stat-label">全包录取率</span>
+        <span class="hero-stat-value" data-count="500" data-suffix="+">0</span>
+        <span class="hero-stat-label">累计服务学生</span>
       </div>
       <div class="hero-stat">
         <span class="hero-stat-value" data-count="3000" data-suffix="+">0</span>
-        <span class="hero-stat-label">成功案例</span>
+        <span class="hero-stat-label">累计录取结果</span>
       </div>
       <div class="hero-stat">
         <span class="hero-stat-value" data-count="500" data-suffix="+">0</span>
-        <span class="hero-stat-label">签约学生</span>
+        <span class="hero-stat-label">案例库记录</span>
       </div>
     </div>
+    <p class="hero-proof-note">截至 2026 年 7 月，按现有服务与录取记录统计；案例库持续补录中。</p>
   </div>
   <div class="hero-scroll">
     <div class="mouse-icon"></div>
     <span>向下滚动</span>
+  </div>
+</section>
+
+<section class="decision-path" aria-label="申请规划下一步">
+  <div class="container">
+    <div class="decision-path-grid">
+      <a class="decision-step" href="cases.html">
+        <span class="decision-step-number">1</span>
+        <span><strong>查看相似案例</strong><small>先了解真实录取范围</small></span>
+        <span class="decision-step-arrow">→</span>
+      </a>
+      <a class="decision-step" href="evaluator.html">
+        <span class="decision-step-number">2</span>
+        <span><strong>完成背景评估</strong><small>获得三档选校参考</small></span>
+        <span class="decision-step-arrow">→</span>
+      </a>
+      <button class="decision-step" type="button" onclick="openQr()">
+        <span class="decision-step-number">3</span>
+        <span><strong>获取人工建议</strong><small>确认专业与申请节奏</small></span>
+        <span class="decision-step-arrow">→</span>
+      </button>
+    </div>
   </div>
 </section>
 
@@ -1951,12 +2039,12 @@ ul, ol { list-style: none; }
       <p>创始人毕业于新加坡国立大学计算机专业，拥有5年英联邦留学申请经验。团队累计服务500+签约学生，擅长职业规划与项目定位。服务地区覆盖英国、香港、新加坡、澳洲、新西兰、澳门。</p>
       <div class="metrics stagger-children" id="metricsArea">
         <div class="metric-item">
-          <div class="metric-value" data-count="100" data-suffix="%">0</div>
-          <div class="metric-label">全包录取率</div>
+          <div class="metric-value" data-count="500" data-suffix="+">0</div>
+          <div class="metric-label">累计服务学生</div>
         </div>
         <div class="metric-item">
           <div class="metric-value" data-count="500" data-suffix="+">0</div>
-          <div class="metric-label">成功案例</div>
+          <div class="metric-label">案例库记录</div>
         </div>
         <div class="metric-item">
           <div class="metric-value" data-count="5" data-suffix="年">0</div>

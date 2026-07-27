@@ -43,7 +43,8 @@
   gap: 10px;
 }
 
-.site-consult-btn {
+.site-consult-btn,
+.site-primary-action {
   padding: 9px 16px;
   border-radius: 10px;
   color: #fff;
@@ -51,6 +52,10 @@
   font-size: 13px;
   font-weight: 800;
   box-shadow: 0 6px 18px rgba(245, 158, 11, 0.25);
+}
+
+.site-primary-action {
+  text-decoration: none;
 }
 
 .site-menu-toggle {
@@ -155,12 +160,28 @@
 
 .site-mobile-consult {
   width: 100%;
+  margin-top: 10px;
+  padding: 13px 18px;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 800;
+}
+
+.site-mobile-primary-action {
+  display: block;
+  width: 100%;
   margin-top: 24px;
   padding: 13px 18px;
   border-radius: 12px;
   color: #fff;
   background: linear-gradient(135deg, #f59e0b, #d97706);
+  text-align: center;
   font-weight: 800;
+}
+
+.site-mobile-primary {
+  display: none;
 }
 
 @media (max-width: 980px) {
@@ -172,7 +193,7 @@
     font-size: 12px;
   }
 
-  .site-consult-btn {
+  .site-primary-action {
     display: none;
   }
 }
@@ -183,7 +204,7 @@
   }
 
   .site-desktop-nav,
-  .site-consult-btn {
+  .site-primary-action {
     display: none !important;
   }
 
@@ -194,6 +215,64 @@
 
   .site-nav-actions {
     margin-left: auto;
+  }
+
+  body {
+    padding-bottom: 72px;
+  }
+
+  .mobile-cta,
+  .to-top,
+  .db-chat-fab {
+    display: none !important;
+  }
+
+  .site-mobile-primary {
+    position: fixed;
+    right: 12px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    left: 12px;
+    z-index: 998;
+    display: flex;
+    min-height: 58px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 9px 10px 9px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    color: #fff;
+    background: rgba(13, 29, 50, 0.96);
+    box-shadow: 0 12px 32px rgba(4, 12, 24, 0.28);
+    backdrop-filter: blur(12px);
+    text-decoration: none;
+  }
+
+  .site-mobile-primary span {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .site-mobile-primary strong {
+    overflow: hidden;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .site-mobile-primary small {
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 11px;
+  }
+
+  .site-mobile-primary b {
+    flex: 0 0 auto;
+    padding: 10px 15px;
+    border-radius: 11px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    font-size: 13px;
   }
 }
 
