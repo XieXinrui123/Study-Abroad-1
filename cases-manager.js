@@ -2,6 +2,7 @@
   'use strict';
   const Core = window.CasesManagerCore;
   const STORAGE_KEY = 'dreambridge-cases-manager-draft-v1';
+  const TOKEN_STORAGE_KEY = 'dreambridge-github-publish-token-v1';
   const GITHUB_REPOSITORY = 'XieXinrui123/Study-Abroad-1';
   const GITHUB_BRANCH = 'main';
   const GITHUB_CASES_PATH = 'cases.json';
@@ -248,9 +249,11 @@
     const confirmButton = $('#publishConfirmButton');
     const cancelButton = $('#publishCancelButton');
     const closeButton = $('#publishCloseButton');
+    const clearButton = $('#clearTokenButton');
     confirmButton.disabled = busy;
     cancelButton.disabled = busy;
     closeButton.disabled = busy;
+    clearButton.disabled = busy || !localStorage.getItem(TOKEN_STORAGE_KEY);
     confirmButton.textContent = busy ? '正在发布…' : '保存并发布';
   }
 
@@ -297,7 +300,12 @@
           branch: GITHUB_BRANCH
         })
       });
-      tokenInput.value = '';
+      if ($('#rememberGithubToken').checked) {
+        localStorage.setItem(TOKEN_STORAGE_KEY, token);
+      } else {
+        localStorage.removeItem(TOKEN_STORAGE_KEY);
+        tokenInput.value = '';
+      }
       status.textContent = `发布成功：${output.length} 条案例。线上网站通常会在 1–2 分钟内更新。`;
       status.classList.add('success');
       showMessage(`案例已发布到 GitHub main 分支。提交：${result.commit?.sha?.slice(0, 7) || '已创建'}。`, 'success');
@@ -339,12 +347,25 @@
   $('#publishButton').addEventListener('click', () => {
     $('#publishStatus').textContent = '';
     $('#publishStatus').className = 'publish-status';
+    const savedToken = localStorage.getItem(TOKEN_STORAGE_KEY) || '';
+    $('#githubToken').value = savedToken;
+    $('#rememberGithubToken').checked = Boolean(savedToken);
+    $('#clearTokenButton').disabled = !savedToken;
     publishDialog.showModal();
-    $('#githubToken').focus();
+    if (!savedToken) $('#githubToken').focus();
   });
   $('#publishCloseButton').addEventListener('click', () => publishDialog.close());
   $('#publishCancelButton').addEventListener('click', () => publishDialog.close());
   $('#publishConfirmButton').addEventListener('click', publishToWebsite);
+  $('#clearTokenButton').addEventListener('click', () => {
+    localStorage.removeItem(TOKEN_STORAGE_KEY);
+    $('#githubToken').value = '';
+    $('#rememberGithubToken').checked = false;
+    $('#clearTokenButton').disabled = true;
+    $('#publishStatus').textContent = '已从当前浏览器清除保存的发布令牌。';
+    $('#publishStatus').className = 'publish-status success';
+    $('#githubToken').focus();
+  });
   publishDialog.addEventListener('click', event => {
     if (event.target === publishDialog) publishDialog.close();
   });
