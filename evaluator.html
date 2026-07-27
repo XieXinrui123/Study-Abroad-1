@@ -1379,7 +1379,7 @@ function renderEvalCaseCard(m, userTarget) {
     <div class="eval-case-card" onclick="openCaseModal(${c.id}, '${userTarget || ''}')">
       <div class="eval-case-header">
         <div style="display:flex;align-items:center;gap:10px;min-width:0;">
-          <span class="eval-case-school" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${c.student_school}</span>
+          <span class="eval-case-school" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${c.student_school || '本科院校未公开'}</span>
           <span class="pill pill-tier-${tierClass(c.tier)}">${c.tier}</span>
         </div>
         <span class="score-badge">${m.score}分</span>

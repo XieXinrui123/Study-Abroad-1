@@ -1187,8 +1187,8 @@ ul, ol { list-style: none; }
         <div class="filter-field">
           <label for="sortFilter">排序方式</label>
           <select class="filter-select" id="sortFilter">
-            <option value="match">相似度优先</option>
-            <option value="latest">最新案例优先</option>
+            <option value="match">推荐排序</option>
+            <option value="latest">最新入学年份</option>
             <option value="gpaAsc">均分从低到高</option>
             <option value="offerCount">Offer 数量最多</option>
           </select>
@@ -1700,11 +1700,18 @@ function getFiltered() {
   const sort = $('sortFilter').value;
   return items.sort((a, b) => {
     if (sort === 'gpaAsc') return (a.gpa_score || 999) - (b.gpa_score || 999);
-    if (sort === 'offerCount') return b.offers.length - a.offers.length || (b.entry_year || 0) - (a.entry_year || 0);
-    if (sort === 'latest') return (b.entry_year || 0) - (a.entry_year || 0) || b.id - a.id;
+    if (sort === 'offerCount') {
+      return b.offers.length - a.offers.length ||
+        (b.entry_year || 0) - (a.entry_year || 0) ||
+        a.id - b.id;
+    }
+    if (sort === 'latest') {
+      return (b.entry_year || 0) - (a.entry_year || 0) ||
+        a.id - b.id;
+    }
     return getMatchDetails(b).score - getMatchDetails(a).score ||
       (b.entry_year || 0) - (a.entry_year || 0) ||
-      b.offers.length - a.offers.length;
+      a.id - b.id;
   });
 }
 

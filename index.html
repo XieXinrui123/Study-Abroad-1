@@ -222,6 +222,9 @@ ul, ol { list-style: none; }
   transition: transform var(--duration-base) var(--ease-out);
 }
 .countdown-bar.show { transform: translateY(0); }
+.countdown-bar.show + .header {
+  top: var(--countdown-height, 52px);
+}
 .countdown-bar .container {
   display: flex;
   justify-content: center;
@@ -1754,6 +1757,25 @@ ul, ol { list-style: none; }
     --space-20: 56px;
     --space-16: 48px;
   }
+  .countdown-bar {
+    padding: var(--space-2) 0;
+  }
+  .countdown-bar .container {
+    flex-wrap: nowrap;
+    gap: var(--space-2);
+  }
+  .countdown-bar .container > span:not(.countdown-pill) {
+    display: none;
+  }
+  .countdown-pill {
+    flex: 1;
+    padding: var(--space-1) var(--space-2);
+    font-size: 11px;
+  }
+  .countdown-close {
+    flex: 0 0 28px;
+    margin-left: 0;
+  }
   .nav-links { display: none; }
   .about-grid { grid-template-columns: 1fr; }
   .cards-grid { grid-template-columns: 1fr; }
@@ -1804,7 +1826,7 @@ ul, ol { list-style: none; }
     <span>2027 Fall 申请季准备中</span>
     <span class="countdown-pill" id="countdownText">计算中...</span>
     <span>全包服务 0 offer 全额退款</span>
-    <button class="countdown-close" onclick="document.getElementById('countdownBar').classList.remove('show')">&times;</button>
+    <button class="countdown-close" aria-label="关闭申请季提示" onclick="document.getElementById('countdownBar').classList.remove('show')">&times;</button>
   </div>
 </div>
 
@@ -2205,7 +2227,7 @@ ul, ol { list-style: none; }
 
 <!-- Offer图片全屏预览 -->
 <div class="offer-preview-modal" id="offerPreviewModal" onclick="this.classList.remove('show')">
-  <img src="" alt="Offer 截图" class="offer-preview-img" id="offerPreviewImg">
+  <img alt="Offer 截图" class="offer-preview-img" id="offerPreviewImg">
 </div>
 
 <script>
@@ -2289,13 +2311,15 @@ function updateCountdown() {
   const now = new Date();
   const target = new Date('2026-09-01T00:00:00');
   const diff = target - now;
+  const countdownBar = $('countdownBar');
   if (diff > 0) {
     const days = Math.ceil(diff / 86400000);
     $('countdownText').textContent = '距离2027 Fall申请季集中开放约 ' + days + ' 天';
   } else {
     $('countdownText').textContent = '2027 Fall申请已陆续开放，建议尽早准备并递交';
   }
-  $('countdownBar').classList.add('show');
+  countdownBar.classList.add('show');
+  document.documentElement.style.setProperty('--countdown-height', `${countdownBar.offsetHeight}px`);
 }
 
 // ===== GPA仪表盘 =====
@@ -2515,6 +2539,12 @@ function setupEventListeners() {
 
 // ===== 初始化 =====
 updateCountdown();
+window.addEventListener('resize', () => {
+  const countdownBar = $('countdownBar');
+  if (countdownBar.classList.contains('show')) {
+    document.documentElement.style.setProperty('--countdown-height', `${countdownBar.offsetHeight}px`);
+  }
+});
 renderOffersWall();
 setupDragScroll();
 renderPlans();
