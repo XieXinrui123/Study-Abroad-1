@@ -5654,7 +5654,7 @@
   },
   {
     "id": 238,
-    "student_school": "",
+    "student_school": "上海工程技术大学",
     "student_major": "英语",
     "gpa": "76",
     "language_score": "未填写",
@@ -5664,7 +5664,7 @@
     "offers": [
       {
         "school": "新南威尔士大学",
-        "major": "待更新",
+        "major": "广告与新闻",
         "rank": "QS前50"
       }
     ],
@@ -10984,7 +10984,7 @@
   },
   {
     "id": 479,
-    "student_school": "",
+    "student_school": "华侨大学",
     "student_major": "商务英语",
     "gpa": "86.2",
     "language_score": "7(6)",
@@ -10994,12 +10994,12 @@
     "offers": [
       {
         "school": "诺丁汉大学",
-        "major": "待更新",
+        "major": "市场营销",
         "rank": "QS前100"
       },
       {
         "school": "悉尼大学",
-        "major": "待更新",
+        "major": "商法",
         "rank": "QS前50"
       }
     ],
@@ -11735,6 +11735,36 @@
     ],
     "entry_year": 2027,
     "tier": "985",
+    "note": ""
+  },
+  {
+    "id": 512,
+    "student_school": "浙江树人学院",
+    "student_major": "英语",
+    "gpa": "86",
+    "language_score": "7",
+    "country": "香港/英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "语言学",
+        "rank": "QS前100"
+      },
+      {
+        "school": "香港浸会大学",
+        "major": "对外英语教学",
+        "rank": "海外名校"
+      },
+      {
+        "school": "利兹大学",
+        "major": "英语语言文学",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2024,
+    "tier": "双非",
     "note": ""
   }
 ]
