@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.sheetjs.com; style-src 'self'; img-src 'self' data:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>DreamBridge 案例管理器</title>
   <link rel="stylesheet" href="cases-manager.css">
 </head>
@@ -38,7 +39,7 @@
       <aside class="panel sidebar">
         <div class="sidebar-top">
           <input class="search" id="searchInput" type="search" placeholder="搜索院校、专业、地区或编号">
-          <button class="btn primary" id="newButton" type="button" style="width:100%;margin-top:10px;">＋ 新建案例</button>
+          <button class="btn primary new-case-button" id="newButton" type="button">＋ 新建案例</button>
         </div>
         <div class="case-list" id="caseList"></div>
       </aside>
