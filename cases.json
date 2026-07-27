@@ -10389,23 +10389,28 @@
   },
   {
     "id": 453,
-    "student_school": "",
+    "student_school": "武汉纺织大学外经贸学院",
     "student_major": "英语",
     "gpa": "85",
     "language_score": "未填写",
     "country": "英国",
     "degree": "硕士",
-    "result": "QS前100",
+    "result": "QS前50",
     "offers": [
       {
         "school": "诺丁汉大学",
-        "major": "待更新",
+        "major": "对外英语教学",
         "rank": "QS前100"
       },
       {
         "school": "利兹大学",
-        "major": "待更新",
+        "major": "对外英语教学",
         "rank": "QS前100"
+      },
+      {
+        "school": "爱丁堡大学",
+        "major": "对外英语教学",
+        "rank": "QS前50"
       }
     ],
     "entry_year": 2024,
@@ -10434,7 +10439,7 @@
   },
   {
     "id": 455,
-    "student_school": "",
+    "student_school": "大连海洋大学",
     "student_major": "物流",
     "gpa": "87.45",
     "language_score": "6",
@@ -10444,17 +10449,17 @@
     "offers": [
       {
         "school": "南安普顿大学",
-        "major": "待更新",
+        "major": "供应链管理",
         "rank": "QS前100"
       },
       {
         "school": "澳大利亚国立大学",
-        "major": "待更新",
+        "major": "管理学",
         "rank": "QS前50"
       },
       {
         "school": "悉尼大学",
-        "major": "待更新",
+        "major": "供应链管理",
         "rank": "QS前50"
       }
     ],
@@ -10464,7 +10469,7 @@
   },
   {
     "id": 456,
-    "student_school": "",
+    "student_school": "奥克兰大学",
     "student_major": "计算机系统工程",
     "gpa": "7.61",
     "language_score": "未填写",
@@ -10474,12 +10479,12 @@
     "offers": [
       {
         "school": "新加坡国立大学",
-        "major": "待更新",
+        "major": "计算机工程",
         "rank": "QS前10"
       },
       {
         "school": "帝国理工大学",
-        "major": "待更新",
+        "major": "应用计算科学与工程",
         "rank": "QS前10"
       }
     ],
@@ -11129,7 +11134,7 @@
   },
   {
     "id": 486,
-    "student_school": "",
+    "student_school": "湖南工商大学",
     "student_major": "数据科学",
     "gpa": "87.5",
     "language_score": "7",
@@ -11139,12 +11144,12 @@
     "offers": [
       {
         "school": "澳门大学",
-        "major": "待更新",
+        "major": "数据科学",
         "rank": "海外名校"
       },
       {
         "school": "利兹大学",
-        "major": "待更新",
+        "major": "数据科学与分析",
         "rank": "QS前100"
       }
     ],
