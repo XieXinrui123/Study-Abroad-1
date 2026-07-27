@@ -2,6 +2,9 @@
   'use strict';
   const Core = window.CasesManagerCore;
   const STORAGE_KEY = 'dreambridge-cases-manager-draft-v1';
+  const GITHUB_REPOSITORY = 'XieXinrui123/Study-Abroad-1';
+  const GITHUB_BRANCH = 'main';
+  const GITHUB_CASES_PATH = 'cases.json';
   const $ = selector => document.querySelector(selector);
   const state = { cases: [], selectedId: null, source: '未载入' };
 
@@ -118,19 +121,18 @@
     });
   }
 
-  function selectCase(id) {
-    const item = state.cases.find(entry => entry.id === id);
-    if (item) fillForm(item);
-  }
-
-  function saveCase(event) {
-    event.preventDefault();
-    clearMessage();
+  function commitCurrentForm() {
     const item = collectForm();
     const conflict = state.cases.find(entry => entry.id === item.id && entry.id !== state.selectedId);
-    if (conflict) return showMessage(`案例编号 ${item.id} 已存在，请换一个编号。`, 'error');
+    if (conflict) {
+      showMessage(`案例编号 ${item.id} 已存在，请换一个编号。`, 'error');
+      return null;
+    }
     const singleReport = Core.validateCases([item]);
-    if (singleReport.errors.length) return showMessage(singleReport.errors.join('\n'), 'error');
+    if (singleReport.errors.length) {
+      showMessage(singleReport.errors.join('\n'), 'error');
+      return null;
+    }
     const index = state.cases.findIndex(entry => entry.id === state.selectedId);
     if (index >= 0) state.cases[index] = item;
     else state.cases.push(item);
@@ -139,7 +141,20 @@
     updateStats();
     renderList();
     elements.heading.textContent = `编辑案例 #${item.id}`;
-    showMessage(`案例 #${item.id} 已保存到浏览器草稿。${singleReport.warnings.length ? `\n提醒：${singleReport.warnings.join('；')}` : ''}`, 'success');
+    return { item, warnings: singleReport.warnings };
+  }
+
+  function selectCase(id) {
+    const item = state.cases.find(entry => entry.id === id);
+    if (item) fillForm(item);
+  }
+
+  function saveCase(event) {
+    event.preventDefault();
+    clearMessage();
+    const saved = commitCurrentForm();
+    if (!saved) return;
+    showMessage(`案例 #${saved.item.id} 已保存到浏览器草稿。${saved.warnings.length ? `\n提醒：${saved.warnings.join('；')}` : ''}`, 'success');
   }
 
   function replaceCases(items, source) {
@@ -181,9 +196,8 @@
   }
 
   function exportJSON() {
-    const current = collectForm();
-    const index = state.cases.findIndex(entry => entry.id === state.selectedId);
-    if (index >= 0) state.cases[index] = current;
+    clearMessage();
+    if (!commitCurrentForm()) return;
     const report = Core.validateCases(state.cases);
     updateStats();
     if (report.errors.length) {
@@ -200,6 +214,99 @@
     URL.revokeObjectURL(url);
     persist();
     showMessage(`导出成功：${output.length} 条案例、${output.reduce((sum, item) => sum + item.offers.length, 0)} 个 Offer。${report.warnings.length ? `\n还有 ${report.warnings.length} 个非阻断提醒，可按需继续完善。` : ''}`, 'success');
+  }
+
+  function encodeUtf8Base64(value) {
+    const bytes = new TextEncoder().encode(value);
+    let binary = '';
+    const chunkSize = 0x8000;
+    for (let index = 0; index < bytes.length; index += chunkSize) {
+      binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize));
+    }
+    return btoa(binary);
+  }
+
+  async function githubRequest(url, token, options = {}) {
+    const response = await fetch(url, {
+      ...options,
+      headers: {
+        Accept: 'application/vnd.github+json',
+        Authorization: `Bearer ${token}`,
+        'X-GitHub-Api-Version': '2022-11-28',
+        ...(options.headers || {})
+      }
+    });
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      const detail = payload.message ? `：${payload.message}` : '';
+      throw new Error(`GitHub 返回 ${response.status}${detail}`);
+    }
+    return payload;
+  }
+
+  function setPublishBusy(busy) {
+    const confirmButton = $('#publishConfirmButton');
+    const cancelButton = $('#publishCancelButton');
+    const closeButton = $('#publishCloseButton');
+    confirmButton.disabled = busy;
+    cancelButton.disabled = busy;
+    closeButton.disabled = busy;
+    confirmButton.textContent = busy ? '正在发布…' : '保存并发布';
+  }
+
+  async function publishToWebsite() {
+    const tokenInput = $('#githubToken');
+    const status = $('#publishStatus');
+    const token = tokenInput.value.trim();
+    status.className = 'publish-status';
+    if (!token) {
+      status.textContent = '请输入 GitHub 发布令牌。';
+      status.classList.add('error');
+      tokenInput.focus();
+      return;
+    }
+
+    clearMessage();
+    const saved = commitCurrentForm();
+    if (!saved) {
+      status.textContent = '当前案例未通过校验，请关闭窗口查看错误提示。';
+      status.classList.add('error');
+      return;
+    }
+    const report = Core.validateCases(state.cases);
+    if (report.errors.length) {
+      status.textContent = `案例库还有 ${report.errors.length} 个错误，暂不能发布。`;
+      status.classList.add('error');
+      return;
+    }
+
+    setPublishBusy(true);
+    status.textContent = '正在连接 GitHub 并更新案例库…';
+    try {
+      const apiUrl = `https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${GITHUB_CASES_PATH}`;
+      const existing = await githubRequest(`${apiUrl}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, token);
+      const output = [...state.cases].sort((a, b) => a.id - b.id);
+      const json = `${JSON.stringify(output, null, 2)}\n`;
+      const result = await githubRequest(apiUrl, token, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: `通过案例管理器更新案例（${output.length} 条）`,
+          content: encodeUtf8Base64(json),
+          sha: existing.sha,
+          branch: GITHUB_BRANCH
+        })
+      });
+      tokenInput.value = '';
+      status.textContent = `发布成功：${output.length} 条案例。线上网站通常会在 1–2 分钟内更新。`;
+      status.classList.add('success');
+      showMessage(`案例已发布到 GitHub main 分支。提交：${result.commit?.sha?.slice(0, 7) || '已创建'}。`, 'success');
+    } catch (error) {
+      status.textContent = `发布失败：${error.message}。请确认令牌未过期，且具有该仓库 Contents 读写权限。`;
+      status.classList.add('error');
+    } finally {
+      setPublishBusy(false);
+    }
   }
 
   async function loadInitialData() {
@@ -228,6 +335,19 @@
   $('#importButton').addEventListener('click', () => elements.file.click());
   elements.file.addEventListener('change', () => importFile(elements.file.files[0]));
   $('#exportButton').addEventListener('click', exportJSON);
+  const publishDialog = $('#publishDialog');
+  $('#publishButton').addEventListener('click', () => {
+    $('#publishStatus').textContent = '';
+    $('#publishStatus').className = 'publish-status';
+    publishDialog.showModal();
+    $('#githubToken').focus();
+  });
+  $('#publishCloseButton').addEventListener('click', () => publishDialog.close());
+  $('#publishCancelButton').addEventListener('click', () => publishDialog.close());
+  $('#publishConfirmButton').addEventListener('click', publishToWebsite);
+  publishDialog.addEventListener('click', event => {
+    if (event.target === publishDialog) publishDialog.close();
+  });
   $('#restoreButton').addEventListener('click', () => {
     const draft = localStorage.getItem(STORAGE_KEY);
     if (!draft) return showMessage('当前浏览器还没有保存过草稿。', 'info');
