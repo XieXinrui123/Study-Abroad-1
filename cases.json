@@ -3049,7 +3049,7 @@
   },
   {
     "id": 124,
-    "student_school": "",
+    "student_school": "东北林业大学",
     "student_major": "计算机",
     "gpa": "83",
     "language_score": "6.5",
@@ -3059,7 +3059,7 @@
     "offers": [
       {
         "school": "香港城市大学",
-        "major": "待更新",
+        "major": "计算机科学",
         "rank": "QS前100"
       }
     ],
@@ -3304,7 +3304,7 @@
   },
   {
     "id": 135,
-    "student_school": "",
+    "student_school": "西南大学",
     "student_major": "计算机",
     "gpa": "85",
     "language_score": "6",
@@ -3314,12 +3314,12 @@
     "offers": [
       {
         "school": "香港大学",
-        "major": "待更新",
+        "major": "计算机科学",
         "rank": "QS前50"
       },
       {
         "school": "香港城市大学",
-        "major": "待更新",
+        "major": "计算机科学",
         "rank": "QS前100"
       }
     ],
@@ -3924,7 +3924,7 @@
   },
   {
     "id": 162,
-    "student_school": "",
+    "student_school": "西安电子科技大学",
     "student_major": "人工智能",
     "gpa": "89.8",
     "language_score": "7.0(6.0)",
@@ -5274,7 +5274,7 @@
   },
   {
     "id": 222,
-    "student_school": "",
+    "student_school": "浙江大学",
     "student_major": "金融工程",
     "gpa": "90",
     "language_score": "7+325",
@@ -5284,7 +5284,7 @@
     "offers": [
       {
         "school": "新加坡国立大学",
-        "major": "待更新",
+        "major": "金融工程",
         "rank": "QS前10"
       }
     ],
@@ -5324,7 +5324,7 @@
   },
   {
     "id": 224,
-    "student_school": "",
+    "student_school": "湖南大学",
     "student_major": "金融工程",
     "gpa": "91",
     "language_score": "7",
@@ -5334,12 +5334,12 @@
     "offers": [
       {
         "school": "香港大学",
-        "major": "待更新",
+        "major": "商业分析",
         "rank": "QS前50"
       },
       {
         "school": "新加坡国立大学",
-        "major": "待更新",
+        "major": "统计学",
         "rank": "QS前10"
       }
     ],
@@ -6829,7 +6829,7 @@
   },
   {
     "id": 292,
-    "student_school": "",
+    "student_school": "北京工业大学",
     "student_major": "计算机",
     "gpa": "83",
     "language_score": "IELTS 6.5+ GRE317",
@@ -6839,7 +6839,7 @@
     "offers": [
       {
         "school": "新加坡国立大学",
-        "major": "待更新",
+        "major": "软件工程",
         "rank": "QS前10"
       }
     ],
@@ -8769,7 +8769,7 @@
   },
   {
     "id": 379,
-    "student_school": "",
+    "student_school": "南京大学",
     "student_major": "计算机",
     "gpa": "85",
     "language_score": "6.5",
@@ -8779,12 +8779,12 @@
     "offers": [
       {
         "school": "香港大学",
-        "major": "待更新",
+        "major": "计算机科学",
         "rank": "QS前50"
       },
       {
         "school": "香港中文大学",
-        "major": "待更新",
+        "major": "计算机科学",
         "rank": "QS前100"
       }
     ],
@@ -9304,7 +9304,7 @@
   },
   {
     "id": 403,
-    "student_school": "",
+    "student_school": "山东大学",
     "student_major": "计算机",
     "gpa": "92",
     "language_score": "6.5",
@@ -9314,12 +9314,12 @@
     "offers": [
       {
         "school": "香港中文大学",
-        "major": "待更新",
-        "rank": "QS前100"
+        "major": "计算机",
+        "rank": "QS前50"
       },
       {
         "school": "爱丁堡大学",
-        "major": "待更新",
+        "major": "计算机",
         "rank": "QS前50"
       }
     ],
@@ -9474,7 +9474,7 @@
   },
   {
     "id": 411,
-    "student_school": "",
+    "student_school": "江西科技师范大学",
     "student_major": "材料",
     "gpa": "80",
     "language_score": "未填写",
@@ -9899,7 +9899,7 @@
   },
   {
     "id": 431,
-    "student_school": "",
+    "student_school": "上海电力大学",
     "student_major": "电气",
     "gpa": "89",
     "language_score": "6.5",
