@@ -2055,7 +2055,7 @@
   },
   {
     "id": 80,
-    "student_school": "浙江财经",
+    "student_school": "浙江财经大学",
     "student_major": "经济学",
     "gpa": "84",
     "language_score": "未填写",
@@ -3354,7 +3354,7 @@
   },
   {
     "id": 137,
-    "student_school": "",
+    "student_school": "江南大学",
     "student_major": "会计",
     "gpa": "85",
     "language_score": "未填写",
@@ -3364,12 +3364,12 @@
     "offers": [
       {
         "school": "曼彻斯特大学",
-        "major": "待更新",
+        "major": "房地产金融与投资",
         "rank": "QS前50"
       },
       {
         "school": "伦敦国王学院",
-        "major": "待更新",
+        "major": "金融学(资产定价)",
         "rank": "QS前50"
       }
     ],
@@ -3419,7 +3419,7 @@
   },
   {
     "id": 140,
-    "student_school": "",
+    "student_school": "苏州大学",
     "student_major": "会计",
     "gpa": "85.26",
     "language_score": "6.5",
@@ -4129,7 +4129,7 @@
   },
   {
     "id": 171,
-    "student_school": "",
+    "student_school": "中国农业大学",
     "student_major": "金融科技",
     "gpa": "3.61",
     "language_score": "6.5(5)",
@@ -4264,7 +4264,7 @@
   },
   {
     "id": 177,
-    "student_school": "",
+    "student_school": "哈尔滨工业大学",
     "student_major": "会计",
     "gpa": "76",
     "language_score": "未填写",
@@ -4274,7 +4274,7 @@
     "offers": [
       {
         "school": "澳大利亚国立大学",
-        "major": "待更新",
+        "major": "应用会计",
         "rank": "QS前50"
       }
     ],
@@ -5109,18 +5109,23 @@
   },
   {
     "id": 215,
-    "student_school": "",
+    "student_school": "湖南大学",
     "student_major": "会计",
     "gpa": "87",
     "language_score": "6.5(6)",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前100",
+    "result": "QS前50",
     "offers": [
       {
         "school": "香港中文大学",
-        "major": "待更新",
-        "rank": "QS前100"
+        "major": "会计学",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "商业分析",
+        "rank": "QS前50"
       }
     ],
     "entry_year": 2025,
