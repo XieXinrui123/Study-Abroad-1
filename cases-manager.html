@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex,nofollow">
-  <title>DreamBridge 案例管理器（本地工具）</title>
+  <title>DreamBridge 案例管理器</title>
   <link rel="stylesheet" href="cases-manager.css">
 </head>
 <body>
   <main class="manager-shell">
     <header class="manager-header">
       <div>
-        <div class="eyebrow">DREAMBRIDGE · LOCAL TOOL</div>
+        <div class="eyebrow">DREAMBRIDGE · CASES ADMIN</div>
         <h1>案例管理器</h1>
-        <p>导入、校验、编辑并导出网站使用的 <code>cases.json</code>。草稿只保存在当前浏览器。</p>
+        <p>导入、校验、编辑并发布网站案例。未发布的草稿只保存在当前浏览器。</p>
       </div>
       <div class="header-actions">
         <a class="btn" href="案例批量导入模板.xlsx" download>下载 Excel 模板</a>
         <button class="btn" id="importButton" type="button">导入 JSON / CSV / Excel</button>
         <button class="btn" id="restoreButton" type="button">恢复浏览器草稿</button>
         <button class="btn accent" id="exportButton" type="button">校验并导出 JSON</button>
+        <button class="btn publish" id="publishButton" type="button">发布到线上网站</button>
         <input id="fileInput" type="file" accept=".json,.csv,.xlsx,.xls" hidden>
       </div>
     </header>
@@ -111,11 +112,36 @@
         </form>
       </section>
     </section>
-    <p class="footer-note">本页面不会自动上传数据；导出后请用新文件替换网站根目录中的 cases.json。</p>
+    <p class="footer-note">点击“发布到线上网站”后，GitHub Pages 通常会在 1–2 分钟内更新。发布令牌只用于本次操作，不会保存在网页或草稿中。</p>
   </main>
   <div class="drop-zone" id="dropZone">松开即可导入文件</div>
 
-  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+  <dialog class="publish-dialog" id="publishDialog" aria-labelledby="publishTitle">
+    <form method="dialog" class="publish-dialog-card">
+      <div class="publish-dialog-heading">
+        <div>
+          <div class="eyebrow">SECURE PUBLISH</div>
+          <h2 id="publishTitle">发布案例到线上网站</h2>
+        </div>
+        <button class="dialog-close" id="publishCloseButton" type="button" aria-label="关闭发布窗口">×</button>
+      </div>
+      <p class="publish-copy">请输入仅授权给 <strong>XieXinrui123/Study-Abroad-1</strong>、并具有“Contents: Read and write”权限的 GitHub Fine-grained Token。</p>
+      <div class="field">
+        <label for="githubToken">GitHub 发布令牌</label>
+        <input id="githubToken" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
+      </div>
+      <p class="token-note">令牌只保留在当前输入框中，不会写入网站代码、浏览器草稿或导出的案例文件。</p>
+      <div class="publish-status" id="publishStatus" role="status" aria-live="polite"></div>
+      <div class="dialog-actions">
+        <button class="btn" id="publishCancelButton" type="button">取消</button>
+        <button class="btn publish" id="publishConfirmButton" type="button">保存并发布</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"
+    integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT"
+    crossorigin="anonymous"></script>
   <script src="cases-manager-core.js"></script>
   <script src="cases-manager.js"></script>
 </body>
