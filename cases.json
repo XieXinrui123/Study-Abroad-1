@@ -3234,7 +3234,7 @@
   },
   {
     "id": 132,
-    "student_school": "",
+    "student_school": "中国地质大学",
     "student_major": "应用化学",
     "gpa": "84.3",
     "language_score": "6.5(6)",
@@ -3244,12 +3244,12 @@
     "offers": [
       {
         "school": "伦敦大学学院（UCL）",
-        "major": "待更新",
+        "major": "化学工程",
         "rank": "QS前10"
       },
       {
         "school": "爱丁堡大学",
-        "major": "待更新",
+        "major": "化学工程",
         "rank": "QS前50"
       }
     ],
@@ -3329,7 +3329,7 @@
   },
   {
     "id": 136,
-    "student_school": "",
+    "student_school": "北京工业大学",
     "student_major": "生物医学工程",
     "gpa": "85",
     "language_score": "6.5",
@@ -3459,7 +3459,7 @@
   },
   {
     "id": 142,
-    "student_school": "",
+    "student_school": "南京理工大学",
     "student_major": "机械工程",
     "gpa": "85.6",
     "language_score": "6(5.5)",
@@ -3469,12 +3469,12 @@
     "offers": [
       {
         "school": "新加坡国立大学",
-        "major": "机械工程",
+        "major": "工程设计与创新",
         "rank": "QS前10"
       },
       {
         "school": "南洋理工大学",
-        "major": "机械工程",
+        "major": "计算机控制自动化",
         "rank": "QS前50"
       },
       {
@@ -3489,7 +3489,7 @@
   },
   {
     "id": 143,
-    "student_school": "",
+    "student_school": "对外经贸大学",
     "student_major": "保险",
     "gpa": "85.98",
     "language_score": "6.5",
@@ -3549,7 +3549,7 @@
   },
   {
     "id": 146,
-    "student_school": "",
+    "student_school": "北京科技大学",
     "student_major": "计算机",
     "gpa": "87",
     "language_score": "6.5",
@@ -3559,7 +3559,7 @@
     "offers": [
       {
         "school": "香港大学",
-        "major": "待更新",
+        "major": "计算机",
         "rank": "QS前50"
       }
     ],
@@ -3569,7 +3569,7 @@
   },
   {
     "id": 147,
-    "student_school": "",
+    "student_school": "北京邮电大学",
     "student_major": "物联网",
     "gpa": "87",
     "language_score": "6.5",
@@ -3579,7 +3579,7 @@
     "offers": [
       {
         "school": "香港大学",
-        "major": "待更新",
+        "major": "计算机",
         "rank": "QS前50"
       }
     ],
@@ -3589,7 +3589,7 @@
   },
   {
     "id": 148,
-    "student_school": "",
+    "student_school": "河北工业大学",
     "student_major": "数据科学",
     "gpa": "87",
     "language_score": "6.5",
@@ -3599,7 +3599,7 @@
     "offers": [
       {
         "school": "香港大学",
-        "major": "待更新",
+        "major": "计算机科学",
         "rank": "QS前50"
       }
     ],
@@ -4149,7 +4149,7 @@
   },
   {
     "id": 172,
-    "student_school": "",
+    "student_school": "中国农业大学",
     "student_major": "市场营销",
     "gpa": "3.7",
     "language_score": "7",
@@ -4159,12 +4159,12 @@
     "offers": [
       {
         "school": "香港中文大学",
-        "major": "待更新",
+        "major": "市场营销",
         "rank": "QS前100"
       },
       {
         "school": "香港大学",
-        "major": "待更新",
+        "major": "市场营销",
         "rank": "QS前50"
       }
     ],
@@ -4174,7 +4174,7 @@
   },
   {
     "id": 173,
-    "student_school": "",
+    "student_school": "中国海洋大学",
     "student_major": "数学",
     "gpa": "75",
     "language_score": "未填写",
@@ -4184,13 +4184,18 @@
     "offers": [
       {
         "school": "悉尼大学",
-        "major": "待更新",
+        "major": "数据科学",
         "rank": "QS前50"
       },
       {
         "school": "澳大利亚国立大学",
-        "major": "待更新",
+        "major": "数据科学与统计",
         "rank": "QS前50"
+      },
+      {
+        "school": "墨尔本大学",
+        "major": "数学",
+        "rank": "待更新"
       }
     ],
     "entry_year": 2025,
