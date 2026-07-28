@@ -59,7 +59,6 @@
   const menu = document.getElementById('siteMobileMenu');
   const closeButton = document.getElementById('siteMobileClose');
   const themeToggle = document.getElementById('themeToggle');
-  let menuScrollY = 0;
   let savedTheme = '';
   try { savedTheme = localStorage.getItem('dreambridge-theme') || ''; } catch {}
   if (savedTheme === 'dark') document.body.classList.add('dark');
@@ -78,16 +77,10 @@
     toggle.setAttribute('aria-label', open ? '关闭导航菜单' : '打开导航菜单');
     menu.setAttribute('aria-hidden', String(!open));
     document.body.classList.toggle('site-menu-open', open);
+    document.documentElement.classList.toggle('site-menu-open', open);
 
     if (open) {
-      menuScrollY = window.scrollY;
-      document.body.style.top = `-${menuScrollY}px`;
-      document.documentElement.style.overflow = 'hidden';
       closeButton.focus({ preventScroll: true });
-    } else {
-      document.body.style.top = '';
-      document.documentElement.style.overflow = '';
-      window.scrollTo(0, menuScrollY);
     }
   }
 

@@ -225,12 +225,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  html.site-menu-open,
   body.site-menu-open {
-    position: fixed;
-    right: 0;
-    left: 0;
-    width: 100%;
     overflow: hidden;
+    overscroll-behavior: none;
   }
 
   body.site-menu-open .site-mobile-primary,
