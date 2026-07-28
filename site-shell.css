@@ -123,10 +123,11 @@ body {
 .site-mobile-menu {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 1200;
   display: none;
   background: rgba(7, 14, 28, 0.64);
   backdrop-filter: blur(8px);
+  overscroll-behavior: contain;
 }
 
 .site-mobile-menu.open {
@@ -134,15 +135,18 @@ body {
 }
 
 .site-mobile-panel {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: min(86vw, 360px);
-  height: 100%;
-  padding: 88px 24px 32px;
+  height: 100vh;
+  height: 100dvh;
+  padding: max(88px, calc(env(safe-area-inset-top) + 64px)) 24px max(32px, env(safe-area-inset-bottom));
   background: #101d30;
   box-shadow: -18px 0 48px rgba(0, 0, 0, 0.28);
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .site-mobile-close {
@@ -221,6 +225,20 @@ body {
 }
 
 @media (max-width: 768px) {
+  body.site-menu-open {
+    position: fixed;
+    right: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  body.site-menu-open .site-mobile-primary,
+  body.site-menu-open .db-assistant-fab {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
   .site-nav-wrap {
     padding: 14px 0;
   }
