@@ -11766,5 +11766,25 @@
     "entry_year": 2024,
     "tier": "双非",
     "note": ""
+  },
+  {
+    "id": 513,
+    "student_school": "东北林业大学",
+    "student_major": "计算机科学与技术",
+    "gpa": "90",
+    "language_score": "未填写",
+    "country": "香港",
+    "degree": "博士",
+    "result": "中外合办",
+    "offers": [
+      {
+        "school": "香港科技大学(广州)",
+        "major": "博士",
+        "rank": "中外合办"
+      }
+    ],
+    "entry_year": 2026,
+    "tier": "211",
+    "note": ""
   }
 ]
