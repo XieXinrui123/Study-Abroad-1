@@ -28,15 +28,23 @@
         <button class="site-menu-toggle" id="siteMenuToggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="siteMobileMenu"><span></span></button>
       </div>
     </div>
-    <div class="site-mobile-menu" id="siteMobileMenu" aria-hidden="true">
-      <div class="site-mobile-panel">
-        <button class="site-mobile-close" id="siteMobileClose" type="button" aria-label="关闭导航菜单">×</button>
-        <nav class="site-mobile-links" aria-label="移动端导航">${links}</nav>
-        <a class="site-mobile-primary-action" href="evaluator.html#evaluator">免费背景评估</a>
-        <button class="site-mobile-consult" type="button" onclick="openQr()">微信咨询：xxr13365810586</button>
-      </div>
+  `;
+
+  // 菜单必须挂在 body 下。若作为 fixed header 的子元素，
+  // iOS/微信浏览器在 header 启用 backdrop-filter 后会把它限制在 header 高度内。
+  const mobileMenu = document.createElement('div');
+  mobileMenu.className = 'site-mobile-menu';
+  mobileMenu.id = 'siteMobileMenu';
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  mobileMenu.innerHTML = `
+    <div class="site-mobile-panel" role="dialog" aria-modal="true" aria-label="网站导航">
+      <button class="site-mobile-close" id="siteMobileClose" type="button" aria-label="关闭导航菜单">×</button>
+      <nav class="site-mobile-links" aria-label="移动端导航">${links}</nav>
+      <a class="site-mobile-primary-action" href="evaluator.html#evaluator">免费背景评估</a>
+      <button class="site-mobile-consult" type="button" onclick="openQr()">微信咨询：xxr13365810586</button>
     </div>
   `;
+  document.body.appendChild(mobileMenu);
 
   if (!document.querySelector('.site-mobile-primary')) {
     const mobilePrimary = document.createElement('a');
@@ -51,6 +59,7 @@
   const menu = document.getElementById('siteMobileMenu');
   const closeButton = document.getElementById('siteMobileClose');
   const themeToggle = document.getElementById('themeToggle');
+  let menuScrollY = 0;
   let savedTheme = '';
   try { savedTheme = localStorage.getItem('dreambridge-theme') || ''; } catch {}
   if (savedTheme === 'dark') document.body.classList.add('dark');
@@ -68,16 +77,30 @@
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? '关闭导航菜单' : '打开导航菜单');
     menu.setAttribute('aria-hidden', String(!open));
-    document.body.style.overflow = open ? 'hidden' : '';
+    document.body.classList.toggle('site-menu-open', open);
+
+    if (open) {
+      menuScrollY = window.scrollY;
+      document.body.style.top = `-${menuScrollY}px`;
+      document.documentElement.style.overflow = 'hidden';
+      closeButton.focus({ preventScroll: true });
+    } else {
+      document.body.style.top = '';
+      document.documentElement.style.overflow = '';
+      window.scrollTo(0, menuScrollY);
+    }
   }
 
   toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
   closeButton.addEventListener('click', () => setMenu(false));
   menu.addEventListener('click', event => {
-    if (event.target === menu || event.target.closest('.site-mobile-links a')) setMenu(false);
+    if (event.target === menu || event.target.closest('.site-mobile-links a, .site-mobile-primary-action, .site-mobile-consult')) setMenu(false);
   });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') setMenu(false);
+    if (event.key === 'Escape' && menu.classList.contains('open')) setMenu(false);
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && menu.classList.contains('open')) setMenu(false);
   });
 
   document.addEventListener('DOMContentLoaded', () => {
