@@ -290,10 +290,16 @@
     "student_major": "计算机",
     "gpa": "84",
     "language_score": "未填写",
-    "country": "未分类",
+    "country": "香港",
     "degree": "硕士",
-    "result": "待更新",
-    "offers": [],
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "计算机",
+        "rank": "QS前50"
+      }
+    ],
     "entry_year": 2026,
     "tier": "985",
     "note": ""
