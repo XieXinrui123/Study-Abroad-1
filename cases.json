@@ -11792,5 +11792,25 @@
     "entry_year": 2026,
     "tier": "211",
     "note": ""
+  },
+  {
+    "id": 514,
+    "student_school": "四川大学",
+    "student_major": "机械工程",
+    "gpa": "81",
+    "language_score": "6.5",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "机器人",
+        "rank": "QS前10"
+      }
+    ],
+    "entry_year": 2024,
+    "tier": "985",
+    "note": ""
   }
 ]
