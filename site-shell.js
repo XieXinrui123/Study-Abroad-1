@@ -97,6 +97,42 @@
   });
 
   document.addEventListener('DOMContentLoaded', () => {
+    const main = document.querySelector('main');
+    if (main && !document.querySelector('.site-admission-broadcast')) {
+      const broadcast = document.createElement('section');
+      broadcast.className = 'site-admission-broadcast';
+      broadcast.setAttribute('aria-label', '2027 Fall 提前批录取捷报');
+      broadcast.innerHTML = `
+        <div class="container">
+          <div class="site-broadcast-shell">
+            <span class="site-broadcast-label">27 Fall 提前批捷报</span>
+            <div class="site-broadcast-viewport">
+              <div class="site-broadcast-track">
+                <div class="site-broadcast-sequence">
+                  <span class="site-broadcast-item"><span class="site-broadcast-dot">●</span><strong>中山大学 K 同学</strong><b>香港大学</b>商业人工智能理学硕士 + 市场营销理学硕士</span>
+                  <span class="site-broadcast-item"><span class="site-broadcast-dot">●</span><strong>海外本科 C 同学</strong><b>新加坡国立大学</b>可持续发展数据科学理学硕士</span>
+                  <span class="site-broadcast-item"><strong>2 位学生 · 3 枚 Offer</strong>录取材料均已核验</span>
+                </div>
+                <div class="site-broadcast-sequence" aria-hidden="true">
+                  <span class="site-broadcast-item"><span class="site-broadcast-dot">●</span><strong>中山大学 K 同学</strong><b>香港大学</b>商业人工智能理学硕士 + 市场营销理学硕士</span>
+                  <span class="site-broadcast-item"><span class="site-broadcast-dot">●</span><strong>海外本科 C 同学</strong><b>新加坡国立大学</b>可持续发展数据科学理学硕士</span>
+                  <span class="site-broadcast-item"><strong>2 位学生 · 3 枚 Offer</strong>录取材料均已核验</span>
+                </div>
+              </div>
+            </div>
+            <a class="site-broadcast-action" href="evaluator.html#evaluator">咨询 27 Fall →</a>
+          </div>
+        </div>
+      `;
+
+      const mainChildren = Array.from(main.children);
+      const preferredAnchor = currentPage === 'index.html'
+        ? mainChildren.find(node => node.classList.contains('decision-path'))
+        : mainChildren.find(node => node.classList.contains('hero') || node.classList.contains('page-title'));
+      if (preferredAnchor) preferredAnchor.insertAdjacentElement('afterend', broadcast);
+      else main.prepend(broadcast);
+    }
+
     document.querySelectorAll('.to-top').forEach(button => {
       button.setAttribute('aria-label', '返回页面顶部');
       button.setAttribute('title', '返回顶部');
