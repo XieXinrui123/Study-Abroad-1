@@ -11812,5 +11812,95 @@
     "entry_year": 2024,
     "tier": "985",
     "note": ""
+  },
+  {
+    "id": 515,
+    "student_school": "南京工业大学",
+    "student_major": "过程控制",
+    "gpa": "76",
+    "language_score": "暂无",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "莫纳什大学",
+        "major": "机械工程",
+        "rank": "QS前50"
+      },
+      {
+        "school": "昆士兰大学",
+        "major": "机械工程",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 516,
+    "student_school": "中山大学",
+    "student_major": "金融",
+    "gpa": "88",
+    "language_score": "7",
+    "country": "香港",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "香港大学",
+        "major": "市场营销",
+        "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "人工智能与商业",
+        "rank": "QS前10"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "985",
+    "note": ""
+  },
+  {
+    "id": 517,
+    "student_school": "清迈大学",
+    "student_major": "经济学",
+    "gpa": "3.9",
+    "language_score": "IELTS 7",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前10",
+    "offers": [
+      {
+        "school": "新加坡国立大学",
+        "major": "数据科学与可持续",
+        "rank": "QS前10"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "海外本科",
+    "note": ""
+  },
+  {
+    "id": 518,
+    "student_school": "北华航空工业学院",
+    "student_major": "通信工程",
+    "gpa": "83",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "昆士兰大学",
+        "major": "通信工程",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
   }
 ]
