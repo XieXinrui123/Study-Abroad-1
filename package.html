@@ -3,465 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DreamBridge 留学服务：DIY、半DIY、全包申请、雅思培训与英澳新合作院校免费递交。价格透明，申请账号透明，0 Offer退款保障。">
-<title>留学申请服务｜DreamBridge</title>
-<link rel="stylesheet" href="site-shell.css?v=20260825-3">
+<meta name="description" content="DreamBridge 留学申请、DIY 文书、雅思培训与英澳新合作院校免费申请服务。价格透明，按参与程度选择适合自己的申请方式。">
+<title>留学申请服务｜DreamBridge 留学</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-:root{
-  --bg:#f7f9fc;
-  --surface:#fff;
-  --text:#10213a;
-  --muted:#65748a;
-  --muted-2:#8b98aa;
-  --primary:#2563eb;
-  --primary-dark:#1748ad;
-  --primary-soft:#eef4ff;
-  --navy:#0d2240;
-  --accent:#f59e0b;
-  --success:#10b981;
-  --danger:#ef4444;
-  --border:#e4eaf2;
-  --border-strong:#d5deea;
-  --shadow:0 18px 50px rgba(24,39,75,.08);
-  --shadow-sm:0 8px 24px rgba(24,39,75,.06);
-  --r-sm:10px;
-  --r-md:16px;
-  --r-lg:24px;
-  --r-xl:32px;
-  --container:min(1180px,92vw);
-  --font:Inter,system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-.container{width:var(--container);margin:0 auto}
-.section{padding:96px 0}
-.section--white{background:#fff}
-.section--soft{background:#f1f5fb}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--primary);margin-bottom:16px}
-.eyebrow:before{content:"";width:22px;height:2px;background:var(--primary);border-radius:999px}
-.section-title{font-size:clamp(30px,4vw,48px);line-height:1.15;letter-spacing:-.035em;font-weight:800;margin-bottom:16px}
-.section-desc{max-width:680px;color:var(--muted);font-size:16px}
-.section-head{margin-bottom:42px}
-.section-head.center{text-align:center}
-.section-head.center .section-desc{margin:0 auto}
-
-.header{position:fixed;z-index:100;top:0;left:0;right:0;background:rgba(247,249,252,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(213,222,234,.82)}
-.nav-wrap{height:72px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-.logo{font-size:20px;font-weight:800;letter-spacing:-.04em}
-.logo span{color:var(--primary)}
-.nav-links{display:flex;gap:28px;color:var(--muted);font-size:14px;font-weight:600}
-.nav-links a:hover{color:var(--primary)}
-.nav-cta,.btn-primary,.btn-secondary,.btn-dark{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;font-weight:750;transition:.2s ease}
-.nav-cta{background:var(--text);color:#fff;padding:10px 18px}
-.nav-cta:hover,.btn-dark:hover{transform:translateY(-1px);background:#1c3150}
-
-.hero{padding:138px 0 68px;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;width:720px;height:720px;right:-260px;top:-270px;background:radial-gradient(circle,rgba(37,99,235,.13),transparent 66%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(390px,.88fr);gap:70px;align-items:center}
-.hero-kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid #d7e3fb;background:rgba(255,255,255,.75);border-radius:999px;color:var(--primary-dark);font-size:13px;font-weight:700;margin-bottom:22px}
-.hero h1{max-width:720px;font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-.055em;font-weight:800}
-.hero h1 span{color:var(--primary)}
-.hero-lead{max-width:650px;margin-top:24px;color:var(--muted);font-size:18px;line-height:1.8}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-.btn-primary{background:var(--primary);color:#fff;padding:14px 22px;box-shadow:0 10px 28px rgba(37,99,235,.22)}
-.btn-primary:hover{transform:translateY(-1px);background:var(--primary-dark)}
-.btn-secondary{background:#fff;color:var(--text);padding:14px 22px;border:1px solid var(--border-strong)}
-.btn-secondary:hover{border-color:#9db5dd;background:#fbfdff}
-.hero-trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:13px;font-weight:600}
-.hero-trust span{display:flex;align-items:center;gap:7px}
-.hero-trust i{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#e8f8f1;color:var(--success);font-style:normal;font-size:11px;font-weight:900}
-
-.proof-panel{position:relative;background:var(--navy);color:#fff;border-radius:var(--r-xl);padding:34px;box-shadow:0 30px 80px rgba(13,34,64,.19);overflow:hidden}
-.proof-panel:after{content:"";position:absolute;width:260px;height:260px;border:54px solid rgba(255,255,255,.04);border-radius:50%;right:-100px;top:-120px}
-.proof-top{position:relative;z-index:1}
-.proof-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9fbae2;font-weight:800}
-.proof-top h3{font-size:24px;line-height:1.3;margin-top:10px}
-.proof-top p{color:#aebdd2;font-size:14px;margin-top:8px}
-.proof-stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:30px}
-.proof-stat{padding:19px 18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);border-radius:16px}
-.proof-stat strong{display:block;font-size:28px;line-height:1.1}
-.proof-stat span{display:block;color:#9fb0c8;font-size:12px;margin-top:8px}
-.school-row{position:relative;z-index:1;margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
-.school-row p{font-size:12px;color:#8fa3c0;margin-bottom:10px}
-.school-tags{display:flex;gap:7px;flex-wrap:wrap}
-.school-tags span{padding:6px 9px;border-radius:8px;background:rgba(255,255,255,.07);font-size:11px;font-weight:700;color:#d9e5f5}
-
-.path-section{padding:54px 0 90px}
-.path-head{display:flex;justify-content:space-between;gap:30px;align-items:flex-end;margin-bottom:26px}
-.path-head h2{font-size:28px;letter-spacing:-.025em}
-.path-head p{color:var(--muted);font-size:14px}
-.path-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.path-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:25px;min-height:205px;display:flex;flex-direction:column;transition:.22s ease}
-.path-card:hover{transform:translateY(-4px);border-color:#bdd0f0;box-shadow:var(--shadow-sm)}
-.path-index{font-size:11px;letter-spacing:.12em;font-weight:800;color:var(--muted-2)}
-.path-card h3{font-size:20px;margin-top:24px}
-.path-card p{font-size:13px;color:var(--muted);margin-top:8px}
-.path-link{margin-top:auto;padding-top:18px;color:var(--primary);font-size:13px;font-weight:750}
-
-.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
-.plan-card{position:relative;background:#fff;border:1px solid var(--border);border-radius:24px;padding:31px;display:flex;flex-direction:column;min-height:520px}
-.plan-card.featured{border:2px solid var(--primary);box-shadow:0 24px 56px rgba(37,99,235,.12);transform:translateY(-8px)}
-.plan-badge{position:absolute;right:22px;top:20px;background:var(--primary-soft);color:var(--primary);font-size:11px;font-weight:800;padding:6px 9px;border-radius:999px}
-.plan-name{font-size:13px;color:var(--muted);font-weight:700}
-.plan-card h3{font-size:27px;margin-top:6px;letter-spacing:-.025em}
-.plan-price{font-size:40px;font-weight:800;letter-spacing:-.04em;margin:22px 0 3px}
-.plan-price small{font-size:14px;color:var(--muted);font-weight:600;letter-spacing:0}
-.plan-sub{color:var(--muted);font-size:13px;min-height:42px}
-.plan-divider{height:1px;background:var(--border);margin:24px 0}
-.plan-list{display:grid;gap:13px}
-.plan-list li{list-style:none;display:flex;gap:10px;color:#35465e;font-size:14px}
-.plan-list li:before{content:"✓";flex:none;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:#eaf8f3;color:var(--success);font-size:11px;font-weight:900;margin-top:2px}
-.plan-for{margin-top:auto;padding-top:24px;color:var(--muted);font-size:12px;border-top:1px solid var(--border)}
-.plan-for strong{color:var(--text)}
-.plan-card .btn-secondary,.plan-card .btn-primary{width:100%;margin-top:20px}
-
-.details-box{margin-top:34px;border:1px solid var(--border);background:#fff;border-radius:20px;overflow:hidden}
-.details-box summary{list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px 24px;font-weight:750;cursor:pointer}
-.details-box summary::-webkit-details-marker{display:none}
-.details-box summary span{color:var(--muted);font-size:13px;font-weight:500}
-.details-box[open] summary{border-bottom:1px solid var(--border)}
-.compare-scroll{overflow:auto}
-.compare-table{width:100%;min-width:780px;border-collapse:collapse;background:#fff}
-.compare-table th,.compare-table td{padding:14px 18px;border-bottom:1px solid #edf1f6;text-align:center;font-size:13px}
-.compare-table th:first-child,.compare-table td:first-child{text-align:left;font-weight:700;color:var(--text)}
-.compare-table th{background:#f8fafc;color:var(--text);font-size:12px}
-.compare-table td{color:var(--muted)}
-.compare-table tr:last-child td{border-bottom:0}
-.compare-table .yes{color:var(--success);font-weight:750}
-.compare-table .money{color:var(--text);font-weight:750}
-.compare-table .primary-cell{color:var(--primary);font-weight:750}
-
-.free-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;background:#0f2c27;color:#fff;padding:58px;border-radius:32px;overflow:hidden;position:relative}
-.free-shell:after{content:"";position:absolute;width:420px;height:420px;right:-180px;bottom:-230px;border:70px solid rgba(255,255,255,.035);border-radius:50%}
-.free-copy{position:relative;z-index:1}
-.free-copy .eyebrow{color:#7ee0be}.free-copy .eyebrow:before{background:#7ee0be}
-.free-copy h2{font-size:clamp(34px,4.5vw,52px);line-height:1.08;letter-spacing:-.04em}
-.free-copy p{color:#b4cdc4;margin-top:18px;max-width:540px}
-.free-copy .btn-secondary{margin-top:26px;background:#fff;border:0;color:#0f2c27}
-.country-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.country-card{min-height:205px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.06);padding:22px;display:flex;flex-direction:column}
-.country-code{font-size:12px;font-weight:800;letter-spacing:.12em;color:#7ee0be}
-.country-card h3{font-size:21px;margin-top:22px}
-.country-card p{font-size:12px;color:#abc6bd;margin-top:8px}
-.country-card strong{margin-top:auto;font-size:12px;color:#fff}
-
-.results-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
-.results-main{background:#fff;border:1px solid var(--border);border-radius:28px;padding:38px}
-.results-main h3{font-size:27px;letter-spacing:-.03em}
-.results-number{font-size:76px;font-weight:800;line-height:1;color:var(--primary);letter-spacing:-.06em;margin-top:26px}
-.results-main>p{color:var(--muted);margin-top:10px}
-.year-bars{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
-.year-bar{background:#f4f7fb;border-radius:14px;padding:16px}
-.year-bar strong{font-size:22px}.year-bar span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
-.results-side{display:grid;gap:14px}
-.result-card{background:#fff;border:1px solid var(--border);border-radius:22px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;min-height:145px}
-.result-card strong{font-size:28px}.result-card span{color:var(--muted);font-size:13px}
-.case-link{color:var(--primary);font-weight:750;font-size:14px}
-
-.ielts-shell{background:var(--navy);color:#fff;border-radius:32px;padding:46px}
-.ielts-top{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:30px}
-.ielts-top .eyebrow{color:#99b9ec}.ielts-top .eyebrow:before{background:#99b9ec}
-.ielts-top .section-desc{color:#aebdd2}
-.ielts-summary{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}
-.ielts-summary span{padding:9px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px;color:#d9e5f5;font-size:12px;font-weight:700}
-.ielts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.ielts-card{background:#fff;color:var(--text);border-radius:18px;padding:22px;min-height:300px;display:flex;flex-direction:column}
-.ielts-card .subject{font-size:12px;font-weight:800;color:var(--primary);letter-spacing:.08em}
-.ielts-card h3{font-size:19px;margin-top:10px}
-.score-row{display:flex;align-items:center;gap:9px;margin-top:26px}
-.score-box{flex:1;background:#f4f7fb;border-radius:12px;padding:11px}
-.score-box span{display:block;font-size:10px;color:var(--muted)}
-.score-box strong{display:block;margin-top:2px;font-size:18px}
-.score-arrow{color:var(--muted-2)}
-.course-meta{display:flex;gap:12px;margin-top:16px;color:var(--muted);font-size:11px}
-.ielts-price{margin-top:auto;padding-top:18px;border-top:1px solid var(--border)}
-.ielts-price strong{font-size:24px}.ielts-price span{display:block;color:var(--muted);font-size:11px;margin-top:2px}
-.bundle-row{display:grid;grid-template-columns:1.2fr repeat(3,.6fr);gap:10px;margin-top:12px}
-.bundle-copy,.bundle-card,.trial-row{border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.055);padding:18px}
-.bundle-copy h3{font-size:17px}.bundle-copy p{color:#9fb0c8;font-size:12px;margin-top:5px}
-.bundle-card{text-align:center}.bundle-card strong{display:block;font-size:22px}.bundle-card span{display:block;color:#aebdd2;font-size:11px;margin-top:4px}
-.trial-row{margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.trial-copy h3{font-size:17px}.trial-copy p{color:#9fb0c8;font-size:12px;margin-top:4px}
-.trial-price{font-size:22px;font-weight:800;white-space:nowrap}
-.trial-row .btn-secondary{padding:11px 16px;border-color:rgba(255,255,255,.15)}
-
-.process{display:grid;grid-template-columns:repeat(6,1fr);position:relative;margin-top:44px}
-.process:before{content:"";position:absolute;left:7%;right:7%;top:18px;height:1px;background:var(--border-strong)}
-.step{position:relative;text-align:center;padding:0 10px}
-.step-num{position:relative;z-index:1;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;margin:0 auto;background:#fff;border:1px solid var(--border-strong);font-size:11px;font-weight:800;color:var(--primary)}
-.step h3{font-size:14px;margin-top:14px}.step p{font-size:11px;color:var(--muted);margin-top:4px}
-
-.guarantee-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--border);border-left:1px solid var(--border)}
-.guarantee{padding:34px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:#fff;min-height:210px}
-.guarantee-index{font-size:11px;color:var(--primary);font-weight:800;letter-spacing:.12em}.guarantee h3{font-size:22px;margin-top:28px}.guarantee p{color:var(--muted);font-size:13px;margin-top:8px;max-width:430px}
-
-.team-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.team-item{padding:26px 0;border-top:1px solid var(--border)}
-.team-item strong{display:block;font-size:28px}.team-item span{display:block;color:var(--muted);font-size:13px;margin-top:5px}
-
-.faq-wrap{max-width:860px;margin:0 auto}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-btn{width:100%;text-align:left;background:none;padding:22px 34px 22px 0;font-weight:700;color:var(--text);position:relative}
-.faq-btn:after{content:"+";position:absolute;right:4px;top:20px;font-size:22px;color:var(--muted);font-weight:400}
-.faq-item.open .faq-btn:after{content:"−"}
-.faq-panel{display:none;color:var(--muted);font-size:14px;padding:0 34px 22px 0}
-.faq-item.open .faq-panel{display:block}
-
-.final-cta{padding:28px 0 96px}
-.cta-shell{background:var(--primary);color:#fff;border-radius:32px;padding:64px;display:grid;grid-template-columns:1fr auto;gap:50px;align-items:center;position:relative;overflow:hidden}
-.cta-shell:after{content:"";position:absolute;width:360px;height:360px;border:70px solid rgba(255,255,255,.055);border-radius:50%;right:-110px;top:-220px}
-.cta-copy{position:relative;z-index:1}.cta-copy h2{font-size:clamp(34px,4.5vw,54px);line-height:1.08;letter-spacing:-.045em;max-width:700px}.cta-copy p{color:#dce8ff;margin-top:16px}.cta-prompt{margin-top:22px;display:inline-block;padding:10px 13px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:10px;font-size:13px}
-.cta-shell .btn-secondary{position:relative;z-index:1;background:#fff;border:0;color:var(--primary-dark);padding:15px 22px}
-
-.footer{background:#0b1930;color:#fff;padding:50px 0 26px}
-.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .8fr;gap:50px}
-.footer-brand{font-size:20px;font-weight:800}.footer-brand span{color:#77a6ff}.footer-desc{max-width:450px;color:#92a3bc;font-size:13px;margin-top:12px}.footer h4{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#7590b3;margin-bottom:12px}.footer a{display:block;color:#b5c1d1;font-size:13px;margin:7px 0}.footer-bottom{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:20px;color:#72849f;font-size:11px}
-
-.to-top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;background:var(--text);color:#fff;box-shadow:var(--shadow-sm);opacity:0;pointer-events:none;transform:translateY(8px);transition:.2s;z-index:80}.to-top.show{opacity:1;pointer-events:auto;transform:none}
-.qr-modal{position:fixed;inset:0;background:rgba(5,15,28,.66);backdrop-filter:blur(8px);z-index:200;display:none;align-items:center;justify-content:center;padding:24px}.qr-modal.show{display:flex}.qr-card{width:min(380px,100%);background:#fff;border-radius:24px;padding:30px;text-align:center;position:relative;box-shadow:0 30px 90px rgba(0,0,0,.25)}.qr-close{position:absolute;right:15px;top:12px;background:none;color:var(--muted);font-size:28px}.qr-card h3{font-size:20px}.qr-card img{width:180px;height:180px;border-radius:14px;object-fit:cover;margin:18px auto}.qr-placeholder{width:180px;height:180px;border-radius:14px;background:#f3f6fa;margin:18px auto;display:grid;place-items:center;color:var(--muted)}.qr-wxid{font-weight:800;font-size:16px}.qr-note{font-size:11px;color:var(--muted-2);margin-top:4px}
-.fade-in{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.fade-in.visible{opacity:1;transform:none}
-
-@media(max-width:1024px){
-  .hero-grid,.free-shell,.results-grid{grid-template-columns:1fr}
-  .hero-grid{gap:40px}.proof-panel{max-width:700px}.path-grid{grid-template-columns:repeat(2,1fr)}
-  .plan-grid{grid-template-columns:1fr}.plan-card.featured{transform:none}.plan-card{min-height:auto}
-  .ielts-grid{grid-template-columns:repeat(2,1fr)}.bundle-row{grid-template-columns:repeat(3,1fr)}.bundle-copy{grid-column:1/-1}
-  .free-shell{gap:36px}.process{grid-template-columns:repeat(3,1fr);gap:30px 10px}.process:before{display:none}
-}
-@media(max-width:768px){
-  .section{padding:72px 0}.nav-wrap{height:64px}.nav-links{display:none}.hero{padding-top:108px}.hero h1{font-size:44px}.hero-lead{font-size:16px}
-  .hero-grid{grid-template-columns:1fr}.proof-panel{padding:26px}.proof-stats{grid-template-columns:repeat(2,1fr)}
-  .path-section{padding-top:32px}.path-head{display:block}.path-head p{margin-top:8px}.path-grid{grid-template-columns:1fr 1fr}.path-card{padding:20px;min-height:190px}
-  .plan-card{padding:25px}.free-shell{padding:32px 24px;border-radius:24px}.country-grid{grid-template-columns:1fr}.country-card{min-height:145px}
-  .results-main{padding:28px}.results-number{font-size:60px}.year-bars{grid-template-columns:1fr}
-  .ielts-shell{padding:30px 22px;border-radius:24px}.ielts-top{display:block}.ielts-summary{justify-content:flex-start;margin-top:18px}.ielts-grid{grid-template-columns:1fr}.bundle-row{grid-template-columns:repeat(3,1fr)}.trial-row{align-items:flex-start;flex-wrap:wrap}
-  .guarantee-grid{grid-template-columns:1fr}.team-strip{grid-template-columns:repeat(2,1fr)}
-  .process{grid-template-columns:repeat(2,1fr)}
-  .cta-shell{padding:38px 26px;grid-template-columns:1fr;gap:24px}.footer-grid{grid-template-columns:1fr}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:5px}
-}
-@media(max-width:520px){
-  .hero h1{font-size:38px}.hero-actions>a,.hero-actions>button{width:100%}.proof-stats{grid-template-columns:1fr 1fr}.proof-stat{padding:16px 14px}.proof-stat strong{font-size:23px}
-  .path-grid{grid-template-columns:1fr}.path-card{min-height:160px}.plan-price{font-size:35px}.bundle-row{grid-template-columns:1fr}.bundle-copy{grid-column:auto}.team-strip{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.section-title{font-size:32px}
-}
+:root{--bg:#f7f9fc;--surface:#fff;--ink:#10233d;--muted:#637287;--quiet:#8a97a8;--blue:#2463eb;--blue-dark:#12375f;--blue-soft:#edf4ff;--navy:#0e243d;--orange:#dc801d;--orange-dark:#b76410;--orange-soft:#fff6e9;--green:#13866f;--border:#dfe6ee;--border-soft:#edf1f5;--shadow:0 16px 42px rgba(16,35,61,.08);--radius-sm:8px;--radius:14px;--radius-lg:20px;--container:min(1160px,92vw);--font:Inter,system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;overflow-x:hidden;color:var(--ink);background:var(--bg);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}button,summary{font:inherit}button{border:0;cursor:pointer}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.container{width:var(--container);margin-inline:auto}.section{padding:104px 0}.section--white{background:var(--surface)}.section-head{max-width:720px;margin-bottom:48px}.eyebrow{display:block;margin-bottom:12px;color:var(--blue);font-size:13px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}.section-title{margin:0;font-size:clamp(32px,4vw,48px);line-height:1.16;letter-spacing:-.035em}.section-desc{margin:16px 0 0;color:var(--muted);font-size:17px}.button{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:0 22px;border-radius:var(--radius-sm);font-size:15px;font-weight:750;transition:transform .2s ease,background .2s ease,border-color .2s ease}.button:hover{transform:translateY(-2px)}.button--primary{color:#fff;background:var(--orange)}.button--primary:hover{background:var(--orange-dark)}.button--secondary{color:var(--ink);background:transparent;border:1px solid rgba(16,35,61,.25)}.button--secondary:hover{border-color:var(--ink)}.button--blue{color:#fff;background:var(--blue)}.button--blue:hover{background:#174fc9}.text-link{display:inline-flex;align-items:center;gap:8px;padding:0;color:var(--blue);background:transparent;font-size:14px;font-weight:750}.text-link::after{content:"→";transition:transform .2s ease}.text-link:hover::after{transform:translateX(3px)}
+.header{position:fixed;inset:0 0 auto;z-index:100}.nav-wrap{display:flex;min-height:68px;align-items:center;justify-content:space-between}.logo{font-size:20px;font-weight:800}.logo span{color:var(--blue)}.nav-links{display:flex;gap:28px}.nav-cta{padding:10px 18px;color:#fff;background:var(--orange);border-radius:var(--radius-sm);font-weight:700}
+.package-hero{position:relative;padding:158px 0 92px;overflow:hidden;color:#fff;background:var(--navy)}.package-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.9%,rgba(255,255,255,.055) 50%,transparent 50.1%);pointer-events:none}.hero-layout{position:relative;display:grid;grid-template-columns:minmax(0,1.18fr) minmax(390px,.82fr);gap:72px;align-items:center}.hero-copy{max-width:680px}.hero-kicker{margin-bottom:20px;color:#9fc2ef;font-size:13px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.hero-title{margin:0;font-family:"Songti SC","STSong",Georgia,serif;font-size:clamp(46px,6vw,72px);font-weight:700;line-height:1.08;letter-spacing:-.045em}.hero-title span{color:#9fc8ff}.hero-subtitle{max-width:610px;margin:28px 0 0;color:rgba(255,255,255,.72);font-size:19px;line-height:1.75}.hero-regions{margin:18px 0 0;color:rgba(255,255,255,.48);font-size:14px;letter-spacing:.06em}.hero-actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}.hero-actions .button--secondary{color:#fff;border-color:rgba(255,255,255,.3)}.hero-actions .button--secondary:hover{border-color:#fff}.admission-board{position:relative;min-height:430px;padding:28px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.055);border-radius:var(--radius-lg)}.board-head{display:flex;align-items:center;justify-content:space-between;color:rgba(255,255,255,.62);font-size:12px;letter-spacing:.08em;text-transform:uppercase}.board-status{display:inline-flex;align-items:center;gap:7px;color:#a8e2cf}.board-status::before{content:"";width:7px;height:7px;background:#54cda7;border-radius:50%}.offer-stack{position:relative;height:330px;margin-top:24px}.offer-card{position:absolute;width:min(300px,82%);padding:20px;color:var(--ink);background:#fff;border:1px solid rgba(16,35,61,.08);border-radius:12px;box-shadow:0 14px 36px rgba(0,0,0,.18);transition:transform .25s ease}.offer-card:hover{transform:translateY(-4px)}.offer-card:nth-child(1){top:0;left:0}.offer-card:nth-child(2){top:88px;right:0}.offer-card:nth-child(3){top:176px;left:20px}.offer-card__meta{display:flex;justify-content:space-between;color:var(--quiet);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.offer-card__school{margin-top:18px;font-size:23px;font-weight:800;letter-spacing:-.03em}.offer-card__line{width:42px;height:3px;margin-top:14px;background:var(--blue)}.offer-card:nth-child(2) .offer-card__line{background:var(--green)}.offer-card:nth-child(3) .offer-card__line{background:var(--orange)}
+.metrics{background:var(--surface);border-bottom:1px solid var(--border)}.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr)}.metric{padding:34px 28px}.metric+.metric{border-left:1px solid var(--border)}.metric strong{display:block;color:var(--ink);font-size:31px;line-height:1.15;letter-spacing:-.04em}.metric span{display:block;margin-top:7px;color:var(--muted);font-size:13px}
+.help-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.help-card{min-width:0;padding:32px 26px 34px}.help-card+.help-card{border-left:1px solid var(--border)}.help-index{color:var(--quiet);font-size:12px;font-weight:800}.help-card h3{margin:38px 0 8px;font-size:21px}.help-card p{min-height:52px;margin:0 0 24px;color:var(--muted);font-size:14px}.help-card:nth-child(3){background:var(--blue-soft)}
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}.plan-card{position:relative;display:flex;min-width:0;flex-direction:column;padding:32px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}.plan-card--featured{border:2px solid var(--blue);box-shadow:var(--shadow);transform:translateY(-10px)}.plan-badge{position:absolute;top:18px;right:18px;padding:4px 9px;color:var(--blue);background:var(--blue-soft);border-radius:999px;font-size:12px;font-weight:800}.plan-name{margin:0;font-size:22px}.plan-price{margin-top:22px;font-size:39px;font-weight:800;line-height:1.1;letter-spacing:-.045em}.plan-price small{color:var(--muted);font-size:14px;font-weight:600;letter-spacing:0}.plan-desc{min-height:78px;margin:16px 0 22px;color:var(--muted);font-size:14px}.plan-list{display:grid;gap:10px;margin:0 0 30px;padding:22px 0 0;border-top:1px solid var(--border-soft);list-style:none}.plan-list li{position:relative;padding-left:21px;color:#3d4d61;font-size:14px}.plan-list li::before{content:"";position:absolute;top:.62em;left:0;width:7px;height:7px;border:2px solid var(--blue);border-radius:50%}.plan-card .button{width:100%;margin-top:auto}.mix-strip{display:grid;grid-template-columns:1fr auto auto;gap:24px;align-items:center;margin-top:26px;padding:24px 28px;color:#fff;background:var(--navy);border-radius:var(--radius)}.mix-strip h3{margin:0;font-size:18px}.mix-strip p{margin:4px 0 0;color:rgba(255,255,255,.58);font-size:13px}.mix-option{padding-left:24px;border-left:1px solid rgba(255,255,255,.18)}.mix-option span{display:block;color:rgba(255,255,255,.56);font-size:12px}.mix-option strong{display:block;margin-top:3px;font-size:18px}.price-details{margin-top:28px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}.price-details summary{display:flex;min-height:66px;align-items:center;justify-content:space-between;padding:0 24px;cursor:pointer;color:var(--ink);font-weight:750;list-style:none}.price-details summary::-webkit-details-marker{display:none}.price-details summary::after{content:"+";color:var(--blue);font-size:25px;font-weight:400}.price-details[open] summary::after{content:"−"}.price-details[open] summary{border-bottom:1px solid var(--border)}.price-scroll{overflow-x:auto;padding:20px}.price-table{width:100%;min-width:780px;border-collapse:collapse}.price-table th,.price-table td{padding:14px 16px;text-align:center;border-bottom:1px solid var(--border-soft);font-size:13px}.price-table th{color:var(--ink);background:#f7f9fc;font-weight:800}.price-table th:first-child,.price-table td:first-child{text-align:left}.price-table td{color:var(--muted)}.price-table td:first-child{color:var(--ink);font-weight:700}.price-table tr:last-child td{border-bottom:0}.price-table .yes{color:var(--green);font-weight:750}.price-table .price{color:var(--ink);font-weight:750}
+.free-feature{padding:64px;color:#fff;background:var(--blue-dark);border-radius:var(--radius-lg)}.free-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(360px,.9fr);gap:64px;align-items:center}.free-feature .eyebrow{color:#aacbfa}.free-feature .section-title{font-size:clamp(34px,4vw,52px)}.free-feature .section-desc{color:rgba(255,255,255,.68)}.free-points{display:flex;gap:18px;margin:28px 0 32px;flex-wrap:wrap}.free-point{padding-right:18px;color:rgba(255,255,255,.82);border-right:1px solid rgba(255,255,255,.18);font-size:14px;font-weight:700}.country-list{border-top:1px solid rgba(255,255,255,.15)}.country{display:grid;grid-template-columns:52px 90px 1fr;align-items:center;gap:18px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.15)}.country-code{color:#9ec4f2;font-size:13px;font-weight:800;letter-spacing:.12em}.country strong{font-size:17px}.country span:last-child{color:rgba(255,255,255,.58);font-size:13px}
+.proof-layout{display:grid;grid-template-columns:minmax(260px,.68fr) minmax(0,1.32fr);gap:72px;align-items:start}.proof-copy{position:sticky;top:130px}.proof-numbers{display:grid;grid-template-columns:repeat(3,1fr);margin:34px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.proof-number{padding:20px 10px 20px 0}.proof-number+.proof-number{padding-left:16px;border-left:1px solid var(--border)}.proof-number strong{display:block;font-size:24px}.proof-number span{color:var(--muted);font-size:12px}.offer-wall{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--border);border-left:1px solid var(--border)}.result-item{min-height:166px;padding:26px;background:var(--surface);border-right:1px solid var(--border);border-bottom:1px solid var(--border)}.result-item:nth-child(3n){background:var(--blue-soft)}.result-item small{color:var(--quiet);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.result-item strong{display:block;margin-top:44px;font-size:24px;letter-spacing:-.03em}.result-item span{color:var(--muted);font-size:13px}
+.ielts-section{color:#fff;background:var(--navy)}.ielts-section .eyebrow{color:#9fc2ef}.ielts-section .section-desc{color:rgba(255,255,255,.64)}.ielts-head{display:flex;align-items:end;justify-content:space-between;gap:40px}.ielts-head-note{max-width:250px;color:rgba(255,255,255,.5);font-size:13px}.ielts-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.17);border-left:1px solid rgba(255,255,255,.17)}.ielts-card{padding:28px;border-right:1px solid rgba(255,255,255,.17);border-bottom:1px solid rgba(255,255,255,.17)}.ielts-label{color:#9fc2ef;font-size:12px;font-weight:800}.ielts-card h3{margin:38px 0 20px;font-size:23px}.ielts-score{display:flex;align-items:center;gap:9px}.ielts-score strong{font-size:28px}.ielts-score span{color:rgba(255,255,255,.42)}.ielts-meta{display:flex;justify-content:space-between;margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.58);font-size:13px}.ielts-price{margin-top:18px;font-size:27px;font-weight:800}.ielts-extras{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;margin-top:28px}.ielts-bundles{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);overflow:hidden}.ielts-bundle{padding:20px 24px}.ielts-bundle+.ielts-bundle{border-left:1px solid rgba(255,255,255,.16)}.ielts-bundle span{color:rgba(255,255,255,.5);font-size:12px}.ielts-bundle strong{display:block;margin-top:2px;font-size:20px}.trial{display:flex;align-items:center;gap:20px;padding:18px 20px;color:var(--ink);background:var(--orange-soft);border-radius:var(--radius)}.trial-copy span{display:block;color:var(--orange-dark);font-size:12px;font-weight:800}.trial-copy strong{display:block;font-size:22px}.trial .button{min-height:42px;white-space:nowrap}
+.process-shell{display:grid;grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr);gap:72px;align-items:center}.timeline{display:grid;grid-template-columns:repeat(6,1fr);position:relative}.timeline::before{content:"";position:absolute;top:18px;left:7%;right:7%;height:1px;background:var(--border)}.timeline-step{position:relative;z-index:1;text-align:center}.timeline-num{width:36px;height:36px;display:grid;place-items:center;margin:0 auto 12px;color:var(--blue);background:var(--bg);border:1px solid var(--blue);border-radius:50%;font-size:11px;font-weight:800}.timeline-step strong{display:block;font-size:13px}
+.assurance-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--border);border-left:1px solid var(--border)}.assurance-item{display:grid;grid-template-columns:58px 1fr;gap:24px;min-height:190px;padding:34px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}.assurance-item:nth-child(2),.assurance-item:nth-child(3){background:#f2f6fb}.assurance-num{color:var(--blue);font-size:13px;font-weight:800}.assurance-item h3{margin:0 0 12px;font-size:21px}.assurance-item p{margin:0;color:var(--muted);font-size:14px}
+.team-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:84px;align-items:center}.team-copy p{max-width:610px;color:var(--muted);font-size:17px}.team-data{border-top:1px solid var(--border)}.team-row{display:grid;grid-template-columns:130px 1fr;gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--border)}.team-row strong{font-size:23px}.team-row span{color:var(--muted);font-size:14px}
+.faq-shell{max-width:820px;margin-inline:auto}.faq-shell .section-head{text-align:center;margin-inline:auto}.faq-item{border-bottom:1px solid var(--border)}.faq-btn{display:flex;width:100%;align-items:center;justify-content:space-between;gap:24px;padding:23px 0;color:var(--ink);background:transparent;text-align:left;font-size:16px;font-weight:700}.faq-btn::after{content:"+";color:var(--quiet);font-size:22px;font-weight:400}.faq-item.open .faq-btn::after{content:"−";color:var(--blue)}.faq-panel{display:none;max-width:720px;padding:0 0 24px;color:var(--muted);font-size:14px}.faq-item.open .faq-panel{display:block}
+.final-cta{padding:88px 0;color:#fff;background:var(--navy)}.cta-layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:80px;align-items:center}.final-cta .eyebrow{color:#9fc2ef}.final-cta .section-title{max-width:720px}.final-cta p{max-width:650px;color:rgba(255,255,255,.65)}.profile-fields{display:flex;gap:9px;margin:26px 0 32px;flex-wrap:wrap}.profile-fields span{padding:7px 11px;color:rgba(255,255,255,.76);border:1px solid rgba(255,255,255,.16);border-radius:6px;font-size:12px}.cta-qr{padding:24px;color:var(--ink);background:#fff;border-radius:var(--radius);text-align:center}.cta-qr img,.qr-placeholder{width:180px;height:180px;margin:0 auto 16px;object-fit:cover;border-radius:8px}.cta-qr strong{display:block;font-size:16px}.cta-qr span{color:var(--muted);font-size:12px}
+.footer{padding:50px 0 30px;color:rgba(255,255,255,.52);background:#08182a;font-size:13px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px}.footer-brand{margin-bottom:10px;color:#fff;font-size:20px;font-weight:800}.footer-brand span{color:#70a8ef}.footer p{max-width:300px;margin:0}.footer h4{margin:0 0 12px;color:rgba(255,255,255,.34);font-size:11px;letter-spacing:.12em;text-transform:uppercase}.footer a{display:block;padding:3px 0}.footer-bottom{display:flex;justify-content:space-between;margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.09);color:rgba(255,255,255,.3)}.qr-modal{position:fixed;inset:0;z-index:300;display:none;place-items:center;padding:20px;background:rgba(5,16,29,.72)}.qr-modal.show{display:grid}.qr-card{position:relative;width:min(360px,100%);padding:30px;background:#fff;border-radius:var(--radius);text-align:center;box-shadow:0 22px 60px rgba(0,0,0,.25)}.qr-card h3{margin:0}.qr-card img{width:180px;height:180px;margin:18px auto;object-fit:cover;border-radius:8px}.qr-placeholder{display:grid;place-items:center;color:#fff;background:#178b6d}.qr-close{position:absolute;top:10px;right:12px;width:34px;height:34px;color:var(--quiet);background:transparent;font-size:24px}.qr-wxid{margin:0;font-weight:800}.qr-note{margin:5px 0 0;color:var(--quiet);font-size:12px}.to-top{position:fixed;right:20px;bottom:20px;z-index:90;display:none;width:42px;height:42px;color:var(--ink);background:#fff;border:1px solid var(--border);border-radius:50%;box-shadow:0 8px 24px rgba(16,35,61,.12)}.to-top.show{display:grid;place-items:center}.fade-in{opacity:0;transform:translateY(18px);transition:opacity .38s ease,transform .38s ease}.fade-in.visible{opacity:1;transform:translateY(0)}
+@media(max-width:1024px){.hero-layout,.free-layout,.proof-layout,.process-shell,.team-layout{grid-template-columns:1fr}.hero-layout{gap:50px}.admission-board{max-width:620px;width:100%}.help-grid,.ielts-grid{grid-template-columns:repeat(2,1fr)}.help-card:nth-child(3){border-left:0;background:var(--blue-soft)}.help-card:nth-child(n+3){border-top:1px solid var(--border)}.proof-copy{position:static}.plans-grid{gap:12px}.plan-card{padding:26px}.ielts-extras{grid-template-columns:1fr}.process-shell{gap:40px}}
+@media(max-width:768px){html{scroll-padding-top:84px}.section{padding:76px 0}.section-head{margin-bottom:34px}.section-title{font-size:32px}.section-desc{font-size:16px}.nav-links{display:none}.package-hero{padding:130px 0 68px}.hero-layout{gap:42px}.hero-title{font-size:clamp(39px,12vw,55px)}.hero-subtitle{font-size:17px}.hero-actions .button{width:100%}.admission-board{min-height:385px;padding:20px}.offer-stack{height:300px}.offer-card{width:86%;padding:17px}.offer-card:nth-child(2){top:82px}.offer-card:nth-child(3){top:164px;left:10px}.offer-card__school{margin-top:12px;font-size:20px}.metrics-grid{grid-template-columns:repeat(2,1fr)}.metric{padding:26px 18px}.metric:nth-child(3){border-left:0}.metric:nth-child(n+3){border-top:1px solid var(--border)}.metric strong{font-size:27px}.help-grid,.plans-grid,.free-layout,.assurance-grid,.team-layout{grid-template-columns:1fr}.help-card+.help-card{border-left:0;border-top:1px solid var(--border)}.help-card h3{margin-top:24px}.help-card p{min-height:0}.plan-card--featured{transform:none}.plan-desc{min-height:0}.mix-strip{grid-template-columns:1fr}.mix-option{padding:16px 0 0;border-top:1px solid rgba(255,255,255,.18);border-left:0}.price-details summary{padding:14px 18px}.price-scroll{padding:10px}.free-feature{padding:34px 24px}.free-layout{gap:36px}.free-points{display:grid;gap:8px}.free-point{padding:0;border:0}.country{grid-template-columns:42px 62px 1fr;gap:12px}.proof-layout{gap:38px}.proof-numbers{grid-template-columns:1fr}.proof-number{padding:16px 0}.proof-number+.proof-number{padding-left:0;border-top:1px solid var(--border);border-left:0}.offer-wall{grid-template-columns:1fr}.result-item{min-height:132px}.result-item strong{margin-top:28px}.ielts-head{display:block}.ielts-head-note{margin-top:14px}.ielts-grid{grid-template-columns:1fr}.ielts-card h3{margin-top:25px}.ielts-bundles{grid-template-columns:1fr}.ielts-bundle+.ielts-bundle{border-top:1px solid rgba(255,255,255,.16);border-left:0}.trial{align-items:flex-start;flex-wrap:wrap}.trial .button{width:100%}.timeline{grid-template-columns:1fr}.timeline::before{top:18px;bottom:18px;left:18px;right:auto;width:1px;height:auto}.timeline-step{display:grid;grid-template-columns:36px 1fr;gap:16px;align-items:center;padding-bottom:18px;text-align:left}.timeline-num{margin:0}.assurance-item{grid-template-columns:42px 1fr;min-height:0;padding:26px 20px}.assurance-item:nth-child(2),.assurance-item:nth-child(3){background:transparent}.assurance-item:nth-child(even){background:#f2f6fb}.team-layout{gap:36px}.team-row{grid-template-columns:1fr;gap:3px}.cta-layout{grid-template-columns:1fr;gap:44px}.cta-qr{max-width:310px}.footer-grid{grid-template-columns:1fr;gap:30px}.footer-bottom{flex-direction:column;gap:5px}}
+@media(max-width:390px){.country{grid-template-columns:38px 1fr}.country span:last-child{grid-column:2}.offer-card{width:92%}}
 </style>
+<link rel="stylesheet" href="site-shell.css?v=20260825-3">
 </head>
-<body>
-<header class="header">
-  <div class="container nav-wrap">
-    <a href="index.html" class="logo">Dream<span>Bridge</span></a>
-    <nav class="nav-links" aria-label="主导航">
-      <a href="index.html">首页</a>
-      <a href="#plans">留学申请</a>
-      <a href="#ielts-training">雅思培训</a>
-      <a href="cases.html">录取案例</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <button class="nav-cta" onclick="openQr()">免费评估</button>
-  </div>
-</header>
+<body class="package-page">
+<header class="header"><div class="container nav-wrap"><a href="index.html" class="logo">Dream<span>Bridge</span></a><nav class="nav-links" aria-label="主导航"></nav><button class="nav-cta" type="button" onclick="openQr()">免费评估</button></div></header>
 <script src="site-shell.js?v=20260825-3"></script>
-
 <main>
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="fade-in">
-      <div class="hero-kicker">27 Fall 留学申请 · 价格透明</div>
-      <h1>让留学申请<br><span>少一点信息差，</span><br>多一点确定性。</h1>
-      <p class="hero-lead">英国、香港、新加坡、澳洲、新西兰、澳门申请服务。从选校策略、文书、网申到签证，根据你的参与程度选择最适合的服务方式。</p>
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="openQr()">免费做一次申请定位</button>
-        <a class="btn-secondary" href="#plans">查看服务与价格 ↓</a>
-      </div>
-      <div class="hero-trust">
-        <span><i>✓</i> 价格公开</span><span><i>✓</i> 申请账号透明</span><span><i>✓</i> 合同服务保障</span><span><i>✓</i> 7×16 小时响应</span>
-      </div>
-    </div>
-    <aside class="proof-panel fade-in" aria-label="服务数据">
-      <div class="proof-top">
-        <div class="proof-label">Why DreamBridge</div>
-        <h3>申请不是把材料“交出去”，而是把过程做得更透明。</h3>
-        <p>你始终知道申请到了哪一步，也知道自己正在为哪些服务付费。</p>
-      </div>
-      <div class="proof-stats">
-        <div class="proof-stat"><strong>500+</strong><span>累计服务学生</span></div>
-        <div class="proof-stat"><strong>554</strong><span>QS Top 100 录取记录</span></div>
-        <div class="proof-stat"><strong>60+</strong><span>硕博导师团队</span></div>
-        <div class="proof-stat"><strong>0 Offer</strong><span>全包退款保障</span></div>
-      </div>
-      <div class="school-row">
-        <p>覆盖主要英联邦申请目的地</p>
-        <div class="school-tags"><span>UK</span><span>Hong Kong</span><span>Singapore</span><span>Australia</span><span>New Zealand</span><span>Macau</span></div>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<section class="path-section">
-  <div class="container">
-    <div class="path-head fade-in">
-      <div><div class="eyebrow">Choose your path</div><h2>你现在最需要哪种帮助？</h2></div>
-      <p>先选需求，再看价格。不要让一张巨型价目表替你做决定。</p>
-    </div>
-    <div class="path-grid">
-      <a class="path-card fade-in" href="#plans"><span class="path-index">01 · APPLICATION</span><h3>留学申请</h3><p>DIY、半 DIY、全包三种模式，按参与程度自由选择。</p><span class="path-link">查看套餐 →</span></a>
-      <a class="path-card fade-in" href="#price-details"><span class="path-index">02 · WRITING</span><h3>DIY 文书</h3><p>简历、PS、推荐信润色或代写，单项价格公开。</p><span class="path-link">查看单项价格 →</span></a>
-      <a class="path-card fade-in" href="#ielts-training"><span class="path-index">03 · IELTS</span><h3>雅思培训</h3><p>阅读、听力、写作、口语一对一专项冲刺与组合套餐。</p><span class="path-link">查看课程 →</span></a>
-      <a class="path-card fade-in" href="#free"><span class="path-index">04 · FREE APPLY</span><h3>合作院校免费申请</h3><p>英澳新部分合作院校可零中介费递交，顾问全程跟进。</p><span class="path-link">查看免费申请 →</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="section section--white" id="plans">
-  <div class="container">
-    <div class="section-head center fade-in">
-      <div class="eyebrow">Service plans</div>
-      <h2 class="section-title">三种服务，不同参与程度</h2>
-      <p class="section-desc">先根据时间、英语能力和自主申请意愿选择服务模式，再查看详细单项价格。</p>
-    </div>
-    <div class="plan-grid">
-      <article class="plan-card fade-in">
-        <div class="plan-name">DIY 服务</div><h3>你主导，我们补强</h3><div class="plan-price">¥500<small> 起</small></div><p class="plan-sub">适合想自己申请，但需要文书润色、网申或答疑支持的学生。</p><div class="plan-divider"></div>
-        <ul class="plan-list"><li>简历润色 ¥500 / 篇</li><li>文书润色 ¥1,000 / 篇</li><li>推荐信润色 ¥400 / 篇</li><li>网申 ¥100 / 所</li><li>DIY 全年答疑 ¥1,888 / 年</li></ul>
-        <div class="plan-for"><strong>适合：</strong>时间充足、英语能力强、有自主申请经验</div><button class="btn-secondary" onclick="openQr()">咨询 DIY</button>
-      </article>
-      <article class="plan-card featured fade-in">
-        <span class="plan-badge">推荐 · 高性价比</span><div class="plan-name">半 DIY 服务</div><h3>你参与，我们把关</h3><div class="plan-price">¥3,999</div><p class="plan-sub">全套材料代写 + 申请策略指导，在保留自主权的同时节省大量准备时间。</p><div class="plan-divider"></div>
-        <ul class="plan-list"><li>简历代写</li><li>个人陈述 / 文书代写</li><li>推荐信 × 2 代写</li><li>网申 1 个项目</li><li>专属选校与申请策略</li></ul>
-        <div class="plan-for"><strong>适合：</strong>想节省时间、保留部分自主、需要专业把关</div><button class="btn-primary" onclick="openQr()">咨询半 DIY</button>
-      </article>
-      <article class="plan-card fade-in">
-        <div class="plan-name">全包服务</div><h3>把申请流程交给我们</h3><div class="plan-price">¥10,000<small> 起</small></div><p class="plan-sub">从选校、文书、网申到签证全流程服务，适合希望把时间留给 GPA、科研与实习的学生。</p><div class="plan-divider"></div>
-        <ul class="plan-list"><li>英港新 8 个项目起</li><li>全套材料代写与修改</li><li>全程网申与进度跟进</li><li>专属选校策略</li><li>签证专业指导</li><li>0 Offer 退款保障</li></ul>
-        <div class="plan-for"><strong>适合：</strong>希望全程省心、专注提升背景、追求更完整服务</div><button class="btn-secondary" onclick="openQr()">咨询全包</button>
-      </article>
-    </div>
-
-    <details class="details-box fade-in" id="price-details">
-      <summary>查看完整服务价格明细 <span>单项服务、混申套餐、免费递交与保障条款 ↓</span></summary>
-      <div class="compare-scroll">
-        <table class="compare-table">
-          <thead><tr><th>服务项目</th><th>DIY</th><th>半 DIY</th><th>全包</th></tr></thead>
-          <tbody>
-            <tr><td>简历</td><td class="money">润色 ¥500/篇</td><td class="money">代写 ¥1,000/篇</td><td class="yes">✓ 代写（含）</td></tr>
-            <tr><td>文书</td><td class="money">润色 ¥1,000/篇</td><td class="money">代写 ¥2,000/篇</td><td class="yes">✓ 代写（含）</td></tr>
-            <tr><td>推荐信</td><td class="money">润色 ¥400/篇</td><td class="money">代写 ¥800/篇</td><td class="yes">✓ 代写（含）</td></tr>
-            <tr><td>网申</td><td class="money">¥100/所</td><td class="money">¥100/项目</td><td class="yes">✓ 全程代办</td></tr>
-            <tr><td>选校策略</td><td>—</td><td class="primary-cell">专属定制</td><td class="yes">✓ 专属定制</td></tr>
-            <tr><td>签证办理</td><td>—</td><td>—</td><td class="yes">✓ 专业指导</td></tr>
-            <tr><td>全套组合价</td><td>按需组合</td><td class="primary-cell">¥3,999<br><small>简历+文书+推荐信×2+网申1所</small></td><td class="primary-cell">¥10,000 起<br><small>英港新 8 个项目</small></td></tr>
-            <tr><td>DIY 答疑</td><td class="money">¥1,888/年</td><td>—</td><td class="yes">✓ 含顾问跟进</td></tr>
-            <tr><td>澳洲 / 新西兰合作院校</td><td>—</td><td>—</td><td class="primary-cell">免费递交</td></tr>
-            <tr><td>超大混申</td><td>—</td><td>—</td><td class="money">¥15,000 · 15个项目</td></tr>
-            <tr><td>超级大混申</td><td>—</td><td>—</td><td class="money">¥20,000 · 不限国家/项目</td></tr>
-            <tr><td>退款保障</td><td>—</td><td>—</td><td class="yes">✓ 0 Offer 按协议约定退款</td></tr>
-            <tr><td>申请账号</td><td>自主控制</td><td>自主控制</td><td class="yes">✓ 全程透明可见</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </details>
-  </div>
-</section>
-
-<section class="section" id="free">
-  <div class="container">
-    <div class="free-shell fade-in">
-      <div class="free-copy"><div class="eyebrow">Free application</div><h2>有些学校，<br>其实不需要支付中介费。</h2><p>与英国、澳洲、新西兰多所院校建立合作。通过合作渠道递交申请，可享受零中介费服务，由顾问全程跟进申请进度。</p><button class="btn-secondary" onclick="openQr()">获取合作院校名单</button></div>
-      <div class="country-grid">
-        <article class="country-card"><span class="country-code">UK</span><h3>英国</h3><p>曼大、利兹、格拉斯哥、南安普顿等 30+ 院校</p><strong>合作院校免费递交</strong></article>
-        <article class="country-card"><span class="country-code">AU</span><h3>澳洲</h3><p>悉尼、新南威尔士、莫纳什、昆士兰等八大</p><strong>合作院校免费递交</strong></article>
-        <article class="country-card"><span class="country-code">NZ</span><h3>新西兰</h3><p>奥克兰、坎特伯雷、梅西等公立大学</p><strong>合作院校免费递交</strong></article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--white">
-  <div class="container">
-    <div class="section-head fade-in"><div class="eyebrow">Proof, not promises</div><h2 class="section-title">结果比口号更有说服力</h2><p class="section-desc">用已有服务记录呈现真实积累。具体录取项目与学生背景可前往案例页查看。</p></div>
-    <div class="results-grid">
-      <article class="results-main fade-in"><h3>QS Top 100 录取记录</h3><div class="results-number">554</div><p>按现有服务记录统计的累计录取结果。</p><div class="year-bars"><div class="year-bar"><strong>186</strong><span>2023</span></div><div class="year-bar"><strong>198</strong><span>2024</span></div><div class="year-bar"><strong>170</strong><span>2025</span></div></div></article>
-      <div class="results-side"><article class="result-card fade-in"><div><strong>500+</strong><span>累计服务学生</span></div><a class="case-link" href="cases.html">查看案例汇总 →</a></article><article class="result-card fade-in"><div><strong>60+</strong><span>硕博导师团队，覆盖理工文商等方向</span></div><button class="case-link" onclick="openQr()">免费评估背景 →</button></article></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="ielts-training">
-  <div class="container">
-    <div class="ielts-shell fade-in">
-      <div class="ielts-top"><div><div class="eyebrow">IELTS training</div><h2 class="section-title">留学之外，也解决语言问题</h2><p class="section-desc">针对中低基础、希望短期提升单科成绩的学生，按基础、目标分和备考周期选择一对一专项课程。</p></div><div class="ielts-summary"><span>4 科专项</span><span>2–3 周冲刺</span><span>¥199 试听</span></div></div>
-      <div class="ielts-grid">
-        <article class="ielts-card"><span class="subject">READING · 阅读</span><h3>阅读 10h 冲刺</h3><div class="score-row"><div class="score-box"><span>入班基础</span><strong>4</strong></div><span class="score-arrow">→</span><div class="score-box"><span>目标分</span><strong>6–6.5</strong></div></div><div class="course-meta"><span>2 周</span><span>10h</span></div><div class="ielts-price"><strong>¥4,980</strong><span>约 ¥500 / 小时</span></div></article>
-        <article class="ielts-card"><span class="subject">LISTENING · 听力</span><h3>听力 15h 冲刺</h3><div class="score-row"><div class="score-box"><span>入班基础</span><strong>4</strong></div><span class="score-arrow">→</span><div class="score-box"><span>目标分</span><strong>6–6.5</strong></div></div><div class="course-meta"><span>3 周</span><span>15h</span></div><div class="ielts-price"><strong>¥7,480</strong><span>约 ¥500 / 小时</span></div></article>
-        <article class="ielts-card"><span class="subject">WRITING · 写作</span><h3>写作 10h 冲刺</h3><div class="score-row"><div class="score-box"><span>入班基础</span><strong>4.5</strong></div><span class="score-arrow">→</span><div class="score-box"><span>目标分</span><strong>6</strong></div></div><div class="course-meta"><span>2 周</span><span>10h</span></div><div class="ielts-price"><strong>¥4,980</strong><span>约 ¥500 / 小时</span></div></article>
-        <article class="ielts-card"><span class="subject">SPEAKING · 口语</span><h3>口语 15h 冲刺</h3><div class="score-row"><div class="score-box"><span>入班基础</span><strong>4.5</strong></div><span class="score-arrow">→</span><div class="score-box"><span>目标分</span><strong>6</strong></div></div><div class="course-meta"><span>3 周</span><span>15h</span></div><div class="ielts-price"><strong>¥7,480</strong><span>约 ¥500 / 小时</span></div></article>
-      </div>
-      <div class="bundle-row"><div class="bundle-copy"><h3>多科组合优惠</h3><p>根据备考需求自由组合，报名科目越多，套餐折扣越高。</p></div><div class="bundle-card"><strong>95 折</strong><span>双科</span></div><div class="bundle-card"><strong>9 折</strong><span>三科</span></div><div class="bundle-card"><strong>88 折</strong><span>四科 · 最优优惠</span></div></div>
-      <div class="trial-row"><div class="trial-copy"><h3>不知道选哪一科？先试听。</h3><p>雅思试听课 0.5h / 次，先体验授课方式，再决定单科或组合套餐。</p></div><div class="trial-price">¥199 / 次</div><button class="btn-secondary" onclick="openQr()">预约试听</button></div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--white">
-  <div class="container">
-    <div class="section-head center fade-in"><div class="eyebrow">Process</div><h2 class="section-title">申请过程，六步看得见</h2><p class="section-desc">流程标准化，但方案根据你的背景和目标院校定制。</p></div>
-    <div class="process fade-in"><div class="step"><div class="step-num">01</div><h3>评估定校</h3><p>制定申请方案</p></div><div class="step"><div class="step-num">02</div><h3>签订合同</h3><p>明确服务边界</p></div><div class="step"><div class="step-num">03</div><h3>材料准备</h3><p>文书与申请材料</p></div><div class="step"><div class="step-num">04</div><h3>网申递交</h3><p>账号与进度透明</p></div><div class="step"><div class="step-num">05</div><h3>Offer 跟进</h3><p>面试与后续处理</p></div><div class="step"><div class="step-num">06</div><h3>签证入学</h3><p>签证专业指导</p></div></div>
-  </div>
-</section>
-
-<section class="section section--soft">
-  <div class="container">
-    <div class="section-head fade-in"><div class="eyebrow">Guarantee</div><h2 class="section-title">我们把服务边界写清楚</h2><p class="section-desc">与其堆很多“承诺”图标，不如把最重要的四件事直接讲明白。</p></div>
-    <div class="guarantee-grid fade-in"><article class="guarantee"><span class="guarantee-index">01</span><h3>文书修改到满意</h3><p>全包和半 DIY 中文书支持多轮修改，不以固定修改次数额外收费。</p></article><article class="guarantee"><span class="guarantee-index">02</span><h3>申请账号属于你</h3><p>使用学生本人邮箱与网申账号，邮件与申请状态全程透明可见。</p></article><article class="guarantee"><span class="guarantee-index">03</span><h3>0 Offer 退款保障</h3><p>全包服务最终未获得任何录取时，按双方签订的服务协议约定退还服务费。</p></article><article class="guarantee"><span class="guarantee-index">04</span><h3>找得到人的服务</h3><p>7×16 小时顾问响应，早 8 点至晚 24 点覆盖申请中的大多数紧急沟通场景。</p></article></div>
-  </div>
-</section>
-
-<section class="section section--white">
-  <div class="container"><div class="section-head fade-in"><div class="eyebrow">Team</div><h2 class="section-title">专业团队，多对一协作</h2><p class="section-desc">由不同学科方向的硕博导师与申请顾问协作，尽量让专业问题交给更懂该方向的人。</p></div><div class="team-strip fade-in"><div class="team-item"><strong>60+</strong><span>硕博导师资源</span></div><div class="team-item"><strong>多对一</strong><span>按申请环节协作</span></div><div class="team-item"><strong>NUS</strong><span>创始人硕士背景</span></div><div class="team-item"><strong>英港新澳</strong><span>主要申请目的地覆盖</span></div></div></div>
-</section>
-
-<section class="section" id="faq">
-  <div class="container"><div class="section-head center fade-in"><div class="eyebrow">FAQ</div><h2 class="section-title">常见问题</h2><p class="section-desc">价格、免费申请、账号透明与退款政策，都可以先在这里看清楚。</p></div><div class="faq-wrap fade-in" id="faqList"></div></div>
-</section>
-
-<section class="final-cta">
-  <div class="container"><div class="cta-shell fade-in"><div class="cta-copy"><h2>还不知道自己能申请什么学校？</h2><p>第一次咨询不需要准备复杂材料。把基本背景发给我们，先做一次免费申请定位。</p><div class="cta-prompt">本科院校 + 专业 + 均分/GPA + 语言成绩 + 目标地区</div></div><button class="btn-secondary" onclick="openQr()">微信免费咨询 →</button></div></div>
-</section>
+<section class="package-hero" aria-labelledby="hero-title"><div class="container hero-layout"><div class="hero-copy fade-in"><div class="hero-kicker">DreamBridge Admissions</div><h1 class="hero-title" id="hero-title">让留学申请，<br>少一点信息差，<br><span>多一点确定性。</span></h1><p class="hero-subtitle">从选校、文书、网申到签证，根据你的参与程度选择最适合的申请方式。</p><p class="hero-regions">英国 · 香港 · 新加坡 · 澳洲 · 新西兰 · 澳门</p><div class="hero-actions"><button class="button button--primary" type="button" onclick="openQr()" aria-label="打开微信二维码，进行免费申请定位">免费申请定位</button><a class="button button--secondary" href="#plans">查看服务套餐</a></div></div><div class="admission-board fade-in" aria-label="部分院校录取展示"><div class="board-head"><span>Admission portfolio</span><span class="board-status">Results updated</span></div><div class="offer-stack"><div class="offer-card"><div class="offer-card__meta"><span>Admission</span><span>Singapore</span></div><div class="offer-card__school">NUS</div><div class="offer-card__line"></div></div><div class="offer-card"><div class="offer-card__meta"><span>Offer</span><span>Hong Kong</span></div><div class="offer-card__school">HKU · CUHK</div><div class="offer-card__line"></div></div><div class="offer-card"><div class="offer-card__meta"><span>Admission</span><span>UK · Australia</span></div><div class="offer-card__school">Manchester · Sydney</div><div class="offer-card__line"></div></div></div></div></div></section>
+<section class="metrics" aria-label="服务数据"><div class="container metrics-grid fade-in"><div class="metric"><strong>500+</strong><span>累计服务学生</span></div><div class="metric"><strong>554</strong><span>QS Top 100 Offer</span></div><div class="metric"><strong>60+</strong><span>导师资源</span></div><div class="metric"><strong>0 Offer</strong><span>按合同退款保障</span></div></div></section>
+<section class="section" id="help"><div class="container"><div class="section-head fade-in"><span class="eyebrow">Choose your path</span><h2 class="section-title">你现在需要哪种帮助？</h2><p class="section-desc">选择你当前最需要解决的问题。</p></div><div class="help-grid fade-in"><article class="help-card"><span class="help-index">01</span><h3>留学申请</h3><p>选校 · 文书 · 网申 · 签证</p><a class="text-link" href="#plans">查看申请套餐</a></article><article class="help-card"><span class="help-index">02</span><h3>DIY 文书</h3><p>CV · PS · RL · 润色</p><button class="text-link" type="button" onclick="openPriceDetails()">查看单项价格</button></article><article class="help-card"><span class="help-index">03</span><h3>雅思培训</h3><p>阅读 · 听力 · 写作 · 口语</p><a class="text-link" href="#ielts">查看课程</a></article><article class="help-card"><span class="help-index">04</span><h3>免费申请</h3><p>英澳新合作院校</p><a class="text-link" href="#free">查看免费院校</a></article></div></div></section>
+<section class="section section--white" id="plans"><div class="container"><div class="section-head fade-in"><span class="eyebrow">Service plans</span><h2 class="section-title">按你的参与程度，选择申请方式。</h2><p class="section-desc">三种服务都保持账号透明。你可以自己主导，也可以把完整流程交给专业团队。</p></div><div class="plans-grid"><article class="plan-card fade-in"><h3 class="plan-name">DIY 服务</h3><div class="plan-price">&yen;500 <small>起</small></div><p class="plan-desc">适合愿意自己主导申请，只需要专业支持的学生。</p><ul class="plan-list"><li>简历、文书、推荐信润色</li><li>单项服务按需选择</li><li>网申协助</li><li>DIY 年度答疑</li><li>申请账号自主控制</li></ul><button class="button button--secondary" type="button" onclick="openPriceDetails()">了解 DIY</button></article><article class="plan-card plan-card--featured fade-in"><span class="plan-badge">推荐</span><h3 class="plan-name">半 DIY</h3><div class="plan-price">&yen;3,999 <small>全套</small></div><p class="plan-desc">适合希望节省材料时间，但仍保留申请参与感的学生。</p><ul class="plan-list"><li>选校策略</li><li>CV · PS · RL ×2</li><li>网申 1 个项目</li><li>专业审核</li><li>文书支持修改</li></ul><button class="button button--blue" type="button" onclick="openQr()">咨询半 DIY</button></article><article class="plan-card fade-in"><h3 class="plan-name">全程申请</h3><div class="plan-price">&yen;10,000 <small>起</small></div><p class="plan-desc">适合希望把申请流程整体交给专业团队的学生。</p><ul class="plan-list"><li>定校与申请策略</li><li>简历、文书、推荐信</li><li>网申与面试辅导</li><li>Offer 跟进</li><li>签证与顾问跟进</li></ul><button class="button button--secondary" type="button" onclick="openQr()">获取全包方案</button></article></div><div class="mix-strip fade-in"><div><h3>多地区混申方案</h3><p>适合申请国家或项目数量较多的学生。</p></div><div class="mix-option"><span>超大混申</span><strong>&yen;15,000 / 15 个项目</strong></div><div class="mix-option"><span>超级大混申</span><strong>&yen;20,000 / 不限国家和项目</strong></div></div>
+<details class="price-details fade-in" id="priceDetails"><summary>想比较每一项服务？查看完整价格明细</summary><div class="price-scroll"><table class="price-table"><thead><tr><th>服务项目</th><th>DIY 服务</th><th>半 DIY 服务</th><th>全包服务</th></tr></thead><tbody>
+<tr><td>简历</td><td><span class="price">润色 &yen;500 / 篇</span></td><td><span class="price">代写 &yen;1,000 / 篇</span></td><td class="yes">代写（含）</td></tr><tr><td>文书</td><td><span class="price">润色 &yen;1,000 / 篇</span></td><td><span class="price">代写 &yen;2,000 / 篇</span></td><td class="yes">代写（含）</td></tr><tr><td>推荐信</td><td><span class="price">润色 &yen;400 / 篇</span></td><td><span class="price">代写 &yen;800 / 篇</span></td><td class="yes">代写（含）</td></tr><tr><td>网申</td><td><span class="price">&yen;100 / 所</span></td><td><span class="price">&yen;100 / 项目</span></td><td class="yes">全程代办</td></tr><tr><td>选校策略</td><td>—</td><td class="yes">专属定制</td><td class="yes">专属定制</td></tr><tr><td>签证办理</td><td>—</td><td>—</td><td class="yes">专业指导</td></tr><tr><td>全套组合价</td><td>按需组合</td><td><span class="price">&yen;3,999</span><br>简历 + 文书 + 推荐信 ×2 + 网申 1 所</td><td><span class="price">&yen;10,000 起</span><br>英港新 8 个项目</td></tr><tr><td>DIY 答疑</td><td><span class="price">&yen;1,888 / 年</span></td><td>—</td><td class="yes">含顾问跟进</td></tr><tr><td>澳洲 / 新西兰</td><td>—</td><td>—</td><td><span class="price">免费递交</span></td></tr><tr><td>超大混申</td><td>—</td><td>—</td><td><span class="price">&yen;15,000 / 15 个项目</span></td></tr><tr><td>超级大混申</td><td>—</td><td>—</td><td><span class="price">&yen;20,000 / 不限国家和项目</span></td></tr><tr><td>退款保障</td><td>—</td><td>—</td><td class="yes">0 Offer 按合同退款</td></tr><tr><td>账号透明</td><td class="yes">自主控制</td><td class="yes">自主控制</td><td class="yes">全程可见</td></tr><tr><td>适合人群</td><td>时间充足、英语能力强、有申请经验</td><td>希望节省时间、保留参与感、需要专业把关</td><td>专注 GPA / 实习、希望全程省心</td></tr>
+</tbody></table></div></details></div></section>
+<section class="section" id="free"><div class="container"><div class="free-feature fade-in"><div class="free-layout"><div><span class="eyebrow">Official partner application</span><h2 class="section-title">有些学校，其实不需要支付中介费。</h2><p class="section-desc">通过官方合作渠道申请英国、澳洲、新西兰部分院校，可享 0 中介费递交。</p><div class="free-points"><span class="free-point">0 中介费</span><span class="free-point">无隐藏收费</span><span class="free-point">DIY / 半 DIY / 全包均可使用</span></div><button class="button button--primary" type="button" onclick="openQr()">查看免费申请院校</button></div><div class="country-list" id="free-schools"><div class="country"><span class="country-code">UK</span><strong>英国</strong><span>曼大、利兹、格拉斯哥、南安普顿等 30+ 院校</span></div><div class="country"><span class="country-code">AU</span><strong>澳洲</strong><span>悉尼、新南威尔士、莫纳什、昆士兰等八大</span></div><div class="country"><span class="country-code">NZ</span><strong>新西兰</strong><span>奥克兰、坎特伯雷、梅西等公立大学</span></div></div></div></div></div></section>
+<section class="section section--white" id="proof"><div class="container proof-layout"><div class="proof-copy fade-in"><span class="eyebrow">Real outcomes</span><h2 class="section-title">申请结果，比宣传更重要。</h2><div class="proof-numbers"><div class="proof-number"><strong>500+</strong><span>服务学生</span></div><div class="proof-number"><strong>554</strong><span>QS Top 100 Offer</span></div><div class="proof-number"><strong>60+</strong><span>导师资源</span></div></div><a class="text-link" href="cases.html">查看全部录取案例</a></div><div class="offer-wall fade-in" aria-label="部分录取院校"><div class="result-item"><small>Hong Kong</small><strong>HKU</strong><span>The University of Hong Kong</span></div><div class="result-item"><small>Hong Kong</small><strong>CUHK</strong><span>The Chinese University of Hong Kong</span></div><div class="result-item"><small>Singapore</small><strong>NUS</strong><span>National University of Singapore</span></div><div class="result-item"><small>Singapore</small><strong>NTU</strong><span>Nanyang Technological University</span></div><div class="result-item"><small>United Kingdom</small><strong>Manchester</strong><span>The University of Manchester</span></div><div class="result-item"><small>Australia</small><strong>Sydney</strong><span>The University of Sydney</span></div></div></div></section>
+<section class="section ielts-section" id="ielts"><div class="container"><div class="section-head ielts-head fade-in"><div><span class="eyebrow">IELTS one-to-one</span><h2 class="section-title">留学之外，我们也解决语言问题。</h2><p class="section-desc">IELTS 一对一专项提分课程。</p></div><p class="ielts-head-note">按当前基础、目标分和备考时间，选择需要重点突破的科目。</p></div><div class="ielts-grid fade-in"><article class="ielts-card"><span class="ielts-label">P01 · 阅读</span><h3>阅读专项</h3><div class="ielts-score"><strong>4</strong><span>→</span><strong>6–6.5</strong></div><div class="ielts-meta"><span>10h</span><span>2 周</span></div><div class="ielts-price">&yen;4,980</div></article><article class="ielts-card"><span class="ielts-label">P02 · 听力</span><h3>听力专项</h3><div class="ielts-score"><strong>4</strong><span>→</span><strong>6–6.5</strong></div><div class="ielts-meta"><span>15h</span><span>3 周</span></div><div class="ielts-price">&yen;7,480</div></article><article class="ielts-card"><span class="ielts-label">P03 · 写作</span><h3>写作专项</h3><div class="ielts-score"><strong>4.5</strong><span>→</span><strong>6</strong></div><div class="ielts-meta"><span>10h</span><span>2 周</span></div><div class="ielts-price">&yen;4,980</div></article><article class="ielts-card"><span class="ielts-label">P04 · 口语</span><h3>口语专项</h3><div class="ielts-score"><strong>4.5</strong><span>→</span><strong>6</strong></div><div class="ielts-meta"><span>15h</span><span>3 周</span></div><div class="ielts-price">&yen;7,480</div></article></div><div class="ielts-extras fade-in"><div class="ielts-bundles"><div class="ielts-bundle"><span>P05 · 双科</span><strong>95 折</strong></div><div class="ielts-bundle"><span>P06 · 三科</span><strong>9 折</strong></div><div class="ielts-bundle"><span>P07 · 四科</span><strong>88 折</strong></div></div><div class="trial"><div class="trial-copy"><span>P08 · 0.5h</span><strong>&yen;199 试听课</strong></div><button class="button button--primary" type="button" onclick="openQr()" aria-label="打开微信二维码预约雅思试听课">预约试听</button></div></div></div></section>
+<section class="section" id="process"><div class="container process-shell"><div class="fade-in"><span class="eyebrow">Process</span><h2 class="section-title">从评估到入学，我们陪你走完整个流程。</h2></div><div class="timeline fade-in" aria-label="申请流程"><div class="timeline-step"><span class="timeline-num">01</span><strong>免费评估</strong></div><div class="timeline-step"><span class="timeline-num">02</span><strong>定校</strong></div><div class="timeline-step"><span class="timeline-num">03</span><strong>文书</strong></div><div class="timeline-step"><span class="timeline-num">04</span><strong>递交</strong></div><div class="timeline-step"><span class="timeline-num">05</span><strong>Offer</strong></div><div class="timeline-step"><span class="timeline-num">06</span><strong>签证</strong></div></div></div></section>
+<section class="section section--white" id="guarantees"><div class="container"><div class="section-head fade-in"><span class="eyebrow">Transparency first</span><h2 class="section-title">我们认为，透明比包装更重要。</h2></div><div class="assurance-grid fade-in"><article class="assurance-item"><span class="assurance-num">01</span><div><h3>文书修改到满意</h3><p>全包和半 DIY 支持不限固定修改次数。</p></div></article><article class="assurance-item"><span class="assurance-num">02</span><div><h3>申请账号属于你</h3><p>使用学生本人邮箱与账号，全流程透明。</p></div></article><article class="assurance-item"><span class="assurance-num">03</span><div><h3>0 Offer 退款保障</h3><p>按签订的服务合同执行。</p></div></article><article class="assurance-item"><span class="assurance-num">04</span><div><h3>每天 08:00–24:00 响应</h3><p>覆盖国内及海外主要时区。</p></div></article></div></div></section>
+<section class="section" id="team"><div class="container team-layout"><div class="team-copy fade-in"><span class="eyebrow">Our team</span><h2 class="section-title">小而专注的团队，为每份申请负责。</h2><p>由具备海外名校背景的顾问与硕博导师协作，覆盖选校、材料、专业审核和申请跟进。我们不依赖流水线模板，而是根据学生背景完成针对性支持。</p></div><div class="team-data fade-in"><div class="team-row"><strong>60+</strong><span>硕博导师资源</span></div><div class="team-row"><strong>理工文商</strong><span>覆盖主要申请方向</span></div><div class="team-row"><strong>NUS</strong><span>硕士背景创始团队</span></div><div class="team-row"><strong>500+</strong><span>累计服务学生</span></div></div></div></section>
+<section class="section section--white" id="faq"><div class="container faq-shell"><div class="section-head fade-in"><span class="eyebrow">FAQ</span><h2 class="section-title">常见问题</h2></div><div id="faqList" class="fade-in"></div></div></section>
+<section class="final-cta" id="consult"><div class="container cta-layout"><div class="fade-in"><span class="eyebrow">Free positioning</span><h2 class="section-title">还不知道自己可以申请什么学校？</h2><p>把以下信息发给我们，我们先帮你做一次免费申请定位。</p><div class="profile-fields"><span>本科院校</span><span>专业</span><span>均分 / GPA</span><span>语言成绩</span><span>目标国家 / 地区</span></div><button class="button button--primary" type="button" onclick="openQr()">微信免费咨询</button></div><div class="cta-qr fade-in"><img src="assets/wechat-qr.jpg" alt="DreamBridge 微信咨询二维码" onerror="this.outerHTML='<div class=\'qr-placeholder\'>微信扫码咨询</div>'"><strong>微信：xxr13365810586</strong><span>扫码发送你的申请背景</span></div></div></section>
 </main>
-
-<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand">Dream<span>Bridge</span></div><p class="footer-desc">专注英港新澳等地区留学申请服务。价格透明、过程透明，让学生知道每一步在做什么。</p></div><div><h4>导航</h4><a href="index.html">首页</a><a href="#plans">服务套餐</a><a href="cases.html">案例汇总</a><a href="#faq">常见问题</a></div><div><h4>联系</h4><a href="mailto:496680190@qq.com">496680190@qq.com</a><a>微信：xxr13365810586</a></div></div><div class="footer-bottom"><span>© 2026 DreamBridge. All rights reserved.</span><span>用心服务每一个留学申请</span></div></div></footer>
-
-<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
-<div class="qr-modal" id="qrModal" role="dialog" aria-modal="true" aria-label="微信咨询">
-  <div class="qr-card"><button class="qr-close" onclick="closeQr()" aria-label="关闭">×</button><h3>添加微信咨询</h3><img src="assets/wechat-qr.jpg" alt="微信二维码" onerror="this.outerHTML='<div class=\'qr-placeholder\'>微信扫码</div>'"><p class="qr-wxid">xxr13365810586</p><p class="qr-note">复制微信号，打开微信添加好友</p></div>
-</div>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand">Dream<span>Bridge</span></div><p>专注英港新澳留学申请服务。用透明的信息与清晰的流程，帮助学生做出更确定的选择。</p></div><div><h4>快速访问</h4><a href="#plans">服务套餐</a><a href="#free">免费申请</a><a href="#ielts">雅思培训</a></div><div><h4>联系</h4><a href="mailto:496680190@qq.com">496680190@qq.com</a><a href="#consult">微信：xxr13365810586</a></div></div><div class="footer-bottom"><span>&copy; 2026 DreamBridge. All rights reserved.</span><span>用心服务每一个留学梦想</span></div></div></footer>
+<button class="to-top" id="toTop" type="button" aria-label="返回页面顶部">↑</button>
+<div class="qr-modal" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrTitle" aria-hidden="true"><div class="qr-card"><button class="qr-close" type="button" onclick="closeQr()" aria-label="关闭微信二维码弹窗">×</button><h3 id="qrTitle">添加微信咨询</h3><img src="assets/wechat-qr.jpg" alt="DreamBridge 微信咨询二维码" onerror="this.outerHTML='<div class=\'qr-placeholder\'>微信扫码咨询</div>'"><p class="qr-wxid">xxr13365810586</p><p class="qr-note">复制微信号，打开微信添加好友</p></div></div>
 <script>
-const faqData=[
-  ["免费递交的合作院校有哪些？","英国包括曼大、利兹、格拉斯哥、南安普顿等30余所；澳洲包括悉尼、新南威尔士、莫纳什、昆士兰等八大名校；新西兰包括奥克兰、坎特伯雷、梅西等公立大学。具体名单请咨询微信获取。"],
-  ["免费递交有什么限制吗？","无论你选择 DIY、半 DIY 还是全包服务，符合合作渠道条件的院校都可按合作政策免费递交。具体学校与项目以申请时的合作名单为准。"],
-  ["如何选择服务模式？","时间充足、英语能力强、有自主申请经验可以选 DIY；希望节省材料准备时间但想参与申请过程可以选半 DIY；想把更多时间留给 GPA、实习、科研，可以考虑全包。"],
-  ["全包服务的退款政策是什么？","如果全包服务最终没有收到任何录取通知，将按双方签订的服务协议约定退还服务费；具体适用条件以签约条款为准。"],
-  ["文书可以修改几次？","全包和半 DIY 服务中的文书支持多轮修改，目标是把材料打磨到双方确认的交付标准。"],
-  ["申请账号是否透明？","透明。全程使用学生本人的邮箱和网申账号注册，邮件和进度通知均可由学生本人查看。"],
-  ["可以同时申请多个国家吗？","可以。全包服务包含多地区组合申请方案，也有 15 个项目和不限国家/项目的混申套餐。"],
-  ["服务响应时间是怎样的？","顾问响应时段为每天早 8 点至晚 24 点，覆盖大多数申请沟通与材料处理场景。"]
-];
-function init(){
-  const faqList=document.getElementById('faqList');
-  faqData.forEach(([q,a])=>{const item=document.createElement('div');item.className='faq-item';item.innerHTML=`<button class="faq-btn">${q}</button><div class="faq-panel">${a}</div>`;item.querySelector('.faq-btn').addEventListener('click',()=>item.classList.toggle('open'));faqList.appendChild(item)});
-  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.08});
-  document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
-  const toTop=document.getElementById('toTop');window.addEventListener('scroll',()=>toTop.classList.toggle('show',window.scrollY>600));toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-}
-function openQr(){document.getElementById('qrModal').classList.add('show')}
-function closeQr(){document.getElementById('qrModal').classList.remove('show')}
-document.getElementById('qrModal').addEventListener('click',e=>{if(e.target===document.getElementById('qrModal'))closeQr()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeQr()});
-document.addEventListener('DOMContentLoaded',()=>{init();document.querySelectorAll('a[href="#price-details"]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('price-details').open=true}))});
+const faqData=[["免费递交的合作院校有哪些？","英国包括曼大、利兹、格拉斯哥、南安普顿等 30 余所；澳洲包括悉尼、新南威尔士、莫纳什、昆士兰等八大名校；新西兰包括奥克兰、坎特伯雷、梅西等公立大学。具体名单请咨询微信获取。"],["免费递交有什么限制吗？","无论你是 DIY、半 DIY 还是全包客户，通过 DreamBridge 递交合作院校申请均可享受 0 中介费服务，无隐藏收费。"],["如何选择服务模式？","时间充足、英语能力强、有自主申请经验可以选 DIY；希望节省材料准备时间但保留申请参与感可以选半 DIY；希望把时间留给 GPA、实习和科研可以选全包。"],["全包服务的退款政策是什么？","如果全包服务最终没有收到任何录取通知，将按双方签订的服务合同约定执行退款，具体适用条件以签约条款为准。"],["文书可以修改几次？","全包和半 DIY 服务中文书支持不限固定修改次数，直至双方确认内容。"],["申请账号是否透明？","完全透明。全程使用学生本人的邮箱和网申账号注册，所有邮件和进度通知同步到学生邮箱，账号始终属于学生。"],["可以同时申请多个国家吗？","可以。超大混申包含 15 个项目，超级大混申不限国家和项目数量；合作院校还可叠加免费递交。"],["服务响应时间是怎样的？","顾问响应时间为每天 08:00–24:00，覆盖国内及海外主要时区。"]];
+function initPackageNav(){const items=[["首页","index.html"],["服务套餐","#plans"],["录取案例","#proof"],["免费申请","#free"],["雅思","#ielts"],["FAQ","#faq"]];const markup=items.map(([label,href])=>`<a href="${href}"${href==="#plans"?' class="active"':""}>${label}</a>`).join("");document.querySelectorAll(".site-desktop-nav, .site-mobile-links").forEach(nav=>{nav.innerHTML=markup});const primary=document.querySelector(".site-primary-action");if(primary){primary.textContent="免费评估";primary.href="#consult"}}
+function openPriceDetails(){const details=document.getElementById("priceDetails");details.open=true;details.scrollIntoView({behavior:"smooth",block:"start"})}
+function openQr(){const modal=document.getElementById("qrModal");modal.classList.add("show");modal.setAttribute("aria-hidden","false");modal.querySelector(".qr-close").focus()}
+function closeQr(){const modal=document.getElementById("qrModal");modal.classList.remove("show");modal.setAttribute("aria-hidden","true")}
+function init(){initPackageNav();const faqList=document.getElementById("faqList");faqData.forEach(([question,answer])=>{const item=document.createElement("div");item.className="faq-item";item.innerHTML=`<button class="faq-btn" type="button" aria-expanded="false">${question}</button><div class="faq-panel">${answer}</div>`;const button=item.querySelector(".faq-btn");button.addEventListener("click",()=>{const open=item.classList.toggle("open");button.setAttribute("aria-expanded",String(open))});faqList.appendChild(item)});const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("visible")}),{threshold:.08});document.querySelectorAll(".fade-in").forEach(element=>observer.observe(element));const toTop=document.getElementById("toTop");window.addEventListener("scroll",()=>toTop.classList.toggle("show",window.scrollY>700),{passive:true});toTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));const modal=document.getElementById("qrModal");modal.addEventListener("click",event=>{if(event.target===modal)closeQr()});document.addEventListener("keydown",event=>{if(event.key==="Escape"&&modal.classList.contains("show"))closeQr()})}
+document.addEventListener("DOMContentLoaded",init);
 </script>
 <script src="dreambridge-ai-chat.js"></script>
 </body>
