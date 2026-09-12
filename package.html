@@ -406,10 +406,37 @@ ul { list-style: none; }
   .ielts-course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ielts-card h3, .ielts-audience { min-height: 0; }
 }
+
+/* ===== Package page compact rhythm ===== */
+.package-page .page-title { padding-bottom: var(--space-8); }
+.package-page .stats-bar { margin-bottom: var(--space-8); }
+.package-page .promo { margin-bottom: 0; }
+.package-page .section { padding: 56px 0; }
+.package-page .section-header { margin-bottom: var(--space-8); }
+.package-page #plans { padding: 52px 0 44px; }
+.package-page .credential-section { padding: 44px 0 24px; background: #f6f9fd; }
+.package-page .credential-card { box-shadow: none; }
+.package-page .ielts-section { padding: 24px 0 56px; }
+.package-page .cta { padding: 56px 0; }
+
+@media (min-width: 560px) and (max-width: 768px) {
+  .package-page .ielts-course-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .package-page .page-title { padding-top: 92px; padding-bottom: var(--space-6); }
+  .package-page .stats-bar { gap: var(--space-3); margin-bottom: var(--space-6); }
+  .package-page .section { padding: 44px 0; }
+  .package-page .section-header { margin-bottom: var(--space-6); }
+  .package-page #plans { padding: 40px 0 32px; }
+  .package-page .credential-section { padding: 32px 0 18px; }
+  .package-page .ielts-section { padding: 18px 0 44px; }
+  .package-page .cta { padding: 48px 0; }
+}
 </style>
 <link rel="stylesheet" href="site-shell.css?v=20260912-1">
 </head>
-<body>
+<body class="package-page">
 
 <header class="header">
   <div class="container nav-wrap">
