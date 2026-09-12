@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>留学生求职辅导 | 职业规划 | 海外实习规划 | DreamBridge</title>
-  <meta name="description" content="DreamBridge提供留学生职业规划、海外实习规划、秋招辅导、行业导师和求职陪跑服务。">
-  <meta name="keywords" content="留学生求职,海外求职辅导,实习规划,秋招辅导,行业导师,职业规划">
+  <title>职业发展规划 | 求职辅导 | Career Development | DreamBridge</title>
+  <meta name="description" content="DreamBridge提供职业规划、求职辅导、行业导师、实习规划和职业发展服务，帮助学生和职场人士提升竞争力。">
+  <meta name="keywords" content="职业规划,求职辅导,实习规划,行业导师,职业咨询,Career Development">
   <link rel="stylesheet" href="site-shell.css?v=20260912-1">
   <style>
     :root {
@@ -720,6 +720,7 @@
       border-radius: 0;
       background: rgba(255,255,255,.86);
     }
+    .career-industry-grid .career-industry:last-child { grid-column: 2; }
     .career-profile-grid { gap: 18px; }
     .career-profile-grid .career-card { min-height: 240px; }
     .career-profile-grid .career-card:nth-child(2) { color: #fff; border-color: var(--career-blue); background: var(--career-blue); }
@@ -815,6 +816,138 @@
       .career-service { padding: 20px; }
       .career-industry { min-height: 94px; padding: 12px; font-size: 14px; }
     }
+
+    /* Career platform content layouts */
+    .career-guide-grid--four {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .career-guide-grid--four .career-card {
+      min-height: 330px;
+    }
+    .career-card-link {
+      display: inline-block;
+      margin-top: 22px;
+      color: var(--career-blue);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .career-step-name {
+      display: block;
+      margin-bottom: 2px;
+      color: #9fb5c7;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .career-plan-name {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--career-muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .career-plan--featured .career-plan-name { color: #aebfcd; }
+    .career-profile-grid--five {
+      grid-template-columns: repeat(10, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .career-profile-grid--five .career-card {
+      grid-column: span 2;
+      min-height: 250px;
+      padding: 28px;
+    }
+    .career-profile-grid--five .career-card:nth-child(2) {
+      color: var(--career-ink);
+      border-color: var(--career-line);
+      background: #fff;
+    }
+    .career-profile-grid--five .career-card:nth-child(2) h3 { color: var(--career-navy); }
+    .career-profile-grid--five .career-card:nth-child(2) p { color: var(--career-muted); }
+    .career-profile-grid--five .career-card:nth-child(3) {
+      color: #fff;
+      border-color: var(--career-blue);
+      background: var(--career-blue);
+    }
+    .career-profile-grid--five .career-card:nth-child(3) h3 { color: #fff; }
+    .career-profile-grid--five .career-card:nth-child(3) p { color: #d5e1e9; }
+    .career-story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .career-story {
+      padding: 34px;
+      border: 1px solid var(--career-line);
+      border-radius: 12px;
+      background: #fff;
+    }
+    .career-story-meta {
+      color: var(--career-gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .1em;
+    }
+    .career-story h3 {
+      margin: 18px 0 24px;
+      color: var(--career-navy);
+      font-size: 22px;
+    }
+    .career-story dl {
+      display: grid;
+      gap: 0;
+      margin: 0;
+    }
+    .career-story dl div {
+      padding: 15px 0;
+      border-top: 1px solid var(--career-line);
+    }
+    .career-story dt {
+      margin-bottom: 4px;
+      color: #8492a0;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .career-story dd {
+      margin: 0;
+      color: #43586b;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+    .career-platform-note {
+      display: inline-flex;
+      margin-top: 26px;
+      padding: 9px 12px;
+      border-left: 2px solid var(--career-gold);
+      color: #607284;
+      background: rgba(255,255,255,.6);
+      font-size: 13px;
+    }
+    .dark .career-profile-grid--five .career-card:nth-child(2),
+    .dark .career-story { border-color: #294056; background: #142638; }
+    .dark .career-profile-grid--five .career-card:nth-child(2) h3,
+    .dark .career-story h3 { color: #eef5fa; }
+    .dark .career-profile-grid--five .career-card:nth-child(2) p,
+    .dark .career-story dd { color: #9eb0c0; }
+
+    @media (max-width: 1080px) {
+      .career-guide-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .career-profile-grid--five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .career-profile-grid--five .career-card { grid-column: auto; }
+      .career-profile-grid--five .career-card:last-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 760px) {
+      .career-guide-grid--four,
+      .career-profile-grid--five,
+      .career-story-grid { grid-template-columns: 1fr; }
+      .career-guide-grid--four .career-card,
+      .career-profile-grid--five .career-card { min-height: auto; }
+      .career-profile-grid--five .career-card:last-child { grid-column: auto; }
+      .career-story { padding: 26px; }
+      .career-industry-grid .career-industry:last-child { grid-column: 1 / -1; }
+    }
   </style>
 </head>
 <body class="career-page-body">
@@ -824,23 +957,23 @@
     <section class="career-hero hero" aria-labelledby="career-title">
       <div class="career-container career-hero-grid">
         <div class="fade-in">
-          <span class="career-kicker">Career Development</span>
-          <h1 id="career-title">从留学规划，<br>到职业发展</h1>
-          <p class="career-hero-copy">帮助全球学生完成从校园到职场的关键跃迁。我们不仅关注学生进入哪所大学，更关注毕业后进入什么行业、什么岗位。</p>
+          <span class="career-kicker">DreamBridge Career Development</span>
+          <h1 id="career-title">从职业探索，<br>到理想发展路径</h1>
+          <p class="career-hero-copy">无论你正在寻找第一份实习、准备毕业求职，还是计划职业转型，DreamBridge 通过职业规划、行业导师和求职陪伴，帮助你连接能力与机会。</p>
           <div class="career-hero-actions">
             <button class="career-button career-button--gold" type="button" data-open-career-contact>免费职业评估</button>
             <a class="career-button career-button--ghost" href="#career-plans">查看服务方案</a>
           </div>
+          <span class="career-platform-note">Global Education &amp; Career Development Platform</span>
         </div>
-        <aside class="career-roadmap fade-in" aria-label="Career Roadmap">
-          <div class="career-roadmap-label"><span>Career Roadmap</span><span>01—06</span></div>
+        <aside class="career-roadmap fade-in" aria-label="Career Journey">
+          <div class="career-roadmap-label"><span>Career Journey</span><span>01—05</span></div>
           <div class="career-roadmap-list">
-            <div class="career-roadmap-item"><span class="career-roadmap-dot">01</span><span class="career-roadmap-name">留学申请</span><span class="career-roadmap-status">起点</span></div>
-            <div class="career-roadmap-item"><span class="career-roadmap-dot">02</span><span class="career-roadmap-name">专业选择</span><span class="career-roadmap-status">定位</span></div>
-            <div class="career-roadmap-item"><span class="career-roadmap-dot">03</span><span class="career-roadmap-name">技能提升</span><span class="career-roadmap-status">准备</span></div>
-            <div class="career-roadmap-item"><span class="career-roadmap-dot">04</span><span class="career-roadmap-name">实习规划</span><span class="career-roadmap-status">验证</span></div>
-            <div class="career-roadmap-item"><span class="career-roadmap-dot">05</span><span class="career-roadmap-name">求职准备</span><span class="career-roadmap-status">行动</span></div>
-            <div class="career-roadmap-item"><span class="career-roadmap-dot">06</span><span class="career-roadmap-name">Offer</span><span class="career-roadmap-status">结果</span></div>
+            <div class="career-roadmap-item"><span class="career-roadmap-dot">01</span><span class="career-roadmap-name">职业探索</span><span class="career-roadmap-status">Discover</span></div>
+            <div class="career-roadmap-item"><span class="career-roadmap-dot">02</span><span class="career-roadmap-name">能力建设</span><span class="career-roadmap-status">Build</span></div>
+            <div class="career-roadmap-item"><span class="career-roadmap-dot">03</span><span class="career-roadmap-name">实习机会</span><span class="career-roadmap-status">Practice</span></div>
+            <div class="career-roadmap-item"><span class="career-roadmap-dot">04</span><span class="career-roadmap-name">求职准备</span><span class="career-roadmap-status">Launch</span></div>
+            <div class="career-roadmap-item"><span class="career-roadmap-dot">05</span><span class="career-roadmap-name">职业成长</span><span class="career-roadmap-status">Grow</span></div>
           </div>
         </aside>
       </div>
@@ -849,29 +982,14 @@
     <section class="career-section" id="career-guide">
       <div class="career-container">
         <div class="career-section-head career-section-head--split fade-in">
-          <div><span class="career-kicker">Career Guide</span><h2 class="career-heading">留学生职业发展指南</h2></div>
-          <p class="career-lead">从政策、时间节点到专业去向，先建立完整的信息框架，再做适合自己的职业选择。</p>
+          <div><span class="career-kicker">Insights Center</span><h2 class="career-heading">职业发展资讯中心</h2></div>
+          <p class="career-lead">围绕就业市场、职业选择、行业变化与全球机会，建立持续更新的职业认知框架。</p>
         </div>
-        <div class="career-guide-grid">
-          <article class="career-card fade-in">
-            <span class="career-card-number">01 / PATH</span>
-            <h3>海外毕业后工作路径</h3>
-            <p>不同地区有不同的毕业后工作与签证安排，规划应与求职周期同步进行。</p>
-            <ul class="career-tag-list"><li>英国 Graduate Visa</li><li>香港 IANG</li><li>澳洲 485</li><li>新加坡就业政策</li></ul>
-            <details class="career-detail"><summary>查看详情</summary><p>我们会结合毕业时间、目标行业和个人背景，梳理地区政策、求职窗口与备选路径。政策可能调整，具体申请以当地官方信息为准。</p></details>
-          </article>
-          <article class="career-card fade-in">
-            <span class="career-card-number">02 / TIMING</span>
-            <h3>什么时候开始准备求职？</h3>
-            <p>越早完成方向验证，越能有计划地积累实习、技能与可证明的项目经历。</p>
-            <div class="career-timing"><div><small>本科</small><strong>大二开始</strong></div><div><small>硕士</small><strong>入学第一学期</strong></div></div>
-          </article>
-          <article class="career-card fade-in">
-            <span class="career-card-number">03 / MAJOR</span>
-            <h3>不同专业就业方向</h3>
-            <p>专业只是起点，岗位选择还需要结合技能组合、经历证据与目标市场。</p>
-            <ul class="career-tag-list"><li>商科</li><li>计算机</li><li>工程</li><li>金融</li><li>市场营销</li></ul>
-          </article>
+        <div class="career-guide-grid career-guide-grid--four">
+          <article class="career-card fade-in"><span class="career-card-number">01 / MARKET</span><h3>求职趋势</h3><p>关注招聘环境和岗位需求的变化，理解企业正在寻找怎样的人才。</p><ul class="career-tag-list"><li>2026就业市场趋势</li><li>热门行业分析</li><li>岗位需求变化</li></ul><span class="career-card-link">Employment Trends</span></article>
+          <article class="career-card fade-in"><span class="career-card-number">02 / PLANNING</span><h3>职业规划</h3><p>在行动前明确方向，减少试错成本，让经历积累形成长期价值。</p><ul class="career-tag-list"><li>何时开始准备求职</li><li>如何选择职业方向</li><li>能力差距分析</li></ul><span class="career-card-link">Career Planning</span></article>
+          <article class="career-card fade-in"><span class="career-card-number">03 / INDUSTRY</span><h3>行业洞察</h3><p>从真实岗位、业务模式和成长路径理解行业，而不只依赖职位名称。</p><ul class="career-tag-list"><li>AI行业发展</li><li>金融行业机会</li><li>咨询行业路径</li></ul><span class="career-card-link">Industry Insights</span></article>
+          <article class="career-card fade-in"><span class="career-card-number">04 / GLOBAL</span><h3>海外职业机会</h3><p>结合地区政策、求职周期与行业分布，判断海外发展的现实路径。</p><ul class="career-tag-list"><li>英国工作机会</li><li>香港就业</li><li>澳洲就业</li></ul><span class="career-card-link">Global Opportunities</span></article>
         </div>
       </div>
     </section>
@@ -880,22 +998,22 @@
       <div class="career-container">
         <div class="career-section-head fade-in"><span class="career-kicker">Why Planning</span><h2 class="career-heading">为什么需要职业发展规划</h2></div>
         <div class="career-reason-grid">
-          <article class="career-card fade-in"><span class="career-card-number">01</span><h3>信息差</h3><p>海外学历不等于职业机会。学生需要真正理解行业需求、招聘逻辑与岗位之间的区别。</p></article>
-          <article class="career-card fade-in"><span class="career-card-number">02</span><h3>方向选择</h3><p>专业不等于职业。方向判断需要同时考虑学历背景、技能、兴趣与市场趋势。</p></article>
-          <article class="career-card fade-in"><span class="career-card-number">03</span><h3>长期竞争力</h3><p>提前规划实习和职业路线，让每段经历都为下一步选择积累可验证的竞争力。</p></article>
+          <article class="career-card fade-in"><span class="career-card-number">01</span><h3>信息差</h3><p>很多人并不了解行业真实情况、岗位要求和企业招聘逻辑，选择容易停留在表面认知。</p></article>
+          <article class="career-card fade-in"><span class="career-card-number">02</span><h3>方向选择</h3><p>专业、兴趣、能力和市场需求需要共同匹配，职业方向不是由单一标签决定。</p></article>
+          <article class="career-card fade-in"><span class="career-card-number">03</span><h3>长期竞争力</h3><p>职业发展不是完成一次求职，而是在不同阶段持续升级能力、判断与选择。</p></article>
         </div>
       </div>
     </section>
 
     <section class="career-section career-section--navy" id="career-system">
       <div class="career-container">
-        <div class="career-section-head fade-in"><span class="career-kicker">Our System</span><h2 class="career-heading career-heading--light">我们的服务体系</h2><p class="career-lead" style="color:#bfd0df">从方向判断到 Offer 选择，以五个阶段建立连续、可复盘的职业发展路径。</p></div>
+        <div class="career-section-head fade-in"><span class="career-kicker">Our System</span><h2 class="career-heading career-heading--light">职业成长服务体系</h2><p class="career-lead" style="color:#bfd0df">从评估、策略到能力建设和行动执行，形成清晰、连续、可复盘的职业发展流程。</p></div>
         <div class="career-process">
-          <article class="career-step fade-in"><span class="career-step-index">01</span><h3>职业方向诊断</h3><p>输入：学校、专业、经历、目标<br>输出：行业方向、岗位方向、行动计划</p></article>
-          <article class="career-step fade-in"><span class="career-step-index">02</span><h3>竞争力提升</h3><p>简历优化<br>经历包装<br>技能提升</p></article>
-          <article class="career-step fade-in"><span class="career-step-index">03</span><h3>岗位策略</h3><p>目标公司分析<br>岗位筛选<br>投递策略</p></article>
-          <article class="career-step fade-in"><span class="career-step-index">04</span><h3>行业导师</h3><p>互联网、金融、AI 科技<br>医疗、消费行业、国央企</p></article>
-          <article class="career-step fade-in"><span class="career-step-index">05</span><h3>求职 Track</h3><p>投递管理<br>面试复盘<br>Offer 选择</p></article>
+          <article class="career-step fade-in"><span class="career-step-index">01</span><div><span class="career-step-name">Career Assessment</span><h3>职业评估</h3><p>教育背景、工作经历、技能、兴趣、目标<br>输出：职业方向建议</p></div></article>
+          <article class="career-step fade-in"><span class="career-step-index">02</span><div><span class="career-step-name">Career Strategy</span><h3>职业策略</h3><p>行业选择<br>岗位分析<br>发展路线</p></div></article>
+          <article class="career-step fade-in"><span class="career-step-index">03</span><div><span class="career-step-name">Career Building</span><h3>竞争力提升</h3><p>简历与项目经历<br>技能建设<br>个人品牌</p></div></article>
+          <article class="career-step fade-in"><span class="career-step-index">04</span><div><span class="career-step-name">Career Coaching</span><h3>导师辅导</h3><p>互联网、金融、AI、医疗<br>咨询、市场、国央企</p></div></article>
+          <article class="career-step fade-in"><span class="career-step-index">05</span><div><span class="career-step-name">Career Execution</span><h3>求职陪跑</h3><p>岗位筛选、投递管理<br>面试训练<br>Offer选择</p></div></article>
         </div>
       </div>
     </section>
@@ -903,31 +1021,28 @@
     <section class="career-section" id="career-plans">
       <div class="career-container">
         <div class="career-section-head career-section-head--split fade-in">
-          <div><span class="career-kicker">Service Plans</span><h2 class="career-heading">职业发展套餐</h2></div>
-          <p class="career-lead">按职业阶段选择服务深度。每个方案都从真实背景与目标出发，不套用统一模板。</p>
+          <div><span class="career-kicker">Service Plans</span><h2 class="career-heading">职业发展服务套餐</h2></div>
+          <p class="career-lead">根据当前阶段和目标选择服务深度。每个方案都从个人背景与真实机会出发。</p>
         </div>
         <div class="career-pricing-grid">
-          <article class="career-plan fade-in"><span class="career-plan-eyebrow">方向起步</span><h3>职业方向诊断</h3><div class="career-price">¥399</div><p class="career-duration">周期：1次咨询</p><ul><li>背景分析</li><li>职业方向判断</li><li>主方向 + 备选方向</li><li>未来 3–6 个月行动建议</li></ul><p class="career-plan-fit">适合：没有明确职业方向的学生</p></article>
-          <article class="career-plan fade-in"><span class="career-plan-eyebrow">第一段实习</span><h3>实习陪跑计划</h3><div class="career-price">¥3999</div><p class="career-duration">周期：约3个月</p><ul><li>职业方向诊断</li><li>简历优化与岗位分析</li><li>求职 Tracker</li><li>行业导师辅导</li><li>面试训练</li><li>实习 Offer 复盘</li></ul><p class="career-plan-fit">适合：准备第一段实习的学生</p></article>
-          <article class="career-plan career-plan--featured fade-in"><span class="career-plan-badge">推荐</span><span class="career-plan-eyebrow">核心方案</span><h3>单赛道全流程求职</h3><div class="career-price">¥6999</div><p class="career-duration">周期：4–6个月</p><ul><li>求职定位与路线规划</li><li>简历体系优化</li><li>目标岗位池</li><li>行业导师辅导</li><li>面试训练</li><li>Offer 选择</li></ul><p class="career-plan-fit">适合：已有目标方向，希望系统完成求职闭环</p></article>
-          <article class="career-plan fade-in"><span class="career-plan-eyebrow">复合选择</span><h3>双赛道求职旗舰</h3><div class="career-price">¥10999</div><p class="career-duration">周期：约6个月</p><ul><li>双方向规划</li><li>双版本简历</li><li>双岗位策略</li><li>两类行业导师</li><li>面试训练</li></ul><p class="career-plan-fit">适合：同步探索两类行业或岗位方向</p></article>
-          <article class="career-plan fade-in"><span class="career-plan-eyebrow">长期成长</span><h3>年度职业成长计划</h3><div class="career-price">¥16999</div><p class="career-duration">周期：10–12个月</p><ul><li>长期职业规划</li><li>实习规划</li><li>能力提升</li><li>阶段复盘</li><li>校招准备</li></ul><p class="career-plan-fit">适合：希望从实习准备延伸至校招的学生</p></article>
+          <article class="career-plan fade-in"><span class="career-plan-eyebrow">方向探索</span><h3><span class="career-plan-name">Career Assessment</span>职业方向诊断</h3><div class="career-price">¥399</div><p class="career-duration">一次深度咨询</p><ul><li>背景分析</li><li>职业方向建议</li><li>近期行动规划</li></ul><p class="career-plan-fit">适合：正在探索职业方向的人</p></article>
+          <article class="career-plan fade-in"><span class="career-plan-eyebrow">实习启动</span><h3><span class="career-plan-name">Internship Accelerator</span>实习陪跑计划</h3><div class="career-price">¥3999</div><p class="career-duration">约3个月</p><ul><li>职业定位</li><li>简历优化</li><li>岗位分析</li><li>行业导师指导</li><li>面试训练</li></ul><p class="career-plan-fit">适合：寻找第一段实习的人</p></article>
+          <article class="career-plan career-plan--featured fade-in"><span class="career-plan-badge">推荐</span><span class="career-plan-eyebrow">完整求职</span><h3><span class="career-plan-name">Career Accelerator</span>全流程求职方案</h3><div class="career-price">¥6999</div><p class="career-duration">适用于毕业求职、秋招与春招</p><ul><li>职业定位</li><li>岗位策略</li><li>简历体系</li><li>导师辅导</li><li>面试训练</li><li>Offer选择</li></ul><p class="career-plan-fit">适合：希望系统推进求职全流程的人</p></article>
+          <article class="career-plan fade-in"><span class="career-plan-eyebrow">双线选择</span><h3><span class="career-plan-name">Dual Career Plan</span>双方向职业规划</h3><div class="career-price">¥10999</div><p class="career-duration">约6个月</p><ul><li>双方向定位</li><li>双版本简历</li><li>双岗位策略</li><li>两类行业导师</li><li>面试训练</li></ul><p class="career-plan-fit">适合：在两条职业路径之间同步探索的人</p></article>
+          <article class="career-plan fade-in"><span class="career-plan-eyebrow">长期成长</span><h3><span class="career-plan-name">Annual Career Growth</span>年度职业成长计划</h3><div class="career-price">¥16999</div><p class="career-duration">10–12个月</p><ul><li>长期职业规划</li><li>能力提升路线</li><li>阶段目标与复盘</li><li>实习或求职准备</li><li>职业选择支持</li></ul><p class="career-plan-fit">适合：需要持续建立职业竞争力的人</p></article>
         </div>
       </div>
     </section>
 
     <section class="career-section career-section--soft" id="career-services">
       <div class="career-container">
-        <div class="career-section-head fade-in"><span class="career-kicker">Focused Services</span><h2 class="career-heading">单项服务</h2><p class="career-lead">针对明确需求灵活选择，适合补齐求职流程中的单个关键环节。</p></div>
+        <div class="career-section-head fade-in"><span class="career-kicker">Focused Services</span><h2 class="career-heading">单项服务</h2><p class="career-lead">针对明确需求选择单项支持，补齐职业决策或求职过程中的关键环节。</p></div>
         <div class="career-services fade-in">
-          <div class="career-service"><span><span class="career-service-name">简历诊断</span><small class="career-service-note">结构与问题定位</small></span><span class="career-service-price">¥199</span></div>
-          <div class="career-service"><span><span class="career-service-name">简历诊断 Plus</span><small class="career-service-note">深度修改建议</small></span><span class="career-service-price">¥399</span></div>
+          <div class="career-service"><span><span class="career-service-name">职业咨询</span><small class="career-service-note">方向与行动建议</small></span><span class="career-service-price">¥399</span></div>
+          <div class="career-service"><span><span class="career-service-name">简历优化</span><small class="career-service-note">结构与表达优化</small></span><span class="career-service-price">¥199</span></div>
           <div class="career-service"><span><span class="career-service-name">行业导师咨询</span><small class="career-service-note">60 min</small></span><span class="career-service-price">¥699</span></div>
-          <div class="career-service"><span><span class="career-service-name">3次导师课包</span><small class="career-service-note">行业认知与面试</small></span><span class="career-service-price">¥1799</span></div>
-          <div class="career-service"><span><span class="career-service-name">5次导师课包</span><small class="career-service-note">连续能力提升</small></span><span class="career-service-price">¥3299</span></div>
-          <div class="career-service"><span><span class="career-service-name">1个月求职 Track</span><small class="career-service-note">投递与复盘管理</small></span><span class="career-service-price">¥1499</span></div>
-          <div class="career-service"><span><span class="career-service-name">3个月求职 Track</span><small class="career-service-note">完整求职周期</small></span><span class="career-service-price">¥3499</span></div>
-          <div class="career-service"><span><span class="career-service-name">导师课 + Track</span><small class="career-service-note">指导与执行结合</small></span><span class="career-service-price">¥1899</span></div>
+          <div class="career-service"><span><span class="career-service-name">模拟面试</span><small class="career-service-note">训练与反馈</small></span><span class="career-service-price">¥699</span></div>
+          <div class="career-service"><span><span class="career-service-name">求职 Track</span><small class="career-service-note">投递管理与复盘</small></span><span class="career-service-price">¥1499起</span></div>
           <div class="career-service"><span><span class="career-service-name">岗位定向简历</span><small class="career-service-note">面向目标岗位定制</small></span><span class="career-service-price">¥1499</span></div>
         </div>
       </div>
@@ -935,29 +1050,46 @@
 
     <section class="career-section" id="career-mentors">
       <div class="career-container career-mentor-layout">
-        <div class="fade-in"><span class="career-kicker">Industry Mentors</span><h2 class="career-heading">行业导师体系</h2><p class="career-lead">我们的导师来自真实业务与招聘环境，帮助学生减少信息差，理解行业如何运转、岗位真正需要什么。</p></div>
+        <div class="fade-in"><span class="career-kicker">Industry Mentor Network</span><h2 class="career-heading">行业导师体系</h2><p class="career-lead">导师带来的不只是经验分享，更是真实行业认知：岗位如何运作、企业如何判断人才、下一步能力应如何建立。</p></div>
         <div class="career-industry-grid fade-in">
-          <div class="career-industry">互联网企业</div><div class="career-industry">金融机构</div><div class="career-industry">医疗健康</div>
-          <div class="career-industry">AI科技企业</div><div class="career-industry">消费品牌</div><div class="career-industry">国央企</div>
+          <div class="career-industry">Technology</div><div class="career-industry">Finance</div><div class="career-industry">AI</div>
+          <div class="career-industry">Healthcare</div><div class="career-industry">Consulting</div><div class="career-industry">Consumer</div>
+          <div class="career-industry">Public Sector</div>
         </div>
       </div>
     </section>
 
     <section class="career-section career-section--soft" id="career-audience">
       <div class="career-container">
-        <div class="career-section-head fade-in"><span class="career-kicker">Who We Support</span><h2 class="career-heading">适合哪些学生</h2></div>
-        <div class="career-profile-grid">
-          <article class="career-card fade-in"><span class="career-profile-label">01 / Undergraduate</span><h3>本科生</h3><p>提前规划实习和职业方向，把在校阶段转化为持续积累竞争力的窗口。</p></article>
-          <article class="career-card fade-in"><span class="career-profile-label">02 / Postgraduate</span><h3>海外硕士</h3><p>完成从专业到职业的转换，在紧凑学制中抓住关键求职节点。</p></article>
-          <article class="career-card fade-in"><span class="career-profile-label">03 / Graduate</span><h3>毕业求职者</h3><p>系统准备秋招和 Offer，从方向、材料到投递与面试形成完整闭环。</p></article>
+        <div class="career-section-head fade-in"><span class="career-kicker">Who We Support</span><h2 class="career-heading">适用人群</h2><p class="career-lead">服务覆盖从校园到职场转型的不同阶段，留学生是我们的优势客群之一，但不是唯一人群。</p></div>
+        <div class="career-profile-grid career-profile-grid--five">
+          <article class="career-card fade-in"><span class="career-profile-label">01 / Student</span><h3>大学生</h3><p>探索职业方向，规划能力与实习积累。</p></article>
+          <article class="career-card fade-in"><span class="career-profile-label">02 / Global</span><h3>留学生</h3><p>理解海外市场，规划当地或回国就业。</p></article>
+          <article class="career-card fade-in"><span class="career-profile-label">03 / Graduate</span><h3>应届毕业生</h3><p>准备第一份工作，建立完整求职策略。</p></article>
+          <article class="career-card fade-in"><span class="career-profile-label">04 / Early Career</span><h3>职场新人</h3><p>复盘职业起点，寻找下一阶段突破。</p></article>
+          <article class="career-card fade-in"><span class="career-profile-label">05 / Transition</span><h3>转行业人群</h3><p>识别可迁移能力，重新规划发展路径。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="career-section" id="career-stories">
+      <div class="career-container">
+        <div class="career-section-head career-section-head--split fade-in">
+          <div><span class="career-kicker">Career Stories</span><h2 class="career-heading">职业成长路径</h2></div>
+          <p class="career-lead">以下为典型服务路径示例，重点呈现从背景判断到能力建设的过程，而不是只展示最终 Offer。</p>
+        </div>
+        <div class="career-story-grid">
+          <article class="career-story fade-in"><span class="career-story-meta">PATH 01 / CAMPUS</span><h3>从专业选择到实习方向</h3><dl><div><dt>教育背景</dt><dd>国内高校商科在读</dd></div><div><dt>目标</dt><dd>找到适合自己的第一段实习方向</dd></div><div><dt>解决方案</dt><dd>职业评估、岗位拆解、项目经历梳理</dd></div><div><dt>阶段结果</dt><dd>形成两条目标岗位路径与对应能力清单</dd></div></dl></article>
+          <article class="career-story fade-in"><span class="career-story-meta">PATH 02 / GLOBAL</span><h3>从海外学习到双线求职</h3><dl><div><dt>教育背景</dt><dd>海外硕士在读</dd></div><div><dt>目标</dt><dd>同步评估当地就业与回国发展机会</dd></div><div><dt>解决方案</dt><dd>市场对比、双版本简历、求职时间规划</dd></div><div><dt>阶段结果</dt><dd>建立地区优先级、岗位池与阶段投递节奏</dd></div></dl></article>
+          <article class="career-story fade-in"><span class="career-story-meta">PATH 03 / TRANSITION</span><h3>从现有经验到转型路径</h3><dl><div><dt>职业阶段</dt><dd>工作三年的职场新人</dd></div><div><dt>目标</dt><dd>从运营方向转向数据相关岗位</dd></div><div><dt>解决方案</dt><dd>可迁移能力盘点、技能差距与项目路线</dd></div><div><dt>阶段结果</dt><dd>明确转型顺序，并形成可验证的项目计划</dd></div></dl></article>
         </div>
       </div>
     </section>
 
     <section class="career-cta">
       <div class="career-container career-cta-inner fade-in">
-        <div><span class="career-kicker">Start Your Next Step</span><h2>下一份 Offer，<br>从一次职业规划开始。</h2><p>先了解你的背景、目标与时间窗口，再决定最合适的路径。</p></div>
-        <button class="career-button career-button--light" type="button" data-open-career-contact>免费咨询</button>
+        <div><span class="career-kicker">Build Your Path</span><h2>找到适合你的职业路径</h2><p>从一次职业评估开始，厘清方向、差距与下一步行动。</p></div>
+        <button class="career-button career-button--light" type="button" data-open-career-contact>免费职业评估</button>
       </div>
     </section>
   </main>
