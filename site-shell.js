@@ -170,6 +170,10 @@
             </div>
           </div>
         </div>
+        <div class="site-footer-company" id="company-info">
+          <p><strong>公司名称</strong><span>长沙市芯鱼国际教育咨询有限公司</span></p>
+          <p><strong>注册地址</strong><span>湖南省长沙市岳麓区岳麓街道潇湘中路328号麓枫和苑33号栋湖南大学湘江新区大学生创新创业园1楼182号</span></p>
+        </div>
         <div class="site-footer-bottom">
           <span>&copy; ${year} DreamBridge 留学服务</span>
           <span>历史案例仅供申请规划参考，具体结果因个人背景与院校政策而异。</span>
