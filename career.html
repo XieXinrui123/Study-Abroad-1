@@ -713,14 +713,93 @@
       content: "";
       background: var(--career-gold);
     }
-    .career-industry-grid { gap: 1px; background: #cddbe5; }
-    .career-industry {
-      min-height: 112px;
-      border: 0;
-      border-radius: 0;
-      background: rgba(255,255,255,.86);
+    .career-industry-network {
+      position: relative;
+      min-height: 490px;
+      overflow: hidden;
+      border: 1px solid rgba(23, 63, 103, .13);
+      border-radius: 50%;
+      background: rgba(255,255,255,.45);
     }
-    .career-industry-grid .career-industry:last-child { grid-column: 2; }
+    .career-industry-network::before,
+    .career-industry-network::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      content: "";
+      border: 1px solid rgba(23, 63, 103, .13);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .career-industry-network::before { width: 70%; height: 70%; }
+    .career-industry-network::after { width: 42%; height: 42%; }
+    .career-industry-core {
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      width: 180px;
+      height: 180px;
+      display: grid;
+      place-content: center;
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      color: #fff;
+      background: var(--career-navy);
+      box-shadow: 0 18px 46px rgba(12,45,72,.18);
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+    .career-industry-core span {
+      color: #d4ad72;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+    .career-industry-core strong {
+      display: block;
+      margin: 7px 0 3px;
+      font-family: "Songti SC", STSong, "Noto Serif SC", Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .career-industry-core small { color: #aebfcd; font-size: 12px; }
+    .career-industry-network .career-industry {
+      position: absolute;
+      z-index: 4;
+      width: 154px;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 16px;
+      border: 1px solid #cad7e1;
+      border-radius: 8px;
+      color: var(--career-navy);
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 10px 24px rgba(12,45,72,.07);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .career-industry-network .career-industry::before {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: var(--career-gold);
+      content: attr(data-index);
+      font-family: Georgia, serif;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .career-industry--1 { top: 5%; left: 18%; }
+    .career-industry--2 { top: 7%; right: 13%; }
+    .career-industry--3 { top: 37%; right: 2%; }
+    .career-industry--4 { right: 13%; bottom: 6%; }
+    .career-industry--5 { bottom: 3%; left: 23%; }
+    .career-industry--6 { bottom: 23%; left: 1%; }
+    .career-industry--7 { top: 23%; left: 3%; }
     .career-profile-grid { gap: 18px; }
     .career-profile-grid .career-card { min-height: 240px; }
     .career-profile-grid .career-card:nth-child(2) { color: #fff; border-color: var(--career-blue); background: var(--career-blue); }
@@ -754,7 +833,9 @@
     .dark .career-reason-grid .career-card { background: transparent; }
     .dark .career-reason-grid .career-card:hover { background: #132638; }
     .dark .career-mentor-layout { background: #14283a; }
-    .dark .career-industry-grid { background: #294056; }
+    .dark .career-industry-network { border-color: #294056; background: #102438; }
+    .dark .career-industry-network::before,
+    .dark .career-industry-network::after { border-color: #30485e; }
 
     @media (max-width: 980px) {
       .career-container { width: min(100% - 48px, 1180px); }
@@ -803,7 +884,6 @@
       .career-plan:last-child { grid-column: auto; min-height: auto; }
       .career-services { grid-template-columns: 1fr; gap: 10px; }
       .career-mentor-layout { grid-template-columns: 1fr; gap: 38px; padding: 36px 24px; }
-      .career-industry-grid { grid-template-columns: repeat(2, 1fr); }
       .career-profile-grid .career-card { min-height: auto; }
       .career-cta { padding: 84px 0; }
       .career-cta::before { width: 8px; background: var(--career-gold); }
@@ -946,7 +1026,32 @@
       .career-profile-grid--five .career-card { min-height: auto; }
       .career-profile-grid--five .career-card:last-child { grid-column: auto; }
       .career-story { padding: 26px; }
-      .career-industry-grid .career-industry:last-child { grid-column: 1 / -1; }
+      .career-industry-network {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 118px 14px 14px;
+        border-radius: 10px;
+      }
+      .career-industry-network::before,
+      .career-industry-network::after { display: none; }
+      .career-industry-core {
+        top: 14px;
+        width: calc(100% - 28px);
+        height: 88px;
+        border-radius: 7px;
+        transform: translateX(-50%);
+      }
+      .career-industry-core strong { font-size: 18px; }
+      .career-industry-network .career-industry {
+        position: relative;
+        inset: auto;
+        width: auto;
+        min-height: 78px;
+        box-shadow: none;
+      }
+      .career-industry-network .career-industry:last-child { grid-column: 1 / -1; }
     }
   </style>
 </head>
@@ -1050,11 +1155,16 @@
 
     <section class="career-section" id="career-mentors">
       <div class="career-container career-mentor-layout">
-        <div class="fade-in"><span class="career-kicker">Industry Mentor Network</span><h2 class="career-heading">行业导师体系</h2><p class="career-lead">导师带来的不只是经验分享，更是真实行业认知：岗位如何运作、企业如何判断人才、下一步能力应如何建立。</p></div>
-        <div class="career-industry-grid fade-in">
-          <div class="career-industry">Technology</div><div class="career-industry">Finance</div><div class="career-industry">AI</div>
-          <div class="career-industry">Healthcare</div><div class="career-industry">Consulting</div><div class="career-industry">Consumer</div>
-          <div class="career-industry">Public Sector</div>
+        <div class="fade-in"><span class="career-kicker">行业导师网络</span><h2 class="career-heading">行业导师体系</h2><p class="career-lead">导师带来的不只是经验分享，更是真实行业认知：岗位如何运作、企业如何判断人才、下一步能力应如何建立。</p></div>
+        <div class="career-industry-network fade-in" aria-label="行业导师覆盖领域">
+          <div class="career-industry-core"><span>行业导师</span><strong>真实行业认知</strong><small>理解岗位 · 判断机会</small></div>
+          <div class="career-industry career-industry--1" data-index="01">科技互联网</div>
+          <div class="career-industry career-industry--2" data-index="02">金融机构</div>
+          <div class="career-industry career-industry--3" data-index="03">人工智能</div>
+          <div class="career-industry career-industry--4" data-index="04">医疗健康</div>
+          <div class="career-industry career-industry--5" data-index="05">咨询行业</div>
+          <div class="career-industry career-industry--6" data-index="06">消费品牌</div>
+          <div class="career-industry career-industry--7" data-index="07">国央企与公共部门</div>
         </div>
       </div>
     </section>
