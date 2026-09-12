@@ -9,6 +9,36 @@
   <link rel="stylesheet" href="site-shell.css?v=20260912-1">
   <style>
     :root {
+      --color-bg: #f5f4ef;
+      --color-surface: #ffffff;
+      --color-text: #172235;
+      --color-text-secondary: #5d6878;
+      --color-primary: #173f67;
+      --color-primary-dark: #102f4e;
+      --color-success: #2e7466;
+      --color-accent: #b7792b;
+      --color-border: #dfe2e5;
+      --color-dark-bg: #0e2237;
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-10: 40px;
+      --space-12: 48px;
+      --space-16: 64px;
+      --text-xs: 12px;
+      --text-sm: 13px;
+      --text-md: 15px;
+      --text-lg: 16px;
+      --text-xl: 18px;
+      --text-2xl: 20px;
+      --z-header: 100;
+      --duration-fast: 150ms;
+      --duration-base: 250ms;
+      --ease-out: cubic-bezier(.16, 1, .3, 1);
       --career-navy: #102f4d;
       --career-blue: #173f67;
       --career-blue-soft: #edf4fa;
@@ -35,6 +65,88 @@
     }
     a { color: inherit; text-decoration: none; }
     button { font: inherit; }
+    .container { width: min(1200px, 90%); margin: 0 auto; }
+
+    /* Shared DreamBridge header and footer shell */
+    .header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: var(--z-header);
+      color: #fff;
+      background: rgba(14, 34, 55, .98);
+      border-bottom: 1px solid rgba(255,255,255,.09);
+      box-shadow: 0 4px 20px rgba(5, 19, 32, .12);
+    }
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      padding: 12px 0;
+    }
+    .logo {
+      flex: 0 0 auto;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+    .logo span { color: #73b5a5; }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a {
+      position: relative;
+      padding: 7px 0;
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+      font-weight: 600;
+      transition: color var(--duration-fast) ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: #fff; }
+    .nav-links a::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      content: "";
+      background: var(--career-gold);
+      transform: scaleX(0);
+      transition: transform var(--duration-base) var(--ease-out);
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { transform: scaleX(1); }
+    .theme-toggle {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.17);
+      border-radius: 6px;
+      color: #fff;
+      background: rgba(255,255,255,.08);
+      cursor: pointer;
+    }
+    .footer {
+      position: relative;
+      padding: 72px 0 32px;
+      border-top: 1px solid rgba(255,255,255,.06);
+      color: #94a3b8;
+      background: var(--color-dark-bg);
+    }
+    .footer .logo { display: inline-block; margin-bottom: 16px; font-size: 20px; }
+    .footer .site-consult-btn { border: 0; cursor: pointer; }
+    .footer .site-footer-grid {
+      grid-template-columns: 1.35fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer .site-footer-links a { display: block; }
+    .footer .site-footer-title { margin: 0 0 14px; }
+    .footer .site-footer-company { margin-top: 34px; }
+    .footer .site-footer-bottom { margin-top: 20px; }
+    .career-page-body .site-admission-broadcast { display: none !important; }
     .career-page { overflow: hidden; }
     .career-container { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
     .career-section { padding: 100px 0; scroll-margin-top: 100px; }
@@ -657,6 +769,12 @@
     }
 
     @media (max-width: 760px) {
+      .container { width: min(100% - 32px, 1200px); }
+      .nav-wrap { min-height: 64px; padding: 10px 0; }
+      .nav-links, .site-primary-action { display: none; }
+      .site-menu-toggle { display: flex; }
+      .footer { padding: 56px 0 92px; }
+      .footer .site-footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .career-container { width: min(100% - 32px, 1180px); }
       .career-section { padding: 76px 0; }
       .career-section-head { margin-bottom: 36px; }
@@ -699,7 +817,7 @@
     }
   </style>
 </head>
-<body>
+<body class="career-page-body">
   <header class="header"></header>
 
   <main class="career-page">
@@ -864,6 +982,10 @@
       const openers = document.querySelectorAll('[data-open-career-contact]');
       const closer = document.querySelector('[data-close-career-contact]');
       const topButton = document.querySelector('.career-to-top');
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.site-admission-broadcast')?.remove();
+      });
 
       const openModal = () => {
         modal.classList.add('is-open');
