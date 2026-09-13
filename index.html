@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DreamBridge留学申请服务，专注英国、香港、新加坡、澳洲等地区。累计服务500+学生，提供真实案例匹配、背景评估与透明申请服务。">
-<title>DreamBridge留学｜英港新澳一站式申请服务</title>
+<meta name="description" content="DreamBridge 成立于 2022 年，提供留学申请、语言培训、职业发展与考公考编服务，帮助年轻人把复杂选择变成清晰路径。">
+<title>DreamBridge｜留学申请、语言培训、职业发展与考公考编</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 :root {
   /* === 重构后的色彩系统 === */
   --color-bg: #f7fbff;
@@ -1003,108 +1001,6 @@ ul, ol { list-style: none; }
   fill: var(--color-bg);
 }
 
-/* ===== About区域 ===== */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  gap: var(--space-12);
-  align-items: start;
-}
-.about-text p {
-  color: var(--color-text-secondary);
-  font-size: var(--text-md);
-  line-height: 1.85;
-  margin-bottom: var(--space-6);
-}
-
-/* 服务团队卡片 */
-.team-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-6);
-  position: relative;
-  overflow: hidden;
-}
-.team-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-}
-.team-card h3 {
-  font-size: var(--text-lg);
-  font-weight: 700;
-  margin-bottom: var(--space-4);
-  color: var(--color-text);
-}
-.team-card li {
-  padding: var(--space-3) 0;
-  border-bottom: 1px solid var(--color-border-light);
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-  line-height: 1.6;
-  position: relative;
-  padding-left: var(--space-5);
-}
-.team-card li:last-child { border-bottom: none; }
-.team-card li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-primary);
-  opacity: 0.4;
-}
-.signature {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  color: var(--color-accent);
-  margin-top: var(--space-4);
-  font-weight: 600;
-}
-
-/* 指标区域 */
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
-  margin-top: var(--space-8);
-}
-.metric-item {
-  background: var(--color-surface);
-  padding: var(--space-6) var(--space-4);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
-  text-align: center;
-  transition: all var(--duration-base) var(--ease-out);
-}
-.metric-item:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-primary-light);
-}
-.metric-value {
-  font-size: var(--text-3xl);
-  font-weight: 800;
-  color: var(--color-primary);
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-.metric-label {
-  font-size: var(--text-xs);
-  color: var(--color-text-secondary);
-  margin-top: var(--space-2);
-  font-weight: 500;
-}
-
 /* ===== 服务流程可视化 ===== */
 .process-section {
   position: relative;
@@ -1807,7 +1703,6 @@ ul, ol { list-style: none; }
   .mini-grid { grid-template-columns: repeat(2, 1fr); }
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .about-grid { gap: var(--space-8); }
 }
 
 @media (max-width: 768px) {
@@ -1836,7 +1731,6 @@ ul, ol { list-style: none; }
     margin-left: 0;
   }
   .nav-links { display: none; }
-  .about-grid { grid-template-columns: 1fr; }
   .cards-grid { grid-template-columns: 1fr; }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -1862,7 +1756,6 @@ ul, ol { list-style: none; }
   .offer-student-name { font-size: 12px; }
   .offer-school { font-size: var(--text-sm); }
   .section-title { font-size: var(--text-2xl); }
-  .metrics { grid-template-columns: 1fr; }
   .hero-cta { flex-direction: column; align-items: center; }
   .hero-cta .btn { width: 100%; max-width: 280px; }
   .decision-path { margin-top: -28px; }
@@ -1878,7 +1771,7 @@ ul, ol { list-style: none; }
   .hero-stat-value { font-size: var(--text-xl); }
 }
 </style>
-<link rel="stylesheet" href="site-shell.css?v=20260912-1">
+<link rel="stylesheet" href="site-shell.css?v=20260913-1">
 </head>
 <body class="home-page">
 
@@ -1899,7 +1792,7 @@ ul, ol { list-style: none; }
 <header class="header" id="topHeader">
   <div class="container nav-wrap">
     <nav class="nav-links">
-      <a href="index.html#about">中介介绍</a>
+      <a href="about.html">关于我们</a>
       <a href="package.html">套餐服务</a>
     </nav>
     <a href="index.html" class="logo">Dream<span>Bridge</span></a>
@@ -1910,7 +1803,7 @@ ul, ol { list-style: none; }
     <button class="theme-toggle" id="themeToggle">&#127765;</button>
   </div>
 </header>
-<script src="site-shell.js?v=20260912-1"></script>
+<script src="site-shell.js?v=20260913-1"></script>
 
 <main>
 
@@ -1962,12 +1855,16 @@ ul, ol { list-style: none; }
   </div>
 
   <div class="container hero-content fade-in" id="heroContent">
-    <span class="hero-tag">用真实案例，减少申请信息差</span>
-    <h1 class="hero-title">先看相似案例，再定<span class="highlight">留学方案</span></h1>
-    <p class="hero-subtitle">输入本科院校、专业和均分，30秒匹配相似录取案例；从选校定位到签证落地，覆盖英港新澳主流申请地区。</p>
+    <span class="hero-tag">EDUCATION &amp; CAREER DEVELOPMENT</span>
+    <h1 class="hero-title">把复杂选择，<br>变成<span class="highlight">清晰路径。</span></h1>
+    <p class="hero-subtitle">从留学申请、语言培训，到职业发展与考公考编，DreamBridge 围绕年轻人在不同阶段面对的重要选择，提供专业判断与持续支持。</p>
     <div class="hero-cta">
-      <a href="evaluator.html" class="btn btn-primary">免费背景评估</a>
-      <a href="cases.html" class="btn btn-secondary">查看真实案例</a>
+      <a href="#business" class="btn btn-primary">查看服务</a>
+      <a href="about.html" class="btn btn-secondary">了解 DreamBridge</a>
+    </div>
+    <div class="home-hero-utility" aria-label="留学申请快捷入口">
+      <a href="evaluator.html">免费背景评估 <span>→</span></a>
+      <a href="cases.html">查看真实案例 <span>→</span></a>
     </div>
     <div class="hero-stats" id="heroStats">
       <div class="hero-stat">
@@ -1979,7 +1876,7 @@ ul, ol { list-style: none; }
         <span class="hero-stat-label">累计录取结果</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-value" data-count="500" data-suffix="+">0</span>
+        <span class="hero-stat-value" data-case-count>513</span>
         <span class="hero-stat-label">案例库记录</span>
       </div>
     </div>
@@ -2030,36 +1927,64 @@ ul, ol { list-style: none; }
   </svg>
 </div>
 
-<!-- ===== About ===== -->
-<section class="section" id="about">
-  <div class="container about-grid fade-in">
-    <div class="about-text">
-      <p class="section-kicker">About Us</p>
-      <h2 class="section-title">专业团队，清晰路径，结果导向</h2>
-      <p>创始人毕业于新加坡国立大学计算机专业，拥有5年英联邦留学申请经验。团队累计服务500+签约学生，擅长职业规划与项目定位。服务地区覆盖英国、香港、新加坡、澳洲、新西兰、澳门。</p>
-      <div class="metrics stagger-children" id="metricsArea">
-        <div class="metric-item">
-          <div class="metric-value" data-count="500" data-suffix="+">0</div>
-          <div class="metric-label">累计服务学生</div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-value" data-count="500" data-suffix="+">0</div>
-          <div class="metric-label">案例库记录</div>
-        </div>
-        <div class="metric-item">
-          <div class="metric-value" data-count="5" data-suffix="年">0</div>
-          <div class="metric-label">行业经验</div>
-        </div>
-      </div>
+<!-- ===== Brand statement ===== -->
+<section class="home-brand-statement" aria-labelledby="brand-statement-title">
+  <div class="container fade-in">
+    <p class="section-kicker">WHY DREAMBRIDGE</p>
+    <h2 id="brand-statement-title">我们解决的，不只是一次申请、<br>一场考试或者一份简历。</h2>
+    <div class="home-brand-statement-copy">
+      <span>更重要的是</span>
+      <p>当一个年轻人面对重要选择时，如何获得足够的信息，找到更适合自己的方向，并真正把计划执行下去。</p>
     </div>
-    <div class="team-card">
-      <h3>&#127942; 服务团队</h3>
-      <ul>
-        <li>选校顾问：院校匹配与策略制定</li>
-        <li>文书导师：故事线打磨与面试辅导</li>
-        <li>申请管家：节点管理与材料跟进</li>
-      </ul>
-      <p class="signature">让申请，不再焦虑。</p>
+  </div>
+</section>
+
+<!-- ===== Four businesses ===== -->
+<section class="home-business-section" id="business" aria-labelledby="business-title">
+  <div class="container">
+    <div class="home-editorial-head fade-in">
+      <div><p class="section-kicker">WHAT WE DO</p><h2 class="section-title" id="business-title">围绕年轻人的关键选择</h2></div>
+      <p>连接教育背景、个人能力和职业机会，让不同阶段的问题进入一条更清晰的成长路径。</p>
+    </div>
+    <div class="home-business-grid stagger-children">
+      <a class="home-business-item" href="package.html"><span>01 / STUDY ABROAD</span><h3>留学申请</h3><p>选校定位、文书申请、申请管理与录取后支持。</p><b>了解服务 →</b></a>
+      <a class="home-business-item" href="package.html#ielts-training"><span>02 / LANGUAGE</span><h3>语言培训</h3><p>雅思及英语能力提升，围绕升学与实际使用需求进行学习规划。</p><b>了解服务 →</b></a>
+      <a class="home-business-item" href="career.html"><span>03 / CAREER</span><h3>职业发展</h3><p>职业评估、行业导师、求职策略、面试辅导与求职陪跑。</p><b>了解服务 →</b></a>
+      <a class="home-business-item" href="about.html#what-we-do"><span>04 / PUBLIC SECTOR</span><h3>考公考编</h3><p>方向判断、岗位选择、备考规划与公共部门职业发展。</p><b>了解服务 →</b></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About preview ===== -->
+<section class="home-about-preview" id="about" aria-labelledby="about-preview-title">
+  <div class="container home-about-preview-grid">
+    <div class="fade-in">
+      <p class="section-kicker">ABOUT DREAMBRIDGE</p>
+      <h2 id="about-preview-title">从 2022 年的<br>一份留学申请开始</h2>
+      <div class="home-about-copy">
+        <p>DreamBridge 最初解决的是留学申请中的信息差。</p>
+        <p>随着服务的人越来越多，我们逐渐发现，年轻人的问题并不会在拿到一封 Offer 后结束。</p>
+        <p>之后还有语言、实习、求职、职业选择，以及不同人生阶段新的发展问题。于是，我们开始把这些原本分散的问题，放进一条更完整的成长路径里。</p>
+      </div>
+      <a class="home-text-link" href="about.html">了解 DreamBridge <span>→</span></a>
+    </div>
+    <ol class="home-about-timeline fade-in" aria-label="DreamBridge 发展路径">
+      <li><span>2022</span><strong>留学申请</strong><small>从解决申请信息差开始</small></li>
+      <li><span>02</span><strong>团队化服务</strong><small>让判断与执行更有连续性</small></li>
+      <li><span>03</span><strong>职业发展</strong><small>延伸到实习、求职与长期成长</small></li>
+      <li><span>04</span><strong>语言 · 公职 · 更多成长场景</strong><small>回应年轻人不同阶段的重要选择</small></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Principles ===== -->
+<section class="home-principles" aria-labelledby="principles-title">
+  <div class="container">
+    <div class="home-editorial-head fade-in"><div><p class="section-kicker">OUR PRINCIPLES</p><h2 class="section-title" id="principles-title">我们如何提供支持</h2></div></div>
+    <div class="home-principles-grid stagger-children">
+      <article><span>01</span><h3>先理解问题</h3><p>真正的规划从背景、目标和现实约束开始。</p></article>
+      <article><span>02</span><h3>匹配专业的人</h3><p>不同问题，由真正了解这个领域的人参与。</p></article>
+      <article><span>03</span><h3>推进执行</h3><p>规划只有落实为任务、节点与反馈，才真正产生价值。</p></article>
     </div>
   </div>
 </section>
@@ -2156,9 +2081,16 @@ ul, ol { list-style: none; }
       </a>
       <a href="cases.html" class="mini-card" style="text-decoration:none;color:inherit;">
         <h3>案例数据库</h3>
-        <p>500+真实录取案例，支持按地区、院校档次、GPA等多维度筛选对比</p>
+        <p><span data-case-count-text data-case-count-suffix=" 条真实录取案例">513 条真实录取案例</span>，支持按地区、院校档次、GPA等多维度筛选对比</p>
       </a>
     </div>
+  </div>
+</section>
+
+<section class="home-final-cta" aria-labelledby="home-final-cta-title">
+  <div class="container home-final-cta-inner fade-in">
+    <div><p class="section-kicker">START A CONVERSATION</p><h2 id="home-final-cta-title">下一步，不必一个人想清楚。</h2></div>
+    <button class="btn btn-primary" type="button" onclick="openQr()">联系我们</button>
   </div>
 </section>
 
@@ -2180,7 +2112,7 @@ ul, ol { list-style: none; }
       <!-- 品牌栏 -->
       <div class="footer-brand">
         <a href="index.html" class="logo">Dream<span>Bridge</span></a>
-        <p>专注英港新澳留学申请，用专业与效率陪你走向理想学府。创始人NUS计算机毕业，累计服务500+学生。</p>
+        <p>DreamBridge 成立于 2022 年，是一家面向年轻人的教育与职业发展服务机构。</p>
         <div class="footer-actions">
           <button class="btn btn-primary btn-sm" onclick="openQr()">立即咨询</button>
           <a class="btn btn-secondary btn-sm" href="mailto:496680190@qq.com" style="color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.15);">发送邮件</a>
@@ -2189,7 +2121,7 @@ ul, ol { list-style: none; }
       <!-- 导航栏 -->
       <div class="footer-nav">
         <h4>快速导航</h4>
-        <a href="index.html#about">中介介绍</a>
+        <a href="about.html">关于我们</a>
         <a href="package.html">套餐服务</a>
         <a href="cases.html">案例汇总</a>
         <a href="index.html#faq">常见问题</a>
@@ -2319,7 +2251,7 @@ function setupCountUpObserver() {
     });
   }, { threshold: 0.3 });
 
-  document.querySelectorAll('.hero-stats, .metrics, .stagger-children').forEach(el => observer.observe(el));
+  document.querySelectorAll('.hero-stats, .stagger-children').forEach(el => observer.observe(el));
 }
 
 // ===== 倒计时 =====
