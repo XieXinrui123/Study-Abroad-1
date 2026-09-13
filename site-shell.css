@@ -243,13 +243,20 @@ body {
 .site-nav-dropdown-menu a {
   padding: 10px 12px;
   border-radius: 8px;
-  color: #40516a;
+  color: #243b5a !important;
+  background: transparent;
   font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
 }
 
 .site-nav-dropdown-menu a::after { display: none; }
 .site-nav-dropdown-menu a:hover,
-.site-nav-dropdown-menu a.active { color: #10243e; background: #f1f5fb; }
+.site-nav-dropdown-menu a.active {
+  color: #0f4fbf !important;
+  background: #eef4ff;
+}
 
 .site-nav-actions {
   display: flex;
