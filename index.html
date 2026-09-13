@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DreamBridge留学申请服务，专注英国、香港、新加坡、澳洲等地区。累计服务500+学生，提供真实案例匹配、背景评估与透明申请服务。">
-<title>DreamBridge留学｜英港新澳一站式申请服务</title>
+<meta name="description" content="DreamBridge 于2022年从留学申请服务起步，业务覆盖留学申请、语言培训、职业发展与考公考编，为年轻人在升学、能力与职业的重要节点提供持续支持。">
+<title>DreamBridge｜留学申请、语言培训、职业发展与考公考编</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -1877,8 +1877,141 @@ ul, ol { list-style: none; }
   .hero-stats { gap: var(--space-5); }
   .hero-stat-value { font-size: var(--text-xl); }
 }
+
+/* ===== Homepage brand/About refresh ===== */
+.home-about-pro {
+  background:
+    radial-gradient(circle at 88% 16%, rgba(37,99,235,.07), transparent 26%),
+    var(--color-bg);
+}
+.home-about-pro-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.78fr);
+  gap:64px;
+  align-items:center;
+}
+.home-about-lead {
+  max-width:720px;
+  color:var(--color-text);
+  font-size:17px;
+  line-height:1.85;
+}
+.home-about-body {
+  max-width:720px;
+  margin-top:16px;
+  color:var(--color-text-secondary);
+  font-size:14px;
+  line-height:1.85;
+}
+.home-about-metrics {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:30px;
+  border-top:1px solid var(--color-border);
+  border-bottom:1px solid var(--color-border);
+}
+.home-about-metric {
+  padding:18px 18px 18px 0;
+  border-right:1px solid var(--color-border);
+}
+.home-about-metric + .home-about-metric { padding-left:18px; }
+.home-about-metric:last-child { border-right:0; }
+.home-about-metric strong {
+  display:block;
+  color:var(--color-text);
+  font-size:20px;
+  font-weight:850;
+  letter-spacing:-.03em;
+}
+.home-about-metric span {
+  color:var(--color-text-secondary);
+  font-size:12px;
+}
+.home-about-actions {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+.home-about-map {
+  padding:30px;
+  border:1px solid rgba(37,99,235,.14);
+  border-radius:24px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 88% 10%, rgba(37,99,235,.2), transparent 28%),
+    #10233d;
+  box-shadow:var(--shadow-lg);
+}
+.home-about-map-label {
+  margin-bottom:18px;
+  color:#8eb5ff;
+  font-size:11px;
+  font-weight:850;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.home-about-map-row {
+  display:grid;
+  grid-template-columns:36px 1fr auto;
+  gap:13px;
+  align-items:center;
+  padding:17px 0;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.home-about-map-row:first-of-type { border-top:0; }
+.home-about-map-row > span {
+  width:30px;height:30px;
+  display:grid;place-items:center;
+  border-radius:9px;
+  color:#9fc0ff;
+  background:rgba(255,255,255,.06);
+  font-size:10px;
+  font-weight:900;
+}
+.home-about-map-row strong { display:block; color:#fff; font-size:14px; }
+.home-about-map-row small { color:rgba(255,255,255,.56); font-size:11px; }
+.home-about-map-row b {
+  padding:5px 8px;
+  border-radius:999px;
+  color:#b8f1df;
+  background:rgba(16,185,129,.12);
+  font-size:10px;
+  font-weight:850;
+  white-space:nowrap;
+}
+.home-about-map-row.future b {
+  color:#f7d798;
+  background:rgba(245,158,11,.12);
+}
+.home-about-quote {
+  margin:22px 0 0;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.1);
+  color:rgba(255,255,255,.74);
+  font-family:"Songti SC",STSong,"Noto Serif SC",serif;
+  font-size:18px;
+  line-height:1.7;
+}
+@media (max-width:900px) {
+  .home-about-pro-grid { grid-template-columns:1fr; gap:38px; }
+}
+@media (max-width:620px) {
+  .home-about-metrics { grid-template-columns:1fr; }
+  .home-about-metric,.home-about-metric + .home-about-metric {
+    padding:14px 0;
+    border-right:0;
+    border-bottom:1px solid var(--color-border);
+  }
+  .home-about-metric:last-child { border-bottom:0; }
+  .home-about-map { padding:22px; border-radius:20px; }
+  .home-about-map-row { grid-template-columns:34px 1fr; }
+  .home-about-map-row b { grid-column:2; justify-self:start; }
+}
+
 </style>
-<link rel="stylesheet" href="site-shell.css?v=20260912-1">
+<link rel="stylesheet" href="site-shell.css?v=20260913-2">
+<link rel="stylesheet" href="brand-v2.css?v=20260913-2">
 </head>
 <body class="home-page">
 
@@ -1899,7 +2032,7 @@ ul, ol { list-style: none; }
 <header class="header" id="topHeader">
   <div class="container nav-wrap">
     <nav class="nav-links">
-      <a href="index.html#about">中介介绍</a>
+      <a href="about.html">关于我们</a>
       <a href="package.html">套餐服务</a>
     </nav>
     <a href="index.html" class="logo">Dream<span>Bridge</span></a>
@@ -1910,86 +2043,42 @@ ul, ol { list-style: none; }
     <button class="theme-toggle" id="themeToggle">&#127765;</button>
   </div>
 </header>
-<script src="site-shell.js?v=20260912-1"></script>
+<script src="site-shell.js?v=20260913-2"></script>
 
 <main>
 
 <!-- ===== HERO区域 ===== -->
-<section class="hero" id="hero">
-  <div class="hero-map"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-blob hero-blob-1"></div>
-  <div class="hero-blob hero-blob-2"></div>
-  <div class="hero-routes" id="heroRoutes"></div>
-  <div class="hero-floaters">
-    <div class="float-item float-stem">
-      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
-        <rect x="25" y="25" width="50" height="50" rx="4" stroke-opacity="0.6"/>
-        <path d="M25 40h-8M25 50h-8M25 60h-8M75 40h8M75 50h8M75 60h8M40 25v-8M50 25v-8M60 25v-8M40 75v8M50 75v8M60 75v8" stroke-opacity="0.4"/>
-        <circle cx="50" cy="50" r="12" stroke-opacity="0.5"/>
-        <path d="M38 50h24M50 38v24" stroke-opacity="0.3"/>
-      </svg>
-    </div>
-    <div class="float-item float-business">
-      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M15 75c10-5 15-20 25-15s15 25 25 10 15-30 20-25" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M70 45l5-5v15h-15l5-5" stroke-linecap="round" stroke-linejoin="round" fill="currentColor" fill-opacity="0.2"/>
-        <rect x="15" y="20" width="20" height="12" rx="2" fill="currentColor" fill-opacity="0.15"/>
-        <rect x="42" y="28" width="20" height="12" rx="2" fill="currentColor" fill-opacity="0.1"/>
-        <path d="M20 85h60" stroke-opacity="0.3" stroke-dasharray="3 3"/>
-      </svg>
-    </div>
-    <div class="float-item float-arts">
-      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
-        <circle cx="50" cy="35" r="22" stroke-opacity="0.5"/>
-        <path d="M28 35c0-12 10-22 22-22s22 10 22 22" stroke-opacity="0.3"/>
-        <path d="M28 35h44M50 13v44" stroke-opacity="0.3"/>
-        <path d="M32 23c8 4 28 4 36 0M32 47c8-4 28-4 36 0" stroke-opacity="0.2"/>
-        <path d="M25 65h50v20a5 5 0 0 1-5 5H30a5 5 0 0 1-5-5V65z" stroke-opacity="0.4"/>
-        <path d="M25 65l25 12 25-12" stroke-opacity="0.3"/>
-      </svg>
-    </div>
-    <div class="float-item float-art">
-      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M50 20c-22 0-40 18-40 40s18 40 40 40c5 0 8-4 8-8s-4-8-8-8c-12 0-22-10-22-22s10-22 22-22c8 0 15 4 20 10" stroke-opacity="0.5"/>
-        <circle cx="35" cy="45" r="5" fill="currentColor" fill-opacity="0.3"/>
-        <circle cx="50" cy="38" r="5" fill="currentColor" fill-opacity="0.2"/>
-        <circle cx="65" cy="45" r="5" fill="currentColor" fill-opacity="0.25"/>
-        <circle cx="42" cy="60" r="5" fill="currentColor" fill-opacity="0.15"/>
-        <circle cx="58" cy="60" r="5" fill="currentColor" fill-opacity="0.2"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="container hero-content fade-in" id="heroContent">
-    <span class="hero-tag">用真实案例，减少申请信息差</span>
-    <h1 class="hero-title">先看相似案例，再定<span class="highlight">留学方案</span></h1>
-    <p class="hero-subtitle">输入本科院校、专业和均分，30秒匹配相似录取案例；从选校定位到签证落地，覆盖英港新澳主流申请地区。</p>
-    <div class="hero-cta">
-      <a href="evaluator.html" class="btn btn-primary">免费背景评估</a>
-      <a href="cases.html" class="btn btn-secondary">查看真实案例</a>
-    </div>
-    <div class="hero-stats" id="heroStats">
-      <div class="hero-stat">
-        <span class="hero-stat-value" data-count="500" data-suffix="+">0</span>
-        <span class="hero-stat-label">累计服务学生</span>
+<section class="brand-home-hero" id="hero">
+  <div class="container brand-home-grid">
+    <div id="heroContent">
+      <div class="brand-home-kicker">DreamBridge · Education & Career Development</div>
+      <h1 class="brand-home-title">把复杂选择，<br>变成清晰路径。</h1>
+      <p class="brand-home-copy">从留学申请、语言培训，到职业发展与考公考编，我们围绕年轻人在不同阶段真正会遇到的关键选择，提供更清晰的信息、更专业的判断和更可靠的执行。</p>
+      <div class="brand-home-actions">
+        <a class="btn btn-primary" href="package.html">查看我们的服务</a>
+        <a class="btn btn-secondary" href="about.html">了解 DreamBridge</a>
       </div>
-      <div class="hero-stat">
-        <span class="hero-stat-value" data-count="3000" data-suffix="+">0</span>
-        <span class="hero-stat-label">累计录取结果</span>
-      </div>
-      <div class="hero-stat">
-        <span class="hero-stat-value" data-count="500" data-suffix="+">0</span>
-        <span class="hero-stat-label">案例库记录</span>
+      <div class="brand-home-meta hero-stats" id="heroStats">
+        <span><strong>2022</strong><br>开始提供服务</span>
+        <span><strong data-count="500" data-suffix="+">0</strong><br>累计服务学生</span>
+        <span><strong>升学 → 职业</strong><br>持续覆盖成长关键节点</span>
       </div>
     </div>
-    <p class="hero-proof-note">截至 2026 年 7 月，按现有服务与录取记录统计；案例库持续补录中。</p>
-  </div>
-  <div class="hero-scroll">
-    <div class="mouse-icon"></div>
-    <span>向下滚动</span>
+    <aside class="brand-service-index" aria-label="DreamBridge四大业务">
+      <a class="brand-service-row" href="package.html"><span>01</span><div><strong>留学申请</strong><small>选校 · 文书 · 申请 · 签证</small></div><b>→</b></a>
+      <div class="brand-service-row"><span>02</span><div><strong>语言培训</strong><small>雅思 · 英语能力 · 学习规划</small></div><b>—</b></div>
+      <a class="brand-service-row" href="career.html"><span>03</span><div><strong>职业发展</strong><small>规划 · 导师 · 求职陪跑</small></div><b>→</b></a>
+      <div class="brand-service-row"><span>04</span><div><strong>考公考编</strong><small>方向 · 备考 · 岗位 · 公职发展</small></div><b>—</b></div>
+    </aside>
   </div>
 </section>
+<section class="brand-statement">
+  <div class="container brand-statement-inner">
+    <div class="brand-num">OUR POINT OF VIEW</div>
+    <h2>我们解决的，不只是某一次申请、某一场考试或者某一份简历。<br><br><em>我们更关心：当重要选择出现时，你有没有足够的信息，看清真正适合自己的方向。</em></h2>
+  </div>
+</section>
+
 
 <section class="decision-path" aria-label="申请规划下一步">
   <div class="container">
@@ -2031,36 +2120,59 @@ ul, ol { list-style: none; }
 </div>
 
 <!-- ===== About ===== -->
-<section class="section" id="about">
-  <div class="container about-grid fade-in">
-    <div class="about-text">
-      <p class="section-kicker">About Us</p>
-      <h2 class="section-title">专业团队，清晰路径，结果导向</h2>
-      <p>创始人毕业于新加坡国立大学计算机专业，拥有5年英联邦留学申请经验。团队累计服务500+签约学生，擅长职业规划与项目定位。服务地区覆盖英国、香港、新加坡、澳洲、新西兰、澳门。</p>
-      <div class="metrics stagger-children" id="metricsArea">
-        <div class="metric-item">
-          <div class="metric-value" data-count="500" data-suffix="+">0</div>
-          <div class="metric-label">累计服务学生</div>
+<section class="section home-about-pro" id="about">
+  <div class="container home-about-pro-grid fade-in">
+    <div class="home-about-pro-copy">
+      <p class="section-kicker">About DreamBridge</p>
+      <h2 class="section-title">从一次申请，到更长期的成长支持</h2>
+      <p class="home-about-lead">DreamBridge 于 2022 年从留学申请服务起步。创始人毕业于新加坡国立大学硕士项目；随着服务需求增加，我们逐步从个人服务走向团队协作，也从“去哪读书”继续延伸到“以后做什么”。</p>
+      <p class="home-about-body">今天，我们的业务覆盖留学申请、语言培训、职业发展与考公考编。我们不是简单把更多服务放在一起，而是希望围绕年轻人在不同阶段真正会遇到的问题，提供更清晰的信息、更专业的判断和更可靠的执行。</p>
+
+      <div class="home-about-metrics" id="metricsArea">
+        <div class="home-about-metric">
+          <strong>2022</strong>
+          <span>开始提供服务</span>
         </div>
-        <div class="metric-item">
-          <div class="metric-value" data-count="500" data-suffix="+">0</div>
-          <div class="metric-label">案例库记录</div>
+        <div class="home-about-metric">
+          <strong data-count="500" data-suffix="+">0</strong>
+          <span>累计服务学生</span>
         </div>
-        <div class="metric-item">
-          <div class="metric-value" data-count="5" data-suffix="年">0</div>
-          <div class="metric-label">行业经验</div>
+        <div class="home-about-metric">
+          <strong>升学 → 职业</strong>
+          <span>持续延伸服务边界</span>
         </div>
       </div>
+
+      <div class="home-about-actions">
+        <a class="btn btn-primary" href="about.html">了解 DreamBridge</a>
+        <a class="btn btn-secondary" href="career.html">查看职业发展</a>
+      </div>
     </div>
-    <div class="team-card">
-      <h3>&#127942; 服务团队</h3>
-      <ul>
-        <li>选校顾问：院校匹配与策略制定</li>
-        <li>文书导师：故事线打磨与面试辅导</li>
-        <li>申请管家：节点管理与材料跟进</li>
-      </ul>
-      <p class="signature">让申请，不再焦虑。</p>
-    </div>
+
+    <aside class="home-about-map">
+      <div class="home-about-map-label">Our Services</div>
+      <div class="home-about-map-row">
+        <span>01</span>
+        <div><strong>留学申请</strong><small>选校 · 文书 · 申请 · 签证</small></div>
+        
+      </div>
+      <div class="home-about-map-row">
+        <span>02</span>
+        <div><strong>职业发展</strong><small>规划 · 导师 · 求职陪跑</small></div>
+        
+      </div>
+      <div class="home-about-map-row">
+        <span>03</span>
+        <div><strong>语言培训</strong><small>雅思 · 英语能力 · 学习规划</small></div>
+        
+      </div>
+      <div class="home-about-map-row">
+        <span>04</span>
+        <div><strong>考公考编</strong><small>方向 · 备考 · 岗位 · 公职发展</small></div>
+        
+      </div>
+      <p class="home-about-quote">“不只帮你去哪里，更陪你想清楚下一步往哪里走。”</p>
+    </aside>
   </div>
 </section>
 
@@ -2180,7 +2292,7 @@ ul, ol { list-style: none; }
       <!-- 品牌栏 -->
       <div class="footer-brand">
         <a href="index.html" class="logo">Dream<span>Bridge</span></a>
-        <p>专注英港新澳留学申请，用专业与效率陪你走向理想学府。创始人NUS计算机毕业，累计服务500+学生。</p>
+        <p>专注英港新澳留学申请，用专业与效率陪你走向理想学府。2022年从留学申请起步，逐步拓展职业发展与更多成长服务。</p>
         <div class="footer-actions">
           <button class="btn btn-primary btn-sm" onclick="openQr()">立即咨询</button>
           <a class="btn btn-secondary btn-sm" href="mailto:496680190@qq.com" style="color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.15);">发送邮件</a>
@@ -2189,7 +2301,7 @@ ul, ol { list-style: none; }
       <!-- 导航栏 -->
       <div class="footer-nav">
         <h4>快速导航</h4>
-        <a href="index.html#about">中介介绍</a>
+        <a href="about.html">关于我们</a>
         <a href="package.html">套餐服务</a>
         <a href="cases.html">案例汇总</a>
         <a href="index.html#faq">常见问题</a>
@@ -2319,7 +2431,7 @@ function setupCountUpObserver() {
     });
   }, { threshold: 0.3 });
 
-  document.querySelectorAll('.hero-stats, .metrics, .stagger-children').forEach(el => observer.observe(el));
+  document.querySelectorAll('.hero-stats, .metrics, .home-about-metrics, .stagger-children').forEach(el => observer.observe(el));
 }
 
 // ===== 倒计时 =====
