@@ -1445,11 +1445,14 @@ body {
 .about-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; gap: 100px; align-items: center; }
 .about-page main h1 { max-width: 700px; font-size: clamp(58px, 6.2vw, 84px); line-height: 1.08; }
 .about-lead { max-width: 650px; margin: 30px 0 0; color: #66758a; font-size: 18px; line-height: 1.95; }
-.about-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
-.about-button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; padding: 0 24px; border: 1px solid #10243e; border-radius: 10px; font-weight: 700; cursor: pointer; }
-.about-button--primary { color: #fff; background: #2f64d6; border-color: #2f64d6; }
-.about-button--secondary { color: #10243e; background: transparent; }
-.about-button--light { color: #10243e; background: #fff; border-color: #fff; }
+.about-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+.about-button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0 18px; border-radius: 8px; font-size: 14px; font-weight: 600; line-height: 1; cursor: pointer; text-decoration: none; transition: color .18s ease, background-color .18s ease, border-color .18s ease, transform .18s ease; }
+.about-button--primary { color: #fff; background: #10243e; border: 1px solid #10243e; }
+.about-button--primary:hover { color: #fff; background: #183653; border-color: #183653; transform: translateY(-1px); }
+.about-button--secondary { color: #53657a; background: transparent; border: 1px solid #d7dee7; }
+.about-button--secondary:hover { color: #10243e; background: #fff; border-color: #aebaca; transform: translateY(-1px); }
+.about-button--light { color: #10243e; background: #fff; border: 1px solid #fff; }
+.about-button--light:hover { color: #10243e; background: #f7f9fc; border-color: #f7f9fc; transform: translateY(-1px); }
 
 .about-brand-index { padding: 30px; border: 1px solid #d9e1eb; border-radius: 16px; background: #fff; }
 .about-brand-index-head { display: flex; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid #e5eaf0; color: #66758a; font-size: 11px; letter-spacing: .08em; }
