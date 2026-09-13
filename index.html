@@ -1771,7 +1771,7 @@ ul, ol { list-style: none; }
   .hero-stat-value { font-size: var(--text-xl); }
 }
 </style>
-<link rel="stylesheet" href="site-shell.css?v=20260913-1">
+<link rel="stylesheet" href="site-shell.css?v=20260913-2">
 </head>
 <body class="home-page">
 
@@ -2048,19 +2048,6 @@ ul, ol { list-style: none; }
   </div>
 </section>
 
-<!-- ===== Plans ===== -->
-<section class="section section-alt" id="plans">
-  <div class="container fade-in">
-    <p class="section-kicker">服务方式</p>
-    <h2 class="section-title">按参与程度选择服务</h2>
-    <p style="color:var(--color-text-secondary);font-size:var(--text-md);margin:calc(-1 * var(--space-5)) 0 var(--space-8);">首页展示核心区别，价格、服务边界和退款条款请在套餐页查看。</p>
-    <div class="cards-grid stagger-children" id="planCards"></div>
-    <p style="margin-top:var(--space-8);text-align:center;">
-      <a class="btn btn-primary" href="package.html" style="padding: var(--space-3) var(--space-8);">比较价格与服务内容</a>
-    </p>
-  </div>
-</section>
-
 <!-- ===== Quick Links ===== -->
 <section class="section">
   <div class="container fade-in">
@@ -2197,12 +2184,6 @@ const offersData = [
   { from: "西南交大 安全工程", gpa: "84.21", to: "NUS + 港理工", tag: "211冲前10", tier: "211", offerImage: "" },
   { from: "中国农业大学 工业设计", gpa: "2.8", to: "NTU", tag: "985低分冲前50", tier: "985", offerImage: "" },
   { from: "四川大学 化学", gpa: "82", to: "UCL + 曼大 + NTU", tag: "985多offer", tier: "985", offerImage: "" },
-];
-
-const plansData = [
-  {name: "DIY服务（纯DIY）", desc: "材料润色与答疑、申请流程指导", price: "按项目计费", services: ["简历润色 500/篇", "文书润色 1000/篇", "推荐信润色 400/篇", "DIY答疑 1888/年"]},
-  {name: "半DIY服务", desc: "材料撰写支持+策略指导+部分流程自主", price: "全套3999元起", services: ["简历代写 1000/篇", "文书代写 2000/篇", "推荐信代写 800/篇", "网申辅助 100/项目"]},
-  {name: "全包服务", desc: "全程代办+签证支持+流程管理", price: "10000元/8项目起", featured: true, services: ["澳新申请 免费递交", "英港新 10000/8项目", "15000/15项目", "超级混申 20000"]}
 ];
 
 const faqsData = [
@@ -2369,30 +2350,6 @@ function setupDragScroll() {
   });
 }
 
-// ===== 套餐视图切换 =====
-function showPlanView(view) {
-  document.querySelectorAll('.plan-toggle-btn').forEach(b => b.classList.toggle('active',
-    (view === 'cards' && b.textContent.includes('\u5361\u7247')) || (view === 'table' && b.textContent.includes('\u5bf9\u6bd4'))
-  ));
-  if ($('planCards')) $('planCards').style.display = view === 'cards' ? 'grid' : 'none';
-  if ($('compareTable')) $('compareTable').classList.toggle('active', view === 'table');
-}
-
-function renderPlans() {
-  const wrap = $('planCards');
-  if (!wrap) return;
-  plansData.forEach(p => {
-    const card = document.createElement('article');
-    card.className = 'plan-card' + (p.featured ? ' featured' : '');
-    card.innerHTML = (p.featured ? '<span class="plan-badge">&#11088; 推荐</span>' : '') +
-      '<div class="plan-name">' + p.name + '</div>' +
-      '<div class="plan-desc">' + p.desc + '</div>' +
-      '<div class="plan-price">' + p.price + '</div>' +
-      '<ul class="plan-list">' + p.services.map(s => '<li>' + s + '</li>').join('') + '</ul>';
-    wrap.appendChild(card);
-  });
-}
-
 // ===== FAQ渲染 =====
 function renderFAQ() {
   const list = $('faqList');
@@ -2495,7 +2452,6 @@ window.addEventListener('resize', () => {
 });
 renderOffersWall();
 setupDragScroll();
-renderPlans();
 renderFAQ();
 setupUI();
 setupEventListeners();
