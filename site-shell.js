@@ -4,12 +4,15 @@
 
   const navItems = [
     ['首页', 'index.html'],
-    ['服务套餐', 'package.html'],
+    ['留学服务', 'package.html'],
+    ['职业发展', 'career.html'],
     ['案例库', 'cases.html'],
+    ['关于我们', 'about.html']
+  ];
+  const toolItems = [
     ['背景评估', 'evaluator.html'],
-    ['时间线', 'timeline.html'],
-    ['费用计算', 'calculator.html'],
-    ['就业指南', 'career.html']
+    ['申请时间线', 'timeline.html'],
+    ['费用计算', 'calculator.html']
   ];
 
   const currentPage = location.pathname.split('/').pop() || 'index.html';
@@ -17,13 +20,20 @@
     const active = currentPage === href;
     return `<a href="${href}" class="${active ? 'active' : ''}"${active ? ' aria-current="page"' : ''}>${label}</a>`;
   }).join('');
+  const toolsActive = toolItems.some(([, href]) => currentPage === href);
+  const toolLinks = toolItems.map(([label, href]) => {
+    const active = currentPage === href;
+    return `<a href="${href}" class="${active ? 'active' : ''}"${active ? ' aria-current="page"' : ''}>${label}</a>`;
+  }).join('');
+  const desktopLinks = `${links}<div class="site-nav-dropdown${toolsActive ? ' active' : ''}"><button type="button" aria-haspopup="true">申请工具<span aria-hidden="true">⌄</span></button><div class="site-nav-dropdown-menu">${toolLinks}</div></div>`;
+  const mobileLinks = `${links}<div class="site-mobile-link-group"><span>申请工具</span>${toolLinks}</div>`;
 
   header.innerHTML = `
     <div class="container nav-wrap site-nav-wrap">
       <a href="index.html" class="logo" aria-label="DreamBridge 首页">Dream<span>Bridge</span></a>
-      <nav class="nav-links site-desktop-nav" aria-label="主导航">${links}</nav>
+      <nav class="nav-links site-desktop-nav" aria-label="主导航">${desktopLinks}</nav>
       <div class="site-nav-actions">
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色模式">🌓</button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色模式"><span class="site-theme-icon" aria-hidden="true"></span></button>
         <a class="site-primary-action" href="evaluator.html#evaluator">免费背景评估</a>
         <button class="site-menu-toggle" id="siteMenuToggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="siteMobileMenu"><span></span></button>
       </div>
@@ -39,7 +49,7 @@
   mobileMenu.innerHTML = `
     <div class="site-mobile-panel" role="dialog" aria-modal="true" aria-label="网站导航">
       <button class="site-mobile-close" id="siteMobileClose" type="button" aria-label="关闭导航菜单">×</button>
-      <nav class="site-mobile-links" aria-label="移动端导航">${links}</nav>
+      <nav class="site-mobile-links" aria-label="移动端导航">${mobileLinks}</nav>
       <a class="site-mobile-primary-action" href="evaluator.html#evaluator">免费背景评估</a>
       <button class="site-mobile-consult" type="button" onclick="openQr()">微信咨询：xxr13365810586</button>
     </div>
@@ -47,11 +57,24 @@
   document.body.appendChild(mobileMenu);
 
   if (!document.querySelector('.site-mobile-primary')) {
-    const mobilePrimary = document.createElement('a');
+    const mobilePrimary = document.createElement('div');
     mobilePrimary.className = 'site-mobile-primary';
-    mobilePrimary.href = 'evaluator.html#evaluator';
-    mobilePrimary.setAttribute('aria-label', '免费背景评估，30秒匹配相似案例');
-    mobilePrimary.innerHTML = '<span><strong>不确定能申请什么学校？</strong><small>30秒匹配相似录取案例</small></span><b>免费评估</b>';
+    mobilePrimary.innerHTML = `
+      <button class="site-mobile-primary-toggle" id="siteMobilePrimaryToggle" type="button" aria-label="打开申请工具" aria-expanded="false" aria-controls="siteMobileActions">
+        <span><strong>从哪里开始？</strong><small>评估、案例匹配或人工咨询</small></span>
+        <b>选择工具</b>
+      </button>
+      <div class="site-mobile-actions" id="siteMobileActions" aria-hidden="true">
+        <div class="site-mobile-actions-head">
+          <span><strong>选择下一步</strong><small>所有工具均可免费使用</small></span>
+          <button type="button" data-mobile-action="close" aria-label="关闭申请工具">×</button>
+        </div>
+        <a href="evaluator.html#evaluator"><strong>背景评估</strong><small>根据 4 项背景匹配相似录取</small></a>
+        <a href="cases.html"><strong>查看案例库</strong><small>按地区、学校和专业筛选案例</small></a>
+        <button type="button" data-mobile-action="assistant"><strong>申请助手</strong><small>使用案例匹配与申请信息导航</small></button>
+        <button type="button" data-mobile-action="wechat"><strong>微信人工咨询</strong><small>xxr13365810586</small></button>
+      </div>
+    `;
     document.body.appendChild(mobilePrimary);
   }
 
@@ -59,6 +82,9 @@
   const menu = document.getElementById('siteMobileMenu');
   const closeButton = document.getElementById('siteMobileClose');
   const themeToggle = document.getElementById('themeToggle');
+  const mobilePrimary = document.querySelector('.site-mobile-primary');
+  const mobilePrimaryToggle = document.getElementById('siteMobilePrimaryToggle');
+  const mobileActions = document.getElementById('siteMobileActions');
   let savedTheme = '';
   try { savedTheme = localStorage.getItem('dreambridge-theme') || ''; } catch {}
   if (savedTheme === 'dark') document.body.classList.add('dark');
@@ -71,6 +97,7 @@
   });
 
   function setMenu(open) {
+    if (open) setMobileActions(false);
     toggle.classList.toggle('open', open);
     menu.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', String(open));
@@ -84,6 +111,32 @@
     }
   }
 
+  function setMobileActions(open) {
+    if (!mobileActions || !mobilePrimaryToggle) return;
+    mobileActions.classList.toggle('open', open);
+    mobilePrimary.classList.toggle('actions-open', open);
+    mobilePrimaryToggle.setAttribute('aria-expanded', String(open));
+    mobileActions.setAttribute('aria-hidden', String(!open));
+  }
+
+  mobilePrimaryToggle?.addEventListener('click', () => {
+    setMobileActions(!mobileActions.classList.contains('open'));
+  });
+  mobileActions?.addEventListener('click', event => {
+    const action = event.target.closest('[data-mobile-action]')?.dataset.mobileAction;
+    if (event.target.closest('a')) setMobileActions(false);
+    if (action === 'close') setMobileActions(false);
+    if (action === 'wechat') {
+      setMobileActions(false);
+      if (typeof window.openQr === 'function') window.openQr();
+    }
+    if (action === 'assistant') {
+      setMobileActions(false);
+      const assistantButton = document.querySelector('.db-assistant-fab');
+      if (assistantButton) assistantButton.click();
+    }
+  });
+
   toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
   closeButton.addEventListener('click', () => setMenu(false));
   menu.addEventListener('click', event => {
@@ -91,6 +144,7 @@
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && menu.classList.contains('open')) setMenu(false);
+    if (event.key === 'Escape') setMobileActions(false);
   });
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768 && menu.classList.contains('open')) setMenu(false);
@@ -133,6 +187,25 @@
       else main.prepend(broadcast);
     }
 
+    fetch('cases.json', { cache: 'no-store' })
+      .then(response => {
+        if (!response.ok) throw new Error('案例数据加载失败');
+        return response.json();
+      })
+      .then(cases => {
+        if (!Array.isArray(cases)) return;
+        const count = cases.length;
+        document.querySelectorAll('[data-case-count]').forEach(node => {
+          node.textContent = String(count);
+          node.dataset.count = String(count);
+        });
+        document.querySelectorAll('[data-case-count-text]').forEach(node => {
+          const suffix = node.dataset.caseCountSuffix || ' 条真实案例';
+          node.textContent = `${count}${suffix}`;
+        });
+      })
+      .catch(() => {});
+
     document.querySelectorAll('.to-top').forEach(button => {
       button.setAttribute('aria-label', '返回页面顶部');
       button.setAttribute('title', '返回顶部');
@@ -148,21 +221,34 @@
 
     const footer = document.querySelector('footer.footer');
     if (!footer) return;
+    if (!footer.id) footer.id = 'contact';
     const year = new Date().getFullYear();
     footer.innerHTML = `
       <div class="container">
         <div class="site-footer-grid">
           <div>
             <a href="index.html" class="logo" aria-label="DreamBridge 首页">Dream<span>Bridge</span></a>
-            <p class="site-footer-brand-copy">专注英港新澳留学申请，累计服务 500+ 学生，以真实案例、清晰流程和透明服务帮助学生完成选校与申请。</p>
+            <p class="site-footer-brand-copy">DreamBridge 成立于 2022 年，是一家面向年轻人的教育与职业发展服务机构。</p>
             <button class="site-consult-btn" type="button" onclick="openQr()">添加微信咨询</button>
           </div>
           <div>
-            <h2 class="site-footer-title">网站导航</h2>
-            <nav class="site-footer-links" aria-label="页脚导航">${links}</nav>
+            <h2 class="site-footer-title">业务方向</h2>
+            <nav class="site-footer-links" aria-label="业务方向">
+              <a href="package.html">留学申请</a>
+              <a href="package.html#ielts-training">语言培训</a>
+              <a href="career.html">职业发展</a>
+              <a href="about.html#what-we-do">考公考编</a>
+            </nav>
           </div>
           <div>
-            <h2 class="site-footer-title">联系我们</h2>
+            <h2 class="site-footer-title">快速链接</h2>
+            <nav class="site-footer-links site-footer-links--quick" aria-label="快速链接">
+              <a href="about.html">关于我们</a>
+              <a href="cases.html">真实案例</a>
+              <a href="evaluator.html">背景评估</a>
+              <a href="#contact">联系我们</a>
+            </nav>
+            <h2 class="site-footer-title site-footer-contact-title">联系我们</h2>
             <div class="site-footer-contact">
               <a href="mailto:496680190@qq.com">496680190@qq.com</a>
               <span>微信：xxr13365810586</span>
@@ -175,8 +261,8 @@
           <p><strong>注册地址</strong><span>湖南省长沙市岳麓区岳麓街道潇湘中路328号麓枫和苑33号栋湖南大学湘江新区大学生创新创业园1楼182号</span></p>
         </div>
         <div class="site-footer-bottom">
-          <span>&copy; ${year} DreamBridge 留学服务</span>
-          <span>历史案例仅供申请规划参考，具体结果因个人背景与院校政策而异。</span>
+          <span>&copy; ${year} DreamBridge 教育与职业发展</span>
+          <span>把复杂选择，变成清晰路径。</span>
         </div>
       </div>
     `;
