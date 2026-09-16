@@ -11902,5 +11902,30 @@
     "entry_year": 2027,
     "tier": "双非",
     "note": ""
+  },
+  {
+    "id": 519,
+    "student_school": "中南大学",
+    "student_major": "土木工程",
+    "gpa": "83",
+    "language_score": "IELTS 7",
+    "country": "中国香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "机械工程",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "航空工程",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "985",
+    "note": ""
   }
 ]
