@@ -11932,5 +11932,25 @@
     "entry_year": 2027,
     "tier": "985",
     "note": ""
+  },
+  {
+    "id": 520,
+    "student_school": "新疆医科大学",
+    "student_major": "信息系统与信息管理",
+    "gpa": "83",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "公共卫生",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
   }
 ]
