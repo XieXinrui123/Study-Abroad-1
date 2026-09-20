@@ -233,7 +233,11 @@ ul { list-style: none; }
 .ielts-trial-copy .ielts-id { vertical-align: 2px; }
 .ielts-trial p { margin-top: 2px; color: var(--color-text-secondary); font-size: var(--text-sm); }
 .ielts-trial-meta { color: var(--color-text-secondary); font-size: var(--text-sm); font-weight: 600; white-space: nowrap; }
-.ielts-trial-price { color: #a85f00; font-size: var(--text-2xl); font-weight: 800; white-space: nowrap; }
+.ielts-trial-price-wrap { display: flex; align-items: center; gap: var(--space-3); white-space: nowrap; }
+.ielts-trial-sale-label { padding: 5px 9px; color: #fff; background: #dc2626; border-radius: var(--radius-full); font-size: 11px; font-weight: 800; letter-spacing: 0.04em; }
+.ielts-trial-prices { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.15; }
+.ielts-trial-original { color: var(--color-text-tertiary); font-size: var(--text-xs); font-weight: 600; text-decoration: line-through; }
+.ielts-trial-price { color: #b45309; font-size: 28px; font-weight: 850; letter-spacing: -0.03em; }
 .ielts-trial-btn { padding: var(--space-3) var(--space-5); background: var(--color-accent); color: #fff; border-radius: var(--radius-md); font-size: var(--text-sm); font-weight: 700; white-space: nowrap; box-shadow: 0 6px 16px rgba(217,119,6,0.2); transition: background 0.2s, transform 0.2s; }
 .ielts-trial-btn:hover { background: var(--color-accent-dark); transform: translateY(-1px); }
 
@@ -395,7 +399,8 @@ ul { list-style: none; }
   .ielts-trial-icon { grid-row: 1 / span 2; }
   .ielts-trial-copy { grid-column: 2; }
   .ielts-trial-meta { grid-column: 1 / -1; }
-  .ielts-trial-price { grid-column: 1; }
+  .ielts-trial-price-wrap { grid-column: 1; align-items: flex-end; }
+  .ielts-trial-prices { align-items: flex-start; }
   .ielts-trial-btn { grid-column: 2; justify-self: end; }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -708,7 +713,10 @@ ul { list-style: none; }
       <span class="ielts-trial-icon" aria-hidden="true">试</span>
       <div class="ielts-trial-copy"><h3>雅思试听课</h3><span class="ielts-id">P08</span><p>先体验授课方式，再选择适合自己的单科或组合套餐。</p></div>
       <span class="ielts-trial-meta">0.5h / 次</span>
-      <span class="ielts-trial-price">&yen;199 / 次</span>
+      <div class="ielts-trial-price-wrap" aria-label="试听课原价199元每次，活动价99元每次">
+        <span class="ielts-trial-sale-label">活动价</span>
+        <span class="ielts-trial-prices"><span class="ielts-trial-original">原价 &yen;199 / 次</span><strong class="ielts-trial-price">&yen;99 / 次</strong></span>
+      </div>
       <button class="ielts-trial-btn" onclick="openQr()">预约试听</button>
     </div>
   </div>
