@@ -11952,5 +11952,45 @@
     "entry_year": 2027,
     "tier": "双非",
     "note": ""
+  },
+  {
+    "id": 521,
+    "student_school": "哈尔滨工业大学",
+    "student_major": "生物医学工程",
+    "gpa": "84",
+    "language_score": "IELTS 6",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "信号处理与机器学习",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "985",
+    "note": ""
+  },
+  {
+    "id": 522,
+    "student_school": "东北林业大学",
+    "student_major": "土木工程",
+    "gpa": "81",
+    "language_score": "IELTS 7",
+    "country": "中国香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "智能建筑与管理",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "211",
+    "note": ""
   }
 ]
