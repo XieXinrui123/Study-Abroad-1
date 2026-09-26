@@ -649,15 +649,16 @@
     .career-step h3 { margin-top: 26px; }
 
     #career-plans { background: #fbfcfd; }
+    .career-plans-intro { max-width: 520px; }
     .career-pricing-grid {
       grid-template-columns: repeat(12, 1fr);
-      gap: 16px;
+      gap: 20px;
       align-items: stretch;
     }
     .career-plan {
       grid-column: span 4;
-      min-height: 520px;
-      padding: 32px;
+      min-height: 590px;
+      padding: 30px;
       border-radius: 12px;
       box-shadow: none;
       transition: transform .25s ease, box-shadow .25s ease;
@@ -672,29 +673,91 @@
     }
     .career-plan--featured:hover { transform: translateY(-8px); box-shadow: 0 34px 70px rgba(12,45,72,.24); }
     .career-plan-badge { top: 22px; right: 22px; border-radius: 4px; color: #fff; background: var(--career-gold); }
-    .career-plan h3 { min-height: 60px; margin-top: 18px; font-size: 22px; }
-    .career-price { margin-top: 8px; font-size: 46px; }
-    .career-plan ul { padding-top: 22px; }
-    .career-plan-fit { line-height: 1.65; }
+    .career-plan h3 { min-height: 0; margin: 16px 0 0; font-size: 23px; }
+    .career-plan-name { display: block; margin-bottom: 5px; color: var(--career-muted); font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+    .career-plan--featured .career-plan-name { color: #afc2d2; }
+    .career-price-row { display: flex; align-items: end; justify-content: space-between; gap: 14px; margin-top: 24px; }
+    .career-price { margin: 0; font-size: 46px; line-height: 1; }
+    .career-price-note { margin-bottom: 3px; color: var(--career-muted); font-size: 12px; white-space: nowrap; }
+    .career-plan--featured .career-price-note { color: #afc2d2; }
+    .career-price-original { display: block; margin-top: 5px; color: #8290a0; font-family: inherit; font-size: 13px; font-weight: 500; letter-spacing: 0; text-decoration: line-through; }
+    .career-duration { display: flex; align-items: center; gap: 8px; margin: 18px 0 0; padding: 13px 0; border-top: 1px solid var(--career-line); border-bottom: 1px solid var(--career-line); }
+    .career-plan--featured .career-duration { border-color: rgba(255,255,255,.18); }
+    .career-duration strong { color: var(--career-navy); font-size: 13px; }
+    .career-plan--featured .career-duration strong { color: #fff; }
+    .career-plan-fit { min-height: 86px; margin: 22px 0 0; padding: 0; border: 0; color: var(--career-muted); font-size: 13px; line-height: 1.75; }
+    .career-plan-fit strong { display: block; margin-bottom: 5px; color: var(--career-navy); font-size: 12px; letter-spacing: .06em; }
+    .career-plan--featured .career-plan-fit { border: 0; color: #c7d5e1; }
+    .career-plan--featured .career-plan-fit strong { color: #fff; }
+    .career-plan-modules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 18px 0 22px; padding: 0; border: 0; list-style: none; }
+    .career-plan .career-plan-modules { gap: 8px; margin: 18px 0 22px; padding: 0; border: 0; }
+    .career-plan-modules li { min-height: 42px; display: flex; align-items: center; padding: 9px 10px 9px 25px; border: 1px solid #e1e8ee; border-radius: 5px; background: #f8fafc; font-size: 12px; line-height: 1.45; }
+    .career-plan-modules li::before { left: 10px; content: "✓"; font-size: 11px; }
+    .career-plan--featured .career-plan-modules li { border-color: rgba(255,255,255,.14); color: #e1eaf1; background: rgba(255,255,255,.06); }
+    .career-plan-actions { display: grid; gap: 10px; margin-top: auto; }
+    .career-plan-details { border-top: 1px solid var(--career-line); }
+    .career-plan--featured .career-plan-details { border-color: rgba(255,255,255,.18); }
+    .career-plan-details summary { display: flex; align-items: center; justify-content: space-between; padding: 16px 0 4px; color: var(--career-blue); font-size: 13px; font-weight: 800; cursor: pointer; list-style: none; }
+    .career-plan-details summary::-webkit-details-marker { display: none; }
+    .career-plan-details summary::after { content: "+"; font-family: Georgia, serif; font-size: 20px; font-weight: 400; line-height: 1; }
+    .career-plan-details[open] summary::after { content: "−"; }
+    .career-plan--featured .career-plan-details summary { color: #fff; }
+    .career-plan-detail-body { padding: 14px 0 8px; }
+    .career-plan-detail-body h4 { margin: 15px 0 7px; color: var(--career-navy); font-size: 12px; letter-spacing: .06em; }
+    .career-plan-detail-body h4:first-child { margin-top: 0; }
+    .career-plan--featured .career-plan-detail-body h4 { color: #fff; }
+    .career-plan-detail-body ul { gap: 7px; margin: 0; padding: 0; border: 0; }
+    .career-plan-detail-body li { padding-left: 16px; font-size: 13px; line-height: 1.6; }
+    .career-plan-cta { width: 100%; min-height: 44px; margin-top: 8px; border-radius: 6px; }
+    .career-plan--featured .career-plan-cta { border-color: #fff; color: var(--career-navy); background: #fff; }
+    .career-plan--featured .career-plan-cta:hover { background: #f3f6f8; }
+    .career-service-path { margin-top: 72px; padding-top: 46px; border-top: 1px solid var(--career-line); }
+    .career-service-path-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
+    .career-service-path-head h3 { margin: 0; color: var(--career-navy); font-size: 24px; }
+    .career-service-path-head p { max-width: 520px; margin: 0; color: var(--career-muted); font-size: 14px; }
+    .career-service-path-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border: 1px solid var(--career-line); background: #fff; }
+    .career-service-path-step { position: relative; min-height: 142px; padding: 24px 20px; border-right: 1px solid var(--career-line); }
+    .career-service-path-step:last-child { border-right: 0; }
+    .career-service-path-step:not(:last-child)::after { position: absolute; z-index: 2; top: 50%; right: -13px; width: 25px; height: 25px; display: grid; place-items: center; border: 1px solid var(--career-line); border-radius: 50%; color: var(--career-gold); background: #fff; content: "→"; font-size: 13px; transform: translateY(-50%); }
+    .career-service-path-step span { color: var(--career-gold); font-family: Georgia, serif; font-size: 12px; }
+    .career-service-path-step strong { display: block; margin-top: 18px; color: var(--career-navy); font-size: 16px; }
+    .career-service-path-step small { display: block; margin-top: 5px; color: var(--career-muted); font-size: 12px; line-height: 1.55; }
 
     .career-services {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
       border: 0;
       border-radius: 0;
       overflow: visible;
       background: transparent;
     }
     .career-service {
-      min-height: 124px;
-      padding: 24px 26px;
+      min-height: 410px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      padding: 30px;
       border: 1px solid var(--career-line);
-      border-radius: 8px;
+      border-radius: 10px;
       background: rgba(255,255,255,.88);
-      transition: border-color .2s ease, background .2s ease;
+      transition: border-color .2s ease, background .2s ease, transform .2s ease, box-shadow .2s ease;
     }
-    .career-service:hover { border-color: #aebfcb; background: #fff; }
-    .career-service-price { font-size: 21px; }
+    .career-service:hover { border-color: #aebfcb; background: #fff; box-shadow: 0 18px 38px rgba(12,45,72,.07); transform: translateY(-3px); }
+    .career-service-category { display: block; margin-bottom: 14px; color: var(--career-gold); font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .career-service-head { display: flex; align-items: start; justify-content: space-between; gap: 24px; }
+    .career-service-name { display: block; color: var(--career-navy); font-size: 21px; font-weight: 750; line-height: 1.35; }
+    .career-service-en { display: block; margin-top: 4px; color: #7a8998; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .career-service-price { flex: 0 0 auto; color: var(--career-navy); font-size: 30px; line-height: 1.15; }
+    .career-service-price small { font-family: inherit; font-size: 12px; font-weight: 700; }
+    .career-service-desc { min-height: 52px; margin: 20px 0 0; color: var(--career-muted); font-size: 13px; line-height: 1.75; }
+    .career-service-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .career-service-meta span { padding: 6px 9px; border-radius: 4px; color: #466078; background: var(--career-blue-soft); font-size: 11px; font-weight: 700; }
+    .career-service-deliverables { display: grid; gap: 8px; margin: 22px 0 24px; padding: 20px 0 0; border-top: 1px solid var(--career-line); list-style: none; }
+    .career-service-deliverables li { position: relative; padding-left: 18px; color: #536578; font-size: 13px; line-height: 1.6; }
+    .career-service-deliverables li::before { position: absolute; left: 0; color: var(--career-gold); content: "✓"; font-size: 11px; }
+    .career-service-action { width: 100%; min-height: 44px; margin-top: auto; border-radius: 6px; }
 
     #career-mentors { background: #fff; }
     .career-mentor-layout {
@@ -836,6 +899,15 @@
     .dark .career-industry-network { border-color: #294056; background: #102438; }
     .dark .career-industry-network::before,
     .dark .career-industry-network::after { border-color: #30485e; }
+    .dark .career-plan-modules li, .dark .career-service-path-grid, .dark .career-service-path-step { border-color: #294056; background: #142638; }
+    .dark .career-plan-details { border-color: #294056; }
+    .dark .career-plan-fit strong, .dark .career-duration strong, .dark .career-service-path-head h3, .dark .career-service-path-step strong { color: #eef5fa; }
+    .dark .career-service-path-step:not(:last-child)::after { border-color: #294056; background: #142638; }
+    .dark .career-service-price { color: #eef5fa; }
+    .dark .career-service-meta span { color: #cbd8e2; background: #1b3044; }
+    .dark .career-service-deliverables { border-color: #294056; }
+    .dark .career-service-deliverables li { color: #b9c8d4; }
+    .dark .career-service-action { border-color: #6f879b; color: #eef5fa; }
 
     @media (max-width: 980px) {
       .career-container { width: min(100% - 48px, 1180px); }
@@ -847,6 +919,7 @@
       .career-plan:nth-child(4),
       .career-plan:nth-child(5) { grid-column: auto; }
       .career-plan:last-child { grid-column: 1 / -1; }
+      .career-service-path-grid { grid-template-columns: repeat(5, minmax(150px, 1fr)); overflow-x: auto; }
       .career-mentor-layout { gap: 42px; padding: 48px; }
     }
 
@@ -882,7 +955,17 @@
       .career-pricing-grid { grid-template-columns: 1fr; }
       .career-plan,
       .career-plan:last-child { grid-column: auto; min-height: auto; }
+      .career-plan-fit { min-height: 0; }
+      .career-service-path { margin-top: 56px; padding-top: 38px; }
+      .career-service-path-head { display: block; }
+      .career-service-path-head p { margin-top: 10px; }
+      .career-service-path-grid { grid-template-columns: 1fr; overflow: visible; }
+      .career-service-path-step { min-height: 110px; padding: 20px 22px; border-right: 0; border-bottom: 1px solid var(--career-line); }
+      .career-service-path-step:last-child { border-bottom: 0; }
+      .career-service-path-step:not(:last-child)::after { top: auto; right: 24px; bottom: -13px; transform: rotate(90deg); }
+      .career-service-path-step strong { margin-top: 10px; }
       .career-services { grid-template-columns: 1fr; gap: 10px; }
+      .career-service { min-height: auto; }
       .career-mentor-layout { grid-template-columns: 1fr; gap: 38px; padding: 36px 24px; }
       .career-profile-grid .career-card { min-height: auto; }
       .career-cta { padding: 84px 0; }
@@ -894,6 +977,8 @@
       .career-roadmap { padding: 22px; }
       .career-roadmap-item { grid-template-columns: 36px 1fr auto; gap: 10px; }
       .career-service { padding: 20px; }
+      .career-service-head { gap: 12px; }
+      .career-service-price { font-size: 26px; }
       .career-industry { min-height: 94px; padding: 12px; font-size: 14px; }
     }
 
@@ -1356,29 +1441,146 @@
     <section class="career-section" id="career-plans">
       <div class="career-container">
         <div class="career-section-head career-section-head--split fade-in">
-          <div><span class="career-kicker">Service Plans</span><h2 class="career-heading">职业发展服务套餐</h2></div>
-          <p class="career-lead">根据当前阶段和目标选择服务深度。每个方案都从个人背景与真实机会出发。</p>
+          <div><span class="career-kicker">Career Advisory Solutions</span><h2 class="career-heading">职业成长服务方案</h2></div>
+          <p class="career-lead career-plans-intro">从职业定位，到求职准备，再到 Offer 获取，提供阶段化职业成长支持。</p>
         </div>
         <div class="career-pricing-grid">
-          <article class="career-plan fade-in"><span class="career-plan-eyebrow">方向探索</span><h3><span class="career-plan-name">Career Assessment</span>职业方向诊断</h3><div class="career-price">¥399</div><p class="career-duration">一次深度咨询</p><ul><li>背景分析</li><li>职业方向建议</li><li>近期行动规划</li></ul><p class="career-plan-fit">适合：正在探索职业方向的人</p></article>
-          <article class="career-plan fade-in"><span class="career-plan-eyebrow">实习启动</span><h3><span class="career-plan-name">Internship Accelerator</span>实习陪跑计划</h3><div class="career-price">¥3999</div><p class="career-duration">约3个月</p><ul><li>职业定位</li><li>简历优化</li><li>岗位分析</li><li>求职 Tracker</li><li>行业导师指导</li><li>面试训练</li></ul><p class="career-plan-fit">适合：寻找第一段实习的人</p></article>
-          <article class="career-plan career-plan--featured fade-in"><span class="career-plan-badge">推荐</span><span class="career-plan-eyebrow">完整求职</span><h3><span class="career-plan-name">Career Accelerator</span>全流程求职方案</h3><div class="career-price">¥6999</div><p class="career-duration">适用于毕业求职、秋招与春招</p><ul><li>职业定位</li><li>岗位策略</li><li>简历体系</li><li>导师辅导</li><li>面试训练</li><li>Offer选择</li></ul><p class="career-plan-fit">适合：希望系统推进求职全流程的人</p></article>
-          <article class="career-plan fade-in"><span class="career-plan-eyebrow">双线选择</span><h3><span class="career-plan-name">Dual Career Plan</span>双方向职业规划</h3><div class="career-price">¥10999</div><p class="career-duration">约6个月</p><ul><li>双方向定位</li><li>双版本简历</li><li>双岗位策略</li><li>两类行业导师</li><li>面试训练</li></ul><p class="career-plan-fit">适合：在两条职业路径之间同步探索的人</p></article>
-          <article class="career-plan fade-in"><span class="career-plan-eyebrow">长期成长</span><h3><span class="career-plan-name">Annual Career Growth</span>年度职业成长计划</h3><div class="career-price">¥16999</div><p class="career-duration">10–12个月</p><ul><li>长期职业规划</li><li>能力提升路线</li><li>阶段目标与复盘</li><li>实习或求职准备</li><li>职业选择支持</li></ul><p class="career-plan-fit">适合：需要持续建立职业竞争力的人</p></article>
+          <article class="career-plan fade-in">
+            <span class="career-plan-eyebrow">方向探索</span>
+            <h3><span class="career-plan-name">Career Discovery</span>职业方向诊断</h3>
+            <div class="career-price-row"><div class="career-price">¥99<span class="career-price-original">原价 ¥399</span></div><span class="career-price-note">活动价</span></div>
+            <p class="career-duration"><strong>服务周期</strong><span>60 分钟 1V1 咨询</span></p>
+            <p class="career-plan-fit"><strong>适合人群</strong>方向尚不明确、专业与就业方向不匹配，或希望提前规划实习与求职的人。</p>
+            <ul class="career-plan-modules"><li>背景竞争力分析</li><li>职业方向定位</li><li>行业与岗位建议</li><li>3–6 个月行动规划</li></ul>
+            <div class="career-plan-actions">
+              <details class="career-plan-details"><summary>查看方案详情</summary><div class="career-plan-detail-body"><h4>分析维度</h4><ul><li>学历背景、专业优势、技能储备与实习经历</li><li>推荐职业方向、行业、岗位及发展路径分析</li></ul><h4>核心交付</h4><ul><li>60 分钟 1V1 咨询</li><li>专属职业规划报告</li></ul></div></details>
+              <button class="career-button career-button--ghost career-plan-cta" type="button" data-open-career-contact>预约职业诊断</button>
+            </div>
+          </article>
+
+          <article class="career-plan fade-in">
+            <span class="career-plan-eyebrow">实习启动</span>
+            <h3><span class="career-plan-name">Internship Accelerator</span>实习陪跑计划</h3>
+            <div class="career-price-row"><div class="career-price">¥3999</div><span class="career-price-note">阶段制服务</span></div>
+            <p class="career-duration"><strong>服务周期</strong><span>3 个月</span></p>
+            <p class="career-plan-fit"><strong>适合人群</strong>大二、大三学生，希望获得第一段高质量实习并建立完整求职方法。</p>
+            <ul class="career-plan-modules"><li>职业定位</li><li>简历打造</li><li>岗位筛选与投递</li><li>面试准备</li></ul>
+            <div class="career-plan-actions">
+              <details class="career-plan-details"><summary>查看方案详情</summary><div class="career-plan-detail-body"><h4>服务路径</h4><ul><li>Phase 1：职业定位</li><li>Phase 2：简历打造</li><li>Phase 3：岗位筛选与投递</li><li>Phase 4：面试准备</li></ul><h4>服务权益</h4><ul><li>导师 1V1 3 次，模拟面试 1 次</li><li>30–50 个岗位池，优化简历 1 份</li></ul></div></details>
+              <button class="career-button career-button--ghost career-plan-cta" type="button" data-open-career-contact>咨询实习方案</button>
+            </div>
+          </article>
+
+          <article class="career-plan career-plan--featured fade-in">
+            <span class="career-plan-badge">推荐方案</span><span class="career-plan-eyebrow">单赛道进阶</span>
+            <h3><span class="career-plan-name">Career Track Pro</span>单赛道全流程求职</h3>
+            <div class="career-price-row"><div class="career-price">¥6999</div><span class="career-price-note">全流程支持</span></div>
+            <p class="career-duration"><strong>服务周期</strong><span>3–6 个月</span></p>
+            <p class="career-plan-fit"><strong>适合人群</strong>目标明确，希望进入互联网、金融、咨询、国央企或外企的人。</p>
+            <ul class="career-plan-modules"><li>职业定位</li><li>简历竞争力打造</li><li>投递管理</li><li>面试与 Offer 决策</li></ul>
+            <div class="career-plan-actions">
+              <details class="career-plan-details"><summary>查看方案详情</summary><div class="career-plan-detail-body"><h4>核心服务</h4><ul><li>职业定位与赛道策略</li><li>简历竞争力打造与岗位投递管理</li><li>面试训练与 Offer 选择</li></ul><h4>服务权益</h4><ul><li>导师 1V1 6 次，模拟面试 2 次</li><li>50–100 个岗位池，1–2 份简历版本</li></ul></div></details>
+              <button class="career-button career-button--light career-plan-cta" type="button" data-open-career-contact>咨询推荐方案</button>
+            </div>
+          </article>
+
+          <article class="career-plan fade-in">
+            <span class="career-plan-eyebrow">双线选择</span>
+            <h3><span class="career-plan-name">Dual Career Plan</span>双赛道求职旗舰</h3>
+            <div class="career-price-row"><div class="career-price">¥10999</div><span class="career-price-note">双路径支持</span></div>
+            <p class="career-duration"><strong>服务周期</strong><span>6 个月</span></p>
+            <p class="career-plan-fit"><strong>适合人群</strong>希望同时探索两个职业方向，如金融＋咨询、产品＋运营、国企＋市场。</p>
+            <ul class="career-plan-modules"><li>双方向职业定位</li><li>双版本简历</li><li>双赛道岗位管理</li><li>高阶导师支持</li></ul>
+            <div class="career-plan-actions">
+              <details class="career-plan-details"><summary>查看方案详情</summary><div class="career-plan-detail-body"><h4>核心服务</h4><ul><li>两条职业路径并行评估与策略设计</li><li>双版本简历与双赛道岗位投递管理</li></ul><h4>服务权益</h4><ul><li>导师 1V1 10 次，模拟面试 3 次</li><li>Offer 选择分析</li></ul></div></details>
+              <button class="career-button career-button--ghost career-plan-cta" type="button" data-open-career-contact>咨询双赛道方案</button>
+            </div>
+          </article>
+
+          <article class="career-plan fade-in">
+            <span class="career-plan-eyebrow">长期成长</span>
+            <h3><span class="career-plan-name">Career Growth Membership</span>年度职业成长计划</h3>
+            <div class="career-price-row"><div class="career-price">¥16999</div><span class="career-price-note">年度顾问制</span></div>
+            <p class="career-duration"><strong>服务周期</strong><span>12 个月</span></p>
+            <p class="career-plan-fit"><strong>适合人群</strong>希望在大学阶段获得长期职业顾问支持，持续推进实习、秋招与毕业选择。</p>
+            <ul class="career-plan-modules"><li>职业探索</li><li>实习规划</li><li>秋招准备</li><li>Offer 选择</li></ul>
+            <div class="career-plan-actions">
+              <details class="career-plan-details"><summary>查看方案详情</summary><div class="career-plan-detail-body"><h4>年度成长路径</h4><ul><li>大三：职业探索与能力盘点</li><li>暑期：实习规划与求职准备</li><li>大四：秋招策略与面试提升</li><li>毕业：Offer 选择与发展决策</li></ul><h4>服务权益</h4><ul><li>导师 1V1 12 次，模拟面试 3 次</li><li>季度职业复盘与全年规划支持</li></ul></div></details>
+              <button class="career-button career-button--ghost career-plan-cta" type="button" data-open-career-contact>咨询年度方案</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="career-service-path fade-in" aria-label="职业服务流程">
+          <div class="career-service-path-head"><h3>从判断到决策的完整服务路径</h3><p>每个阶段都围绕明确目标、关键动作与可验证交付展开；具体服务深度根据所选方案确定。</p></div>
+          <div class="career-service-path-grid">
+            <div class="career-service-path-step"><span>01</span><strong>职业定位</strong><small>背景盘点与目标赛道判断</small></div>
+            <div class="career-service-path-step"><span>02</span><strong>简历打造</strong><small>竞争力梳理与材料表达</small></div>
+            <div class="career-service-path-step"><span>03</span><strong>岗位投递</strong><small>岗位池建立与进度管理</small></div>
+            <div class="career-service-path-step"><span>04</span><strong>面试提升</strong><small>模拟训练与针对性复盘</small></div>
+            <div class="career-service-path-step"><span>05</span><strong>Offer 决策</strong><small>机会比较与长期路径分析</small></div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="career-section career-section--soft" id="career-services">
       <div class="career-container">
-        <div class="career-section-head fade-in"><span class="career-kicker">Focused Services</span><h2 class="career-heading">单项服务</h2><p class="career-lead">针对明确需求选择单项支持，补齐职业决策或求职过程中的关键环节。</p></div>
+        <div class="career-section-head career-section-head--split fade-in"><div><span class="career-kicker">Focused Advisory Services</span><h2 class="career-heading">单项职业服务</h2></div><p class="career-lead">适合目标相对明确、只需要解决某个关键问题的人。每项服务都以具体问题为起点，以可执行成果为交付。</p></div>
         <div class="career-services fade-in">
-          <div class="career-service"><span><span class="career-service-name">职业咨询</span><small class="career-service-note">方向与行动建议</small></span><span class="career-service-price">¥399</span></div>
-          <div class="career-service"><span><span class="career-service-name">简历优化</span><small class="career-service-note">结构与表达优化</small></span><span class="career-service-price">¥199</span></div>
-          <div class="career-service"><span><span class="career-service-name">行业导师咨询</span><small class="career-service-note">60 min</small></span><span class="career-service-price">¥699</span></div>
-          <div class="career-service"><span><span class="career-service-name">模拟面试</span><small class="career-service-note">训练与反馈</small></span><span class="career-service-price">¥699</span></div>
-          <div class="career-service"><span><span class="career-service-name">求职 Track</span><small class="career-service-note">投递管理与复盘</small></span><span class="career-service-price">¥1499起</span></div>
-          <div class="career-service"><span><span class="career-service-name">岗位定向简历</span><small class="career-service-note">面向目标岗位定制</small></span><span class="career-service-price">¥1499</span></div>
+          <article class="career-service">
+            <span class="career-service-category">Career Strategy</span>
+            <div class="career-service-head"><div><strong class="career-service-name">职业方向咨询</strong><span class="career-service-en">Career Consultation</span></div><span class="career-service-price">¥399</span></div>
+            <p class="career-service-desc">适合对行业、岗位或下一阶段行动仍有疑问，希望通过专业判断快速厘清方向的人。</p>
+            <div class="career-service-meta"><span>60 分钟</span><span>1V1 咨询</span><span>行动建议</span></div>
+            <ul class="career-service-deliverables"><li>个人背景、优势与职业诉求梳理</li><li>目标行业与岗位方向建议</li><li>未来 3–6 个月优先行动清单</li></ul>
+            <button class="career-button career-button--ghost career-service-action" type="button" data-open-career-contact>咨询这项服务</button>
+          </article>
+
+          <article class="career-service">
+            <span class="career-service-category">Resume Review</span>
+            <div class="career-service-head"><div><strong class="career-service-name">简历优化</strong><span class="career-service-en">Resume Optimization</span></div><span class="career-service-price">¥199</span></div>
+            <p class="career-service-desc">适合已有基础简历，但结构松散、重点不清，或经历表达无法体现岗位竞争力的人。</p>
+            <div class="career-service-meta"><span>1 份简历</span><span>结构诊断</span><span>文字优化</span></div>
+            <ul class="career-service-deliverables"><li>版式结构、信息层级与完整度检查</li><li>经历描述、成果数据与动词表达优化</li><li>形成更清晰、专业的基础求职版本</li></ul>
+            <button class="career-button career-button--ghost career-service-action" type="button" data-open-career-contact>咨询这项服务</button>
+          </article>
+
+          <article class="career-service">
+            <span class="career-service-category">Industry Insight</span>
+            <div class="career-service-head"><div><strong class="career-service-name">行业导师专项咨询</strong><span class="career-service-en">Industry Mentor Session</span></div><span class="career-service-price">¥699</span></div>
+            <p class="career-service-desc">适合需要了解真实行业环境、岗位工作内容、招聘偏好或具体职业发展路径的人。</p>
+            <div class="career-service-meta"><span>60 分钟</span><span>行业导师</span><span>专项答疑</span></div>
+            <ul class="career-service-deliverables"><li>行业现状、岗位职责与能力要求拆解</li><li>简历、面试、项目或 Offer 问题选一深谈</li><li>结合个人背景给出针对性下一步建议</li></ul>
+            <button class="career-button career-button--ghost career-service-action" type="button" data-open-career-contact>匹配行业导师</button>
+          </article>
+
+          <article class="career-service">
+            <span class="career-service-category">Interview Coaching</span>
+            <div class="career-service-head"><div><strong class="career-service-name">模拟面试</strong><span class="career-service-en">Mock Interview</span></div><span class="career-service-price">¥699</span></div>
+            <p class="career-service-desc">适合已经获得面试机会，希望提前发现回答漏洞、提升表达逻辑与临场表现的人。</p>
+            <div class="career-service-meta"><span>1 次模拟</span><span>岗位定制</span><span>复盘反馈</span></div>
+            <ul class="career-service-deliverables"><li>基于目标岗位还原真实面试情境</li><li>行为题、岗位题与追问压力训练</li><li>面试表现复盘及针对性改进建议</li></ul>
+            <button class="career-button career-button--ghost career-service-action" type="button" data-open-career-contact>预约模拟面试</button>
+          </article>
+
+          <article class="career-service">
+            <span class="career-service-category">Application Management</span>
+            <div class="career-service-head"><div><strong class="career-service-name">求职 Track</strong><span class="career-service-en">Job Search Tracking</span></div><span class="career-service-price">¥1499<small> 起</small></span></div>
+            <p class="career-service-desc">适合方向基本明确，但投递节奏混乱、岗位筛选效率低，或需要持续复盘推进的人。</p>
+            <div class="career-service-meta"><span>1 个月起</span><span>投递管理</span><span>阶段复盘</span></div>
+            <ul class="career-service-deliverables"><li>目标岗位池建立与投递优先级管理</li><li>求职 Tracker 动态维护与进度跟踪</li><li>投递策略复盘、问题诊断与阶段调整</li></ul>
+            <button class="career-button career-button--ghost career-service-action" type="button" data-open-career-contact>咨询陪跑周期</button>
+          </article>
+
+          <article class="career-service">
+            <span class="career-service-category">Targeted Application</span>
+            <div class="career-service-head"><div><strong class="career-service-name">岗位定向简历</strong><span class="career-service-en">Role-Specific Resume</span></div><span class="career-service-price">¥1499</span></div>
+            <p class="career-service-desc">适合已经锁定目标岗位，希望围绕具体 JD 重构经历重点，提升岗位匹配度的人。</p>
+            <div class="career-service-meta"><span>1 个岗位方向</span><span>深度重构</span><span>定向版本</span></div>
+            <ul class="career-service-deliverables"><li>目标岗位 JD、关键词与招聘要求拆解</li><li>经历筛选、结构重组与价值表达重写</li><li>交付 1 份岗位定向简历及细节调整</li></ul>
+            <button class="career-button career-button--ghost career-service-action" type="button" data-open-career-contact>咨询定向简历</button>
+          </article>
         </div>
       </div>
     </section>
