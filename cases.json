@@ -11992,5 +11992,25 @@
     "entry_year": 2027,
     "tier": "211",
     "note": ""
+  },
+  {
+    "id": 523,
+    "student_school": "华南理工大学",
+    "student_major": "光电信息工程",
+    "gpa": "85",
+    "language_score": "IELTS 6.5",
+    "country": "中国香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "微电子与集成电路",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "985",
+    "note": ""
   }
 ]
