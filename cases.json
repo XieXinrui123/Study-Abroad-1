@@ -12327,5 +12327,45 @@
     "entry_year": 2027,
     "tier": "双非",
     "note": ""
+  },
+  {
+    "id": 539,
+    "student_school": "山东大学",
+    "student_major": "数学",
+    "gpa": "77",
+    "language_score": "IELTS 6.5",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "墨尔本大学",
+        "major": "数据科学",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "985",
+    "note": ""
+  },
+  {
+    "id": 540,
+    "student_school": "浙江传媒学院",
+    "student_major": "广播电视工程",
+    "gpa": "78",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "伯明翰大学",
+        "major": "数字媒体与传播",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
   }
 ]
