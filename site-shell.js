@@ -152,29 +152,26 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     const main = document.querySelector('main');
+    const admissionYear = 2027;
     if (main && !document.querySelector('.site-admission-broadcast')) {
       const broadcast = document.createElement('section');
       broadcast.className = 'site-admission-broadcast';
-      broadcast.setAttribute('aria-label', '2027 Fall 提前批录取捷报');
+      broadcast.setAttribute('aria-label', '2027 年入学 Offer 统计');
       broadcast.innerHTML = `
         <div class="container">
           <div class="site-broadcast-shell">
-            <span class="site-broadcast-label">27 Fall 提前批捷报</span>
+            <span class="site-broadcast-label">27 年入学 Offer</span>
             <div class="site-broadcast-viewport">
-              <div class="site-broadcast-track">
+              <div class="site-broadcast-track" aria-live="polite" aria-busy="true">
                 <div class="site-broadcast-sequence">
-                  <span class="site-broadcast-item"><span class="site-broadcast-dot">●</span><strong>中山大学 K 同学</strong><b>香港大学</b>商业人工智能理学硕士 + 市场营销理学硕士</span>
-                  <span class="site-broadcast-item"><span class="site-broadcast-dot">●</span><strong>海外本科 C 同学</strong><b>新加坡国立大学</b>可持续发展数据科学理学硕士</span>
-                  <span class="site-broadcast-item"><strong>2 位学生 · 3 枚 Offer</strong>录取材料均已核验</span>
+                  <span class="site-broadcast-item" data-admission-offer-summary><span class="site-broadcast-dot">●</span><strong>正在从案例库统计…</strong></span>
                 </div>
                 <div class="site-broadcast-sequence" aria-hidden="true">
-                  <span class="site-broadcast-item"><span class="site-broadcast-dot">●</span><strong>中山大学 K 同学</strong><b>香港大学</b>商业人工智能理学硕士 + 市场营销理学硕士</span>
-                  <span class="site-broadcast-item"><span class="site-broadcast-dot">●</span><strong>海外本科 C 同学</strong><b>新加坡国立大学</b>可持续发展数据科学理学硕士</span>
-                  <span class="site-broadcast-item"><strong>2 位学生 · 3 枚 Offer</strong>录取材料均已核验</span>
+                  <span class="site-broadcast-item" data-admission-offer-summary><span class="site-broadcast-dot">●</span><strong>正在从案例库统计…</strong></span>
                 </div>
               </div>
             </div>
-            <a class="site-broadcast-action" href="evaluator.html#evaluator">咨询 27 Fall →</a>
+            <a class="site-broadcast-action" href="cases.html">查看 27 年案例</a>
           </div>
         </div>
       `;
@@ -187,24 +184,52 @@
       else main.prepend(broadcast);
     }
 
-    fetch('cases.json', { cache: 'no-store' })
-      .then(response => {
-        if (!response.ok) throw new Error('案例数据加载失败');
-        return response.json();
-      })
-      .then(cases => {
-        if (!Array.isArray(cases)) return;
-        const count = cases.length;
-        document.querySelectorAll('[data-case-count]').forEach(node => {
-          node.textContent = String(count);
-          node.dataset.count = String(count);
+    function updateCaseData(cases) {
+      if (!Array.isArray(cases)) return;
+      const count = cases.length;
+      document.querySelectorAll('[data-case-count]').forEach(node => {
+        node.textContent = String(count);
+        node.dataset.count = String(count);
+      });
+      document.querySelectorAll('[data-case-count-text]').forEach(node => {
+        const suffix = node.dataset.caseCountSuffix || ' 条真实案例';
+        node.textContent = `${count}${suffix}`;
+      });
+
+      const yearCases = cases.filter(item => Number(item?.entry_year) === admissionYear);
+      const offerCount = yearCases.reduce((sum, item) => (
+        sum + (Array.isArray(item?.offers) ? item.offers.length : 0)
+      ), 0);
+      const summary = `${admissionYear} 年入学 Offer 已累计获得 ${offerCount} 枚 · 共 ${yearCases.length} 位学生`;
+      document.querySelectorAll('[data-admission-offer-summary]').forEach(node => {
+        node.replaceChildren();
+        const dot = document.createElement('span');
+        dot.className = 'site-broadcast-dot';
+        dot.textContent = '●';
+        const strong = document.createElement('strong');
+        strong.textContent = summary;
+        node.append(dot, strong);
+      });
+      document.querySelector('.site-broadcast-track')?.setAttribute('aria-busy', 'false');
+    }
+
+    function refreshCaseData() {
+      return fetch(`cases.json?v=${Date.now()}`, { cache: 'no-store' })
+        .then(response => {
+          if (!response.ok) throw new Error('案例数据加载失败');
+          return response.json();
+        })
+        .then(updateCaseData)
+        .catch(() => {
+          document.querySelector('.site-broadcast-track')?.setAttribute('aria-busy', 'false');
         });
-        document.querySelectorAll('[data-case-count-text]').forEach(node => {
-          const suffix = node.dataset.caseCountSuffix || ' 条真实案例';
-          node.textContent = `${count}${suffix}`;
-        });
-      })
-      .catch(() => {});
+    }
+
+    refreshCaseData();
+    window.setInterval(refreshCaseData, 60 * 1000);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) refreshCaseData();
+    });
 
     document.querySelectorAll('.to-top').forEach(button => {
       button.setAttribute('aria-label', '返回页面顶部');
