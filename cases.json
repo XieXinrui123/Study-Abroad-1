@@ -12007,10 +12007,325 @@
         "school": "香港中文大学",
         "major": "微电子与集成电路",
         "rank": "QS前50"
+      },
+      {
+        "school": "香港科技大学",
+        "major": "电子工程",
+        "rank": "QS前50"
       }
     ],
     "entry_year": 2027,
     "tier": "985",
+    "note": ""
+  },
+  {
+    "id": 524,
+    "student_school": "湖南科技大学",
+    "student_major": "英语",
+    "gpa": "85",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "教育学",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 525,
+    "student_school": "石河子大学",
+    "student_major": "法律",
+    "gpa": "82",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚/英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "法律",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 526,
+    "student_school": "辽宁大学",
+    "student_major": "国际商务",
+    "gpa": "87",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "利兹大学",
+        "major": "管理学",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 527,
+    "student_school": "青岛农业大学",
+    "student_major": "农业学",
+    "gpa": "83",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "布里斯托大学",
+        "major": "营养与公共健康",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 528,
+    "student_school": "上海建桥学院",
+    "student_major": "金融",
+    "gpa": "82",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "谢菲尔德大学",
+        "major": "金融",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 529,
+    "student_school": "北京化工大学",
+    "student_major": "生物信息",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "英国/澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "生物信息",
+        "rank": "QS前50"
+      },
+      {
+        "school": "谢菲尔德大学",
+        "major": "生物医药工程",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "211",
+    "note": ""
+  },
+  {
+    "id": 530,
+    "student_school": "邯郸学院",
+    "student_major": "环境工程",
+    "gpa": "84",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "谢菲尔德大学",
+        "major": "可持续环境",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 531,
+    "student_school": "北京语言大学",
+    "student_major": "汉语言文学",
+    "gpa": "未填写",
+    "language_score": "未填写",
+    "country": "中国香港/英国/澳大利亚/新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "数字人文",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 532,
+    "student_school": "长沙理工大学",
+    "student_major": "电气工程",
+    "gpa": "86",
+    "language_score": "IELTS 7",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "悉尼大学",
+        "major": "电气工程",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 533,
+    "student_school": "黑龙江大学",
+    "student_major": "广播电视编导",
+    "gpa": "86",
+    "language_score": "未填写",
+    "country": "澳大利亚/新西兰",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "数字人文",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 534,
+    "student_school": "兰州城市学院",
+    "student_major": "英语",
+    "gpa": "82.77",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "谢菲尔德大学",
+        "major": "对外英语教学",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 535,
+    "student_school": "广东外语外贸大学南国商学院",
+    "student_major": "学前教育",
+    "gpa": "84",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "利兹大学",
+        "major": "教育学",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "儿童研究",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 536,
+    "student_school": "河南科技大学",
+    "student_major": "视觉传达设计",
+    "gpa": "83",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "谢菲尔德大学",
+        "major": "市场营销",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 537,
+    "student_school": "华南农业大学",
+    "student_major": "机械工程",
+    "gpa": "87",
+    "language_score": "IELTS 6",
+    "country": "中国香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港理工大学",
+        "major": "智能制造",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 538,
+    "student_school": "西南大学",
+    "student_major": "动物科学",
+    "gpa": "80",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "谢菲尔德大学",
+        "major": "生物信息工程",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
     "note": ""
   }
 ]
