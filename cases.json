@@ -12367,5 +12367,50 @@
     "entry_year": 2027,
     "tier": "双非",
     "note": ""
+  },
+  {
+    "id": 541,
+    "student_school": "广东工业大学",
+    "student_major": "电子信息",
+    "gpa": "87",
+    "language_score": "IELTS 6.5",
+    "country": "中国香港/新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "航空工程",
+        "rank": "QS前50"
+      },
+      {
+        "school": "南洋理工大学",
+        "major": "精密仪器技术",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 542,
+    "student_school": "北京化工大学",
+    "student_major": "工业设计",
+    "gpa": "89",
+    "language_score": "IELTS 6",
+    "country": "新加坡",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "南洋理工大学",
+        "major": "机械工程",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "211",
+    "note": ""
   }
 ]
