@@ -9121,12 +9121,12 @@
     "language_score": "6.5",
     "country": "香港",
     "degree": "硕士",
-    "result": "QS前100",
+    "result": "QS前50",
     "offers": [
       {
         "school": "香港中文大学",
         "major": "会计",
-        "rank": "QS前100"
+        "rank": "QS前50"
       }
     ],
     "entry_year": 2024,
@@ -11927,6 +11927,16 @@
         "school": "香港科技大学",
         "major": "航空工程",
         "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "机械工程与自动化",
+        "rank": "QS前50"
+      },
+      {
+        "school": "香港中文大学",
+        "major": "机器人",
+        "rank": "QS前50"
       }
     ],
     "entry_year": 2027,
@@ -12072,6 +12082,31 @@
         "school": "利兹大学",
         "major": "管理学",
         "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "国际战略与创新",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "国际商务",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "国际市场营销管理",
+        "rank": "待更新"
+      },
+      {
+        "school": "伯明翰大学",
+        "major": "市场营销",
+        "rank": "QS前100"
+      },
+      {
+        "school": "伯明翰大学",
+        "major": "国际商务",
+        "rank": "待更新"
       }
     ],
     "entry_year": 2027,
@@ -12092,6 +12127,11 @@
         "school": "布里斯托大学",
         "major": "营养与公共健康",
         "rank": "QS前50"
+      },
+      {
+        "school": "利兹大学",
+        "major": "可持续农业与食物生产",
+        "rank": "QS前100"
       }
     ],
     "entry_year": 2027,
@@ -12156,6 +12196,11 @@
       {
         "school": "谢菲尔德大学",
         "major": "可持续环境",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "环境科学",
         "rank": "QS前100"
       }
     ],
@@ -12280,6 +12325,16 @@
     "offers": [
       {
         "school": "谢菲尔德大学",
+        "major": "市场营销",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "国际市场营销管理",
+        "rank": "QS前100"
+      },
+      {
+        "school": "伯明翰大学",
         "major": "市场营销",
         "rank": "QS前100"
       }
@@ -12411,6 +12466,136 @@
     ],
     "entry_year": 2027,
     "tier": "211",
+    "note": ""
+  },
+  {
+    "id": 543,
+    "student_school": "辽宁大学",
+    "student_major": "国际商务",
+    "gpa": "80",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "利兹大学",
+        "major": "国际商务",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "国际市场营销",
+        "rank": "QS前100"
+      },
+      {
+        "school": "伯明翰大学",
+        "major": "市场营销",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "211",
+    "note": ""
+  },
+  {
+    "id": 544,
+    "student_school": "安阳师范学院",
+    "student_major": "计算机",
+    "gpa": "83",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "利兹大学",
+        "major": "高级计算机",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 545,
+    "student_school": "兰州财经大学",
+    "student_major": "财政学",
+    "gpa": "83",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "利兹大学",
+        "major": "经济学",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 546,
+    "student_school": "湖南大学",
+    "student_major": "金融工程",
+    "gpa": "88",
+    "language_score": "IELTS7",
+    "country": "中国香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "系统工程与工程管理",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "985",
+    "note": ""
+  },
+  {
+    "id": 547,
+    "student_school": "山东大学",
+    "student_major": "通信工程",
+    "gpa": "86",
+    "language_score": "IELTS 6.5",
+    "country": "中国香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港中文大学",
+        "major": "信息工程",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "985",
+    "note": ""
+  },
+  {
+    "id": 548,
+    "student_school": "PSB",
+    "student_major": "国际商务",
+    "gpa": "3.2",
+    "language_score": "未填写",
+    "country": "澳洲",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "财务管理",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "海外本科",
     "note": ""
   }
 ]
