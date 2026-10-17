@@ -11819,7 +11819,7 @@
     "student_major": "过程控制",
     "gpa": "76",
     "language_score": "暂无",
-    "country": "澳大利亚",
+    "country": "澳大利亚/英国",
     "degree": "硕士",
     "result": "QS前50",
     "offers": [
@@ -11832,6 +11832,11 @@
         "school": "昆士兰大学",
         "major": "机械工程",
         "rank": "QS前50"
+      },
+      {
+        "school": "利兹大学",
+        "major": "机械工程",
+        "rank": "QS前100"
       }
     ],
     "entry_year": 2027,
