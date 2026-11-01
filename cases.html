@@ -1213,6 +1213,7 @@ ul, ol { list-style: none; }
 }
 </style>
 <link rel="stylesheet" href="site-shell.css?v=20260915-1">
+<link rel="stylesheet" href="cases-editorial.css?v=20261101-1">
 </head>
 <body class="cases-page">
 
@@ -1263,8 +1264,9 @@ ul, ol { list-style: none; }
     <div class="case-finder" id="caseFinder" aria-label="案例筛选">
       <div class="finder-heading">
         <div>
-          <h2>用你的背景，找真正相似的录取案例</h2>
-          <p>先填写三个核心条件即可；目标地区、年份等条件可以稍后补充。</p>
+          <p class="cases-section-index">01 / FIND YOUR REFERENCE</p>
+          <h2>找到与你相似的申请路径</h2>
+          <p>从本科背景开始，逐步缩小你的选校参考范围。</p>
         </div>
         <button class="reset-button" id="resetFilters" type="button">清空条件</button>
       </div>
@@ -1345,6 +1347,7 @@ ul, ol { list-style: none; }
       </div>
       <div class="active-filter-row" id="activeFilters" aria-live="polite"></div>
     </div>
+    <div class="cases-archive-heading"><div><p class="cases-section-index">02 / ADMISSION ARCHIVE</p><h2>录取档案</h2></div><p class="cases-archive-caption">相似背景，不同去向。<br>每一份档案，都是一条具体的申请路径。</p></div>
     <div class="result-toolbar">
       <div class="result-summary" id="resultSummary">正在加载案例…</div>
       <div class="match-note" id="sortNote">按案例编号从大到小展示，入学年份越新编号越大</div>
@@ -1513,7 +1516,7 @@ const majorGroups = {
 
 let allCases = [];
 let currentPage = 1;
-const pageSize = 9;
+const pageSize = 10;
 let filteredItems = [];
 let activePreset = '';
 
@@ -1921,19 +1924,20 @@ function renderCharts(items) {
 
 function renderCaseCard(item) {
   const match = getMatchDetails(item);
-  const yearTag = item.entry_year ? `<span class="pill" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;">${String(item.entry_year).slice(-2)}年入学</span>` : '';
+  const yearTag = item.entry_year ? `<span class="pill">${item.entry_year} 入学</span>` : '';
   const matchTag = hasProfileFilters() && match.total
     ? `<span class="match-score">✓ ${match.matched}/${match.total} 项背景相似</span>`
     : '';
   return `
     <div class="case-card" role="button" tabindex="0" aria-label="查看案例 ${item.id} 详情" onclick="openCaseModal(${item.id})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal(${item.id})}">
       <div class="case-card-topline">
-        ${matchTag || '<span></span>'}
+        <span class="case-folio">CASE #${item.id}</span>
         <span class="pill pill-tier-${tierClass(item.tier)}">${safe(item.tier)}</span>
       </div>
       <div class="case-header">
-        <div class="case-title">${item.student_school ? `案例 #${item.id} · ${safe(item.student_school)}` : `案例 #${item.id} · ${safe(item.tier)}背景`}</div>
+        <div class="case-title">${item.student_school ? `${safe(item.student_school)}` : `${safe(item.tier)}背景`}</div>
       </div>
+      ${matchTag}
       <div class="case-pills">
         ${yearTag}
         <span class="pill">${safe(item.regions.join(' / ') || item.country)}</span>
@@ -1947,7 +1951,7 @@ function renderCaseCard(item) {
         <div class="meta-item"><div class="meta-label">Offer 数量</div><div class="meta-value">${item.offers.length} 个</div></div>
       </div>
       <div class="offer-section">
-        <div class="offer-title">🎓 录取详情（点击查看更多）</div>
+        <div class="offer-title">录取去向 / OFFERS</div>
         <div class="offer-list">
           ${item.offers.slice(0, 2).map(o => `
             <div class="offer-item">
@@ -1959,6 +1963,7 @@ function renderCaseCard(item) {
           ${item.offers.length > 2 ? `<div class="offer-more">+${item.offers.length - 2} 个更多Offer</div>` : ''}
         </div>
       </div>
+      <div class="case-read-more"><span>查看完整录取档案</span><span aria-hidden="true">↗</span></div>
     </div>
   `;
 }
