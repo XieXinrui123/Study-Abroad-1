@@ -1213,7 +1213,7 @@ ul, ol { list-style: none; }
 }
 </style>
 <link rel="stylesheet" href="site-shell.css?v=20260915-1">
-<link rel="stylesheet" href="cases-editorial.css?v=20261101-1">
+<link rel="stylesheet" href="cases-ui.css?v=20261101-1">
 </head>
 <body class="cases-page">
 
@@ -1238,9 +1238,9 @@ ul, ol { list-style: none; }
 <section class="hero" aria-labelledby="caseLibraryTitle">
   <div class="container hero-content">
     <div class="cases-hero-copy">
-      <p class="cases-eyebrow">DREAMBRIDGE / 录取案例库</p>
-      <h1 class="hero-title" id="caseLibraryTitle">从真实录取，<br><span>找到你的申请方向。</span></h1>
-      <p class="hero-subtitle">看相似背景的申请者，走向了哪些学校。<br>按本科院校、专业与成绩，寻找属于你的选校参考。</p>
+      <p class="cases-eyebrow">DREAMBRIDGE · 真实录取案例</p>
+      <h1 class="hero-title" id="caseLibraryTitle">找到与你相似的<br><span>真实录取案例</span></h1>
+      <p class="hero-subtitle">从相似的本科背景出发，看看他们收获了哪些录取。<br>按专业、成绩和目标地区，找到你的选校参考。</p>
       <div class="cases-hero-actions">
         <a class="cases-hero-primary" href="#caseFinder">按我的背景筛选 <span aria-hidden="true">↗</span></a>
         <a class="cases-hero-secondary" href="#casesGrid">浏览全部案例 <span aria-hidden="true">↓</span></a>
@@ -1264,8 +1264,7 @@ ul, ol { list-style: none; }
     <div class="case-finder" id="caseFinder" aria-label="案例筛选">
       <div class="finder-heading">
         <div>
-          <p class="cases-section-index">01 / FIND YOUR REFERENCE</p>
-          <h2>找到与你相似的申请路径</h2>
+          <h2>用你的背景，查找相似案例</h2>
           <p>从本科背景开始，逐步缩小你的选校参考范围。</p>
         </div>
         <button class="reset-button" id="resetFilters" type="button">清空条件</button>
@@ -1347,7 +1346,7 @@ ul, ol { list-style: none; }
       </div>
       <div class="active-filter-row" id="activeFilters" aria-live="polite"></div>
     </div>
-    <div class="cases-archive-heading"><div><p class="cases-section-index">02 / ADMISSION ARCHIVE</p><h2>录取档案</h2></div><p class="cases-archive-caption">相似背景，不同去向。<br>每一份档案，都是一条具体的申请路径。</p></div>
+    <div class="cases-archive-heading"><h2>录取案例</h2><p class="cases-archive-caption">真实背景与录取结果，供你对照参考</p></div>
     <div class="result-toolbar">
       <div class="result-summary" id="resultSummary">正在加载案例…</div>
       <div class="match-note" id="sortNote">按案例编号从大到小展示，入学年份越新编号越大</div>
@@ -1516,7 +1515,7 @@ const majorGroups = {
 
 let allCases = [];
 let currentPage = 1;
-const pageSize = 10;
+const pageSize = 9;
 let filteredItems = [];
 let activePreset = '';
 
@@ -1931,7 +1930,7 @@ function renderCaseCard(item) {
   return `
     <div class="case-card" role="button" tabindex="0" aria-label="查看案例 ${item.id} 详情" onclick="openCaseModal(${item.id})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal(${item.id})}">
       <div class="case-card-topline">
-        <span class="case-folio">CASE #${item.id}</span>
+        <span class="case-folio">案例 #${item.id}</span>
         <span class="pill pill-tier-${tierClass(item.tier)}">${safe(item.tier)}</span>
       </div>
       <div class="case-header">
@@ -1951,7 +1950,7 @@ function renderCaseCard(item) {
         <div class="meta-item"><div class="meta-label">Offer 数量</div><div class="meta-value">${item.offers.length} 个</div></div>
       </div>
       <div class="offer-section">
-        <div class="offer-title">录取去向 / OFFERS</div>
+        <div class="offer-title">录取结果</div>
         <div class="offer-list">
           ${item.offers.slice(0, 2).map(o => `
             <div class="offer-item">
@@ -1963,7 +1962,7 @@ function renderCaseCard(item) {
           ${item.offers.length > 2 ? `<div class="offer-more">+${item.offers.length - 2} 个更多Offer</div>` : ''}
         </div>
       </div>
-      <div class="case-read-more"><span>查看完整录取档案</span><span aria-hidden="true">↗</span></div>
+      <div class="case-read-more"><span>查看案例详情</span><span aria-hidden="true">↗</span></div>
     </div>
   `;
 }
