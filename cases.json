@@ -11867,6 +11867,11 @@
         "school": "香港大学",
         "major": "人工智能与商业",
         "rank": "QS前10"
+      },
+      {
+        "school": "香港大学",
+        "major": "商业分析",
+        "rank": "QS前10"
       }
     ],
     "entry_year": 2027,
@@ -11886,6 +11891,11 @@
       {
         "school": "新加坡国立大学",
         "major": "数据科学与可持续",
+        "rank": "QS前10"
+      },
+      {
+        "school": "新加坡国立大学",
+        "major": "应用经济学",
         "rank": "QS前10"
       }
     ],
@@ -12467,6 +12477,11 @@
         "school": "伯明翰大学",
         "major": "数字媒体与传播",
         "rank": "QS前100"
+      },
+      {
+        "school": "伯明翰大学",
+        "major": "物流与供应链管理",
+        "rank": "QS前100"
       }
     ],
     "entry_year": 2027,
@@ -12552,6 +12567,21 @@
         "school": "伯明翰大学",
         "major": "供应链管理",
         "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "管理学",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "国际营销管理",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "国际供应链管理",
+        "rank": "QS前100"
       }
     ],
     "entry_year": 2027,
@@ -12611,7 +12641,7 @@
     "language_score": "IELTS7",
     "country": "中国香港",
     "degree": "硕士",
-    "result": "QS前50",
+    "result": "QS前10",
     "offers": [
       {
         "school": "香港中文大学",
@@ -12622,6 +12652,11 @@
         "school": "香港中文大学",
         "major": "金融科技",
         "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "金融科技",
+        "rank": "QS前10"
       }
     ],
     "entry_year": 2027,
@@ -12636,7 +12671,7 @@
     "language_score": "IELTS 6.5",
     "country": "中国香港",
     "degree": "硕士",
-    "result": "QS前50",
+    "result": "QS前10",
     "offers": [
       {
         "school": "香港中文大学",
@@ -12647,6 +12682,11 @@
         "school": "香港科技大学",
         "major": "电信工程",
         "rank": "QS前50"
+      },
+      {
+        "school": "香港大学",
+        "major": "电子电气工程",
+        "rank": "QS前10"
       }
     ],
     "entry_year": 2027,
@@ -12712,6 +12752,11 @@
         "school": "利兹大学",
         "major": "营销管理与广告",
         "rank": "QS前100"
+      },
+      {
+        "school": "谢菲尔德大学",
+        "major": "数字文化与传播",
+        "rank": "QS前100"
       }
     ],
     "entry_year": 2027,
@@ -12756,6 +12801,101 @@
     ],
     "entry_year": 2027,
     "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 552,
+    "student_school": "西南政法大学",
+    "student_major": "经济学",
+    "gpa": "74",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "谢菲尔德大学",
+        "major": "经济学",
+        "rank": "QS前100"
+      },
+      {
+        "school": "谢菲尔德大学",
+        "major": "商业分析",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 553,
+    "student_school": "南京工业大学",
+    "student_major": "光电信息工程",
+    "gpa": "83",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "谢菲尔德大学",
+        "major": "电子电气工程",
+        "rank": "QS前100"
+      },
+      {
+        "school": "利兹大学",
+        "major": "电子工程",
+        "rank": "QS前100"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "电子与电气工程",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 554,
+    "student_school": "长沙理工大学",
+    "student_major": "机械工程",
+    "gpa": "82",
+    "language_score": "IELTS 6",
+    "country": "中国香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港理工大学",
+        "major": "卫星工程",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 555,
+    "student_school": "南京师范大学",
+    "student_major": "经济学",
+    "gpa": "82",
+    "language_score": "IELTS 6.5",
+    "country": "中国香港",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "香港城市大学",
+        "major": "供应链管理",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "211",
     "note": ""
   }
 ]
