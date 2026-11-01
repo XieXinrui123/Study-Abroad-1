@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import Core from '../cases-manager-core.js';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -62,6 +63,8 @@ function normalizeCase(item) {
 
   return {
     ...item,
+    tier: Core.inferTier(item.student_school, item.tier),
+    entry_year: Core.entryYear(item.entry_year) || null,
     student_school: String(item.student_school || '').trim(),
     student_major: String(item.student_major || item.major || '专业未填写').trim(),
     gpa: String(item.gpa || '未填写').trim(),
@@ -103,6 +106,6 @@ const deduplicated = normalized.filter(item => {
   return true;
 });
 
-fs.writeFileSync(dataPath, `${JSON.stringify(deduplicated, null, 2)}\n`);
+fs.writeFileSync(dataPath, `${JSON.stringify(deduplicated.sort(Core.compareLatest), null, 2)}\n`);
 console.log(`案例数据已规范化：${sourceCases.length} → ${deduplicated.length} 条。`);
 if (duplicates.length) console.log(`移除重复案例 ID：${duplicates.join(', ')}`);

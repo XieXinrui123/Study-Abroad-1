@@ -1274,10 +1274,10 @@ ul, ol { list-style: none; }
         <div class="filter-field">
           <label for="sortFilter">排序方式</label>
           <select class="filter-select" id="sortFilter">
+            <option value="latest">最新入学年份（默认）</option>
             <option value="idAsc">案例编号顺序</option>
             <option value="match">相似度优先</option>
             <option value="idDesc">最新添加案例</option>
-            <option value="latest">最新入学年份</option>
             <option value="gpaAsc">均分从低到高</option>
             <option value="offerCount">Offer 数量最多</option>
           </select>
@@ -1295,7 +1295,7 @@ ul, ol { list-style: none; }
     </div>
     <div class="result-toolbar">
       <div class="result-summary" id="resultSummary">正在加载案例…</div>
-      <div class="match-note" id="sortNote">按案例编号稳定展示，新增案例不会打乱原有顺序</div>
+      <div class="match-note" id="sortNote">按入学年份从近到远展示，新增案例自动按年份排列</div>
     </div>
     <details class="insights-panel">
       <summary>查看当前结果的数据分布</summary>
@@ -1399,6 +1399,7 @@ ul, ol { list-style: none; }
   </div>
 </div>
 
+<script src="cases-manager-core.js?v=20261101"></script>
 <script>
 
 /* ===== Count-up animation ===== */
@@ -1443,76 +1444,7 @@ function setupStaggerObserver() {
   document.querySelectorAll('.stagger-children').forEach(el => observer.observe(el));
 }
 
-const schoolTierMap = {
-  '北京大学': '985', '北大': '985', '清华大学': '985', '清华': '985',
-  '复旦大学': '985', '复旦': '985', '上海交通大学': '985', '上海交大': '985', '上交': '985',
-  '浙江大学': '985', '浙大': '985', '中国科学技术大学': '985', '中科大': '985', '中国科大': '985',
-  '南京大学': '985', '南大': '985', '中国人民大学': '985', '人大': '985',
-  '北京航空航天大学': '985', '北航': '985', '北京理工大学': '985', '北理工': '985', '北理': '985',
-  '北京师范大学': '985', '北师大': '985', '中国农业大学': '985', '中农': '985', '中国农大': '985',
-  '中央民族大学': '985', '中央民族': '985', '同济大学': '985',
-  '华东师范大学': '985', '华东师范': '985', '华师大': '985', '南开大学': '985',
-  '天津大学': '985', '天大': '985', '哈尔滨工业大学': '985', '哈工大': '985',
-  '吉林大学': '985', '吉大': '985', '大连理工大学': '985', '大工': '985', '大连理工': '985',
-  '东北大学': '985', '山东大学': '985', '山大': '985', '中国海洋大学': '985', '中国海大': '985',
-  '西安交通大学': '985', '西安交大': '985', '西交': '985', '西北工业大学': '985', '西工大': '985', '西北工业': '985',
-  '西北农林科技大学': '985', '西北农林': '985', '西农': '985',
-  '武汉大学': '985', '武大': '985', '华中科技大学': '985', '华科': '985', '华中科大': '985',
-  '中南大学': '985', '湖南大学': '985', '湖大': '985', '国防科技大学': '985', '国防科大': '985',
-  '中山大学': '985', '中大': '985', '华南理工大学': '985', '华工': '985', '华南理工': '985',
-  '四川大学': '985', '川大': '985', '电子科技大学': '985', '电子科大': '985', '成电': '985',
-  '重庆大学': '985', '重大': '985', '厦门大学': '985', '厦大': '985',
-  '兰州大学': '985', '兰大': '985', '东南大学': '985', '东大': '985',
-  '北京交通大学': '211', '北交大': '211', '北京工业大学': '211', '北工大': '211',
-  '北京科技大学': '211', '北科大': '211', '北京化工大学': '211', '北化工': '211',
-  '北京邮电大学': '211', '北邮': '211', '北京林业大学': '211', '北林': '211',
-  '北京中医药大学': '211', '北中医': '211', '北京外国语大学': '211', '北外': '211',
-  '中国传媒大学': '211', '中传': '211', '中央财经大学': '211', '中财': '211', '央财': '211',
-  '对外经济贸易大学': '211', '对外经贸': '211', '贸大': '211', '中国政法大学': '211', '法大': '211',
-  '华北电力大学': '211', '华电': '211',
-  '中国矿业大学（北京）': '211', '中国矿业大学北京': '211', '矿大北京': '211',
-  '中国石油大学（北京）': '211', '中国石油大学北京': '211', '中石大北京': '211',
-  '中国地质大学（北京）': '211', '中国地质大学北京': '211', '地大北京': '211',
-  '北京体育大学': '211', '北体': '211', '中央音乐学院': '211', '央音': '211',
-  '上海财经大学': '211', '上财': '211', '上海外国语大学': '211', '上外': '211',
-  '华东理工大学': '211', '华理': '211', '东华大学': '211', '上海大学': '211', '上大': '211',
-  '海军军医大学': '211', '第二军医大学': '211',
-  '南京航空航天大学': '211', '南航': '211', '南京理工大学': '211', '南理工': '211',
-  '河海大学': '211', '江南大学': '211', '中国矿业大学': '211', '矿大': '211',
-  '南京农业大学': '211', '南农': '211', '中国药科大学': '211', '药大': '211',
-  '南京师范大学': '211', '南师大': '211', '苏州大学': '211', '苏大': '211',
-  '福州大学': '211', '福大': '211', '安徽大学': '211', '安大': '211',
-  '合肥工业大学': '211', '合工大': '211', '南昌大学': '211', '昌大': '211',
-  '郑州大学': '211', '郑大': '211', '武汉理工大学': '211', '武理工': '211', '武汉理工': '211',
-  '中国地质大学（武汉）': '211', '中国地质大学武汉': '211', '地大武汉': '211', '中国地质大学': '211', '地大': '211',
-  '华中农业大学': '211', '华农': '211', '华中师范大学': '211', '华师': '211',
-  '中南财经政法大学': '211', '中南财大': '211', '湖南师范大学': '211', '湖南师大': '211',
-  '暨南大学': '211', '暨大': '211', '华南师范大学': '211', '华南师大': '211',
-  '广西大学': '211', '西大': '211', '海南大学': '211',
-  '西南交通大学': '211', '西南交大': '211', '西南财经大学': '211', '西南财大': '211', '西财': '211',
-  '四川农业大学': '211', '川农': '211', '贵州大学': '211', '贵大': '211',
-  '云南大学': '211', '云大': '211', '西藏大学': '211', '藏大': '211',
-  '西北大学': '211', '西安电子科技大学': '211', '西电': '211', '长安大学': '211',
-  '陕西师范大学': '211', '陕师大': '211', '空军军医大学': '211', '第四军医大学': '211',
-  '青海大学': '211', '宁夏大学': '211', '宁大': '211', '新疆大学': '211', '新大': '211', '石河子大学': '211',
-  '中国石油大学（华东）': '211', '中国石油大学华东': '211', '中石大华东': '211',
-  '哈尔滨工程大学': '211', '哈工程': '211', '东北林业大学': '211', '东北林大': '211',
-  '东北农业大学': '211', '东北农大': '211', '辽宁大学': '211', '辽大': '211',
-  '大连海事大学': '211', '延边大学': '211', '东北师范大学': '211', '东北师大': '211',
-  '内蒙古大学': '211', '内大': '211', '河北工业大学': '211', '河工大': '211',
-  '太原理工大学': '211', '太原理工': '211', '天津医科大学': '211', '北京协和医学院': '211', '协和': '211',
-  '厦门大学马来西亚分校': '海外本科', '澳门城市大学': '海外本科', '澳门城市': '海外本科',
-  'PSB Academy': '海外本科', '西交利物浦大学': '海外本科', '西交利物浦': '海外本科',
-  '阿姆斯特丹大学': '海外本科', '宁波诺丁汉大学': '海外本科', '宁波诺丁汉': '海外本科',
-  '上海纽约大学': '海外本科', '昆山杜克大学': '海外本科', '广东以色列理工学院': '海外本科',
-  '温州肯恩大学': '海外本科', '深圳北理莫斯科大学': '海外本科',
-  '香港中文大学': '海外本科', '港中文': '海外本科', '香港大学': '海外本科', '港大': '海外本科',
-  '香港科技大学': '海外本科', '港科大': '海外本科', '香港城市大学': '海外本科', '港城大': '海外本科',
-  '香港理工大学': '海外本科', '港理工': '海外本科', '香港浸会大学': '海外本科', '浸会': '海外本科',
-  '香港岭南大学': '海外本科', '岭南': '海外本科', '香港教育大学': '海外本科', '教大': '海外本科',
-  '香港演艺学院': '海外本科', '澳门科技大学': '海外本科', '澳科大': '海外本科',
-  '澳门大学': '海外本科', '澳大': '海外本科',
-};
+
 
 const majorGroups = {
   '计算机软件': ['计算机', '软件', '信息', '人工智能', 'AI', '数据科学', '大数据', '网络安全', '物联网', '自动化', '智能科学', '计算', '区块链', '机器人'],
@@ -1559,22 +1491,7 @@ function safe(value) {
   })[char]);
 }
 
-function getSchoolTier(name) {
-  if (!name) return '双非';
-  if (schoolTierMap[name]) return schoolTierMap[name];
-  for (const [key, tier] of Object.entries(schoolTierMap)) {
-    if (key.length >= 4 && name.includes(key)) return tier;
-  }
-  const s = name.toLowerCase();
-  if (s.includes('澳门') || s.includes('香港') || s.includes('academy') || 
-      s.includes('利物浦') || s.includes('诺丁汉') || s.includes('纽约') || 
-      s.includes('杜克') || s.includes('以色列') || s.includes('莫斯科') ||
-      s.includes('阿姆斯特丹') || s.includes('university') || s.includes('college') ||
-      s.includes('本科') || s.includes('海本') || s.includes('美本')) {
-    return '海外本科';
-  }
-  return '双非';
-}
+
 function tierClass(tier) {
   const map = { '985': '985', '211': '211', '双非': 'shuangfei', '海外本科': 'overseas', '独立学院': 'shuangfei', '双一流': 'shuangfei' };
   return map[tier] || 'shuangfei';
@@ -1663,7 +1580,7 @@ function isCrossMajor(studentMajor, offers) {
 
 async function loadCases() {
   try {
-    const res = await fetch('cases.json');
+    const res = await fetch('cases.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const payload = await res.json();
     const casesData = Array.isArray(payload) ? payload : payload.cases;
@@ -1717,7 +1634,7 @@ function normalizeCase(item, idx) {
     ? item.offers
     : [{ school: item.school || '待更新', major: item.major || '待更新', rank: item.result || '普通录取' }];
   const studentSchool = item.student_school;
-  const tier = item.tier || getSchoolTier(studentSchool);
+  const tier = CasesManagerCore.inferTier(studentSchool, item.tier);
   const studentMajor = item.student_major || item.major || '专业未填写';
   const regions = getCaseRegions(item.country, offers);
   const majorCategory = getMajorCategory(studentMajor);
@@ -1746,7 +1663,7 @@ function normalizeCase(item, idx) {
     tier: tier,
     major_category: majorCategory,
     is_cross_major: isCrossMajor(studentMajor, offers),
-    entry_year: item.entry_year,
+    entry_year: CasesManagerCore.entryYear(item.entry_year) || null,
     search_text: searchText
   };
 }
@@ -1805,8 +1722,7 @@ function getFiltered() {
         a.id - b.id;
     }
     if (sort === 'latest') {
-      return (b.entry_year || 0) - (a.entry_year || 0) ||
-        a.id - b.id;
+      return CasesManagerCore.compareLatest(a, b);
     }
     return getMatchDetails(b).score - getMatchDetails(a).score ||
       (b.entry_year || 0) - (a.entry_year || 0) ||
@@ -1848,7 +1764,7 @@ function clearFilter(id) {
 function resetFilters() {
   ['searchInput', 'tierFilter', 'majorFilter', 'gpaFilter', 'countryFilter', 'resultFilter', 'yearFilter']
     .forEach(id => { $(id).value = ''; });
-  $('sortFilter').value = 'idAsc';
+  $('sortFilter').value = 'latest';
   $('finderFeedback').textContent = '选择条件后，案例会自动更新。';
   $('finderFeedback').classList.remove('success');
   activePreset = '';
@@ -2082,10 +1998,10 @@ function renderCases() {
   currentPage = 1;
   renderActiveFilters();
   const sortNotes = {
-    idAsc: '按案例编号稳定展示，新增案例不会打乱原有顺序',
+    idAsc: '按案例编号从小到大展示',
     match: '结果会优先展示与你背景更相似的案例',
     idDesc: '最近添加的案例优先展示',
-    latest: '入学年份较新的案例优先展示',
+    latest: '按入学年份从近到远展示；同年按案例编号排列，未填写年份排最后',
     gpaAsc: '均分较低的案例优先展示',
     offerCount: '获得 Offer 数量较多的案例优先展示'
   };

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import Core from '../cases-manager-core.js';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -28,6 +29,9 @@ for (const [index, item] of cases.entries()) {
     errors.push(`第 ${index + 1} 条案例的 ID 无效或重复`);
   }
   ids.add(item.id);
+  const knownTier = Core.knownSchoolTier(item.student_school);
+  if (knownTier && knownTier !== item.tier) errors.push(`案例 #${item.id} 的院校层次应为 ${knownTier}，当前为 ${item.tier}`);
+  if (!Core.entryYear(item.entry_year)) errors.push(`案例 #${item.id} 的入学年份无效`);
   for (const field of requiredTextFields) {
     if (typeof item[field] !== 'string') errors.push(`案例 #${item.id} 缺少文本字段 ${field}`);
   }

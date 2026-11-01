@@ -51,7 +51,7 @@
       return;
     }
     elements.list.innerHTML = '';
-    filtered.sort((a, b) => b.id - a.id).forEach(item => {
+    filtered.sort(Core.compareLatest).forEach(item => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = `case-row${item.id === state.selectedId ? ' active' : ''}`;
@@ -159,13 +159,13 @@
   }
 
   function replaceCases(items, source) {
-    state.cases = items.map((item, index) => Core.normalizeCase(item, index + 1)).sort((a, b) => a.id - b.id);
+    state.cases = items.map((item, index) => Core.normalizeCase(item, index + 1)).sort(Core.compareLatest);
     state.source = source;
     state.selectedId = null;
     persist();
     updateStats();
     renderList();
-    fillForm(state.cases[state.cases.length - 1] || null);
+    fillForm(state.cases[0] || null);
     const report = Core.validateCases(state.cases);
     showMessage(`已从${source}载入 ${state.cases.length} 条案例。校验发现 ${report.errors.length} 个错误、${report.warnings.length} 个提醒。`, report.errors.length ? 'error' : 'success');
   }
@@ -205,7 +205,7 @@
       showMessage(`暂不能导出，请先修复以下问题：\n${report.errors.slice(0, 20).join('\n')}${report.errors.length > 20 ? `\n……另有 ${report.errors.length - 20} 个错误` : ''}`, 'error');
       return;
     }
-    const output = [...state.cases].sort((a, b) => a.id - b.id);
+    const output = [...state.cases].sort(Core.compareLatest);
     const blob = new Blob([`${JSON.stringify(output, null, 2)}\n`], { type: 'application/json;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
@@ -288,7 +288,7 @@
     try {
       const apiUrl = `https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${GITHUB_CASES_PATH}`;
       const existing = await githubRequest(`${apiUrl}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, token);
-      const output = [...state.cases].sort((a, b) => a.id - b.id);
+      const output = [...state.cases].sort(Core.compareLatest);
       const json = `${JSON.stringify(output, null, 2)}\n`;
       const result = await githubRequest(apiUrl, token, {
         method: 'PUT',

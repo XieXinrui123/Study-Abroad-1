@@ -5,6 +5,203 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
+  // Exact names only: do not inherit a parent university tier for an independent college.
+  const SCHOOL_TIERS = {
+  "北京大学": "985",
+  "清华大学": "985",
+  "复旦大学": "985",
+  "上海交通大学": "985",
+  "上海交大": "985",
+  "浙江大学": "985",
+  "中国科学技术大学": "985",
+  "中国科大": "985",
+  "南京大学": "985",
+  "中国人民大学": "985",
+  "北京航空航天大学": "985",
+  "北京理工大学": "985",
+  "北京师范大学": "985",
+  "中国农业大学": "985",
+  "中国农大": "985",
+  "中央民族大学": "985",
+  "中央民族": "985",
+  "同济大学": "985",
+  "华东师范大学": "985",
+  "华东师范": "985",
+  "南开大学": "985",
+  "天津大学": "985",
+  "哈尔滨工业大学": "985",
+  "吉林大学": "985",
+  "大连理工大学": "985",
+  "大连理工": "985",
+  "东北大学": "985",
+  "山东大学": "985",
+  "中国海洋大学": "985",
+  "中国海大": "985",
+  "西安交通大学": "985",
+  "西安交大": "985",
+  "西北工业大学": "985",
+  "西北工业": "985",
+  "西北农林科技大学": "985",
+  "西北农林": "985",
+  "武汉大学": "985",
+  "华中科技大学": "985",
+  "华中科大": "985",
+  "中南大学": "985",
+  "湖南大学": "985",
+  "国防科技大学": "985",
+  "国防科大": "985",
+  "中山大学": "985",
+  "华南理工大学": "985",
+  "华南理工": "985",
+  "四川大学": "985",
+  "电子科技大学": "985",
+  "电子科大": "985",
+  "重庆大学": "985",
+  "厦门大学": "985",
+  "兰州大学": "985",
+  "东南大学": "985",
+  "北京交通大学": "211",
+  "北京工业大学": "211",
+  "北京科技大学": "211",
+  "北京化工大学": "211",
+  "北京邮电大学": "211",
+  "北京林业大学": "211",
+  "北京中医药大学": "211",
+  "北京外国语大学": "211",
+  "中国传媒大学": "211",
+  "中央财经大学": "211",
+  "对外经济贸易大学": "211",
+  "对外经贸": "211",
+  "中国政法大学": "211",
+  "华北电力大学": "211",
+  "中国矿业大学（北京）": "211",
+  "中国矿业大学北京": "211",
+  "矿大北京": "211",
+  "中国石油大学（北京）": "211",
+  "中国石油大学北京": "211",
+  "中石大北京": "211",
+  "中国地质大学（北京）": "211",
+  "中国地质大学北京": "211",
+  "地大北京": "211",
+  "北京体育大学": "211",
+  "中央音乐学院": "211",
+  "上海财经大学": "211",
+  "上海外国语大学": "211",
+  "华东理工大学": "211",
+  "东华大学": "211",
+  "上海大学": "211",
+  "海军军医大学": "211",
+  "第二军医大学": "211",
+  "南京航空航天大学": "211",
+  "南京理工大学": "211",
+  "河海大学": "211",
+  "江南大学": "211",
+  "中国矿业大学": "211",
+  "南京农业大学": "211",
+  "中国药科大学": "211",
+  "南京师范大学": "211",
+  "苏州大学": "211",
+  "福州大学": "211",
+  "安徽大学": "211",
+  "合肥工业大学": "211",
+  "南昌大学": "211",
+  "郑州大学": "211",
+  "武汉理工大学": "211",
+  "武汉理工": "211",
+  "中国地质大学（武汉）": "211",
+  "中国地质大学武汉": "211",
+  "地大武汉": "211",
+  "中国地质大学": "211",
+  "华中农业大学": "211",
+  "华中师范大学": "211",
+  "中南财经政法大学": "211",
+  "中南财大": "211",
+  "湖南师范大学": "211",
+  "湖南师大": "211",
+  "暨南大学": "211",
+  "华南师范大学": "211",
+  "华南师大": "211",
+  "广西大学": "211",
+  "海南大学": "211",
+  "西南交通大学": "211",
+  "西南交大": "211",
+  "西南财经大学": "211",
+  "西南财大": "211",
+  "四川农业大学": "211",
+  "贵州大学": "211",
+  "云南大学": "211",
+  "西藏大学": "211",
+  "西北大学": "211",
+  "西安电子科技大学": "211",
+  "长安大学": "211",
+  "陕西师范大学": "211",
+  "空军军医大学": "211",
+  "第四军医大学": "211",
+  "青海大学": "211",
+  "宁夏大学": "211",
+  "新疆大学": "211",
+  "石河子大学": "211",
+  "中国石油大学（华东）": "211",
+  "中国石油大学华东": "211",
+  "中石大华东": "211",
+  "哈尔滨工程大学": "211",
+  "东北林业大学": "211",
+  "东北林大": "211",
+  "东北农业大学": "211",
+  "东北农大": "211",
+  "辽宁大学": "211",
+  "大连海事大学": "211",
+  "延边大学": "211",
+  "东北师范大学": "211",
+  "东北师大": "211",
+  "内蒙古大学": "211",
+  "河北工业大学": "211",
+  "太原理工大学": "211",
+  "太原理工": "211",
+  "天津医科大学": "211",
+  "北京协和医学院": "211",
+  "厦门大学马来西亚分校": "海外本科",
+  "澳门城市大学": "海外本科",
+  "澳门城市": "海外本科",
+  "PSB Academy": "海外本科",
+  "西交利物浦大学": "海外本科",
+  "西交利物浦": "海外本科",
+  "阿姆斯特丹大学": "海外本科",
+  "宁波诺丁汉大学": "海外本科",
+  "宁波诺丁汉": "海外本科",
+  "上海纽约大学": "海外本科",
+  "昆山杜克大学": "海外本科",
+  "广东以色列理工学院": "海外本科",
+  "温州肯恩大学": "海外本科",
+  "深圳北理莫斯科大学": "海外本科",
+  "香港中文大学": "海外本科",
+  "香港大学": "海外本科",
+  "香港科技大学": "海外本科",
+  "香港城市大学": "海外本科",
+  "香港理工大学": "海外本科",
+  "香港浸会大学": "海外本科",
+  "香港岭南大学": "海外本科",
+  "香港教育大学": "海外本科",
+  "香港演艺学院": "海外本科",
+  "澳门科技大学": "海外本科",
+  "澳门大学": "海外本科"
+};
+
+  function knownSchoolTier(school) {
+    const name = String(school ?? "").trim().replace(/\s+/g, "").replace(/（/g, "(").replace(/）/g, ")");
+    const entry = Object.entries(SCHOOL_TIERS).find(([key]) => key.replace(/\s+/g, "").replace(/（/g, "(").replace(/）/g, ")") === name);
+    return entry ? entry[1] : "";
+  }
+
+  function entryYear(value) {
+    const text = String(value ?? "").trim();
+    return /^\d{4}(?:年)?$/.test(text) ? Number(text.slice(0, 4)) : 0;
+  }
+
+  function compareLatest(a, b) {
+    return entryYear(b.entry_year) - entryYear(a.entry_year) || Number(a.id) - Number(b.id);
+  }
+
   const TIER_VALUES = ['985', '211', '双非', '海外本科'];
   const RANK_VALUES = ['QS前10', 'QS前50', 'QS前100', '海外名校', '中外合办', '待更新'];
   const RANK_WEIGHT = new Map(RANK_VALUES.map((value, index) => [value, index]));
@@ -39,6 +236,8 @@
   }
 
   function inferTier(school, suppliedTier) {
+    const known = knownSchoolTier(school);
+    if (known) return known;
     const tier = clean(suppliedTier);
     if (TIER_VALUES.includes(tier)) return tier;
     const name = clean(school);
@@ -70,7 +269,7 @@
         }] : []);
     const offers = rawOffers.map(normalizeOffer).filter(offer => offer.school || offer.major !== '待更新');
     const idValue = Number.parseInt(item?.id ?? item?.案例编号 ?? fallbackId, 10);
-    const yearValue = Number.parseInt(item?.entry_year ?? item?.入学年份, 10);
+    const yearValue = entryYear(item?.entry_year ?? item?.入学年份);
     const normalized = {
       id: Number.isInteger(idValue) ? idValue : fallbackId,
       student_school: clean(item?.student_school ?? item?.本科院校),
@@ -81,7 +280,7 @@
       degree: clean(item?.degree ?? item?.学历) || '硕士',
       result: normalizeRank(item?.result),
       offers,
-      entry_year: Number.isInteger(yearValue) ? yearValue : new Date().getFullYear() + 1,
+      entry_year: yearValue || null,
       tier: inferTier(item?.student_school ?? item?.本科院校, item?.tier ?? item?.本科层次),
       note: clean(item?.note ?? item?.备注)
     };
@@ -187,6 +386,9 @@
       if (!clean(item.student_school)) warnings.push(`${label}：本科院校未公开或未填写`);
       if (!clean(item.student_major)) errors.push(`${label}：本科专业不能为空`);
       if (!clean(item.country)) errors.push(`${label}：申请地区不能为空`);
+      const knownTier = knownSchoolTier(item.student_school);
+      if (knownTier && knownTier !== item.tier) errors.push(`${label}：${item.student_school} 应标为 ${knownTier}，当前为 ${item.tier}`);
+      if (!entryYear(item.entry_year)) errors.push(`${label}：请填写四位数入学年份`);
       if (!TIER_VALUES.includes(item.tier)) errors.push(`${label}：本科层次不在允许范围`);
       if (!Number.isInteger(item.entry_year) || item.entry_year < currentYear - 5 || item.entry_year > currentYear + 10) {
         warnings.push(`${label}：请确认入学年份 ${item.entry_year || '未填写'}`);
@@ -217,6 +419,9 @@
   }
 
   return {
+    knownSchoolTier,
+    entryYear,
+    compareLatest,
     TIER_VALUES,
     RANK_VALUES,
     HEADER_ALIASES,
