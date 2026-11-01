@@ -26,6 +26,14 @@
   }
 
   function persist() {
+    const selected = state.cases.find(item => item.id === state.selectedId);
+    const chronological = [...state.cases].sort(Core.compareChronological);
+    state.cases = Core.renumberCases(state.cases);
+    state.selectedId = selected ? chronological.indexOf(selected) + 1 : null;
+    if (state.selectedId !== null) {
+      elements.form.elements.id.value = state.selectedId;
+      elements.heading.textContent = `编辑案例 #${state.selectedId}`;
+    }
     localStorage.setItem(STORAGE_KEY, JSON.stringify({ cases: state.cases, savedAt: new Date().toISOString() }));
   }
 
@@ -51,7 +59,7 @@
       return;
     }
     elements.list.innerHTML = '';
-    filtered.sort(Core.compareLatest).forEach(item => {
+    filtered.sort(Core.compareIdDesc).forEach(item => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = `case-row${item.id === state.selectedId ? ' active' : ''}`;
@@ -141,8 +149,9 @@
     persist();
     updateStats();
     renderList();
-    elements.heading.textContent = `编辑案例 #${item.id}`;
-    return { item, warnings: singleReport.warnings };
+    const savedItem = state.cases.find(entry => entry.id === state.selectedId);
+    elements.heading.textContent = `编辑案例 #${savedItem.id}`;
+    return { item: savedItem, warnings: singleReport.warnings };
   }
 
   function selectCase(id) {
@@ -159,7 +168,7 @@
   }
 
   function replaceCases(items, source) {
-    state.cases = items.map((item, index) => Core.normalizeCase(item, index + 1)).sort(Core.compareLatest);
+    state.cases = items.map((item, index) => Core.normalizeCase(item, index + 1)).sort(Core.compareIdDesc);
     state.source = source;
     state.selectedId = null;
     persist();
@@ -205,7 +214,7 @@
       showMessage(`暂不能导出，请先修复以下问题：\n${report.errors.slice(0, 20).join('\n')}${report.errors.length > 20 ? `\n……另有 ${report.errors.length - 20} 个错误` : ''}`, 'error');
       return;
     }
-    const output = [...state.cases].sort(Core.compareLatest);
+    const output = [...state.cases].sort(Core.compareIdDesc);
     const blob = new Blob([`${JSON.stringify(output, null, 2)}\n`], { type: 'application/json;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
@@ -288,7 +297,7 @@
     try {
       const apiUrl = `https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${GITHUB_CASES_PATH}`;
       const existing = await githubRequest(`${apiUrl}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, token);
-      const output = [...state.cases].sort(Core.compareLatest);
+      const output = [...state.cases].sort(Core.compareIdDesc);
       const json = `${JSON.stringify(output, null, 2)}\n`;
       const result = await githubRequest(apiUrl, token, {
         method: 'PUT',

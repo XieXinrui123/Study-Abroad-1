@@ -48,6 +48,14 @@ for (const [index, item] of cases.entries()) {
   }
 }
 
+const byId = [...cases].sort((a, b) => a.id - b.id);
+for (const [index, item] of byId.entries()) {
+  if (item.id !== index + 1) errors.push(`案例编号应连续，位置 ${index + 1} 当前为 #${item.id}`);
+  if (index && Core.entryYear(item.entry_year) < Core.entryYear(byId[index - 1].entry_year)) {
+    errors.push(`案例 #${item.id} 的入学年份早于较小编号案例，请按年份重新编号`);
+  }
+}
+
 if (errors.length) {
   console.error(errors.slice(0, 30).join('\n'));
   process.exitCode = 1;

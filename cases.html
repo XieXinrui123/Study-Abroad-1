@@ -1274,10 +1274,10 @@ ul, ol { list-style: none; }
         <div class="filter-field">
           <label for="sortFilter">排序方式</label>
           <select class="filter-select" id="sortFilter">
-            <option value="latest">最新入学年份（默认）</option>
+            <option value="idDesc">案例编号从大到小（默认）</option>
             <option value="idAsc">案例编号顺序</option>
             <option value="match">相似度优先</option>
-            <option value="idDesc">最新添加案例</option>
+            <option value="latest">最新入学年份</option>
             <option value="gpaAsc">均分从低到高</option>
             <option value="offerCount">Offer 数量最多</option>
           </select>
@@ -1295,7 +1295,7 @@ ul, ol { list-style: none; }
     </div>
     <div class="result-toolbar">
       <div class="result-summary" id="resultSummary">正在加载案例…</div>
-      <div class="match-note" id="sortNote">按入学年份从近到远展示，新增案例自动按年份排列</div>
+      <div class="match-note" id="sortNote">按案例编号从大到小展示，入学年份越新编号越大</div>
     </div>
     <details class="insights-panel">
       <summary>查看当前结果的数据分布</summary>
@@ -1399,7 +1399,7 @@ ul, ol { list-style: none; }
   </div>
 </div>
 
-<script src="cases-manager-core.js?v=20261101"></script>
+<script src="cases-manager-core.js?v=20261101-2"></script>
 <script>
 
 /* ===== Count-up animation ===== */
@@ -1764,7 +1764,7 @@ function clearFilter(id) {
 function resetFilters() {
   ['searchInput', 'tierFilter', 'majorFilter', 'gpaFilter', 'countryFilter', 'resultFilter', 'yearFilter']
     .forEach(id => { $(id).value = ''; });
-  $('sortFilter').value = 'latest';
+  $('sortFilter').value = 'idDesc';
   $('finderFeedback').textContent = '选择条件后，案例会自动更新。';
   $('finderFeedback').classList.remove('success');
   activePreset = '';
@@ -2000,8 +2000,8 @@ function renderCases() {
   const sortNotes = {
     idAsc: '按案例编号从小到大展示',
     match: '结果会优先展示与你背景更相似的案例',
-    idDesc: '最近添加的案例优先展示',
-    latest: '按入学年份从近到远展示；同年按案例编号排列，未填写年份排最后',
+    idDesc: '按案例编号从大到小展示，入学年份越新编号越大',
+    latest: '按入学年份从近到远展示；同年按编号从大到小排列，未填写年份排最后',
     gpaAsc: '均分较低的案例优先展示',
     offerCount: '获得 Offer 数量较多的案例优先展示'
   };

@@ -70,7 +70,7 @@ function normalizeCase(item) {
     gpa: String(item.gpa || '未填写').trim(),
     language_score: String(item.language_score || '未填写').trim() || '未填写',
     country,
-    degree: item.id === 303 ? '硕士' : String(item.degree || '硕士').trim(),
+    degree: String(item.degree || '硕士').trim(),
     result: String(item.result || '待更新').trim(),
     offers,
     note: String(item.note || '').trim()
@@ -106,6 +106,6 @@ const deduplicated = normalized.filter(item => {
   return true;
 });
 
-fs.writeFileSync(dataPath, `${JSON.stringify(deduplicated.sort(Core.compareLatest), null, 2)}\n`);
+fs.writeFileSync(dataPath, `${JSON.stringify(Core.renumberCases(deduplicated), null, 2)}\n`);
 console.log(`案例数据已规范化：${sourceCases.length} → ${deduplicated.length} 条。`);
 if (duplicates.length) console.log(`移除重复案例 ID：${duplicates.join(', ')}`);

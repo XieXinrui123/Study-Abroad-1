@@ -199,7 +199,21 @@
   }
 
   function compareLatest(a, b) {
-    return entryYear(b.entry_year) - entryYear(a.entry_year) || Number(a.id) - Number(b.id);
+    return entryYear(b.entry_year) - entryYear(a.entry_year) || Number(b.id) - Number(a.id);
+  }
+
+  function compareIdDesc(a, b) {
+    return Number(b.id) - Number(a.id);
+  }
+
+  function compareChronological(a, b) {
+    return entryYear(a.entry_year) - entryYear(b.entry_year) || Number(a.id) - Number(b.id);
+  }
+
+  function renumberCases(items) {
+    return [...items].sort(compareChronological)
+      .map((item, index) => ({ ...item, id: index + 1 }))
+      .sort(compareIdDesc);
   }
 
   const TIER_VALUES = ['985', '211', '双非', '海外本科'];
@@ -422,6 +436,9 @@
     knownSchoolTier,
     entryYear,
     compareLatest,
+    compareIdDesc,
+    compareChronological,
+    renumberCases,
     TIER_VALUES,
     RANK_VALUES,
     HEADER_ALIASES,
