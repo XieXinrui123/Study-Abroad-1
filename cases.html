@@ -1245,13 +1245,13 @@ ul, ol { list-style: none; }
         <a class="cases-hero-primary" href="#caseFinder">按我的背景筛选 <span aria-hidden="true">↗</span></a>
         <a class="cases-hero-secondary" href="#casesGrid">浏览全部案例 <span aria-hidden="true">↓</span></a>
       </div>
-      <p class="cases-hero-proof"><span id="heroCaseScope">正在读取案例库</span><i aria-hidden="true"></i><span>信息已匿名处理</span><i aria-hidden="true"></i><span>仅供选校参考</span></p>
+      <p class="cases-hero-proof"><span id="heroCaseScope">正在读取案例库</span><i aria-hidden="true"></i><span>信息已匿名处理</span></p>
     </div>
     <aside class="cases-latest site-admission-broadcast" aria-label="最新入学季录取数据">
       <div class="cases-latest-heading"><h2><span id="heroLatestYear">最新</span> 入学季</h2><span class="cases-latest-status">案例持续补录</span></div>
       <dl class="cases-latest-stats">
         <div><dt>已收录 Offer</dt><dd><strong id="heroLatestOffers">—</strong><small>枚</small></dd></div>
-        <div><dt>申请案例</dt><dd><strong id="heroLatestCases">—</strong><small>条</small></dd></div>
+        <div><dt>申请学生</dt><dd><strong id="heroLatestCases">—</strong><small>位学生</small></dd></div>
       </dl>
       <button class="cases-latest-link" id="heroLatestButton" type="button" disabled><span>查看本季录取案例</span><span aria-hidden="true">↗</span></button>
     </aside>
@@ -1666,7 +1666,7 @@ function updateCaseHero(sourceCases) {
   const latestYear = years.length ? Math.max(...years) : null;
   const firstYear = years.length ? Math.min(...years) : null;
   const recent = sourceCases.filter(item => CasesManagerCore.entryYear(item.entry_year) === latestYear);
-  $('heroCaseScope').textContent = `${allCases.length} 条案例${firstYear ? ` · ${firstYear}—${latestYear} 入学` : ''}`;
+  $('heroCaseScope').textContent = `${allCases.length} 位学生${firstYear ? ` · ${firstYear}—${latestYear} 入学` : ''}`;
   $('heroLatestYear').textContent = latestYear || '最新';
   $('heroLatestOffers').textContent = recent.reduce((sum, item) => sum + (Array.isArray(item.offers) ? item.offers.length : 0), 0);
   $('heroLatestCases').textContent = recent.length;
@@ -1887,7 +1887,7 @@ function renderStats(items) {
   const top10 = items.filter(c => hasRank(c, 10)).length;
   const top50 = items.filter(c => hasRank(c, 50)).length;
   $('statsBar').innerHTML = `
-    <div class="stat-pill"><div class="stat-number">${items.length}</div><div class="stat-label">筛选后案例</div></div>
+    <div class="stat-pill"><div class="stat-number">${items.length}</div><div class="stat-label">筛选后学生</div></div>
     <div class="stat-pill"><div class="stat-number">${top10}</div><div class="stat-label">QS前10录取</div></div>
     <div class="stat-pill"><div class="stat-number">${top50}</div><div class="stat-label">QS前50录取</div></div>
   `;
@@ -2016,7 +2016,7 @@ function renderPagination() {
   if (ep < pages) { if (ep < pages - 1) html += `<span class="page-info">...</span>`; html += `<button class="page-btn" onclick="goPage(${pages})">${pages}</button>`; }
 
   html += `<button class="page-btn" ${currentPage === pages ? 'disabled' : ''} onclick="goPage(${currentPage + 1})">下一页</button>`;
-  html += `<span class="page-info">共 ${total} 条</span>`;
+  html += `<span class="page-info">共 ${total} 位学生</span>`;
   pag.innerHTML = html;
 }
 
@@ -2065,7 +2065,7 @@ function renderCasesPage() {
   } else {
     grid.innerHTML = items.map(renderCaseCard).join('');
     noRes.style.display = 'none';
-    $('dataSourceTip').textContent = `共 ${filteredItems.length} 条案例，当前第 ${currentPage}/${Math.ceil(filteredItems.length / pageSize)} 页，显示 ${start + 1}-${Math.min(end, filteredItems.length)} 条`;
+    $('dataSourceTip').textContent = `共 ${filteredItems.length} 位学生，当前第 ${currentPage}/${Math.ceil(filteredItems.length / pageSize)} 页，展示第 ${start + 1}–${Math.min(end, filteredItems.length)} 位学生`;
   }
   renderPagination();
 }
@@ -2084,7 +2084,7 @@ function renderCases() {
   };
   $('sortNote').textContent = sortNotes[$('sortFilter').value] || '';
   const summaryLead = filteredItems.length === allCases.length ? '案例库共' : '从案例库中找到';
-  $('resultSummary').innerHTML = `${summaryLead} <strong>${filteredItems.length}</strong> 条${filteredItems.length === allCases.length ? '真实录取案例' : '匹配案例'}`;
+  $('resultSummary').innerHTML = `${summaryLead} <strong>${filteredItems.length}</strong> 位学生`;
   renderStats(filteredItems);
   renderCharts(filteredItems);
   renderCasesPage();
