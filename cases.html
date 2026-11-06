@@ -891,6 +891,27 @@ ul, ol { list-style: none; }
   border-color: var(--color-primary);
 }
 .page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.page-jump {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+.page-jump input {
+  width: 72px;
+  padding: var(--space-3) var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  text-align: center;
+}
+.page-jump input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
 .page-info {
   padding: var(--space-3) var(--space-4);
   color: var(--color-text-secondary);
@@ -2017,12 +2038,18 @@ function renderPagination() {
 
   html += `<button class="page-btn" ${currentPage === pages ? 'disabled' : ''} onclick="goPage(${currentPage + 1})">下一页</button>`;
   html += `<span class="page-info">共 ${total} 位学生</span>`;
+  html += `<form class="page-jump" onsubmit="event.preventDefault(); goPage(Number(this.elements.page.value))">
+    <label for="pageJumpInput">跳转到第</label>
+    <input id="pageJumpInput" name="page" type="number" min="1" max="${pages}" step="1" required value="${currentPage}" aria-label="目标页码，共 ${pages} 页">
+    <span>页</span>
+    <button class="page-btn" type="submit">跳转</button>
+  </form>`;
   pag.innerHTML = html;
 }
 
 function goPage(page) {
   const pages = Math.ceil(filteredItems.length / pageSize);
-  if (page < 1 || page > pages) return;
+  if (!Number.isInteger(page) || page < 1 || page > pages) return;
   currentPage = page;
   renderCasesPage();
   $('casesGrid').scrollIntoView({ behavior: 'smooth', block: 'start' });
