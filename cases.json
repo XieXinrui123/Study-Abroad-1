@@ -4216,7 +4216,7 @@
   },
   {
     "id": 406,
-    "student_school": "",
+    "student_school": "中国人民公安大学",
     "student_major": "法律",
     "gpa": "78",
     "language_score": "六级",
@@ -4226,7 +4226,7 @@
     "offers": [
       {
         "school": "澳门大学",
-        "major": "待更新",
+        "major": "法律",
         "rank": "海外名校"
       }
     ],
@@ -4236,7 +4236,7 @@
   },
   {
     "id": 405,
-    "student_school": "",
+    "student_school": "汕头大学",
     "student_major": "网络与新媒体",
     "gpa": "83.5/100",
     "language_score": "7",
@@ -4246,7 +4246,7 @@
     "offers": [
       {
         "school": "香港岭南大学",
-        "major": "待更新",
+        "major": "新闻学",
         "rank": "海外名校"
       }
     ],
@@ -4281,7 +4281,7 @@
   },
   {
     "id": 403,
-    "student_school": "",
+    "student_school": "北京舞蹈学院",
     "student_major": "传媒",
     "gpa": "89",
     "language_score": "7.5",
@@ -4291,7 +4291,7 @@
     "offers": [
       {
         "school": "新加坡国立大学",
-        "major": "待更新",
+        "major": "戏剧表演与研究",
         "rank": "QS前10"
       }
     ],
@@ -4301,7 +4301,7 @@
   },
   {
     "id": 402,
-    "student_school": "",
+    "student_school": "浙江工业大学",
     "student_major": "应用心理学",
     "gpa": "89",
     "language_score": "6.5(6)",
@@ -4311,7 +4311,7 @@
     "offers": [
       {
         "school": "曼彻斯特大学",
-        "major": "待更新",
+        "major": "教育心理学",
         "rank": "QS前50"
       }
     ],
@@ -4321,7 +4321,7 @@
   },
   {
     "id": 401,
-    "student_school": "",
+    "student_school": "东北财经大学",
     "student_major": "统计",
     "gpa": "88.04",
     "language_score": "7(6)",
@@ -4331,7 +4331,7 @@
     "offers": [
       {
         "school": "澳大利亚国立大学",
-        "major": "待更新",
+        "major": "统计与数据分析",
         "rank": "QS前50"
       }
     ],
@@ -4341,7 +4341,7 @@
   },
   {
     "id": 400,
-    "student_school": "",
+    "student_school": "西安理工大学",
     "student_major": "数字媒体技术",
     "gpa": "88",
     "language_score": "未填写",
@@ -4361,7 +4361,7 @@
   },
   {
     "id": 399,
-    "student_school": "",
+    "student_school": "天津体育学院",
     "student_major": "国标舞",
     "gpa": "88",
     "language_score": "未填写",
@@ -4371,7 +4371,7 @@
     "offers": [
       {
         "school": "悉尼大学",
-        "major": "待更新",
+        "major": "媒体实践",
         "rank": "QS前50"
       }
     ],
@@ -4436,7 +4436,7 @@
   },
   {
     "id": 396,
-    "student_school": "",
+    "student_school": "广东技术师范学院",
     "student_major": "新闻学",
     "gpa": "87.74",
     "language_score": "PTE 67(65)",
@@ -4466,7 +4466,7 @@
   },
   {
     "id": 395,
-    "student_school": "",
+    "student_school": "湖南工商大学",
     "student_major": "数据科学",
     "gpa": "87.5",
     "language_score": "7",
@@ -4476,12 +4476,12 @@
     "offers": [
       {
         "school": "澳门大学",
-        "major": "待更新",
+        "major": "数据科学",
         "rank": "海外名校"
       },
       {
         "school": "利兹大学",
-        "major": "待更新",
+        "major": "数据科学",
         "rank": "QS前100"
       }
     ],
@@ -4491,7 +4491,7 @@
   },
   {
     "id": 394,
-    "student_school": "",
+    "student_school": "广西师范大学",
     "student_major": "体育",
     "gpa": "87",
     "language_score": "未填写",
@@ -4541,7 +4541,7 @@
   },
   {
     "id": 392,
-    "student_school": "",
+    "student_school": "温州大学",
     "student_major": "翻译",
     "gpa": "87",
     "language_score": "7",
@@ -4551,7 +4551,7 @@
     "offers": [
       {
         "school": "宁波诺丁汉大学",
-        "major": "待更新",
+        "major": "对外英语教学",
         "rank": "QS前100"
       }
     ],
@@ -4611,7 +4611,7 @@
   },
   {
     "id": 389,
-    "student_school": "",
+    "student_school": "安徽建筑大学",
     "student_major": "房地产",
     "gpa": "86.5",
     "language_score": "未填写",
@@ -4621,7 +4621,7 @@
     "offers": [
       {
         "school": "格拉斯哥大学",
-        "major": "待更新",
+        "major": "全球经济学",
         "rank": "QS前100"
       }
     ],
@@ -4676,7 +4676,7 @@
   },
   {
     "id": 386,
-    "student_school": "",
+    "student_school": "黑龙江大学",
     "student_major": "汉语国际教育",
     "gpa": "86",
     "language_score": "6.5",
@@ -4686,7 +4686,7 @@
     "offers": [
       {
         "school": "香港城市大学",
-        "major": "待更新",
+        "major": "汉语言",
         "rank": "QS前100"
       }
     ],
@@ -4756,7 +4756,7 @@
   },
   {
     "id": 382,
-    "student_school": "",
+    "student_school": "深圳大学",
     "student_major": "生物",
     "gpa": "85.1",
     "language_score": "6.5",
@@ -4766,22 +4766,22 @@
     "offers": [
       {
         "school": "香港中文大学",
-        "major": "待更新",
+        "major": "生物医学工程",
         "rank": "QS前100"
       },
       {
         "school": "香港科技大学",
-        "major": "待更新",
+        "major": "生物技术",
         "rank": "QS前100"
       },
       {
         "school": "香港理工大学",
-        "major": "待更新",
+        "major": "生物技术",
         "rank": "QS前100"
       },
       {
         "school": "香港城市大学",
-        "major": "待更新",
+        "major": "生物统计",
         "rank": "QS前100"
       }
     ],
@@ -4791,7 +4791,7 @@
   },
   {
     "id": 381,
-    "student_school": "",
+    "student_school": "长沙理工大学",
     "student_major": "土木",
     "gpa": "85",
     "language_score": "6",
@@ -4801,12 +4801,12 @@
     "offers": [
       {
         "school": "香港城市大学",
-        "major": "待更新",
+        "major": "土木工程",
         "rank": "QS前100"
       },
       {
         "school": "香港理工大学",
-        "major": "待更新",
+        "major": "土木工程",
         "rank": "QS前100"
       }
     ],
@@ -4836,7 +4836,7 @@
   },
   {
     "id": 379,
-    "student_school": "",
+    "student_school": "浙江传媒学院",
     "student_major": "网络与新媒体",
     "gpa": "84.94",
     "language_score": "5.5(4.5)",
@@ -8516,7 +8516,7 @@
   },
   {
     "id": 216,
-    "student_school": "",
+    "student_school": "长沙理工大学",
     "student_major": "土木工程",
     "gpa": "89.35",
     "language_score": "6.5(5.5)",
