@@ -1,6 +1,6 @@
 [
   {
-    "id": 571,
+    "id": 572,
     "student_school": "福建师范大学协和学院",
     "student_major": "金融",
     "gpa": "83",
@@ -20,7 +20,7 @@
     "note": ""
   },
   {
-    "id": 570,
+    "id": 571,
     "student_school": "西安翻译学院",
     "student_major": "产品设计",
     "gpa": "88",
@@ -45,7 +45,7 @@
     "note": ""
   },
   {
-    "id": 569,
+    "id": 570,
     "student_school": "南京传媒学院",
     "student_major": "广播电视",
     "gpa": "86",
@@ -65,7 +65,7 @@
     "note": ""
   },
   {
-    "id": 568,
+    "id": 569,
     "student_school": "浙江越秀外国语大学",
     "student_major": "英语",
     "gpa": "83",
@@ -85,7 +85,7 @@
     "note": ""
   },
   {
-    "id": 567,
+    "id": 568,
     "student_school": "浙江工商大学",
     "student_major": "慈善管理",
     "gpa": "84",
@@ -105,7 +105,7 @@
     "note": ""
   },
   {
-    "id": 566,
+    "id": 567,
     "student_school": "南京师范大学",
     "student_major": "经济学",
     "gpa": "82",
@@ -125,7 +125,7 @@
     "note": ""
   },
   {
-    "id": 565,
+    "id": 566,
     "student_school": "长沙理工大学",
     "student_major": "机械工程",
     "gpa": "82",
@@ -145,7 +145,7 @@
     "note": ""
   },
   {
-    "id": 564,
+    "id": 565,
     "student_school": "南京工业大学",
     "student_major": "光电信息工程",
     "gpa": "83",
@@ -180,7 +180,7 @@
     "note": ""
   },
   {
-    "id": 563,
+    "id": 564,
     "student_school": "西南政法大学",
     "student_major": "经济学",
     "gpa": "74",
@@ -225,7 +225,7 @@
     "note": ""
   },
   {
-    "id": 562,
+    "id": 563,
     "student_school": "山东管理学院",
     "student_major": "音乐",
     "gpa": "84",
@@ -245,7 +245,7 @@
     "note": ""
   },
   {
-    "id": 561,
+    "id": 562,
     "student_school": "北京科技大学",
     "student_major": "机械工程",
     "gpa": "78",
@@ -270,7 +270,7 @@
     "note": ""
   },
   {
-    "id": 560,
+    "id": 561,
     "student_school": "临沂大学",
     "student_major": "小学教育",
     "gpa": "88",
@@ -325,7 +325,7 @@
     "note": ""
   },
   {
-    "id": 559,
+    "id": 560,
     "student_school": "PSB",
     "student_major": "国际商务",
     "gpa": "3.2",
@@ -345,7 +345,7 @@
     "note": ""
   },
   {
-    "id": 558,
+    "id": 559,
     "student_school": "山东大学",
     "student_major": "通信工程",
     "gpa": "86",
@@ -375,7 +375,7 @@
     "note": ""
   },
   {
-    "id": 557,
+    "id": 558,
     "student_school": "湖南大学",
     "student_major": "金融工程",
     "gpa": "88",
@@ -410,7 +410,7 @@
     "note": ""
   },
   {
-    "id": 556,
+    "id": 557,
     "student_school": "兰州财经大学",
     "student_major": "财政学",
     "gpa": "83",
@@ -435,7 +435,7 @@
     "note": ""
   },
   {
-    "id": 555,
+    "id": 556,
     "student_school": "安阳师范学院",
     "student_major": "计算机",
     "gpa": "83",
@@ -460,7 +460,7 @@
     "note": ""
   },
   {
-    "id": 554,
+    "id": 555,
     "student_school": "辽宁大学",
     "student_major": "国际商务",
     "gpa": "80",
@@ -515,7 +515,7 @@
     "note": ""
   },
   {
-    "id": 553,
+    "id": 554,
     "student_school": "北京化工大学",
     "student_major": "工业设计",
     "gpa": "89",
@@ -535,7 +535,7 @@
     "note": ""
   },
   {
-    "id": 552,
+    "id": 553,
     "student_school": "广东工业大学",
     "student_major": "电子信息",
     "gpa": "87",
@@ -560,7 +560,7 @@
     "note": ""
   },
   {
-    "id": 551,
+    "id": 552,
     "student_school": "浙江传媒学院",
     "student_major": "广播电视工程",
     "gpa": "78",
@@ -590,7 +590,7 @@
     "note": ""
   },
   {
-    "id": 550,
+    "id": 551,
     "student_school": "山东大学",
     "student_major": "数学",
     "gpa": "77",
@@ -610,7 +610,7 @@
     "note": ""
   },
   {
-    "id": 549,
+    "id": 550,
     "student_school": "西南大学",
     "student_major": "动物科学",
     "gpa": "80",
@@ -640,7 +640,7 @@
     "note": ""
   },
   {
-    "id": 548,
+    "id": 549,
     "student_school": "华南农业大学",
     "student_major": "机械工程",
     "gpa": "87",
@@ -660,7 +660,7 @@
     "note": ""
   },
   {
-    "id": 547,
+    "id": 548,
     "student_school": "河南科技大学",
     "student_major": "视觉传达设计",
     "gpa": "83",
@@ -690,7 +690,7 @@
     "note": ""
   },
   {
-    "id": 546,
+    "id": 547,
     "student_school": "广东外语外贸大学南国商学院",
     "student_major": "学前教育",
     "gpa": "84",
@@ -725,7 +725,7 @@
     "note": ""
   },
   {
-    "id": 545,
+    "id": 546,
     "student_school": "兰州城市学院",
     "student_major": "英语",
     "gpa": "82.77",
@@ -745,7 +745,7 @@
     "note": ""
   },
   {
-    "id": 544,
+    "id": 545,
     "student_school": "黑龙江大学",
     "student_major": "广播电视编导",
     "gpa": "86",
@@ -765,7 +765,7 @@
     "note": ""
   },
   {
-    "id": 543,
+    "id": 544,
     "student_school": "长沙理工大学",
     "student_major": "电气工程",
     "gpa": "86",
@@ -790,7 +790,7 @@
     "note": ""
   },
   {
-    "id": 542,
+    "id": 543,
     "student_school": "北京语言大学",
     "student_major": "汉语言文学",
     "gpa": "未填写",
@@ -815,7 +815,7 @@
     "note": ""
   },
   {
-    "id": 541,
+    "id": 542,
     "student_school": "邯郸学院",
     "student_major": "环境工程",
     "gpa": "84",
@@ -840,7 +840,7 @@
     "note": ""
   },
   {
-    "id": 540,
+    "id": 541,
     "student_school": "北京化工大学",
     "student_major": "生物信息",
     "gpa": "未填写",
@@ -865,7 +865,7 @@
     "note": ""
   },
   {
-    "id": 539,
+    "id": 540,
     "student_school": "上海建桥学院",
     "student_major": "金融",
     "gpa": "82",
@@ -895,7 +895,7 @@
     "note": ""
   },
   {
-    "id": 538,
+    "id": 539,
     "student_school": "青岛农业大学",
     "student_major": "农业学",
     "gpa": "83",
@@ -925,7 +925,7 @@
     "note": ""
   },
   {
-    "id": 537,
+    "id": 538,
     "student_school": "辽宁大学",
     "student_major": "国际商务",
     "gpa": "87",
@@ -975,7 +975,7 @@
     "note": ""
   },
   {
-    "id": 536,
+    "id": 537,
     "student_school": "石河子大学",
     "student_major": "法律",
     "gpa": "82",
@@ -995,7 +995,7 @@
     "note": ""
   },
   {
-    "id": 535,
+    "id": 536,
     "student_school": "湖南科技大学",
     "student_major": "英语",
     "gpa": "85",
@@ -1015,7 +1015,7 @@
     "note": ""
   },
   {
-    "id": 534,
+    "id": 535,
     "student_school": "华南理工大学",
     "student_major": "光电信息工程",
     "gpa": "85",
@@ -1040,7 +1040,7 @@
     "note": ""
   },
   {
-    "id": 533,
+    "id": 534,
     "student_school": "东北林业大学",
     "student_major": "土木工程",
     "gpa": "81",
@@ -1065,7 +1065,7 @@
     "note": ""
   },
   {
-    "id": 532,
+    "id": 533,
     "student_school": "哈尔滨工业大学",
     "student_major": "生物医学工程",
     "gpa": "84",
@@ -1085,7 +1085,7 @@
     "note": ""
   },
   {
-    "id": 531,
+    "id": 532,
     "student_school": "新疆医科大学",
     "student_major": "信息系统与信息管理",
     "gpa": "83",
@@ -1105,7 +1105,7 @@
     "note": ""
   },
   {
-    "id": 530,
+    "id": 531,
     "student_school": "中南大学",
     "student_major": "土木工程",
     "gpa": "83",
@@ -1140,7 +1140,7 @@
     "note": ""
   },
   {
-    "id": 529,
+    "id": 530,
     "student_school": "北华航空工业学院",
     "student_major": "通信工程",
     "gpa": "83",
@@ -1175,7 +1175,7 @@
     "note": ""
   },
   {
-    "id": 528,
+    "id": 529,
     "student_school": "清迈大学",
     "student_major": "经济学",
     "gpa": "3.9",
@@ -1200,7 +1200,7 @@
     "note": ""
   },
   {
-    "id": 527,
+    "id": 528,
     "student_school": "中山大学",
     "student_major": "金融",
     "gpa": "88",
@@ -1230,7 +1230,7 @@
     "note": ""
   },
   {
-    "id": 526,
+    "id": 527,
     "student_school": "南京工业大学",
     "student_major": "过程控制",
     "gpa": "76",
@@ -1265,7 +1265,7 @@
     "note": ""
   },
   {
-    "id": 525,
+    "id": 526,
     "student_school": "东北大学",
     "student_major": "计算机",
     "gpa": "89",
@@ -1295,7 +1295,7 @@
     "note": ""
   },
   {
-    "id": 524,
+    "id": 525,
     "student_school": "燕山大学",
     "student_major": "材料科学与工程",
     "gpa": "75",
@@ -1320,7 +1320,7 @@
     "note": ""
   },
   {
-    "id": 523,
+    "id": 524,
     "student_school": "燕山大学",
     "student_major": "电气工程",
     "gpa": "78",
@@ -1340,7 +1340,7 @@
     "note": ""
   },
   {
-    "id": 522,
+    "id": 523,
     "student_school": "兰州城市学院",
     "student_major": "英语",
     "gpa": "80",
@@ -1360,7 +1360,7 @@
     "note": ""
   },
   {
-    "id": 521,
+    "id": 522,
     "student_school": "北京交通大学",
     "student_major": "材料",
     "gpa": "72",
@@ -1380,7 +1380,7 @@
     "note": ""
   },
   {
-    "id": 520,
+    "id": 521,
     "student_school": "东北林业大学",
     "student_major": "计算机科学与技术",
     "gpa": "90",
@@ -1400,7 +1400,7 @@
     "note": ""
   },
   {
-    "id": 519,
+    "id": 520,
     "student_school": "广东理工学院",
     "student_major": "音乐",
     "gpa": "82",
@@ -1420,7 +1420,7 @@
     "note": ""
   },
   {
-    "id": 518,
+    "id": 519,
     "student_school": "上海建桥学院",
     "student_major": "金融",
     "gpa": "81",
@@ -1450,7 +1450,7 @@
     "note": ""
   },
   {
-    "id": 517,
+    "id": 518,
     "student_school": "浙江大学",
     "student_major": "金融",
     "gpa": "81",
@@ -1475,7 +1475,7 @@
     "note": ""
   },
   {
-    "id": 516,
+    "id": 517,
     "student_school": "中国海洋大学",
     "student_major": "数学",
     "gpa": "75",
@@ -1500,7 +1500,7 @@
     "note": ""
   },
   {
-    "id": 515,
+    "id": 516,
     "student_school": "上海立信会计金融学院",
     "student_major": "法律",
     "gpa": "85",
@@ -1520,7 +1520,7 @@
     "note": ""
   },
   {
-    "id": 514,
+    "id": 515,
     "student_school": "上海立信会计金融学院",
     "student_major": "汉语言文学",
     "gpa": "85",
@@ -1540,7 +1540,7 @@
     "note": ""
   },
   {
-    "id": 513,
+    "id": 514,
     "student_school": "山东大学",
     "student_major": "建筑学",
     "gpa": "89",
@@ -1560,7 +1560,7 @@
     "note": ""
   },
   {
-    "id": 512,
+    "id": 513,
     "student_school": "浙江农林大学",
     "student_major": "服装设计",
     "gpa": "84",
@@ -1585,7 +1585,7 @@
     "note": ""
   },
   {
-    "id": 511,
+    "id": 512,
     "student_school": "洛阳师范学院",
     "student_major": "地理",
     "gpa": "88",
@@ -1610,7 +1610,7 @@
     "note": ""
   },
   {
-    "id": 510,
+    "id": 511,
     "student_school": "天津理工大学",
     "student_major": "计算机",
     "gpa": "84",
@@ -1630,7 +1630,7 @@
     "note": ""
   },
   {
-    "id": 509,
+    "id": 510,
     "student_school": "大连理工大学",
     "student_major": "计算机",
     "gpa": "76",
@@ -1650,7 +1650,7 @@
     "note": ""
   },
   {
-    "id": 508,
+    "id": 509,
     "student_school": "北京理工大学珠海学院",
     "student_major": "电气工程",
     "gpa": "74",
@@ -1670,7 +1670,7 @@
     "note": ""
   },
   {
-    "id": 507,
+    "id": 508,
     "student_school": "青岛科技大学",
     "student_major": "化学",
     "gpa": "76",
@@ -1695,7 +1695,7 @@
     "note": ""
   },
   {
-    "id": 506,
+    "id": 507,
     "student_school": "澳门城市大学",
     "student_major": "国际旅游管理",
     "gpa": "2.2",
@@ -1715,7 +1715,7 @@
     "note": ""
   },
   {
-    "id": 505,
+    "id": 506,
     "student_school": "杭州电子科技大学",
     "student_major": "自动化",
     "gpa": "76",
@@ -1740,7 +1740,7 @@
     "note": ""
   },
   {
-    "id": 504,
+    "id": 505,
     "student_school": "东北农业大学",
     "student_major": "风景园林",
     "gpa": "82",
@@ -1760,7 +1760,7 @@
     "note": ""
   },
   {
-    "id": 503,
+    "id": 504,
     "student_school": "北京理工大学",
     "student_major": "光电工程",
     "gpa": "82",
@@ -1785,7 +1785,7 @@
     "note": ""
   },
   {
-    "id": 502,
+    "id": 503,
     "student_school": "北京邮电大学",
     "student_major": "信息工程",
     "gpa": "82",
@@ -1810,7 +1810,7 @@
     "note": ""
   },
   {
-    "id": 501,
+    "id": 502,
     "student_school": "惠州学院",
     "student_major": "英语",
     "gpa": "86",
@@ -1850,7 +1850,7 @@
     "note": ""
   },
   {
-    "id": 500,
+    "id": 501,
     "student_school": "哈尔滨工业大学",
     "student_major": "智能医学工程",
     "gpa": "80",
@@ -1870,7 +1870,7 @@
     "note": ""
   },
   {
-    "id": 499,
+    "id": 500,
     "student_school": "浙江财经大学",
     "student_major": "经济学",
     "gpa": "84",
@@ -1900,7 +1900,7 @@
     "note": ""
   },
   {
-    "id": 498,
+    "id": 499,
     "student_school": "海南大学",
     "student_major": "创意媒体",
     "gpa": "86",
@@ -1920,7 +1920,7 @@
     "note": ""
   },
   {
-    "id": 497,
+    "id": 498,
     "student_school": "西南大学",
     "student_major": "教育学",
     "gpa": "85",
@@ -1940,7 +1940,7 @@
     "note": ""
   },
   {
-    "id": 496,
+    "id": 497,
     "student_school": "澳门城市大学",
     "student_major": "旅游管理",
     "gpa": "2.6",
@@ -1960,7 +1960,7 @@
     "note": ""
   },
   {
-    "id": 495,
+    "id": 496,
     "student_school": "中央民族大学",
     "student_major": "汉语言文学",
     "gpa": "89",
@@ -1980,7 +1980,7 @@
     "note": ""
   },
   {
-    "id": 494,
+    "id": 495,
     "student_school": "武汉大学",
     "student_major": "物流管理",
     "gpa": "85",
@@ -2000,7 +2000,7 @@
     "note": ""
   },
   {
-    "id": 493,
+    "id": 494,
     "student_school": "云南财经大学",
     "student_major": "金融科技",
     "gpa": "78",
@@ -2020,7 +2020,7 @@
     "note": ""
   },
   {
-    "id": 492,
+    "id": 493,
     "student_school": "琼台师范学院",
     "student_major": "建筑学",
     "gpa": "86",
@@ -2040,7 +2040,7 @@
     "note": ""
   },
   {
-    "id": 491,
+    "id": 492,
     "student_school": "北京石油化工学院",
     "student_major": "药学",
     "gpa": "76",
@@ -2065,7 +2065,7 @@
     "note": ""
   },
   {
-    "id": 490,
+    "id": 491,
     "student_school": "北京舞蹈学院",
     "student_major": "表演艺术",
     "gpa": "93.47",
@@ -2090,7 +2090,7 @@
     "note": ""
   },
   {
-    "id": 489,
+    "id": 490,
     "student_school": "广东海洋大学",
     "student_major": "经济学",
     "gpa": "88",
@@ -2115,7 +2115,7 @@
     "note": ""
   },
   {
-    "id": 488,
+    "id": 489,
     "student_school": "扬州大学",
     "student_major": "计算机",
     "gpa": "75",
@@ -2140,7 +2140,7 @@
     "note": ""
   },
   {
-    "id": 487,
+    "id": 488,
     "student_school": "天津城建大学",
     "student_major": "电气工程",
     "gpa": "84",
@@ -2160,7 +2160,7 @@
     "note": ""
   },
   {
-    "id": 486,
+    "id": 487,
     "student_school": "长沙理工大学",
     "student_major": "土木工程",
     "gpa": "80",
@@ -2195,7 +2195,7 @@
     "note": ""
   },
   {
-    "id": 485,
+    "id": 486,
     "student_school": "上海海事大学",
     "student_major": "电气工程",
     "gpa": "86",
@@ -2220,7 +2220,7 @@
     "note": ""
   },
   {
-    "id": 484,
+    "id": 485,
     "student_school": "浙江树人学院",
     "student_major": "市场营销",
     "gpa": "86",
@@ -2250,7 +2250,7 @@
     "note": ""
   },
   {
-    "id": 483,
+    "id": 484,
     "student_school": "广东科技学院",
     "student_major": "市场营销",
     "gpa": "84.00/100",
@@ -2275,7 +2275,7 @@
     "note": ""
   },
   {
-    "id": 482,
+    "id": 483,
     "student_school": "武汉纺织大学外经贸学院",
     "student_major": "英语",
     "gpa": "86",
@@ -2300,7 +2300,7 @@
     "note": ""
   },
   {
-    "id": 481,
+    "id": 482,
     "student_school": "桂林理工大学",
     "student_major": "计算机",
     "gpa": "80.0/100",
@@ -2330,7 +2330,7 @@
     "note": ""
   },
   {
-    "id": 480,
+    "id": 481,
     "student_school": "广州大学",
     "student_major": "历史",
     "gpa": "90",
@@ -2370,7 +2370,7 @@
     "note": ""
   },
   {
-    "id": 479,
+    "id": 480,
     "student_school": "燕山大学",
     "student_major": "材料",
     "gpa": "72/100",
@@ -2410,7 +2410,7 @@
     "note": ""
   },
   {
-    "id": 478,
+    "id": 479,
     "student_school": "北京服装学院",
     "student_major": "设计",
     "gpa": "3.76/4.0",
@@ -2455,7 +2455,7 @@
     "note": ""
   },
   {
-    "id": 477,
+    "id": 478,
     "student_school": "燕山大学",
     "student_major": "工商管理",
     "gpa": "85/100",
@@ -2485,7 +2485,7 @@
     "note": ""
   },
   {
-    "id": 476,
+    "id": 477,
     "student_school": "广西民族大学",
     "student_major": "表演",
     "gpa": "83",
@@ -2505,7 +2505,7 @@
     "note": ""
   },
   {
-    "id": 475,
+    "id": 476,
     "student_school": "浙江理工大学",
     "student_major": "英语",
     "gpa": "88",
@@ -2540,7 +2540,7 @@
     "note": ""
   },
   {
-    "id": 474,
+    "id": 475,
     "student_school": "闽江学院",
     "student_major": "经济学",
     "gpa": "4.08",
@@ -2575,7 +2575,7 @@
     "note": ""
   },
   {
-    "id": 473,
+    "id": 474,
     "student_school": "集美大学",
     "student_major": "会计",
     "gpa": "88",
@@ -2600,7 +2600,7 @@
     "note": ""
   },
   {
-    "id": 472,
+    "id": 473,
     "student_school": "阿姆斯特丹大学",
     "student_major": "金融",
     "gpa": "7.0",
@@ -2625,7 +2625,7 @@
     "note": ""
   },
   {
-    "id": 471,
+    "id": 472,
     "student_school": "西交利物浦大学",
     "student_major": "金融数学",
     "gpa": "58",
@@ -2650,7 +2650,7 @@
     "note": ""
   },
   {
-    "id": 470,
+    "id": 471,
     "student_school": "PSB Academy",
     "student_major": "传媒",
     "gpa": "68",
@@ -2675,7 +2675,7 @@
     "note": ""
   },
   {
-    "id": 469,
+    "id": 470,
     "student_school": "PSB Academy",
     "student_major": "传媒",
     "gpa": "80",
@@ -2705,7 +2705,7 @@
     "note": ""
   },
   {
-    "id": 468,
+    "id": 469,
     "student_school": "澳门城市大学",
     "student_major": "工商管理",
     "gpa": "3.62/4.00",
@@ -2725,7 +2725,7 @@
     "note": ""
   },
   {
-    "id": 467,
+    "id": 468,
     "student_school": "澳门城市大学",
     "student_major": "旅游管理",
     "gpa": "3.84/4.0",
@@ -2755,7 +2755,7 @@
     "note": ""
   },
   {
-    "id": 466,
+    "id": 467,
     "student_school": "上海交通大学",
     "student_major": "市场营销",
     "gpa": "88",
@@ -2775,7 +2775,7 @@
     "note": ""
   },
   {
-    "id": 465,
+    "id": 466,
     "student_school": "同济大学",
     "student_major": "会计",
     "gpa": "85",
@@ -2800,7 +2800,7 @@
     "note": ""
   },
   {
-    "id": 464,
+    "id": 465,
     "student_school": "北京师范大学",
     "student_major": "戏剧影视",
     "gpa": "85",
@@ -2830,7 +2830,7 @@
     "note": ""
   },
   {
-    "id": 463,
+    "id": 464,
     "student_school": "湖南大学",
     "student_major": "金融",
     "gpa": "88.39/100",
@@ -2860,7 +2860,7 @@
     "note": ""
   },
   {
-    "id": 462,
+    "id": 463,
     "student_school": "湖南大学",
     "student_major": "数学",
     "gpa": "83.94/100",
@@ -2885,7 +2885,7 @@
     "note": ""
   },
   {
-    "id": 461,
+    "id": 462,
     "student_school": "湖南大学",
     "student_major": "金融",
     "gpa": "92",
@@ -2910,7 +2910,7 @@
     "note": ""
   },
   {
-    "id": 460,
+    "id": 461,
     "student_school": "厦门大学马来西亚分校",
     "student_major": "会计",
     "gpa": "2.6",
@@ -2930,7 +2930,7 @@
     "note": ""
   },
   {
-    "id": 459,
+    "id": 460,
     "student_school": "中国农业大学",
     "student_major": "工业设计",
     "gpa": "2.9",
@@ -2955,7 +2955,7 @@
     "note": ""
   },
   {
-    "id": 458,
+    "id": 459,
     "student_school": "厦门大学马来西亚分校",
     "student_major": "会计",
     "gpa": "2.7",
@@ -2975,7 +2975,7 @@
     "note": ""
   },
   {
-    "id": 457,
+    "id": 458,
     "student_school": "西南大学",
     "student_major": "市场营销",
     "gpa": "84",
@@ -3000,7 +3000,7 @@
     "note": ""
   },
   {
-    "id": 456,
+    "id": 457,
     "student_school": "西南大学",
     "student_major": "生物",
     "gpa": "80",
@@ -3020,7 +3020,7 @@
     "note": ""
   },
   {
-    "id": 455,
+    "id": 456,
     "student_school": "北京体育大学",
     "student_major": "经济学",
     "gpa": "88",
@@ -3045,7 +3045,7 @@
     "note": ""
   },
   {
-    "id": 454,
+    "id": 455,
     "student_school": "北京科技大学",
     "student_major": "项目管理",
     "gpa": "80",
@@ -3075,7 +3075,7 @@
     "note": ""
   },
   {
-    "id": 453,
+    "id": 454,
     "student_school": "合肥工业大学",
     "student_major": "金融工程",
     "gpa": "84",
@@ -3095,7 +3095,7 @@
     "note": ""
   },
   {
-    "id": 452,
+    "id": 453,
     "student_school": "西南大学",
     "student_major": "经济学",
     "gpa": "82",
@@ -3120,7 +3120,7 @@
     "note": ""
   },
   {
-    "id": 451,
+    "id": 452,
     "student_school": "南京财经大学",
     "student_major": "会计",
     "gpa": "89.62/100",
@@ -3155,7 +3155,7 @@
     "note": ""
   },
   {
-    "id": 450,
+    "id": 451,
     "student_school": "武汉理工大学",
     "student_major": "车辆工程",
     "gpa": "86.82",
@@ -3185,7 +3185,7 @@
     "note": ""
   },
   {
-    "id": 449,
+    "id": 450,
     "student_school": "东北林业大学",
     "student_major": "计算机",
     "gpa": "84.00/100",
@@ -3215,7 +3215,7 @@
     "note": ""
   },
   {
-    "id": 448,
+    "id": 449,
     "student_school": "华东理工大学",
     "student_major": "机械工程",
     "gpa": "85",
@@ -3245,7 +3245,7 @@
     "note": ""
   },
   {
-    "id": 447,
+    "id": 448,
     "student_school": "东北林业大学",
     "student_major": "计算机",
     "gpa": "85.42/100",
@@ -3270,7 +3270,7 @@
     "note": ""
   },
   {
-    "id": 446,
+    "id": 447,
     "student_school": "安徽大学",
     "student_major": "经济学",
     "gpa": "3.53/5.0",
@@ -3295,7 +3295,7 @@
     "note": ""
   },
   {
-    "id": 445,
+    "id": 446,
     "student_school": "海南大学",
     "student_major": "食品科学",
     "gpa": "85",
@@ -3325,7 +3325,7 @@
     "note": ""
   },
   {
-    "id": 444,
+    "id": 445,
     "student_school": "湖南师范大学",
     "student_major": "数据科学",
     "gpa": "84",
@@ -3350,7 +3350,7 @@
     "note": ""
   },
   {
-    "id": 443,
+    "id": 444,
     "student_school": "东北师范大学",
     "student_major": "会计",
     "gpa": "87",
@@ -3380,7 +3380,7 @@
     "note": ""
   },
   {
-    "id": 442,
+    "id": 443,
     "student_school": "河海大学",
     "student_major": "通信工程",
     "gpa": "4.3/5.0",
@@ -3400,7 +3400,7 @@
     "note": ""
   },
   {
-    "id": 441,
+    "id": 442,
     "student_school": "西南政法大学",
     "student_major": "法律",
     "gpa": "90",
@@ -3435,7 +3435,7 @@
     "note": ""
   },
   {
-    "id": 440,
+    "id": 441,
     "student_school": "华中农业大学",
     "student_major": "智慧农业",
     "gpa": "3.51/4.00",
@@ -3470,7 +3470,7 @@
     "note": ""
   },
   {
-    "id": 439,
+    "id": 440,
     "student_school": "北京外国语大学",
     "student_major": "国际商务",
     "gpa": "85/100",
@@ -3490,7 +3490,7 @@
     "note": ""
   },
   {
-    "id": 438,
+    "id": 439,
     "student_school": "哈尔滨工程大学",
     "student_major": "工业设计",
     "gpa": "82.84/100",
@@ -3525,7 +3525,7 @@
     "note": ""
   },
   {
-    "id": 437,
+    "id": 438,
     "student_school": "中国传媒大学",
     "student_major": "传媒",
     "gpa": "92",
@@ -3555,7 +3555,7 @@
     "note": ""
   },
   {
-    "id": 436,
+    "id": 437,
     "student_school": "中国地质大学(武汉)",
     "student_major": "地理信息系统",
     "gpa": "89",
@@ -3585,7 +3585,7 @@
     "note": ""
   },
   {
-    "id": 435,
+    "id": 436,
     "student_school": "湖南大学",
     "student_major": "传媒",
     "gpa": "84",
@@ -3605,7 +3605,7 @@
     "note": ""
   },
   {
-    "id": 434,
+    "id": 435,
     "student_school": "中南大学",
     "student_major": "生物信息",
     "gpa": "77",
@@ -3635,7 +3635,7 @@
     "note": ""
   },
   {
-    "id": 433,
+    "id": 434,
     "student_school": "中国农业大学",
     "student_major": "工业设计",
     "gpa": "80",
@@ -3655,7 +3655,7 @@
     "note": ""
   },
   {
-    "id": 432,
+    "id": 433,
     "student_school": "四川大学",
     "student_major": "计算机",
     "gpa": "84",
@@ -3675,7 +3675,7 @@
     "note": ""
   },
   {
-    "id": 431,
+    "id": 432,
     "student_school": "四川大学",
     "student_major": "计算机",
     "gpa": "84",
@@ -3695,7 +3695,7 @@
     "note": ""
   },
   {
-    "id": 430,
+    "id": 431,
     "student_school": "吉林大学",
     "student_major": "计算机",
     "gpa": "78",
@@ -3715,7 +3715,7 @@
     "note": ""
   },
   {
-    "id": 429,
+    "id": 430,
     "student_school": "同济大学",
     "student_major": "英语",
     "gpa": "87",
@@ -3735,7 +3735,7 @@
     "note": ""
   },
   {
-    "id": 428,
+    "id": 429,
     "student_school": "电子科技大学",
     "student_major": "物理学",
     "gpa": "80",
@@ -3760,7 +3760,7 @@
     "note": ""
   },
   {
-    "id": 427,
+    "id": 428,
     "student_school": "安徽大学",
     "student_major": "土木工程",
     "gpa": "83",
@@ -3785,7 +3785,7 @@
     "note": ""
   },
   {
-    "id": 426,
+    "id": 427,
     "student_school": "北京化工大学",
     "student_major": "设计",
     "gpa": "90",
@@ -3815,7 +3815,7 @@
     "note": ""
   },
   {
-    "id": 425,
+    "id": 426,
     "student_school": "西南大学",
     "student_major": "计算机",
     "gpa": "86",
@@ -3840,7 +3840,7 @@
     "note": ""
   },
   {
-    "id": 424,
+    "id": 425,
     "student_school": "暨南大学",
     "student_major": "计算机",
     "gpa": "87",
@@ -3860,7 +3860,7 @@
     "note": ""
   },
   {
-    "id": 423,
+    "id": 424,
     "student_school": "安徽大学",
     "student_major": "财政学",
     "gpa": "89",
@@ -3880,7 +3880,7 @@
     "note": ""
   },
   {
-    "id": 422,
+    "id": 423,
     "student_school": "大连海事大学",
     "student_major": "经济学",
     "gpa": "84",
@@ -3900,7 +3900,7 @@
     "note": ""
   },
   {
-    "id": 421,
+    "id": 422,
     "student_school": "华北电力大学",
     "student_major": "电气工程",
     "gpa": "79",
@@ -3930,7 +3930,7 @@
     "note": ""
   },
   {
-    "id": 420,
+    "id": 421,
     "student_school": "武汉理工大学",
     "student_major": "社会工作",
     "gpa": "3.937/5.0",
@@ -3956,6 +3956,36 @@
       }
     ],
     "entry_year": 2026,
+    "tier": "211",
+    "note": ""
+  },
+  {
+    "id": 420,
+    "student_school": "大连海事大学",
+    "student_major": "法律",
+    "gpa": "87",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "伦敦国王学院",
+        "major": "法律",
+        "rank": "QS前50"
+      },
+      {
+        "school": "爱丁堡大学",
+        "major": "法律",
+        "rank": "QS前50"
+      },
+      {
+        "school": "曼彻斯特大学",
+        "major": "法律",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2025,
     "tier": "211",
     "note": ""
   },
