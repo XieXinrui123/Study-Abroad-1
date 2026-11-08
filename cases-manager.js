@@ -239,6 +239,7 @@
   async function githubRequest(url, token, options = {}) {
     const response = await fetch(url, {
       ...options,
+      cache: 'no-store',
       headers: {
         Accept: 'application/vnd.github+json',
         Authorization: `Bearer ${token}`,
@@ -249,7 +250,9 @@
     const payload = await response.json().catch(() => ({}));
     if (!response.ok) {
       const detail = payload.message ? `：${payload.message}` : '';
-      throw new Error(`GitHub 返回 ${response.status}${detail}`);
+      const error = new Error(`GitHub 返回 ${response.status}${detail}`);
+      error.status = response.status;
+      throw error;
     }
     return payload;
   }
@@ -296,7 +299,7 @@
     status.textContent = '正在连接 GitHub 并更新案例库…';
     try {
       const apiUrl = `https://api.github.com/repos/${GITHUB_REPOSITORY}/contents/${GITHUB_CASES_PATH}`;
-      const existing = await githubRequest(`${apiUrl}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, token);
+      const existing = await githubRequest(`${apiUrl}?ref=${encodeURIComponent(GITHUB_BRANCH)}&_=${Date.now()}`, token);
       const output = [...state.cases].sort(Core.compareIdDesc);
       const json = `${JSON.stringify(output, null, 2)}\n`;
       const result = await githubRequest(apiUrl, token, {
@@ -319,7 +322,13 @@
       status.classList.add('success');
       showMessage(`案例已发布到 GitHub main 分支。提交：${result.commit?.sha?.slice(0, 7) || '已创建'}。`, 'success');
     } catch (error) {
-      status.textContent = `发布失败：${error.message}。请确认令牌未过期，且具有该仓库 Contents 读写权限。`;
+      if (error.status === 409) {
+        status.textContent = '发布失败：线上案例库版本已变化，本次未覆盖线上数据，本地编辑已保留。请先导出本地案例备份，再重新载入线上案例并核对改动后发布。';
+      } else if (error.status === 401 || error.status === 403) {
+        status.textContent = `发布失败：${error.message}。请确认令牌未过期，且具有该仓库 Contents 读写权限。`;
+      } else {
+        status.textContent = `发布失败：${error.message}。本地编辑已保留，请检查网络连接或稍后重试。`;
+      }
       status.classList.add('error');
     } finally {
       setPublishBusy(false);
