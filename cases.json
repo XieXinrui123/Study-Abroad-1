@@ -1,5 +1,105 @@
 [
   {
+    "id": 577,
+    "student_school": "北京科技大学",
+    "student_major": "项目管理",
+    "gpa": "81",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "房地产金融与投资",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "211",
+    "note": ""
+  },
+  {
+    "id": 576,
+    "student_school": "伊犁师范大学",
+    "student_major": "生物",
+    "gpa": "83",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "昆士兰大学",
+        "major": "生物信息",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 575,
+    "student_school": "福建师范大学协和学院",
+    "student_major": "金融",
+    "gpa": "80",
+    "language_score": "未填写",
+    "country": "澳大利亚",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "澳洲国立大学",
+        "major": "财务管理",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
+    "id": 574,
+    "student_school": "西南大学",
+    "student_major": "数学",
+    "gpa": "80",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前100",
+    "offers": [
+      {
+        "school": "布里斯托大学",
+        "major": "数学教育",
+        "rank": "QS前100"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "211",
+    "note": ""
+  },
+  {
+    "id": 573,
+    "student_school": "中南林业科技大学",
+    "student_major": "金融",
+    "gpa": "85",
+    "language_score": "未填写",
+    "country": "英国",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "曼彻斯特大学",
+        "major": "房地产金融与投资",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "双非",
+    "note": ""
+  },
+  {
     "id": 572,
     "student_school": "福建师范大学协和学院",
     "student_major": "金融",
@@ -38,6 +138,11 @@
         "school": "布里斯托大学",
         "major": "数字创新与商业",
         "rank": "QS前100"
+      },
+      {
+        "school": "克兰菲尔德大学",
+        "major": "市场营销",
+        "rank": "海外名校"
       }
     ],
     "entry_year": 2027,
@@ -72,12 +177,27 @@
     "language_score": "IELTS 7",
     "country": "英国",
     "degree": "硕士",
-    "result": "海外名校",
+    "result": "QS前100",
     "offers": [
       {
         "school": "南安普敦大学",
         "major": "对外英语教学",
         "rank": "海外名校"
+      },
+      {
+        "school": "利兹大学",
+        "major": "对外英语教学",
+        "rank": "QS前100"
+      },
+      {
+        "school": "诺丁汉大学",
+        "major": "应用语言学",
+        "rank": "QS前100"
+      },
+      {
+        "school": "谢菲尔德大学",
+        "major": "教育学",
+        "rank": "QS前100"
       }
     ],
     "entry_year": 2027,
@@ -717,6 +837,11 @@
       {
         "school": "谢菲尔德大学",
         "major": "心理教育",
+        "rank": "QS前100"
+      },
+      {
+        "school": "格拉斯哥大学",
+        "major": "全纳教育",
         "rank": "QS前100"
       }
     ],
