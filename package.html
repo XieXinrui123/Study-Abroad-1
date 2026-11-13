@@ -6,6 +6,9 @@
 <meta name="description" content="DreamBridge留学与职业增值服务套餐。DIY润色500起，半DIY全套3999，全包申请10000起，博士及研究型硕士申请提供灵活定制辅导。">
 <title>留学申请服务与套餐｜DreamBridge</title>
 <style>
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
@@ -120,7 +123,8 @@ ul { list-style: none; }
 .promo-left { display: flex; align-items: center; gap: var(--space-4); }
 .promo-tag { background: rgba(255,255,255,0.2); padding: var(--space-1) var(--space-3); border-radius: var(--radius-sm); font-size: 11px; font-weight: 700; letter-spacing: 1px; }
 .promo-text { font-size: var(--text-sm); font-weight: 500; }
-.promo-text strong { font-weight: 700; }
+#free-promo-title { color: inherit; font-size: clamp(20px, 3vw, 28px); margin: 0 0 4px; }
+#free { scroll-margin-top: 90px; }
 .promo-btn { background: #fff; color: var(--color-primary); font-size: var(--text-sm); font-weight: 700; padding: var(--space-2) var(--space-4); border-radius: var(--radius-sm); transition: all 0.2s; flex-shrink: 0; }
 .promo-btn:hover { background: var(--color-accent-light); }
 
@@ -133,7 +137,7 @@ ul { list-style: none; }
 
 /* ===== Compare Table (THE CORE) ===== */
 .compare-wrap { overflow-x: auto; margin-bottom: var(--space-8); }
-.compare-table { width: 100%; min-width: 940px; border-collapse: separate; border-spacing: 0; background: var(--color-surface); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--color-border); }
+.compare-table { width: 100%; min-width: 940px; border-collapse: separate; border-spacing: 0; background: var(--color-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 1px solid var(--color-border); }
 .compare-table th { padding: var(--space-4) var(--space-5); text-align: center; font-size: var(--text-sm); font-weight: 700; border-bottom: 2px solid var(--color-border); }
 .compare-table th:first-child { text-align: left; width: 200px; }
 .compare-table th.featured { background: var(--color-primary); color: #fff; position: relative; }
@@ -451,8 +455,157 @@ ul { list-style: none; }
   .package-page .ielts-section { padding: 18px 0 44px; }
   .package-page .cta { padding: 48px 0; }
 }
+
+.compare-table .package-summary > * { padding: 22px 16px; background: #edf4ff; border-bottom: 2px solid #b8cdef; vertical-align: top; }
+.compare-table .package-summary td { color: #344866; font-size: 14px; line-height: 1.55; }
+.package-summary span, .summary-price { display: block; }
+.summary-price { margin-bottom: 6px; color: #173e80; font-size: 24px; line-height: 1.2; }
+.summary-price small { font-size: 14px; }
+.summary-scope { color: #182e52; font-weight: 700; }
+@media (max-width: 760px) {
+  .compare-table tr > :first-child:not([colspan]) { position: sticky; left: 0; z-index: 1; background: var(--color-surface, #fff); box-shadow: 1px 0 0 var(--color-border); }
+  .compare-table .package-summary > th:first-child { background: #eef4fc; }
+}
+
+
+
+#free .promo { padding: clamp(18px, 3vw, 30px); background: #eff5fb; border: 1px solid #d7e4f1; color: #193754; }
+#free .promo::before { display: none; }
+#free .promo-inner { padding: 0; gap: 14px; }
+#free .promo-btn { background: #173e70; color: #fff; }
+#free .promo-btn:hover { background: #245184; }
+.free-directory { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; gap: 8px; margin-top: 18px; }
+.free-directory h3, .free-directory p { grid-column: 1 / -1; margin: 0; font-size: 13px; color: #405975; }
+.free-directory details { background: #fff; border: 1px solid #d7e4f1; border-radius: 9px; }
+.free-directory details[open] { grid-column: 1 / -1; }
+.free-directory summary { padding: 10px 14px; cursor: pointer; font-weight: 700; }
+.free-directory ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 185px), 1fr)); gap: 6px 16px; padding: 0 18px 14px 34px; margin: 0; font-size: 14px; }
+.free-directory a { margin-inline-start: 8px; color: #234e86; text-decoration: underline; }
+@media (max-width: 600px) {
+  .free-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.table-swipe-note { display: none; }
+@media (max-width: 960px) {
+  .table-swipe-note { display: block; margin: 0 0 8px; color: #49617c; font-size: 13px; }
+}
+@media (max-width: 760px) {
+  #plans .compare-wrap { margin-inline: 0; padding-inline: 0; }
+  #plans .compare-table tr > :first-child:not([colspan]) { width: 108px !important; max-width: 108px; padding-inline: 10px; }
+}
 </style>
 <link rel="stylesheet" href="site-shell.css?v=20260915-1">
+<style>
+/* Match the blue-and-white theme loaded by cases.html in cases-ui.css. */
+.package-page {
+  --font-sans: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --color-bg: #f3f7fc;
+  --color-surface: #fff;
+  --color-surface-elevated: #fff;
+  --color-text: #173450;
+  --color-text-secondary: #52677e;
+  --color-text-tertiary: #61758d;
+  --color-primary: #2f64d6;
+  --color-primary-dark: #2454bb;
+  --color-primary-light: #f1f6fe;
+  --color-accent: #2f64d6;
+  --color-accent-dark: #2454bb;
+  --color-border: #e2eaf4;
+  --color-border-light: #e8eef6;
+  --package-hero: linear-gradient(115deg, #122943 0%, #193b64 65%, #214d78 100%);
+  --package-card-shadow: 0 4px 18px #142a4505;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+.package-page .page-title {
+  padding: 120px 0 38px;
+  background: var(--package-hero);
+  color: #fff;
+}
+.package-page .page-title h1 {
+  color: inherit;
+  font-family: var(--font-sans);
+  font-size: clamp(30px, 3.3vw, 42px);
+  font-weight: 750;
+  line-height: 1.35;
+  letter-spacing: -.6px;
+  margin-bottom: 15px;
+}
+.package-page .page-title p { color: #c1cee0; font-size: 14px; line-height: 1.9; }
+.package-page .page-title .meta { gap: 10px 22px; margin-top: 18px; }
+.package-page .page-title .meta-item,
+.package-page .page-title .meta-item svg { color: #d5e2f4; }
+.package-page :is(.section-title, .cta h2, #free-promo-title) {
+  font-family: var(--font-sans);
+  font-size: clamp(21px, 2.4vw, 27px);
+  font-weight: 750;
+  line-height: 1.45;
+  letter-spacing: -.3px;
+}
+.package-page #free { margin-top: 26px; }
+#free .promo {
+  padding: 26px;
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+  border-radius: 14px;
+  box-shadow: var(--package-card-shadow);
+}
+#free .promo-btn {
+  background: var(--color-primary);
+  border-radius: 8px;
+  min-height: 45px;
+  font-size: 13px;
+  font-weight: 650;
+}
+.package-page #free .promo-btn:hover { background: var(--color-primary-dark); }
+.free-directory { padding-top: 14px; border-top: 1px solid var(--color-border-light); }
+.free-directory h3 { font-weight: 650; color: #537397; }
+.free-directory details { background: #f7f9fd; border-color: var(--color-border); border-radius: 8px; }
+.free-directory summary { min-height: 44px; font-size: 13px; }
+.free-directory details:hover, .free-directory details[open] { border-color: #b1c9ee; }
+.free-directory :is(ul, p) { color: var(--color-text-secondary); }
+.free-directory a,
+.package-page .free-directory details[open] summary,
+.package-page .table-swipe-note { color: var(--color-primary); }
+.package-page #plans { padding: 36px 0 28px; }
+#plans .section-header { margin-bottom: 20px; }
+#plans .compare-table { border-radius: 12px; box-shadow: var(--package-card-shadow); }
+#plans .compare-table thead th:not(.featured):not(.research) { background: #f7f9fd; }
+#plans .compare-table thead .research { background: #193b64; }
+#plans .package-summary > * { background: #f1f6fe; border-bottom-color: #d3e2f7; }
+#plans .package-summary td:nth-child(3), #plans .package-summary td:nth-child(4) { background: #e9f1ff; }
+#plans .summary-price {
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+#plans .summary-scope { color: var(--color-text); }
+.package-page .compare-table .research-cell { color: var(--color-text); background: #f7f9fd; }
+.package-page .compare-table .gift-heading td,
+.package-page .compare-table .gift-row .gift-cell { background: #e9f1ff; color: var(--color-text); border-color: var(--color-border); }
+.package-page .compare-table .gift-row td { background: #f7f9fd; }
+.package-page .compare-table .gift-row:hover td { background: var(--color-primary-light); }
+.package-page :is(.stat-card, .credential-card, .ielts-card, .ielts-trial, .faq-item) {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--package-card-shadow);
+}
+.package-page .stat-value { color: var(--color-primary); font-weight: 750; }
+.package-page :is(.credential-section, .ielts-section) { background: var(--color-bg); }
+.package-page :is(.ielts-hero, .cta) { background: var(--package-hero); }
+.package-page .ielts-card { --ielts-tone: var(--color-primary); --ielts-soft: var(--color-primary-light); }
+.package-page :is(a, button, summary, .compare-wrap):focus-visible { outline: 2px solid #6399fb; outline-offset: 3px; }
+@media (max-width: 768px) {
+  .package-page .page-title { padding: 96px 0 26px; }
+  .package-page .page-title h1 { font-size: 31px; }
+  #free .promo { padding: 18px; }
+  .package-page #plans { padding-top: 26px; }
+}
+</style>
 </head>
 <body class="package-page">
 
@@ -476,7 +629,7 @@ ul { list-style: none; }
 <section class="page-title">
   <div class="container">
     <h1>服务套餐与定价</h1>
-    <p>DIY 润色、半 DIY 代写、全包申请明码标价；博士及研究型硕士申请提供灵活定制辅导。</p>
+    <p>从单项文书润色到全程申请，看看每种方式能帮你做到哪一步。</p>
     <div class="meta">
       <div class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>微信：xxr13365810586</div>
       <div class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>496680190@qq.com</div>
@@ -484,39 +637,37 @@ ul { list-style: none; }
   </div>
 </section>
 
-<!-- 2. Key Stats -->
-<div class="container">
-  <div class="stats-bar fade-in">
-    <div class="stat-card"><div class="stat-value">500+</div><div class="stat-label">累计服务学生</div></div>
-    <div class="stat-card"><div class="stat-value green">0 Offer</div><div class="stat-label">全包退款保障</div></div>
-    <div class="stat-card"><div class="stat-value accent">0 元</div><div class="stat-label">合作院校中介费</div></div>
-    <div class="stat-card"><div class="stat-value">60+</div><div class="stat-label">硕博导师团队</div></div>
-  </div>
-</div>
 
-<!-- 3. Free Application Promo -->
-<div class="container">
-  <div class="promo fade-in">
+<section class="container" id="free" aria-labelledby="free-promo-title">
+  <div class="promo">
     <div class="promo-inner">
-      <div class="promo-left">
-        <span class="promo-tag">&#127881; 限时优惠</span>
-        <p class="promo-text"><strong>英国 / 澳洲 / 新西兰</strong> 合作院校可免费递交，零中介费</p>
+      <div>
+        <h2 id="free-promo-title">合作院校免费申请</h2>
+        <p class="promo-text">符合条件的合作项目可免费递交，免中介费。</p>
       </div>
-      <button class="promo-btn" onclick="document.getElementById('free').scrollIntoView({behavior:'smooth'})">查看详情</button>
+      <button type="button" class="promo-btn" onclick="openQr()">咨询免费递交</button>
+    </div>
+    <div class="free-directory">
+      <h3>部分院校举例</h3>
+      <details name="free-country"><summary>英国</summary><ul><li>爱丁堡大学</li><li>伦敦国王学院</li><li>曼彻斯特大学</li><li>布里斯托大学</li><li>华威大学</li><li>伯明翰大学</li><li>利兹大学</li><li>格拉斯哥大学</li><li>谢菲尔德大学</li><li>杜伦大学</li><li>诺丁汉大学</li><li>伦敦玛丽女王大学</li><li>南安普顿大学</li><li>圣安德鲁斯大学</li><li>巴斯大学</li><li>埃克塞特大学</li><li>利物浦大学</li><li>纽卡斯尔大学</li><li>约克大学</li><li>兰卡斯特大学</li><li>贝尔法斯特女王大学</li><li>卡迪夫大学</li><li>雷丁大学</li></ul></details>
+      <details name="free-country"><summary>澳洲</summary><ul><li>墨尔本大学</li><li>新南威尔士大学</li><li>悉尼大学</li><li>澳大利亚国立大学</li><li>莫纳什大学</li><li>昆士兰大学</li><li>西澳大学</li><li>阿德莱德大学（Adelaide University）</li><li>悉尼科技大学（UTS）</li></ul></details>
+      <details name="free-country"><summary>新西兰</summary><ul><li>奥克兰大学</li><li>奥塔哥大学</li><li>惠灵顿维多利亚大学</li><li>坎特伯雷大学</li><li>怀卡托大学</li><li>梅西大学</li><li>林肯大学</li><li>奥克兰理工大学</li></ul></details>
+      <details name="free-country"><summary>爱尔兰</summary><ul><li>都柏林圣三一学院</li><li>都柏林大学（UCD）</li><li>科克大学</li><li>戈尔韦大学</li><li>都柏林城市大学</li><li>利默里克大学</li><li>梅努斯大学</li></ul></details>
+      <p>还有更多院校可咨询。免费递交资格以当期合作院校及专业为准。<a href="https://www.topuniversities.com/world-university-rankings">查看 QS 2027 排名</a></p>
     </div>
   </div>
-</div>
+</section>
 
 <!-- 4. Unified Service & Pricing Table -->
 <section class="section" id="plans">
   <div class="container">
     <div class="section-header fade-in">
-      <div class="section-kicker">Service Plans</div>
       <h2 class="section-title">服务与定价一览</h2>
-      <p class="section-desc">服务内容 + 价格整合在一张表中，横向对比四种申请模式的差异，无需来回翻找。</p>
+      <p class="section-desc">比较套餐包含的内容、申请范围和费用。</p>
     </div>
 
-    <div class="compare-wrap fade-in">
+    <p class="table-swipe-note">左右滑动查看全部方案</p>
+    <div class="compare-wrap fade-in" tabindex="0" role="region" aria-label="申请套餐对比">
       <table class="compare-table">
         <thead>
           <tr>
@@ -524,27 +675,30 @@ ul { list-style: none; }
             <th style="width:210px;">
               <div class="plan-title">DIY 服务</div>
               <div class="plan-sub">材料润色 + 答疑</div>
-              <div class="plan-price">&yen;500 起</div>
             </th>
             <th style="width:210px;">
               <div class="plan-title">半 DIY 服务</div>
               <div class="plan-sub">代写 + 策略指导</div>
-              <div class="plan-price">&yen;3,999 全套</div>
             </th>
             <th class="featured" style="width:210px;">
               <div class="badge">&#9733; 推荐</div>
-              <div class="plan-title">全包 服务</div>
+              <div class="plan-title">全包服务</div>
               <div class="plan-sub">全程代办 + 签证</div>
-              <div class="plan-price">&yen;10,000 起</div>
             </th>
-            <th class="research" style="width:220px;">
+            <th id="research-plan" class="research" style="width:220px;">
               <div class="plan-title">博士 / 研究型硕士</div>
               <div class="plan-sub">研究计划 + 导师匹配 + 套磁</div>
-              <div class="plan-price">灵活定制辅导</div>
             </th>
           </tr>
         </thead>
         <tbody>
+          <tr class="package-summary">
+            <th scope="row">套餐价格与包含内容</th>
+            <td><strong class="summary-price">按需组合</strong><span class="summary-scope">文书润色 ¥500 起</span><span>按所选服务单项计费</span></td>
+            <td><strong class="summary-price">¥3,999 <small>/ 套</small></strong><span class="summary-scope">含 1 所学校网申</span><span>简历、文书、2 封推荐信</span></td>
+            <td><strong class="summary-price">¥10,000 <small>起</small></strong><span class="summary-scope">英港新 8 个项目</span><span>起步方案覆盖范围</span></td>
+            <td><strong class="summary-price">定制辅导</strong><span>按研究方向与辅导深度定制</span></td>
+          </tr>
           <!-- 材料撰写 -->
           <tr><td style="font-weight:700;color:var(--color-text);">&#128221; 简历</td><td><span style="color:var(--color-text-tertiary);">润色</span> <span class="price-cell">&yen;500/篇</span></td><td><span style="color:var(--color-primary);font-weight:600;">代写</span> <span class="price-cell">&yen;1,000/篇</span></td><td><span class="check">&#10003;</span> <span style="font-size:11px;color:var(--color-success);font-weight:600;">代写（含）</span></td><td class="research-cell"><span class="research-check">&#10003;</span> 学术简历优化</td></tr>
           <tr><td style="font-weight:700;color:var(--color-text);">&#128221; 文书</td><td><span style="color:var(--color-text-tertiary);">润色</span> <span class="price-cell">&yen;1,000/篇</span></td><td><span style="color:var(--color-primary);font-weight:600;">代写</span> <span class="price-cell">&yen;2,000/篇</span></td><td><span class="check">&#10003;</span> <span style="font-size:11px;color:var(--color-success);font-weight:600;">代写（含）</span></td><td class="research-cell"><span class="research-check">&#10003;</span> 研究计划辅导</td></tr>
@@ -554,15 +708,6 @@ ul { list-style: none; }
           <tr><td style="font-weight:700;color:var(--color-text);">&#128187; 网申</td><td class="price-cell">&yen;100/所</td><td class="price-cell">&yen;100/项目</td><td><span class="check">&#10003;</span> <span style="font-size:11px;color:var(--color-success);font-weight:600;">全程代办</span></td><td class="research-cell"><span class="research-check">&#10003;</span> 申请全程指导</td></tr>
           <tr><td style="font-weight:700;color:var(--color-text);">&#127942; 选校策略</td><td class="cross">&mdash;</td><td class="half">专属定制</td><td><span class="check">&#10003;</span> <span style="font-size:11px;color:var(--color-success);font-weight:600;">专属定制</span></td><td class="research-cell"><span class="research-check">&#10003;</span> 导师与项目匹配</td></tr>
           <tr><td style="font-weight:700;color:var(--color-text);">&#127758; 签证办理</td><td class="cross">&mdash;</td><td class="cross">&mdash;</td><td><span class="check">&#10003;</span> <span style="font-size:11px;color:var(--color-success);font-weight:600;">专业指导</span></td><td class="research-cell">按方案配置</td></tr>
-
-          <!-- 套餐组合价 -->
-          <tr style="background:var(--color-primary-light);">
-            <td style="font-weight:800;">&#127873; 全套组合价</td>
-            <td class="cross" style="font-size:13px;">按需组合</td>
-            <td><span style="font-weight:700;color:var(--color-primary);font-size:var(--text-lg);">&yen;3,999</span><br><span style="font-size:11px;color:var(--color-text-tertiary);">简历+文书+推荐信&times;2+网申1所</span></td>
-            <td><span style="font-weight:700;color:var(--color-primary);font-size:var(--text-lg);">&yen;10,000</span> <span style="font-size:var(--text-sm);color:var(--color-text-tertiary);">起</span><br><span style="font-size:11px;color:var(--color-text-tertiary);">英港新 8 个项目</span></td>
-            <td class="research-cell"><strong>灵活定制辅导</strong><br><span style="font-size:11px;color:var(--color-text-tertiary);">按研究方向与辅导深度定制</span></td>
-          </tr>
 
           <!-- 增值服务 -->
           <tr><td style="font-weight:700;color:var(--color-text);">&#128172; DIY 答疑</td><td class="price-cell">&yen;1,888/年</td><td class="cross">&mdash;</td><td><span class="check">&#10003;</span> <span style="font-size:11px;color:var(--color-success);">含顾问跟进</span></td><td class="research-cell">全程研究顾问跟进</td></tr>
@@ -609,9 +754,20 @@ ul { list-style: none; }
         </tbody>
       </table>
     </div>
-
   </div>
 </section>
+
+<!-- 2. Key Stats -->
+<div class="container">
+  <div class="stats-bar fade-in">
+    <div class="stat-card"><div class="stat-value">500+</div><div class="stat-label">累计服务学生</div></div>
+    <div class="stat-card"><div class="stat-value green">全包</div><div class="stat-label">无录取退款保障</div></div>
+    <div class="stat-card"><div class="stat-value accent">0 元</div><div class="stat-label">合作院校中介费</div></div>
+    <div class="stat-card"><div class="stat-value">60+</div><div class="stat-label">硕博导师团队</div></div>
+  </div>
+</div>
+
+
 
 <!-- 5. Credential Review -->
 <section class="credential-section" id="credential-review">
@@ -748,51 +904,6 @@ ul { list-style: none; }
   </div>
 </section>
 
-
-<!-- 6. Free Application Detail -->
-<section class="section" id="free">
-  <div class="container">
-    <div class="free-section fade-in">
-      <div class="free-grid">
-        <div class="free-content">
-          <div class="section-kicker">Free Application</div>
-          <h2>合作院校免费递交</h2>
-          <p>与英国、澳洲、新西兰多所院校建立官方合作。通过我们递交申请，零中介费，专业顾问全程跟进。</p>
-          <div class="free-flags">
-            <div class="free-flag"><span>&#127468;&#127463;</span> 英国</div>
-            <div class="free-flag"><span>&#127462;&#127482;</span> 澳洲</div>
-            <div class="free-flag"><span>&#127475;&#127487;</span> 新西兰</div>
-          </div>
-          <div class="free-list">
-            <div class="free-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>零申请费用，无任何隐藏收费</div>
-            <div class="free-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>覆盖 QS 前 200 合作院校</div>
-            <div class="free-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>DIY / 半 DIY / 全包客户均享受</div>
-          </div>
-        </div>
-        <div class="free-visual">
-          <div class="free-card">
-            <div class="flag">&#127468;&#127463;</div>
-            <h4>英国</h4>
-            <p>曼大、利兹、格拉斯哥、南安普顿等 30+ 院校</p>
-            <span class="free-badge">FREE</span>
-          </div>
-          <div class="free-card">
-            <div class="flag">&#127462;&#127482;</div>
-            <h4>澳洲</h4>
-            <p>悉尼、新南威尔士、莫纳什、昆士兰等八大</p>
-            <span class="free-badge">FREE</span>
-          </div>
-          <div class="free-card">
-            <div class="flag">&#127475;&#127487;</div>
-            <h4>新西兰</h4>
-            <p>奥克兰、坎特伯雷、梅西等全部公立大学</p>
-            <span class="free-badge">FREE</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- 7. Process Timeline -->
 <section class="section" style="background:var(--color-primary-light);">
@@ -951,8 +1062,8 @@ ul { list-style: none; }
 
 <script>
 const faqData = [
-  ["免费递交的合作院校有哪些？", "英国包括曼大、利兹、格拉斯哥、南安普顿等30余所；澳洲包括悉尼、新南威尔士、莫纳什、昆士兰等八大名校；新西兰包括奥克兰、坎特伯雷、梅西等全部公立大学。具体名单请咨询微信获取。"],
-  ["免费递交有什么限制吗？", "没有任何限制。无论你是 DIY、半 DIY 还是全包客户，通过 DreamBridge 递交合作院校申请均完全免费。无需任何中介费。"],
+  ["免费递交的合作院校有哪些？", "页面顶部可按国家展开查看选校清单。请联系顾问确认目标院校及专业是否在当期免费递交范围内。"],
+  ["免费递交有什么限制吗？", "DIY、半 DIY 和全包客户均可咨询免费递交服务。适用范围以当期合作院校及专业为准。"],
   ["如何选择服务模式？", "时间充足、英语能力强、有自主申请经验选 DIY；希望节省材料准备时间但想参与申请过程选半 DIY；想把时间留给 GPA、实习、科研建议选全包。不确定可以微信咨询。"],
   ["全包服务的退款政策是什么？", "如果全包服务最终没有收到任何录取通知，将按双方签订的服务协议约定退还服务费；具体适用条件以签约条款为准。"],
   ["文书可以修改几次？", "全包和半 DIY 服务中文书支持无限次修改，直至你完全满意为止。我们认为文书是申请的核心，不会因为修改次数额外收费。"],
