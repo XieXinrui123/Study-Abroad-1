@@ -333,13 +333,6 @@ ul { list-style: none; }
 .team-card p { font-size: var(--text-xs); color: var(--color-text-secondary); line-height: 1.7; }
 
 /* ===== FAQ ===== */
-.faq-item { border-bottom: 1px solid var(--color-border); }
-.faq-btn { width: 100%; text-align: left; padding: var(--space-5) 0; font-size: var(--text-md); font-weight: 600; color: var(--color-text); display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: color 0.2s; }
-.faq-btn:hover { color: var(--color-primary); }
-.faq-btn::after { content: '+'; font-size: var(--text-xl); color: var(--color-text-tertiary); margin-left: var(--space-4); flex-shrink: 0; transition: all 0.2s; }
-.faq-item.open .faq-btn::after { content: '\2212'; color: var(--color-primary); }
-.faq-panel { display: none; padding-bottom: var(--space-5); font-size: var(--text-sm); color: var(--color-text-secondary); line-height: 1.8; max-width: 720px; }
-.faq-item.open .faq-panel { display: block; }
 
 /* ===== CTA ===== */
 .cta { background: linear-gradient(135deg, #0B1120, #1E293B); padding: var(--space-20) 0; text-align: center; color: #fff; position: relative; overflow: hidden; }
@@ -474,7 +467,7 @@ ul { list-style: none; }
 #free .promo-inner { padding: 0; gap: 14px; }
 #free .promo-btn { background: #173e70; color: #fff; }
 #free .promo-btn:hover { background: #245184; }
-.free-directory { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; gap: 8px; margin-top: 18px; }
+.free-directory { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: start; gap: 8px; margin-top: 18px; }
 .free-directory h3, .free-directory p { grid-column: 1 / -1; margin: 0; font-size: 13px; color: #405975; }
 .free-directory details { background: #fff; border: 1px solid #d7e4f1; border-radius: 9px; }
 .free-directory details[open] { grid-column: 1 / -1; }
@@ -588,7 +581,7 @@ ul { list-style: none; }
 .package-page .compare-table .gift-row .gift-cell { background: #e9f1ff; color: var(--color-text); border-color: var(--color-border); }
 .package-page .compare-table .gift-row td { background: #f7f9fd; }
 .package-page .compare-table .gift-row:hover td { background: var(--color-primary-light); }
-.package-page :is(.stat-card, .credential-card, .ielts-card, .ielts-trial, .faq-item) {
+.package-page :is(.stat-card, .credential-card, .ielts-card, .ielts-trial) {
   background: var(--color-surface);
   border-color: var(--color-border);
   border-radius: 12px;
@@ -598,6 +591,53 @@ ul { list-style: none; }
 .package-page :is(.credential-section, .ielts-section) { background: var(--color-bg); }
 .package-page :is(.ielts-hero, .cta) { background: var(--package-hero); }
 .package-page .ielts-card { --ielts-tone: var(--color-primary); --ielts-soft: var(--color-primary-light); }
+#faq .container { max-width: 920px; }
+#faq .section-header { margin-bottom: 20px; }
+#faqList {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  box-shadow: var(--package-card-shadow);
+}
+#faqList .faq-item + .faq-item { border-top: 1px solid var(--color-border-light); }
+#faqList .faq-item[open] { background: var(--color-primary-light); }
+#faqList .faq-item:first-child { border-radius: 13px 13px 0 0; }
+#faqList .faq-item:last-child { border-radius: 0 0 13px 13px; }
+#faqList .faq-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px clamp(16px, 4vw, 26px);
+  cursor: pointer;
+  list-style: none;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+#faqList .faq-btn::-webkit-details-marker { display: none; }
+#faqList .faq-btn:hover, #faqList [open] > .faq-btn { color: var(--color-primary); }
+#faqList .faq-btn::after {
+  content: '';
+  flex: 0 0 28px;
+  height: 28px;
+  border-radius: 50%;
+  background:
+    linear-gradient(currentColor, currentColor) center / 10px 2px no-repeat,
+    linear-gradient(currentColor, currentColor) center / 2px 10px no-repeat,
+    #e9f1ff;
+  color: var(--color-primary);
+}
+#faqList [open] > .faq-btn::after { background-size: 10px 2px, 0 0, auto; }
+#faqList .faq-btn:focus-visible { outline-offset: -4px; border-radius: 8px; }
+#faqList .faq-panel {
+  margin: 0;
+  padding: 0 clamp(16px, 4vw, 26px) 17px;
+  max-width: 740px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
 .package-page :is(a, button, summary, .compare-wrap):focus-visible { outline: 2px solid #6399fb; outline-offset: 3px; }
 @media (max-width: 768px) {
   .package-page .page-title { padding: 96px 0 26px; }
@@ -653,6 +693,7 @@ ul { list-style: none; }
       <details name="free-country"><summary>澳洲</summary><ul><li>墨尔本大学</li><li>新南威尔士大学</li><li>悉尼大学</li><li>澳大利亚国立大学</li><li>莫纳什大学</li><li>昆士兰大学</li><li>西澳大学</li><li>阿德莱德大学（Adelaide University）</li><li>悉尼科技大学（UTS）</li></ul></details>
       <details name="free-country"><summary>新西兰</summary><ul><li>奥克兰大学</li><li>奥塔哥大学</li><li>惠灵顿维多利亚大学</li><li>坎特伯雷大学</li><li>怀卡托大学</li><li>梅西大学</li><li>林肯大学</li><li>奥克兰理工大学</li></ul></details>
       <details name="free-country"><summary>爱尔兰</summary><ul><li>都柏林圣三一学院</li><li>都柏林大学（UCD）</li><li>科克大学</li><li>戈尔韦大学</li><li>都柏林城市大学</li><li>利默里克大学</li><li>梅努斯大学</li></ul></details>
+      <details name="free-country"><summary>中国香港</summary><ul><li>岭南大学</li></ul></details>
       <p>还有更多院校可咨询。免费递交资格以当期合作院校及专业为准。<a href="https://www.topuniversities.com/world-university-rankings">查看 QS 2027 排名</a></p>
     </div>
   </div>
@@ -1077,10 +1118,9 @@ const faqData = [
 function init() {
   const faqList = document.getElementById('faqList');
   faqData.forEach(([q, a]) => {
-    const item = document.createElement('div');
+    const item = document.createElement('details');
     item.className = 'faq-item';
-    item.innerHTML = `<button class="faq-btn">${q}</button><div class="faq-panel">${a}</div>`;
-    item.querySelector('.faq-btn').addEventListener('click', () => item.classList.toggle('open'));
+    item.innerHTML = `<summary class="faq-btn">${q}</summary><p class="faq-panel">${a}</p>`;
     faqList.appendChild(item);
   });
 
