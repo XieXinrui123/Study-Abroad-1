@@ -1,5 +1,25 @@
 [
   {
+    "id": 579,
+    "student_school": "北师珠港浸会",
+    "student_major": "计算机科学与技术",
+    "gpa": "3.5",
+    "language_score": "IELTS 6.5",
+    "country": "中国香港",
+    "degree": "硕士",
+    "result": "QS前50",
+    "offers": [
+      {
+        "school": "香港科技大学",
+        "major": "计算机",
+        "rank": "QS前50"
+      }
+    ],
+    "entry_year": 2027,
+    "tier": "海外本科",
+    "note": ""
+  },
+  {
     "id": 578,
     "student_school": "贵州大学",
     "student_major": "音乐",
